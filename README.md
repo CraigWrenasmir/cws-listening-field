@@ -119,6 +119,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 101 | Mimosa Escapement | 6/8 | 99 | [Score](pieces/CWS_Op_101_Mimosa_Escapement/CWS_Op_101_Mimosa_Escapement.pdf) | [MP3](pieces/CWS_Op_101_Mimosa_Escapement/CWS_Op_101_Mimosa_Escapement.mp3) |
 | CWS Op. 102 | Calluna Observatory | 4/4 | 208 | [Score](pieces/CWS_Op_102_Calluna_Observatory/CWS_Op_102_Calluna_Observatory.pdf) | [MP3](pieces/CWS_Op_102_Calluna_Observatory/CWS_Op_102_Calluna_Observatory.mp3) |
 | CWS Op. 103 | Rain Prospect | 4/4 | 173 | [Score](pieces/CWS_Op_103_Rain_Prospect/CWS_Op_103_Rain_Prospect.pdf) | [MP3](pieces/CWS_Op_103_Rain_Prospect/CWS_Op_103_Rain_Prospect.mp3) |
+| CWS Op. 104 | Copper Headland | 9/8 | 148 | [Score](pieces/CWS_Op_104_Copper_Headland/CWS_Op_104_Copper_Headland.pdf) | [MP3](pieces/CWS_Op_104_Copper_Headland/CWS_Op_104_Copper_Headland.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

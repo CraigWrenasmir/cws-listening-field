@@ -521,4 +521,87 @@ Eb3+Bb3:4
  performance=dict(rubato=[54,49,55,45,52,48,53,46,51,42,56,50,54,45,49,39,47,44,36,28],
   phrase_arcs=[[0,15.5,3],[16.5,39,4],[40.5,62.5,4],[64.5,80,-2]],lower_entries=[[18,20],[42,44]],pedal_lift=.2,gate=.995,
   note='Let the melody begin before the lower harmony settles beneath it. The growing written pauses are breaths inside the larger arc, with the pedal released and the room left to resonate. The final return stays quieter, and the last major ninth has time to fade.'))
+,
+dict(op=104,title='Copper Headland',key='a',fifths=0,meter='9/8',bpm=55,
+ description='Rain Prospect’s B-flat–D-flat–E-flat–F rises into A–C–D–E. Three arpeggios begin in the LH and continue seamlessly in the RH inner voice beneath a held melody. A fourth turns back down, passing from the RH to the LH. Their quieter endings leave the upper note alone. The surrounding phrases trace A-minor, G-major and A-flat colours before a minor-ninth close.',
+ difficulty='Advanced arpeggio handovers beneath a sustained upper voice',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 4, 8 and 14, the LH plays three eighths and the RH inner voice continues with three more, without a break. The upper melody is held for the complete 9/8 bar. In bar 18 the direction reverses: three RH inner eighths pass to three LH eighths. Keep the handover even, then allow the moving voices to rest while the upper note remains. The LH uses treble clef for bar 18 and returns to bass clef in bar 19.',
+ parent_opus=103,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4.5,pitches=['A','C','D','E']),
+ ancestry=dict(source_opus=103,source_hand='rh',source_start_beat=28,source_end_beat=32,source_pitches=['Bb','Db','Eb','F'],transposition_semitones=-1),
+ hidden_voice_rests={'inner':[1,2,3,5,6,7,9,10,11,12,13,15,16,17,19,20]},clef_changes={'lh':{18:'treble',19:'bass'}},
+ system_starts=[1,3,4,5,7,8,9,11,13,14,15,17,18,19],page_starts=[8,15],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4.5+left,(bar-1)*4.5+right-.2] for bar,cuts in enumerate([[0,1,1.5,2,2.5,4.5],[0,1.5,2.5,3.5,4.5],[0,1,2,3,4.5],[0,3],[0,1,2,2.5,3,4.5],[0,1,1.5,2,2.5,3,4.5],[0,1,1.5,2.5,3.5,4.5],[0,3],[0,1.5,2,2.5,3,4.5],[0,1,1.5,2.5,3.5,4.5],[0,1,1.5,2,2.5,3.5,4.5],[0,1.5,2,2.5,3.5,4.5],[0,1,2,2.5,3,4.5],[0,3],[0,1,1.5,2,2.5,4.5],[0,1.5,2.5,3.5,4.5],[0,1,1.5,2,2.5,4.5],[0,3],[0,1.5,2.5,3.5,4.5],[0,4.5]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+A4:1 C5:.5 D5:1 E5:2
+F5:1.5 E5:1 D5:1 C5:1
+B4:1 D5:1 E5:1 F5:1.5
+B4:3~ B4:1.5
+C5:2 E5:1 G5:1.5
+F5:1 A5:.5 G5:1 E5:2
+D5:1 F#5:.5 A5:1 G5:2
+D5:3~ D5:1.5
+E5:2 G5:1 B5:1.5
+A5:1.5 G5:1 E5:1 D5:1
+C5:1.5 Eb5:1 F5:1 G5:1
+F5:2 Eb5:.5 Db5:1 C5:1
+Bb4:1 Db5:1 Eb5:1 F5:1.5
+Bb4:3~ Bb4:1.5
+C5:1 Eb5:.5 G5:1 F5:2
+E5:1.5 D5:1 C5:1 B4:1
+A4:1 C5:.5 D5:1 E5:2
+E5:3~ E5:1.5
+F5:1.5 E5:1 D5:1 B4:1
+G4+B4+C5+E5:3~ G4+B4+C5+E5:1.5
+''',
+ rh_inner='''
+R:4.5
+R:4.5
+R:4.5
+R:1.5 E4:.5 G4:.5 A4:.5 R:1.5
+R:4.5
+R:4.5
+R:4.5
+R:1.5 F#4:.5 A4:.5 B4:.5 R:1.5
+R:4.5
+R:4.5
+R:4.5
+R:4.5
+R:4.5
+R:1.5 Eb4:.5 F4:.5 Ab4:.5 R:1.5
+R:4.5
+R:4.5
+R:4.5
+D5:.5 C5:.5 A4:.5 R:3
+R:4.5
+R:4.5
+''',
+ lh='''
+A2:1 E3:1 G3:.5 B3:2
+D3:1.5 A3:1 C4:2
+G3:1 D3:1 F3:1 A3:1.5
+D3:.5 A3:.5 C4:.5 R:3
+C3:1 G3:1 B3:.5 D4:2
+F3:1 C4:1 E4:1 D4:1.5
+B2:1.5 F#3:1 A3:1 C#4:1
+G3:.5 B3:.5 D4:.5 R:3
+C3:1.5 G3:1 B3:2
+F3:1 C4:.5 E4:1 D4:2
+Ab3:1 Eb3:1 G3:1 Bb3:1.5
+Db3:1.5 Ab3:1 C4:2
+Bb2:1 F3:1 Ab3:.5 C4:2
+Ab2:.5 Eb3:.5 G3:.5 R:3
+Eb3:1 Bb3:1 Db4:.5 C4:2
+E3:1.5 B3:1 D4:2
+A2:1 E3:1 G3:.5 B3:2
+R:1.5 G4:.5 E4:.5 C4:.5 R:1.5
+D3:1.5 A3:1 C4:1 E4:1
+A2+E3:3~ A2+E3:1.5
+''',sections={1:'p',2:'pp',3:'p',4:'pp',5:'p',6:'mp',7:'p',8:'pp',9:'mp',10:'p',11:'p',12:'pp',13:'p',14:'pp',15:'mp',16:'p',17:'pp',18:'p',19:'pp',20:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,16),(17,20)],lower_phrases=[(1,2),(3,3),(5,6),(7,7),(9,10),(11,12),(13,13),(15,16),(17,17),(19,20)],
+ hairpins=[('crescendo',1,3),('crescendo',5,6),('diminuendo',7,8),('diminuendo',9,12),('crescendo',13,15),('diminuendo',16,20)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,49,53,47,54,58,51,46,59,51,53,45,52,44,56,48,45,48,35,27],
+  phrase_arcs=[[0,17.8,3],[18,35.8,4],[36,53.8,3],[54,71.8,4],[72,90,-2]],
+  inner_entries=[[15,16.5],[33,34.5],[60,61.5],[76.5,78]],lower_entries=[[13.5,15],[31.5,33],[58.5,60],[78,79.5]],pedal_lift=.2,gate=.995,
+  note='The moving arpeggio should retain its shape and weight as it changes hands. Hold the upper melody through each complete bar, including the space after the arpeggio ends. The descending handover later in the piece releases the movement back towards the lower register before the quiet minor ninth.'))
 ]

@@ -14,6 +14,9 @@ def onset_tick(beat):return round(float(beat)*960)
 for p in cat:
  if args.opus is not None and p['op'] not in args.opus:continue
  d=OUT/p['folder'];stem=p['stem'];r=ET.parse(d/(stem+'.musicxml')).getroot()
+ pages=len(PdfReader(d/(stem+'.pdf')).pages)
+ assert 1<=pages<=4
+ assert {f.name for f in d.glob(stem+'_page_*.svg')}=={f'{stem}_page_{i}.svg' for i in range(1,pages+1)},('SVG page set differs from PDF',p['op'])
  metres,bar_lengths,bar_starts,total_beats=bar_plan(p)
  if p.get('meters'):
   assert p['bar_beats']==bar_lengths and p['bar_offsets']==bar_starts and p['total_beats']==total_beats
@@ -232,8 +235,6 @@ for p in cat:
    notes=sorted([e for e in p['events'] if e['hand']==hand and start<=e['offset']<end-1e-8],key=lambda e:e['offset'])
    assert len(notes)==count,('Polyrhythm note count',p['op'],crossing,hand)
    for i,e in enumerate(notes):assert abs(e['offset']-(start+i*step))<1/960 and abs(e['duration']-step)<1/960,('Polyrhythm alignment',p['op'],hand,e['id'])
- pages=len(PdfReader(d/(stem+'.pdf')).pages)
- assert 1<=pages<=4
  stats={}
  limits=p.get('technique_limits',dict(chord_span=7,melodic_leap=12,rapid_leap=7))
  crossings=p.get('hand_crossings',[])

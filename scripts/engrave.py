@@ -73,6 +73,12 @@ for p in cat:
         page.merge_translated_page(musicpage,0,28)
         writer.add_page(page)
     with (d/(stem+'.pdf')).open('wb') as f:writer.write(f)
+    # A reflow can reduce the page count. Remove only obsolete generated
+    # numbered SVG pages, after the replacement score has been written.
+    for previous in d.glob(stem+'_page_*.svg'):
+        page_number=previous.stem.removeprefix(stem+'_page_')
+        if page_number.isdigit() and int(page_number)>tk.getPageCount():
+            previous.unlink()
     (WORK/f'{stem}.mei').write_text(tk.getMEI())
     (WORK/f'{stem}_timemap.json').write_text(json.dumps(tk.renderToTimemap(),indent=2))
     p['pages']=tk.getPageCount()
