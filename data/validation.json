@@ -21047,5 +21047,364 @@
       "sounded_pitches_per_minute": 75.9,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Chert Pavilion",
+    "opus": 116,
+    "score_pages": 2,
+    "bars": 18,
+    "pitch_onsets": 131,
+    "audio_seconds": 105.56,
+    "hands": {
+      "rh": {
+        "low": 41,
+        "high": 77,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 8
+      },
+      "lh": {
+        "low": 43,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced crossed-hands melody with prepared register exchanges",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Both hands rest for one quarter beat before and after bars 7\u20138 and 15\u201316. In those passages, the RH is the upper written staff in bass clef (m.d.) and plays the low melody; the LH is the lower written staff in treble clef (m.s.) and holds the high chords at pp. The second crossed passage transposes both hands up three semitones. Normal clefs and labels return at bars 9 and 17. Use the full written pauses for the arm movements; the closest-note transition intervals reach seventeen semitones."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.3
+      ],
+      [
+        1.5,
+        2.8
+      ],
+      [
+        3,
+        3.8
+      ],
+      [
+        4,
+        4.8
+      ],
+      [
+        5,
+        5.8
+      ],
+      [
+        6,
+        7.8
+      ],
+      [
+        8,
+        8.8
+      ],
+      [
+        9,
+        9.3
+      ],
+      [
+        9.5,
+        9.8
+      ],
+      [
+        10,
+        10.8
+      ],
+      [
+        11,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        14,
+        14.8
+      ],
+      [
+        15,
+        15.8
+      ],
+      [
+        16,
+        16.8
+      ],
+      [
+        17,
+        17.3
+      ],
+      [
+        17.5,
+        17.8
+      ],
+      [
+        18,
+        18.8
+      ],
+      [
+        19,
+        19.8
+      ],
+      [
+        20,
+        22.8
+      ],
+      [
+        24,
+        24.8
+      ],
+      [
+        25,
+        25.3
+      ],
+      [
+        25.5,
+        26.8
+      ],
+      [
+        27,
+        27.8
+      ],
+      [
+        28,
+        28.8
+      ],
+      [
+        29,
+        29.8
+      ],
+      [
+        30,
+        30.8
+      ],
+      [
+        32,
+        32.8
+      ],
+      [
+        33,
+        33.8
+      ],
+      [
+        34,
+        34.8
+      ],
+      [
+        35,
+        35.8
+      ],
+      [
+        36,
+        36.8
+      ],
+      [
+        37,
+        37.3
+      ],
+      [
+        37.5,
+        38.8
+      ],
+      [
+        39,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        42.8
+      ],
+      [
+        43,
+        43.8
+      ],
+      [
+        44,
+        44.8
+      ],
+      [
+        45,
+        45.3
+      ],
+      [
+        45.5,
+        45.8
+      ],
+      [
+        46,
+        46.8
+      ],
+      [
+        47,
+        47.8
+      ],
+      [
+        48,
+        48.8
+      ],
+      [
+        49,
+        49.8
+      ],
+      [
+        50,
+        50.8
+      ],
+      [
+        51,
+        51.8
+      ],
+      [
+        52,
+        54.8
+      ],
+      [
+        56,
+        56.8
+      ],
+      [
+        57,
+        57.3
+      ],
+      [
+        57.5,
+        58.8
+      ],
+      [
+        59,
+        59.8
+      ],
+      [
+        60,
+        60.8
+      ],
+      [
+        61,
+        61.8
+      ],
+      [
+        62,
+        62.8
+      ],
+      [
+        64,
+        64.8
+      ],
+      [
+        65,
+        65.8
+      ],
+      [
+        66,
+        66.8
+      ],
+      [
+        67,
+        67.8
+      ],
+      [
+        68,
+        71.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "2": "pp",
+        "3": "mp",
+        "4": "p",
+        "5": "p",
+        "6": "pp",
+        "7": "p",
+        "8": "p",
+        "9": "p",
+        "10": "mp",
+        "11": "p",
+        "12": "mp",
+        "13": "p",
+        "14": "pp",
+        "15": "p",
+        "16": "pp",
+        "17": "p",
+        "18": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "7": "pp",
+        "9": "pp",
+        "15": "pp",
+        "17": "pp"
+      }
+    },
+    "verified_clef_changes": {
+      "rh": {
+        "7": "bass",
+        "9": "treble",
+        "15": "bass",
+        "17": "treble"
+      },
+      "lh": {
+        "7": "treble",
+        "9": "bass",
+        "15": "treble",
+        "17": "bass"
+      }
+    },
+    "verified_hand_crossings": [
+      {
+        "start_beat": 24,
+        "end_beat": 31,
+        "rest_before": 1,
+        "rest_after": 1
+      },
+      {
+        "start_beat": 56,
+        "end_beat": 63,
+        "rest_before": 1,
+        "rest_after": 1
+      }
+    ],
+    "verified_hand_labels": {
+      "rh": {
+        "7": "m.d.",
+        "9": "m.d.",
+        "15": "m.d.",
+        "17": "m.d."
+      },
+      "lh": {
+        "7": "m.s.",
+        "9": "m.s.",
+        "15": "m.s.",
+        "17": "m.s."
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 76.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -1394,4 +1394,64 @@ F3+C4:4
   phrase_arcs=[[0,7.8,3],[8,15.8,3],[16.5,24.4,3],[25,32.8,2],[33,40.8,3],[41.5,49.3,2],[49.5,57.4,2],[57.5,64,-2]],
   lower_entries=[],pedal_lift=.18,gate=.995,
   note='Let the melody’s later entries feel like a phrase leaning gently across the pulse. Keep the long notes connected through their ties while the lower voicings change underneath. The last appearance should be the least insistent, opening into a soft ninth at the close.'))
+,
+dict(op=116,title='Chert Pavilion',key='g',fifths=-2,meter='4/4',bpm=53,
+ description='Basalt Driftway’s C–B-flat–A-flat–F becomes D–C–B-flat–G. Twice the hands exchange registers: the RH sings a low version of the melody while the LH holds quiet chords high above it. The second crossing moves the material up a minor third. Written pauses prepare both exchanges, and rising RH lines bring the hands back together before the G-minor ninth close.',
+ difficulty='Advanced crossed-hands melody with prepared register exchanges',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Both hands rest for one quarter beat before and after bars 7–8 and 15–16. In those passages, the RH is the upper written staff in bass clef (m.d.) and plays the low melody; the LH is the lower written staff in treble clef (m.s.) and holds the high chords at pp. The second crossed passage transposes both hands up three semitones. Normal clefs and labels return at bars 9 and 17. Use the full written pauses for the arm movements; the closest-note transition intervals reach seventeen semitones.',
+ parent_opus=115,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['D','C','Bb','G']),
+ ancestry=dict(source_opus=115,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['C','Bb','Ab','F'],transposition_semitones=2),
+ hand_crossings=[dict(start_beat=24,end_beat=31,rest_before=1,rest_after=1),dict(start_beat=56,end_beat=63,rest_before=1,rest_after=1)],
+ hand_labels={'rh':{7:'m.d.',9:'m.d.',15:'m.d.',17:'m.d.'},'lh':{7:'m.s.',9:'m.s.',15:'m.s.',17:'m.s.'}},
+ clef_changes={'rh':{7:'bass',9:'treble',15:'bass',17:'treble'},'lh':{7:'treble',9:'bass',15:'treble',17:'bass'}},
+ lower_sections={1:'pp',7:'pp',9:'pp',15:'pp',17:'pp'},
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,1,1.5,3,4],[0,1,2,4],[0,1,1.5,2,3,4],[0,2,3,4],[0,1,1.5,2,3,4],[0,3],[0,1,1.5,3,4],[0,1,2,3],[0,1,2,3,4],[0,1,1.5,3,4],[0,2,3,4],[0,1,1.5,2,3,4],[0,1,2,3,4],[0,3],[0,1,1.5,3,4],[0,1,2,3],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+D5:1 C5:.5 Bb4:1.5 G4:1
+F4:1 G4:1 Ab4:2
+Bb4:1 D5:.5 F5:1.5 E5:1
+D5:2 C5:1 Bb4:1
+A4:1 C5:.5 Eb5:1.5 D5:1
+G4+Bb4+D5:3 R:1
+D3:1 C3:.5 Bb2:1.5 G2:1
+F2:1 G2:1 Ab2:1 R:1
+Bb3:1 D4:1 F4:1 A4:1
+G4:1 Bb4:.5 D5:1.5 C5:1
+Eb5:2 D5:1 C5:1
+Bb4:1 Db5:.5 F5:1.5 Eb5:1
+D5:1 C5:1 Bb4:1 Ab4:1
+Bb4+Db5+F5:3 R:1
+F3:1 Eb3:.5 Db3:1.5 Bb2:1
+Ab2:1 Bb2:1 Cb3:1 R:1
+C4:1 Eb4:1 G4:1 Bb4:1
+A4+Bb4+D5+F5:4
+''',
+ lh='''
+G2:1 D3:.5 F3:1.5 Bb3:1
+Eb3+Bb3:2 D3+A3:2
+C3:1 G3:1 Bb3:1 E4:1
+F3+A3:2 Eb3+G3:2
+D3:1 A3:1 C4:1 F#3:1
+Eb3+Bb3:3 R:1
+Bb4+D5+F5+A5:4
+Ab4+C5+Eb5+G5:3 R:1
+Eb3:1 Bb3:1 D4:1 G3:1
+C3:1 G3:.5 Bb3:1.5 E4:1
+Eb3+G3:2 D3+F#3:2
+Bb2:1 F3:1 Ab3:1 C4:1
+Db3:1 Ab3:1 C4:1 F3:1
+Eb3+Bb3:3 R:1
+Db5+F5+Ab5+C6:4
+Cb5+Eb5+Gb5+Bb5:3 R:1
+Gb3:1 Db4:1 F4:1 Bb3:1
+G3+D4:4
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'p',6:'pp',7:'p',8:'p',9:'p',10:'mp',11:'p',12:'mp',13:'p',14:'pp',15:'p',16:'pp',17:'p',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,5),(7,8),(9,13),(15,16),(17,18)],lower_phrases=[(1,2),(3,4),(7,8),(9,10),(11,12),(15,16),(17,18)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,5),('crescendo',9,10),('diminuendo',11,13),('diminuendo',17,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[53,47,55,49,51,40,48,42,49,54,48,52,45,39,46,40,35,26],
+  phrase_arcs=[[0,19.8,3],[24,31,2],[32,51.8,3],[56,63,2],[64,72,-2]],
+  lower_entries=[],pedal_lift=.2,gate=.995,
+  note='The crossed passages keep the melodic thread in the RH while changing its register completely. Let the high LH chords remain distant and soft. Take the whole written rest to reposition each hand, and let the rising returns recover the ordinary register without haste.'))
 ]
