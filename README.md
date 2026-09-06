@@ -52,6 +52,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 34 | Tidal Lacuna | 6/4 | 95 | [Score](pieces/CWS_Op_034_Tidal_Lacuna/CWS_Op_034_Tidal_Lacuna.pdf) | [MP3](pieces/CWS_Op_034_Tidal_Lacuna/CWS_Op_034_Tidal_Lacuna.mp3) |
 | CWS Op. 35 | Lunar Towpath | 4/4 | 222 | [Score](pieces/CWS_Op_035_Lunar_Towpath/CWS_Op_035_Lunar_Towpath.pdf) | [MP3](pieces/CWS_Op_035_Lunar_Towpath/CWS_Op_035_Lunar_Towpath.mp3) |
 | CWS Op. 36 | River Interstice | 5/4 | 174 | [Score](pieces/CWS_Op_036_River_Interstice/CWS_Op_036_River_Interstice.pdf) | [MP3](pieces/CWS_Op_036_River_Interstice/CWS_Op_036_River_Interstice.mp3) |
+| CWS Op. 37 | Fluvial Mirror | 4/4 | 152 | [Score](pieces/CWS_Op_037_Fluvial_Mirror/CWS_Op_037_Fluvial_Mirror.pdf) | [MP3](pieces/CWS_Op_037_Fluvial_Mirror/CWS_Op_037_Fluvial_Mirror.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

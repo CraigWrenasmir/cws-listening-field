@@ -1429,5 +1429,65 @@
       "sounded_pitches_per_minute": 112.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Fluvial Mirror",
+    "opus": 37,
+    "score_pages": 1,
+    "bars": 17,
+    "pitch_onsets": 152,
+    "audio_seconds": 88.17,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 83,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced polyrhythm",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 5 and 9, seven RH quarter-note septuplets and five LH quarter-note quintuplets share one four-beat span. The hands need independent evenness and a shared arrival at the following bar. These two crossings are framed by sustained voicings and less active phrases; each hand remains in its own register."
+    },
+    "notated_tuplet_notes": {
+      "1:7:4": 14,
+      "2:5:4": 10
+    },
+    "verified_polyrhythm_spans": [
+      {
+        "start_beat": 16,
+        "end_beat": 20,
+        "rh_notes": 7,
+        "lh_notes": 5
+      },
+      {
+        "start_beat": 32,
+        "end_beat": 36,
+        "rh_notes": 7,
+        "lh_notes": 5
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 10,
+      "sounded_pitches_per_minute": 106.8,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

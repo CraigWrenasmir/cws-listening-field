@@ -692,4 +692,58 @@ G2+D3:5
   phrase_arcs=[[0,9,3],[10,29,4],[30,44,3],[45,59,4],[60,75,-2]],
   lower_entries=[[0,15],[15,30],[30,40],[40,50],[50,60],[60,75]],pedal_bars=list(range(1,16)),pedal_lift=.23,gate=.99,
   note='The septuplets are single flowing gestures, with no accent on each internal note. Their slower partner voice preserves the breadth of the phrase. The bass takes up the four-beat figure near the end, after which the music gradually settles into a plain tonic.'))
+,
+dict(op=37,title='Fluvial Mirror',key='C',fifths=0,meter='4/4',bpm=57,
+ description='River Interstice\'s descending turn becomes C-G-E-B in an intimate register. Two brief passages let seven upper notes cross five lower notes over the same four beats. The first rests in A minor; the second changes that colour into A-flat major, keeping C and G as shared reflections. Quiet tonal phrases surround the crossings before a borrowed F-minor colour and G dominant settle into C.',
+ difficulty='Advanced polyrhythm',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 5 and 9, seven RH quarter-note septuplets and five LH quarter-note quintuplets share one four-beat span. The hands need independent evenness and a shared arrival at the following bar. These two crossings are framed by sustained voicings and less active phrases; each hand remains in its own register.',
+ tuplet_groups=[dict(hand='rh',actual=7,normal=4,count=14),dict(hand='lh',actual=5,normal=4,count=10)],
+ polyrhythms=[dict(start_beat=16,end_beat=20,rh_notes=7,lh_notes=5),dict(start_beat=32,end_beat=36,rh_notes=7,lh_notes=5)],
+ parent_opus=36,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['C','G','E','B']),
+ ancestry=dict(source_opus=36,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['G','D','B','F#'],transposition_semitones=5),
+ rh='''
+C5:1 G4:.5 E4:.5 B4:2~
+B4:1 A4:.5 G4:.5 E4:1 D4:1
+F4+A4+E5:2 D5:1 C5:1
+G#4+B4+F5:2 E5:1 D5:1
+C5:4/7 D5:4/7 E5:4/7 G5:4/7 B5:4/7 A5:4/7 G5:4/7
+F5:2 E5:.5 D5:.5 C5:1
+B4+D5+A5:2 G5:.5 F5:.5 E5:1
+E5:2 D5:.5 C5:.5 B4:1
+C5:4/7 Eb5:4/7 G5:4/7 Bb5:4/7 Ab5:4/7 G5:4/7 Eb5:4/7
+F5:2 Eb5:.5 Db5:.5 C5:1
+B4+D5+Ab5:2 G5:.5 F5:.5 Eb5:1
+E5:2 D5:.5 C5:.5 A4:1
+F#4+A4+E5:2 D5:1 C5:1
+B4+D5+A5:2 G5:1 F#5:1
+F5:1 Eb5:.5 C5:.5 Ab4:2
+G4+B4+F5:2 E5:1 D5:1
+E4+G4+D5:4
+''',
+ lh='''
+C3:1 G3:1 B3:1 E3:1
+A2:1 E3:1 G3:1 B3:1
+F3:2 C4:1 A3:1
+E3:1 B3:1 D4:.5 F3:.5 G#3:1
+A2:4/5 E3:4/5 G3:4/5 B3:4/5 C4:4/5
+D3:1 A3:1 C4:1 E3:1
+G2:1 D3:1 F3:1 B3:1
+C3:1 G3:1 B3:1 E3:1
+Ab2:4/5 Eb3:4/5 G3:4/5 Bb3:4/5 C4:4/5
+Db3:1 Ab3:1 C4:1 F3:1
+G2:1 D3:1 F3:1 Ab3:.5 D3:.5
+C3:1 G3:1 E3:1 D3:.5 C3:.5
+D3:1 A3:1 C4:1 F#3:1
+G3:1 D4:1 B3:1 A3:1
+F3:1 C4:1 Eb3:1 D3:1
+G2:1 D3:1 F3:1 B3:1
+C3+G3:4
+''',sections={1:'p',3:'mp',5:'p',8:'pp',9:'mp',10:'p',13:'mp',15:'pp'},words={1:'poco rubato',16:'poco rit.'},
+ slurs=[(1,3),(4,8),(9,12),(13,17)],lower_phrases=[(1,2),(3,4),(5,7),(8,10),(11,12),(13,15),(16,17)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,5),('diminuendo',5,8),('diminuendo',9,10),('diminuendo',11,12),('diminuendo',13,15),('diminuendo',16,17)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,53,58,55,59,54,51,47,58,52,54,47,55,50,44,40,33],
+  phrase_arcs=[[0,11,3],[12,31,4],[32,47,4],[48,68,-2]],
+  lower_entries=[[0,8],[8,16],[16,28],[28,40],[40,48],[48,60],[60,68]],pedal_bars=list(range(1,18)),pedal_lift=.23,gate=.99,
+  note='The two polyrhythmic passages breathe as four-beat gestures. Their internal notes stay even within each hand, with a shared soft arrival in the following bar. The surrounding phrases make room for the harmonic colour to settle.'))
 ]

@@ -148,6 +148,13 @@ for p in cat:
  for group in p.get('tuplet_groups',[]):
   key=('1' if group['hand']=='rh' else '2',group['actual'],group['normal'])
   assert tuplets[key]==group['count'],('Notated tuplet count mismatch',p['op'],group,tuplets[key])
+ for crossing in p.get('polyrhythms',[]):
+  start=crossing['start_beat'];end=crossing['end_beat']
+  for hand in ['rh','lh']:
+   count=crossing[hand+'_notes'];step=(end-start)/count
+   notes=sorted([e for e in p['events'] if e['hand']==hand and start<=e['offset']<end-1e-8],key=lambda e:e['offset'])
+   assert len(notes)==count,('Polyrhythm note count',p['op'],crossing,hand)
+   for i,e in enumerate(notes):assert abs(e['offset']-(start+i*step))<1/960 and abs(e['duration']-step)<1/960,('Polyrhythm alignment',p['op'],hand,e['id'])
  pages=len(PdfReader(d/(stem+'.pdf')).pages)
  assert 1<=pages<=4
  stats={}
@@ -188,6 +195,7 @@ for p in cat:
  if tuplets:report[-1]['notated_tuplet_notes']={':'.join(map(str,k)):v for k,v in tuplets.items()}
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
+ if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
  if p['op']>=7:
   patterns=[]
   for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']%p['beats_per_bar'],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))
