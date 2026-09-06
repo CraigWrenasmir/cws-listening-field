@@ -1024,4 +1024,81 @@ F3:2 A3:2
   phrase_arcs=[[0,15.5,3],[16,31.5,4],[32,51.5,3],[52,76,-2]],
   lower_entries=[[0,32],[64,72]],inner_entries=[[8,16],[40,48]],tenor_entries=[[0,4],[32,40],[72,76]],pedal_lift=.24,gate=.995,
   note='The outer lines take opposite directions over eight long notes, while the middle voices move quietly inside them. The ascending melody grows gradually brighter as the low bass recedes. Later harmonic reflections relax the register, and the last tenor A arrives gently under an already held upper harmony.'))
+,
+dict(op=87,title='Verbena Switchyard',key='g#',fifths=5,meter='7/4',bpm=53,
+ meters=['7/4','4/4','5/4','3/4','6/4','4/4','7/8','5/4','4/4','6/4','3/4','5/4','7/4','7/4','4/4','5/4','3/4','6/4'],
+ description='Eglantine Terrace’s tenor contour becomes G-sharp–B–C-sharp–B at the start of a seven-note phrase. Its quarter notes return two octaves lower as eighths in the bass, then one octave lower as two-beat notes in the RH inner voice. Each version has different surrounding harmonies. D-major, D-flat-major and D-minor reflections open the G-sharp-minor centre before a sixth/ninth close.',
+ difficulty='Advanced thematic compression and augmentation across three voices',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The seven-note opening occupies seven quarter beats. Bar 7 gives the same pitches two octaves lower in seven eighth notes. Bars 13–14 place them one octave below the opening in seven two-beat inner-voice notes; the B is tied across their bar line. Keep that slower inner phrase distinct from the upper line. The D-sharp dominant in bar 17 uses F-double-sharp as its major third.',
+ parent_opus=86,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['G#','B','C#','B']),
+ ancestry=dict(source_opus=86,source_hand='lh',source_voice='tenor',source_start_beat=0,source_end_beat=4,source_pitches=['F','Ab','Bb','Ab'],transposition_semitones=3),
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[start+left,start+right-.23] for start,cuts in zip([0,7,11,16,19,25,29,32.5,37.5,41.5,47.5,50.5,55.5,62.5,69.5,73.5,78.5,81.5],[[0,2,3,4,5,7],[0,2,3,4],[0,2,3,4,5],[0,1,2,3],[0,2,3,4,6],[0,1,2,3,4],[0,1.5,2.5,3.5],[0,2,3,4,5],[0,1,2,3,4],[0,2,3,4,6],[0,1,2,3],[0,2,3,4,5],[0,2,3,4,5,6,7],[0,1,2,3,4,5,7],[0,1,2,3,4],[0,2,3,4,5],[0,1,2,3],[0,3,6]]) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G#5:1 B5:1 C#6:1 B5:1 F#5:1 D#5:1 C#5:1
+D#5:2 C#5:1 B4:1
+E5:3 D#5:1 C#5:1
+F#5:1 E5:1 D5:1
+F5:2 Eb5:1 Db5:3
+E5:2 D#5:1 B4:1
+B4:3.5
+D#5:2 F#5:1 E5:2
+C#5:2 B4:1 A#4:1
+D5:2 F5:1 A5:3
+G5:1 F5:1 Eb5:1
+F#5:2 E5:1 D#5:2
+F#5:4 E5:3
+D#5:3 B4:2 G#4:2
+B4:2 C#5:1 D#5:1
+E5:2 D#5:1 C#5:2
+F##4+A#4+C#5+E5:3
+B4+D#5+E#5+A#5:6
+''',
+ rh_inner='''
+R:7
+G#4:2 F#4:1 E4:1
+A4:3 B4:2
+A4:2 G4:1
+Ab4:3 C5:3
+G#4:2 F#4:2
+F#4:3.5
+B4:3 G#4:2
+G#4:2 F#4:2
+A4:2 C5:1 D5:3
+Bb4:2 Ab4:1
+A#4:3 C#5:2
+G#4:2 B4:2 C#5:2 B4:1~
+B4:1 F#4:2 D#4:2 C#4:2
+G#4:2 A#4:1 B4:1
+A4:2 G#4:1 F#4:2
+R:3
+R:6
+''',
+ lh='''
+G#2:2 D#3:1 F#3:1 B3:1 C#4:1 B3:1
+E3:2 B3:1 C#4:1
+A2:2 E3:1 G#3:1 B3:1
+D3:1 A3:1 C#4:1
+Db3:2 Ab3:1 C4:1 Eb4:1 Db4:1
+E3:1 B3:1 D#4:1 C#4:1
+G#3:.5 B3:.5 C#4:.5 B3:.5 F#3:.5 D#3:.5 C#3:.5
+G#2:2 D#3:1 F#3:1 A#3:1
+C#3:1 G#3:1 B3:1 D#4:1
+D3:2 A3:1 C4:1 E4:1 D4:1
+Eb3:1 Bb3:1 Db4:1
+B2:2 F#3:1 A#3:1 C#4:1
+G#2:3 D#3:2 F#3:2
+C#3:2 G#3:1 B3:1 A#3:1 G#3:2
+E3:1 B3:1 D#4:1 F#3:1
+A2:2 E3:1 G#3:1 B3:1
+D#3:1 A#3:1 C#4:1
+G#2:3 D#3:3
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'p',6:'pp',7:'p',8:'pp',9:'p',10:'p',11:'mp',12:'pp',13:'p',14:'pp',15:'p',16:'pp',17:'p',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,6),(7,12),(13,18)],lower_phrases=[(1,4),(5,8),(9,12),(13,16),(17,18)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('diminuendo',7,9),('crescendo',10,11),('diminuendo',12,14),('diminuendo',15,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[53,47,54,50,52,43,56,46,48,55,51,45,49,43,46,40,33,25],
+  phrase_arcs=[[0,28.5,4],[29,50,3],[50.5,69,2],[69.5,87.5,-2]],
+  lower_entries=[[29,32.5],[41.5,47.5]],inner_entries=[[55.5,69.5]],pedal_lift=.23,gate=.99,
+  note='The bass compresses the opening phrase into a light passing memory. Later, the same contour unfolds slowly in the inner voice while the upper notes take another route. The three note-value scales remain connected through voicing and phrase rubato, and the final minor sixth/ninth is kept quiet.'))
 ]

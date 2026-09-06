@@ -10866,5 +10866,408 @@
       "sounded_pitches_per_minute": 88.7,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Verbena Switchyard",
+    "opus": 87,
+    "score_pages": 2,
+    "bars": 18,
+    "pitch_onsets": 166,
+    "audio_seconds": 126.77,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 85,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 44,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 0
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced thematic compression and augmentation across three voices",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The seven-note opening occupies seven quarter beats. Bar 7 gives the same pitches two octaves lower in seven eighth notes. Bars 13\u201314 place them one octave below the opening in seven two-beat inner-voice notes; the B is tied across their bar line. Keep that slower inner phrase distinct from the upper line. The D-sharp dominant in bar 17 uses F-double-sharp as its major third."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.77
+      ],
+      [
+        2,
+        2.77
+      ],
+      [
+        3,
+        3.77
+      ],
+      [
+        4,
+        4.77
+      ],
+      [
+        5,
+        6.77
+      ],
+      [
+        7,
+        8.77
+      ],
+      [
+        9,
+        9.77
+      ],
+      [
+        10,
+        10.77
+      ],
+      [
+        11,
+        12.77
+      ],
+      [
+        13,
+        13.77
+      ],
+      [
+        14,
+        14.77
+      ],
+      [
+        15,
+        15.77
+      ],
+      [
+        16,
+        16.77
+      ],
+      [
+        17,
+        17.77
+      ],
+      [
+        18,
+        18.77
+      ],
+      [
+        19,
+        20.77
+      ],
+      [
+        21,
+        21.77
+      ],
+      [
+        22,
+        22.77
+      ],
+      [
+        23,
+        24.77
+      ],
+      [
+        25,
+        25.77
+      ],
+      [
+        26,
+        26.77
+      ],
+      [
+        27,
+        27.77
+      ],
+      [
+        28,
+        28.77
+      ],
+      [
+        29,
+        30.27
+      ],
+      [
+        30.5,
+        31.27
+      ],
+      [
+        31.5,
+        32.27
+      ],
+      [
+        32.5,
+        34.27
+      ],
+      [
+        34.5,
+        35.27
+      ],
+      [
+        35.5,
+        36.27
+      ],
+      [
+        36.5,
+        37.27
+      ],
+      [
+        37.5,
+        38.27
+      ],
+      [
+        38.5,
+        39.27
+      ],
+      [
+        39.5,
+        40.27
+      ],
+      [
+        40.5,
+        41.27
+      ],
+      [
+        41.5,
+        43.27
+      ],
+      [
+        43.5,
+        44.27
+      ],
+      [
+        44.5,
+        45.27
+      ],
+      [
+        45.5,
+        47.27
+      ],
+      [
+        47.5,
+        48.27
+      ],
+      [
+        48.5,
+        49.27
+      ],
+      [
+        49.5,
+        50.27
+      ],
+      [
+        50.5,
+        52.27
+      ],
+      [
+        52.5,
+        53.27
+      ],
+      [
+        53.5,
+        54.27
+      ],
+      [
+        54.5,
+        55.27
+      ],
+      [
+        55.5,
+        57.27
+      ],
+      [
+        57.5,
+        58.27
+      ],
+      [
+        58.5,
+        59.27
+      ],
+      [
+        59.5,
+        60.27
+      ],
+      [
+        60.5,
+        61.27
+      ],
+      [
+        61.5,
+        62.27
+      ],
+      [
+        62.5,
+        63.27
+      ],
+      [
+        63.5,
+        64.27
+      ],
+      [
+        64.5,
+        65.27
+      ],
+      [
+        65.5,
+        66.27
+      ],
+      [
+        66.5,
+        67.27
+      ],
+      [
+        67.5,
+        69.27
+      ],
+      [
+        69.5,
+        70.27
+      ],
+      [
+        70.5,
+        71.27
+      ],
+      [
+        71.5,
+        72.27
+      ],
+      [
+        72.5,
+        73.27
+      ],
+      [
+        73.5,
+        75.27
+      ],
+      [
+        75.5,
+        76.27
+      ],
+      [
+        76.5,
+        77.27
+      ],
+      [
+        77.5,
+        78.27
+      ],
+      [
+        78.5,
+        79.27
+      ],
+      [
+        79.5,
+        80.27
+      ],
+      [
+        80.5,
+        81.27
+      ],
+      [
+        81.5,
+        84.27
+      ],
+      [
+        84.5,
+        87.27
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "7/4"
+      },
+      {
+        "beat": 7.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 11.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 16.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 19.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 25.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 29.0,
+        "meter": "7/8"
+      },
+      {
+        "beat": 32.5,
+        "meter": "5/4"
+      },
+      {
+        "beat": 37.5,
+        "meter": "4/4"
+      },
+      {
+        "beat": 41.5,
+        "meter": "6/4"
+      },
+      {
+        "beat": 47.5,
+        "meter": "3/4"
+      },
+      {
+        "beat": 50.5,
+        "meter": "5/4"
+      },
+      {
+        "beat": 55.5,
+        "meter": "7/4"
+      },
+      {
+        "beat": 69.5,
+        "meter": "4/4"
+      },
+      {
+        "beat": 73.5,
+        "meter": "5/4"
+      },
+      {
+        "beat": 78.5,
+        "meter": "3/4"
+      },
+      {
+        "beat": 81.5,
+        "meter": "6/4"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 80.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
