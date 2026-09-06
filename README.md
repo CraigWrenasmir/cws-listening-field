@@ -65,6 +65,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 47 | Mauve Esplanade | 4/4 | 185 | [Score](pieces/CWS_Op_047_Mauve_Esplanade/CWS_Op_047_Mauve_Esplanade.pdf) | [MP3](pieces/CWS_Op_047_Mauve_Esplanade/CWS_Op_047_Mauve_Esplanade.mp3) |
 | CWS Op. 48 | Thistle Horizon | 4/4 | 211 | [Score](pieces/CWS_Op_048_Thistle_Horizon/CWS_Op_048_Thistle_Horizon.pdf) | [MP3](pieces/CWS_Op_048_Thistle_Horizon/CWS_Op_048_Thistle_Horizon.mp3) |
 | CWS Op. 49 | Dew Pavilion | 4/4 | 181 | [Score](pieces/CWS_Op_049_Dew_Pavilion/CWS_Op_049_Dew_Pavilion.pdf) | [MP3](pieces/CWS_Op_049_Dew_Pavilion/CWS_Op_049_Dew_Pavilion.mp3) |
+| CWS Op. 50 | Mica Understory | 6/4 | 186 | [Score](pieces/CWS_Op_050_Mica_Understory/CWS_Op_050_Mica_Understory.pdf) | [MP3](pieces/CWS_Op_050_Mica_Understory/CWS_Op_050_Mica_Understory.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

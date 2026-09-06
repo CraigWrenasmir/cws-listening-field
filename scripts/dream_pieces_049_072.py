@@ -86,4 +86,75 @@ A3:2 B3:2
   phrase_arcs=[[0,15,3],[16,27,4],[28,47,4],[48,64,-2]],
   lower_entries=[[16,20],[40,44],[56,64]],tenor_entries=[[0,4],[28,32],[52,56]],pedal_lift=.22,gate=.995,
   note='The tenor is slightly more present at its opening and later answers, while the bass stays lighter. Held keys preserve the longer lines through each pedal refresh. The final four-bar phrase withdraws into a close, quiet sixth/ninth sonority.'))
+,
+dict(op=50,title='Mica Understory',key='F',fifths=-1,meter='6/4',bpm=57,
+ engraving=dict(spacing_system=13,pedal_offset_y=420),
+ description='Dew Pavilion’s tenor phrase moves into the treble as C–F–G–E. A sustained bass and a separately moving tenor share the left hand beneath it. Two quintuplet gestures open and fold back, first in bright F-major colour and later over D-flat. E-flat and E-major reflections lead through a borrowed F-minor passage to a quiet, richly added F-major close.',
+ difficulty='Advanced lower-voice independence',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The left hand sustains the bass while shaping a distinct tenor line with upward stems. Half-bar pedal changes must preserve the held keys. The right hand alternates sustained voicings with two groups of five quarter-note quintuplets across four beats. Balance the moving tenor beneath the melody without losing the bass.',
+ tuplet_groups=[dict(hand='rh',actual=5,normal=4,count=10)],
+ parent_opus=49,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['C','F','G','E']),
+ ancestry=dict(source_opus=49,source_hand='lh',source_voice='tenor',source_start_beat=0,source_end_beat=4,source_pitches=['A','D','E','C#'],transposition_semitones=3),
+ pedal_spans=[[i*3,i*3+2.77] for i in range(32)],
+ rh='''
+C5:1 F5:1 G5:1 E5:3
+D5:2 C5:.5 A4:.5 G4:1 A4:2
+Bb4+D5+A5:3 G5:1 F5:1 E5:1
+C5+E5+Bb5:2 A5:1 G5:.5 F5:.5 E5:2
+F5:4/5 A5:4/5 C6:4/5 B5:4/5 G5:4/5 A5:2
+G5:2 F5:.5 E5:.5 D5:1 C5:2
+Eb5+G5+D6:3 C6:1 Bb5:1 G5:1
+F#5:2 E5:1 D#5:1 B4:2
+E5+G#5+D#6:3 C#6:1 B5:.5 G#5:.5 F#5:1
+F5:4/5 Eb5:4/5 Db5:4/5 C5:4/5 Ab4:4/5 Bb4:2
+A4+C5+G5:3 F5:1 E5:1 D5:1
+G4+B4+F5:2 E5:1 D5:.5 C5:.5 B4:2
+E4+G4+D5:3 E5:1 G5:2
+F5:1 Eb5:.5 C5:.5 Bb4:1 Ab4:3
+G4+Bb4+E5:3 D5:1 C5:1 Bb4:1
+A4:2 G4:1 E4+G4+A4:3
+''',
+ lh='''
+F3:6
+D3:3 F3:3
+Bb2:2 D3:4
+C3:2 E3:4
+F3:6
+A2:2 C3:4
+Eb3:2 G3:4
+B2:2 D#3:4
+E3:6
+Db3:2 F3:4
+D3:6
+G2:2 B2:4
+C3:2 E3:4
+F3:2 Ab3:4
+C3:2 E3:4
+F3:6
+''',
+ lh_upper='''
+A3:1 C4:1 D4:1 C4:3
+A3:1 C4:2 B3:.5 A3:2.5
+F3:1.5 A3:.5 C4:1 Bb3:3
+G3:1 Bb3:1 D4:1 C4:3
+A3:2 C4:.5 D4:.5 E4:1 D4:2
+E3:1 G3:.5 F3:.5 A3:2 G3:2
+Bb3:1 D4:.5 C4:.5 F4:1 Eb4:3
+F#3:1 A#3:1 C#4:1 B3:3
+G#3:1 B3:1 C#4:2 D#4:2
+Ab3:1 C4:1 Eb4:1 Db4:3
+F3:1 A3:.5 C4:.5 B3:1 A3:3
+D3:1 F3:1 A3:1 G3:3
+G3:1 B3:.5 A3:.5 D4:1 C4:3
+C4:1 Eb4:.5 D4:.5 G4:1 F4:3
+G3:1 Bb3:1 D4:1 C4:3
+A3:2 C4:1 D4:3
+''',sections={1:'p',3:'mp',5:'p',6:'pp',7:'mp',8:'p',9:'mp',10:'pp',11:'p',13:'mp',14:'p',15:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,13),(14,16)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('diminuendo',5,6),('crescendo',6,7),('diminuendo',7,8),('diminuendo',9,10),('crescendo',11,13),('diminuendo',14,16)],tempo_changes={},group=4,
+ performance=dict(rubato=[57,54,59,51,60,48,58,51,59,49,54,57,60,49,43,33],
+  phrase_arcs=[[0,23,3],[24,47,4],[48,77,4],[78,96,-2]],
+  lower_entries=[[0,6],[30,36],[60,66],[90,96]],tenor_entries=[[6,12],[36,42],[60,66],[78,84]],pedal_lift=.23,gate=.995,
+  note='The bass remains quietly held while the tenor takes small breaths. The two quintuplet figures form broad gestures above that slower movement. Each pedal refresh clears the passing harmony without cutting the sustained voice, and the closing minor colour softens into the last major sonority.'))
 ]

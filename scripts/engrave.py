@@ -12,9 +12,10 @@ for p in cat:
     if args.opus is not None and p['op'] not in args.opus:continue
     d=OUT/p['folder'];stem=p['stem']
     tk=verovio.toolkit()
+    engraving=p.get('engraving',{})
     tk.setOptions(dict(pageWidth=2100,pageHeight=3100,adjustPageHeight=True,pageMarginTop=15,pageMarginBottom=70,pageMarginLeft=120,pageMarginRight=90,
                        scale=40,breaks='encoded',header='none',footer='none',font='Leipzig',
-                       spacingSystem=9,spacingStaff=10,systemMaxPerPage=6,svgViewBox=True,
+                       spacingSystem=engraving.get('spacing_system',9),spacingStaff=10,systemMaxPerPage=6,svgViewBox=True,
                        mnumInterval=0,justifyVertically=False,minLastJustification=0))
     if not tk.loadFile(str(d/(stem+'.musicxml'))): raise RuntimeError('Load failed')
     print(stem,tk.getPageCount(),'pages')
@@ -30,6 +31,11 @@ for p in cat:
         root.set('color','black');root.set('font-family','Times, serif')
         for child in list(inner):root.append(child)
         root.remove(inner)
+        # Some long bass slurs need extra clearance above the pedal brackets.
+        pedal_shift=engraving.get('pedal_offset_y',0)
+        if pedal_shift:
+            for group in root.findall('.//'+ns+'g[@class="pedal"]'):
+                if len(group):group.set('transform',f'translate(0,{pedal_shift})')
         # Cairo does not use embedded webfonts: make the metronome glyph a path.
         for tg in root.findall('.//'+ns+'g[@class="tempo"]'):
             txt=tg.find(ns+'text')

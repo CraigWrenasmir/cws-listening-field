@@ -2389,5 +2389,189 @@
       "sounded_pitches_per_minute": 134.9,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Mica Understory",
+    "opus": 50,
+    "score_pages": 1,
+    "bars": 16,
+    "pitch_onsets": 186,
+    "audio_seconds": 120.11,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 87,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 67,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced lower-voice independence",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The left hand sustains the bass while shaping a distinct tenor line with upward stems. Half-bar pedal changes must preserve the held keys. The right hand alternates sustained voicings with two groups of five quarter-note quintuplets across four beats. Balance the moving tenor beneath the melody without losing the bass."
+    },
+    "notated_tuplet_notes": {
+      "1:5:4": 10
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.77
+      ],
+      [
+        3,
+        5.77
+      ],
+      [
+        6,
+        8.77
+      ],
+      [
+        9,
+        11.77
+      ],
+      [
+        12,
+        14.77
+      ],
+      [
+        15,
+        17.77
+      ],
+      [
+        18,
+        20.77
+      ],
+      [
+        21,
+        23.77
+      ],
+      [
+        24,
+        26.77
+      ],
+      [
+        27,
+        29.77
+      ],
+      [
+        30,
+        32.77
+      ],
+      [
+        33,
+        35.77
+      ],
+      [
+        36,
+        38.77
+      ],
+      [
+        39,
+        41.77
+      ],
+      [
+        42,
+        44.77
+      ],
+      [
+        45,
+        47.77
+      ],
+      [
+        48,
+        50.77
+      ],
+      [
+        51,
+        53.77
+      ],
+      [
+        54,
+        56.77
+      ],
+      [
+        57,
+        59.77
+      ],
+      [
+        60,
+        62.77
+      ],
+      [
+        63,
+        65.77
+      ],
+      [
+        66,
+        68.77
+      ],
+      [
+        69,
+        71.77
+      ],
+      [
+        72,
+        74.77
+      ],
+      [
+        75,
+        77.77
+      ],
+      [
+        78,
+        80.77
+      ],
+      [
+        81,
+        83.77
+      ],
+      [
+        84,
+        86.77
+      ],
+      [
+        87,
+        89.77
+      ],
+      [
+        90,
+        92.77
+      ],
+      [
+        93,
+        95.77
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 95.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
