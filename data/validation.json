@@ -18785,5 +18785,428 @@
       "sounded_pitches_per_minute": 65.9,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Nacre Turnstile",
+    "opus": 110,
+    "score_pages": 2,
+    "bars": 20,
+    "pitch_onsets": 135,
+    "audio_seconds": 111.76,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 44,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 15,
+        "maximum_eighth_note_leap_semitones": 8,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced chromatic bass harmony and sustained chord voicing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Hold all four RH notes throughout bars 5\u201310 without rearticulation. The bass descends one semitone per bar; the LH tenor must remain distinct above each four-beat bass note. Pedal refreshes clear the changing lower notes while the upper chord stays finger-held. The LH reaches eleven semitones under the tenor at two points. Three longer tenor slurs shape the six-bar passage. The opening melody returns an octave higher in bar 17 before folding into the final F-minor sixth/ninth."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8200000000000001
+      ],
+      [
+        1,
+        1.32
+      ],
+      [
+        1.5,
+        1.82
+      ],
+      [
+        2,
+        2.32
+      ],
+      [
+        2.5,
+        3.82
+      ],
+      [
+        4,
+        5.32
+      ],
+      [
+        5.5,
+        5.82
+      ],
+      [
+        6,
+        7.82
+      ],
+      [
+        8,
+        8.82
+      ],
+      [
+        9,
+        9.32
+      ],
+      [
+        9.5,
+        9.82
+      ],
+      [
+        10,
+        10.82
+      ],
+      [
+        11,
+        11.82
+      ],
+      [
+        12,
+        12.82
+      ],
+      [
+        13,
+        13.82
+      ],
+      [
+        14,
+        14.82
+      ],
+      [
+        15,
+        15.82
+      ],
+      [
+        16,
+        16.82
+      ],
+      [
+        17,
+        17.32
+      ],
+      [
+        17.5,
+        18.82
+      ],
+      [
+        19,
+        19.82
+      ],
+      [
+        20,
+        21.32
+      ],
+      [
+        21.5,
+        21.82
+      ],
+      [
+        22,
+        22.82
+      ],
+      [
+        23,
+        23.82
+      ],
+      [
+        24,
+        24.82
+      ],
+      [
+        25,
+        25.82
+      ],
+      [
+        26,
+        27.82
+      ],
+      [
+        28,
+        28.82
+      ],
+      [
+        29,
+        29.32
+      ],
+      [
+        29.5,
+        30.82
+      ],
+      [
+        31,
+        31.82
+      ],
+      [
+        32,
+        33.82
+      ],
+      [
+        34,
+        34.82
+      ],
+      [
+        35,
+        35.82
+      ],
+      [
+        36,
+        36.82
+      ],
+      [
+        37,
+        37.82
+      ],
+      [
+        38,
+        38.32
+      ],
+      [
+        38.5,
+        39.82
+      ],
+      [
+        40,
+        40.82
+      ],
+      [
+        41,
+        41.32
+      ],
+      [
+        41.5,
+        41.82
+      ],
+      [
+        42,
+        42.82
+      ],
+      [
+        43,
+        43.82
+      ],
+      [
+        44,
+        45.32
+      ],
+      [
+        45.5,
+        45.82
+      ],
+      [
+        46,
+        47.82
+      ],
+      [
+        48,
+        48.82
+      ],
+      [
+        49,
+        49.32
+      ],
+      [
+        49.5,
+        49.82
+      ],
+      [
+        50,
+        51.82
+      ],
+      [
+        52,
+        52.82
+      ],
+      [
+        53,
+        53.32
+      ],
+      [
+        53.5,
+        53.82
+      ],
+      [
+        54,
+        54.82
+      ],
+      [
+        55,
+        55.82
+      ],
+      [
+        56,
+        57.82
+      ],
+      [
+        58,
+        58.82
+      ],
+      [
+        59,
+        59.82
+      ],
+      [
+        60,
+        60.82
+      ],
+      [
+        61,
+        61.32
+      ],
+      [
+        61.5,
+        61.82
+      ],
+      [
+        62,
+        62.82
+      ],
+      [
+        63,
+        63.82
+      ],
+      [
+        64,
+        64.82
+      ],
+      [
+        65,
+        65.32
+      ],
+      [
+        65.5,
+        66.32
+      ],
+      [
+        66.5,
+        67.82
+      ],
+      [
+        68,
+        68.82
+      ],
+      [
+        69,
+        69.32
+      ],
+      [
+        69.5,
+        69.82
+      ],
+      [
+        70,
+        71.82
+      ],
+      [
+        72,
+        72.82
+      ],
+      [
+        73,
+        73.82
+      ],
+      [
+        74,
+        74.82
+      ],
+      [
+        75,
+        75.82
+      ],
+      [
+        76,
+        79.82
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "2": "pp",
+        "3": "mp",
+        "4": "p",
+        "5": "pp",
+        "11": "p",
+        "12": "mp",
+        "13": "p",
+        "14": "mp",
+        "15": "p",
+        "16": "pp",
+        "17": "p",
+        "18": "pp",
+        "19": "pp",
+        "20": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "11": "pp"
+      }
+    },
+    "verified_voice_phrases": [
+      {
+        "voice": "tenor",
+        "start_beat": 16,
+        "end_beat": 24,
+        "swell": 3
+      },
+      {
+        "voice": "tenor",
+        "start_beat": 24,
+        "end_beat": 32,
+        "swell": 3
+      },
+      {
+        "voice": "tenor",
+        "start_beat": 32,
+        "end_beat": 40,
+        "swell": 3
+      }
+    ],
+    "verified_nonprinting_voice_rests": {
+      "tenor": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 12,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 74.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

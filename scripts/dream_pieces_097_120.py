@@ -974,4 +974,88 @@ R:5
   phrase_arcs=[[0,19.8,3],[20,24.8,2],[25,29.8,2],[30,34.8,2],[35,39.8,2],[40,44.8,2],[45,49.8,2],[50,54.8,1],[55,69.8,3],[70,85,-2]],
   tenor_entries=[[20,55]],lower_entries=[],pedal_lift=.18,gate=.995,
   note='Keep the G bass very soft beneath the two circulating melodies. The upper line breathes every five beats; the tenor makes a longer seven-beat journey. Let the return to minor colour feel like a change of light rather than an abrupt interruption. The final ninth opens out as the pulse slows.'))
+,
+dict(op=110,title='Nacre Turnstile',key='f',fifths=-4,meter='4/4',bpm=54,
+ description='Calcite Interchange’s G–B-flat–C–D becomes F–A-flat–B-flat–C. One A-flat–C–E-flat–G chord stays held through six bars while the bass descends F–E–E-flat–D–D-flat–C and a tenor line continues beneath it. The unchanged upper harmony takes on increasingly chromatic meanings. A more mobile passage carries those colours back to an octave-raised return and a minor sixth/ninth close.',
+ difficulty='Advanced chromatic bass harmony and sustained chord voicing',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Hold all four RH notes throughout bars 5–10 without rearticulation. The bass descends one semitone per bar; the LH tenor must remain distinct above each four-beat bass note. Pedal refreshes clear the changing lower notes while the upper chord stays finger-held. The LH reaches eleven semitones under the tenor at two points. Three longer tenor slurs shape the six-bar passage. The opening melody returns an octave higher in bar 17 before folding into the final F-minor sixth/ninth.',
+ parent_opus=109,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['F','Ab','Bb','C']),
+ ancestry=dict(source_opus=109,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=5,source_pitches=['G','Bb','C','D'],transposition_semitones=-2),
+ lower_sections={1:'pp',5:'p',11:'pp'},hidden_voice_rests={'tenor':[1,2,3,4,11,12,13,14,15,16,17,18,19,20]},
+ voice_phrases=[dict(voice='tenor',start_beat=start,end_beat=start+8,swell=3) for start in [16,24,32]],
+ system_starts=[1,3,5,7,9,11,13,15,17,19],page_starts=[11],engraving=dict(spacing_system=11,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.18] for bar,cuts in enumerate([[0,1,1.5,2,2.5,4],[0,1.5,2,4],[0,1,1.5,2,3,4],[0,1,2,3,4],[0,1,1.5,3,4],[0,1.5,2,3,4],[0,1,2,4],[0,1,1.5,3,4],[0,2,3,4],[0,1,2,2.5,4],[0,1,1.5,2,3,4],[0,1.5,2,4],[0,1,1.5,2,4],[0,1,1.5,2,3,4],[0,2,3,4],[0,1,1.5,2,3,4],[0,1,1.5,2.5,4],[0,1,1.5,2,4],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+F4:1 Ab4:.5 Bb4:1 C5:1.5
+Eb5:1.5 Db5:.5 C5:2
+Bb4:1 C5:.5 Eb5:.5 G5:2
+F5:2 Eb5:1 Db5:1
+Ab4+C5+Eb5+G5:4~
+Ab4+C5+Eb5+G5:4~
+Ab4+C5+Eb5+G5:4~
+Ab4+C5+Eb5+G5:4~
+Ab4+C5+Eb5+G5:4~
+Ab4+C5+Eb5+G5:4
+G5:1 F5:.5 Eb5:1.5 C5:1
+Eb5:1.5 F5:.5 Ab5:2
+G5:1 Gb5:.5 F5:.5 Eb5:2
+D5:1 F5:.5 Ab5:1.5 G5:1
+Eb5:2 D5:1 C5:1
+Bb4:1 Db5:.5 E5:1.5 G5:1
+F5:1 Ab5:.5 Bb5:1 C6:1.5
+Ab5:1.5 G5:.5 F5:2
+Eb5:1 D5:1 C5:1 Ab4:1
+G4+Ab4+C5+D5:4
+''',
+ lh='''
+F3:1 C4:.5 Eb4:.5 G3:2
+Db3+Ab3:2 C4+F4:2
+Eb3:1 Bb3:1 Db4:1 G3:1
+C3:1 G3:1 Bb3:1 E4:1
+F3:4
+E3:4
+Eb3:4
+D3:4
+Db3:4
+C3:4
+Ab2:1 Eb3:1 G3:1 C4:1
+Db3:1.5 Ab3:.5 C4:2
+E3+Bb3:2 Eb3+A3:2
+D3:1 A3:1 C4:1 F3:1
+G3+Bb3:2 F3+A3:2
+C3:1 G3:1 Bb3:1 E4:1
+F3:1 C4:.5 Eb4:1 Db4:1.5
+Bb2:1 F3:1 Ab3:2
+Db3:1 Ab3:1 C4:1 E3:1
+F3+C4:4
+''',
+ lh_upper='''
+R:4
+R:4
+R:4
+R:4
+Ab3:1 C4:.5 Eb4:1.5 C4:1
+G#3:1.5 B3:.5 D#4:1 C4:1
+G3:1 Bb3:1 C4:2
+F3:1 Ab3:.5 C4:1.5 B3:1
+F3:2 Ab3:1 C4:1
+Eb3:1 G3:1 Bb3:.5 Ab3:1.5
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'pp',11:'p',12:'mp',13:'p',14:'mp',15:'p',16:'pp',17:'p',18:'pp',19:'pp',20:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(11,14),(15,16),(17,20)],lower_phrases=[(1,2),(3,4),(11,12),(13,14),(15,16),(17,18),(19,20)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,5),('crescendo',11,12),('crescendo',13,14),('diminuendo',15,16),('diminuendo',17,20)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,48,56,46,49,47,50,46,48,42,53,57,51,55,47,43,49,43,35,27],
+  phrase_arcs=[[0,15.8,3],[16,39.8,1],[40,55.8,3],[56,63.8,2],[64,80,-2]],
+  tenor_entries=[[16,40]],lower_entries=[],pedal_lift=.18,gate=.995,
+  note='Let the upper chord decay naturally through the chromatic bass descent; holding the keys preserves its resonance without creating new attacks. Shape the tenor in three long breaths above the changing bass. The return becomes more mobile and rises into a higher register, then settles softly into the added sixth and ninth.'))
 ]
