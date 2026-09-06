@@ -2,7 +2,7 @@
 
 **CWS / FIRST STUDIES** — six piano miniatures presented as freely rotating sculptures of their two voices.
 
-[Open the public gallery](https://cws-listening-field.wrenasmir.chatgpt.site).
+[Open the public gallery on GitHub Pages](https://craigwrenasmir.github.io/cws-listening-field/).
 
 Drag a sculpture to turn it through 360 degrees, play the complete recording, open the score with live note highlighting, or follow the shared musical phrases through **Trace kinship**. Each piece has PDF, MP3, MIDI and MusicXML downloads. The text index provides direct access, and the URL fragment preserves the selected opus.
 
