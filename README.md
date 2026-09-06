@@ -83,6 +83,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 65 | Sorrel Switchback | 6/4 | 138 | [Score](pieces/CWS_Op_065_Sorrel_Switchback/CWS_Op_065_Sorrel_Switchback.pdf) | [MP3](pieces/CWS_Op_065_Sorrel_Switchback/CWS_Op_065_Sorrel_Switchback.mp3) |
 | CWS Op. 66 | Lupin Gradient | 5/8 | 192 | [Score](pieces/CWS_Op_066_Lupin_Gradient/CWS_Op_066_Lupin_Gradient.pdf) | [MP3](pieces/CWS_Op_066_Lupin_Gradient/CWS_Op_066_Lupin_Gradient.mp3) |
 | CWS Op. 67 | Nacre Driftway | 9/8 | 167 | [Score](pieces/CWS_Op_067_Nacre_Driftway/CWS_Op_067_Nacre_Driftway.pdf) | [MP3](pieces/CWS_Op_067_Nacre_Driftway/CWS_Op_067_Nacre_Driftway.mp3) |
+| CWS Op. 68 | Seagrass Relay | 5/4, 4/4, 6/4, 3/4 (changing) | 187 | [Score](pieces/CWS_Op_068_Seagrass_Relay/CWS_Op_068_Seagrass_Relay.pdf) | [MP3](pieces/CWS_Op_068_Seagrass_Relay/CWS_Op_068_Seagrass_Relay.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

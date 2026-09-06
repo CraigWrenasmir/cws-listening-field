@@ -1504,4 +1504,61 @@ Gb2+Db3:3 Eb3:1.5
   phrase_arcs=[[0,13,3],[13.5,26.5,4],[27,40,4],[40.5,53.5,4],[54,76.5,-2]],
   lower_entries=[[13.5,22.5],[31.5,36],[58.5,63]],inner_entries=[[36,40.5]],pedal_lift=.23,gate=.995,
   note='The compound pulses flow underneath longer melodic spans. The inner inversion in bar 9 comes forward while the upper B-flat stays quiet. A distant major reflection provides a brief lift, then the returning melody gradually loses height and settles into a spacious major ninth.'))
+,
+dict(op=68,title='Seagrass Relay',key='D',fifths=2,meter='5/4',bpm=55,
+ meters=['5/4','4/4','6/4','5/4','3/4','6/4','4/4','5/4','4/4','6/4','5/4','3/4','5/4','4/4','6/4','5/4','4/4','6/4'],
+ description='Nacre Driftway’s inner inversion becomes G–E–D–E at the top of three-note chords stacked in fourths. The shapes move through changing bars, sometimes shifting by a semitone over a more distant bass. A whole chord is held across the six-beat and five-beat bars near the centre. The last descent releases the fourths into a D-major ninth.',
+ difficulty='Advanced quartal chord planing in changing metre',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The RH opening and most later chords contain two stacked perfect fourths, spanning ten semitones. Voice their top notes as one melody. Maintain all three tied notes across bars 2–3 and 10–11, even while the bass and metre change. The final chord changes the interval shape; prepare its closer spacing during the preceding held chord.',
+ parent_opus=67,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['G','E','D','E']),
+ ancestry=dict(source_opus=67,source_hand='rh',source_voice='inner',source_start_beat=36,source_end_beat=40.5,source_pitches=['Gb','Eb','Db','Eb'],transposition_semitones=1),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[0,1.8],[2,3.8],[4,4.8],[5,6.8],[7,8.8],[9,11.8],[12,14.8],[15,17.8],[18,19.8],[20,21.8],[22,22.8],[23,25.8],[26,28.8],[29,30.8],[31,32.8],[33,35.8],[36,37.8],[38,39.8],[40,41.8],[42,44.8],[45,47.8],[48,49.8],[50,52.8],[53,54.3],[54.5,55.8],[56,57.8],[58,60.8],[61,63.8],[64,64.8],[65,67.8],[68,70.8],[71,72.8],[73,75.8],[76,77.8],[78,79.8],[80,82.8],[83,85.8]],
+ rh='''
+A4+D5+G5:2 F#4+B4+E5:1 E4+A4+D5:1 F#4+B4+E5:1
+G4+C5+F5:4~
+G4+C5+F5:1 F#4+B4+E5:2 F4+Bb4+Eb5:3
+E4+A4+D5:3 F4+Bb4+Eb5:2
+E4+A4+D5:2 D#4+G#4+C#5:1
+D4+G4+C5:3 E4+A4+D5:1 F#4+B4+E5:2
+G4+C5+F5:2 A4+D5+G5:2
+Ab4+Db5+Gb5:3 G4+C5+F5:1 Gb4+Cb5+Fb5:1
+F4+Bb4+Eb5:2 E4+A4+D5:2
+F#4+B4+E5:6~
+F#4+B4+E5:2 G4+C5+F5:1 F4+Bb4+Eb5:2
+E4+A4+D5:1.5 D4+G4+C5:1.5
+D4+G4+C5:2 E4+A4+D5:1 F#4+B4+E5:1 G4+C5+F5:1
+F#4+B4+E5:3 E4+A4+D5:1
+F4+Bb4+Eb5:3 E4+A4+D5:3
+D4+G4+C5:2 E4+A4+D5:3
+C#4+F#4+B4:2 D4+G4+C5:2
+C#4+E4+A4:6
+''',
+ lh='''
+D3:2 A3:1 C#4:1 B3:1
+Bb2:1.5 F3:.5 A3:1 C4:1
+Eb3:2 Bb3:1 Db4:1 C4:2
+Ab2:1.5 Eb3:.5 Gb3:1 Bb3:1 Ab3:1
+A2:1 E3:1 G3:1
+G2:2 D3:1 F#3:1 A3:1 B3:1
+C3:1 G3:1 B3:1 D4:1
+Db3:2 Ab3:1 C4:1 Bb3:1
+B2:1.5 F#3:.5 A3:1 C#4:1
+E3:2 B3:1 D4:1 C#4:2
+C3:1 G3:1 Bb3:1 A3:2
+F3:1 C4:.5 Bb3:1.5
+G2:2 D3:1 F3:1 A3:1
+B2:1.5 F#3:.5 A3:1 C#4:1
+Bb2:2 F3:1 Ab3:1 C4:2
+G2:1.5 D3:.5 F3:1 A3:2
+A2:1 E3:1 G3:1 B3:1
+D3+F#3:6
+''',sections={1:'p',2:'mp',3:'p',4:'mp',5:'pp',6:'p',7:'mp',8:'p',9:'pp',10:'p',11:'mp',12:'pp',13:'p',14:'mp',15:'p',16:'pp',17:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,5),(6,9),(10,12),(13,18)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,15),(16,18)],
+ hairpins=[('crescendo',1,2),('diminuendo',2,3),('diminuendo',4,5),('crescendo',6,7),('diminuendo',7,9),('crescendo',10,11),('diminuendo',11,12),('crescendo',13,14),('diminuendo',14,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[55,58,51,57,44,53,60,54,45,52,58,44,53,57,50,44,37,28],
+  phrase_arcs=[[0,22.5,4],[23,41.5,4],[42,55.5,4],[56,86,-2]],
+  lower_entries=[[5,10],[42,50],[76,80]],pedal_lift=.2,gate=.995,
+  note='The chord tops carry the melody while the lower chord notes remain soft. The varying bar lengths follow longer swells and retreats. Bass movement is clearer during the two sustained chord fields; the closing shape contracts into a quiet major ninth.'))
 ]

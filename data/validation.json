@@ -5420,5 +5420,271 @@
       "sounded_pitches_per_minute": 100.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Seagrass Relay",
+    "opus": 68,
+    "score_pages": 2,
+    "bars": 18,
+    "pitch_onsets": 187,
+    "audio_seconds": 115.69,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 43,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 4
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced quartal chord planing in changing metre",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The RH opening and most later chords contain two stacked perfect fourths, spanning ten semitones. Voice their top notes as one melody. Maintain all three tied notes across bars 2\u20133 and 10\u201311, even while the bass and metre change. The final chord changes the interval shape; prepare its closer spacing during the preceding held chord."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        3.8
+      ],
+      [
+        4,
+        4.8
+      ],
+      [
+        5,
+        6.8
+      ],
+      [
+        7,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        22.8
+      ],
+      [
+        23,
+        25.8
+      ],
+      [
+        26,
+        28.8
+      ],
+      [
+        29,
+        30.8
+      ],
+      [
+        31,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        49.8
+      ],
+      [
+        50,
+        52.8
+      ],
+      [
+        53,
+        54.3
+      ],
+      [
+        54.5,
+        55.8
+      ],
+      [
+        56,
+        57.8
+      ],
+      [
+        58,
+        60.8
+      ],
+      [
+        61,
+        63.8
+      ],
+      [
+        64,
+        64.8
+      ],
+      [
+        65,
+        67.8
+      ],
+      [
+        68,
+        70.8
+      ],
+      [
+        71,
+        72.8
+      ],
+      [
+        73,
+        75.8
+      ],
+      [
+        76,
+        77.8
+      ],
+      [
+        78,
+        79.8
+      ],
+      [
+        80,
+        82.8
+      ],
+      [
+        83,
+        85.8
+      ]
+    ],
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 5.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 9.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 15.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 20.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 23.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 29.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 33.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 38.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 42.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 48.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 53.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 56.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 61.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 65.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 71.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 76.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 80.0,
+        "meter": "6/4"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 11,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 99.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
