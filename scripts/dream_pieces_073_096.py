@@ -1222,4 +1222,76 @@ C3+G3:3
   phrase_arcs=[[0,17.5,4],[18,32.5,3],[33,41.5,2],[42,50.5,1],[51,65.5,3],[66,75,-3]],
   lower_entries=[[42,51]],pedal_lift=.18,gate=.99,
   note='The brief chromatic neighbours are a passing breath before each held target. The upper line follows long arcs through the shifting accompaniment. When the bass takes the enclosures, the upper chords recede, then the opening gesture returns quietly before a spacious final harmony.'))
+,
+dict(op=90,title='Canna Astrolabe',key='eb',fifths=-6,meter='5/4',bpm=51,
+ description='Larkspur Concourse’s opening moves down a semitone to E-flat–G-flat–A-flat–G-flat. A seven-beat upper phrase repeats five times while a five-beat tenor phrase completes seven turns. Their beginnings meet again after thirty-five beats, as changing bass roots and a quiet inner line alter the meaning of the same notes. The coda releases both cycles into longer, newly shaped phrases and leaves a ninth above E-flat minor.',
+ difficulty='Advanced four-voice phrasing with seven-beat and five-beat cycles',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The opening upper phrase lasts seven quarter beats and crosses the five-beat bar lines; the tenor phrase lasts five. Follow each line’s own shape until their beginnings reunite at bar 8. The bass changes below the repeated material and must remain quieter than the two principal lines. Finger-held bass notes allow pedal refreshes; review the opening LH octave when the bass drops to B-flat. The coda abandons both recurring patterns.',
+ parent_opus=89,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=5,pitches=['Eb','Gb','Ab','Gb']),
+ ancestry=dict(source_opus=89,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['E','G','A','G'],transposition_semitones=-1),
+ system_starts=[1,3,5,7,8,10,12],page_starts=[8],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*5+left,(bar-1)*5+right-.21] for bar,cuts in enumerate([[0,1.5,2,3,5],[0,2,3.5,4,5],[0,2,3,4,5],[0,.5,1,2,3,4,5],[0,1,2,2.5,3,4,5],[0,1,2,3,4.5,5],[0,1,2,3,5],[0,1,2,3,5],[0,2,3,5],[0,2,3,5],[0,1,2,3,5],[0,1,2,5]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+Eb5:1.5 Gb5:.5 Ab5:1 Gb5:2
+Db5:2 Eb5:1.5 Gb5:.5 Ab5:1
+Gb5:2 Db5:2 Eb5:1~
+Eb5:.5 Gb5:.5 Ab5:1 Gb5:2 Db5:1~
+Db5:1 Eb5:1.5 Gb5:.5 Ab5:1 Gb5:1~
+Gb5:1 Db5:2 Eb5:1.5 Gb5:.5
+Ab5:1 Gb5:2 Db5:2
+F5:3 Eb5:2
+G5:2 F5:1 Eb5:2
+Bb5:2 Ab5:1 Gb5:2
+F5:1 Eb5:1 D5:3
+Eb5:1 F5:4
+''',
+ rh_inner='''
+Bb4:3 C5:2
+Cb5:2 Bb4:3
+Ab4:2 Bb4:3
+Ab4:1 Bb4:2 Cb5:2
+Bb4:2 C5:3
+Cb5:2 A4:3
+Ab4:3 Bb4:2
+Bb4:2 C5:1 Db5:2
+Db5:3 C5:2
+Db5:2 Eb5:1 Db5:2
+Ab4:2 Bb4:3
+Bb4:1 Db5:4
+''',
+ lh='''
+Eb3:5
+Cb3:5
+Db3:5
+Bb2:5
+Eb3:5
+F3:5
+Bb2:5
+Eb3:5
+C3:3 G3:2
+Gb3:3 Db3:2
+Bb2:5
+Eb3:5
+''',
+ lh_upper='''
+Gb3:2 Ab3:1 Bb3:2
+Gb3:2 Ab3:1 Bb3:2
+Gb3:2 Ab3:1 Bb3:2
+Gb3:2 Ab3:1 Bb3:2
+Gb3:2 Ab3:1 Bb3:2
+Gb3:2 Ab3:1 Bb3:2
+Gb3:2 Ab3:1 Bb3:2
+Gb3:1 Bb3:1 Ab3:1 Gb3:2
+Eb3:2 F3:1 Bb3:2
+Bb3:2 C4:1 Ab3:2
+F3:2 Ab3:1 F3:2
+Gb3:2 Bb3:3
+''',sections={1:'p',2:'pp',3:'p',4:'p',5:'mp',6:'p',7:'pp',8:'p',9:'p',10:'mp',11:'p',12:'pp'},words={1:'poco rubato',11:'poco rit.'},
+ slurs=[(1,7),(8,10),(11,12)],lower_phrases=[],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('crescendo',7,9),('diminuendo',10,12)],tempo_changes={},group=2,
+ performance=dict(rubato=[51,46,53,49,55,44,47,43,51,46,35,26],
+  phrase_arcs=[[0,6.8,3],[7,13.8,2],[14,20.8,4],[21,27.8,3],[28,34.8,1],[35,49.5,3],[50,60,-3]],
+  lower_entries=[],inner_entries=[[25,30],[40,45]],tenor_entries=[[0,10],[15,20],[30,35],[45,50]],pedal_lift=.21,gate=.995,
+  note='The upper phrase has its own seven-beat arc above the gentler five-beat tenor. The two lines receive different emphasis as the bass harmony changes; the repeated notes keep their identity while their relationship shifts. At the shared boundary the melody opens into a free coda, ending on a floating ninth.'))
 ]

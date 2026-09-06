@@ -105,6 +105,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 87 | Verbena Switchyard | 7/4, 4/4, 5/4, 3/4, 6/4, 7/8 (changing) | 166 | [Score](pieces/CWS_Op_087_Verbena_Switchyard/CWS_Op_087_Verbena_Switchyard.pdf) | [MP3](pieces/CWS_Op_087_Verbena_Switchyard/CWS_Op_087_Verbena_Switchyard.mp3) |
 | CWS Op. 88 | Cress Vantage | 4/4 | 95 | [Score](pieces/CWS_Op_088_Cress_Vantage/CWS_Op_088_Cress_Vantage.pdf) | [MP3](pieces/CWS_Op_088_Cress_Vantage/CWS_Op_088_Cress_Vantage.mp3) |
 | CWS Op. 89 | Larkspur Concourse | 6/8 | 146 | [Score](pieces/CWS_Op_089_Larkspur_Concourse/CWS_Op_089_Larkspur_Concourse.pdf) | [MP3](pieces/CWS_Op_089_Larkspur_Concourse/CWS_Op_089_Larkspur_Concourse.mp3) |
+| CWS Op. 90 | Canna Astrolabe | 5/4 | 115 | [Score](pieces/CWS_Op_090_Canna_Astrolabe/CWS_Op_090_Canna_Astrolabe.pdf) | [MP3](pieces/CWS_Op_090_Canna_Astrolabe/CWS_Op_090_Canna_Astrolabe.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

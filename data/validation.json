@@ -11856,5 +11856,259 @@
       "sounded_pitches_per_minute": 88.7,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Canna Astrolabe",
+    "opus": 90,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 115,
+    "audio_seconds": 91.12,
+    "hands": {
+      "rh": {
+        "low": 68,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 46,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 12
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-voice phrasing with seven-beat and five-beat cycles",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The opening upper phrase lasts seven quarter beats and crosses the five-beat bar lines; the tenor phrase lasts five. Follow each line\u2019s own shape until their beginnings reunite at bar 8. The bass changes below the repeated material and must remain quieter than the two principal lines. Finger-held bass notes allow pedal refreshes; review the opening LH octave when the bass drops to B-flat. The coda abandons both recurring patterns."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.29
+      ],
+      [
+        1.5,
+        1.79
+      ],
+      [
+        2,
+        2.79
+      ],
+      [
+        3,
+        4.79
+      ],
+      [
+        5,
+        6.79
+      ],
+      [
+        7,
+        8.29
+      ],
+      [
+        8.5,
+        8.79
+      ],
+      [
+        9,
+        9.79
+      ],
+      [
+        10,
+        11.79
+      ],
+      [
+        12,
+        12.79
+      ],
+      [
+        13,
+        13.79
+      ],
+      [
+        14,
+        14.79
+      ],
+      [
+        15,
+        15.29
+      ],
+      [
+        15.5,
+        15.79
+      ],
+      [
+        16,
+        16.79
+      ],
+      [
+        17,
+        17.79
+      ],
+      [
+        18,
+        18.79
+      ],
+      [
+        19,
+        19.79
+      ],
+      [
+        20,
+        20.79
+      ],
+      [
+        21,
+        21.79
+      ],
+      [
+        22,
+        22.29
+      ],
+      [
+        22.5,
+        22.79
+      ],
+      [
+        23,
+        23.79
+      ],
+      [
+        24,
+        24.79
+      ],
+      [
+        25,
+        25.79
+      ],
+      [
+        26,
+        26.79
+      ],
+      [
+        27,
+        27.79
+      ],
+      [
+        28,
+        29.29
+      ],
+      [
+        29.5,
+        29.79
+      ],
+      [
+        30,
+        30.79
+      ],
+      [
+        31,
+        31.79
+      ],
+      [
+        32,
+        32.79
+      ],
+      [
+        33,
+        34.79
+      ],
+      [
+        35,
+        35.79
+      ],
+      [
+        36,
+        36.79
+      ],
+      [
+        37,
+        37.79
+      ],
+      [
+        38,
+        39.79
+      ],
+      [
+        40,
+        41.79
+      ],
+      [
+        42,
+        42.79
+      ],
+      [
+        43,
+        44.79
+      ],
+      [
+        45,
+        46.79
+      ],
+      [
+        47,
+        47.79
+      ],
+      [
+        48,
+        49.79
+      ],
+      [
+        50,
+        50.79
+      ],
+      [
+        51,
+        51.79
+      ],
+      [
+        52,
+        52.79
+      ],
+      [
+        53,
+        54.79
+      ],
+      [
+        55,
+        55.79
+      ],
+      [
+        56,
+        56.79
+      ],
+      [
+        57,
+        59.79
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 78.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
