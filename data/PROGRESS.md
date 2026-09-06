@@ -15,7 +15,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Publication: Op. 1–9 verified live on GitHub Pages from commit b6888c179bc536fb528f7f3ecaf56de871c98b2c. Op. 7–9 assets and the updated player returned HTTP 200.
 - Op. 10, Reed Parallax — complete locally: 18 bars of 6/8, 107 sounded pitches, one inspected page, 65.47 seconds. G minor, with delayed bass entries, four left-hand ties and a motif from Bracken Meridian's opening E–G–A–G, transposed to D–F–G–F. Maximum rapid RH leap six semitones and maximum LH leap nine. MusicXML/MIDI, audio and layout checks passed. Awaiting the next publication batch and listening feedback.
 - Op. 11, Fen Lantern — complete locally: 14 bars of 12/8, 133 sounded pitches, one inspected page, 90.13 seconds. E-flat major with C-minor and F-dominant colour; twelve distinct LH rhythmic patterns, broad compound-metre phrases. MusicXML/MIDI, audio, timing, originality and layout checks passed. Awaiting the next publication batch and listening feedback.
-- Next: compose and complete Op. 12, Cloud Causeway; publish Op. 10–12 together.
+- Op. 12, Cloud Causeway — complete locally: 16 bars of 4/4, 121 sounded pitches, one inspected page, 84.90 seconds. A D-major ballad with B-minor shadows, a borrowed C-Lydian reflection, seven upper-voice ties across bar lines and twelve LH rhythm patterns. Two bass entries were lifted an octave for ease of playing. MusicXML/MIDI, audio, timing and layout checks passed; awaiting publication and listening feedback.
+- Next: publish Op. 10–12 together, then compose Op. 13, Alder Passage.
 
 ## Growth work to complete during this run
 

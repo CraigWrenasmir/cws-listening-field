@@ -250,5 +250,51 @@ Eb3:1.5 Bb3:1.5 Eb3+G3:3
  performance=dict(rubato=[66,61,65,63,60,64,68,61,65,63,60,57,53,46],
   phrase_arcs=[[0,11,3],[12,29,4],[30,47,5],[48,71,4],[72,84,-2]],
   lower_entries=[[6,24],[30,48],[60,72]],pedal_bars=list(range(1,15)),pedal_lift=.3,gate=.99,
-  note='Long compound-metre phrases gain and lose momentum within the line. Sparse bass answers leave the upper melody room to sustain through the pulse.'))
+  note='Long compound-metre phrases gain and lose momentum within the line. Sparse bass answers leave the upper melody room to sustain through the pulse.')),
+dict(op=12,title='Cloud Causeway',key='D',fifths=2,meter='4/4',bpm=52,
+ description='Fen Lantern\'s G-B-flat-C-B-flat falls by a semitone into F-sharp-A-B-A. In this quieter D-major ballad it hovers over major sevenths and B-minor shadows. A C-Lydian reflection briefly widens the view before an E-to-A dominant turn and a soft plagal approach bring the music home.',
+ parent_opus=11,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['F#','A','B','A']),
+ ancestry=dict(source_opus=11,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['G','Bb','C','Bb'],transposition_semitones=-1),
+ rh='''
+F#4:1.5 A4:.5 B4:1 A4:1~
+A4:1 E5:1 D5:.5 C#5:.5 F#4:1
+G4:1 B4:.5 D5:1.5 E5:1~
+E5:1 D5:.5 B4:.5 A4:1 R:1
+C#5:2 B4:.5 A4:.5 F#4:1~
+F#4:1 E4:1 D4:.5 F#4:.5 A4:1
+G4:1.5 B4:.5 D5:.5 F#5:.5 E5:1
+D5:1 C5:.5 B4:.5 G4:1 R:1
+F#4:1 A4:.5 B4:1.5 D5:1~
+D5:1 C#5:1 A4:.5 G#4:.5 F#4:1
+E4:1.5 G4:.5 A4:1 C#5:1~
+C#5:1 B4:.5 A4:.5 F#4:1 R:1
+G4:1 B4:.5 D5:.5 E5:1 D5:1~
+D5:.5 C#5:.5 B4:1 A4:1 E4:1
+F#4:1 A4:1 G4:.5 E4:.5 D4:1~
+D4:1 F#4+A4:3
+''',
+ lh='''
+D3:1.5 A3+C#4:1.5 R:1
+R:.5 B2:1.5 D3+A3:1 F#3:1
+G3:2 B3+D4:1.5 R:.5
+A3:1 G3+C#4:2 R:1
+F#3:1 A3+E4:1.5 C#4:.5 R:1
+B2+D3:2 F#3:1 A3:1~
+A3:.5 G3:.5 E3+B3:2 C3:1
+G3:1 D3:1 F#3:1 B3:1
+B2:2 D3+F#3:1 A3:1
+E3:1 G#3+D4:1.5 B2:.5 R:1
+A2:1 G3+B3:2 R:1
+D3:1.5 A3+C#4:1.5 R:1
+G3:1.5 D3+F#3:1.5 B2:1
+A2:1 C#3+G3:1.5 E3:.5 R:1
+G3:1 B3+D4:1 E3:1 A2:1
+D3+F#3:4
+''',sections={1:'p',5:'pp',7:'mp',9:'p',13:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,8),(9,12),(13,16)],lower_phrases=[(2,4),(6,8),(10,12),(14,16)],
+ hairpins=[('diminuendo',2,4),('crescendo',5,7),('diminuendo',7,8),('crescendo',9,11),('diminuendo',11,12),('diminuendo',13,16)],tempo_changes={},group=4,
+ performance=dict(rubato=[52,51,49,47,51,50,54,48,52,54,51,46,49,46,43,38],
+  phrase_arcs=[[0,11,3],[12,23,2],[24,31,4],[32,47,3],[48,64,-1]],
+  lower_entries=[[4,12],[20,32],[36,44]],pedal_bars=list(range(1,17)),pedal_lift=.23,gate=.99,
+  note='The two hands breathe at different places; the bass phrase continues into the brief C-Lydian colour. The closing descent stays soft and unhurried.'))
 ]
