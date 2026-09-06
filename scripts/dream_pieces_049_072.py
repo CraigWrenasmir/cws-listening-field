@@ -1307,4 +1307,128 @@ G2+D3:3 E3:3
   phrase_arcs=[[0,17,4],[18,35,4],[36,59,4],[60,71,3],[72,90,-2]],
   lower_entries=[[6,12],[30,36],[54,60],[84,90]],pedal_lift=.22,gate=.99,
   note='Each five-against-three span moves as a single unaccented arc towards its shared two-beat ending. The bass remains soft through the crossings, emerging in the held melodic spaces. The remote harmonic window gathers slightly more motion before the final minor-sixth-and-ninth chord recedes.'))
+,
+dict(op=66,title='Lupin Gradient',key='a',fifths=0,meter='5/8',bpm=48,
+ description='Sorrel Switchback’s descending line is stretched into A–G–F–E in the bass, while the upper melody climbs. Two softer inner voices enter around those opposing lines. The short five-eighth bars join into longer arcs, including an upper E held across a bar line. A-flat, D-flat and B-minor reflections lead through a suspended dominant into a softly open A-minor sixth.',
+ difficulty='Advanced four-voice contrary motion',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Follow the four independent voices through their staggered entries. The opening bass falls through A–G–F–E–D while the upper melody rises A–B–C–D–E. Several RH inner entries begin after an eighth or quarter rest. Keep the five-eighth bars inside the longer phrases, and sustain the upper E across bars 5–6 without repeating its attack.',
+ parent_opus=65,motif=dict(hand='lh',voice='bass',start_beat=0,end_beat=10,pitches=['A','G','F','E']),
+ ancestry=dict(source_opus=65,source_hand='rh',source_start_beat=42,source_end_beat=48,source_pitches=['F#','E','D','C#'],transposition_semitones=3),
+ system_starts=[1,6,11,16,21],page_starts=[16],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[b*2.5,b*2.5+2.25] for b in range(25)],
+ rh='''
+A4:2.5
+B4:1.5 A4:1
+C5:2.5
+D5:1.5 C5:1
+E5:2.5~
+E5:2.5
+D5:1.5 C5:.5 B4:.5
+C5:2.5
+Db5:1.5 Eb5:1
+F5:2.5
+G5:1.5 F5:1
+F#5:2.5
+E5:1.5 D5:.5 C#5:.5
+D5:2.5
+C#5:1.5 B4:1
+A4:2.5
+Bb4:1.5 Db5:1
+C5:2.5
+B4:1.5 A4:1
+G#4:2.5
+A4:1.5 B4:.5 C5:.5
+B4:2.5
+A4:1.5 G4:1
+G#4:1.5 E4:1
+A4:2.5
+''',
+ rh_inner='''
+R:.5 E4:1 G4:1
+D4:1 R:.5 G4:1
+R:1 E4:1.5
+G#4:1 A4:.5 G#4:1
+A4:1.5 C5:1
+B4:1 A4:.5 G4:1
+E4:1 R:.5 G4:1
+R:.5 G4:1 Bb4:1
+Ab4:1 F4:.5 Ab4:1
+R:1 A4:1.5
+Bb4:1 D5:.5 Eb5:1
+A4:1 F#4:.5 A4:1
+B4:1 G#4:.5 A4:1
+R:.5 G4:1 B4:1
+E4:1 G4:.5 A#4:1
+F#4:1.5 E4:1
+G4:1 F4:.5 E4:1
+Eb4:1 G4:.5 Bb4:1
+F4:1 Ab4:.5 G4:1
+D4:1 E4:.5 D4:1
+E4:1.5 G4:1
+D4:1 R:.5 F4:1
+C4:1 E4:.5 F4:1
+D4:1.5 B3:1
+C4+E4:2.5
+''',
+ lh='''
+A2:2.5
+G2:2.5
+F2:2.5
+E2:2.5
+D2:2.5
+G2:2.5
+C3:2.5
+Ab2:1.5 Eb3:1
+Db3:2.5
+Bb2:2.5
+Eb3:1 Bb2:1.5
+B2:2.5
+E3:1.5 B2:1
+C3:2 R:.5
+F#2:2.5
+B2:2.5
+E3:2.5
+Ab2:1.5 Eb3:1
+D3:1 A2:1.5
+E3:1 B2:1.5
+A2:2.5
+G2:2 R:.5
+F2:2.5
+E2:2.5
+A2:2.5
+''',
+ lh_upper='''
+E3:1.5 C3:1
+D3:1 B2:.5 F3:1
+C3:1.5 A2:1
+B2:1 D3:.5 C3:1
+F2:1.5 A2:1
+B2:1 D3:.5 F3:1
+G3:1 E3:1.5
+C3:1 Eb3:.5 G3:1
+F3:1.5 Ab3:1
+F3:1 D3:.5 A3:1
+G3:1 Bb3:.5 A3:1
+D3:1.5 F#3:1
+G#3:1 B3:.5 A3:1
+E3:1.5 G3:1
+A#2:1 C#3:.5 E3:1
+D3:1.5 F#3:1
+G3:1 Bb3:.5 A3:1
+C3:1.5 G3:1
+F3:1 Ab3:.5 G3:1
+G#3:1.5 B3:1
+C3:1.5 E3:1
+B2:1 D3:.5 F3:1
+A2:1.5 C3:1
+B2:1 D3:.5 C3:1
+E3:1.5 F#3:1
+''',sections={1:'p',2:'p',3:'mp',4:'p',5:'mp',6:'p',7:'pp',8:'p',9:'mp',10:'p',11:'mp',12:'p',13:'pp',14:'p',15:'mp',16:'p',17:'pp',18:'p',19:'mp',20:'pp',21:'p',22:'p',23:'pp'},words={1:'poco rubato',23:'poco rit.'},
+ slurs=[(1,7),(8,13),(14,20),(21,25)],lower_phrases=[(1,5),(6,9),(10,13),(14,17),(18,20),(21,25)],
+ hairpins=[('crescendo',1,5),('diminuendo',5,7),('crescendo',8,11),('diminuendo',11,13),('crescendo',14,15),('diminuendo',15,17),('crescendo',18,19),('diminuendo',19,20),('diminuendo',21,25)],tempo_changes={},group=5,
+ performance=dict(rubato=[48,49,52,50,54,48,41,47,52,49,55,48,42,47,53,49,42,46,51,40,45,42,38,34,26],
+  phrase_arcs=[[0,17,4],[17.5,32,4],[32.5,49.5,4],[50,62.5,-2]],
+  lower_entries=[[0,12.5],[50,62.5]],inner_entries=[[12.5,17.5],[30,35],[45,50]],tenor_entries=[[20,27.5],[35,42.5]],pedal_lift=.25,gate=.995,
+  note='The opening bass descent and upper ascent stay gently present while the two inner voices speak more softly. The five-eighth bars share one long breath through each larger phrase. Delayed inner entries and the held upper E keep the surface from becoming a repeated accompaniment pattern; the final descent narrows towards the minor sixth.'))
 ]

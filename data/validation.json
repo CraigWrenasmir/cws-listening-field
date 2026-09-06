@@ -5009,5 +5009,159 @@
       "sounded_pitches_per_minute": 73.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Lupin Gradient",
+    "opus": 66,
+    "score_pages": 2,
+    "bars": 25,
+    "pitch_onsets": 192,
+    "audio_seconds": 89.33,
+    "hands": {
+      "rh": {
+        "low": 59,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 38,
+        "high": 59,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 12
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-voice contrary motion",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Follow the four independent voices through their staggered entries. The opening bass falls through A\u2013G\u2013F\u2013E\u2013D while the upper melody rises A\u2013B\u2013C\u2013D\u2013E. Several RH inner entries begin after an eighth or quarter rest. Keep the five-eighth bars inside the longer phrases, and sustain the upper E across bars 5\u20136 without repeating its attack."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        2.25
+      ],
+      [
+        2.5,
+        4.75
+      ],
+      [
+        5.0,
+        7.25
+      ],
+      [
+        7.5,
+        9.75
+      ],
+      [
+        10.0,
+        12.25
+      ],
+      [
+        12.5,
+        14.75
+      ],
+      [
+        15.0,
+        17.25
+      ],
+      [
+        17.5,
+        19.75
+      ],
+      [
+        20.0,
+        22.25
+      ],
+      [
+        22.5,
+        24.75
+      ],
+      [
+        25.0,
+        27.25
+      ],
+      [
+        27.5,
+        29.75
+      ],
+      [
+        30.0,
+        32.25
+      ],
+      [
+        32.5,
+        34.75
+      ],
+      [
+        35.0,
+        37.25
+      ],
+      [
+        37.5,
+        39.75
+      ],
+      [
+        40.0,
+        42.25
+      ],
+      [
+        42.5,
+        44.75
+      ],
+      [
+        45.0,
+        47.25
+      ],
+      [
+        47.5,
+        49.75
+      ],
+      [
+        50.0,
+        52.25
+      ],
+      [
+        52.5,
+        54.75
+      ],
+      [
+        55.0,
+        57.25
+      ],
+      [
+        57.5,
+        59.75
+      ],
+      [
+        60.0,
+        62.25
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 9,
+      "sounded_pitches_per_minute": 133.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
