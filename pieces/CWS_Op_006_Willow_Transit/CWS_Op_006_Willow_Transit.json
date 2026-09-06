@@ -1,0 +1,2635 @@
+{
+  "op": 6,
+  "title": "Willow Transit",
+  "key": "C",
+  "fifths": 0,
+  "meter": "6/8",
+  "bpm": 81,
+  "description": "A-C-B-E, the shared figure moved into a new register and tonal setting, begins in the left hand. A floating upper voice gradually takes it over. The middle leans towards A minor, then opens into C major with a softened plagal return.",
+  "parent_opus": 2,
+  "motif": {
+    "hand": "lh",
+    "start_beat": 0,
+    "end_beat": 3,
+    "pitches": [
+      "A",
+      "C",
+      "B",
+      "E"
+    ]
+  },
+  "sections": {
+    "1": "p",
+    "9": "mp",
+    "17": "p",
+    "21": "pp"
+  },
+  "lower_phrases": [
+    [
+      1,
+      2
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      17,
+      18
+    ]
+  ],
+  "hairpins": [
+    [
+      "crescendo",
+      5,
+      7
+    ],
+    [
+      "diminuendo",
+      7,
+      8
+    ],
+    [
+      "crescendo",
+      9,
+      11
+    ],
+    [
+      "diminuendo",
+      13,
+      16
+    ],
+    [
+      "diminuendo",
+      21,
+      24
+    ]
+  ],
+  "tempo_changes": {
+    "23": 75,
+    "24": 66
+  },
+  "group": 4,
+  "folder": "CWS_Op_006_Willow_Transit",
+  "stem": "CWS_Op_006_Willow_Transit",
+  "bars": 24,
+  "beats_per_bar": 3,
+  "note_onsets": 158,
+  "events": [
+    {
+      "id": "cws6-rh-m1-n1",
+      "hand": "rh",
+      "bar": 1,
+      "offset": 0,
+      "duration": 1.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 0.0,
+      "end_seconds": 1.111111,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m1-n2",
+      "hand": "rh",
+      "bar": 1,
+      "offset": 1.5,
+      "duration": 1.0,
+      "pitches": [
+        79
+      ],
+      "spellings": [
+        "G5"
+      ],
+      "seconds": 1.111111,
+      "end_seconds": 1.851852,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-rh-m1-n3",
+      "hand": "rh",
+      "bar": 1,
+      "offset": 2.5,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 1.851852,
+      "end_seconds": 2.222222,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-rh-m2-n1",
+      "hand": "rh",
+      "bar": 2,
+      "offset": 3,
+      "duration": 1.0,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 2.222222,
+      "end_seconds": 2.962963,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m2-n2",
+      "hand": "rh",
+      "bar": 2,
+      "offset": 4.0,
+      "duration": 0.5,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 2.962963,
+      "end_seconds": 3.333333,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m2-n3",
+      "hand": "rh",
+      "bar": 2,
+      "offset": 4.5,
+      "duration": 1.0,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 3.333333,
+      "end_seconds": 4.074074,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m2-n4",
+      "hand": "rh",
+      "bar": 2,
+      "offset": 5.5,
+      "duration": 0.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 4.074074,
+      "end_seconds": 4.444444,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m3-n1",
+      "hand": "rh",
+      "bar": 3,
+      "offset": 6,
+      "duration": 1.0,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 4.444444,
+      "end_seconds": 5.185185,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m3-n2",
+      "hand": "rh",
+      "bar": 3,
+      "offset": 7.0,
+      "duration": 0.5,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 5.185185,
+      "end_seconds": 5.555556,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m3-n3",
+      "hand": "rh",
+      "bar": 3,
+      "offset": 7.5,
+      "duration": 1.0,
+      "pitches": [
+        79
+      ],
+      "spellings": [
+        "G5"
+      ],
+      "seconds": 5.555556,
+      "end_seconds": 6.296296,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m3-n4",
+      "hand": "rh",
+      "bar": 3,
+      "offset": 8.5,
+      "duration": 0.5,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 6.296296,
+      "end_seconds": 6.666667,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m4-n1",
+      "hand": "rh",
+      "bar": 4,
+      "offset": 9,
+      "duration": 2.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 6.666667,
+      "end_seconds": 8.595679,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m5-n1",
+      "hand": "rh",
+      "bar": 5,
+      "offset": 12,
+      "duration": 0.5,
+      "pitches": [
+        69
+      ],
+      "spellings": [
+        "A4"
+      ],
+      "seconds": 8.981481,
+      "end_seconds": 9.351852,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m5-n2",
+      "hand": "rh",
+      "bar": 5,
+      "offset": 12.5,
+      "duration": 0.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 9.351852,
+      "end_seconds": 9.722222,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-rh-m5-n3",
+      "hand": "rh",
+      "bar": 5,
+      "offset": 13.0,
+      "duration": 0.5,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 9.722222,
+      "end_seconds": 10.092593,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m5-n4",
+      "hand": "rh",
+      "bar": 5,
+      "offset": 13.5,
+      "duration": 1.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 10.092593,
+      "end_seconds": 11.203704,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m6-n1",
+      "hand": "rh",
+      "bar": 6,
+      "offset": 15,
+      "duration": 1.0,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 11.203704,
+      "end_seconds": 11.944444,
+      "velocity": 59
+    },
+    {
+      "id": "cws6-rh-m6-n2",
+      "hand": "rh",
+      "bar": 6,
+      "offset": 16.0,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 11.944444,
+      "end_seconds": 12.314815,
+      "velocity": 61
+    },
+    {
+      "id": "cws6-rh-m6-n3",
+      "hand": "rh",
+      "bar": 6,
+      "offset": 16.5,
+      "duration": 1.0,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 12.314815,
+      "end_seconds": 13.055556,
+      "velocity": 59
+    },
+    {
+      "id": "cws6-rh-m6-n4",
+      "hand": "rh",
+      "bar": 6,
+      "offset": 17.5,
+      "duration": 0.5,
+      "pitches": [
+        69
+      ],
+      "spellings": [
+        "A4"
+      ],
+      "seconds": 13.055556,
+      "end_seconds": 13.425926,
+      "velocity": 60
+    },
+    {
+      "id": "cws6-rh-m7-n1",
+      "hand": "rh",
+      "bar": 7,
+      "offset": 18,
+      "duration": 0.5,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 13.425926,
+      "end_seconds": 13.796296,
+      "velocity": 70
+    },
+    {
+      "id": "cws6-rh-m7-n2",
+      "hand": "rh",
+      "bar": 7,
+      "offset": 18.5,
+      "duration": 0.5,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 13.796296,
+      "end_seconds": 14.166667,
+      "velocity": 60
+    },
+    {
+      "id": "cws6-rh-m7-n3",
+      "hand": "rh",
+      "bar": 7,
+      "offset": 19.0,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 14.166667,
+      "end_seconds": 14.537037,
+      "velocity": 61
+    },
+    {
+      "id": "cws6-rh-m7-n4",
+      "hand": "rh",
+      "bar": 7,
+      "offset": 19.5,
+      "duration": 1.0,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 14.537037,
+      "end_seconds": 15.277778,
+      "velocity": 58
+    },
+    {
+      "id": "cws6-rh-m7-n5",
+      "hand": "rh",
+      "bar": 7,
+      "offset": 20.5,
+      "duration": 0.5,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 15.277778,
+      "end_seconds": 15.648148,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m8-n1",
+      "hand": "rh",
+      "bar": 8,
+      "offset": 21,
+      "duration": 2.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 15.648148,
+      "end_seconds": 17.57716,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m9-n1",
+      "hand": "rh",
+      "bar": 9,
+      "offset": 24,
+      "duration": 1.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 17.962963,
+      "end_seconds": 19.074074,
+      "velocity": 62
+    },
+    {
+      "id": "cws6-rh-m9-n2",
+      "hand": "rh",
+      "bar": 9,
+      "offset": 25.5,
+      "duration": 1.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 19.074074,
+      "end_seconds": 20.185185,
+      "velocity": 63
+    },
+    {
+      "id": "cws6-rh-m10-n1",
+      "hand": "rh",
+      "bar": 10,
+      "offset": 27,
+      "duration": 1.0,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 20.185185,
+      "end_seconds": 20.925926,
+      "velocity": 67
+    },
+    {
+      "id": "cws6-rh-m10-n2",
+      "hand": "rh",
+      "bar": 10,
+      "offset": 28.0,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 20.925926,
+      "end_seconds": 21.296296,
+      "velocity": 69
+    },
+    {
+      "id": "cws6-rh-m10-n3",
+      "hand": "rh",
+      "bar": 10,
+      "offset": 28.5,
+      "duration": 1.0,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 21.296296,
+      "end_seconds": 22.037037,
+      "velocity": 67
+    },
+    {
+      "id": "cws6-rh-m10-n4",
+      "hand": "rh",
+      "bar": 10,
+      "offset": 29.5,
+      "duration": 0.5,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 22.037037,
+      "end_seconds": 22.407407,
+      "velocity": 68
+    },
+    {
+      "id": "cws6-rh-m11-n1",
+      "hand": "rh",
+      "bar": 11,
+      "offset": 30,
+      "duration": 0.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 22.407407,
+      "end_seconds": 22.777778,
+      "velocity": 71
+    },
+    {
+      "id": "cws6-rh-m11-n2",
+      "hand": "rh",
+      "bar": 11,
+      "offset": 30.5,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 22.777778,
+      "end_seconds": 23.148148,
+      "velocity": 62
+    },
+    {
+      "id": "cws6-rh-m11-n3",
+      "hand": "rh",
+      "bar": 11,
+      "offset": 31.0,
+      "duration": 0.5,
+      "pitches": [
+        79
+      ],
+      "spellings": [
+        "G5"
+      ],
+      "seconds": 23.148148,
+      "end_seconds": 23.518519,
+      "velocity": 64
+    },
+    {
+      "id": "cws6-rh-m11-n4",
+      "hand": "rh",
+      "bar": 11,
+      "offset": 31.5,
+      "duration": 1.0,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 23.518519,
+      "end_seconds": 24.259259,
+      "velocity": 62
+    },
+    {
+      "id": "cws6-rh-m11-n5",
+      "hand": "rh",
+      "bar": 11,
+      "offset": 32.5,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 24.259259,
+      "end_seconds": 24.62963,
+      "velocity": 62
+    },
+    {
+      "id": "cws6-rh-m12-n1",
+      "hand": "rh",
+      "bar": 12,
+      "offset": 33,
+      "duration": 1.5,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 24.62963,
+      "end_seconds": 25.787037,
+      "velocity": 63
+    },
+    {
+      "id": "cws6-rh-m12-n2",
+      "hand": "rh",
+      "bar": 12,
+      "offset": 34.5,
+      "duration": 1.0,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 25.787037,
+      "end_seconds": 26.558642,
+      "velocity": 61
+    },
+    {
+      "id": "cws6-rh-m12-n3",
+      "hand": "rh",
+      "bar": 12,
+      "offset": 35.5,
+      "duration": 0.5,
+      "pitches": [
+        68
+      ],
+      "spellings": [
+        "G#4"
+      ],
+      "seconds": 26.558642,
+      "end_seconds": 26.944444,
+      "velocity": 60
+    },
+    {
+      "id": "cws6-rh-m13-n1",
+      "hand": "rh",
+      "bar": 13,
+      "offset": 36,
+      "duration": 1.0,
+      "pitches": [
+        69
+      ],
+      "spellings": [
+        "A4"
+      ],
+      "seconds": 26.944444,
+      "end_seconds": 27.685185,
+      "velocity": 62
+    },
+    {
+      "id": "cws6-rh-m13-n2",
+      "hand": "rh",
+      "bar": 13,
+      "offset": 37.0,
+      "duration": 0.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 27.685185,
+      "end_seconds": 28.055556,
+      "velocity": 62
+    },
+    {
+      "id": "cws6-rh-m13-n3",
+      "hand": "rh",
+      "bar": 13,
+      "offset": 37.5,
+      "duration": 1.0,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 28.055556,
+      "end_seconds": 28.796296,
+      "velocity": 60
+    },
+    {
+      "id": "cws6-rh-m13-n4",
+      "hand": "rh",
+      "bar": 13,
+      "offset": 38.5,
+      "duration": 0.5,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 28.796296,
+      "end_seconds": 29.166667,
+      "velocity": 59
+    },
+    {
+      "id": "cws6-rh-m14-n1",
+      "hand": "rh",
+      "bar": 14,
+      "offset": 39,
+      "duration": 1.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 29.166667,
+      "end_seconds": 30.277778,
+      "velocity": 61
+    },
+    {
+      "id": "cws6-rh-m14-n2",
+      "hand": "rh",
+      "bar": 14,
+      "offset": 40.5,
+      "duration": 1.0,
+      "pitches": [
+        69
+      ],
+      "spellings": [
+        "A4"
+      ],
+      "seconds": 30.277778,
+      "end_seconds": 31.018519,
+      "velocity": 58
+    },
+    {
+      "id": "cws6-rh-m14-n3",
+      "hand": "rh",
+      "bar": 14,
+      "offset": 41.5,
+      "duration": 0.5,
+      "pitches": [
+        67
+      ],
+      "spellings": [
+        "G4"
+      ],
+      "seconds": 31.018519,
+      "end_seconds": 31.388889,
+      "velocity": 58
+    },
+    {
+      "id": "cws6-rh-m15-n1",
+      "hand": "rh",
+      "bar": 15,
+      "offset": 42,
+      "duration": 0.5,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 31.388889,
+      "end_seconds": 31.759259,
+      "velocity": 59
+    },
+    {
+      "id": "cws6-rh-m15-n2",
+      "hand": "rh",
+      "bar": 15,
+      "offset": 42.5,
+      "duration": 0.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 31.759259,
+      "end_seconds": 32.12963,
+      "velocity": 57
+    },
+    {
+      "id": "cws6-rh-m15-n3",
+      "hand": "rh",
+      "bar": 15,
+      "offset": 43.0,
+      "duration": 0.5,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 32.12963,
+      "end_seconds": 32.5,
+      "velocity": 59
+    },
+    {
+      "id": "cws6-rh-m15-n4",
+      "hand": "rh",
+      "bar": 15,
+      "offset": 43.5,
+      "duration": 1.0,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 32.5,
+      "end_seconds": 33.240741,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m15-n5",
+      "hand": "rh",
+      "bar": 15,
+      "offset": 44.5,
+      "duration": 0.5,
+      "pitches": [
+        67
+      ],
+      "spellings": [
+        "G4"
+      ],
+      "seconds": 33.240741,
+      "end_seconds": 33.611111,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m16-n1",
+      "hand": "rh",
+      "bar": 16,
+      "offset": 45,
+      "duration": 2.5,
+      "pitches": [
+        69
+      ],
+      "spellings": [
+        "A4"
+      ],
+      "seconds": 33.611111,
+      "end_seconds": 35.540123,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m17-n1",
+      "hand": "rh",
+      "bar": 17,
+      "offset": 48,
+      "duration": 1.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 35.925926,
+      "end_seconds": 37.037037,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m17-n2",
+      "hand": "rh",
+      "bar": 17,
+      "offset": 49.5,
+      "duration": 1.0,
+      "pitches": [
+        79
+      ],
+      "spellings": [
+        "G5"
+      ],
+      "seconds": 37.037037,
+      "end_seconds": 37.777778,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-rh-m17-n3",
+      "hand": "rh",
+      "bar": 17,
+      "offset": 50.5,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 37.777778,
+      "end_seconds": 38.148148,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-rh-m18-n1",
+      "hand": "rh",
+      "bar": 18,
+      "offset": 51,
+      "duration": 1.0,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 38.148148,
+      "end_seconds": 38.888889,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m18-n2",
+      "hand": "rh",
+      "bar": 18,
+      "offset": 52.0,
+      "duration": 0.5,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 38.888889,
+      "end_seconds": 39.259259,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m18-n3",
+      "hand": "rh",
+      "bar": 18,
+      "offset": 52.5,
+      "duration": 1.0,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 39.259259,
+      "end_seconds": 40.0,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m18-n4",
+      "hand": "rh",
+      "bar": 18,
+      "offset": 53.5,
+      "duration": 0.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 40.0,
+      "end_seconds": 40.37037,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m19-n1",
+      "hand": "rh",
+      "bar": 19,
+      "offset": 54,
+      "duration": 0.5,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 40.37037,
+      "end_seconds": 40.740741,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m19-n2",
+      "hand": "rh",
+      "bar": 19,
+      "offset": 54.5,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 40.740741,
+      "end_seconds": 41.111111,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m19-n3",
+      "hand": "rh",
+      "bar": 19,
+      "offset": 55.0,
+      "duration": 0.5,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 41.111111,
+      "end_seconds": 41.481481,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-rh-m19-n4",
+      "hand": "rh",
+      "bar": 19,
+      "offset": 55.5,
+      "duration": 1.0,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 41.481481,
+      "end_seconds": 42.222222,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m19-n5",
+      "hand": "rh",
+      "bar": 19,
+      "offset": 56.5,
+      "duration": 0.5,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 42.222222,
+      "end_seconds": 42.592593,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-rh-m20-n1",
+      "hand": "rh",
+      "bar": 20,
+      "offset": 57,
+      "duration": 1.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 42.592593,
+      "end_seconds": 43.75,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-rh-m20-n2",
+      "hand": "rh",
+      "bar": 20,
+      "offset": 58.5,
+      "duration": 1.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 43.75,
+      "end_seconds": 44.907407,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-rh-m21-n1",
+      "hand": "rh",
+      "bar": 21,
+      "offset": 60,
+      "duration": 1.0,
+      "pitches": [
+        77
+      ],
+      "spellings": [
+        "F5"
+      ],
+      "seconds": 44.907407,
+      "end_seconds": 45.648148,
+      "velocity": 43
+    },
+    {
+      "id": "cws6-rh-m21-n2",
+      "hand": "rh",
+      "bar": 21,
+      "offset": 61.0,
+      "duration": 0.5,
+      "pitches": [
+        76
+      ],
+      "spellings": [
+        "E5"
+      ],
+      "seconds": 45.648148,
+      "end_seconds": 46.018519,
+      "velocity": 43
+    },
+    {
+      "id": "cws6-rh-m21-n3",
+      "hand": "rh",
+      "bar": 21,
+      "offset": 61.5,
+      "duration": 1.0,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 46.018519,
+      "end_seconds": 46.759259,
+      "velocity": 41
+    },
+    {
+      "id": "cws6-rh-m21-n4",
+      "hand": "rh",
+      "bar": 21,
+      "offset": 62.5,
+      "duration": 0.5,
+      "pitches": [
+        69
+      ],
+      "spellings": [
+        "A4"
+      ],
+      "seconds": 46.759259,
+      "end_seconds": 47.12963,
+      "velocity": 40
+    },
+    {
+      "id": "cws6-rh-m22-n1",
+      "hand": "rh",
+      "bar": 22,
+      "offset": 63,
+      "duration": 1.5,
+      "pitches": [
+        67
+      ],
+      "spellings": [
+        "G4"
+      ],
+      "seconds": 47.12963,
+      "end_seconds": 48.240741,
+      "velocity": 42
+    },
+    {
+      "id": "cws6-rh-m22-n2",
+      "hand": "rh",
+      "bar": 22,
+      "offset": 64.5,
+      "duration": 1.0,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 48.240741,
+      "end_seconds": 48.981481,
+      "velocity": 39
+    },
+    {
+      "id": "cws6-rh-m22-n3",
+      "hand": "rh",
+      "bar": 22,
+      "offset": 65.5,
+      "duration": 0.5,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 48.981481,
+      "end_seconds": 49.351852,
+      "velocity": 39
+    },
+    {
+      "id": "cws6-rh-m23-n1",
+      "hand": "rh",
+      "bar": 23,
+      "offset": 66,
+      "duration": 1.5,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 49.351852,
+      "end_seconds": 50.551852,
+      "velocity": 40
+    },
+    {
+      "id": "cws6-rh-m23-n2",
+      "hand": "rh",
+      "bar": 23,
+      "offset": 67.5,
+      "duration": 1.0,
+      "pitches": [
+        74
+      ],
+      "spellings": [
+        "D5"
+      ],
+      "seconds": 50.551852,
+      "end_seconds": 51.351852,
+      "velocity": 37
+    },
+    {
+      "id": "cws6-rh-m23-n3",
+      "hand": "rh",
+      "bar": 23,
+      "offset": 68.5,
+      "duration": 0.5,
+      "pitches": [
+        71
+      ],
+      "spellings": [
+        "B4"
+      ],
+      "seconds": 51.351852,
+      "end_seconds": 51.751852,
+      "velocity": 36
+    },
+    {
+      "id": "cws6-rh-m24-n1",
+      "hand": "rh",
+      "bar": 24,
+      "offset": 69,
+      "duration": 3.0,
+      "pitches": [
+        72
+      ],
+      "spellings": [
+        "C5"
+      ],
+      "seconds": 51.751852,
+      "end_seconds": 55.388215,
+      "velocity": 37
+    },
+    {
+      "id": "cws6-lh-m1-n1",
+      "hand": "lh",
+      "bar": 1,
+      "offset": 0,
+      "duration": 0.5,
+      "pitches": [
+        45
+      ],
+      "spellings": [
+        "A2"
+      ],
+      "seconds": 0.0,
+      "end_seconds": 0.37037,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m1-n2",
+      "hand": "lh",
+      "bar": 1,
+      "offset": 0.5,
+      "duration": 0.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 0.37037,
+      "end_seconds": 0.740741,
+      "velocity": 50
+    },
+    {
+      "id": "cws6-lh-m1-n3",
+      "hand": "lh",
+      "bar": 1,
+      "offset": 1.0,
+      "duration": 0.5,
+      "pitches": [
+        47
+      ],
+      "spellings": [
+        "B2"
+      ],
+      "seconds": 0.740741,
+      "end_seconds": 1.111111,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m1-n4",
+      "hand": "lh",
+      "bar": 1,
+      "offset": 1.5,
+      "duration": 1.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 1.111111,
+      "end_seconds": 2.222222,
+      "velocity": 51
+    },
+    {
+      "id": "cws6-lh-m2-n1",
+      "hand": "lh",
+      "bar": 2,
+      "offset": 3,
+      "duration": 1.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 2.222222,
+      "end_seconds": 3.333333,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m2-n2",
+      "hand": "lh",
+      "bar": 2,
+      "offset": 4.5,
+      "duration": 1.0,
+      "pitches": [
+        57
+      ],
+      "spellings": [
+        "A3"
+      ],
+      "seconds": 3.333333,
+      "end_seconds": 4.074074,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m2-n3",
+      "hand": "lh",
+      "bar": 2,
+      "offset": 5.5,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 4.074074,
+      "end_seconds": 4.444444,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m3-n1",
+      "hand": "lh",
+      "bar": 3,
+      "offset": 6,
+      "duration": 1.5,
+      "pitches": [
+        43
+      ],
+      "spellings": [
+        "G2"
+      ],
+      "seconds": 4.444444,
+      "end_seconds": 5.555556,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-lh-m3-n2",
+      "hand": "lh",
+      "bar": 3,
+      "offset": 7.5,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 5.555556,
+      "end_seconds": 5.925926,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m3-n3",
+      "hand": "lh",
+      "bar": 3,
+      "offset": 8.0,
+      "duration": 0.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 5.925926,
+      "end_seconds": 6.296296,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-lh-m3-n4",
+      "hand": "lh",
+      "bar": 3,
+      "offset": 8.5,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 6.296296,
+      "end_seconds": 6.666667,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m4-n1",
+      "hand": "lh",
+      "bar": 4,
+      "offset": 9,
+      "duration": 1.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 6.666667,
+      "end_seconds": 7.824074,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m4-n2",
+      "hand": "lh",
+      "bar": 4,
+      "offset": 10.5,
+      "duration": 1.0,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 7.824074,
+      "end_seconds": 8.595679,
+      "velocity": 51
+    },
+    {
+      "id": "cws6-lh-m4-n3",
+      "hand": "lh",
+      "bar": 4,
+      "offset": 11.5,
+      "duration": 0.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 8.595679,
+      "end_seconds": 8.981481,
+      "velocity": 50
+    },
+    {
+      "id": "cws6-lh-m5-n1",
+      "hand": "lh",
+      "bar": 5,
+      "offset": 12,
+      "duration": 1.5,
+      "pitches": [
+        45
+      ],
+      "spellings": [
+        "A2"
+      ],
+      "seconds": 8.981481,
+      "end_seconds": 10.092593,
+      "velocity": 46
+    },
+    {
+      "id": "cws6-lh-m5-n2",
+      "hand": "lh",
+      "bar": 5,
+      "offset": 13.5,
+      "duration": 1.0,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 10.092593,
+      "end_seconds": 10.833333,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m5-n3",
+      "hand": "lh",
+      "bar": 5,
+      "offset": 14.5,
+      "duration": 0.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 10.833333,
+      "end_seconds": 11.203704,
+      "velocity": 48
+    },
+    {
+      "id": "cws6-lh-m6-n1",
+      "hand": "lh",
+      "bar": 6,
+      "offset": 15,
+      "duration": 1.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 11.203704,
+      "end_seconds": 12.314815,
+      "velocity": 51
+    },
+    {
+      "id": "cws6-lh-m6-n2",
+      "hand": "lh",
+      "bar": 6,
+      "offset": 16.5,
+      "duration": 0.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 12.314815,
+      "end_seconds": 12.685185,
+      "velocity": 51
+    },
+    {
+      "id": "cws6-lh-m6-n3",
+      "hand": "lh",
+      "bar": 6,
+      "offset": 17.0,
+      "duration": 0.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 12.685185,
+      "end_seconds": 13.055556,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-lh-m6-n4",
+      "hand": "lh",
+      "bar": 6,
+      "offset": 17.5,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 13.055556,
+      "end_seconds": 13.425926,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m7-n1",
+      "hand": "lh",
+      "bar": 7,
+      "offset": 18,
+      "duration": 1.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 13.425926,
+      "end_seconds": 14.537037,
+      "velocity": 62
+    },
+    {
+      "id": "cws6-lh-m7-n2",
+      "hand": "lh",
+      "bar": 7,
+      "offset": 19.5,
+      "duration": 1.0,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 14.537037,
+      "end_seconds": 15.277778,
+      "velocity": 50
+    },
+    {
+      "id": "cws6-lh-m7-n3",
+      "hand": "lh",
+      "bar": 7,
+      "offset": 20.5,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 15.277778,
+      "end_seconds": 15.648148,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m8-n1",
+      "hand": "lh",
+      "bar": 8,
+      "offset": 21,
+      "duration": 1.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 15.648148,
+      "end_seconds": 16.805556,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m8-n2",
+      "hand": "lh",
+      "bar": 8,
+      "offset": 22.5,
+      "duration": 1.0,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 16.805556,
+      "end_seconds": 17.57716,
+      "velocity": 45
+    },
+    {
+      "id": "cws6-lh-m8-n3",
+      "hand": "lh",
+      "bar": 8,
+      "offset": 23.5,
+      "duration": 0.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 17.57716,
+      "end_seconds": 17.962963,
+      "velocity": 44
+    },
+    {
+      "id": "cws6-lh-m9-n1",
+      "hand": "lh",
+      "bar": 9,
+      "offset": 24,
+      "duration": 0.5,
+      "pitches": [
+        45
+      ],
+      "spellings": [
+        "A2"
+      ],
+      "seconds": 17.962963,
+      "end_seconds": 18.333333,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-lh-m9-n2",
+      "hand": "lh",
+      "bar": 9,
+      "offset": 24.5,
+      "duration": 0.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 18.333333,
+      "end_seconds": 18.703704,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m9-n3",
+      "hand": "lh",
+      "bar": 9,
+      "offset": 25.0,
+      "duration": 0.5,
+      "pitches": [
+        47
+      ],
+      "spellings": [
+        "B2"
+      ],
+      "seconds": 18.703704,
+      "end_seconds": 19.074074,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-lh-m9-n4",
+      "hand": "lh",
+      "bar": 9,
+      "offset": 25.5,
+      "duration": 1.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 19.074074,
+      "end_seconds": 20.185185,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-lh-m10-n1",
+      "hand": "lh",
+      "bar": 10,
+      "offset": 27,
+      "duration": 1.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 20.185185,
+      "end_seconds": 21.296296,
+      "velocity": 59
+    },
+    {
+      "id": "cws6-lh-m10-n2",
+      "hand": "lh",
+      "bar": 10,
+      "offset": 28.5,
+      "duration": 1.0,
+      "pitches": [
+        57
+      ],
+      "spellings": [
+        "A3"
+      ],
+      "seconds": 21.296296,
+      "end_seconds": 22.037037,
+      "velocity": 59
+    },
+    {
+      "id": "cws6-lh-m10-n3",
+      "hand": "lh",
+      "bar": 10,
+      "offset": 29.5,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 22.037037,
+      "end_seconds": 22.407407,
+      "velocity": 60
+    },
+    {
+      "id": "cws6-lh-m11-n1",
+      "hand": "lh",
+      "bar": 11,
+      "offset": 30,
+      "duration": 1.5,
+      "pitches": [
+        45
+      ],
+      "spellings": [
+        "A2"
+      ],
+      "seconds": 22.407407,
+      "end_seconds": 23.518519,
+      "velocity": 63
+    },
+    {
+      "id": "cws6-lh-m11-n2",
+      "hand": "lh",
+      "bar": 11,
+      "offset": 31.5,
+      "duration": 0.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 23.518519,
+      "end_seconds": 23.888889,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-lh-m11-n3",
+      "hand": "lh",
+      "bar": 11,
+      "offset": 32.0,
+      "duration": 0.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 23.888889,
+      "end_seconds": 24.259259,
+      "velocity": 56
+    },
+    {
+      "id": "cws6-lh-m11-n4",
+      "hand": "lh",
+      "bar": 11,
+      "offset": 32.5,
+      "duration": 0.5,
+      "pitches": [
+        60
+      ],
+      "spellings": [
+        "C4"
+      ],
+      "seconds": 24.259259,
+      "end_seconds": 24.62963,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-lh-m12-n1",
+      "hand": "lh",
+      "bar": 12,
+      "offset": 33,
+      "duration": 1.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 24.62963,
+      "end_seconds": 25.787037,
+      "velocity": 55
+    },
+    {
+      "id": "cws6-lh-m12-n2",
+      "hand": "lh",
+      "bar": 12,
+      "offset": 34.5,
+      "duration": 1.0,
+      "pitches": [
+        47
+      ],
+      "spellings": [
+        "B2"
+      ],
+      "seconds": 25.787037,
+      "end_seconds": 26.558642,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m12-n3",
+      "hand": "lh",
+      "bar": 12,
+      "offset": 35.5,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 26.558642,
+      "end_seconds": 26.944444,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m13-n1",
+      "hand": "lh",
+      "bar": 13,
+      "offset": 36,
+      "duration": 1.5,
+      "pitches": [
+        45
+      ],
+      "spellings": [
+        "A2"
+      ],
+      "seconds": 26.944444,
+      "end_seconds": 28.055556,
+      "velocity": 54
+    },
+    {
+      "id": "cws6-lh-m13-n2",
+      "hand": "lh",
+      "bar": 13,
+      "offset": 37.5,
+      "duration": 1.0,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 28.055556,
+      "end_seconds": 28.796296,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m13-n3",
+      "hand": "lh",
+      "bar": 13,
+      "offset": 38.5,
+      "duration": 0.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 28.796296,
+      "end_seconds": 29.166667,
+      "velocity": 51
+    },
+    {
+      "id": "cws6-lh-m14-n1",
+      "hand": "lh",
+      "bar": 14,
+      "offset": 39,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 29.166667,
+      "end_seconds": 29.537037,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m14-n2",
+      "hand": "lh",
+      "bar": 14,
+      "offset": 39.5,
+      "duration": 0.5,
+      "pitches": [
+        57
+      ],
+      "spellings": [
+        "A3"
+      ],
+      "seconds": 29.537037,
+      "end_seconds": 29.907407,
+      "velocity": 51
+    },
+    {
+      "id": "cws6-lh-m14-n3",
+      "hand": "lh",
+      "bar": 14,
+      "offset": 40.0,
+      "duration": 0.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 29.907407,
+      "end_seconds": 30.277778,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m14-n4",
+      "hand": "lh",
+      "bar": 14,
+      "offset": 40.5,
+      "duration": 1.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 30.277778,
+      "end_seconds": 31.388889,
+      "velocity": 50
+    },
+    {
+      "id": "cws6-lh-m15-n1",
+      "hand": "lh",
+      "bar": 15,
+      "offset": 42,
+      "duration": 1.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 31.388889,
+      "end_seconds": 32.5,
+      "velocity": 51
+    },
+    {
+      "id": "cws6-lh-m15-n2",
+      "hand": "lh",
+      "bar": 15,
+      "offset": 43.5,
+      "duration": 1.0,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 32.5,
+      "end_seconds": 33.240741,
+      "velocity": 48
+    },
+    {
+      "id": "cws6-lh-m15-n3",
+      "hand": "lh",
+      "bar": 15,
+      "offset": 44.5,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 33.240741,
+      "end_seconds": 33.611111,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m16-n1",
+      "hand": "lh",
+      "bar": 16,
+      "offset": 45,
+      "duration": 1.5,
+      "pitches": [
+        45
+      ],
+      "spellings": [
+        "A2"
+      ],
+      "seconds": 33.611111,
+      "end_seconds": 34.768519,
+      "velocity": 48
+    },
+    {
+      "id": "cws6-lh-m16-n2",
+      "hand": "lh",
+      "bar": 16,
+      "offset": 46.5,
+      "duration": 1.0,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 34.768519,
+      "end_seconds": 35.540123,
+      "velocity": 53
+    },
+    {
+      "id": "cws6-lh-m16-n3",
+      "hand": "lh",
+      "bar": 16,
+      "offset": 47.5,
+      "duration": 0.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 35.540123,
+      "end_seconds": 35.925926,
+      "velocity": 52
+    },
+    {
+      "id": "cws6-lh-m17-n1",
+      "hand": "lh",
+      "bar": 17,
+      "offset": 48,
+      "duration": 0.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 35.925926,
+      "end_seconds": 36.296296,
+      "velocity": 46
+    },
+    {
+      "id": "cws6-lh-m17-n2",
+      "hand": "lh",
+      "bar": 17,
+      "offset": 48.5,
+      "duration": 0.5,
+      "pitches": [
+        52
+      ],
+      "spellings": [
+        "E3"
+      ],
+      "seconds": 36.296296,
+      "end_seconds": 36.666667,
+      "velocity": 44
+    },
+    {
+      "id": "cws6-lh-m17-n3",
+      "hand": "lh",
+      "bar": 17,
+      "offset": 49.0,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 36.666667,
+      "end_seconds": 37.037037,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m17-n4",
+      "hand": "lh",
+      "bar": 17,
+      "offset": 49.5,
+      "duration": 1.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 37.037037,
+      "end_seconds": 38.148148,
+      "velocity": 45
+    },
+    {
+      "id": "cws6-lh-m18-n1",
+      "hand": "lh",
+      "bar": 18,
+      "offset": 51,
+      "duration": 1.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 38.148148,
+      "end_seconds": 39.259259,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m18-n2",
+      "hand": "lh",
+      "bar": 18,
+      "offset": 52.5,
+      "duration": 1.0,
+      "pitches": [
+        57
+      ],
+      "spellings": [
+        "A3"
+      ],
+      "seconds": 39.259259,
+      "end_seconds": 40.0,
+      "velocity": 46
+    },
+    {
+      "id": "cws6-lh-m18-n3",
+      "hand": "lh",
+      "bar": 18,
+      "offset": 53.5,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 40.0,
+      "end_seconds": 40.37037,
+      "velocity": 46
+    },
+    {
+      "id": "cws6-lh-m19-n1",
+      "hand": "lh",
+      "bar": 19,
+      "offset": 54,
+      "duration": 1.5,
+      "pitches": [
+        43
+      ],
+      "spellings": [
+        "G2"
+      ],
+      "seconds": 40.37037,
+      "end_seconds": 41.481481,
+      "velocity": 48
+    },
+    {
+      "id": "cws6-lh-m19-n2",
+      "hand": "lh",
+      "bar": 19,
+      "offset": 55.5,
+      "duration": 1.0,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 41.481481,
+      "end_seconds": 42.222222,
+      "velocity": 46
+    },
+    {
+      "id": "cws6-lh-m19-n3",
+      "hand": "lh",
+      "bar": 19,
+      "offset": 56.5,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 42.222222,
+      "end_seconds": 42.592593,
+      "velocity": 46
+    },
+    {
+      "id": "cws6-lh-m20-n1",
+      "hand": "lh",
+      "bar": 20,
+      "offset": 57,
+      "duration": 1.5,
+      "pitches": [
+        48
+      ],
+      "spellings": [
+        "C3"
+      ],
+      "seconds": 42.592593,
+      "end_seconds": 43.75,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m20-n2",
+      "hand": "lh",
+      "bar": 20,
+      "offset": 58.5,
+      "duration": 0.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 43.75,
+      "end_seconds": 44.135802,
+      "velocity": 45
+    },
+    {
+      "id": "cws6-lh-m20-n3",
+      "hand": "lh",
+      "bar": 20,
+      "offset": 59.0,
+      "duration": 0.5,
+      "pitches": [
+        57
+      ],
+      "spellings": [
+        "A3"
+      ],
+      "seconds": 44.135802,
+      "end_seconds": 44.521605,
+      "velocity": 47
+    },
+    {
+      "id": "cws6-lh-m20-n4",
+      "hand": "lh",
+      "bar": 20,
+      "offset": 59.5,
+      "duration": 0.5,
+      "pitches": [
+        59
+      ],
+      "spellings": [
+        "B3"
+      ],
+      "seconds": 44.521605,
+      "end_seconds": 44.907407,
+      "velocity": 44
+    },
+    {
+      "id": "cws6-lh-m21-n1",
+      "hand": "lh",
+      "bar": 21,
+      "offset": 60,
+      "duration": 1.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 44.907407,
+      "end_seconds": 46.018519,
+      "velocity": 35
+    },
+    {
+      "id": "cws6-lh-m21-n2",
+      "hand": "lh",
+      "bar": 21,
+      "offset": 61.5,
+      "duration": 1.0,
+      "pitches": [
+        57
+      ],
+      "spellings": [
+        "A3"
+      ],
+      "seconds": 46.018519,
+      "end_seconds": 46.759259,
+      "velocity": 33
+    },
+    {
+      "id": "cws6-lh-m21-n3",
+      "hand": "lh",
+      "bar": 21,
+      "offset": 62.5,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 46.759259,
+      "end_seconds": 47.12963,
+      "velocity": 32
+    },
+    {
+      "id": "cws6-lh-m22-n1",
+      "hand": "lh",
+      "bar": 22,
+      "offset": 63,
+      "duration": 1.5,
+      "pitches": [
+        43
+      ],
+      "spellings": [
+        "G2"
+      ],
+      "seconds": 47.12963,
+      "end_seconds": 48.240741,
+      "velocity": 34
+    },
+    {
+      "id": "cws6-lh-m22-n2",
+      "hand": "lh",
+      "bar": 22,
+      "offset": 64.5,
+      "duration": 0.5,
+      "pitches": [
+        50
+      ],
+      "spellings": [
+        "D3"
+      ],
+      "seconds": 48.240741,
+      "end_seconds": 48.611111,
+      "velocity": 31
+    },
+    {
+      "id": "cws6-lh-m22-n3",
+      "hand": "lh",
+      "bar": 22,
+      "offset": 65.0,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 48.611111,
+      "end_seconds": 48.981481,
+      "velocity": 33
+    },
+    {
+      "id": "cws6-lh-m22-n4",
+      "hand": "lh",
+      "bar": 22,
+      "offset": 65.5,
+      "duration": 0.5,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 48.981481,
+      "end_seconds": 49.351852,
+      "velocity": 31
+    },
+    {
+      "id": "cws6-lh-m23-n1",
+      "hand": "lh",
+      "bar": 23,
+      "offset": 66,
+      "duration": 1.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 49.351852,
+      "end_seconds": 50.551852,
+      "velocity": 32
+    },
+    {
+      "id": "cws6-lh-m23-n2",
+      "hand": "lh",
+      "bar": 23,
+      "offset": 67.5,
+      "duration": 1.0,
+      "pitches": [
+        55
+      ],
+      "spellings": [
+        "G3"
+      ],
+      "seconds": 50.551852,
+      "end_seconds": 51.351852,
+      "velocity": 29
+    },
+    {
+      "id": "cws6-lh-m23-n3",
+      "hand": "lh",
+      "bar": 23,
+      "offset": 68.5,
+      "duration": 0.5,
+      "pitches": [
+        53
+      ],
+      "spellings": [
+        "F3"
+      ],
+      "seconds": 51.351852,
+      "end_seconds": 51.751852,
+      "velocity": 28
+    },
+    {
+      "id": "cws6-lh-m24-n1",
+      "hand": "lh",
+      "bar": 24,
+      "offset": 69,
+      "duration": 3.0,
+      "pitches": [
+        48,
+        52
+      ],
+      "spellings": [
+        "C3",
+        "E3"
+      ],
+      "seconds": 51.751852,
+      "end_seconds": 55.388215,
+      "velocity": 29
+    }
+  ],
+  "version": "0.2",
+  "note_limit": 256,
+  "page_limit": 4,
+  "composition_time": "2026-09-06T22:28:38+10:00",
+  "composition_stamp": "20260906222838",
+  "composition_time_source": "Recorded when the first score was saved.",
+  "duration_seconds": 58.19,
+  "performance_seconds": 55.39,
+  "bar_tempos": [
+    81,
+    81,
+    81,
+    77.75999999999999,
+    81,
+    81,
+    81,
+    77.75999999999999,
+    81,
+    81,
+    81,
+    77.75999999999999,
+    81,
+    81,
+    81,
+    77.75999999999999,
+    81,
+    81,
+    81,
+    77.75999999999999,
+    81,
+    81,
+    75,
+    49.5
+  ],
+  "audio_reverb": {
+    "description": "Subtle warm room; preserve the clarity of moving voices.",
+    "room_size": 0.45,
+    "damp": 0.65,
+    "level": 0.23
+  },
+  "pages": 1
+}

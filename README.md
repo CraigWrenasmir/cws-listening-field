@@ -1,0 +1,83 @@
+# The Listening Field
+
+**CWS / FIRST STUDIES** — six piano miniatures presented as freely rotating sculptures of their two voices.
+
+Drag a sculpture to turn it through 360 degrees, play the complete recording, open the score with live note highlighting, or follow the shared musical phrases through **Trace kinship**. Each piece has PDF, MP3, MIDI and MusicXML downloads. The text index provides direct access, and the URL fragment preserves the selected opus.
+
+The music explores sweet melancholy, flowing minimalism and independent voices. *Velvet Estuary* is the reference for the continuing collection. The three new pieces extend its musical family with minor-coloured 6/8, a quieter three-beat walk, and a warmer return to C major.
+
+These are AI-assisted composition studies created with Maple under Craig Warren Smith's musical direction. Craig's existing electronic compositions have not yet been used as source material. Listening and keyboard feedback will guide revisions.
+
+## Catalogue
+
+| Opus | Piece | Metre | Sounded notes | PDF | Recording |
+|---|---|---|---:|---|---|
+| CWS Op. 1 | Moss Atlas | 3/4 | 158 | [Score](pieces/CWS_Op_001_Moss_Atlas/CWS_Op_001_Moss_Atlas.pdf) | [MP3](pieces/CWS_Op_001_Moss_Atlas/CWS_Op_001_Moss_Atlas.mp3) |
+| CWS Op. 2 | Velvet Estuary | 6/8 | 154 | [Score](pieces/CWS_Op_002_Velvet_Estuary/CWS_Op_002_Velvet_Estuary.pdf) | [MP3](pieces/CWS_Op_002_Velvet_Estuary/CWS_Op_002_Velvet_Estuary.mp3) |
+| CWS Op. 3 | Orchard Static | 4/4 | 136 | [Score](pieces/CWS_Op_003_Orchard_Static/CWS_Op_003_Orchard_Static.pdf) | [MP3](pieces/CWS_Op_003_Orchard_Static/CWS_Op_003_Orchard_Static.mp3) |
+| CWS Op. 4 | Tidal Orchard | 6/8 | 165 | [Score](pieces/CWS_Op_004_Tidal_Orchard/CWS_Op_004_Tidal_Orchard.pdf) | [MP3](pieces/CWS_Op_004_Tidal_Orchard/CWS_Op_004_Tidal_Orchard.mp3) |
+| CWS Op. 5 | Glass Footpath | 3/4 | 151 | [Score](pieces/CWS_Op_005_Glass_Footpath/CWS_Op_005_Glass_Footpath.pdf) | [MP3](pieces/CWS_Op_005_Glass_Footpath/CWS_Op_005_Glass_Footpath.mp3) |
+| CWS Op. 6 | Willow Transit | 6/8 | 158 | [Score](pieces/CWS_Op_006_Willow_Transit/CWS_Op_006_Willow_Transit.pdf) | [MP3](pieces/CWS_Op_006_Willow_Transit/CWS_Op_006_Willow_Transit.mp3) |
+
+Each score is one page. [Download all six scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
+
+## Run the gallery
+
+With Python 3 installed:
+
+```sh
+python3 -m http.server 4188 --bind 127.0.0.1
+```
+
+Open `http://127.0.0.1:4188`. Serve through HTTP rather than opening `index.html` directly, so the catalogue and SVG scores can load.
+
+The gallery has no runtime package dependencies, external font requests, accounts or API keys. The included audio is ready to play; a piano synthesiser is needed only when rendering new recordings.
+
+## Check and build
+
+Node.js 20 or later is needed for development checks. The small DOM library is used only by the tests.
+
+```sh
+npm ci
+npm run check
+npm test
+npm run build
+```
+
+`dist/` contains the static website, complete recordings and downloads. This repository has not yet been connected to a subdomain of `wrenasmir.com`; see [deployment notes](DEPLOYMENT.md).
+
+## Compose and render
+
+The first three compositions are specified in `scripts/compose.py`; Op. 4–6 are in `scripts/new_pieces.py`. Every bar is specified explicitly. `data/library_style.json` and [STYLE.md](data/STYLE.md) record the musical and typographic decisions.
+
+Install Python 3.12, the packages in `requirements.txt`, and the system tools FluidSynth, FFmpeg, Poppler and Cairo. Obtain [GeneralUser GS](https://github.com/mrbumpy409/GeneralUser-GS) separately and set `CWS_SOUNDFONT` to its `.sf2` file; the sample bank is not included in this repository.
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python scripts/compose.py --opus 4 5 6
+.venv/bin/python scripts/render_audio.py --opus 4 5 6
+.venv/bin/python scripts/engrave.py --opus 4 5 6
+.venv/bin/python scripts/validate.py
+.venv/bin/python scripts/final_checks.py
+.venv/bin/python scripts/prepare_library.py
+npm run build
+```
+
+On Apple Silicon macOS with Homebrew Cairo, use `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib .venv/bin/python scripts/engrave.py --opus 4 5 6` if Cairo cannot be located. Inspect the rendered score pages in `work/qa/` before publishing. Do not rerender approved audio as part of an unrelated website change.
+
+Composition stamps use `YYYYMMDDHHMMSS` in Sydney local time and remain stable across revisions. The first three retain their documented first-save timestamp; new stamps record the first saved score. The provisional ceiling is four printed pages and 256 sounded pitch onsets per piece. Each chord pitch and repeated attack counts separately; tied continuations do not add onsets. The intended playing level is late beginner to early intermediate, pending keyboard feedback.
+
+## How the sculptures work
+
+Musical time travels around an open, folded arc. Pitch and hand assignment shape the contours in three dimensions. The artwork is a visual interpretation of the voices; chord events use their highest pitch for the contour while the score highlights the whole chord. Quaternion trackball rotation permits turning, tilting and rolling. The Turn, Tilt and Roll buttons move by 30 degrees; Shift-click reverses direction.
+
+Playback timing comes from the same event data used to create the MIDI performance. Phrase shaping, the slowing close and final fermata are reflected in both the audio and note highlights. The first three recordings retain their original faint reverb; Op. 4–6 use the slightly warmer room setting.
+
+## Validation and credits
+
+The music pipeline checks MusicXML and MIDI pitches/onsets, exact bar lengths, note counts, phrase-mark endpoints, hand separation, chord spans, MIDI releases, page counts and audio duration. MP3 decoding is checked for signal level and clipping. Each new PDF was rendered and visually reviewed. The web checks cover asset paths, score note IDs, motif ancestry and full performance timelines. The DOM integration tests exercise all six works, playback state beyond 15 seconds, rotation, score switching and final-chord highlights; media playback is simulated in those tests and decoded separately by the music pipeline.
+
+Notation is generated with music21 and engraved with Verovio. The [Leipzig music font](https://github.com/rism-digital/leipzig) is distributed under the SIL Open Font License; its notice is included in [licenses/Leipzig-OFL.txt](licenses/Leipzig-OFL.txt). Audio uses GeneralUser GS v2.0.3 by S. Christian Collins, rendered with FluidSynth and encoded with FFmpeg; its music-creation terms are retained in [licenses/GeneralUser-GS.txt](licenses/GeneralUser-GS.txt).
+
+No general licence for reuse of the project code or compositions has been selected. Third-party components retain their own licences.
