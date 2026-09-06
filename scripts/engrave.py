@@ -40,7 +40,7 @@ for p in cat:
             glyph.tag=ns+'g';glyph.set('transform','scale(0.72)')
             for el in glyph:el.tag=ns+'path'
             mg.append(glyph)
-            compound=p['meter']=='6/8'
+            compound=p['meter'] in ('6/8','9/8','12/8')
             if compound:ET.SubElement(mg,ns+'circle',cx='305',cy='-100',r='34',fill='black')
             bpm=int(p['bpm']/1.5) if compound else p['bpm']
             tt=ET.SubElement(mg,ns+'text',x='410' if compound else '300',y='0',attrib={'font-size':'405px','font-family':'Times, serif'})

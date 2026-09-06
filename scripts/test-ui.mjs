@@ -31,7 +31,7 @@ const settle=async()=>{for(let i=0;i<8;i++)await new Promise(resolve=>setImmedia
 const until=async condition=>{for(let i=0;i<100;i++){if(condition())return;await new Promise(resolve=>setTimeout(resolve,10));}throw new Error('Timed out waiting for async UI');};
 const tick=()=>{const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn());};
 const click=(selector,extra={})=>{const el=document.querySelector(selector);assert(el,'Missing element '+selector);const event=new window.Event('click');Object.assign(event,extra);el.dispatchEvent(event);};
-await until(()=>document.querySelectorAll('[data-work]').length===6||errors.length);tick();assert.deepEqual(errors,[]);assert.equal(document.querySelectorAll('[data-work]').length,6);
+await until(()=>document.querySelectorAll('[data-work]').length===data.length||errors.length);tick();assert.deepEqual(errors,[]);assert.equal(document.querySelectorAll('[data-work]').length,data.length);
 assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');
 assert(audio.paused,'Loading the site must not autoplay');
 for(let i=0;i<data.length;i++){
@@ -42,13 +42,16 @@ for(let i=0;i<data.length;i++){
  click('#lf-score-toggle');await until(()=>document.querySelector('#lf-score-body .lf-score-page'));const last=p.events.find(e=>e.ps.length>1);audio.currentTime=last.s+.1;tick();
  assert(document.querySelector('#lf-score-body').querySelector(`[id="${last.id}"].lf-now`),'Final dyad is not highlighted: '+p.title+'; body='+document.querySelector('#lf-score-body').innerHTML.slice(0,180)+'; highlighted='+document.querySelectorAll('.lf-now').length+'; errors='+errors.join(','));
  assert(document.querySelector('#lf-score-title').textContent===p.title);
+ const tied=document.querySelector('#lf-score-body [id*="-tie-"]');
+ if(tied){const event=p.events.find(e=>e.id===tied.getAttribute('data-event'));assert(event,'Tie fragment needs a sounded-event mapping');audio.currentTime=event.e-.1;tick();assert(tied.classList.contains('lf-now'),'Tied continuation must remain highlighted to its notated release');}
  click('#lf-play');click('#lf-score-toggle');tick();
 }
 const orientation=canvas.dataset.orientation.split(',').map(Number);for(const axis of [0,1,2]){for(let i=0;i<12;i++)click(`[data-rotate="${axis}"]`);const now=canvas.dataset.orientation.split(',').map(Number);assert(Math.abs(Math.abs(now.reduce((n,x,i)=>n+x*orientation[i],0))-1)<.00001);}
 click('#lf-kinship');tick();assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'true');
 await mkdir(new URL('work/qa-ui/',root),{recursive:true});
 for(const size of [1024,360,320]){width=size;observer.callback();tick();const {height}=canvas.getBoundingClientRect();await writeFile(new URL(`work/qa-ui/kinship-${size}.svg`,root),`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${height}"><rect width="100%" height="100%" fill="#f1f2ed"/>${drawings.join('')}</svg>`);assert(drawings.some(x=>x.includes('Tidal')));}
-const queue=[1,3,2,4,5,6].map(op=>data.find(p=>p.op===op));
+const queue=[1,3,2,4,5,...data.filter(p=>p.op>=7).map(p=>p.op),6].map(op=>data.find(p=>p.op===op));
+assert.equal(new Set(queue.map(p=>p.op)).size,data.length);
 assert.deepEqual([...document.querySelectorAll('[data-path]')].map(el=>el.textContent),queue.map(p=>p.title));
 const title=()=>document.querySelector('#lf-title').textContent;
 const finish=()=>{time=duration;ended=true;paused=true;audio.dispatchEvent(new window.Event('pause'));audio.dispatchEvent(new window.Event('ended'));};
@@ -61,7 +64,7 @@ const heard=[];
 for(let position=0;position<queue.length;position++){
  const p=queue[position];await until(()=>document.querySelector('#lf-score-title').textContent===p.title&&document.querySelector('#lf-score-body .lf-score-page'));
  assert.equal(title(),p.title);assert(!audio.paused);heard.push(p.op);assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),p.pdf);assert.equal(location.hash,'#'+p.slug);
- assert.equal(document.querySelector('#lf-counter').textContent,String(position+1).padStart(2,'0')+' / 06');
+ assert.equal(document.querySelector('#lf-counter').textContent,String(position+1).padStart(2,'0')+' / '+String(data.length).padStart(2,'0'));
  assert.equal(document.querySelector(`[data-path="${position}"]`).getAttribute('aria-current'),'true');
  const event=p.events[0];audio.currentTime=event.s+.1;tick();assert(document.querySelector(`[id="${event.id}"].lf-now`),'Playlist score must follow the current piece');
  finish();await settle();tick();
@@ -72,4 +75,4 @@ click('#lf-playlist-toggle');await settle();rejectPlay=true;finish();await settl
 rejectPlay=false;click('#lf-play');await settle();assert(!audio.paused);assert(document.querySelector('#lf-audio-error').hidden);assert.equal(title(),queue[1].title);
 click('[data-work="4"]');await settle();assert.equal(title(),data[4].title);assert(audio.paused);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');finish();await settle();assert.equal(title(),data[4].title,'Individual listening must not auto-advance');
 click('[data-path="3"]');await settle();assert.equal(title(),queue[3].title);assert(!audio.paused);finish();await settle();assert.equal(title(),queue[4].title);click('#lf-playlist-toggle');
-assert.deepEqual(errors,[]);console.log('UI integration passed: all six works, timelines, rotation, score highlights, family layout; playlist order and full completion, pause/resume, queue skips, notation on transitions, manual selection, no looping/autoplay, and recovery from rejected playback. Media playback is simulated; MP3 decoding is checked separately.');
+assert.deepEqual(errors,[]);console.log('UI integration passed: all catalogue works, timelines, rotation, score highlights, family layout; playlist order and full completion, pause/resume, queue skips, notation on transitions, manual selection, no looping/autoplay, and recovery from rejected playback. Media playback is simulated; MP3 decoding is checked separately.');

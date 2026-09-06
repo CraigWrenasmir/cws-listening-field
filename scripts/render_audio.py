@@ -12,6 +12,7 @@ parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+'
 for p in cat:
     if args.opus is not None and p['op'] not in args.opus:continue
     d=OUT/p['folder'];stem=p['stem'];bpb=p['beats_per_bar'];beats=bpb*p['bars']
+    performance=p.get('performance',{})
     mid=mido.MidiFile(type=1,ticks_per_beat=TPB)
     conductor=mido.MidiTrack();mid.tracks.append(conductor)
     conductor.append(mido.MetaMessage('track_name',name=f'CWS Op. {p["op"]}: {p["title"]}',time=0))
@@ -22,19 +23,33 @@ for p in cat:
     # Every bar has a tempo event so the exact demo timeline is recoverable.
     bar_bpms=[]
     for mi in range(1,p['bars']+1):
+        if performance:
+            assert len(performance['rubato'])==p['bars']
+            bpm=performance['rubato'][mi-1]
+            if mi==p['bars']:bpm*=.8
+            bar_bpms.append(bpm)
+            continue
         bpm=p['bpm']
         # Small phrase-end relaxation, with no random timing or hidden repeated sections.
         if mi%4==0 and mi<p['bars']-1:bpm*=.96
         if str(mi) in p['tempo_changes']:bpm=p['tempo_changes'][str(mi)]
         if mi==p['bars']:bpm*=.75 # the notated final fermata
         bar_bpms.append(bpm)
-        conductor.append(mido.MetaMessage('set_tempo',tempo=mido.bpm2tempo(bpm),time=0 if mi==1 else bpb*TPB))
-    conductor.append(mido.MetaMessage('end_of_track',time=bpb*TPB))
+    tempo_map=[]
+    positions=np.arange(0,beats,.5) if performance else np.arange(0,beats,bpb)
+    last_tick=0
+    for beat in positions:
+        bpm=float(np.interp(beat,np.arange(p['bars'])*bpb,bar_bpms)) if performance else bar_bpms[round(beat/bpb)]
+        microseconds=mido.bpm2tempo(bpm);tick=round(float(beat)*TPB)
+        conductor.append(mido.MetaMessage('set_tempo',tempo=microseconds,time=tick-last_tick));last_tick=tick
+        tempo_map.append(dict(beat=float(beat),microseconds=microseconds))
+    conductor.append(mido.MetaMessage('end_of_track',time=round(beats*TPB)-last_tick))
     def seconds_at(beat):
         total=0
-        for i,bpm in enumerate(bar_bpms):
-            portion=min(bpb,max(0,beat-i*bpb))
-            total+=portion*60/bpm
+        for i,mark in enumerate(tempo_map):
+            stop=tempo_map[i+1]['beat'] if i+1<len(tempo_map) else beats
+            portion=max(0,min(beat,stop)-mark['beat'])
+            total+=portion*mark['microseconds']/1_000_000
         return total
     velocities={'pp':43,'p':54,'mp':62,'mf':70}
     sections={int(k):v for k,v in p['sections'].items()}
@@ -51,9 +66,12 @@ for p in cat:
             base=velocities[dyn]
             # Lower part is a singing line. It comes forward at thematic entries.
             voice_adjust=-8 if hi==1 else 0
+            if performance and hi==1 and any(start<=ev['offset']<end for start,end in performance['lower_entries']):voice_adjust=-2
             if hi==1 and ((p['op'] in [2,6] and ev['bar']<=4) or (p['op']==3 and 13<=ev['bar']<=14) or (p['op']==4 and 9<=ev['bar']<=10) or (p['op']==5 and 13<=ev['bar']<=14)):voice_adjust=-2
             phrase_pos=((ev['bar']-1)%4*bpb+(ev['offset']%bpb))/(4*bpb)
             swell=round(2*math.sin(phrase_pos*math.pi))
+            if performance:
+                swell=sum(round(amount*math.sin(math.pi*(ev['offset']-start)/(end-start))) for start,end,amount in performance['phrase_arcs'] if start<=ev['offset']<=end)
             for kind,startbar,endbar in p['hairpins']:
                 startbeat=(startbar-1)*bpb;endbeat=(endbar-1)*bpb
                 if startbeat<=ev['offset']<=endbeat:
@@ -62,23 +80,25 @@ for p in cat:
                     else:
                         paired=any(k=='crescendo' and en==startbar for k,st,en in p['hairpins'])
                         swell+=round(7*(1-position) if paired else -7*position)
-            offbeat=-2 if ev['offset']%1 else 0
+            offbeat=(-1 if ev['offset']%1 else 0) if performance else (-2 if ev['offset']%1 else 0)
             vel=int(max(25,min(82,base+voice_adjust+swell+offbeat)))
             start=round(ev['offset']*TPB)
             gate=.97 if hi==0 else .94
+            if performance:gate=performance.get('gate',.99)
             if ev['bar']==p['bars']:gate=1
             end=round((ev['offset']+ev['duration']*gate)*TPB)
             for pitch in ev['pitches']:
-                scheduled.append((start,1,mido.Message('note_on',channel=hi,note=pitch,velocity=vel)))
+                pitch_velocity=vel-(4 if performance and len(ev['pitches'])>1 and pitch<max(ev['pitches']) else 0)
+                scheduled.append((start,1,mido.Message('note_on',channel=hi,note=pitch,velocity=pitch_velocity)))
                 scheduled.append((end,0,mido.Message('note_off',channel=hi,note=pitch,velocity=0)))
             ev['seconds']=round(seconds_at(ev['offset']),6)
             ev['end_seconds']=round(seconds_at(ev['offset']+ev['duration']),6)
             ev['velocity']=vel
         # Brief pedal catches near phrase ends only. Lines remain clear elsewhere.
         for mi in range(1,p['bars']+1):
-            if mi%4==0 or mi==p['bars']:
+            if (mi in performance.get('pedal_bars',[])) if performance else (mi%4==0 or mi==p['bars']):
                 on=((mi-1)*bpb+.1)*TPB
-                off=(mi*bpb-.04)*TPB
+                off=(mi*bpb-performance.get('pedal_lift',.04))*TPB
                 scheduled.append((round(on),2,mido.Message('control_change',control=64,value=80,channel=hi)))
                 scheduled.append((round(off),-1,mido.Message('control_change',control=64,value=0,channel=hi)))
         scheduled.sort(key=lambda x:(x[0],x[1]))
@@ -104,6 +124,7 @@ for p in cat:
     subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(raw),'-af',filters,'-t',f'{duration:.4f}','-codec:a','libmp3lame','-q:a','2','-metadata',f'title={p["title"]}','-metadata',f'artist=CWS Library | Studies with Maple','-metadata',f'album=CWS First Studies','-metadata',f'track={p["op"]}',str(mp3)],check=True)
     p['duration_seconds']=round(duration,2);p['performance_seconds']=round(seconds_at(beats),2)
     p['bar_tempos']=bar_bpms
+    if performance:p['tempo_map']=tempo_map
     p['audio_reverb']=dict(reverb)
     (d/(stem+'.json')).write_text(json.dumps(p,indent=2)+'\n')
     print(stem,'audio',p['duration_seconds'],'seconds; peak',round(peak,3),'gain',round(gain_db,2))

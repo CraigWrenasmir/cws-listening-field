@@ -1,11 +1,13 @@
 from pathlib import Path
-import json, xml.etree.ElementTree as ET, collections, subprocess
+import json, xml.etree.ElementTree as ET, collections, subprocess, argparse
 import mido
 from music21 import converter, note, chord
 from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text());report=[]
+parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
 for p in cat:
+ if args.opus is not None and p['op'] not in args.opus:continue
  d=OUT/p['folder'];stem=p['stem'];r=ET.parse(d/(stem+'.musicxml')).getroot()
  ids=[n.get('id') for n in r.findall('.//note') if n.get('id')]
  assert len(ids)==len(set(ids)),('duplicate IDs',stem)
@@ -76,4 +78,9 @@ for p in cat:
  assert abs(float(probe['format']['duration'])-p['duration_seconds'])<.1
  report.append(dict(piece=p['title'],opus=p['op'],score_pages=pages,bars=p['bars'],pitch_onsets=score_count,audio_seconds=p['duration_seconds'],hands=stats,checks='PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration'))
  print(json.dumps(report[-1]))
-(WORK/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
+report_path=ROOT/'data/validation.json'
+old=json.loads(report_path.read_text()) if report_path.exists() else []
+replaced={r['opus'] for r in report}
+merged=sorted([r for r in old if r['opus'] not in replaced]+report,key=lambda r:r['opus'])
+report_path.write_text(json.dumps(merged,indent=2)+'\n')
+(WORK/'validation.json').write_text(json.dumps(merged,indent=2)+'\n')

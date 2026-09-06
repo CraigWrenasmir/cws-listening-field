@@ -1,9 +1,10 @@
 from pathlib import Path
 import json, math, argparse, xml.etree.ElementTree as ET
 from new_pieces import NEW_PIECES
+from dream_pieces import DREAM_PIECES
 from datetime import datetime
 from zoneinfo import ZoneInfo
-from music21 import stream, note, chord, meter, key, clef, tempo, dynamics, expressions, layout, metadata, instrument, spanner, articulations, bar, duration
+from music21 import stream, note, chord, meter, key, clef, tempo, dynamics, expressions, layout, metadata, instrument, spanner, articulations, bar, duration, tie
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'pieces'
@@ -188,6 +189,7 @@ A2+C3:4
 ]
 
 PIECES.extend(NEW_PIECES)
+PIECES.extend(DREAM_PIECES)
 
 def parse_rows(s):
     rows=[]
@@ -195,6 +197,7 @@ def parse_rows(s):
         events=[]
         for tok in row.split():
             pitches,dur=tok.split(':')
+            if dur.endswith('~'):pitches+='~';dur=dur[:-1]
             events.append((pitches,float(dur)))
         rows.append(events)
     return rows
@@ -210,8 +213,9 @@ def make_score(p):
     all_events=[]
     parts=[]
     refs={}
-    bpb=3 if p['meter'] in ('3/4','6/8') else 4
+    bpb=float(meter.TimeSignature(p['meter']).barDuration.quarterLength)
     for hand in ['rh','lh']:
+        held=None
         part=stream.PartStaff(id=hand)
         inst=instrument.Piano()
         inst.partName='Piano' if hand=='rh' else ''
@@ -229,13 +233,14 @@ def make_score(p):
                 m.insert(0,clef.TrebleClef() if hand=='rh' else clef.BassClef())
             if hand=='rh':
                 if mi==1:
-                    beat=duration.Duration(1.5 if p['meter']=='6/8' else 1)
-                    mm=tempo.MetronomeMark(number=p['bpm']/(1.5 if p['meter']=='6/8' else 1),referent=beat)
+                    compound=p['meter'] in ('6/8','9/8','12/8')
+                    beat=duration.Duration(1.5 if compound else 1)
+                    mm=tempo.MetronomeMark(number=p['bpm']/(1.5 if compound else 1),referent=beat)
                     mm.placement='above'
                     m.insert(0,mm)
                 if mi in p['sections']:
                     dyn=dynamics.Dynamic(p['sections'][mi]); dyn.placement='below';m.insert(0,dyn)
-                if mi in p['words'] and p['words'][mi]=='poco rit.':
+                if mi in p['words'] and p['words'][mi] in ('poco rit.','poco rubato','a tempo'):
                     word=expressions.TextExpression(p['words'][mi]); word.placement='above'; word.style.fontStyle='italic';word.style.fontSize=10
                     m.insert(0,word)
                 if (mi-1)%p['group']==0:
@@ -243,20 +248,36 @@ def make_score(p):
             offset=0
             refs[(hand,mi)]=[]
             for ei,(ps,dur) in enumerate(row):
+                sustain=ps.endswith('~');ps=ps.rstrip('~')
                 if ps=='R': n=note.Rest(quarterLength=dur)
                 elif '+' in ps: n=chord.Chord(ps.split('+'),quarterLength=dur)
                 else: n=note.Note(ps,quarterLength=dur)
                 n.id=f'cws{p["op"]}-{hand}-m{mi}-n{ei+1}'
+                if held:
+                    assert ps!='R' and [x.midi for x in n.pitches]==held['pitches'],('Invalid tie',p['op'],hand,mi,ei)
+                    n.id=held['id']+f'-tie-{mi}-{ei+1}'
+                    n.tie=tie.Tie('continue' if sustain else 'stop')
+                elif sustain:n.tie=tie.Tie('start')
+                if p['op']>=7 and isinstance(n,chord.Chord):
+                    for pi,cn in enumerate(n.notes):cn.id=n.id+f'-pitch-{pi+1}'
                 if ps!='R':
                     refs[(hand,mi)].append(n)
                     pitches=[x.midi for x in n.pitches]
-                    all_events.append(dict(id=n.id,hand=hand,bar=mi,offset=(mi-1)*bpb+offset,duration=dur,pitches=pitches,spellings=[x.nameWithOctave for x in n.pitches]))
+                    if held:
+                        held['duration']+=dur
+                        event=held
+                    else:
+                        event=dict(id=n.id,hand=hand,bar=mi,offset=(mi-1)*bpb+offset,duration=dur,pitches=pitches,spellings=[x.nameWithOctave for x in n.pitches])
+                        all_events.append(event)
+                    held=event if sustain else None
+                else:assert not sustain
                 m.append(n)
                 offset+=dur
             if mi==len(rows):
                 refs[(hand,mi)][-1].expressions.append(expressions.Fermata())
                 m.rightBarline=bar.Barline('final')
             part.append(m)
+        assert held is None,('Unclosed tie',p['op'],hand)
         parts.append(part)
     for start,end in p['slurs']:
         seq=[n for mi in range(start,end+1) for n in refs[('rh',mi)]]
@@ -318,7 +339,7 @@ def main():
             for direction in list(measure.findall('direction')):
                 for dt in list(direction.findall('direction-type')):
                     for words in list(dt.findall('words')):
-                        if words.text!='poco rit.':dt.remove(words)
+                        if words.text not in ('poco rit.','poco rubato','a tempo'):dt.remove(words)
                     if not len(dt):direction.remove(dt)
                 if direction.find('direction-type') is None:measure.remove(direction)
         if ident is not None:
@@ -327,7 +348,7 @@ def main():
         tree.write(xmlpath,encoding='utf-8',xml_declaration=True)
         onset_count=sum(len(e['pitches']) for e in events)
         assert onset_count<=256
-        bpb=3 if p['meter']!='4/4' else 4
+        bpb=float(meter.TimeSignature(p['meter']).barDuration.quarterLength)
         entry=dict(prior.get(p['op'],{}))
         entry.update({k:v for k,v in p.items() if k not in ('rh','lh','slurs','subtitle','tempo','words')})
         for field in ['subtitle','tempo','words']:entry.pop(field,None)

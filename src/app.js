@@ -22,8 +22,8 @@ const tracks=data.map(p=>['rh','lh'].map(hand=>p.events.filter(e=>e.h===hand)));
 const range=data.map(p=>[p.title,p.motif.pitches.join(' · ')]);
 const byOp=new Map(data.map((p,i)=>[p.op,i]));
 // An editorial walk: root and sibling, then Velvet Estuary's branch, ending in C major.
-// Include later additions exactly once until the listening order is curated again.
-const listeningPath=[...new Set([...([1,3,2,4,5,6].filter(op=>byOp.has(op)).map(op=>byOp.get(op))),...data.map((_,i)=>i)])];
+// Later descendants extend the walk before Willow Transit's warm close.
+const listeningPath=[...new Set([...([1,3,2,4,5,...data.filter(p=>p.op>=7).map(p=>p.op),6].filter(op=>byOp.has(op)).map(op=>byOp.get(op))),...data.map((_,i)=>i)])];
 let playbackRequest=0;
 const depth=(p,seen=new Set())=>{if(!p.parent||seen.has(p.op)||!byOp.has(p.parent))return 0;seen.add(p.op);return 1+depth(data[byOp.get(p.parent)],seen);};
 const levels=data.map(p=>depth(p));
@@ -139,7 +139,7 @@ function renderField(){
 function syncScore(){
  const ids=new Set(data[state.selected].events.filter(e=>e.s<=audio.currentTime&&audio.currentTime<e.e).map(e=>e.id));
  lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
- if(state.score){ids.forEach(id=>{const el=q('#lf-score-body').querySelector('[id="'+id+'"]');if(el){el.classList.add('lf-now');lastActive.push(el);}});}
+ if(state.score){ids.forEach(id=>{q('#lf-score-body').querySelectorAll('[id="'+id+'"],[data-event="'+id+'"]').forEach(el=>{el.classList.add('lf-now');lastActive.push(el);});});}
 }
 function animate(){
  frame=0;
