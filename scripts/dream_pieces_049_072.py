@@ -1561,4 +1561,52 @@ D3+F#3:6
   phrase_arcs=[[0,22.5,4],[23,41.5,4],[42,55.5,4],[56,86,-2]],
   lower_entries=[[5,10],[42,50],[76,80]],pedal_lift=.2,gate=.995,
   note='The chord tops carry the melody while the lower chord notes remain soft. The varying bar lengths follow longer swells and retreats. Bass movement is clearer during the two sustained chord fields; the closing shape contracts into a quiet major ninth.'))
+,
+dict(op=69,title='Wisteria Remainder',key='e',fifths=1,meter='7/4',bpm=57,
+ description='Seagrass Relay’s first bass gesture becomes E–B–D-sharp–C-sharp beneath an E-minor melody. Two quick octatonic runs briefly brighten the slow seven-beat phrases: an ascent over altered E dominant resolves towards A minor, and a later descending answer over F dominant opens into B-flat. The final descent returns to an E-minor added ninth.',
+ difficulty='Advanced octatonic nocturne',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The eight sixteenth notes in bars 4 and 8 each occupy two beats. Their alternating semitone and whole-tone steps need a planned, even fingering, with the first run rising and the second falling. Keep them inside the larger slow phrase. Prepare the wider RH register rise before bar 8 during the preceding half note; the accompaniment remains slower throughout.',
+ parent_opus=68,motif=dict(hand='lh',start_beat=0,end_beat=7,pitches=['E','B','D#','C#']),
+ ancestry=dict(source_opus=68,source_hand='lh',source_start_beat=0,source_end_beat=5,source_pitches=['D','A','C#','B'],transposition_semitones=2),
+ system_starts=[1,4,6,8,10,13],page_starts=[8],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[b*7+s,b*7+e] for b in range(14) for s,e in [(0,2.78),(3,4.78),(5,6.78)]],
+ rh='''
+G4+B4+E5:3 D#5:1 C#5:1 B4:2
+C5+E5+B5:4 A5:1 G5:2
+F#5:3 G5:.5 A5:.5 B5:2 A5:1
+E5:.25 F5:.25 G5:.25 Ab5:.25 Bb5:.25 B5:.25 Db6:.25 D6:.25 E6:3 D6:1 B5:1
+C6:4 B5:1 A5:2
+G5:3 F#5:1 E5:3
+D5+G5+C6:3 B5:1 A5:1 G5:2
+F6:.25 Eb6:.25 D6:.25 C6:.25 B5:.25 A5:.25 Ab5:.25 Gb5:.25 F5:3 Eb5:1 C5:1
+Bb4+D5+A5:4 G5:1 F5:2
+Eb5:3 D5:.5 C5:.5 B4:2 A4:1
+G4+B4+E5:4 F#5:1 G5:2
+F#5:2 E5:1 D#5:1 C#5:3
+B4:3 A4:1 G4:1 F#4:2
+E4+G4+B4:7
+''',
+ lh='''
+E3:2 B3:1 D#4:1 C#4:3
+C3:2 G3:1 B3:1 E4:1 D4:1 C4:1
+B2:1.5 F#3:.5 A3:1 C#4:1 B3:1 F#3:1 A3:1
+E3:3 Bb3:1 D4:1 G#3:2
+A2:2 E3:1 G3:1 B3:1 C4:1 D4:1
+D3:2 A3:1 C4:1 E4:1 B3:2
+G2:2 D3:1 F#3:1 A3:1 B3:2
+F3:3 B3:1 Eb4:1 A3:2
+Bb2:1.5 F3:.5 A3:1 C4:1 D4:1 C4:2
+A2:2 E3:1 G3:1 Bb3:1 C#4:1 B3:1
+E3:2 B3:1 D4:1 C#4:1 A3:2
+F#2:2 C#3:1 E3:1 G3:1 B3:1 A3:1
+B2:2 F#3:1 A3:1 C4:1 B3:1 A3:1
+E3:4 F#3:3
+''',sections={1:'p',2:'mp',3:'p',4:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'p',10:'pp',11:'p',12:'mp',13:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,10),(11,14)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,14)],
+ hairpins=[('crescendo',1,2),('diminuendo',2,3),('diminuendo',4,6),('crescendo',7,8),('diminuendo',8,10),('crescendo',11,12),('diminuendo',12,14)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,60,53,59,54,46,55,61,52,44,54,58,42,29],
+  phrase_arcs=[[0,20.5,4],[21,41.5,4],[42,69.5,4],[70,98,-2]],
+  lower_entries=[[0,7],[35,42],[63,70],[91,98]],pedal_lift=.22,gate=.985,
+  note='The two brief runs remain light and even, each gathering into a longer held arrival. Their altered dominant colours release into warmer neighbouring harmonies. The bass moves forward during the held upper phrases; the final E-minor ninth decays gently with a little room reverb.'))
 ]
