@@ -172,7 +172,15 @@
         "maximum_simultaneous_span_semitones": 7
       }
     },
-    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration"
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 87.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   },
   {
     "piece": "Bracken Meridian",
@@ -197,7 +205,15 @@
         "maximum_simultaneous_span_semitones": 7
       }
     },
-    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration"
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 12,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 88.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   },
   {
     "piece": "Lichen Aperture",
@@ -222,6 +238,47 @@
         "maximum_simultaneous_span_semitones": 7
       }
     },
-    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration"
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 100.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Reed Parallax",
+    "opus": 10,
+    "score_pages": 1,
+    "bars": 18,
+    "pitch_onsets": 107,
+    "audio_seconds": 65.47,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 6,
+        "maximum_eighth_note_leap_semitones": 6,
+        "maximum_simultaneous_span_semitones": 0
+      },
+      "lh": {
+        "low": 48,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 16,
+      "left_hand_most_frequent_pattern_bars": 2,
+      "sounded_pitches_per_minute": 102.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

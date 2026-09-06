@@ -37,6 +37,28 @@ for p in cat:
     del active[(msg.channel,msg.note)]
   assert not active
  assert collections.Counter(midi_notes)==collections.Counter(expected),('MIDI pitch/onset mismatch',stem)
+ # Check audible clock time independently by integrating the actual MIDI tempo
+ # messages. The score player must follow rubato and tied onsets exactly.
+ seconds=0;heard=collections.defaultdict(list);planned=collections.defaultdict(list)
+ for message in mid:
+  seconds+=message.time
+  if message.type=='note_on' and message.velocity>0:heard[(message.channel,message.note)].append(seconds)
+ for event in p['events']:
+  for pitch in event['pitches']:planned[(0 if event['hand']=='rh' else 1,pitch)].append(event['seconds'])
+ assert heard.keys()==planned.keys(),('MIDI time-map voices',stem)
+ timing_error=0
+ for voice,starts in planned.items():
+  assert len(starts)==len(heard[voice])
+  timing_error=max(timing_error,max(abs(a-b) for a,b in zip(sorted(starts),sorted(heard[voice]))))
+ assert timing_error<.003,('Audio/highlight clock drift',stem,timing_error)
+ def fingerprint(piece):
+  ordered=sorted(piece['events'],key=lambda e:(e['offset'],e['hand']))
+  origin=ordered[0]['pitches'][0]
+  return [(e['hand'],e['offset'],e['duration'],tuple(pi-origin for pi in e['pitches'])) for e in ordered]
+ if p['op']>=7:
+  signature=fingerprint(p)
+  for earlier in cat:
+   if earlier['op']<p['op']:assert signature!=fingerprint(earlier),('Whole-piece duplicate or transposition',p['op'],earlier['op'])
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
  for measure in r.findall('.//part/measure'):
   cursor=0;max_end=0
@@ -70,6 +92,9 @@ for p in cat:
   rapid=[leap for leap,prev,curr in zip(leaps,evs,evs[1:]) if curr['offset']-prev['offset']<=.5]
   stats[hand]=dict(low=min(pitches),high=max(pitches),maximum_melodic_leap_semitones=max(leaps),maximum_eighth_note_leap_semitones=max(rapid,default=0),maximum_simultaneous_span_semitones=max(max(e['pitches'])-min(e['pitches']) for e in evs))
   assert stats[hand]['maximum_simultaneous_span_semitones']<=7
+  if p['op']>=7:
+   assert stats[hand]['maximum_eighth_note_leap_semitones']<=7,('Rapid leap needs review',stem,hand,stats[hand])
+   assert stats[hand]['maximum_melodic_leap_semitones']<=12,('Wide leap needs review',stem,hand,stats[hand])
  # Ensure hands do not cross, using notated durations (not the shorter demo release).
  for beat in sorted(set(e['offset'] for e in p['events'])):
   active={h:[pi for e in p['events'] if e['hand']==h and e['offset']<=beat<e['offset']+e['duration'] for pi in e['pitches']] for h in ['rh','lh']}
@@ -77,6 +102,11 @@ for p in cat:
  probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration:stream=codec_name,sample_rate,channels','-of','json',str(d/(stem+'.mp3'))]))
  assert abs(float(probe['format']['duration'])-p['duration_seconds'])<.1
  report.append(dict(piece=p['title'],opus=p['op'],score_pages=pages,bars=p['bars'],pitch_onsets=score_count,audio_seconds=p['duration_seconds'],hands=stats,checks='PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration'))
+ report[-1]['midi_highlight_timing_error_seconds']=round(timing_error,7)
+ if p['op']>=7:
+  patterns=[]
+  for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']%p['beats_per_bar'],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))
+  report[-1]['musical_review_support']=dict(whole_piece_duplicate_or_transposition=False,left_hand_rhythm_patterns=len(set(patterns)),left_hand_most_frequent_pattern_bars=collections.Counter(patterns).most_common(1)[0][1],sounded_pitches_per_minute=round(p['note_onsets']/p['performance_seconds']*60,1),note='These structural checks do not establish artistic quality or replace listening feedback.')
  print(json.dumps(report[-1]))
 report_path=ROOT/'data/validation.json'
 old=json.loads(report_path.read_text()) if report_path.exists() else []

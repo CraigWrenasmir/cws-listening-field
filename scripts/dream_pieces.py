@@ -158,5 +158,55 @@ A3+C4:3
  performance=dict(rubato=[54,53,55,51,50,47,53,54,49,55,57,53,52,48,52,50,48,47,44,39],
   phrase_arcs=[[0,11,3],[12,18,-2],[18,26,3],[27,41,4],[42,53,3],[54,60,-2]],
   lower_entries=[[0,9],[18,24]],pedal_bars=list(range(1,21)),pedal_lift=.2,gate=.99,
-  note='The triple pulse is softened by ties and phrase lengths of four, two, three, five, four and two bars. The Dorian colour receives a small forward motion, then recedes.'))
+  note='The triple pulse is softened by ties and phrase lengths of four, two, three, five, four and two bars. The Dorian colour receives a small forward motion, then recedes.')),
+dict(op=10,title='Reed Parallax',key='g',fifths=-2,meter='6/8',bpm=60,
+ description='A G-minor reverie descended from Bracken Meridian\'s opening E-G-A-G, moved down a tone to D-F-G-F. The lower voice sometimes waits, sometimes continues through the next harmony, so the two hands do not repeatedly begin together. E-flat Lydian light and soft dominant colours return to a plain G-minor close.',
+ parent_opus=8,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['D','F','G','F']),
+ ancestry=dict(source_opus=8,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['E','G','A','G'],transposition_semitones=-2),
+ rh='''
+R:.5 D5:1 F5:.5 G5:.5 F5:.5
+Eb5:1.5 D5:.5 Bb4:1~
+Bb4:1 C5:.5 D5:1 R:.5
+Eb5:1 F5:.5 G5:1 F5:.5~
+F5:.5 Eb5:.5 C5:1 A4:.5 R:.5
+Bb4:1 A4:.5 F#4:.5 A4:1~
+A4:1 D5:.5 G5:.5 F5:1
+D5:2 R:1
+C5:.5 D5:1 F5:.5 A5:1
+G5:1 F5:.5 Eb5:.5 C5:1~
+C5:1 D5:.5 F5:1 E5:.5
+Eb5:1.5 C5:.5 A4:1
+F#4:.5 A4:.5 C5:1 Bb4:.5 R:.5
+G4:1.5 Bb4:.5 A4:1~
+A4:1 G4:.5 E4:.5 Bb4:1~
+Bb4:1 A4:.5 F4:1 R:.5
+G4:1 Bb4:.5 D5:.5 C5:1~
+C5:.5 Bb4:.5 A4:.5 G4:1.5
+''',
+ lh='''
+G3:1.5 Bb3+D4:1 R:.5
+R:.5 Eb3:2 Bb3:.5~
+Bb3:1 D4:1 A3:1
+C3:2 Eb3+Bb3:1~
+Eb3+Bb3:.5 A3:.5 C4:1 Eb3:1
+D3:1.5 F#3+C4:1.5
+R:1 G3:1 D4:1~
+D4:1 Bb3:.5 A3:.5 F3:1
+Eb3+G3:2 Bb3:1
+R:.5 F3:1 A3+Eb4:1.5
+Bb3:2 D4:.5 R:.5
+A3:1 C4+Eb4:1 G3:1
+R:.5 D3:.5 F#3+C4:1.5 R:.5
+G3+Bb3:2 D4:1~
+D4:.5 C4:.5 Bb3:1 E3:1
+F3:1.5 A3+C4:1 R:.5
+D3:1 F#3+C4:1.5 R:.5
+G3+Bb3:3
+''',sections={1:'pp',5:'p',9:'mp',13:'p',16:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,3),(4,8),(9,12),(13,16),(17,18)],lower_phrases=[(2,5),(7,9),(10,12),(14,18)],
+ hairpins=[('crescendo',4,6),('diminuendo',6,8),('crescendo',9,10),('diminuendo',11,12),('diminuendo',14,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[60,57,54,58,59,56,54,50,60,59,56,51,55,53,54,50,46,40],
+  phrase_arcs=[[.5,8.5,3],[9,23,4],[24,35,5],[36,47,2],[48,54,-2]],
+  lower_entries=[[3,15],[18,27],[39,45]],pedal_bars=list(range(1,19)),pedal_lift=.18,gate=.99,
+  note='Four left-hand ties and several delayed bass entries let the accompaniment breathe independently. Phrase tempo changes follow the authored harmonic motion.'))
 ]
