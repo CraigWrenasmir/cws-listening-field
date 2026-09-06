@@ -678,4 +678,68 @@ Gb2+Db3+Eb3:3.5
   phrase_arcs=[[0,13,3],[14,27,4],[28,45,4],[45.5,55,3],[56,69,4],[70,84,-2]],
   lower_entries=[[10.5,17.5],[35,42],[66.5,73.5]],pedal_bars=list(range(1,25)),pedal_lift=.2,gate=.995,
   note='The fourth-based voicings remain quiet and open. The whole-tone ascent is one brief arc into the brighter neighbouring key; its later descending answer folds back into the darker flats. The final upper whole tones are balanced gently over the widely spaced bass.'))
+,
+dict(op=58,title='Gossamer Junction',key='E',fifths=4,meter='6/4',bpm=53,
+ description='A descent from Tamarisk Angle becomes G-sharp–F-sharp–E–G. The last note briefly darkens E major before rising into G-sharp, while a quieter inner line changes beneath the held melody. G, A-flat, C and D-flat colours appear as slow reflections. The opening returns an octave lower, and the major third eventually withdraws from the final open added-ninth sonority.',
+ difficulty='Advanced chromatic suspension study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The RH upper melody and inner voice need independent finger sustain through the printed half-bar pedal changes. The opening G natural is a brief chromatic neighbour resolving into G-sharp. Hold the long upper G-sharp across the bar line while the inner voice and bass change. The final return sits an octave lower and should remain clear without becoming heavy.',
+ parent_opus=57,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['G#','F#','E','G']),
+ ancestry=dict(source_opus=57,source_hand='rh',source_start_beat=38.5,source_end_beat=49,source_pitches=['F#','E','D','F'],transposition_semitones=2),
+ page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*3,i*3+2.78] for i in range(28)],
+ rh='''
+G#5:2 F#5:1 E5:2 G5:1
+G#5:6~
+G#5:2 F#5:1 E5:3
+D5:4 C5:2
+Eb5:3 F5:3
+E5:6
+G5:4 F#5:2
+F5:3 Eb5:3
+D5:2 C#5:1 B4:3
+Db5:6
+C#5:2 D#5:1 E5:3
+D5:3 C#5:1 B4:2
+G#4:2 F#4:1 E4:2 G4:1
+G#4:2 F#4:4
+''',
+ rh_inner='''
+E5:2 D#5:1 C#5:2 D5:1
+D#5:3 B4:3
+C#5:1.5 B4:.5 A4:1 G#4:3
+G4:2 A4:2 B4:2
+Ab4:4 G4:2
+G#4:3 B4:3
+B4:3 A4:3
+A4:2 C5:1 Bb4:3
+F#4:3 A4:3
+F4:2 Ab4:1 B4:3
+G#4:1.5 B4:.5 A4:1 G#4:3
+F#4:2 A4:1 G#4:3
+E4:2 D#4:1 C#4:2 D4:1
+E4:3 D#4:1 E4:2
+''',
+ lh='''
+E3:4 B3:2
+C#3:3 G#3:3
+A2:2 E3:1 G#3:3
+G3:3 D3:3
+Ab2:2 Eb3:1 F3:3
+E3:6
+C3:3 E3:3
+F3:3 Ab3:3
+B2:3 D3:3
+Db3:3 F3:3
+A2:3 C#3:3
+B2:2 F#3:1 A3:3
+E3:3 B2:3
+E3+B3:6
+''',sections={1:'p',2:'mp',3:'p',4:'pp',5:'p',6:'pp',7:'mp',8:'p',9:'pp',10:'p',11:'mp',12:'p',13:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,10),(11,14)],lower_phrases=[(1,2),(3,5),(6,8),(9,11),(12,14)],
+ hairpins=[('crescendo',1,2),('diminuendo',2,3),('crescendo',4,5),('diminuendo',5,6),('diminuendo',7,9),('crescendo',10,11),('diminuendo',11,14)],tempo_changes={},group=3,
+ performance=dict(rubato=[53,56,48,47,52,44,55,49,45,50,54,46,40,30],
+  phrase_arcs=[[0,17,3],[18,35,3],[36,59,4],[60,84,-2]],
+  lower_entries=[[18,24],[42,48],[66,72]],inner_entries=[[24,30],[54,60]],pedal_lift=.22,gate=.995,
+  note='The chromatic neighbour is a brief change of light before the upper line settles. The inner voice comes a little closer in two of the distant reflections. The whole final phrase withdraws, leaving the added ninth above an open fifth rather than repeating the major third.'))
 ]

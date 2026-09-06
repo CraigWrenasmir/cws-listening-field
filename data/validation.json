@@ -3407,5 +3407,170 @@
       "sounded_pitches_per_minute": 98.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Gossamer Junction",
+    "opus": 58,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 103,
+    "audio_seconds": 116.89,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 80,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 44,
+        "high": 59,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced chromatic suspension study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The RH upper melody and inner voice need independent finger sustain through the printed half-bar pedal changes. The opening G natural is a brief chromatic neighbour resolving into G-sharp. Hold the long upper G-sharp across the bar line while the inner voice and bass change. The final return sits an octave lower and should remain clear without becoming heavy."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.78
+      ],
+      [
+        3,
+        5.779999999999999
+      ],
+      [
+        6,
+        8.78
+      ],
+      [
+        9,
+        11.78
+      ],
+      [
+        12,
+        14.78
+      ],
+      [
+        15,
+        17.78
+      ],
+      [
+        18,
+        20.78
+      ],
+      [
+        21,
+        23.78
+      ],
+      [
+        24,
+        26.78
+      ],
+      [
+        27,
+        29.78
+      ],
+      [
+        30,
+        32.78
+      ],
+      [
+        33,
+        35.78
+      ],
+      [
+        36,
+        38.78
+      ],
+      [
+        39,
+        41.78
+      ],
+      [
+        42,
+        44.78
+      ],
+      [
+        45,
+        47.78
+      ],
+      [
+        48,
+        50.78
+      ],
+      [
+        51,
+        53.78
+      ],
+      [
+        54,
+        56.78
+      ],
+      [
+        57,
+        59.78
+      ],
+      [
+        60,
+        62.78
+      ],
+      [
+        63,
+        65.78
+      ],
+      [
+        66,
+        68.78
+      ],
+      [
+        69,
+        71.78
+      ],
+      [
+        72,
+        74.78
+      ],
+      [
+        75,
+        77.78
+      ],
+      [
+        78,
+        80.78
+      ],
+      [
+        81,
+        83.78
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 54.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
