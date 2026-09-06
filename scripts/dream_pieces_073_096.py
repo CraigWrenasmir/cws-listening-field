@@ -807,4 +807,64 @@ C3:3 G3+D4:3
   phrase_arcs=[[0,17.5,3],[18,41.5,4],[42,59.5,3],[60,84,-2]],
   lower_entries=[[12,18],[36,42],[66,72]],inner_entries=[[1,7],[42,48]],pedal_lift=.22,gate=.99,
   note='The answering voice emerges gently without obscuring its leader. At the second canon the roles exchange: the lower RH line leads and the upper line enters after a breath. The independent bass shapes the harmony beneath both, and the last ninth arrives only after the upper sixth has settled.'))
+,
+dict(op=84,title='Celandine Spire',key='d',fifths=-1,meter='3/4',bpm=54,
+ meters=['3/4','4/4','5/4','3/4','4/4','6/4','3/4','5/4','4/4','3/4','5/4','4/4','3/4','6/4','4/4','5/4','3/4','4/4'],
+ description='Dahlia Overpass’s opening intervals become A–C–D–C within a seven-note sweep. Three seven-against-two crossings each fill a three-beat bar, followed by longer, quieter harmonies. The changing bar lengths let the phrases settle at different distances. B-flat Lydian and A-minor colours, an altered D-flat dominant and a soft A-dominant approach return to D minor with an added ninth.',
+ difficulty='Advanced 7:6 eighth-note groups and changing phrase lengths',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 1, 7 and 13, seven RH eighth notes fill the time of six ordinary eighths. The LH plays two dotted quarters over the same three beats. The 7:6 brackets state that relationship explicitly. Let each group arrive as a single contour, then give the following longer bar time to settle. The four-note closing RH shape spans a major seventh.',
+ parent_opus=83,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['A','C','D','C']),
+ ancestry=dict(source_opus=83,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=4,source_pitches=['G','Bb','C','Bb'],transposition_semitones=2),
+ tuplet_groups=[dict(hand='rh',actual=7,normal=6,count=21)],
+ tuplet_spans=[dict(hand='rh',start_beat=start,end_beat=start+3,actual=7,normal=6,stem='down',show_number='both') for start in [0,25,49]],
+ polyrhythms=[dict(start_beat=start,end_beat=start+3,rh_notes=7,lh_notes=2) for start in [0,25,49]],
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[start+left,start+right-.22] for start,cuts in zip([0,3,7,12,15,19,25,28,33,37,40,45,49,52,58,62,67,70],[[0,1.5,3],[0,2,3,4],[0,1,2,3,5],[0,1,2,3],[0,1,2,3,4],[0,2,3,4,6],[0,1.5,3],[0,1,2,3,5],[0,2,3,4],[0,1,2,3],[0,2,3,4,5],[0,1,2,3,4],[0,1.5,3],[0,2,3,4,5,6],[0,1,2,3,4],[0,2,3,4,5],[0,1,2,3],[0,4]]) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+A5:3/7 C6:3/7 D6:3/7 C6:3/7 A5:3/7 F5:3/7 E5:3/7
+F5:4
+E5:2 D5:1 C5:2
+D5+G5:2 C5+F5:1
+E5:1.5 G5:1 F5:1.5
+D5+F5+A5:3 G5:1 E5:2
+C6:3/7 Bb5:3/7 A5:3/7 G5:3/7 F5:3/7 E5:3/7 D5:3/7
+C5+F5+A5:3 G5:1 F5:1
+E5:2 D5:1 B4:1
+C5+E5+G5:3
+D5:1 F5:2 E5:1 Cb5:1
+C5:2 B4:1 A4:1
+E5:3/7 G5:3/7 A5:3/7 G5:3/7 E5:3/7 C5:3/7 B4:3/7
+C5+E5+G5:4 F5:1 E5:1
+F5:1.5 E5:.5 D5:2
+G5:2 F5:1 E5:2
+G4+Bb4+C#5+E5:3
+F4+A4+D5+E5:4
+''',
+ lh='''
+D3:1.5 A3:1.5
+Bb2:2 F3:1 A3:1
+G3:1 D3:1 F3:1 A3:2
+C3:1 G3:1 Bb3:1
+A2:1 E3:1 G3:1 C#4:1
+D3:2 A3:1 C4:1 E4:1 D4:1
+Bb2:1.5 F3:1.5
+F3:1 C4:1 E4:1 D4:2
+E3:2 B3:1 D4:1
+C3:1 G3:1 B3:1
+Db3:2 Ab3:1 Cb4:1 Bb3:1
+C3:1 G3:1 B3:1 D4:1
+A2:1.5 E3:1.5
+A2:2 E3:1 G3:1 B3:1 C4:1
+D3:1 A3:1 C4:1 B3:1
+G2:2 D3:1 F3:1 B3:1
+A2:1 E3:1 G3:1
+D3+A3:4
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'pp',7:'p',8:'pp',9:'p',10:'pp',11:'mp',12:'pp',13:'p',14:'pp',15:'p',16:'p',17:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,18)],lower_phrases=[(1,4),(5,8),(9,12),(13,15),(16,18)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,4),('diminuendo',5,6),('diminuendo',7,8),('diminuendo',9,10),('diminuendo',11,12),('diminuendo',13,14),('diminuendo',15,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,44,50,56,49,42,53,43,50,42,55,44,50,41,47,42,34,26],
+  phrase_arcs=[[0,14.5,3],[15,32.5,4],[33,48.5,3],[49,74,-2]],
+  lower_entries=[[7,12],[33,37],[45,49],[58,62]],pedal_lift=.22,gate=.99,
+  note='Each seven-note gesture floats across two lower pulses. Longer following bars relax the motion. The final dominant loses weight before the added-ninth minor close.'))
 ]

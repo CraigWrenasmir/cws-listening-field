@@ -9864,5 +9864,411 @@
       "sounded_pitches_per_minute": 78.5,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Celandine Spire",
+    "opus": 84,
+    "score_pages": 2,
+    "bars": 18,
+    "pitch_onsets": 135,
+    "audio_seconds": 107.29,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 8,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced 7:6 eighth-note groups and changing phrase lengths",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 1, 7 and 13, seven RH eighth notes fill the time of six ordinary eighths. The LH plays two dotted quarters over the same three beats. The 7:6 brackets state that relationship explicitly. Let each group arrive as a single contour, then give the following longer bar time to settle. The four-note closing RH shape spans a major seventh."
+    },
+    "notated_tuplet_notes": {
+      "1:7:6": 21
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.28
+      ],
+      [
+        1.5,
+        2.78
+      ],
+      [
+        3,
+        4.78
+      ],
+      [
+        5,
+        5.78
+      ],
+      [
+        6,
+        6.78
+      ],
+      [
+        7,
+        7.78
+      ],
+      [
+        8,
+        8.78
+      ],
+      [
+        9,
+        9.78
+      ],
+      [
+        10,
+        11.78
+      ],
+      [
+        12,
+        12.78
+      ],
+      [
+        13,
+        13.78
+      ],
+      [
+        14,
+        14.78
+      ],
+      [
+        15,
+        15.78
+      ],
+      [
+        16,
+        16.78
+      ],
+      [
+        17,
+        17.78
+      ],
+      [
+        18,
+        18.78
+      ],
+      [
+        19,
+        20.78
+      ],
+      [
+        21,
+        21.78
+      ],
+      [
+        22,
+        22.78
+      ],
+      [
+        23,
+        24.78
+      ],
+      [
+        25,
+        26.28
+      ],
+      [
+        26.5,
+        27.78
+      ],
+      [
+        28,
+        28.78
+      ],
+      [
+        29,
+        29.78
+      ],
+      [
+        30,
+        30.78
+      ],
+      [
+        31,
+        32.78
+      ],
+      [
+        33,
+        34.78
+      ],
+      [
+        35,
+        35.78
+      ],
+      [
+        36,
+        36.78
+      ],
+      [
+        37,
+        37.78
+      ],
+      [
+        38,
+        38.78
+      ],
+      [
+        39,
+        39.78
+      ],
+      [
+        40,
+        41.78
+      ],
+      [
+        42,
+        42.78
+      ],
+      [
+        43,
+        43.78
+      ],
+      [
+        44,
+        44.78
+      ],
+      [
+        45,
+        45.78
+      ],
+      [
+        46,
+        46.78
+      ],
+      [
+        47,
+        47.78
+      ],
+      [
+        48,
+        48.78
+      ],
+      [
+        49,
+        50.28
+      ],
+      [
+        50.5,
+        51.78
+      ],
+      [
+        52,
+        53.78
+      ],
+      [
+        54,
+        54.78
+      ],
+      [
+        55,
+        55.78
+      ],
+      [
+        56,
+        56.78
+      ],
+      [
+        57,
+        57.78
+      ],
+      [
+        58,
+        58.78
+      ],
+      [
+        59,
+        59.78
+      ],
+      [
+        60,
+        60.78
+      ],
+      [
+        61,
+        61.78
+      ],
+      [
+        62,
+        63.78
+      ],
+      [
+        64,
+        64.78
+      ],
+      [
+        65,
+        65.78
+      ],
+      [
+        66,
+        66.78
+      ],
+      [
+        67,
+        67.78
+      ],
+      [
+        68,
+        68.78
+      ],
+      [
+        69,
+        69.78
+      ],
+      [
+        70,
+        73.78
+      ]
+    ],
+    "verified_polyrhythm_spans": [
+      {
+        "start_beat": 0,
+        "end_beat": 3,
+        "rh_notes": 7,
+        "lh_notes": 2
+      },
+      {
+        "start_beat": 25,
+        "end_beat": 28,
+        "rh_notes": 7,
+        "lh_notes": 2
+      },
+      {
+        "start_beat": 49,
+        "end_beat": 52,
+        "rh_notes": 7,
+        "lh_notes": 2
+      }
+    ],
+    "verified_tuplet_brackets": [
+      {
+        "hand": "rh",
+        "start_beat": 0,
+        "end_beat": 3,
+        "actual": 7,
+        "normal": 6,
+        "stem": "down",
+        "show_number": "both"
+      },
+      {
+        "hand": "rh",
+        "start_beat": 25,
+        "end_beat": 28,
+        "actual": 7,
+        "normal": 6,
+        "stem": "down",
+        "show_number": "both"
+      },
+      {
+        "hand": "rh",
+        "start_beat": 49,
+        "end_beat": 52,
+        "actual": 7,
+        "normal": 6,
+        "stem": "down",
+        "show_number": "both"
+      }
+    ],
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 3.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 7.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 12.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 15.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 19.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 25.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 28.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 33.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 37.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 40.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 45.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 49.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 52.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 58.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 62.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 67.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 70.0,
+        "meter": "4/4"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 77.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

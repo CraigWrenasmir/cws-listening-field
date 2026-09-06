@@ -190,6 +190,7 @@ for p in cat:
   for i,event in enumerate(group):
    n=xml_notes[event['id']]
    assert n.findtext('type')==n.findtext('time-modification/normal-type')=='eighth'
+   assert n.find('dot') is None and n.find('time-modification/normal-dot') is None
    assert int(n.findtext('time-modification/actual-notes'))==spec['actual'] and int(n.findtext('time-modification/normal-notes'))==spec['normal']
    assert n.findtext('stem')==spec.get('stem','down')
    assert [(b.get('number'),b.text) for b in n.findall('beam')]==[('1','begin' if i==0 else 'end' if i==len(group)-1 else 'continue')]
@@ -197,6 +198,7 @@ for p in cat:
    expected=[('start',str(number))] if i==0 else [('stop',str(number))] if i==len(group)-1 else []
    assert [(t.get('type'),t.get('number')) for t in marks]==expected,('Tuplet bracket span',p['op'],event['id'])
    if i==0:assert marks[0].get('bracket')=='yes' and marks[0].get('placement')=='above'
+   if i==0:assert marks[0].get('show-number')==spec.get('show_number','actual')
  for crossing in p.get('polyrhythms',[]):
   start=crossing['start_beat'];end=crossing['end_beat']
   for hand in ['rh','lh']:

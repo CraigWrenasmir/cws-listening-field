@@ -15,6 +15,8 @@ def apply_tuplet_spans(root, events, piece):
         assert abs(end - start - normal * .5) < 1e-8
         direction = spec.get('stem', 'down')
         assert direction in ('up', 'down')
+        show_number = spec.get('show_number', 'actual')
+        assert show_number in ('actual', 'both')
         for i, event in enumerate(group):
             assert event['id'] not in used and len(event['pitches']) == 1
             used.add(event['id'])
@@ -24,7 +26,16 @@ def apply_tuplet_spans(root, events, piece):
             assert n.findtext('type') == 'eighth' and n.find('tie') is None
             tm = n.find('time-modification')
             assert int(tm.findtext('actual-notes')) == count
+            if int(tm.findtext('normal-notes')) != normal:
+                # music21 spells 3/7 beats as dotted eighths at 7:4.
+                # Undotted eighths at 7:6 have the same sounding duration.
+                assert (count, normal, int(tm.findtext('normal-notes'))) == (7, 6, 4)
+                assert len(n.findall('dot')) == len(tm.findall('normal-dot')) == 1
+                n.remove(n.find('dot'))
+                tm.remove(tm.find('normal-dot'))
+                tm.find('normal-notes').text = str(normal)
             assert int(tm.findtext('normal-notes')) == normal
+            assert n.find('dot') is None and tm.find('normal-dot') is None
             # music21 can infer a 128th-note normal-type for 4/9 quarter beats.
             # This span explicitly represents nine eighths in the time of eight.
             nt = tm.find('normal-type')
@@ -45,6 +56,6 @@ def apply_tuplet_spans(root, events, piece):
             n.insert(list(n).index(notation), beam)
             if i == 0:
                 ET.SubElement(notation, 'tuplet', type='start', number=str(number),
-                              bracket='yes', placement='above', **{'show-number': 'actual'})
+                              bracket='yes', placement='above', **{'show-number': show_number})
             if i == count-1:
                 ET.SubElement(notation, 'tuplet', type='stop', number=str(number))
