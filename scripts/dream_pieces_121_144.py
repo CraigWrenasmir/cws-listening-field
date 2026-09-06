@@ -147,4 +147,78 @@ R:6
   phrase_arcs=[[0,18,3],[18,30,2],[30,48,3],[48,66,3],[66,84,2],[84,96,-2]],
   tenor_entries=[[3,15],[33,45],[69,81]],lower_entries=[],pedal_lift=.2,gate=.995,
   note='Let the upper opening retain the gentle sway of Velvet Estuary. The slower tenor answer should be heard as a second voice with its own breathing, continuing calmly beneath the next upper phrase. Keep the long bass notes quiet and let the final return feel more distant before the warm major ninth.'))
+
+,
+dict(op=123,title='Thistle Isopleth',key='d',fifths=-1,meter='3/4',bpm=51,
+ description='Heather Backwater’s A–C–D–C becomes G–B-flat–C–B-flat. A held upper F remains in place while nine quiet major triads rise chromatically beneath it, changing its harmonic meaning before resolving into D-minor ninth. A second passage, a whole tone lower, settles into C-minor ninth; a brief altered-dominant return restores D minor.',
+ difficulty='Advanced chromatic chord planing beneath a held upper note',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Hold the upper F through bars 5–7 while the inner dyads and LH roots form nine major triads rising by semitone, from D-flat to A. The upper note changes from a chord tone to different tensions as the harmony moves. Bars 11–13 repeat the process one whole tone lower beneath a held E-flat, moving from C-flat to G. Keep each inner dyad quiet and connected while the RH maintains its upper hold; the first complete RH shape spans an octave. Clear the pedal at the written changes so the chromatic harmony does not accumulate.',
+ parent_opus=122,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=3,pitches=['G','Bb','C','Bb']),
+ ancestry=dict(source_opus=122,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=4.5,source_pitches=['A','C','D','C'],transposition_semitones=-2),
+ hidden_voice_rests={'inner':[1,2,3,4,9,10,15]},
+ voice_phrases=[dict(voice='inner',start_beat=12,end_beat=21,swell=-2),dict(voice='inner',start_beat=30,end_beat=39,swell=-2)],
+ lower_sections={1:'pp',5:'pp',9:'p',11:'pp',15:'pp'},
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=500),
+ pedal_spans=[[(bar-1)*3+left,(bar-1)*3+right-.2] for bar,cuts in enumerate([[0,1,1.5,2.5,3],[0,1,1.5,2.5,3],[0,1,1.5,2.5,3],[0,1,1.5,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,3],[0,1,1.5,2.5,3],[0,1,1.5,2,3],[0,1,2,3],[0,1,2,3],[0,1,2,3],[0,3],[0,1,1.5,2,3],[0,3]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G5:1 Bb5:.5 C6:1 Bb5:.5
+A5:1 G5:.5 F5:1 E5:.5
+D5:1 F5:.5 A5:1 G5:.5
+F5:1 Eb5:1 D5:1
+F5:3~
+F5:3~
+F5:3
+D5:3
+Eb5:1 G5:.5 Bb5:1 Ab5:.5
+G5:1 F5:1 Eb5:1
+Eb5:3~
+Eb5:3~
+Eb5:3
+C5:3
+Eb5:1 D5:.5 C#5:.5 Bb4:1
+D5:3
+''',
+ rh_inner='''
+R:3
+R:3
+R:3
+R:3
+F4+Ab4:1 F#4+A4:1 G4+Bb4:1
+G#4+B4:1 A4+C5:1 A#4+C#5:1
+B4+D5:1 C5+Eb5:1 C#5+E5:1
+E4+F4+A4+C5:3
+R:3
+R:3
+Eb4+Gb4:1 E4+G4:1 F4+Ab4:1
+F#4+A4:1 G4+Bb4:1 G#4+B4:1
+A4+C5:1 Bb4+Db5:1 B4+D5:1
+D4+Eb4+G4+Bb4:3
+R:3
+E4+F4+A4+C5:3
+''',
+ lh='''
+D3+A3:1.5 C4+F4:1.5
+Bb2+F3:1.5 A3+D4:1.5
+G3+D4:1.5 F3+C4:1.5
+Eb3+Bb3:1.5 D3+A3:1.5
+Db3:1 D3:1 Eb3:1
+E3:1 F3:1 F#3:1
+G3:1 Ab3:1 A3:1
+D3+A3:3
+C3+G3:1.5 Bb3+Eb4:1.5
+Ab2+Eb3:1.5 G3+C4:1.5
+Cb3:1 C3:1 Db3:1
+D3:1 Eb3:1 E3:1
+F3:1 Gb3:1 G3:1
+C3+G3:3
+A2+E3:1.5 G3+C#4:1.5
+D3+A3:3
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'pp',8:'pp',9:'p',10:'pp',11:'pp',14:'pp',15:'p',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,8),(9,10),(11,14),(15,16)],lower_phrases=[(1,2),(3,4),(5,8),(9,10),(11,14),(15,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',15,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[51,46,52,45,47,49,44,35,48,43,45,47,41,33,32,24],
+  phrase_arcs=[[0,6,3],[6,12,3],[12,24,-2],[24,30,2],[30,42,-2],[42,48,-2]],
+  inner_entries=[],lower_entries=[],pedal_lift=.2,gate=.995,
+  note='Let the upper hold stay as a quiet point of reference while the lower harmony changes around it. The chromatic chords should remain light enough for their tensions to pass without weight. Allow more time at both minor-ninth resolutions and let the last D minor feel settled.'))
 ]

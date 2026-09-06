@@ -23862,5 +23862,302 @@
       "sounded_pitches_per_minute": 55.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Thistle Isopleth",
+    "opus": 123,
+    "score_pages": 2,
+    "bars": 16,
+    "pitch_onsets": 131,
+    "audio_seconds": 76.97,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 44,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 8,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced chromatic chord planing beneath a held upper note",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Hold the upper F through bars 5\u20137 while the inner dyads and LH roots form nine major triads rising by semitone, from D-flat to A. The upper note changes from a chord tone to different tensions as the harmony moves. Bars 11\u201313 repeat the process one whole tone lower beneath a held E-flat, moving from C-flat to G. Keep each inner dyad quiet and connected while the RH maintains its upper hold; the first complete RH shape spans an octave. Clear the pedal at the written changes so the chromatic harmony does not accumulate."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.3
+      ],
+      [
+        1.5,
+        2.3
+      ],
+      [
+        2.5,
+        2.8
+      ],
+      [
+        3,
+        3.8
+      ],
+      [
+        4,
+        4.3
+      ],
+      [
+        4.5,
+        5.3
+      ],
+      [
+        5.5,
+        5.8
+      ],
+      [
+        6,
+        6.8
+      ],
+      [
+        7,
+        7.3
+      ],
+      [
+        7.5,
+        8.3
+      ],
+      [
+        8.5,
+        8.8
+      ],
+      [
+        9,
+        9.8
+      ],
+      [
+        10,
+        10.3
+      ],
+      [
+        10.5,
+        10.8
+      ],
+      [
+        11,
+        11.8
+      ],
+      [
+        12,
+        12.8
+      ],
+      [
+        13,
+        13.8
+      ],
+      [
+        14,
+        14.8
+      ],
+      [
+        15,
+        15.8
+      ],
+      [
+        16,
+        16.8
+      ],
+      [
+        17,
+        17.8
+      ],
+      [
+        18,
+        18.8
+      ],
+      [
+        19,
+        19.8
+      ],
+      [
+        20,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        24.8
+      ],
+      [
+        25,
+        25.3
+      ],
+      [
+        25.5,
+        26.3
+      ],
+      [
+        26.5,
+        26.8
+      ],
+      [
+        27,
+        27.8
+      ],
+      [
+        28,
+        28.3
+      ],
+      [
+        28.5,
+        28.8
+      ],
+      [
+        29,
+        29.8
+      ],
+      [
+        30,
+        30.8
+      ],
+      [
+        31,
+        31.8
+      ],
+      [
+        32,
+        32.8
+      ],
+      [
+        33,
+        33.8
+      ],
+      [
+        34,
+        34.8
+      ],
+      [
+        35,
+        35.8
+      ],
+      [
+        36,
+        36.8
+      ],
+      [
+        37,
+        37.8
+      ],
+      [
+        38,
+        38.8
+      ],
+      [
+        39,
+        41.8
+      ],
+      [
+        42,
+        42.8
+      ],
+      [
+        43,
+        43.3
+      ],
+      [
+        43.5,
+        43.8
+      ],
+      [
+        44,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "2": "pp",
+        "3": "mp",
+        "4": "p",
+        "5": "pp",
+        "8": "pp",
+        "9": "p",
+        "10": "pp",
+        "11": "pp",
+        "14": "pp",
+        "15": "p",
+        "16": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "pp",
+        "9": "p",
+        "11": "pp",
+        "15": "pp"
+      }
+    },
+    "verified_voice_phrases": [
+      {
+        "voice": "inner",
+        "start_beat": 12,
+        "end_beat": 21,
+        "swell": -2
+      },
+      {
+        "voice": "inner",
+        "start_beat": 30,
+        "end_beat": 39,
+        "swell": -2
+      }
+    ],
+    "verified_nonprinting_voice_rests": {
+      "inner": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        15
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 7,
+      "sounded_pitches_per_minute": 106.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
