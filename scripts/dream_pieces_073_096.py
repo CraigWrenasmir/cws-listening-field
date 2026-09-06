@@ -1152,4 +1152,74 @@ F3+C4:4
   phrase_arcs=[[0,19.5,4],[24,31,1],[32,56,-2]],
   lower_entries=[[24,31],[40,44]],pedal_lift=.22,gate=.985,
   note='The written pauses release both hands for the register exchange. A quiet low RH chord supports the brighter LH tune, with pedal refreshes clearing each upper note while the chord stays finger-held. The hands unwind through another pause, and the rising RH return leads towards a soft major sixth/ninth.'))
+,
+dict(op=89,title='Larkspur Concourse',key='C',fifths=0,meter='6/8',bpm=54,
+ description='Cress Vantage’s high left-hand phrase returns as E–G–A–G in the treble. Small chromatic enclosures approach a chord tone from above and below, then settle into long notes. The same gesture later moves into the bass beneath held upper chords. C-major and A-minor warmth opens through A-flat, E-flat and G colours before a quiet sixth/ninth close.',
+ difficulty='Advanced phrasing with chromatic enclosures and a transferred bass melody',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The paired sixteenths approach the following long note by semitone from above and below. Keep them light and give the sustained target the phrase’s weight. In bars 15–17 the left hand takes this figure while the upper harmony remains quiet. The compound metre contains several three-quarter-note melodic groupings; let the phrase breathe across those alternative accents.',
+ parent_opus=88,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['E','G','A','G']),
+ ancestry=dict(source_opus=88,source_hand='lh',source_start_beat=24,source_end_beat=28,source_pitches=['E','G','A','G'],transposition_semitones=0),
+ system_starts=[1,4,7,10,13,15,18,21,24],page_starts=[13],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*3+left,(bar-1)*3+right-.18] for bar,cuts in enumerate([[0,1,1.5,3],[.5,1,2,3],[0,1.5,2,3],[0,1,1.5,3],[.5,1,2,3],[0,1,1.5,3],[0,2,2.5,3],[0,.5,1.5,3],[.5,1,1.5,3],[0,1,2,3],[0,1.5,2,3],[0,.5,1.5,3],[0,1,1.5,3],[0,1,2,3],[.5,3],[.5,2,3],[.5,3],[0,1.5,2,3],[0,1.5,2.5,3],[0,1,1.5,3],[0,1,1.5,3],[.5,1,2,3],[0,1,2,3],[0,1,2,3],[0,3]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+E5:1 G5:.5 A5:.5 G5:1
+F5:.25 D#5:.25 E5:2.5
+D5:1 F5:1 E5:1
+C5:1 E5:1 G5:1
+C6:.25 A#5:.25 B5:2.5
+A5:1 G5:1 F5:1
+E5:2 D5:1
+C5:1 Eb5:1 G5:1
+Bb5:.25 G#5:.25 A5:2.5
+G5:1 F5:1 E5:1
+Eb5:1 D5:.5 C5:1.5
+D5:1 F#5:1 A5:1
+G5:2 F#5:1
+E5:1 D5:1 B4:1
+G4+B4+E5:3
+F#5:2 E5:1
+G4+C5+E5:3
+C5:1 D5:1 F5:1
+Eb5:2 Db5:1
+C5:1 E5:.5 G5:1.5
+A5:1 G5:1 E5:1
+F5:.25 D#5:.25 E5:2.5
+D5:1 C5:1 B4:1
+A4+B4+D5:3
+G4+A4+D5+E5:3
+''',
+ lh='''
+C3:1 G3:.5 B3:1.5
+A2:1 E3:1 G3:1
+F3:1.5 C4:.5 E4:1
+D3:1 A3:.5 C4:1.5
+G2:1 D3:1 F3:1
+C3:1 G3:.5 B3:1.5
+Ab2:2 Eb3:.5 G3:.5
+C3:.5 G3:1 Bb3:1.5
+F3:1 C4:.5 A3:1.5
+Bb2:1 F3:1 Ab3:1
+Eb3:1.5 Bb3:.5 Db4:1
+D3:.5 A3:1 C4:1.5
+G2:1 D3:.5 E3:1.5
+E3:1 B3:1 D4:1
+Db3:.25 B2:.25 C3:2.5
+F3:.25 D#3:.25 E3:2.5
+Bb2:.25 G#2:.25 A2:2.5
+D3:1.5 A3:.5 C4:1
+Ab2:1.5 Eb3:1 Gb3:.5
+C3:1 G3:.5 B3:1.5
+F3:1 C4:.5 E4:1.5
+C3:1 G3:1 Bb3:1
+D3:1 A3:2
+G2:1 D3:1 F3:1
+C3+G3:3
+''',sections={1:'p',2:'pp',3:'p',4:'p',5:'mp',6:'p',7:'pp',8:'p',9:'mp',10:'p',11:'pp',12:'p',13:'pp',14:'p',15:'pp',16:'p',17:'pp',18:'p',19:'pp',20:'p',21:'mp',22:'pp',23:'p',24:'pp',25:'pp'},words={1:'poco rubato',23:'poco rit.'},
+ slurs=[(1,6),(7,11),(12,14),(15,17),(18,22),(23,25)],lower_phrases=[(1,4),(5,8),(9,14),(15,15),(16,16),(17,17),(18,22),(23,25)],
+ hairpins=[('crescendo',1,5),('diminuendo',6,8),('diminuendo',9,11),('diminuendo',12,14),('diminuendo',15,17),('crescendo',18,21),('diminuendo',22,25)],tempo_changes={},group=3,
+ performance=dict(rubato=[54,49,57,52,59,48,53,47,56,50,52,58,45,51,46,49,43,54,47,50,55,42,38,33,27],
+  phrase_arcs=[[0,17.5,4],[18,32.5,3],[33,41.5,2],[42,50.5,1],[51,65.5,3],[66,75,-3]],
+  lower_entries=[[42,51]],pedal_lift=.18,gate=.99,
+  note='The brief chromatic neighbours are a passing breath before each held target. The upper line follows long arcs through the shifting accompaniment. When the bass takes the enclosures, the upper chords recede, then the opening gesture returns quietly before a spacious final harmony.'))
 ]

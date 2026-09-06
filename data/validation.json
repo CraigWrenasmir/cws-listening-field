@@ -11540,5 +11540,321 @@
       "sounded_pitches_per_minute": 69.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Larkspur Concourse",
+    "opus": 89,
+    "score_pages": 2,
+    "bars": 25,
+    "pitch_onsets": 146,
+    "audio_seconds": 101.58,
+    "hands": {
+      "rh": {
+        "low": 67,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced phrasing with chromatic enclosures and a transferred bass melody",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The paired sixteenths approach the following long note by semitone from above and below. Keep them light and give the sustained target the phrase\u2019s weight. In bars 15\u201317 the left hand takes this figure while the upper harmony remains quiet. The compound metre contains several three-quarter-note melodic groupings; let the phrase breathe across those alternative accents."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8200000000000001
+      ],
+      [
+        1,
+        1.32
+      ],
+      [
+        1.5,
+        2.82
+      ],
+      [
+        3.5,
+        3.82
+      ],
+      [
+        4,
+        4.82
+      ],
+      [
+        5,
+        5.82
+      ],
+      [
+        6,
+        7.32
+      ],
+      [
+        7.5,
+        7.82
+      ],
+      [
+        8,
+        8.82
+      ],
+      [
+        9,
+        9.82
+      ],
+      [
+        10,
+        10.32
+      ],
+      [
+        10.5,
+        11.82
+      ],
+      [
+        12.5,
+        12.82
+      ],
+      [
+        13,
+        13.82
+      ],
+      [
+        14,
+        14.82
+      ],
+      [
+        15,
+        15.82
+      ],
+      [
+        16,
+        16.32
+      ],
+      [
+        16.5,
+        17.82
+      ],
+      [
+        18,
+        19.82
+      ],
+      [
+        20,
+        20.32
+      ],
+      [
+        20.5,
+        20.82
+      ],
+      [
+        21,
+        21.32
+      ],
+      [
+        21.5,
+        22.32
+      ],
+      [
+        22.5,
+        23.82
+      ],
+      [
+        24.5,
+        24.82
+      ],
+      [
+        25,
+        25.32
+      ],
+      [
+        25.5,
+        26.82
+      ],
+      [
+        27,
+        27.82
+      ],
+      [
+        28,
+        28.82
+      ],
+      [
+        29,
+        29.82
+      ],
+      [
+        30,
+        31.32
+      ],
+      [
+        31.5,
+        31.82
+      ],
+      [
+        32,
+        32.82
+      ],
+      [
+        33,
+        33.32
+      ],
+      [
+        33.5,
+        34.32
+      ],
+      [
+        34.5,
+        35.82
+      ],
+      [
+        36,
+        36.82
+      ],
+      [
+        37,
+        37.32
+      ],
+      [
+        37.5,
+        38.82
+      ],
+      [
+        39,
+        39.82
+      ],
+      [
+        40,
+        40.82
+      ],
+      [
+        41,
+        41.82
+      ],
+      [
+        42.5,
+        44.82
+      ],
+      [
+        45.5,
+        46.82
+      ],
+      [
+        47,
+        47.82
+      ],
+      [
+        48.5,
+        50.82
+      ],
+      [
+        51,
+        52.32
+      ],
+      [
+        52.5,
+        52.82
+      ],
+      [
+        53,
+        53.82
+      ],
+      [
+        54,
+        55.32
+      ],
+      [
+        55.5,
+        56.32
+      ],
+      [
+        56.5,
+        56.82
+      ],
+      [
+        57,
+        57.82
+      ],
+      [
+        58,
+        58.32
+      ],
+      [
+        58.5,
+        59.82
+      ],
+      [
+        60,
+        60.82
+      ],
+      [
+        61,
+        61.32
+      ],
+      [
+        61.5,
+        62.82
+      ],
+      [
+        63.5,
+        63.82
+      ],
+      [
+        64,
+        64.82
+      ],
+      [
+        65,
+        65.82
+      ],
+      [
+        66,
+        66.82
+      ],
+      [
+        67,
+        67.82
+      ],
+      [
+        68,
+        68.82
+      ],
+      [
+        69,
+        69.82
+      ],
+      [
+        70,
+        70.82
+      ],
+      [
+        71,
+        71.82
+      ],
+      [
+        72,
+        74.82
+      ]
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 7,
+      "sounded_pitches_per_minute": 88.7,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
