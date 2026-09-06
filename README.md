@@ -23,6 +23,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 5 | Glass Footpath | 3/4 | 151 | [Score](pieces/CWS_Op_005_Glass_Footpath/CWS_Op_005_Glass_Footpath.pdf) | [MP3](pieces/CWS_Op_005_Glass_Footpath/CWS_Op_005_Glass_Footpath.mp3) |
 | CWS Op. 6 | Willow Transit | 6/8 | 158 | [Score](pieces/CWS_Op_006_Willow_Transit/CWS_Op_006_Willow_Transit.pdf) | [MP3](pieces/CWS_Op_006_Willow_Transit/CWS_Op_006_Willow_Transit.mp3) |
 | CWS Op. 7 | Silt Reverie | 9/8 | 128 | [Score](pieces/CWS_Op_007_Silt_Reverie/CWS_Op_007_Silt_Reverie.pdf) | [MP3](pieces/CWS_Op_007_Silt_Reverie/CWS_Op_007_Silt_Reverie.mp3) |
+| CWS Op. 8 | Bracken Meridian | 4/4 | 126 | [Score](pieces/CWS_Op_008_Bracken_Meridian/CWS_Op_008_Bracken_Meridian.pdf) | [MP3](pieces/CWS_Op_008_Bracken_Meridian/CWS_Op_008_Bracken_Meridian.mp3) |
 
 [Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
 

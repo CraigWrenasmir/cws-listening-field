@@ -49,7 +49,7 @@ for(let i=0;i<data.length;i++){
 const orientation=canvas.dataset.orientation.split(',').map(Number);for(const axis of [0,1,2]){for(let i=0;i<12;i++)click(`[data-rotate="${axis}"]`);const now=canvas.dataset.orientation.split(',').map(Number);assert(Math.abs(Math.abs(now.reduce((n,x,i)=>n+x*orientation[i],0))-1)<.00001);}
 click('#lf-kinship');tick();assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'true');
 await mkdir(new URL('work/qa-ui/',root),{recursive:true});
-for(const size of [1024,360,320]){width=size;observer.callback();tick();const {height}=canvas.getBoundingClientRect();await writeFile(new URL(`work/qa-ui/kinship-${size}.svg`,root),`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${height}"><rect width="100%" height="100%" fill="#f1f2ed"/>${drawings.join('')}</svg>`);assert(drawings.some(x=>x.includes('Tidal')));}
+for(const size of [1024,360,320]){width=size;observer.callback();tick();const {height}=canvas.getBoundingClientRect();await writeFile(new URL(`work/qa-ui/kinship-${size}.svg`,root),`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${height}"><rect width="100%" height="100%" fill="#f1f2ed"/>${drawings.join('')}</svg>`);assert(drawings.some(x=>x.includes(data.at(-1).title.split(' ')[0])));}
 const queue=[1,3,2,4,5,...data.filter(p=>p.op>=7).map(p=>p.op),6].map(op=>data.find(p=>p.op===op));
 assert.equal(new Set(queue.map(p=>p.op)).size,data.length);
 assert.deepEqual([...document.querySelectorAll('[data-path]')].map(el=>el.textContent),queue.map(p=>p.title));

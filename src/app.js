@@ -11,7 +11,7 @@ const norm=q=>{const n=Math.hypot(...q);return q.map(x=>x/n);};
 function multiply(a,b){const [x,y,z,s]=a,[u,v,w,t]=b;return norm([s*u+x*t+y*w-z*v,s*v-x*w+y*t+z*u,s*w+x*v-y*u+z*t,s*t-x*u-y*v-z*w]);}
 function axisTurn(axis,angle){const s=Math.sin(angle/2),q=[0,0,0,Math.cos(angle/2)];q[axis]=s;return q;}
 let orientation=multiply(axisTurn(1,.24),axisTurn(0,-.27));
-let matrix=[],geometry=[],radius=1;
+let matrix=[],geometry=new Map(),radius=1;
 function updateRotation(){
  const [x,y,z,s]=orientation;
  matrix=[1-2*(y*y+z*z),2*(x*y-z*s),2*(x*z+y*s),2*(x*y+z*s),1-2*(x*x+z*z),2*(y*z-x*s),2*(x*z-y*s),2*(y*z+x*s),1-2*(x*x+y*y)];
@@ -27,7 +27,21 @@ const listeningPath=[...new Set([...([1,3,2,4,5,...data.filter(p=>p.op>=7).map(p
 let playbackRequest=0;
 const depth=(p,seen=new Set())=>{if(!p.parent||seen.has(p.op)||!byOp.has(p.parent))return 0;seen.add(p.op);return 1+depth(data[byOp.get(p.parent)],seen);};
 const levels=data.map(p=>depth(p));
-const family=data.map((p,i)=>{const peers=data.map((_,j)=>j).filter(j=>levels[j]===levels[i]);return {x:(peers.indexOf(i)+1)/(peers.length+1),y:.11+levels[i]*.30};});
+let family=[];
+function refreshFamily(){
+ let visible=data.map((_,i)=>i);
+ if(data.length>6){
+  const near=[state.selected];let parent=data[state.selected].parent;
+  for(let step=0;step<2&&byOp.has(parent);step++){const index=byOp.get(parent);near.push(index);parent=data[index].parent;}
+  const children=visible.filter(i=>data[i].parent===data[state.selected].op);
+  const siblings=visible.filter(i=>data[i].parent===data[state.selected].parent&&i!==state.selected).sort((a,b)=>Math.abs(a-state.selected)-Math.abs(b-state.selected));
+  visible=[...new Set([...near,...children,...siblings])].slice(0,6).sort((a,b)=>a-b);
+ }
+ const first=Math.min(...visible.map(i=>levels[i])),last=Math.max(...visible.map(i=>levels[i]));
+ family=data.map(()=>null);
+ for(const i of visible){const peers=visible.filter(j=>levels[j]===levels[i]);family[i]={x:(peers.indexOf(i)+1)/(peers.length+1),y:data.length<=6?.11+levels[i]*.30:.13+(levels[i]-first)/Math.max(1,last-first)*.64};}
+ q('#lf-kinship-label').textContent=data.length>6?'Nearby musical relatives':'Shared phrases';
+}
 const names=data.map(p=>p.title);
 function tone(){const s=getComputedStyle(root);return {ink:s.getPropertyValue('--lf-ink').trim(),lower:s.getPropertyValue('--lf-lower').trim(),copper:s.getPropertyValue('--lf-copper').trim(),paper:s.getPropertyValue('--lf-paper').trim()};}
 // Resolve light-dark() through computed color before drawing into canvas.
@@ -59,18 +73,23 @@ function project(p,cx,cy,scale){
 }
 function point(index,hand,t,thread,cx,cy,scale){return project(modelPoint(index,hand,t,thread),cx,cy,scale);}
 function rebuildGeometry(){
- radius=1;
- geometry=data.map((_,index)=>{
+ radius=1;geometry.clear();
+ // The norm is convex along each thread offset: the two outside threads
+ // bound every inner thread. Compute their radius without storing the catalogue.
+ data.forEach((_,index)=>{for(let hand=0;hand<2;hand++)for(const thread of [-Math.floor(state.density/2),Math.floor(state.density/2)])for(let i=0;i<=240;i++)radius=Math.max(radius,Math.hypot(...modelPoint(index,hand,i/240,thread)));});
+ radius/=Math.sqrt(1-(radius/1000)**2);
+}
+function geometryFor(index){
+ if(!geometry.has(index)){
   const curves=[];
   for(let hand=1;hand>=0;hand--)for(let thread=-Math.floor(state.density/2);thread<=Math.floor(state.density/2);thread++){
    const points=[];
-   for(let i=0;i<=240;i++){const p=modelPoint(index,hand,i/240,thread);points.push(p);radius=Math.max(radius,Math.hypot(...p));}
+   for(let i=0;i<=240;i++)points.push(modelPoint(index,hand,i/240,thread));
    curves.push({hand,thread,points});
   }
-  return curves;
- });
- // A bounding sphere keeps every orientation within the viewing area.
- radius/=Math.sqrt(1-(radius/1000)**2);
+  geometry.set(index,curves);if(geometry.size>12)geometry.delete(geometry.keys().next().value);
+ }
+ return geometry.get(index);
 }
 function strokePath(index,hand,thread,cx,cy,scale,t0=0,t1=1){
  ctx.beginPath();const samples=Math.max(16,Math.round((t1-t0)*350));
@@ -82,7 +101,7 @@ function drawWork(index,cx,cy,scale,opacity){
  const chosen=index===state.selected;
  ctx.save();ctx.globalAlpha=opacity;
  const segments=[];
- for(const curve of geometry[index]){
+ for(const curve of geometryFor(index)){
   const pts=curve.points.map(p=>project(p,cx,cy,scale));
   for(let start=0;start<240;start+=30){
    const points=pts.slice(start,start+31),depth=points.reduce((sum,p)=>sum+p[2],0)/points.length;
@@ -122,11 +141,13 @@ function renderField(){
  const familyRadius=Math.min(w/8,h*.082),familyScale=familyRadius/radius;
  if(zoom>.1){
   ctx.save();ctx.strokeStyle=palette.lower;ctx.globalAlpha=.35*zoom;ctx.lineWidth=.8;
-  data.forEach((p,i)=>{if(!p.parent||!byOp.has(p.parent))return;const a=family[byOp.get(p.parent)],b=family[i];const ax=a.x*w,ay=a.y*h+familyRadius+(w<500?66:53),bx=b.x*w,by=b.y*h-familyRadius-7;ctx.beginPath();ctx.moveTo(ax,ay);ctx.bezierCurveTo(ax,(ay+by)/2,bx,(ay+by)/2,bx,by);ctx.stroke();});ctx.restore();
+  data.forEach((p,i)=>{if(!p.parent||!byOp.has(p.parent))return;const a=family[byOp.get(p.parent)],b=family[i];if(!a||!b)return;const ax=a.x*w,ay=a.y*h+familyRadius+(w<500?66:53),bx=b.x*w,by=b.y*h-familyRadius-7;ctx.beginPath();ctx.moveTo(ax,ay);ctx.bezierCurveTo(ax,(ay+by)/2,bx,(ay+by)/2,bx,by);ctx.stroke();});ctx.restore();
  }
  for(let i=0;i<data.length;i++){
+  if(!family[i]&&zoom>.1)continue;
   const galleryX=center+(i-camera)*spacing;
-  let cx=galleryX+(family[i].x*w-galleryX)*zoom,cy=h*.46+(family[i].y*h-h*.46)*zoom;
+  const node=family[i]||{x:.5,y:.46};
+  let cx=galleryX+(node.x*w-galleryX)*zoom,cy=h*.46+(node.y*h-h*.46)*zoom;
   let scale=baseScale+(familyScale-baseScale)*zoom;
   const op=state.kinship?1:(i===state.selected?1:.13);
   if(cx+radius*scale>0&&cx-radius*scale<w)drawWork(i,cx,cy,scale,op);
@@ -200,6 +221,7 @@ function choose(index,keepPlaylist=false){
  if(index<0||index>=data.length)return;
  playbackRequest++;state.playlist=keepPlaylist;
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
+ refreshFamily();
  q('#lf-title').textContent=names[index];q('#lf-opus').textContent='CWS Op. '+data[index].op;q('#lf-stamp').textContent=data[index].stamp;
  updateNavigation();q('#lf-time').textContent='0:00 / '+formatTime(data[index].duration);q('#lf-progress').value=0;q('#lf-progress').max=data[index].duration;q('#lf-progress').setAttribute('aria-valuetext','0:00 of '+formatTime(data[index].duration));
  [['pdf','pdf'],['audio','audio'],['midi','midi'],['xml','xml']].forEach(([id,field])=>{q('#lf-download-'+id).href=data[index][field];});
@@ -264,7 +286,7 @@ canvas.addEventListener('pointermove',e=>{
 });
 canvas.addEventListener('pointerup',e=>{
  if(!drag||drag.id!==e.pointerId)return;const click=!drag.moved;drag=null;canvas.releasePointerCapture(e.pointerId);
- if(click&&state.kinship){const rect=canvas.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;let nearest=-1,best=Infinity;family.forEach((p,i)=>{const distance=Math.hypot(x-p.x*w,y-p.y*h);if(distance<best){best=distance;nearest=i;}});if(best<Math.min(w/7,h*.13))choose(nearest);}
+ if(click&&state.kinship){const rect=canvas.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;let nearest=-1,best=Infinity;family.forEach((p,i)=>{if(!p)return;const distance=Math.hypot(x-p.x*w,y-p.y*h);if(distance<best){best=distance;nearest=i;}});if(best<Math.min(w/7,h*.13))choose(nearest);}
 });
 canvas.addEventListener('lostpointercapture',()=>drag=null);canvas.addEventListener('pointercancel',()=>drag=null);
 root.querySelectorAll('[data-rotate]').forEach(button=>button.addEventListener('click',e=>{

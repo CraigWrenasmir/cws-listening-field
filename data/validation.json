@@ -173,5 +173,30 @@
       }
     },
     "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration"
+  },
+  {
+    "piece": "Bracken Meridian",
+    "opus": 8,
+    "score_pages": 1,
+    "bars": 18,
+    "pitch_onsets": 126,
+    "audio_seconds": 88.15,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 4
+      },
+      "lh": {
+        "low": 45,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration"
   }
 ]

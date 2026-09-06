@@ -54,5 +54,55 @@ D3+F3:3~ D3+F3:1.5
  performance=dict(rubato=[63,62,58,60,64,65,61,56,63,59,60,55,60,58,56,53,49,42],
   phrase_arcs=[[0,12.5,3],[13.5,33,4],[36,52,5],[54,70,3],[72,81,-2]],
   lower_entries=[[9,18],[36,49.5],[63,76.5]],pedal_bars=list(range(1,19)),pedal_lift=.18,gate=.99,
-  note='Continuous half-quarter tempo changes interpolate the authored bar centres; a small anticipatory pedal lift clears each harmony. No random onset jitter.'))
+  note='Continuous half-quarter tempo changes interpolate the authored bar starts; a small anticipatory pedal lift clears each harmony. No random onset jitter.')),
+dict(op=8,title='Bracken Meridian',key='F',fifths=-1,meter='4/4',bpm=56,
+ description='An unhurried F-major ballad whose melody enters after the downbeat and repeatedly outlasts the harmony underneath. The D-F-E-A ancestor arrives quietly in the left hand at bar 9. A borrowed E-flat-major colour and an E-half-diminished to A-dominant turn shade the centre before a soft added-ninth return to F.',
+ parent_opus=7,motif=dict(hand='lh',start_beat=32,end_beat=36,pitches=['D','F','E','A']),
+ rh='''
+R:.5 E5:1.5 G5:.5 A5:.5 G5:1
+F5:1.5 E5:.5 C5:2~
+C5:1 D5:.5 F5:1.5 E5:1
+D5:1.5 Bb4:.5 A4:1 R:1
+R:.5 G4:.5 A4:1 C5:1 E5:1~
+E5:1 F5:.5 D5:1.5 Bb4:1
+F5:2 D5:.5 C5:.5 Bb4:1
+A4:2 G4:.5 E4:.5 R:1
+A4+C5:2 E5:1 D5:1~
+D5:1 C5:.5 A4:1.5 R:1
+G4:1 Bb4:.5 D5:.5 G5:2
+F5:1 E5:.5 C#5:.5 Bb4:1 A4:1~
+A4:1 C5:.5 D5:.5 F5:1 E5:1
+D5:2 C5:.5 A4:.5 G4:1~
+G4:1 A4:.5 C5:1.5 E5:1
+F5:2 E5:.5 C5:.5 A4:1~
+A4:1 G4:1 E4:1 D4:1
+E4+G4:1.5 F4+A4:2.5
+''',
+ lh='''
+F3:1 A3+C4:2 R:1
+D3:1.5 F3+A3:1.5 E3:1
+Bb2:1.5 D3+A3:1.5 F3:1
+C3:1 E3+Bb3:2 R:1
+F3:2 A3+C4:1 R:1
+G3:1 Bb3+D4:2 F3:1
+Eb3:1.5 G3+Bb3:1.5 R:1
+C3:1 E3+Bb3:1.5 G3:1.5
+D3:.5 F3:.5 E3:1 A3:2
+Bb2:2 D3+A3:1 F3:1
+E3+Bb3:2 G3:1 D3:1
+A2:1 G3+C#4:2 R:1
+D3:1.5 F3+A3:1.5 R:1
+Bb2:2 D3+A3:1.5 R:.5
+C3:1 E3+Bb3:2 G3:1
+F3:1 A3+C4:2 R:1
+G3:1 Bb3+D4:1 C3:2
+F3+A3:4
+''',sections={1:'p',5:'pp',9:'p',11:'mp',14:'p',17:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,3),(4,8),(9,11),(12,16),(17,18)],lower_phrases=[(2,4),(9,10),(14,18)],
+ hairpins=[('diminuendo',2,4),('crescendo',5,7),('diminuendo',7,8),('crescendo',9,11),('diminuendo',12,14),('diminuendo',16,18)],
+ tempo_changes={},group=3,
+ performance=dict(rubato=[56,55,52,50,55,57,54,49,54,53,57,55,54,51,53,50,47,42],
+  phrase_arcs=[[.5,11,3],[12,31,4],[32,43,4],[44,63,3],[64,72,-2]],
+  lower_entries=[[32,40],[64,70]],pedal_bars=list(range(1,19)),pedal_lift=.22,gate=.99,
+  note='The melody begins after the first bass attack; explicitly tied suspensions carry through changing harmony. A broad tempo arch is authored for each phrase.'))
 ]
