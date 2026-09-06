@@ -746,4 +746,62 @@ C3+G3:4
   phrase_arcs=[[0,11,3],[12,31,4],[32,47,4],[48,68,-2]],
   lower_entries=[[0,8],[8,16],[16,28],[28,40],[40,48],[48,60],[60,68]],pedal_bars=list(range(1,18)),pedal_lift=.23,gate=.99,
   note='The two polyrhythmic passages breathe as four-beat gestures. Their internal notes stay even within each hand, with a shared soft arrival in the following bar. The surrounding phrases make room for the harmonic colour to settle.'))
+,
+dict(op=38,title='Hollow Canopy',key='Db',fifths=-5,meter='4/4',bpm=57,
+ description='Fluvial Mirror’s opening becomes D-flat–A-flat–F–C. The left hand echoes it one bar later, beneath a new upper reply. The same exchange returns in F major, opening a different clearing in the piece. D minor and C-major colour lead back through a chromatic E-major reflection to the D-flat landscape, where borrowed minor colour softens the final ninth.',
+ difficulty='Advanced imitative study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The left hand echoes the opening upper melody an octave lower in bar 2, with another exact octave echo in bar 10. The upper voice continues independently during both echoes. Tenor-register bass phrases, tied upper notes and gently changing inner chord tones require clear voicing and careful pedal changes.',
+ parent_opus=37,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['Db','Ab','F','C']),
+ ancestry=dict(source_opus=37,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['C','G','E','B'],transposition_semitones=1),
+ rh='''
+Db5:1 Ab4:.5 F4:.5 C5:2
+Bb4:1 Ab4:.5 F4:.5 Eb4:2
+F4+Ab4+C5:2 Eb5:1 Db5:1
+Bb4+Db5+Ab5:2 Gb5:.5 F5:.5 Eb5:1
+F5:1 Gb5:.5 Bb5:.5 Ab5:2~
+Ab5:1 Gb5:.5 F5:.5 Eb5:1 C5:1
+F4+Ab4+Eb5:3 Db5:1
+E4+Bb4+D5:2 C5:1 G4:1
+F5:1 C5:.5 A4:.5 E5:2
+D5:1 C5:.5 A4:.5 G4:2
+F4+A4+E5:2 D5:1 C5:1
+B4+E5+A5:1.5 G5:.5 F5:2
+E5:3 D5:1
+Db5:1 F5:.5 Eb5:.5 C5:2
+Bb4+Db5+F5:2 Eb5:.5 Db5:.5 Bb4:1
+G#4+B4+F#5:2 E5:1 D#5:1
+Gb4+Bb4+F5:2 Eb5:1 Db5:1
+C5:1 Eb5:.5 Db5:.5 Bb4:2
+A4+Db5+Eb5:3 C5:1
+F4+Ab4+Eb5:4
+''',
+ lh='''
+Db3:2 Ab3:1 F3:1
+Db4:1 Ab3:.5 F3:.5 C4:2
+Bb2:1 F3:1 Ab3:.5 C4:.5 Db4:1
+Gb3:1 Db4:1 Bb3:2
+Eb3:1.5 Bb3:.5 Db4:1 Gb3:1
+Ab2:1 Eb3:1 Gb3:1 C4:1
+Db3:2 Ab3:.5 C4:.5 F3:1
+C3:1 G3:.5 Bb3:.5 E3:1 G3:1
+F3:2 C4:1 A3:1
+F4:1 C4:.5 A3:.5 E4:2
+D3:1 A3:1 C4:1 F3:.5 E3:.5
+G3:1 D4:1 F4:1 B3:1
+C3:1 G3:1 B3:2
+Bb2:1 F3:.5 Ab3:.5 C4:1 Db4:1
+Eb3:2 Bb3:1 Gb3:1
+E3:1 B3:1 D#4:1 G#3:1
+Eb3:1 Bb3:1 Db4:1 Gb3:.5 F3:.5
+Ab2:1 Eb3:1 Gb3:1 C4:1
+Gb3:1 Db4:1 A3:2
+Db3+Ab3:4
+''',sections={1:'p',3:'mp',5:'p',7:'pp',9:'p',11:'mp',13:'pp',15:'p',18:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,11),(12,16),(17,20)],lower_phrases=[(1,3),(4,6),(7,8),(9,12),(13,15),(16,18),(19,20)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('diminuendo',5,8),('diminuendo',9,11),('diminuendo',11,13),('crescendo',14,15),('diminuendo',15,16),('diminuendo',17,20)],tempo_changes={},group=4,
+ performance=dict(rubato=[57,55,59,52,58,54,49,46,59,56,60,55,48,53,57,50,48,44,39,32],
+  phrase_arcs=[[0,15,3],[16,31,3],[32,43,4],[44,63,3],[64,80,-2]],
+  lower_entries=[[4,8],[12,24],[24,32],[36,40],[40,48],[48,60],[60,72],[72,80]],pedal_bars=list(range(1,21)),pedal_lift=.25,gate=.99,
+  note='The echoed melody receives a little extra bass presence, while the upper answer softens. Rubato follows the longer phrase, allowing the imitation to sound conversational. The F-major clearing is slightly brighter, with a gradual withdrawal through the final five bars.'))
 ]

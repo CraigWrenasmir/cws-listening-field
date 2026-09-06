@@ -1489,5 +1489,47 @@
       "sounded_pitches_per_minute": 106.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Hollow Canopy",
+    "opus": 38,
+    "score_pages": 1,
+    "bars": 20,
+    "pitch_onsets": 164,
+    "audio_seconds": 101.88,
+    "hands": {
+      "rh": {
+        "low": 63,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 44,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced imitative study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The left hand echoes the opening upper melody an octave lower in bar 2, with another exact octave echo in bar 10. The upper voice continues independently during both echoes. Tenor-register bass phrases, tied upper notes and gently changing inner chord tones require clear voicing and careful pedal changes."
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 99.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
