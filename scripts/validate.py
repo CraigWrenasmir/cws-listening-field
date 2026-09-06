@@ -122,10 +122,13 @@ for p in cat:
     if len(voices)>1:assert None not in notation_voices[staff]
     assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
  if p.get('hidden_voice_rests'):
-  expected_hidden={f'cws{p["op"]}-{hand}-m{bar}-n1001' for voice,bars in p['hidden_voice_rests'].items() for hand in ['rh' if voice=='inner' else 'lh'] for bar in bars}
+  expected_hidden={f'cws{p["op"]}-{hand}-m{bar}-n1001':(staff,voice) for voice,bars in p['hidden_voice_rests'].items() for hand,staff in [('rh','1') if voice=='inner' else ('lh','2')] for bar in bars}
   hidden=[n for n in r.findall('.//part/measure/note') if n.get('print-object')=='no']
-  assert {n.get('id') for n in hidden}==expected_hidden,('Nonprinting voice rests differ',p['op'])
-  assert all(n.find('rest') is not None and n.findtext('voice')=='2' for n in hidden)
+  assert {n.get('id') for n in hidden}==set(expected_hidden),('Nonprinting voice rests differ',p['op'])
+  for n in hidden:
+   staff,voice=expected_hidden[n.get('id')]
+   assert n.find('rest') is not None and n.findtext('staff','1')==staff,('Hidden rest is not on its declared staff',p['op'],n.get('id'))
+   assert voice_labels[(staff,n.findtext('voice'))]=={voice},('Hidden rest is not in its declared additional voice',p['op'],n.get('id'))
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
  pedal_directions=[];notated_signature=None;notated_meters=[]
  for measure in r.findall('.//part/measure'):

@@ -155,4 +155,74 @@ G3+D4:3~ G3+D4:2
   phrase_arcs=[[0,4.8,0],[5,19.5,4],[20,39.5,3],[40,59.5,4],[60,80,-2]],
   lower_entries=[[0,5],[35,45]],inner_entries=[[5,10],[25,30],[45,50],[65,75]],pedal_lift=.22,gate=.995,
   note='The unchanged opening upper notes acquire a different warmth when the bass becomes G. Let the paired fourths move as soft harmonic planes, then bring out the counter-lines as they separate. The last chord settles without the opening’s raised-fourth edge.'))
+,
+dict(op=99,title='Cyclamen Slipway',key='f',fifths=-4,meter='5/4',bpm=54,
+ meters=['5/4','4/4','6/4','4/4','5/4','6/4','4/4','4/4','6/4','5/4','4/4','6/4','5/4','4/4','7/4'],
+ description='A four-note inner fragment from Aconite Threshold becomes a melody whose major third softens into minor. Its bar lengths expand and contract around the phrases. Finger-held bass notes support a separate tenor, with three small streams of triplets passing underneath the upper melody. The opening returns in a shorter breath before an extended F-minor ninth.',
+ difficulty='Advanced flexible-metre phrasing and sustained-bass independence',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Read each changing time signature as the length of a phrase rather than an accent pattern. In bars 3, 9 and 12, the LH tenor has six triplet eighths over the first two quarter beats while the bass remains finger-held. The hand reaches an octave in these passages. The LH uses treble clef only in bar 6. Upper ties connect bars 3–4 and 6–7; keep the line continuous over the new harmony.',
+ parent_opus=98,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=5,pitches=['A','C','Bb','Ab']),
+ ancestry=dict(source_opus=98,source_hand='rh',source_voice='inner',source_start_beat=70,source_end_beat=75,source_pitches=['B','D','C','Bb'],transposition_semitones=-2),
+ clef_changes={'lh':{6:'treble',7:'bass'}},hidden_voice_rests={'tenor':[15]},
+ tuplet_groups=[dict(hand='lh',actual=3,normal=2,count=18)],
+ tuplet_spans=[dict(hand='lh',voice='tenor',start_beat=s,end_beat=s+1,actual=3,normal=2,stem='up') for s in [9,10,38,39,53,54]],
+ system_starts=[1,3,5,6,8,9,11,12,14],page_starts=[6,11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[base+left,base+right-.18] for base,cuts in [(0,[0,1.5,2,2.5,3.5,5]),(5,[0,1,2,3,4]),(9,[0,2,3,4,5,6]),(15,[0,1,1.5,2,3,4]),(19,[0,1,2,3,4,5]),(24,[0,2,3,4,5,6]),(30,[0,1,2,3,4]),(34,[0,1,2,4]),(38,[0,2,3,4,6]),(44,[0,1,2,3,5]),(49,[0,1,2,4]),(53,[0,2,3,4,6]),(59,[0,1,2,3,5]),(64,[0,.75,1.5,2.5,4]),(68,[0,7])] for left,right in zip(cuts,cuts[1:])],
+ rh='''
+A4:1.5 C5:1 Bb4:1 Ab4:1.5
+G5:1 F5:1 Eb5:1 D5:1
+F5:2 Ab5:1 G5:1 F5:1 Eb5:1~
+Eb5:1 D5:.5 C5:.5 Bb4:2
+Ab4:2 C5:1 Eb5:2
+F5:3 Eb5:1 C5:1 Bb4:1~
+Bb4:1 A4:1 G4:2
+Ab4:1 B4:1 D5:2
+C5:2 Eb5:1 G5:1 F5:2
+F5:1 Ab5:1 G5:1 Eb5:2
+D5:.5 Eb5:.5 F5:1 Ab5:2
+G5:2 F5:1 E5:1 D5:2
+C5:1 Eb5:.5 F5:.5 Eb5:1 D5:2
+A4:.75 C5:.75 Bb4:1 Ab4:1.5
+Ab4+C5+Eb5+G5:3~ Ab4+C5+Eb5+G5:4
+''',
+ lh='''
+F3:3~ F3:2
+Eb3:4
+Db3:6
+C3:4
+F3:3~ F3:2
+Ab3:6
+D3:4
+G3:4
+C3:6
+Db3:3~ Db3:2
+Bb2:4
+C3:6
+F3:3~ F3:2
+F3:4
+F3+C4:3~ F3+C4:4
+''',
+ lh_upper='''
+C4:2 D4:1 Eb4:2
+Bb3:1 D4:1 C4:1 Bb3:1
+Ab3:1/3 Bb3:1/3 C4:1/3 Db4:1/3 C4:1/3 Bb3:1/3 Ab3:2 F3:2
+E3:1 G3:1 Bb3:1 A3:1
+Ab3:1 C4:1 Eb4:1 D4:1 C4:1
+Eb4:2 G4:1 F4:1 Eb4:1 C4:1
+F3:1 A3:1 C4:1 B3:1
+Bb3:1 Db4:1 E4:2
+G3:1/3 Ab3:1/3 Bb3:1/3 C4:1/3 Bb3:1/3 Ab3:1/3 G3:2 Eb3:2
+Ab3:2 C4:1 F3:2
+F3:1 Ab3:1 G3:2
+G3:1/3 A3:1/3 Bb3:1/3 C4:1/3 Bb3:1/3 A3:1/3 G3:2 E3:2
+Ab3:1 C4:.5 D4:.5 C4:1 Bb3:2
+C4:1 D4:1 Eb4:1 C4:1
+R:7
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'p',6:'mp',7:'pp',8:'p',9:'p',10:'mp',11:'p',12:'p',13:'pp',14:'pp',15:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,15)],lower_phrases=[],
+ hairpins=[('crescendo',1,2),('diminuendo',3,4),('crescendo',5,6),('diminuendo',7,8),('crescendo',9,10),('diminuendo',11,12),('diminuendo',13,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,49,57,48,53,56,45,50,55,52,48,51,44,39,27],
+  phrase_arcs=[[0,18.7,3],[19,37.7,4],[38,58.7,3],[59,75,-2]],tenor_entries=[[9,15],[38,44],[53,59]],lower_entries=[[0,5],[68,75]],pedal_lift=.18,gate=.995,
+  note='The changing bar lengths follow the upper breath. Keep the sustained lower notes soft, and allow the tenor triplets to move independently beneath the slower melody. The A-natural opening recolours into A-flat; its shorter return makes room for a long, quiet last chord.'))
 ]

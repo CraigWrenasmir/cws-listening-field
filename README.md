@@ -114,6 +114,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 96 | Tilia Colonnade | 4/4 | 142 | [Score](pieces/CWS_Op_096_Tilia_Colonnade/CWS_Op_096_Tilia_Colonnade.pdf) | [MP3](pieces/CWS_Op_096_Tilia_Colonnade/CWS_Op_096_Tilia_Colonnade.mp3) |
 | CWS Op. 97 | Anemone Margin | 9/8 | 209 | [Score](pieces/CWS_Op_097_Anemone_Margin/CWS_Op_097_Anemone_Margin.pdf) | [MP3](pieces/CWS_Op_097_Anemone_Margin/CWS_Op_097_Anemone_Margin.mp3) |
 | CWS Op. 98 | Aconite Threshold | 5/4 | 162 | [Score](pieces/CWS_Op_098_Aconite_Threshold/CWS_Op_098_Aconite_Threshold.pdf) | [MP3](pieces/CWS_Op_098_Aconite_Threshold/CWS_Op_098_Aconite_Threshold.mp3) |
+| CWS Op. 99 | Cyclamen Slipway | 5/4, 4/4, 6/4, 7/4 (changing) | 140 | [Score](pieces/CWS_Op_099_Cyclamen_Slipway/CWS_Op_099_Cyclamen_Slipway.pdf) | [MP3](pieces/CWS_Op_099_Cyclamen_Slipway/CWS_Op_099_Cyclamen_Slipway.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
