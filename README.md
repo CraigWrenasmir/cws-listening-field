@@ -88,6 +88,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 70 | Heather Drift | 6/4 | 127 | [Score](pieces/CWS_Op_070_Heather_Drift/CWS_Op_070_Heather_Drift.pdf) | [MP3](pieces/CWS_Op_070_Heather_Drift/CWS_Op_070_Heather_Drift.mp3) |
 | CWS Op. 71 | Acacia Radius | 11/8, 7/8, 9/8, 5/8 (changing) | 178 | [Score](pieces/CWS_Op_071_Acacia_Radius/CWS_Op_071_Acacia_Radius.pdf) | [MP3](pieces/CWS_Op_071_Acacia_Radius/CWS_Op_071_Acacia_Radius.mp3) |
 | CWS Op. 72 | Elder Anchorage | 8/4 | 101 | [Score](pieces/CWS_Op_072_Elder_Anchorage/CWS_Op_072_Elder_Anchorage.pdf) | [MP3](pieces/CWS_Op_072_Elder_Anchorage/CWS_Op_072_Elder_Anchorage.mp3) |
+| CWS Op. 73 | Orchid Trestle | 5/4 | 245 | [Score](pieces/CWS_Op_073_Orchid_Trestle/CWS_Op_073_Orchid_Trestle.pdf) | [MP3](pieces/CWS_Op_073_Orchid_Trestle/CWS_Op_073_Orchid_Trestle.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

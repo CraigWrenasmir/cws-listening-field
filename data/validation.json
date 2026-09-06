@@ -6715,5 +6715,335 @@
       "sounded_pitches_per_minute": 42.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Orchid Trestle",
+    "opus": 73,
+    "score_pages": 3,
+    "bars": 23,
+    "pitch_onsets": 245,
+    "audio_seconds": 148.51,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 42,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 12,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-voice writing over sustained bass fields",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Hold the bass B-flat from bar 1 through the first four beats of bar 3, and the E from bar 10 through the first four beats of bar 12: each is one fourteen-beat note. Pedal refreshes clear the moving voices while the finger holds the bass. The RH opening phrase returns exactly six semitones higher in bar 10. Keep all four voices distinct, with the two inner lines softer and the tenor gently prominent over the two held bass notes."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.76
+      ],
+      [
+        2,
+        2.76
+      ],
+      [
+        3,
+        4.76
+      ],
+      [
+        5,
+        6.76
+      ],
+      [
+        7,
+        7.76
+      ],
+      [
+        8,
+        9.76
+      ],
+      [
+        10,
+        11.76
+      ],
+      [
+        12,
+        12.76
+      ],
+      [
+        13,
+        14.76
+      ],
+      [
+        15,
+        16.76
+      ],
+      [
+        17,
+        17.759999999999998
+      ],
+      [
+        18,
+        19.759999999999998
+      ],
+      [
+        20,
+        21.76
+      ],
+      [
+        22,
+        22.759999999999998
+      ],
+      [
+        23,
+        24.759999999999998
+      ],
+      [
+        25,
+        26.76
+      ],
+      [
+        27,
+        27.759999999999998
+      ],
+      [
+        28,
+        29.759999999999998
+      ],
+      [
+        30,
+        31.76
+      ],
+      [
+        32,
+        32.76
+      ],
+      [
+        33,
+        34.76
+      ],
+      [
+        35,
+        36.76
+      ],
+      [
+        37,
+        37.76
+      ],
+      [
+        38,
+        39.76
+      ],
+      [
+        40,
+        41.76
+      ],
+      [
+        42,
+        42.76
+      ],
+      [
+        43,
+        44.76
+      ],
+      [
+        45,
+        46.76
+      ],
+      [
+        47,
+        47.76
+      ],
+      [
+        48,
+        49.76
+      ],
+      [
+        50,
+        51.76
+      ],
+      [
+        52,
+        52.76
+      ],
+      [
+        53,
+        54.76
+      ],
+      [
+        55,
+        56.76
+      ],
+      [
+        57,
+        57.76
+      ],
+      [
+        58,
+        59.76
+      ],
+      [
+        60,
+        61.76
+      ],
+      [
+        62,
+        62.76
+      ],
+      [
+        63,
+        64.76
+      ],
+      [
+        65,
+        66.76
+      ],
+      [
+        67,
+        67.76
+      ],
+      [
+        68,
+        69.76
+      ],
+      [
+        70,
+        71.76
+      ],
+      [
+        72,
+        72.76
+      ],
+      [
+        73,
+        74.76
+      ],
+      [
+        75,
+        76.76
+      ],
+      [
+        77,
+        77.76
+      ],
+      [
+        78,
+        79.76
+      ],
+      [
+        80,
+        81.76
+      ],
+      [
+        82,
+        82.76
+      ],
+      [
+        83,
+        84.76
+      ],
+      [
+        85,
+        86.76
+      ],
+      [
+        87,
+        87.76
+      ],
+      [
+        88,
+        89.76
+      ],
+      [
+        90,
+        91.76
+      ],
+      [
+        92,
+        92.76
+      ],
+      [
+        93,
+        94.76
+      ],
+      [
+        95,
+        96.76
+      ],
+      [
+        97,
+        97.76
+      ],
+      [
+        98,
+        99.76
+      ],
+      [
+        100,
+        101.76
+      ],
+      [
+        102,
+        102.76
+      ],
+      [
+        103,
+        104.76
+      ],
+      [
+        105,
+        106.76
+      ],
+      [
+        107,
+        107.76
+      ],
+      [
+        108,
+        109.76
+      ],
+      [
+        110,
+        111.76
+      ],
+      [
+        112,
+        112.76
+      ],
+      [
+        113,
+        114.76
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 100.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
