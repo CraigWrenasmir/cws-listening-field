@@ -1255,4 +1255,56 @@ E3:2 F#3:2
   phrase_arcs=[[0,7,2],[8,19,3],[20,31,4],[32,39,2],[40,51,3],[52,67,4],[68,80,-2]],
   lower_entries=[[8,12],[40,44],[72,80]],tenor_entries=[[4,8],[36,40],[68,72]],pedal_lift=.22,gate=.995,
   note='The high phrases and their lower answers have matching, unaccented quarter-note shapes. The tenor comes closer during each response while the right hand rests. Left-hand clef changes make those positions readable; the final exchange moves down another octave before the quiet major sixth.'))
+,
+dict(op=65,title='Sorrel Switchback',key='g',fifths=-2,meter='6/4',bpm=57,
+ description='A middle phrase from Hyacinth Bend becomes G–F–E-flat–D, followed by an E-natural that briefly opens the minor phrase into Dorian light. Five broad melody notes cross three slower lower notes, then settle into a shared two-beat breath. These crossings recur with different harmonies and directions; E-flat, F-sharp minor and whole-tone colour open the centre before the last descent returns to G minor with a sixth and ninth.',
+ difficulty='Advanced five-against-three reverie',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 1, 4, 7, 11 and 13, five RH quarter-note quintuplets share four beats with three LH half-note triplets. Both hands then settle into the final two beats. Practise each complete crossing as one gesture, keeping the RH melody above the quieter bass. The intervening bars release the cross-rhythm through longer notes and small eighth-note turns.',
+ parent_opus=64,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['G','F','Eb','D']),
+ ancestry=dict(source_opus=64,source_hand='rh',source_voice='upper',source_start_beat=8,source_end_beat=15,source_pitches=['C#','B','A','G#'],transposition_semitones=6),
+ tuplet_groups=[dict(hand='rh',actual=5,normal=4,count=25),dict(hand='lh',actual=3,normal=2,count=15)],
+ polyrhythms=[dict(start_beat=b*6,end_beat=b*6+4,rh_notes=5,lh_notes=3) for b in [0,3,6,10,12]],
+ system_starts=[1,4,7,10,13],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*2,i*2+1.78] for i in range(45)],
+ rh='''
+G5:4/5 F5:4/5 Eb5:4/5 D5:4/5 E5:4/5 C5:2
+D5:3~ D5:1 C5:1 Bb4:1
+A4:2 C5:.5 D5:.5 F5:2 E5:1
+F5:4/5 G5:4/5 Bb5:4/5 A5:4/5 G5:4/5 F5:2
+Eb5:3 D5:1 C5:1 Bb4:1
+D5+G5:2 F5:1 Eb5:1 D5:2
+Eb5:4/5 F5:4/5 G5:4/5 Bb5:4/5 A5:4/5 G5:2
+F#5:3 E5:1 D5:1 C#5:1
+B4:2 D5:.5 E5:.5 G#5:2 F#5:1
+E5:3 D5:1 C5:1 Bb4:1
+C5:4/5 D5:4/5 E5:4/5 F#5:4/5 G#5:4/5 F#5:2
+F5:2 Eb5:1 D5:.5 C5:.5 Bb4:2
+G5:4/5 F5:4/5 E5:4/5 Eb5:4/5 D5:4/5 Bb4:2
+A4:3 G4:1 F4:1 D4:1
+Bb3+D4+A4:6
+''',
+ lh='''
+G3:4/3 Bb3:4/3 D4:4/3 C4:2
+Eb3:2 Bb3:1 D4:1 C4:2
+F3:1 C4:1 Eb4:2 D4:1 C4:1
+D3:4/3 F3:4/3 A3:4/3 C4:2
+C3:2 G3:.5 Bb3:.5 D4:1 C4:2
+Bb2:1 F3:1 A3:2 C4:1 Bb3:1
+Eb3:4/3 G3:4/3 Bb3:4/3 D4:2
+F#3:2 C#4:1 E4:1 D4:2
+B2:1 F#3:1 A3:2 C#4:1 B3:1
+C3:2 G3:1 Bb3:1 E4:1 Bb3:1
+Ab2:4/3 C3:4/3 E3:4/3 Bb3:2
+D3:1 A3:1 C4:2 Eb4:1 D4:1
+G3:4/3 Bb3:4/3 D4:4/3 C4:2
+C3:2 G3:1 Bb3:1 A3:1 F#3:1
+G2+D3:3 E3:3
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'pp',7:'mp',8:'p',9:'mp',10:'pp',11:'p',12:'pp',13:'p',14:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,10),(11,12),(13,15)],lower_phrases=[(1,2),(3,5),(6,8),(9,10),(11,12),(13,15)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,4),('diminuendo',4,6),('diminuendo',7,8),('diminuendo',9,10),('diminuendo',11,12),('diminuendo',13,15)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,51,59,63,55,48,61,54,60,49,58,50,54,43,29],
+  phrase_arcs=[[0,17,4],[18,35,4],[36,59,4],[60,71,3],[72,90,-2]],
+  lower_entries=[[6,12],[30,36],[54,60],[84,90]],pedal_lift=.22,gate=.99,
+  note='Each five-against-three span moves as a single unaccented arc towards its shared two-beat ending. The bass remains soft through the crossings, emerging in the held melodic spaces. The remote harmonic window gathers slightly more motion before the final minor-sixth-and-ninth chord recedes.'))
 ]

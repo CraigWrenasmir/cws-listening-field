@@ -4749,5 +4749,265 @@
       "sounded_pitches_per_minute": 89.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Sorrel Switchback",
+    "opus": 65,
+    "score_pages": 2,
+    "bars": 15,
+    "pitch_onsets": 138,
+    "audio_seconds": 115.07,
+    "hands": {
+      "rh": {
+        "low": 58,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 15,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced five-against-three reverie",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 1, 4, 7, 11 and 13, five RH quarter-note quintuplets share four beats with three LH half-note triplets. Both hands then settle into the final two beats. Practise each complete crossing as one gesture, keeping the RH melody above the quieter bass. The intervening bars release the cross-rhythm through longer notes and small eighth-note turns."
+    },
+    "notated_tuplet_notes": {
+      "1:5:4": 25,
+      "2:3:2": 15
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.78
+      ],
+      [
+        2,
+        3.7800000000000002
+      ],
+      [
+        4,
+        5.78
+      ],
+      [
+        6,
+        7.78
+      ],
+      [
+        8,
+        9.78
+      ],
+      [
+        10,
+        11.78
+      ],
+      [
+        12,
+        13.78
+      ],
+      [
+        14,
+        15.78
+      ],
+      [
+        16,
+        17.78
+      ],
+      [
+        18,
+        19.78
+      ],
+      [
+        20,
+        21.78
+      ],
+      [
+        22,
+        23.78
+      ],
+      [
+        24,
+        25.78
+      ],
+      [
+        26,
+        27.78
+      ],
+      [
+        28,
+        29.78
+      ],
+      [
+        30,
+        31.78
+      ],
+      [
+        32,
+        33.78
+      ],
+      [
+        34,
+        35.78
+      ],
+      [
+        36,
+        37.78
+      ],
+      [
+        38,
+        39.78
+      ],
+      [
+        40,
+        41.78
+      ],
+      [
+        42,
+        43.78
+      ],
+      [
+        44,
+        45.78
+      ],
+      [
+        46,
+        47.78
+      ],
+      [
+        48,
+        49.78
+      ],
+      [
+        50,
+        51.78
+      ],
+      [
+        52,
+        53.78
+      ],
+      [
+        54,
+        55.78
+      ],
+      [
+        56,
+        57.78
+      ],
+      [
+        58,
+        59.78
+      ],
+      [
+        60,
+        61.78
+      ],
+      [
+        62,
+        63.78
+      ],
+      [
+        64,
+        65.78
+      ],
+      [
+        66,
+        67.78
+      ],
+      [
+        68,
+        69.78
+      ],
+      [
+        70,
+        71.78
+      ],
+      [
+        72,
+        73.78
+      ],
+      [
+        74,
+        75.78
+      ],
+      [
+        76,
+        77.78
+      ],
+      [
+        78,
+        79.78
+      ],
+      [
+        80,
+        81.78
+      ],
+      [
+        82,
+        83.78
+      ],
+      [
+        84,
+        85.78
+      ],
+      [
+        86,
+        87.78
+      ],
+      [
+        88,
+        89.78
+      ]
+    ],
+    "verified_polyrhythm_spans": [
+      {
+        "start_beat": 0,
+        "end_beat": 4,
+        "rh_notes": 5,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 18,
+        "end_beat": 22,
+        "rh_notes": 5,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 36,
+        "end_beat": 40,
+        "rh_notes": 5,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 60,
+        "end_beat": 64,
+        "rh_notes": 5,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 72,
+        "end_beat": 76,
+        "rh_notes": 5,
+        "lh_notes": 3
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 73.8,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
