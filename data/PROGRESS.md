@@ -14,7 +14,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 9, Lichen Aperture — complete: 20 bars of 3/4, 123 sounded pitches, one inspected page, 76.58 seconds. Unequal phrases, six ties across bar lines, an A-minor added-ninth close and a brief Dorian passage. The last cadence was revised to keep the maximum rapid RH leap within six semitones. MusicXML/MIDI, audio and layout checks passed; awaiting listening feedback.
 - Publication: Op. 1–9 verified live on GitHub Pages from commit b6888c179bc536fb528f7f3ecaf56de871c98b2c. Op. 7–9 assets and the updated player returned HTTP 200.
 - Op. 10, Reed Parallax — complete locally: 18 bars of 6/8, 107 sounded pitches, one inspected page, 65.47 seconds. G minor, with delayed bass entries, four left-hand ties and a motif from Bracken Meridian's opening E–G–A–G, transposed to D–F–G–F. Maximum rapid RH leap six semitones and maximum LH leap nine. MusicXML/MIDI, audio and layout checks passed. Awaiting the next publication batch and listening feedback.
-- Next: compose and complete Op. 11, then Op. 12; publish Op. 10–12 together.
+- Op. 11, Fen Lantern — complete locally: 14 bars of 12/8, 133 sounded pitches, one inspected page, 90.13 seconds. E-flat major with C-minor and F-dominant colour; twelve distinct LH rhythmic patterns, broad compound-metre phrases. MusicXML/MIDI, audio, timing, originality and layout checks passed. Awaiting the next publication batch and listening feedback.
+- Next: compose and complete Op. 12, Cloud Causeway; publish Op. 10–12 together.
 
 ## Growth work to complete during this run
 

@@ -208,5 +208,47 @@ G3+Bb3:3
  performance=dict(rubato=[60,57,54,58,59,56,54,50,60,59,56,51,55,53,54,50,46,40],
   phrase_arcs=[[.5,8.5,3],[9,23,4],[24,35,5],[36,47,2],[48,54,-2]],
   lower_entries=[[3,15],[18,27],[39,45]],pedal_bars=list(range(1,19)),pedal_lift=.18,gate=.99,
-  note='Four left-hand ties and several delayed bass entries let the accompaniment breathe independently. Phrase tempo changes follow the authored harmonic motion.'))
+  note='Four left-hand ties and several delayed bass entries let the accompaniment breathe independently. Phrase tempo changes follow the authored harmonic motion.')),
+dict(op=11,title='Fen Lantern',key='Eb',fifths=-3,meter='12/8',bpm=66,
+ description='Wide twelve-eight breaths open an E-flat-major landscape. Reed Parallax\'s D-F-G-F becomes G-B-flat-C-B-flat, then stretches into a different melody. The middle darkens briefly through G dominant and C minor before F ninths and B-flat thirteenths return it to E-flat. The bass leaves whole pulses empty and answers in shorter arcs.',
+ parent_opus=10,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['G','Bb','C','Bb']),
+ ancestry=dict(source_opus=10,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['D','F','G','F'],transposition_semitones=-7),
+ rh='''
+G4:1.5 Bb4:.5 C5:.5 Bb4:1.5 D5:1 Eb5:1~
+Eb5:1.5 D5:.5 C5:1 G4:2 R:1
+C5:2 Eb5:1 G5:1 F5:1 D5:1~
+D5:1 C5:1 Ab4:1.5 G4:.5 F4:1 R:1
+G4:1 Bb4:.5 C5:.5 D5:1 F5:1.5 Eb5:.5 C5:1
+Bb4:1.5 G4:.5 F4:1 Eb4:2 R:1
+D5:1 F5:.5 Ab5:.5 G5:1 F5:1 B4:1 D5:1
+Eb5:2 D5:.5 C5:.5 G4:1 Bb4:1 R:1
+A4:1.5 C5:.5 Eb5:1 D5:1 C5:1 G4:1~
+G4:1 Bb4:1 D5:.5 F5:1.5 Eb5:1 C5:1
+Bb4:1.5 G4:.5 F4:1 G4:1 Bb4:1 D5:1~
+D5:1 Eb5:1 C5:1.5 Bb4:.5 G4:1 R:1
+Ab4:1 G4:.5 F4:.5 D4:1 F4:1 C5:1 Bb4:1~
+Bb4:1 G4:1 F4:1 Eb4+G4:3
+''',
+ lh='''
+Eb3:3 G3+Bb3:1.5 R:1.5
+R:1 C3:1.5 Eb3+Bb3:2.5 G3:1
+Ab2:1.5 Eb3+G3:2 C4:1.5 R:1
+F3:2 Ab3+C4:1.5 Eb3:1 R:1.5
+Bb2:1 D3+Ab3:2 F3:1 C4:1 R:1
+Eb3:3 Bb3:1 G3:1 R:1
+G3+B3:1 F3:1 Ab3:1 D4:1 F3:1 R:1
+C3:1.5 G3+Bb3:2.5 Eb3:1 R:1
+F3:1 A3+Eb4:2 C4:1 A3:1 R:1
+Bb2:2 D3+Ab3:1.5 F3:1.5 R:1
+Eb3:2 G3+Bb3:1.5 F3:.5 D3:1 Bb2:1
+Ab2:2 Eb3+G3:1.5 C3:1 R:1.5
+Bb2:2 D3+Ab3:2 C3:1 R:1
+Eb3:1.5 Bb3:1.5 Eb3+G3:3
+''',sections={1:'p',4:'pp',7:'mp',9:'p',12:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,2),(3,5),(6,8),(9,12),(13,14)],lower_phrases=[(2,4),(6,8),(10,12)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,5),('crescendo',6,7),('diminuendo',7,8),('crescendo',9,10),('diminuendo',11,14)],tempo_changes={},group=3,
+ performance=dict(rubato=[66,61,65,63,60,64,68,61,65,63,60,57,53,46],
+  phrase_arcs=[[0,11,3],[12,29,4],[30,47,5],[48,71,4],[72,84,-2]],
+  lower_entries=[[6,24],[30,48],[60,72]],pedal_bars=list(range(1,15)),pedal_lift=.3,gate=.99,
+  note='Long compound-metre phrases gain and lose momentum within the line. Sparse bass answers leave the upper melody room to sustain through the pulse.'))
 ]

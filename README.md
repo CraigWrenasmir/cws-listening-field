@@ -26,6 +26,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 8 | Bracken Meridian | 4/4 | 126 | [Score](pieces/CWS_Op_008_Bracken_Meridian/CWS_Op_008_Bracken_Meridian.pdf) | [MP3](pieces/CWS_Op_008_Bracken_Meridian/CWS_Op_008_Bracken_Meridian.mp3) |
 | CWS Op. 9 | Lichen Aperture | 3/4 | 123 | [Score](pieces/CWS_Op_009_Lichen_Aperture/CWS_Op_009_Lichen_Aperture.pdf) | [MP3](pieces/CWS_Op_009_Lichen_Aperture/CWS_Op_009_Lichen_Aperture.mp3) |
 | CWS Op. 10 | Reed Parallax | 6/8 | 107 | [Score](pieces/CWS_Op_010_Reed_Parallax/CWS_Op_010_Reed_Parallax.pdf) | [MP3](pieces/CWS_Op_010_Reed_Parallax/CWS_Op_010_Reed_Parallax.mp3) |
+| CWS Op. 11 | Fen Lantern | 12/8 | 133 | [Score](pieces/CWS_Op_011_Fen_Lantern/CWS_Op_011_Fen_Lantern.pdf) | [MP3](pieces/CWS_Op_011_Fen_Lantern/CWS_Op_011_Fen_Lantern.mp3) |
 
 [Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
 

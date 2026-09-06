@@ -280,5 +280,38 @@
       "sounded_pitches_per_minute": 102.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Fen Lantern",
+    "opus": 11,
+    "score_pages": 1,
+    "bars": 14,
+    "pitch_onsets": 133,
+    "audio_seconds": 90.13,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 80,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 4
+      },
+      "lh": {
+        "low": 44,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 12,
+      "left_hand_most_frequent_pattern_bars": 2,
+      "sounded_pitches_per_minute": 91.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
