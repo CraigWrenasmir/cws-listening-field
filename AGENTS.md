@@ -12,4 +12,5 @@ This is Craig Warren Smith's piano library, developed with Maple. Preserve the a
 - Run `npm run check`, `npm test` and `npm run build` for website changes. The UI tests use a DOM harness with simulated audio; do not describe them as browser or acoustic listening tests.
 - Work and QA output belongs in ignored `work/`; never commit virtual environments, sample banks, credentials or local machine paths.
 - Keep the museum-like presentation, freely rotatable sculptures, complete audio, readable notation, musical-family navigation and text index. Respect reduced motion and keep keyboard alternatives to dragging.
-- Publishing the GitHub repository does not itself configure a website host or change DNS. The intended eventual address is a subdomain of wrenasmir.com; the specific subdomain and host are not settled.
+- The collection playlist follows the editorial order in `src/app.js`. Include every catalogue work once, and review the listening order when adding compositions. Keep pause, skip, score synchronisation, error recovery and the final stop intact.
+- Public hosting uses the existing Site in `.openai/hosting.json`. Keep GitHub as the source of record and publish the same validated commit to Sites. GitHub pushes alone do not deploy. The intended eventual custom address is a subdomain of wrenasmir.com; its specific subdomain and DNS are not configured.

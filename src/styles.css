@@ -15,6 +15,20 @@
 
 #cws-listening-field .lf-orbit-controls{display:flex;gap:4px;align-items:center}#cws-listening-field .lf-orbit-controls button{font-size:12px;padding:10px;min-height:44px;min-width:44px}#cws-listening-field .lf-orbit-controls button:hover{color:var(--lf-copper)}
 body{background:light-dark(#f1f2ed,#14242a);font-family:Arial,sans-serif}
+#cws-listening-field .lf-listening-path{margin:0 32px 25px;padding:19px 0;border-top:1px solid var(--lf-line);border-bottom:1px solid var(--lf-line)}
+#cws-listening-field .lf-path-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+#cws-listening-field .lf-path-title{font:italic 21px Georgia,serif;margin:0 0 8px}
+#cws-listening-field .lf-path-status{font-size:12px;color:var(--lf-muted);line-height:1.6;margin:0}
+#cws-listening-field #lf-playlist-toggle{padding:11px 17px;min-height:44px;border:1px solid var(--lf-line);font-size:14px}
+#cws-listening-field #lf-playlist-toggle[aria-pressed=true]{color:var(--lf-copper);border-color:var(--lf-copper)}
+#cws-listening-field .lf-path-details{margin-top:15px;font-size:12px;color:var(--lf-muted)}
+#cws-listening-field .lf-path-details summary{cursor:pointer;width:fit-content;padding:8px 0;min-height:32px}
+#cws-listening-field .lf-path-details summary:focus-visible{outline:2px solid var(--lf-copper);outline-offset:4px}
+#cws-listening-field .lf-path-details p{font:15px/1.6 Georgia,serif;max-width:610px;margin:12px 0}
+#cws-listening-field .lf-path-order{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;padding-left:22px;margin:4px 0}
+#cws-listening-field .lf-path-order button{font:16px Georgia,serif;min-height:44px;padding:10px 4px;text-align:left}
+#cws-listening-field .lf-path-order button[aria-current=true]{color:var(--lf-copper);text-decoration:underline;text-underline-offset:4px}
+@media(max-width:620px){#cws-listening-field .lf-listening-path{margin:0 20px 24px}#cws-listening-field .lf-path-order{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}#cws-listening-field .lf-path-order button{font-size:15px}#cws-listening-field .lf-path-details summary{min-height:44px}}
 #cws-listening-field{max-width:1280px;margin:0 auto;min-height:100vh}
 #cws-listening-field .lf-title{font-weight:400}
 #cws-listening-field .lf-downloads{display:flex;flex-wrap:wrap;gap:8px 24px;padding:0 32px 24px;font-size:14px}

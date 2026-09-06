@@ -5,7 +5,7 @@ const response=await fetch('library.json');
 if(!response.ok)throw new Error('Catalogue unavailable');
 const data=await response.json();
 const q=(s)=>root.querySelector(s),canvas=q('#lf-canvas'),ctx=canvas.getContext('2d'),audio=q('#lf-audio');
-const state={selected:1,kinship:false,score:false,density:17,relief:1.0};
+const state={selected:1,kinship:false,score:false,playlist:false,density:17,relief:1.0};
 let w=0,h=0,frame=0,camera=1,zoom=0,drag=null,lastActive=[];
 const norm=q=>{const n=Math.hypot(...q);return q.map(x=>x/n);};
 function multiply(a,b){const [x,y,z,s]=a,[u,v,w,t]=b;return norm([s*u+x*t+y*w-z*v,s*v-x*w+y*t+z*u,s*w+x*v-y*u+z*t,s*t-x*u-y*v-z*w]);}
@@ -21,6 +21,10 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const tracks=data.map(p=>['rh','lh'].map(hand=>p.events.filter(e=>e.h===hand)));
 const range=data.map(p=>[p.title,p.motif.pitches.join(' · ')]);
 const byOp=new Map(data.map((p,i)=>[p.op,i]));
+// An editorial walk: root and sibling, then Velvet Estuary's branch, ending in C major.
+// Include later additions exactly once until the listening order is curated again.
+const listeningPath=[...new Set([...([1,3,2,4,5,6].filter(op=>byOp.has(op)).map(op=>byOp.get(op))),...data.map((_,i)=>i)])];
+let playbackRequest=0;
 const depth=(p,seen=new Set())=>{if(!p.parent||seen.has(p.op)||!byOp.has(p.parent))return 0;seen.add(p.op);return 1+depth(data[byOp.get(p.parent)],seen);};
 const levels=data.map(p=>depth(p));
 const family=data.map((p,i)=>{const peers=data.map((_,j)=>j).filter(j=>levels[j]===levels[i]);return {x:(peers.indexOf(i)+1)/(peers.length+1),y:.11+levels[i]*.30};});
@@ -152,6 +156,31 @@ const scoreCache=new Map();let scoreRequest=0;
 function formatTime(seconds){const n=Math.max(0,Math.floor(seconds||0));return Math.floor(n/60)+':'+String(n%60).padStart(2,'0');}
 function trackLength(){return Number.isFinite(audio.duration)?audio.duration:data[state.selected].duration;}
 function updateClock(){const duration=trackLength();q('#lf-time').textContent=formatTime(audio.currentTime)+' / '+formatTime(duration);q('#lf-progress').max=duration;q('#lf-progress').value=Math.min(audio.currentTime,duration);q('#lf-progress').setAttribute('aria-valuetext',formatTime(audio.currentTime)+' of '+formatTime(duration));}
+function updateNavigation(){
+ const order=state.playlist?listeningPath:data.map((_,i)=>i),position=order.indexOf(state.selected);
+ q('#lf-prev').textContent=position>0?'← '+names[order[position-1]]:'Beginning';q('#lf-prev').disabled=position===0;
+ q('#lf-next').textContent=position<order.length-1?names[order[position+1]]+' →':'End of collection';q('#lf-next').disabled=position===order.length-1;
+ q('#lf-counter').textContent=String(position+1).padStart(2,'0')+' / '+String(order.length).padStart(2,'0');
+ q('#lf-playlist-toggle').textContent=state.playlist?'End playlist':'Play collection';q('#lf-playlist-toggle').disabled=false;q('#lf-playlist-toggle').setAttribute('aria-pressed',String(state.playlist));
+ q('#lf-path-status').textContent=state.playlist?`${audio.paused?'Paused':'Listening'} · ${position+1} of ${order.length} · ${names[state.selected]}`:`${listeningPath.length} pieces · ${formatTime(data.reduce((n,p)=>n+p.duration,0))} · Play once, from beginning to end.`;
+ root.querySelectorAll('[data-path]').forEach(el=>el.setAttribute('aria-current',String(state.playlist&&Number(el.dataset.path)===position)));
+}
+async function playSelected(){
+ const request=++playbackRequest;
+ if(audio.ended||audio.currentTime>=trackLength()-.05)audio.currentTime=0;
+ q('#lf-audio-error').hidden=true;
+ try{await audio.play();}catch(error){if(request===playbackRequest){q('#lf-audio-error').textContent='Playback could not start. Press Play to try this piece again.';q('#lf-audio-error').hidden=false;updateNavigation();}}
+}
+function followPath(position){
+ if(position<0||position>=listeningPath.length)return;
+ state.playlist=true;choose(listeningPath[position],true);playSelected();
+}
+function move(direction){
+ const order=state.playlist?listeningPath:data.map((_,i)=>i),position=order.indexOf(state.selected)+direction;
+ if(position<0||position>=order.length)return;
+ const continuePlaying=state.playlist&&!audio.paused;
+ choose(order[position],state.playlist);if(continuePlaying)playSelected();
+}
 async function showScore(){
  const request=++scoreRequest;
  q('#lf-field').hidden=state.score;q('#lf-title-section').hidden=state.score;q('#lf-score-shell').hidden=!state.score;
@@ -167,13 +196,12 @@ async function showScore(){
   }catch(error){if(request===scoreRequest)q('#lf-score-body').textContent='The score could not load. You can download its PDF below the player.';}
  }else{resize();}
 }
-function choose(index){
+function choose(index,keepPlaylist=false){
  if(index<0||index>=data.length)return;
+ playbackRequest++;state.playlist=keepPlaylist;
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
  q('#lf-title').textContent=names[index];q('#lf-opus').textContent='CWS Op. '+data[index].op;q('#lf-stamp').textContent=data[index].stamp;
- q('#lf-prev').textContent=index>0?'← '+names[index-1]:'Beginning';q('#lf-prev').disabled=index===0;
- q('#lf-next').textContent=index<data.length-1?names[index+1]+' →':'End of collection';q('#lf-next').disabled=index===data.length-1;
- q('#lf-counter').textContent=String(index+1).padStart(2,'0')+' / '+String(data.length).padStart(2,'0');q('#lf-time').textContent='0:00 / '+formatTime(data[index].duration);q('#lf-progress').value=0;q('#lf-progress').max=data[index].duration;
+ updateNavigation();q('#lf-time').textContent='0:00 / '+formatTime(data[index].duration);q('#lf-progress').value=0;q('#lf-progress').max=data[index].duration;q('#lf-progress').setAttribute('aria-valuetext','0:00 of '+formatTime(data[index].duration));
  [['pdf','pdf'],['audio','audio'],['midi','midi'],['xml','xml']].forEach(([id,field])=>{q('#lf-download-'+id).href=data[index][field];});
  if(location.hash.slice(1)!==data[index].slug)history.replaceState(null,'','#'+data[index].slug);
  document.title=names[index]+' · CWS Op. '+data[index].op+' · The Listening Field';
@@ -182,19 +210,34 @@ function choose(index){
  canvas.setAttribute('aria-label','Rotatable three-dimensional contours of the right-hand and left-hand notes of '+names[index]+'. Drag to rotate freely, or use the Turn, Tilt and Roll buttons.');
  if(state.score)showScore();kick();
 }
-q('#lf-play').addEventListener('click',async()=>{
- const selected=state.selected;
- if(audio.paused){if(audio.ended||audio.currentTime>=trackLength()-.05)audio.currentTime=0;q('#lf-audio-error').hidden=true;try{await audio.play();}catch(e){if(selected===state.selected)q('#lf-audio-error').hidden=false;}}else{audio.pause();}
+q('#lf-play').addEventListener('click',()=>{
+ if(audio.paused){playSelected();}else{playbackRequest++;audio.pause();}
 });
-audio.addEventListener('play',()=>{q('#lf-play').textContent='Pause';q('#lf-play').setAttribute('aria-label','Pause '+names[state.selected]);kick();});
-audio.addEventListener('pause',()=>{q('#lf-play').textContent='Play';q('#lf-play').setAttribute('aria-label','Play '+names[state.selected]);});
+audio.addEventListener('play',()=>{q('#lf-play').textContent='Pause';q('#lf-play').setAttribute('aria-label','Pause '+names[state.selected]);updateNavigation();kick();});
+audio.addEventListener('pause',()=>{q('#lf-play').textContent='Play';q('#lf-play').setAttribute('aria-label','Play '+names[state.selected]);updateNavigation();});
 audio.addEventListener('loadedmetadata',updateClock);
-audio.addEventListener('error',()=>{q('#lf-audio-error').hidden=false;});
-audio.addEventListener('ended',()=>{updateClock();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];kick();});
+audio.addEventListener('error',()=>{q('#lf-audio-error').textContent='The recording could not load. Select the piece again to retry, or skip to another piece.';q('#lf-audio-error').hidden=false;});
+audio.addEventListener('ended',()=>{
+ if(!audio.ended)return;
+ updateClock();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
+ if(state.playlist){
+  const next=listeningPath.indexOf(state.selected)+1;
+  if(next<listeningPath.length){followPath(next);return;}
+  state.playlist=false;updateNavigation();q('#lf-path-status').textContent='Walk complete · '+listeningPath.length+' pieces · Thank you for listening.';
+ }
+ q('#lf-play').textContent='Play';q('#lf-play').setAttribute('aria-label','Play '+names[state.selected]);kick();
+});
+q('#lf-playlist-toggle').addEventListener('click',()=>{
+ if(state.playlist){playbackRequest++;state.playlist=false;audio.pause();updateNavigation();}else{followPath(0);}
+});
+q('#lf-path-summary').textContent='Explore the listening order · '+listeningPath.length+' works';
+listeningPath.forEach((index,position)=>{
+ const item=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.path=position;button.textContent=names[index];button.setAttribute('aria-label','Play playlist from '+names[index]);button.addEventListener('click',()=>followPath(position));item.append(button);q('#lf-path-order').append(item);
+});
 q('#lf-progress').addEventListener('input',()=>{if(audio.readyState>0){audio.currentTime=Number(q('#lf-progress').value);updateClock();syncScore();kick();}});
 q('#lf-score-toggle').addEventListener('click',()=>{state.score=!state.score;showScore();});
 q('#lf-kinship').addEventListener('click',()=>{state.kinship=!state.kinship;q('#lf-kinship').setAttribute('aria-pressed',String(state.kinship));q('#lf-kinship-label').hidden=!state.kinship;q('#lf-drag-label').hidden=state.kinship;q('#lf-field').classList.toggle('is-family',state.kinship);resize();});
-q('#lf-prev').addEventListener('click',()=>choose(state.selected-1));q('#lf-next').addEventListener('click',()=>choose(state.selected+1));
+q('#lf-prev').addEventListener('click',()=>move(-1));q('#lf-next').addEventListener('click',()=>move(1));
 q('#lf-index-toggle').addEventListener('click',()=>{const open=q('#lf-index').hidden;q('#lf-index').hidden=!open;q('#lf-index-toggle').setAttribute('aria-expanded',String(open));});
 data.forEach((p,i)=>{
  const button=document.createElement('button');button.type='button';button.dataset.work=i;

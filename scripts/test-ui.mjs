@@ -6,7 +6,7 @@ const root=new URL('../',import.meta.url);
 const html=await readFile(new URL('index.html',root),'utf8'),source=await readFile(new URL('src/app.js',root),'utf8');
 const data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
 const {window,document}=parseHTML(html),audio=document.querySelector('#lf-audio'),canvas=document.querySelector('#lf-canvas');
-const errors=[],frames=new Map();let nextFrame=0,width=1024,time=0,paused=true,src='',duration=0,ended=false;
+const errors=[],frames=new Map();let nextFrame=0,width=1024,time=0,paused=true,src='',duration=0,ended=false,rejectPlay=false;
 let drawings=[],path='',styleStack=[];
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const context={globalAlpha:1,strokeStyle:'#213b3c',fillStyle:'#213b3c',lineWidth:1,font:'12px Georgia',textAlign:'center',
@@ -20,7 +20,7 @@ canvas.getContext=()=>context;
 canvas.getBoundingClientRect=()=>({left:0,top:0,width,height:document.querySelector('#lf-field').classList.contains('is-family')?(width<620?590:660):(width<620?340:510)});
 canvas.setPointerCapture=()=>{};canvas.releasePointerCapture=()=>{};
 Object.defineProperties(audio,{currentTime:{get:()=>time,set:v=>{time=Number(v);ended=false;}},paused:{get:()=>paused},duration:{get:()=>duration},ended:{get:()=>ended},readyState:{get:()=>4},src:{get:()=>src,set:v=>{src=v;time=0;ended=false;duration=data.find(p=>p.audio===v).duration;queueMicrotask(()=>audio.dispatchEvent(new window.Event('loadedmetadata')));}}});
-audio.play=async()=>{paused=false;audio.dispatchEvent(new window.Event('play'));};audio.pause=()=>{paused=true;audio.dispatchEvent(new window.Event('pause'));};
+audio.play=async()=>{if(rejectPlay)throw new Error('Playback denied');paused=false;audio.dispatchEvent(new window.Event('play'));};audio.pause=()=>{paused=true;audio.dispatchEvent(new window.Event('pause'));};
 const location={hash:''},history={replaceState(a,b,url){location.hash=url;}};
 const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#965432','--lf-paper':'#f1f2ed'};
 let observer;
@@ -33,6 +33,7 @@ const tick=()=>{const callbacks=[...frames.values()];frames.clear();callbacks.fo
 const click=(selector,extra={})=>{const el=document.querySelector(selector);assert(el,'Missing element '+selector);const event=new window.Event('click');Object.assign(event,extra);el.dispatchEvent(event);};
 await until(()=>document.querySelectorAll('[data-work]').length===6||errors.length);tick();assert.deepEqual(errors,[]);assert.equal(document.querySelectorAll('[data-work]').length,6);
 assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');
+assert(audio.paused,'Loading the site must not autoplay');
 for(let i=0;i<data.length;i++){
  const p=data[i];click(`[data-work="${i}"]`);await settle();tick();
  assert.equal(document.querySelector('#lf-title').textContent,p.title);assert.equal(location.hash,'#'+p.slug);assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),p.pdf);assert.equal(duration,p.duration);
@@ -47,4 +48,28 @@ const orientation=canvas.dataset.orientation.split(',').map(Number);for(const ax
 click('#lf-kinship');tick();assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'true');
 await mkdir(new URL('work/qa-ui/',root),{recursive:true});
 for(const size of [1024,360,320]){width=size;observer.callback();tick();const {height}=canvas.getBoundingClientRect();await writeFile(new URL(`work/qa-ui/kinship-${size}.svg`,root),`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${height}"><rect width="100%" height="100%" fill="#f1f2ed"/>${drawings.join('')}</svg>`);assert(drawings.some(x=>x.includes('Tidal')));}
-assert.deepEqual(errors,[]);console.log('UI integration passed for all six works: catalogue selection, deep links, complete timelines beyond 15 seconds, rotation during playback, final-chord highlighting, score toggles, 360-degree rotation, and family layout. Media playback is simulated here; MP3 decoding is checked separately.');
+const queue=[1,3,2,4,5,6].map(op=>data.find(p=>p.op===op));
+assert.deepEqual([...document.querySelectorAll('[data-path]')].map(el=>el.textContent),queue.map(p=>p.title));
+const title=()=>document.querySelector('#lf-title').textContent;
+const finish=()=>{time=duration;ended=true;paused=true;audio.dispatchEvent(new window.Event('pause'));audio.dispatchEvent(new window.Event('ended'));};
+click('#lf-playlist-toggle');await settle();assert.equal(title(),queue[0].title);assert(!audio.paused);assert.equal(document.querySelector('#lf-next').textContent,queue[1].title+' →');
+click('#lf-play');assert(audio.paused);assert.equal(title(),queue[0].title);click('#lf-next');await settle();assert.equal(title(),queue[1].title);assert(audio.paused,'Skipping while paused should remain paused');
+click('#lf-play');click('#lf-next');await settle();assert.equal(title(),queue[2].title);assert(!audio.paused);click('#lf-prev');await settle();assert.equal(title(),queue[1].title);assert(!audio.paused);
+click('#lf-playlist-toggle');assert(audio.paused);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');
+click('#lf-score-toggle');click('#lf-playlist-toggle');await settle();
+const heard=[];
+for(let position=0;position<queue.length;position++){
+ const p=queue[position];await until(()=>document.querySelector('#lf-score-title').textContent===p.title&&document.querySelector('#lf-score-body .lf-score-page'));
+ assert.equal(title(),p.title);assert(!audio.paused);heard.push(p.op);assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),p.pdf);assert.equal(location.hash,'#'+p.slug);
+ assert.equal(document.querySelector('#lf-counter').textContent,String(position+1).padStart(2,'0')+' / 06');
+ assert.equal(document.querySelector(`[data-path="${position}"]`).getAttribute('aria-current'),'true');
+ const event=p.events[0];audio.currentTime=event.s+.1;tick();assert(document.querySelector(`[id="${event.id}"].lf-now`),'Playlist score must follow the current piece');
+ finish();await settle();tick();
+}
+assert.deepEqual(heard,queue.map(p=>p.op));assert(audio.paused);assert.equal(title(),queue.at(-1).title);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');assert(document.querySelector('#lf-path-status').textContent.startsWith('Walk complete'));
+finish();await settle();assert.equal(title(),queue.at(-1).title,'End of playlist must not loop');
+click('#lf-playlist-toggle');await settle();rejectPlay=true;finish();await settle();assert.equal(title(),queue[1].title);assert(audio.paused);assert(!document.querySelector('#lf-audio-error').hidden);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'true');
+rejectPlay=false;click('#lf-play');await settle();assert(!audio.paused);assert(document.querySelector('#lf-audio-error').hidden);assert.equal(title(),queue[1].title);
+click('[data-work="4"]');await settle();assert.equal(title(),data[4].title);assert(audio.paused);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');finish();await settle();assert.equal(title(),data[4].title,'Individual listening must not auto-advance');
+click('[data-path="3"]');await settle();assert.equal(title(),queue[3].title);assert(!audio.paused);finish();await settle();assert.equal(title(),queue[4].title);click('#lf-playlist-toggle');
+assert.deepEqual(errors,[]);console.log('UI integration passed: all six works, timelines, rotation, score highlights, family layout; playlist order and full completion, pause/resume, queue skips, notation on transitions, manual selection, no looping/autoplay, and recovery from rejected playback. Media playback is simulated; MP3 decoding is checked separately.');
