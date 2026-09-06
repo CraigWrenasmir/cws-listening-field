@@ -79,6 +79,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 61 | Saffron Traverse | 4/4, 5/4, 3/4 (changing) | 200 | [Score](pieces/CWS_Op_061_Saffron_Traverse/CWS_Op_061_Saffron_Traverse.pdf) | [MP3](pieces/CWS_Op_061_Saffron_Traverse/CWS_Op_061_Saffron_Traverse.mp3) |
 | CWS Op. 62 | Daphne Slipway | 7/8, 9/8, 6/8, 4/4, 3/4, 5/8 (changing) | 138 | [Score](pieces/CWS_Op_062_Daphne_Slipway/CWS_Op_062_Daphne_Slipway.pdf) | [MP3](pieces/CWS_Op_062_Daphne_Slipway/CWS_Op_062_Daphne_Slipway.mp3) |
 | CWS Op. 63 | Myrtle Folly | 3/4 | 195 | [Score](pieces/CWS_Op_063_Myrtle_Folly/CWS_Op_063_Myrtle_Folly.pdf) | [MP3](pieces/CWS_Op_063_Myrtle_Folly/CWS_Op_063_Myrtle_Folly.mp3) |
+| CWS Op. 64 | Hyacinth Bend | 4/4 | 150 | [Score](pieces/CWS_Op_064_Hyacinth_Bend/CWS_Op_064_Hyacinth_Bend.pdf) | [MP3](pieces/CWS_Op_064_Hyacinth_Bend/CWS_Op_064_Hyacinth_Bend.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

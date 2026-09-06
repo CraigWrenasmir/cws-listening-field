@@ -1172,4 +1172,87 @@ C4:1 D4:2
   phrase_arcs=[[0,11,3],[12,23,4],[24,35,4],[36,47,4],[48,59,3],[60,71,4],[72,84,-2]],
   lower_entries=[[9,12],[33,36],[69,72]],tenor_entries=[[0,3],[24,27],[54,57]],pedal_lift=.22,gate=.995,
   note='The tenor begins clearly above the quieter bass. Its two triplet gestures return gently to the foreground while the upper melody holds. The rise in register opens the middle of the piece, and the final four-bar descent returns to the warmth of a close major sixth.'))
+,
+dict(op=64,title='Hyacinth Bend',key='A',fifths=3,meter='4/4',bpm=56,
+ description='Myrtle Folly’s tenor turn becomes A–B–A–G-sharp. Three times, a four-note thought passes from the right hand to the left an octave lower while the right hand falls silent. The left-hand staff changes clef for two high answers. F-sharp minor, B-flat and D-flat reflections connect the exchanges before the final return settles into an A-major sixth.',
+ difficulty='Advanced hand-to-hand dialogue',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The left hand uses treble clef in bars 1–2 and 10, returning to bass clef in bars 3 and 11. Keep each note in its written hand. The RH phrases in bars 1, 9 and 17 are answered an octave lower by the LH tenor in the following bars, with exactly the same rhythm. Prepare the left-hand register shifts during the preceding held notes and keep the answers gently prominent.',
+ clef_changes={'lh':{1:'treble',3:'bass',10:'treble',11:'bass'}},
+ parent_opus=63,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['A','B','A','G#']),
+ ancestry=dict(source_opus=63,source_hand='lh',source_voice='tenor',source_start_beat=0,source_end_beat=3,source_pitches=['F','G','F','E'],transposition_semitones=4),
+ page_starts=[13],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*2,i*2+1.78] for i in range(40)],
+ rh='''
+A5:1 B5:1 A5:1 G#5:1
+R:4
+C#5:3 B4:1
+A4:2 G#4:1 F#4:1
+G4:3 F4:1
+E4+G4+D5:2 C5:1 B4:1
+D5:3 C5:1
+B4:2 C#5:1 D#5:1
+E5:1 F#5:1 E5:1 D#5:1
+R:4
+G#4:3 F#4:1
+F5:2 Eb5:1 Db5:1
+C5:2 Bb4:1 Ab4:1
+B4:2 C#5:1 D5:1
+E5:3 D5:1
+C#5:2 B4:1 A4:1
+A4:1 B4:1 A4:1 G#4:1
+R:4
+C#4:2 B3:2
+C#4+E4+A4:4
+''',
+ lh='''
+A3:4
+E4:2 C#4:2
+F#3:4
+D3:2 F#3:2
+Bb2:2 D3:2
+C3:2 E3:2
+Bb2:2 D3:2
+B2:2 D#3:2
+E3:4
+B3:2 G#3:2
+E3:4
+Db3:2 F3:2
+Ab2:2 C3:2
+B2:2 D3:2
+A2:2 C#3:2
+D3:2 F#3:2
+A3:4
+E3:2 C#3:2
+A2:4
+A2:4
+''',
+ lh_upper='''
+E4:4
+A4:1 B4:1 A4:1 G#4:1
+A3:1 C#4:1 E4:1 D#4:1
+A3:1 C#4:1 E4:.5 D4:1.5
+F3:1 A3:1 C4:1 Bb3:1
+G3:1 B3:1 D4:.5 C4:1.5
+F3:1 Ab3:1 C4:1 Bb3:1
+F#3:1 A3:1 C#4:1 B3:1
+B3:4
+E4:1 F#4:1 E4:1 D#4:1
+G#3:1 B3:.5 C#4:.5 D#4:2
+Ab3:1 C4:1 Eb4:1 Db4:1
+Eb3:1 G3:1 Bb3:1 Ab3:1
+F#3:1 A3:1 C#4:1 B3:1
+E3:1 G3:1 B3:1 A3:1
+A3:1 C#4:1 E4:.5 D4:1.5
+E4:4
+A3:1 B3:1 A3:1 G#3:1
+E3:2 F#3:2
+E3:2 F#3:2
+''',sections={1:'p',2:'p',3:'mp',4:'p',5:'pp',6:'p',7:'mp',8:'p',9:'mp',10:'p',11:'pp',12:'p',13:'pp',14:'p',15:'mp',16:'p',17:'p',18:'pp',19:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,1),(3,5),(6,8),(9,9),(11,13),(14,17),(19,20)],lower_phrases=[(1,2),(3,5),(6,8),(9,10),(11,13),(14,16),(17,18),(19,20)],
+ hairpins=[('diminuendo',3,5),('crescendo',6,7),('diminuendo',7,8),('diminuendo',11,13),('crescendo',14,15),('diminuendo',15,17),('diminuendo',19,20)],tempo_changes={},group=4,
+ performance=dict(rubato=[56,51,58,53,49,56,51,57,60,50,54,48,52,57,60,53,49,43,37,29],
+  phrase_arcs=[[0,7,2],[8,19,3],[20,31,4],[32,39,2],[40,51,3],[52,67,4],[68,80,-2]],
+  lower_entries=[[8,12],[40,44],[72,80]],tenor_entries=[[4,8],[36,40],[68,72]],pedal_lift=.22,gate=.995,
+  note='The high phrases and their lower answers have matching, unaccented quarter-note shapes. The tenor comes closer during each response while the right hand rests. Left-hand clef changes make those positions readable; the final exchange moves down another octave before the quiet major sixth.'))
 ]

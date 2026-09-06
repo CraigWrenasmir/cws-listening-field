@@ -152,6 +152,16 @@ for p in cat:
  if p.get('pedal_spans'):
   expected_marks=sorted((onset_tick(beat),kind,'2') for span in p['pedal_spans'] for beat,kind in zip(span,['start','stop']))
   assert sorted(pedal_directions)==expected_marks,('Printed pedal span mismatch',p['op'],pedal_directions,expected_marks)
+ if p.get('clef_changes'):
+  actual_clefs=collections.defaultdict(list)
+  for measure in r.findall('.//part/measure'):
+   for mark in measure.findall('attributes/clef'):
+    actual_clefs[mark.get('number','1')].append((int(measure.get('number')),mark.findtext('sign'),mark.findtext('line')))
+  for hand,staff in [('rh','1'),('lh','2')]:
+   changes={1:'treble' if hand=='rh' else 'bass'}
+   changes.update({int(bar):name for bar,name in p['clef_changes'].get(hand,{}).items()})
+   expected_clefs=[(bar,'G' if name=='treble' else 'F','2' if name=='treble' else '4') for bar,name in sorted(changes.items())]
+   assert actual_clefs[staff]==expected_clefs,('Printed clef change mismatch',p['op'],hand,actual_clefs[staff],expected_clefs)
  # Every slur must close on the staff where it started.
  opened={}
  for n in r.findall('.//note'):
@@ -221,6 +231,7 @@ for p in cat:
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
+ if p.get('clef_changes'):report[-1]['verified_clef_changes']=p['clef_changes']
  if p.get('meters'):report[-1]['verified_meter_changes']=[dict(beat=tick/960,meter=signature) for tick,signature in expected_meters]
  if p['op']>=7:
   patterns=[]

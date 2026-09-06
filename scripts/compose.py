@@ -234,7 +234,11 @@ def make_score(p):
                 m.insert(0,meter.TimeSignature(metres[mi-1]))
             if mi==1:
                 m.insert(0,key.KeySignature(p['fifths']))
-                m.insert(0,clef.TrebleClef() if hand=='rh' else clef.BassClef())
+            clef_changes=p.get('clef_changes',{}).get(hand,{})
+            if mi==1 or mi in clef_changes:
+                clef_name=clef_changes.get(mi,'treble' if hand=='rh' else 'bass')
+                assert clef_name in ('treble','bass'),('Unsupported clef',p['op'],hand,mi)
+                m.insert(0,clef.TrebleClef() if clef_name=='treble' else clef.BassClef())
             if hand=='rh':
                 if mi==1:
                     compound=p['meter'] in ('6/8','9/8','12/8')
