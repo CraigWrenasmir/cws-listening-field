@@ -10270,5 +10270,311 @@
       "sounded_pitches_per_minute": 77.5,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Yarrow Elevation",
+    "opus": 85,
+    "score_pages": 2,
+    "bars": 18,
+    "pitch_onsets": 111,
+    "audio_seconds": 129.77,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 45,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 1,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Experimental harmonic form and voicing; moderate physical demands",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Bars 1\u201317 form a palindrome in the LH chord pitches and their durations, with bar 9 at its centre. The melody is newly shaped on the return rather than reversed. Keep each three-note LH chord finger-held through the pedal changes, and let the changing metres follow the phrase. The final RH chord spans a major seventh; all earlier LH shapes fit within a fifth."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.75
+      ],
+      [
+        2,
+        2.75
+      ],
+      [
+        3,
+        4.75
+      ],
+      [
+        5,
+        6.75
+      ],
+      [
+        7,
+        7.75
+      ],
+      [
+        8,
+        8.75
+      ],
+      [
+        9,
+        10.25
+      ],
+      [
+        10.5,
+        11.75
+      ],
+      [
+        12,
+        14.75
+      ],
+      [
+        15,
+        15.25
+      ],
+      [
+        15.5,
+        16.75
+      ],
+      [
+        17,
+        17.75
+      ],
+      [
+        18,
+        19.75
+      ],
+      [
+        20,
+        20.75
+      ],
+      [
+        21,
+        22.75
+      ],
+      [
+        23,
+        24.75
+      ],
+      [
+        25,
+        26.75
+      ],
+      [
+        27,
+        28.75
+      ],
+      [
+        29,
+        30.75
+      ],
+      [
+        31,
+        33.75
+      ],
+      [
+        34,
+        34.75
+      ],
+      [
+        35,
+        35.75
+      ],
+      [
+        36,
+        36.75
+      ],
+      [
+        37,
+        38.75
+      ],
+      [
+        39,
+        42.75
+      ],
+      [
+        43,
+        44.25
+      ],
+      [
+        44.5,
+        44.75
+      ],
+      [
+        45,
+        45.75
+      ],
+      [
+        46,
+        48.75
+      ],
+      [
+        49,
+        49.75
+      ],
+      [
+        50,
+        52.75
+      ],
+      [
+        53,
+        54.75
+      ],
+      [
+        55,
+        56.75
+      ],
+      [
+        57,
+        58.75
+      ],
+      [
+        59,
+        59.75
+      ],
+      [
+        60,
+        61.75
+      ],
+      [
+        62,
+        62.75
+      ],
+      [
+        63,
+        63.25
+      ],
+      [
+        63.5,
+        64.75
+      ],
+      [
+        65,
+        66.75
+      ],
+      [
+        67,
+        67.75
+      ],
+      [
+        68,
+        70.75
+      ],
+      [
+        71,
+        72.25
+      ],
+      [
+        72.5,
+        72.75
+      ],
+      [
+        73,
+        74.75
+      ],
+      [
+        75,
+        79.75
+      ],
+      [
+        80,
+        85.75
+      ]
+    ],
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 5.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 9.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 15.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 18.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 23.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 27.0,
+        "meter": "7/4"
+      },
+      {
+        "beat": 34.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 37.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 43.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 46.0,
+        "meter": "7/4"
+      },
+      {
+        "beat": 53.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 57.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 62.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 65.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 71.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 75.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 80.0,
+        "meter": "6/4"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 52.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

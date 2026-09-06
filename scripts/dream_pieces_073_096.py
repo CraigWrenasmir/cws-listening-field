@@ -867,4 +867,61 @@ D3+A3:4
   phrase_arcs=[[0,14.5,3],[15,32.5,4],[33,48.5,3],[49,74,-2]],
   lower_entries=[[7,12],[33,37],[45,49],[58,62]],pedal_lift=.22,gate=.99,
   note='Each seven-note gesture floats across two lower pulses. Longer following bars relax the motion. The final dominant loses weight before the added-ninth minor close.'))
+,
+dict(op=85,title='Yarrow Elevation',key='f#',fifths=3,meter='5/4',bpm=52,
+ meters=['5/4','4/4','6/4','3/4','5/4','4/4','7/4','3/4','6/4','3/4','7/4','4/4','5/4','3/4','6/4','4/4','5/4','6/4'],
+ description='Celandine Spire’s opening contour becomes F-sharp–A–B–A. Eight sustained chord fields lead outwards from F-sharp minor to a central D-flat-major reflection, then return in exact reverse order and at the same lengths. The melody takes a different route on the return. A separate coda adds sixth and ninth colours to F-sharp minor.',
+ difficulty='Experimental harmonic form and voicing; moderate physical demands',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Bars 1–17 form a palindrome in the LH chord pitches and their durations, with bar 9 at its centre. The melody is newly shaped on the return rather than reversed. Keep each three-note LH chord finger-held through the pedal changes, and let the changing metres follow the phrase. The final RH chord spans a major seventh; all earlier LH shapes fit within a fifth.',
+ parent_opus=84,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['F#','A','B','A']),
+ ancestry=dict(source_opus=84,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['A','C','D','C'],transposition_semitones=-3),
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[start+left,start+right-.25] for start,cuts in zip([0,5,9,15,18,23,27,34,37,43,46,53,57,62,65,71,75,80],[[0,2,3,5],[0,2,3,4],[0,1.5,3,6],[0,.5,2,3],[0,2,3,5],[0,2,4],[0,2,4,7],[0,1,2,3],[0,2,6],[0,1.5,2,3],[0,3,4,7],[0,2,4],[0,2,3,5],[0,1,1.5,3],[0,2,3,6],[0,1.5,2,4],[0,5],[0,6]]) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+F#5:1.5 A5:.5 B5:1 A5:2
+C#5:2 E5:1 F#5:1
+A4:1.5 C#5:1.5 D5:3
+E5:.5 F#5:1.5 A5:1
+D5:2 F5:.5 G5:.5 C5:2
+D5:1 F5:1 A5:2
+G5:1.5 B5:.5 E5:2 D5:3
+E5:1 G5:1 Bb5:1
+C6:1 Bb5:1 Ab5:4
+G5:1.5 E5:.5 D5:1
+C5:3 B4:1 G4:3
+A4:1 C5:1 D5:2
+Bb4:2 G4:1 F4:2
+A4:1 G4:.5 F#4:1.5
+E4:2 F#4:1 A4:3
+C#5:1.5 B4:.5 A4:2
+G#4+B4+E5:5
+A4+C#5+D#5+G#5:6
+''',
+ lh='''
+F#3+A3+C#4:5
+D3+F#3+A3:4
+B2+D3+F#3:6
+G3+B3+D4:3
+Eb3+G3+Bb3:5
+C3+Eb3+G3:4
+A2+C3+E3:7
+F3+A3+C4:3
+Db3+F3+Ab3:6
+F3+A3+C4:3
+A2+C3+E3:7
+C3+Eb3+G3:4
+Eb3+G3+Bb3:5
+G3+B3+D4:3
+B2+D3+F#3:6
+D3+F#3+A3:4
+F#3+A3+C#4:5
+F#3+C#4:6
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'pp',10:'p',11:'pp',12:'p',13:'mp',14:'p',15:'pp',16:'p',17:'pp',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,4),(5,9),(10,13),(14,18)],lower_phrases=[],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('crescendo',7,8),('diminuendo',9,11),('crescendo',12,14),('diminuendo',15,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[52,47,54,49,51,45,56,48,40,46,52,43,49,44,46,38,32,24],
+  phrase_arcs=[[0,17.5,3],[18,42.5,4],[43,61.5,3],[62,86,-2]],
+  lower_entries=[[37,43],[75,80]],pedal_lift=.25,gate=.995,
+  note='The chord fields remain quiet and sustained while the melody changes its sense of direction. Returning harmonies have different upper colours and gentler phrase endings. Pedal refreshes clear the melody while the lower keys stay held, and the separate coda lets the minor sixth/ninth settle slowly.'))
 ]

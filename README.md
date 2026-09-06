@@ -100,6 +100,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 82 | Teasel Parabola | 7/8 | 154 | [Score](pieces/CWS_Op_082_Teasel_Parabola/CWS_Op_082_Teasel_Parabola.pdf) | [MP3](pieces/CWS_Op_082_Teasel_Parabola/CWS_Op_082_Teasel_Parabola.mp3) |
 | CWS Op. 83 | Dahlia Overpass | 6/4 | 153 | [Score](pieces/CWS_Op_083_Dahlia_Overpass/CWS_Op_083_Dahlia_Overpass.pdf) | [MP3](pieces/CWS_Op_083_Dahlia_Overpass/CWS_Op_083_Dahlia_Overpass.mp3) |
 | CWS Op. 84 | Celandine Spire | 3/4, 4/4, 5/4, 6/4 (changing) | 135 | [Score](pieces/CWS_Op_084_Celandine_Spire/CWS_Op_084_Celandine_Spire.pdf) | [MP3](pieces/CWS_Op_084_Celandine_Spire/CWS_Op_084_Celandine_Spire.mp3) |
+| CWS Op. 85 | Yarrow Elevation | 5/4, 4/4, 6/4, 3/4, 7/4 (changing) | 111 | [Score](pieces/CWS_Op_085_Yarrow_Elevation/CWS_Op_085_Yarrow_Elevation.pdf) | [MP3](pieces/CWS_Op_085_Yarrow_Elevation/CWS_Op_085_Yarrow_Elevation.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
