@@ -77,6 +77,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 59 | Marigold Detour | 6/8 | 154 | [Score](pieces/CWS_Op_059_Marigold_Detour/CWS_Op_059_Marigold_Detour.pdf) | [MP3](pieces/CWS_Op_059_Marigold_Detour/CWS_Op_059_Marigold_Detour.mp3) |
 | CWS Op. 60 | Cypress Orbit | 5/4 | 155 | [Score](pieces/CWS_Op_060_Cypress_Orbit/CWS_Op_060_Cypress_Orbit.pdf) | [MP3](pieces/CWS_Op_060_Cypress_Orbit/CWS_Op_060_Cypress_Orbit.mp3) |
 | CWS Op. 61 | Saffron Traverse | 4/4, 5/4, 3/4 (changing) | 200 | [Score](pieces/CWS_Op_061_Saffron_Traverse/CWS_Op_061_Saffron_Traverse.pdf) | [MP3](pieces/CWS_Op_061_Saffron_Traverse/CWS_Op_061_Saffron_Traverse.mp3) |
+| CWS Op. 62 | Daphne Slipway | 7/8, 9/8, 6/8, 4/4, 3/4, 5/8 (changing) | 138 | [Score](pieces/CWS_Op_062_Daphne_Slipway/CWS_Op_062_Daphne_Slipway.pdf) | [MP3](pieces/CWS_Op_062_Daphne_Slipway/CWS_Op_062_Daphne_Slipway.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

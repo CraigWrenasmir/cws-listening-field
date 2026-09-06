@@ -1005,4 +1005,64 @@ Ab3:2 C4:1 Ab3:2
   phrase_arcs=[[0,11,3],[12,32,4],[33,48,4],[49,65,4],[66,82,-2]],
   lower_entries=[[9,12],[25,30],[58,61],[73,77]],tenor_entries=[[0,4],[16,20],[66,70]],inner_entries=[[20,25],[45,49]],pedal_lift=.22,gate=.995,
   note='The quarter pulse stays continuous while each phrase is given a different amount of room. The tenor opening and its late return come gently forward. Upper ties bridge metre changes without a fresh accent, and the last phrase closes around a soft minor added ninth.'))
+,
+dict(op=62,title='Daphne Slipway',key='Db',fifths=-5,meter='7/8',bpm=59,
+ meters=['7/8','9/8','6/8','4/4','7/8','7/8','9/8','3/4','5/8','9/8','4/4','7/8','6/8','9/8','5/8','4/4','7/8','9/8','3/4','4/4'],
+ description='Saffron Traverse’s inner turn becomes D-flat–E-flat–D-flat–C. Seven- and nine-eighth bars open and close around shorter and even-length measures, following the melody’s uneven breath. Fourth-based voicings and a held F connect the phrases. A B-minor/C-major window slips back towards G-flat and D-flat, ending in a softly voiced major ninth.',
+ difficulty='Advanced mixed-metre duet',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the eighth-note subdivision continuous through the changing time signatures; their groupings change without a sudden change of speed. The upper F crosses a 7/8-to-9/8 boundary and remains held while the lower line moves. Shape the fourth-based chords gently and prepare the wider lower-register descents during their longer preceding notes. The final four-note RH chord should remain soft and balanced.',
+ parent_opus=61,motif=dict(hand='rh',start_beat=0,end_beat=3.5,pitches=['Db','Eb','Db','C']),
+ ancestry=dict(source_opus=61,source_hand='rh',source_voice='inner',source_start_beat=0,source_end_beat=6,source_pitches=['Ab','Bb','Ab','G'],transposition_semitones=5),
+ page_starts=[13],system_starts=[1,4,7,10,13,16,18],
+ rh='''
+Db5:1 Eb5:.5 Db5:1 C5:1
+Db5:2 F5:1 Ab5:1.5
+Gb5:2 F5:1
+Eb5:3 Db5:1
+C5+F5+Bb5:2 Ab5:.5 Gb5:1
+F5:3.5~
+F5:1.5 Eb5:.5 Db5:.5 C5:2
+Bb4+Eb5+Ab5:3
+Gb5:1 F5:.5 Eb5:1
+Gb4+Bb4+F5:3 Eb5:1 Db5:.5
+D5:2 E5:.5 F#5:.5 A5:1
+G5:2 F#5:.5 E5:1
+C5+E5+B5:2 A5:1
+Bb5:1.5 Ab5:.5 Gb5:.5 F5:2
+Eb5:1 Db5:.5 C5:1
+C5+F5+Bb5:2 Ab5:1 Gb5:1
+F5:1 Eb5:.5 Db5:1 C5:1
+Db5:2 C5:.5 Ab4:.5 Gb4:1.5
+F4+Ab4+Eb5:2 Db5:1
+F4+Ab4+C5+Eb5:4
+''',
+ lh='''
+Bb2:1 F3:.5 Ab3:1 C4:1
+Gb3:1.5 Db4:.5 F4:1 Eb4:1.5
+F3:1 C4:.5 Eb4:1.5
+Eb3:1.5 Bb3:.5 Db4:2
+Bb2:1 F3:1 Ab3:1.5
+Ab2:2 Eb3:.5 Gb3:1
+Db3:1.5 Ab3:.5 C4:1 Bb3:1.5
+Eb3:1 Bb3:.5 Db4:1.5
+Ab2:1 Eb3:.5 Gb3:1
+Gb3:1.5 Db4:.5 F4:1 Eb4:1.5
+B2:1.5 F#3:.5 A3:1 C#4:1
+E3:1 B3:.5 D4:2
+C3:1 G3:.5 B3:1.5
+Gb2:1.5 Db3:.5 F3:1 Ab3:1.5
+Ab2:1 Eb3:.5 Gb3:1
+Bb2:1.5 F3:.5 Ab3:1 C4:1
+Gb3:1.5 Db4:.5 F4:1 Bb3:.5
+Db3:2 Ab3:.5 C4:.5 Bb3:1.5
+Gb2:1 Db3:.5 F3:1.5
+Db3+Ab3:4
+''',sections={1:'p',2:'mp',3:'p',4:'pp',5:'mp',6:'p',8:'pp',9:'p',10:'mp',11:'p',13:'pp',14:'mp',15:'pp',16:'p',17:'mp',18:'p',19:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,9),(10,13),(14,17),(18,20)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,15),(16,18),(19,20)],
+ hairpins=[('crescendo',1,2),('diminuendo',2,4),('diminuendo',5,8),('crescendo',9,10),('diminuendo',10,13),('diminuendo',14,15),('crescendo',16,17),('diminuendo',18,20)],tempo_changes={},group=3,
+ performance=dict(rubato=[59,62,55,49,60,52,57,50,45,58,63,56,49,61,48,57,53,46,41,30],
+  phrase_arcs=[[0,14.5,3],[15,31.5,4],[32,46.5,4],[47,61,4],[61.5,73,-2]],
+  lower_entries=[[8,11],[36.5,40.5],[58,61.5]],pedal_bars=list(range(1,21)),pedal_lift=.2,gate=.995,
+  note='The uneven measures share a continuous underlying subdivision, while the larger phrases gather and release. The lower line answers beneath the held upper F and through the neighbouring tonal window. A final major ninth settles softly after the last descending phrase.'))
 ]
