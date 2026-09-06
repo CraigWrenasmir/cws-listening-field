@@ -675,4 +675,72 @@ Bb2:3 F3:3
   phrase_arcs=[[0,35.5,4],[36,53.5,2],[54,71.5,4],[72,90,-2]],
   lower_entries=[[6,12],[42,48],[72,78]],inner_entries=[[30,36],[66,72]],pedal_lift=.24,gate=.99,
   note='The upper sweep is briefly unaccompanied, and the lower answer takes more time to trace the same pitches. Silence in the other hand makes each register feel distinct. The returning harmony stays gentle, with a restrained inner voice and a final minor sixth/ninth that lingers rather than closes firmly.'))
+,
+dict(op=82,title='Teasel Parabola',key='f',fifths=-4,meter='7/8',bpm=55,
+ description='Magnolia Interval’s opening bass becomes F–C–E-flat–G in an uneven, flowing melody. At the centre, one diminished-seventh chord remains held through four bars while the bass roots descend by minor thirds in pitch class: C, A, G-flat and E-flat. The same upper notes acquire four dominant flat-ninth meanings before resolving into A-flat minor. Brighter B-, E- and D-major reflections lead back to F minor sixth/ninth.',
+ difficulty='Advanced sustained-chord reinterpretation and asymmetric phrasing',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Hold all four RH pitches in bars 9–12 for fourteen quarter beats without reattacking them. The bass changes the harmonic meaning of that diminished seventh, including enharmonic reinterpretations. Keep the chord finger-held through the pedal refreshes. The seven-eighth bars have varied internal groupings; follow the melodic phrase rather than stressing every bar line.',
+ parent_opus=81,motif=dict(hand='rh',start_beat=0,end_beat=3.5,pitches=['F','C','Eb','G']),
+ ancestry=dict(source_opus=81,source_hand='lh',source_voice='bass',source_start_beat=0,source_end_beat=5,source_pitches=['Bb','F','Ab','C'],transposition_semitones=7),
+ system_starts=[1,5,9,13,17,21],page_starts=[13],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*3.5+left,(bar-1)*3.5+right-.2] for bar,cuts in enumerate([[0,1,1.5,2.5,3.5],[0,1.5,2.5,3.5],[0,2,2.5,3.5],[0,1,2.5,3.5],[0,1,2,2.5,3.5],[0,2,3,3.5],[0,.5,1.5,2.5,3.5],[0,1,1.5,2.5,3.5],[0,1.5,2.5,3.5],[0,2,2.5,3.5],[0,1.5,2.5,3.5],[0,1,2,2.5,3.5],[0,2,2.5,3.5],[0,1,1.5,2.5,3.5],[0,1,2,3.5],[0,1,1.5,2,3.5],[0,1,2,3.5],[0,1.5,2.5,3.5],[0,1,2,2.5,3.5],[0,1,1.5,2.5,3.5],[0,2,2.5,3.5],[0,1.5,2.5,3.5],[0,1,2,2.5,3.5],[0,3.5]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+F5:1 C5:1 Eb5:.5 G5:1
+Ab5:1.5 G5:1 F5:1
+G5:2 Eb5:.5 D5:1
+F5:1.5 E5:.5 D5:1.5
+G5:1 F5:1 Eb5:1.5
+C5:2 Bb4:1 Ab4:.5
+B4:1 Db5:1 D5:.5 F5:1
+E5:1.5 Db5:1 C5:1
+E4+G4+Bb4+Db5:3.5~
+E4+G4+Bb4+Db5:3.5~
+E4+G4+Bb4+Db5:3.5~
+E4+G4+Bb4+Db5:3.5
+Eb4+Ab4+Cb5:1.5 Eb5:1 Gb5:1
+F#5:1.5 E5:1 D#5:1
+G#5:2 F#5:.5 E5:1
+F#5:1 E5:1.5 D5:1
+F5:1.5 D5:1 Bb4:1
+E5:1 F5:.5 G5:1.5 E5:.5
+Ab5:2 G5:.5 F5:1
+G5:1 F5:1 D5:1.5
+F5:1 C5:1 Eb5:.5 G5:1
+F5:1.5 Eb5:1 Db5:1
+E4+G4+Bb4+Db5:2 C5:1 Bb4:.5
+G4+Ab4+C5:3.5
+''',
+ lh='''
+F3:1 C4:.5 Eb4:1 C4:1
+Db3:1.5 Ab3:1 C4:1
+C3:2 G3:.5 Bb3:1
+Bb2:1 F3:1.5 Ab3:1
+Eb3:1 Bb3:1 D4:.5 C4:1
+Ab2:2 Eb3:1 G3:.5
+G3:.5 D3:1 F3:1 B3:1
+C3:1 G3:.5 Bb3:1 D4:1
+C3:1.5 G3:1 Bb3:1
+A2:2 E3:.5 G3:1
+Gb2:1.5 Db3:1 Fb3:1
+Eb3:1 Bb3:1 Db4:.5 Bb3:1
+Ab2:2 Eb3:.5 Gb3:1
+B2:1 F#3:.5 A#3:1 C#4:1
+E3:1 B3:1 D#4:1.5
+D3:1 A3:.5 C#4:.5 B3:1.5
+G2:1 D3:1 Bb3:1.5
+C3:1.5 G3:1 Bb3:1
+F3:1 C4:1 Eb4:.5 C4:1
+Bb2:1 F3:.5 Ab3:1 C4:1
+F3:2 Ab3:.5 C4:1
+Db3:1.5 Ab3:1 C4:1
+C3:1 G3:1 Bb3:.5 E3:1
+F3+D4:3.5
+''',sections={1:'p',2:'pp',3:'p',4:'pp',5:'p',6:'pp',7:'mp',8:'p',9:'p',13:'pp',14:'p',15:'mp',16:'p',17:'pp',18:'p',19:'pp',20:'p',21:'pp',22:'p',23:'pp'},words={1:'poco rubato',23:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,13),(14,18),(19,24)],lower_phrases=[(1,4),(5,8),(9,12),(13,16),(17,20),(21,24)],
+ hairpins=[('diminuendo',1,4),('crescendo',5,7),('diminuendo',8,13),('crescendo',14,15),('diminuendo',16,17),('diminuendo',18,19),('diminuendo',20,24)],tempo_changes={},group=4,
+ performance=dict(rubato=[55,49,54,46,53,44,56,47,48,44,42,40,49,51,55,48,50,54,46,51,45,41,34,25],
+  phrase_arcs=[[0,13.5,3],[14,27.5,4],[28,45.5,-1],[45.5,62.5,4],[63,84,-2]],
+  lower_entries=[[28,42],[56,59.5],[73.5,77]],pedal_lift=.2,gate=.99,
+  note='The diminished chord is one sustained event, growing quieter while the bass gives it successive meanings. The pedal clears around each lower change without releasing those upper keys. Brighter reflections regain movement, and the final return settles into a compact minor sixth/ninth.'))
 ]
