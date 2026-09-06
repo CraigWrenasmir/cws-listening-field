@@ -45,6 +45,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 27 | Moss Interchange | 4/4 | 183 | [Score](pieces/CWS_Op_027_Moss_Interchange/CWS_Op_027_Moss_Interchange.pdf) | [MP3](pieces/CWS_Op_027_Moss_Interchange/CWS_Op_027_Moss_Interchange.mp3) |
 | CWS Op. 28 | Birch Hypotenuse | 3/4 | 159 | [Score](pieces/CWS_Op_028_Birch_Hypotenuse/CWS_Op_028_Birch_Hypotenuse.pdf) | [MP3](pieces/CWS_Op_028_Birch_Hypotenuse/CWS_Op_028_Birch_Hypotenuse.mp3) |
 | CWS Op. 29 | Fallow Tramway | 5/4 | 167 | [Score](pieces/CWS_Op_029_Fallow_Tramway/CWS_Op_029_Fallow_Tramway.pdf) | [MP3](pieces/CWS_Op_029_Fallow_Tramway/CWS_Op_029_Fallow_Tramway.mp3) |
+| CWS Op. 30 | Cedar Ellipsis | 7/8 | 186 | [Score](pieces/CWS_Op_030_Cedar_Ellipsis/CWS_Op_030_Cedar_Ellipsis.pdf) | [MP3](pieces/CWS_Op_030_Cedar_Ellipsis/CWS_Op_030_Cedar_Ellipsis.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

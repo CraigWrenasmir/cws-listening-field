@@ -259,4 +259,62 @@ C3:1 G3:1 Bb3:1 Eb3+G3:2
   phrase_arcs=[[0,14,4],[15,24,2],[25,39,4],[40,49,3],[50,59,2],[60,75,-2]],
   lower_entries=[[0,10],[10,25],[25,35],[35,50],[50,65],[65,75]],pedal_bars=list(range(1,16)),pedal_lift=.24,gate=.99,
   note='The bass speaks before the melody and releases its phrases at different points. The remote minor colours stay quiet; the closer dominant passages carry a little more weight. Each return to C minor broadens, with the final tonic separated from its preceding ninth colour.'))
+,
+dict(op=30,title='Cedar Ellipsis',key='Bb',fifths=-2,meter='7/8',bpm=55,
+ description='Birch Hypotenuse\'s rising figure returns as B-flat-D-F-G, entering after an eighth-note breath. Long upper notes continue across the seven-eighth bars, so the irregular metre offers a quiet sway. D-flat-major and F-minor colours briefly shade the central passage; D dominant leads towards G minor, then an E-flat-major reflection and a soft dominant return bring the melody home to B-flat.',
+ difficulty='Advanced asymmetrical phrasing',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Seven eighth notes form each bar, while tied upper notes cross the bar lines and delay the next melody attack. The bass changes rhythmic grouping beneath them. The technical focus is an even legato through the irregular spans, clear chromatic voicings and soft control of sustained chords, rather than speed.',
+ parent_opus=28,motif=dict(hand='rh',start_beat=.5,end_beat=3.5,pitches=['Bb','D','F','G']),
+ ancestry=dict(source_opus=28,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['G','B','D','E'],transposition_semitones=3),
+ rh='''
+R:.5 Bb4:.5 D5:.5 F5:.5 G5:1.5~
+G5:1 F5:.5 D5:.5 C5:1 A4:.5~
+A4:.5 Bb4:.5 D4+F4+C5:2 R:.5
+C5:1 Eb5:.5 G5:.5 Bb5:1 A5:.5~
+A5:.5 G5:.5 F5:.5 Eb5:1 D5:1
+Db5+F5+C6:2 Bb5:.5 Ab5:.5 F5:.5
+Eb5:1 Db5:.5 C5:.5 Ab4:1 F4:.5~
+F4:.5 G4:.5 Ab4:.5 C5:1 Eb5:1
+D5+F#5+C6:2 B5:.5 A5:.5 F#5:.5
+G5:1 D5:.5 Bb4:.5 A4:1 G4:.5~
+G4:.5 Bb4:.5 D5:.5 F5:1 E5:1
+Eb5+G5+D6:2 C6:.5 Bb5:.5 G5:.5
+F5:1 Eb5:.5 D5:.5 C5:1 Bb4:.5~
+Bb4:.5 A4:.5 G4:.5 F4:1 E4:1
+F4+A4+Eb5:2 D5:.5 C5:.5 A4:.5
+Bb4:.5 D5:.5 F5:.5 G5:2
+F5:1 D5:.5 C5:.5 Bb4:1 A4:.5~
+A4:.5 G4:.5 F4:.5 D4+F4+C5:2
+Eb4+G4+D5:2 C5:.5 Bb4:.5 A4:.5
+D4+F4+Bb4:3.5
+''',
+ lh='''
+Bb2:1 F3:1 D4:1.5
+G3:1.5 D4:.5 Bb3:1 F3:.5
+Bb2+F3:2 D3:.5 F3:.5 A3:.5
+C3:1 G3:.5 Bb3:.5 Eb4:1 D4:.5
+F3:1 C4:1 Eb4:.5 A3:.5 G3:.5
+Db3:1 Ab3:1 C4:1 F3:.5
+F3:1 C4:.5 Eb4:.5 Ab3:1 G3:.5
+F3:1.5 C4:.5 Ab3:.5 Eb3:1
+D3:1 A3:.5 C4:.5 F#3:1 D3:.5
+G2:1 D3:.5 F3:.5 Bb3:1 A3:.5
+C3:1 G3:1 Bb3:.5 D4:.5 G3:.5
+Eb3:1 Bb3:1 D4:1 G3:.5
+Bb2:1 F3:.5 A3:.5 D4:1 G3:.5
+C3:1 G3:.5 Bb3:.5 D4:1 E3:.5
+F3:1 C4:1 Eb4:.5 G3:.5 F3:.5
+Bb2:1 F3:1 A3:.5 D4:.5 C4:.5
+G3:1 D4:.5 Bb3:.5 F3:1 A3:.5
+Bb2+F3:1.5 D3:1 F3:.5 A3:.5
+Eb3:1 Bb3:1 G3:.5 F3:.5 Eb3:.5
+Bb2+F3:3.5
+''',sections={1:'p',4:'mp',6:'pp',9:'mp',10:'p',14:'pp',16:'p',18:'pp'},words={1:'poco rubato',18:'poco rit.'},
+ slurs=[(1,3),(4,5),(6,8),(9,11),(12,15),(16,20)],lower_phrases=[(1,3),(4,6),(7,8),(9,11),(12,13),(14,17),(18,20)],
+ hairpins=[('diminuendo',1,3),('diminuendo',4,5),('crescendo',6,7),('diminuendo',7,8),('diminuendo',9,11),('diminuendo',12,15),('crescendo',16,17),('diminuendo',18,20)],tempo_changes={},group=4,
+ performance=dict(rubato=[55,52,48,57,51,50,53,47,55,51,48,54,49,46,43,51,47,43,39,33],
+  phrase_arcs=[[0,10,3],[10.5,17,4],[17.5,27,2],[28,38,4],[38.5,52,3],[52.5,70,-2]],
+  lower_entries=[[0,10.5],[10.5,21],[21,28],[28,38.5],[38.5,45.5],[45.5,59.5],[59.5,70]],pedal_bars=list(range(1,21)),pedal_lift=.2,gate=.99,
+  note='The phrasing follows the held melody across bar lines. Bass replies stay softer and change their grouping, allowing the seven-eighth spans to pass without a hard accent at each bar. The final return gradually broadens into its sustained tonic.'))
 ]
