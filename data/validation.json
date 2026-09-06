@@ -2573,5 +2573,182 @@
       "sounded_pitches_per_minute": 95.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Pewter Lagoon",
+    "opus": 51,
+    "score_pages": 2,
+    "bars": 15,
+    "pitch_onsets": 186,
+    "audio_seconds": 98.09,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 13,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 12
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-voice quintuplet study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 4 and 10, the LH tenor plays five quarter-note quintuplets across four beats while the bass stays held. The bass changes on the fifth beat to support the tenor\u2019s arrival. Both RH voices continue independently. Keep the tenor even without accenting each note; finger sustain preserves the bass through pedal changes."
+    },
+    "notated_tuplet_notes": {
+      "2:5:4": 10
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.78
+      ],
+      [
+        2,
+        4.78
+      ],
+      [
+        5,
+        6.78
+      ],
+      [
+        7,
+        9.780000000000001
+      ],
+      [
+        10,
+        11.78
+      ],
+      [
+        12,
+        14.780000000000001
+      ],
+      [
+        15,
+        16.78
+      ],
+      [
+        17,
+        19.78
+      ],
+      [
+        20,
+        21.78
+      ],
+      [
+        22,
+        24.78
+      ],
+      [
+        25,
+        26.78
+      ],
+      [
+        27,
+        29.78
+      ],
+      [
+        30,
+        31.78
+      ],
+      [
+        32,
+        34.78
+      ],
+      [
+        35,
+        36.78
+      ],
+      [
+        37,
+        39.78
+      ],
+      [
+        40,
+        41.78
+      ],
+      [
+        42,
+        44.78
+      ],
+      [
+        45,
+        46.78
+      ],
+      [
+        47,
+        49.78
+      ],
+      [
+        50,
+        51.78
+      ],
+      [
+        52,
+        54.78
+      ],
+      [
+        55,
+        56.78
+      ],
+      [
+        57,
+        59.78
+      ],
+      [
+        60,
+        61.78
+      ],
+      [
+        62,
+        64.78
+      ],
+      [
+        65,
+        66.78
+      ],
+      [
+        67,
+        69.78
+      ],
+      [
+        70,
+        71.78
+      ],
+      [
+        72,
+        74.78
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 117.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
