@@ -124,6 +124,30 @@ for p in cat:
     assert len(notation_voices[staff])==len(voices),('Missing independent notated voices',p['op'],staff,notation_voices)
     if len(voices)>1:assert None not in notation_voices[staff]
     assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
+ if p.get('lower_sections'):
+  actual_dynamics=[]
+  for measure in r.findall('.//part/measure'):
+   for direction in measure.findall('direction'):
+    dynamic=direction.find('direction-type/dynamics')
+    if dynamic is not None:
+     assert len(dynamic)==1
+     actual_dynamics.append((direction.findtext('staff','1'),int(measure.get('number')),dynamic[0].tag))
+  expected_dynamics=[(staff,int(bar),value) for staff,changes in [('1',p['sections']),('2',p['lower_sections'])] for bar,value in changes.items()]
+  assert sorted(actual_dynamics)==sorted(expected_dynamics),('Printed staff dynamics differ',p['op'])
+  note_velocities={}
+  for track in mid.tracks:
+   tick=0
+   for message in track:
+    tick+=message.time
+    if message.type=='note_on' and message.velocity>0:note_velocities[(message.channel,tick,message.note)]=message.velocity
+  for event in p['events']:
+   changes={int(k):v for k,v in (p['lower_sections'] if event['hand']=='lh' else p['sections']).items()}
+   dynamic=changes[max(k for k in changes if k<=event['bar'])]
+   assert event.get('notated_dynamic')==dynamic,('Performed staff dynamic differs',p['op'],event['id'])
+   channel=0 if event['hand']=='rh' else 1
+   for pitch in event['pitches']:
+    expected_velocity=event['velocity']-(4 if p.get('performance') and len(event['pitches'])>1 and pitch<max(event['pitches']) else 0)
+    assert note_velocities[(channel,onset_tick(event['offset']),pitch)]==expected_velocity,('MIDI voicing differs',p['op'],event['id'])
  if p.get('hidden_voice_rests'):
   expected_hidden={f'cws{p["op"]}-{hand}-m{bar}-n1001':(staff,voice) for voice,bars in p['hidden_voice_rests'].items() for hand,staff in [('rh','1') if voice=='inner' else ('lh','2')] for bar in bars}
   hidden=[n for n in r.findall('.//part/measure/note') if n.get('print-object')=='no']
@@ -307,6 +331,7 @@ for p in cat:
  if tuplets:report[-1]['notated_tuplet_notes']={':'.join(map(str,k)):v for k,v in tuplets.items()}
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
+ if p.get('lower_sections'):report[-1]['verified_staff_dynamics']={'rh':p['sections'],'lh':p['lower_sections']}
  if p.get('hidden_voice_rests'):report[-1]['verified_nonprinting_voice_rests']=p['hidden_voice_rests']
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
  if p.get('tuplet_spans'):report[-1]['verified_tuplet_brackets']=p['tuplet_spans']

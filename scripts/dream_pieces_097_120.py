@@ -828,4 +828,75 @@ C3+G3:4
   phrase_arcs=[[0,15.8,3],[16,23.8,1],[24,31.8,3],[32,39.8,1],[40,47.8,3],[48,64,-2]],
   inner_entries=[[16,24],[32,40]],lower_entries=[[56,64]],pedal_lift=.2,gate=.995,
   note='The held upper notes give the whole-tone fields a point of stillness while the lower colours move. Let those passages feel suspended, then recover a more melodic direction on returning to the minor-key phrases. The final natural sixth keeps the closing harmony open and warm.'))
+,
+dict(op=108,title='Slate Semaphore',key='eb',fifths=-6,meter='4/4',bpm=52,
+ description='Fluorite Quayside’s A-flat–C–E-flat–D becomes G-flat–B-flat–D-flat–C in a lower singing line. The RH begins with quiet, sustained jazz voicings while the LH tenor carries the melody above its own held bass. The complete four-bar phrase then moves up an octave into the RH, with the lower accompaniment receding. A varied lower-voice return settles into E-flat-minor ninth.',
+ difficulty='Advanced melody transfer and independent staff dynamics',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The LH tenor leads in bars 1–8 and 13–15, with RH chords marked pp above its p. In bars 9–12 the complete opening four-bar melody moves to the RH an octave higher; its p is accompanied by a lower pp. Keep the bass quieter than the tenor within the LH. The separate staff dynamics are reflected in the recording. The final two lower voices join into an E-flat-minor triad beneath the upper ninth colour.',
+ parent_opus=107,motif=dict(hand='lh',voice='tenor',start_beat=0,end_beat=4,pitches=['Gb','Bb','Db','C']),
+ ancestry=dict(source_opus=107,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=4,source_pitches=['Ab','C','Eb','D'],transposition_semitones=-2),
+ lower_sections={1:'p',9:'pp',13:'p',16:'pp'},hidden_voice_rests={'tenor':[9,10,11,12]},
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,1,1.5,2.5,4],[0,2,3,4],[0,1,1.5,2,4],[0,1,2,4],[0,1,1.5,2,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,1.5,2,2.5,4],[0,1,2,3,4],[0,1,1.5,2,4],[0,1,2,3,4],[0,1.5,2,3,4],[0,1,2,4],[0,1,1.5,2,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+Bb4+Db5+F5+Ab5:4
+Ab4+C5+Eb5+G5:4
+Bb4+Db5+Eb5+Gb5:4
+Ab4+C5+Eb5+G5:4
+C5+E5+G5:2 B4+D5+F#5:2
+A4+C5+E5:2 G4+B4+D5:2
+Ab4+C5+Eb5:2 G4+Bb4+Db5:2
+Gb4+Bb4+Db5:2 F4+Ab4+C5:2
+Gb4:1 Bb4:.5 Db5:1 C5:1.5
+Bb4:2 Ab4:1 Gb4:1
+F4:1 Ab4:.5 Bb4:.5 Db5:2
+C5:1 Bb4:1 Ab4:2
+Gb4+Bb4+Eb5+F5:4
+F4+Ab4+C5+Eb5:4
+Ab4+C5+D5+F5:4
+F4+Bb4+Db5:4
+''',
+ lh='''
+Eb3:4
+Db3:4
+Eb3:4
+F3:4
+D3:4
+C3:4
+Db3:4
+Cb3:4
+Eb2:1 Bb2:1 Db3:.5 F3:1.5
+Db3:1 Ab3:1 C4:1 Bb3:1
+Eb3:1 Bb3:.5 Db4:.5 F3:2
+F3:1 C4:1 Eb4:1 D4:1
+Eb3:4
+Db3:4
+D3:4
+Eb3:4
+''',
+ lh_upper='''
+Gb3:1 Bb3:.5 Db4:1 C4:1.5
+Bb3:2 Ab3:1 Gb3:1
+F3:1 Ab3:.5 Bb3:.5 Db4:2
+C4:1 Bb3:1 Ab3:2
+F3:1 A3:.5 C4:.5 B3:2
+E3:2 G3:1 A3:1
+F3:1 Ab3:1 C4:1 Bb3:1
+Eb3:2 Gb3:1 Ab3:1
+R:4
+R:4
+R:4
+R:4
+Gb3:1.5 Bb3:.5 Db4:1 C4:1
+Bb3:1 Ab3:1 Gb3:2
+F3:1 Ab3:.5 Bb3:.5 C4:2
+Gb3+Bb3:4
+''',sections={1:'pp',2:'pp',3:'pp',4:'pp',5:'pp',6:'pp',7:'pp',8:'pp',9:'p',10:'p',11:'p',12:'p',13:'pp',14:'pp',15:'pp',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[(9,10),(11,12)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('crescendo',7,8),('crescendo',9,10),('diminuendo',11,12),('diminuendo',13,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[52,47,53,45,54,48,52,44,54,49,53,45,46,42,35,27],
+  phrase_arcs=[[0,15.8,3],[16,31.8,3],[32,47.8,4],[48,64,-2]],
+  tenor_entries=[[0,32],[48,64]],lower_entries=[],pedal_lift=.2,gate=.995,
+  note='The lower melody begins in the foreground while the upper chords remain soft. Its transfer to the RH changes the balance without changing the four-bar phrase. On the lower-voice return, let the accompaniment soften again; the final chord brings both hands to the same quiet dynamic.'))
 ]

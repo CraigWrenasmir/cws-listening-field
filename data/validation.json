@@ -18021,5 +18021,320 @@
       "sounded_pitches_per_minute": 77.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Slate Semaphore",
+    "opus": 108,
+    "score_pages": 2,
+    "bars": 16,
+    "pitch_onsets": 138,
+    "audio_seconds": 92.29,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 80,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 39,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 8,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced melody transfer and independent staff dynamics",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The LH tenor leads in bars 1\u20138 and 13\u201315, with RH chords marked pp above its p. In bars 9\u201312 the complete opening four-bar melody moves to the RH an octave higher; its p is accompanied by a lower pp. Keep the bass quieter than the tenor within the LH. The separate staff dynamics are reflected in the recording. The final two lower voices join into an E-flat-minor triad beneath the upper ninth colour."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.3
+      ],
+      [
+        1.5,
+        2.3
+      ],
+      [
+        2.5,
+        3.8
+      ],
+      [
+        4,
+        5.8
+      ],
+      [
+        6,
+        6.8
+      ],
+      [
+        7,
+        7.8
+      ],
+      [
+        8,
+        8.8
+      ],
+      [
+        9,
+        9.3
+      ],
+      [
+        9.5,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        12.8
+      ],
+      [
+        13,
+        13.8
+      ],
+      [
+        14,
+        15.8
+      ],
+      [
+        16,
+        16.8
+      ],
+      [
+        17,
+        17.3
+      ],
+      [
+        17.5,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        22.8
+      ],
+      [
+        23,
+        23.8
+      ],
+      [
+        24,
+        24.8
+      ],
+      [
+        25,
+        25.8
+      ],
+      [
+        26,
+        26.8
+      ],
+      [
+        27,
+        27.8
+      ],
+      [
+        28,
+        29.8
+      ],
+      [
+        30,
+        30.8
+      ],
+      [
+        31,
+        31.8
+      ],
+      [
+        32,
+        32.8
+      ],
+      [
+        33,
+        33.3
+      ],
+      [
+        33.5,
+        33.8
+      ],
+      [
+        34,
+        34.3
+      ],
+      [
+        34.5,
+        35.8
+      ],
+      [
+        36,
+        36.8
+      ],
+      [
+        37,
+        37.8
+      ],
+      [
+        38,
+        38.8
+      ],
+      [
+        39,
+        39.8
+      ],
+      [
+        40,
+        40.8
+      ],
+      [
+        41,
+        41.3
+      ],
+      [
+        41.5,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        44,
+        44.8
+      ],
+      [
+        45,
+        45.8
+      ],
+      [
+        46,
+        46.8
+      ],
+      [
+        47,
+        47.8
+      ],
+      [
+        48,
+        49.3
+      ],
+      [
+        49.5,
+        49.8
+      ],
+      [
+        50,
+        50.8
+      ],
+      [
+        51,
+        51.8
+      ],
+      [
+        52,
+        52.8
+      ],
+      [
+        53,
+        53.8
+      ],
+      [
+        54,
+        55.8
+      ],
+      [
+        56,
+        56.8
+      ],
+      [
+        57,
+        57.3
+      ],
+      [
+        57.5,
+        57.8
+      ],
+      [
+        58,
+        59.8
+      ],
+      [
+        60,
+        63.8
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "pp",
+        "2": "pp",
+        "3": "pp",
+        "4": "pp",
+        "5": "pp",
+        "6": "pp",
+        "7": "pp",
+        "8": "pp",
+        "9": "p",
+        "10": "p",
+        "11": "p",
+        "12": "p",
+        "13": "pp",
+        "14": "pp",
+        "15": "pp",
+        "16": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "9": "pp",
+        "13": "p",
+        "16": "pp"
+      }
+    },
+    "verified_nonprinting_voice_rests": {
+      "tenor": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 92.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

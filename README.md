@@ -123,6 +123,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 105 | Ochre Vestibule | 6/8, 3/4 (changing) | 165 | [Score](pieces/CWS_Op_105_Ochre_Vestibule/CWS_Op_105_Ochre_Vestibule.pdf) | [MP3](pieces/CWS_Op_105_Ochre_Vestibule/CWS_Op_105_Ochre_Vestibule.mp3) |
 | CWS Op. 106 | Silver Tidelock | 9/8 | 163 | [Score](pieces/CWS_Op_106_Silver_Tidelock/CWS_Op_106_Silver_Tidelock.pdf) | [MP3](pieces/CWS_Op_106_Silver_Tidelock/CWS_Op_106_Silver_Tidelock.mp3) |
 | CWS Op. 107 | Fluorite Quayside | 4/4 | 116 | [Score](pieces/CWS_Op_107_Fluorite_Quayside/CWS_Op_107_Fluorite_Quayside.pdf) | [MP3](pieces/CWS_Op_107_Fluorite_Quayside/CWS_Op_107_Fluorite_Quayside.mp3) |
+| CWS Op. 108 | Slate Semaphore | 4/4 | 138 | [Score](pieces/CWS_Op_108_Slate_Semaphore/CWS_Op_108_Slate_Semaphore.pdf) | [MP3](pieces/CWS_Op_108_Slate_Semaphore/CWS_Op_108_Slate_Semaphore.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

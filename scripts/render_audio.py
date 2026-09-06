@@ -64,6 +64,7 @@ for p in cat:
     velocities={'pp':43,'p':54,'mp':62,'mf':70}
     sections={int(k):v for k,v in p['sections'].items()}
     for hi,hand in enumerate(['rh','lh']):
+        hand_sections={int(k):v for k,v in p['lower_sections'].items()} if hand=='lh' and p.get('lower_sections') else sections
         tr=mido.MidiTrack();mid.tracks.append(tr)
         tr.append(mido.MetaMessage('track_name',name='Right hand' if hi==0 else 'Left hand',time=0))
         tr.append(mido.Message('program_change',program=0,channel=hi,time=0))
@@ -72,7 +73,7 @@ for p in cat:
         scheduled=[]
         prev=None
         for ev in [e for e in p['events'] if e['hand']==hand]:
-            dyn=sections[max(k for k in sections if k<=ev['bar'])]
+            dyn=hand_sections[max(k for k in hand_sections if k<=ev['bar'])]
             base=velocities[dyn]
             # Lower part is a singing line. It comes forward at thematic entries.
             voice_adjust=-8 if hi==1 else 0
@@ -112,6 +113,7 @@ for p in cat:
             ev['seconds']=round(seconds_at(start/TPB),6)
             ev['end_seconds']=round(seconds_at(round((ev['offset']+ev['duration'])*TPB)/TPB),6)
             ev['velocity']=vel
+            if p.get('lower_sections'):ev['notated_dynamic']=dyn
         # Explicit spans match the printed pedal marks. Earlier works retain
         # their existing per-bar rendering unchanged.
         pedal_spans=p.get('pedal_spans')

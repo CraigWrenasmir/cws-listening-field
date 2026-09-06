@@ -219,6 +219,10 @@ def make_score(p):
     parts=[]
     refs={}
     metres,bar_lengths,bar_starts,total_beats=bar_plan(p,len(parse_rows(p['rh'])))
+    lower_sections=p.get('lower_sections',{})
+    if lower_sections:
+        assert 1 in lower_sections,('Lower staff dynamics must begin at bar 1',p['op'])
+        assert all(isinstance(k,int) and 1<=k<=len(bar_lengths) and v in ('pp','p','mp','mf') for k,v in lower_sections.items()),('Invalid lower staff dynamics',p['op'])
     for voice,bars in p.get('hidden_voice_rests',{}).items():
         assert voice in ('inner','tenor') and len(bars)==len(set(bars))
         source,hand=('rh_inner','rh') if voice=='inner' else ('lh_upper','lh')
@@ -270,6 +274,8 @@ def make_score(p):
                 if new_system:
                     m.insert(0,layout.SystemLayout(isNew=True))
                 if mi in p.get('page_starts',[]):m.insert(0,layout.PageLayout(isNew=True))
+            if hand=='lh' and mi in lower_sections:
+                dyn=dynamics.Dynamic(lower_sections[mi]);dyn.placement='below';m.insert(0,dyn)
             offset=0
             refs[(hand,mi)]=[]
             for ei,(ps,dur) in enumerate(row):
@@ -502,7 +508,7 @@ def main():
         for event in events:
             old=old_events.get(event['id'],{})
             if all(old.get(k)==event[k] for k in ['offset','duration','pitches']):
-                for field in ['seconds','end_seconds','velocity']:
+                for field in ['seconds','end_seconds','velocity','notated_dynamic']:
                     if field in old:event[field]=old[field]
         if p['op'] not in times:
             now=datetime.now(ZoneInfo(STYLE['composition_timezone']))
