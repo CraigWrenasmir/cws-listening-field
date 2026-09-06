@@ -183,6 +183,20 @@ for p in cat:
  for group in p.get('tuplet_groups',[]):
   key=('1' if group['hand']=='rh' else '2',group['actual'],group['normal'])
   assert tuplets[key]==group['count'],('Notated tuplet count mismatch',p['op'],group,tuplets[key])
+ for number,spec in enumerate(p.get('tuplet_spans',[]),1):
+  group=sorted([e for e in p['events'] if e['hand']==spec['hand'] and (not spec.get('voice') or e.get('voice')==spec['voice']) and spec['start_beat']<=e['offset']<spec['end_beat']-1e-8],key=lambda e:e['offset'])
+  assert len(group)==spec['actual']
+  xml_notes={n.get('id'):n for n in r.findall('.//part/measure/note') if n.get('id')}
+  for i,event in enumerate(group):
+   n=xml_notes[event['id']]
+   assert n.findtext('type')==n.findtext('time-modification/normal-type')=='eighth'
+   assert int(n.findtext('time-modification/actual-notes'))==spec['actual'] and int(n.findtext('time-modification/normal-notes'))==spec['normal']
+   assert n.findtext('stem')==spec.get('stem','down')
+   assert [(b.get('number'),b.text) for b in n.findall('beam')]==[('1','begin' if i==0 else 'end' if i==len(group)-1 else 'continue')]
+   marks=n.findall('notations/tuplet')
+   expected=[('start',str(number))] if i==0 else [('stop',str(number))] if i==len(group)-1 else []
+   assert [(t.get('type'),t.get('number')) for t in marks]==expected,('Tuplet bracket span',p['op'],event['id'])
+   if i==0:assert marks[0].get('bracket')=='yes' and marks[0].get('placement')=='above'
  for crossing in p.get('polyrhythms',[]):
   start=crossing['start_beat'];end=crossing['end_beat']
   for hand in ['rh','lh']:
@@ -231,6 +245,7 @@ for p in cat:
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
+ if p.get('tuplet_spans'):report[-1]['verified_tuplet_brackets']=p['tuplet_spans']
  if p.get('clef_changes'):report[-1]['verified_clef_changes']=p['clef_changes']
  if p.get('meters'):report[-1]['verified_meter_changes']=[dict(beat=tick/960,meter=signature) for tick,signature in expected_meters]
  if p['op']>=7:

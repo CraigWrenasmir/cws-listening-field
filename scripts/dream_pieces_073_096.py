@@ -115,4 +115,59 @@ F3:3 G3:2
   phrase_arcs=[[0,19.5,4],[20,44.5,4],[45,69.5,4],[70,89.5,4],[90,115,-2]],
   lower_entries=[[0,14],[45,59],[105,115]],inner_entries=[[25,35],[60,70],[100,110]],tenor_entries=[[0,15],[45,60],[90,100]],pedal_lift=.24,gate=.995,
   note='The held bass remains physically sustained through the short pedal refreshes. Both inner voices breathe around it, with the tenor especially clear in the two long bass fields. The tritone-related middle passage expands the harmonic space before the returning theme and final added-sixth major ninth soften into the low register.'))
+,
+dict(op=74,title='Camellia Wake',key='c#',fifths=4,meter='12/8',bpm=57,
+ description='Orchid Trestle’s opening becomes C-sharp–D-sharp–B–E inside a nine-note ribbon. Three such ribbons each pass across four slower lower notes, then settle on a two-beat note inside the compound bar. C-major and G-major windows briefly loosen the tonal centre before the line returns through a soft dominant to a C-sharp-minor ninth.',
+ difficulty='Advanced nonuplets over a slower lower line',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 1, 5 and 9, nine RH eighth-note nonuplets share four quarter beats with four LH quarter notes. Treat each group as one unaccented contour, then let the final two beats settle. The sweep and settling note in bar 5 descend across more than an octave; plan its fingering before joining the hands. Keep the later chord tops gently voiced as the line returns to the middle register.',
+ parent_opus=73,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['C#','D#','B','E']),
+ ancestry=dict(source_opus=73,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=5,source_pitches=['D','E','C','F'],transposition_semitones=11),
+ tuplet_groups=[dict(hand='rh',actual=9,normal=8,count=27)],
+ tuplet_spans=[dict(hand='rh',start_beat=b*6,end_beat=b*6+4,actual=9,normal=8,stem='down') for b in [0,4,8]],
+ polyrhythms=[dict(start_beat=b*6,end_beat=b*6+4,rh_notes=9,lh_notes=4) for b in [0,4,8]],
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*2,i*2+1.76] for i in range(48)],
+ rh='''
+C#5:4/9 D#5:4/9 B4:4/9 E5:4/9 F#5:4/9 G#5:4/9 F#5:4/9 E5:4/9 D#5:4/9 C#5:2
+B4:3 D#5:1 C#5:2
+G#4+B4+F#5:3 E5:1 D#5:2
+E5:2 F#5:.5 G#5:.5 B5:2 A5:1
+G#5:4/9 A5:4/9 G#5:4/9 F#5:4/9 E5:4/9 D#5:4/9 C#5:4/9 B4:4/9 A4:4/9 G#4:2
+G4+B4+E5:4 D5:1 C5:1
+A4+D5+G5:3 F5:1 E5:2
+F#5:3 E5:1 D5:2
+E5:4/9 F#5:4/9 G#5:4/9 B5:4/9 C#6:4/9 B5:4/9 A5:4/9 G#5:4/9 F#5:4/9 E5:2
+D5+G5+C6:3 B5:1 A5:2
+G#5:4 F#5:1 E5:1
+D#5:3 C#5:1 B4:2
+D#4+F#4+B#4:3 C#5:1 B4:2
+A4:3 G#4:1 F#4:2
+E4+G#4+D#5:3 C#5:1 B4:2
+E4+G#4+D#5:6
+''',
+ lh='''
+C#3:1 G#3:1 B3:1 D#4:1 E4:1 B3:1
+A2:2 E3:1 G#3:1 B3:1 C#4:1
+E3:1 B3:1 D#4:1 C#4:1 B3:2
+F#3:1 C#4:1 E4:1 D#4:1 C#4:2
+C#3:1 E3:1 G#3:1 B3:1 D#4:1 C#4:1
+C3:1 G3:.5 B3:1.5 E4:1 D4:2
+F3:1 C4:1 E4:1 D4:1 C4:2
+B2:2 F#3:1 A3:1 C#4:1 B3:1
+A3:1 B3:1 C#4:1 D#4:1 E4:1 D#4:1
+G3:2 D3:1 F#3:1 A3:1 B3:1
+E3:1 B3:.5 D#4:1.5 F#4:1 E4:2
+D#3:1 A#3:1 C#4:1 F#4:1 E4:1 B3:1
+G#2:1 D#3:1 F#3:1 B#3:1 C#4:1 B3:1
+A2:2 E3:1 G#3:1 B3:1 A3:1
+F#2:1 C#3:1 E3:1 A3:1 G#3:2
+C#3+G#3:6
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'pp',7:'mp',8:'pp',9:'p',10:'mp',11:'p',12:'pp',13:'p',14:'pp',15:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,16)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,4),('diminuendo',5,6),('diminuendo',7,8),('crescendo',9,10),('diminuendo',10,12),('diminuendo',13,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[57,49,55,61,56,45,58,47,57,62,53,46,51,43,36,27],
+  phrase_arcs=[[0,23.5,4],[24,47.5,4],[48,71.5,4],[72,96,-2]],
+  lower_entries=[[6,12],[30,36],[60,66],[84,90]],pedal_lift=.24,gate=.985,
+  note='The nine-note figures rise or fall as complete arcs, staying light over the slower lower notes. Their settling tails let the compound metre breathe. The final four bars become progressively quieter and closer in register, leaving the minor ninth to ring in the warm room.'))
 ]
