@@ -604,4 +604,74 @@ A2+E3:3~ A2+E3:1.5
   phrase_arcs=[[0,17.8,3],[18,35.8,4],[36,53.8,3],[54,71.8,4],[72,90,-2]],
   inner_entries=[[15,16.5],[33,34.5],[60,61.5],[76.5,78]],lower_entries=[[13.5,15],[31.5,33],[58.5,60],[78,79.5]],pedal_lift=.2,gate=.995,
   note='The moving arpeggio should retain its shape and weight as it changes hands. Hold the upper melody through each complete bar, including the space after the arpeggio ends. The descending handover later in the piece releases the movement back towards the lower register before the quiet minor ninth.'))
+,
+dict(op=105,title='Ochre Vestibule',key='d',fifths=-1,meter='6/8',bpm=54,
+ meters=['6/8','6/8','6/8','6/8','3/4','3/4','3/4','3/4','6/8','6/8','6/8','6/8','3/4','3/4','3/4','3/4','6/8','6/8','6/8','6/8','3/4','3/4','3/4','6/8'],
+ description='Copper Headland’s C–E-flat–F–G becomes D–F–G–A. Equal-length bars alternate between compound and simple readings, while three paired passages set three upper quarter notes against two dotted-quarter lower chords. Tied notes connect the changing groups. D-minor, C-major and D-flat reflections return to a close-spaced minor ninth.',
+ difficulty='Advanced hemiola, changing metre and jazz chord balance',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every bar contains three quarter beats, whether written as 6/8 or 3/4. In bars 6–7, 14–15 and 22–23, the RH has three equal quarter notes while the LH has two equal dotted-quarter dyads. Keep the two layers independent without forcing an accent at their meetings. Upper ties connect bars 4–5, 11–12 and 19–20. The final RH chord uses all five fingers within a nine-semitone span.',
+ parent_opus=104,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['D','F','G','A']),
+ ancestry=dict(source_opus=104,source_hand='rh',source_voice='upper',source_start_beat=45,source_end_beat=49.5,source_pitches=['C','Eb','F','G'],transposition_semitones=2),
+ polyrhythms=[dict(start_beat=s,end_beat=s+3,rh_notes=3,lh_notes=2) for s in [15,18,39,42,63,66]],
+ system_starts=[1,4,7,10,13,16,19,22],page_starts=[13],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*3+left,(bar-1)*3+right-.18] for bar,cuts in enumerate([[0,1,1.5,2,2.5,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,1,1.5,2,2.5,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,1,2,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,1,1.5,2,2.5,3],[0,1,2,3],[0,1,2,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,1,2,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,1,1.5,2,2.5,3],[0,1,1.5,2,3],[0,1,2,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,3]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+D5:1 F5:.5 G5:.5 A5:1
+Bb5:1 A5:.5 G5:.5 F5:1
+E5:1 G5:.5 A5:.5 Bb5:1
+A5:1.5 G5:1 F5:.5~
+F5:.5 E5:.5 D5:1 C5:1
+F5:1 E5:1 D5:1
+C5:1 Eb5:1 G5:1
+F5:1 Eb5:1 D5:1
+E5:1 G5:.5 A5:.5 G5:1
+F#5:1 A5:.5 B5:.5 A5:1
+G5:1.5 F#5:1 E5:.5~
+E5:1 D5:1 C5:1
+F5:1 Ab5:1 C6:1
+Ab5:1 Gb5:1 F5:1
+Eb5:1 Db5:1 C5:1
+Db5:1 F5:1 Ab5:1
+G5:1 Bb5:.5 Ab5:.5 F5:1
+Eb5:1 G5:.5 F5:.5 D5:1
+C5:1.5 Eb5:1 G5:.5~
+G5:1 F5:1 E5:1
+D5:1 F5:1 A5:1
+E5:1 D5:1 C#5:1
+D5:1 F5:1 E5:1
+C5+D5+E5+F5+A5:3
+''',
+ lh='''
+D3:1 A3:1 C4:.5 E4:.5
+Bb3:1.5 F3:.5 A3:1
+G3:1 D3:.5 F3:.5 A3:1
+A2:1 E3:.5 G3:.5 C#4:1
+D3:1 F3:.5 A3:.5 C4:1
+Bb2+F3:1.5 A3+C4:1.5
+Eb3+Bb3:1.5 G3+Db4:1.5
+C3:1 G3:1 Bb3:1
+C3:1.5 G3:.5 B3:1
+D3:1 A3:.5 C4:.5 E4:1
+E3:1 B3:1 D4:.5 C#4:.5
+A3:1 E3:1 G3:1
+Db3:1 Ab3:1 C4:1
+Db3+Ab3:1.5 C4+Eb4:1.5
+Ab2+Eb3:1.5 Gb3+Bb3:1.5
+Bb2:1 F3:1 Ab3:1
+Eb3:1 Bb3:.5 Db4:.5 C4:1
+C3:1.5 G3:.5 Bb3:1
+Ab2:1 Eb3:1 G3:.5 Bb3:.5
+C4:1 G3:.5 Bb3:.5 E4:1
+D3:1 A3:1 C4:1
+A2+E3:1.5 G3+B3:1.5
+Bb2+F3:1.5 A3+C4:1.5
+D3+A3:3
+''',sections={1:'p',2:'mp',3:'p',4:'pp',5:'p',6:'p',7:'mp',8:'pp',9:'p',10:'mp',11:'p',12:'pp',13:'mp',14:'p',15:'pp',16:'p',17:'mp',18:'p',19:'pp',20:'p',21:'p',22:'pp',23:'pp',24:'pp'},words={1:'poco rubato',23:'poco rit.'},
+ slurs=[(1,5),(6,8),(9,12),(13,16),(17,20),(21,24)],lower_phrases=[(1,2),(3,4),(5,5),(6,7),(8,8),(9,10),(11,12),(13,13),(14,15),(16,16),(17,18),(19,20),(21,21),(22,24)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,5),('diminuendo',6,8),('crescendo',9,10),('diminuendo',11,12),('diminuendo',13,16),('diminuendo',17,20),('diminuendo',21,24)],tempo_changes={},group=3,
+ performance=dict(rubato=[54,49,55,48,53,51,50,46,54,57,49,45,56,52,48,46,55,50,47,44,51,45,38,27],
+  phrase_arcs=[[0,14.8,3],[15,23.8,2],[24,35.8,4],[36,47.8,3],[48,59.8,3],[60,72,-2]],
+  lower_entries=[[15,21],[39,45],[63,69]],pedal_lift=.18,gate=.995,
+  note='The pulse can be heard in two or in three without changing the length of the bar. Let the hemiola passages float between those readings, keeping the upper notes connected and the lower chords soft. The tied phrases ease the transitions, and the last close-spaced minor ninth settles slowly.'))
 ]
