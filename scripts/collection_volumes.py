@@ -59,11 +59,14 @@ def build_volumes(root, catalog, selected=None):
     rows=[]
     for v in volumes:
         status='' if v['complete'] else ' · growing volume'
+        opus=str(v['first']) if v['first']==v['last'] else f'{v["first"]}–{v["last"]}'
+        count=f'{v["count"]} work'+('' if v['count']==1 else 's')
+        journey=escape(v['first_title']) if v['count']==1 else f'{escape(v["first_title"])} → {escape(v["last_title"])}'
         rows.append(f'''<section class="volume" aria-labelledby="volume-{v['number']}">
 <span class="volume-number" aria-hidden="true">{v['number']:02d}</span><div>
 <h2 id="volume-{v['number']}">Volume {v['number']:02d}</h2>
-<p class="volume-range">CWS Op. {v['first']}–{v['last']} · {v['count']} works{status}</p>
-<p class="volume-journey">{escape(v['first_title'])} → {escape(v['last_title'])}</p>
+<p class="volume-range">CWS Op. {opus} · {count}{status}</p>
+<p class="volume-journey">{journey}</p>
 <div class="volume-links"><a href="{Path(v['pdf']).name}" download>Scores <span>PDF · {v['pages']} pages · {mb(v['pdf_bytes'])}</span></a>
 <a href="{Path(v['zip']).name}" download>Complete volume <span>ZIP · {mb(v['zip_bytes'])}</span></a></div>
 </div></section>''')

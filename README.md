@@ -40,6 +40,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 22 | Sedge Observatory | 5/4 | 186 | [Score](pieces/CWS_Op_022_Sedge_Observatory/CWS_Op_022_Sedge_Observatory.pdf) | [MP3](pieces/CWS_Op_022_Sedge_Observatory/CWS_Op_022_Sedge_Observatory.mp3) |
 | CWS Op. 23 | Tern Palimpsest | 4/4 | 151 | [Score](pieces/CWS_Op_023_Tern_Palimpsest/CWS_Op_023_Tern_Palimpsest.pdf) | [MP3](pieces/CWS_Op_023_Tern_Palimpsest/CWS_Op_023_Tern_Palimpsest.mp3) |
 | CWS Op. 24 | Amber Isobath | 4/4 | 190 | [Score](pieces/CWS_Op_024_Amber_Isobath/CWS_Op_024_Amber_Isobath.pdf) | [MP3](pieces/CWS_Op_024_Amber_Isobath/CWS_Op_024_Amber_Isobath.mp3) |
+| CWS Op. 25 | Iris Viaduct | 7/4 | 178 | [Score](pieces/CWS_Op_025_Iris_Viaduct/CWS_Op_025_Iris_Viaduct.pdf) | [MP3](pieces/CWS_Op_025_Iris_Viaduct/CWS_Op_025_Iris_Viaduct.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

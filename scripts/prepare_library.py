@@ -49,6 +49,10 @@ for p in cat:
   events=[dict(id=e['id'],h=e['hand'],b=e['offset'],d=e['duration'],p=max(e['pitches']),ps=e['pitches'],s=e['seconds'],e=e['end_seconds']) for e in p['events']])
  manifest.append(entry)
 (ROOT/'library.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
+index=ROOT/'index.html';html=index.read_text()
+html=re.sub(r'(id="lf-work-count">)\d+ WORKS',lambda m:m[1]+f'{len(cat):02d} WORKS',html)
+html=re.sub(r'(id="lf-counter"[^>]*>)02 / \d+',lambda m:m[1]+f'02 / {len(cat):02d}',html)
+index.write_text(html)
 volumes=build_volumes(ROOT,cat,args.opus)
 readme=ROOT/'README.md'
 if readme.exists():
