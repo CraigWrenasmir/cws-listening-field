@@ -3572,5 +3572,91 @@
       "sounded_pitches_per_minute": 54.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Marigold Detour",
+    "opus": 59,
+    "score_pages": 2,
+    "bars": 25,
+    "pitch_onsets": 154,
+    "audio_seconds": 90.15,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 87,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 42,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-against-three nocturne",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In the declared crossing bars, four dotted eighths share the full 6/8 bar with three quarter notes. The RH carries the four-note gesture first; the LH takes it in bars 11 and 20. Both parts must stay even without forcing accents on their intermediate alignments. Keep the high treble soft, and let the longer notes between these gestures breathe."
+    },
+    "verified_polyrhythm_spans": [
+      {
+        "start_beat": 0,
+        "end_beat": 3,
+        "rh_notes": 4,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 12,
+        "end_beat": 15,
+        "rh_notes": 4,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 27,
+        "end_beat": 30,
+        "rh_notes": 4,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 30,
+        "end_beat": 33,
+        "rh_notes": 3,
+        "lh_notes": 4
+      },
+      {
+        "start_beat": 48,
+        "end_beat": 51,
+        "rh_notes": 4,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 57,
+        "end_beat": 60,
+        "rh_notes": 3,
+        "lh_notes": 4
+      },
+      {
+        "start_beat": 60,
+        "end_beat": 63,
+        "rh_notes": 4,
+        "lh_notes": 3
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 7,
+      "sounded_pitches_per_minute": 105.8,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

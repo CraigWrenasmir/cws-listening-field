@@ -742,4 +742,74 @@ E3+B3:6
   phrase_arcs=[[0,17,3],[18,35,3],[36,59,4],[60,84,-2]],
   lower_entries=[[18,24],[42,48],[66,72]],inner_entries=[[24,30],[54,60]],pedal_lift=.22,gate=.995,
   note='The chromatic neighbour is a brief change of light before the upper line settles. The inner voice comes a little closer in two of the distant reflections. The whole final phrase withdraws, leaving the added ninth above an open fifth rather than repeating the major third.'))
+,
+dict(op=59,title='Marigold Detour',key='bb',fifths=-5,meter='6/8',bpm=61,
+ description='Gossamer Junction’s chromatic turn becomes B-flat–A-flat–G-flat–A. Four gently spaced notes pass over three in the other hand; twice the roles reverse. The treble opens into a high B-flat-minor register before a C-major/D-minor reflection draws it closer. Fourth-based chords and a later A-flat-minor colour return to a quiet B-flat-minor seventh.',
+ difficulty='Advanced four-against-three nocturne',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In the declared crossing bars, four dotted eighths share the full 6/8 bar with three quarter notes. The RH carries the four-note gesture first; the LH takes it in bars 11 and 20. Both parts must stay even without forcing accents on their intermediate alignments. Keep the high treble soft, and let the longer notes between these gestures breathe.',
+ parent_opus=58,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['Bb','Ab','Gb','A']),
+ ancestry=dict(source_opus=58,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=6,source_pitches=['G#','F#','E','G'],transposition_semitones=2),
+ polyrhythms=[dict(start_beat=0,end_beat=3,rh_notes=4,lh_notes=3),dict(start_beat=12,end_beat=15,rh_notes=4,lh_notes=3),dict(start_beat=27,end_beat=30,rh_notes=4,lh_notes=3),dict(start_beat=30,end_beat=33,rh_notes=3,lh_notes=4),dict(start_beat=48,end_beat=51,rh_notes=4,lh_notes=3),dict(start_beat=57,end_beat=60,rh_notes=3,lh_notes=4),dict(start_beat=60,end_beat=63,rh_notes=4,lh_notes=3)],
+ page_starts=[13],system_starts=[1,5,9,13,17,21],
+ rh='''
+Bb5:.75 Ab5:.75 Gb5:.75 A5:.75
+Bb5:2 Ab5:1
+F5+Ab5+Eb6:1.5 Db6:.5 C6:1
+Bb5:1.5 Ab5:.5 F5:1
+Gb5:.75 Bb5:.75 Db6:.75 C6:.75
+Bb5:2 Ab5:1
+Eb5+Ab5+Db6:1.5 C6:.5 Bb5:1
+Ab5:2.5 R:.5
+G5:1.5 F5:.5 E5:1
+E5:.75 G5:.75 B5:.75 D6:.75
+C6:1 B5:1 A5:1
+G5:2 E5:1
+F5:1.5 D5:.5 C5:1
+Eb5:2 Db5:1
+Bb4+Db5+Ab5:1.5 Gb5:.5 F5:1
+E5:1 F5:.5 Gb5:1.5
+F5:.75 Ab5:.75 Cb6:.75 Bb5:.75
+Db5+Gb5+Cb6:1.5 Bb5:.5 Ab5:1
+Gb5:2 F5:1
+F5:1 Eb5:1 Db5:1
+C5:.75 Eb5:.75 G5:.75 Bb5:.75
+A5:1.5 G5:.5 F5:1
+Gb5:2 F5:1
+Db5:1 C5:.5 Bb4:1.5
+Db4+F4+Ab4:3
+''',
+ lh='''
+Bb2:1 Db3:1 F3:1
+Eb3:1.5 Bb3:.5 Db4:1
+Ab2:1.5 Eb3:.5 Gb3:1
+Db3:2 Ab3:.5 F3:.5
+Gb3:1 Ab3:1 Bb3:1
+Eb3:1 Bb3:.5 Db4:1.5
+Ab2:1.5 Eb3:1 Gb3:.5
+Db3:1 Ab3:.5 Cb4:1.5
+C3:1.5 G3:.5 B3:1
+C3:1 E3:1 G3:1
+D3:.75 F3:.75 A3:.75 C4:.75
+G2:1.5 D3:.5 F3:1
+A2:1 E3:.5 G3:1.5
+Ab2:2 Eb3:1
+Gb2:1 Db3:1 F3:1
+F3:1 C4:.5 Eb3:1.5
+Ab2:1 Cb3:1 Eb3:1
+Cb3:1.5 Gb3:.5 Bb3:1
+Db3:2 Ab3:1
+Bb2:.75 Db3:.75 F3:.75 Ab3:.75
+C3:1 E3:1 G3:1
+F3:1.5 C4:.5 Eb4:1
+Gb3:2 Db4:.5 Bb3:.5
+F3:1.5 Ab3:.5 C4:1
+Bb2+F3:3
+''',sections={1:'p',3:'mp',4:'pp',5:'p',7:'mp',8:'pp',9:'p',10:'mp',12:'pp',13:'p',14:'pp',15:'p',16:'mp',17:'p',18:'mp',19:'pp',20:'p',21:'mp',22:'p',23:'pp'},words={1:'poco rubato',24:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,13),(14,19),(20,25)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,16),(17,20),(21,23),(24,25)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,7),('diminuendo',7,8),('crescendo',9,10),('diminuendo',10,13),('crescendo',14,16),('diminuendo',18,19),('crescendo',20,21),('diminuendo',21,25)],tempo_changes={},group=4,
+ performance=dict(rubato=[61,57,63,50,60,56,62,47,58,64,59,51,48,50,56,61,58,63,49,57,62,54,47,41,31],
+  phrase_arcs=[[0,11,3],[12,23,4],[24,38,4],[39,56,4],[57,75,-2]],
+  lower_entries=[[30,33],[57,60],[69,72]],pedal_bars=list(range(1,26)),pedal_lift=.2,gate=.99,
+  note='Each crossing is shaped as one small floating gesture. The lower voice comes forward when it carries the four-note figure, then recedes beneath the high melody. The closing five-bar phrase descends into a quieter register and a plain minor seventh.'))
 ]

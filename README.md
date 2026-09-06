@@ -74,6 +74,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 56 | Juniper Ferry | 12/8 | 210 | [Score](pieces/CWS_Op_056_Juniper_Ferry/CWS_Op_056_Juniper_Ferry.pdf) | [MP3](pieces/CWS_Op_056_Juniper_Ferry/CWS_Op_056_Juniper_Ferry.mp3) |
 | CWS Op. 57 | Tamarisk Angle | 7/8 | 164 | [Score](pieces/CWS_Op_057_Tamarisk_Angle/CWS_Op_057_Tamarisk_Angle.pdf) | [MP3](pieces/CWS_Op_057_Tamarisk_Angle/CWS_Op_057_Tamarisk_Angle.mp3) |
 | CWS Op. 58 | Gossamer Junction | 6/4 | 103 | [Score](pieces/CWS_Op_058_Gossamer_Junction/CWS_Op_058_Gossamer_Junction.pdf) | [MP3](pieces/CWS_Op_058_Gossamer_Junction/CWS_Op_058_Gossamer_Junction.mp3) |
+| CWS Op. 59 | Marigold Detour | 6/8 | 154 | [Score](pieces/CWS_Op_059_Marigold_Detour/CWS_Op_059_Marigold_Detour.pdf) | [MP3](pieces/CWS_Op_059_Marigold_Detour/CWS_Op_059_Marigold_Detour.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
