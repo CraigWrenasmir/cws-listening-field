@@ -336,7 +336,8 @@ def make_score(p):
             offset=0;refs[('tenor',mi)]=[]
             for ei,(ps,dur) in enumerate(row):
                 sustain=ps.endswith('~');ps=ps.rstrip('~')
-                if ps=='R':n=note.Rest(quarterLength=dur)
+                if ps=='R':
+                    n=note.Rest(quarterLength=dur);n.stepShift=4
                 elif '+' in ps:n=chord.Chord(ps.split('+'),quarterLength=dur)
                 else:n=note.Note(ps,quarterLength=dur)
                 n.id=f'cws{p["op"]}-lh-m{mi}-n{ei+1001}'

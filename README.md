@@ -71,6 +71,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 53 | Viridian Terrace | 7/4 | 138 | [Score](pieces/CWS_Op_053_Viridian_Terrace/CWS_Op_053_Viridian_Terrace.pdf) | [MP3](pieces/CWS_Op_053_Viridian_Terrace/CWS_Op_053_Viridian_Terrace.mp3) |
 | CWS Op. 54 | Fennel Tangent | 3/4 | 186 | [Score](pieces/CWS_Op_054_Fennel_Tangent/CWS_Op_054_Fennel_Tangent.pdf) | [MP3](pieces/CWS_Op_054_Fennel_Tangent/CWS_Op_054_Fennel_Tangent.mp3) |
 | CWS Op. 55 | Aster Verge | 9/8 | 174 | [Score](pieces/CWS_Op_055_Aster_Verge/CWS_Op_055_Aster_Verge.pdf) | [MP3](pieces/CWS_Op_055_Aster_Verge/CWS_Op_055_Aster_Verge.mp3) |
+| CWS Op. 56 | Juniper Ferry | 12/8 | 210 | [Score](pieces/CWS_Op_056_Juniper_Ferry/CWS_Op_056_Juniper_Ferry.pdf) | [MP3](pieces/CWS_Op_056_Juniper_Ferry/CWS_Op_056_Juniper_Ferry.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

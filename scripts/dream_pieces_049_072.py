@@ -512,4 +512,103 @@ F3:1.5 E3:1.5 F3:1.5
   phrase_arcs=[[0,17,3],[18,35,4],[36,58,4],[58.5,81,3]],
   lower_entries=[[9,13.5],[36,40.5],[63,67.5]],tenor_entries=[[0,4.5],[27,36],[72,76.5]],pedal_lift=.22,gate=.995,
   note='The opening chromatic tenor is slightly more present beneath a softly held upper E. Three gentle pedal refreshes per bar keep the changing line clear. The large harmonic journey gradually opens, then the returning tenor and descending melody come closer together before the final added ninth.'))
+,
+dict(op=56,title='Juniper Ferry',key='e',fifths=1,meter='12/8',bpm=61,
+ description='A new branch returns to Orchard Static’s E–C–D–A, transposed into B–G–A–E. The opening passes this thought through all four voices in successive bars: upper melody, tenor, inner voice and bass. Broader F-major, E-major and A-flat reflections follow. The original gesture returns close to the middle of the keyboard, and the final E-minor chord is left quietly open.',
+ difficulty='Advanced four-voice imitative nocturne',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The same four-note phrase enters successively in the upper voice, left-hand tenor, right-hand inner voice and bass during bars 1–4, with the same dotted-quarter rhythm and changing octave. Bring each entry forward without hard accents. Sustain the other lines independently, observing rests where voices withdraw. The return moves into a closer register and needs careful balance between the hands.',
+ parent_opus=3,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['B','G','A','E']),
+ ancestry=dict(source_opus=3,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['E','C','D','A'],transposition_semitones=7),
+ page_starts=[13],
+ rh='''
+B4:1.5 G4:1.5 A4:1.5 E4:1.5
+G4:3 F#4:3
+D5:3 C5:1.5 B4:1.5
+F#5:3 E5:3
+C5:3 A4:3
+Bb4:2 C5:.5 D5:.5 E5:3
+F5:4.5 E5:1.5
+D#5:3 C#5:1.5 B4:1.5
+E5:6
+G5:1.5 E5:1.5 F5:1.5 C5:1.5
+Db5:4.5 C5:1.5
+Bb4:3 Ab4:3
+C5:3 D5:1.5 Eb5:1.5
+D5:4.5 B4:1.5
+B4:1.5 G4:1.5 A4:1.5 E4:1.5
+G4:3 F#4:1.5 E4:1.5
+A4:4.5 G4:1.5
+F#4:1.5 E4:1.5 D#4:3
+E4:6
+''',
+ rh_inner='''
+E4:1.5 D4:1.5 C4:1.5 B3:1.5
+D4:1 E4:.5 D4:1.5 C4:3
+B4:1.5 G4:1.5 A4:1.5 E4:1.5
+A4:1.5 G4:1.5 F#4:1.5 E4:1.5
+F4:2 E4:1 D4:3
+F4:1 A4:.5 G4:1.5 Bb4:3
+A4:3 C5:1.5 B4:1.5
+F#4:1 A4:.5 G#4:1.5 F#4:3
+G#4:2 B4:1 C#5:1.5 B4:1.5
+B4:1 C5:.5 B4:1.5 A4:1.5 G4:1.5
+Eb4:1 G4:.5 Ab4:1.5 G4:3
+Db4:3 F4:1.5 Eb4:1.5
+F4:2 Ab4:1 G4:3
+F4:1 A4:.5 G4:1.5 F4:3
+E4:1.5 D4:1.5 C4:1.5 B3:1.5
+D4:1 C4:.5 B3:1.5 A3:3
+C4:1.5 E4:1.5 F#4:1.5 E4:1.5
+B3:1.5 A3:1.5 F#3:3
+B3:3 C#4:1.5 B3:1.5
+''',
+ lh='''
+E3:3 G3:3
+E3:4.5 C3:1.5
+C3:3 E3:3
+B2:1.5 G2:1.5 A2:1.5 E2:1.5
+F3:3 D3:3
+Bb2:1.5 D3:4.5
+D3:1.5 F3:4.5
+B2:1.5 D#3:4.5
+E3:6
+C3:1.5 E3:4.5
+Ab2:1.5 C3:4.5
+Db3:3 F3:3
+Bb2:1.5 D3:4.5
+G2:1.5 B2:4.5
+E3:3 G3:3
+C3:3 D3:3
+A2:1.5 C3:4.5
+B2:3 D#3:3
+E3:6
+''',
+ lh_upper='''
+R:6
+B3:1.5 G3:1.5 A3:1.5 E3:1.5
+R:3 B3:3
+D3:3 C3:1.5 B2:1.5
+A3:3 F3:3
+F3:1 A3:.5 C4:1.5 Bb3:3
+A3:1 C4:.5 E4:1.5 D4:3
+F#3:1 A3:.5 C#4:1.5 B3:3
+B3:3 D#4:1.5 C#4:1.5
+G3:1 B3:.5 D4:1.5 C4:3
+Eb3:1 G3:.5 Bb3:1.5 Ab3:3
+Ab3:2 C4:1 Bb3:3
+F3:1 Ab3:.5 C4:1.5 Bb3:3
+D3:1 F3:.5 A3:1.5 G3:3
+R:6
+G3:3 F#3:3
+E3:1 G3:.5 B3:1.5 A3:3
+R:6
+G3:3 F#3:3
+''',sections={1:'p',3:'mp',4:'p',5:'pp',6:'p',7:'mp',8:'p',9:'pp',10:'mp',11:'p',12:'pp',13:'p',14:'mp',15:'p',16:'pp',17:'p',18:'pp'},words={1:'poco rubato',18:'poco rit.'},
+ slurs=[(1,4),(5,9),(10,14),(15,19)],lower_phrases=[(1,2),(3,4),(5,7),(8,10),(11,13),(14,16),(17,19)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,5),('crescendo',5,7),('diminuendo',7,9),('diminuendo',10,12),('crescendo',12,14),('diminuendo',15,19)],tempo_changes={},group=4,
+ performance=dict(rubato=[61,58,63,55,51,59,64,55,48,63,56,49,59,62,53,47,52,42,31],
+  phrase_arcs=[[0,23,4],[24,53,4],[54,83,4],[84,114,-2]],
+  lower_entries=[[18,24],[72,78],[102,114]],inner_entries=[[12,18]],tenor_entries=[[6,12],[42,48],[96,102]],pedal_bars=list(range(1,20)),pedal_lift=.24,gate=.995,
+  note='The opening phrase is passed between voices with a little prominence for the tenor, inner-voice and bass entries. The later upper melody unfolds in longer spans over softer inner movement. As the opening returns, the register contracts and the final minor chord is allowed to fade without a new surge.'))
 ]

@@ -66,7 +66,9 @@ for p in cat:
             base=velocities[dyn]
             # Lower part is a singing line. It comes forward at thematic entries.
             voice_adjust=-8 if hi==1 else 0
-            if ev.get('voice')=='inner':voice_adjust=-7
+            if ev.get('voice')=='inner':
+                voice_adjust=-7
+                if performance and any(start<=ev['offset']<end for start,end in performance.get('inner_entries',[])):voice_adjust=-1
             if performance and hi==1 and any(start<=ev['offset']<end for start,end in performance['lower_entries']):voice_adjust=-2
             if hi==1 and ((p['op'] in [2,6] and ev['bar']<=4) or (p['op']==3 and 13<=ev['bar']<=14) or (p['op']==4 and 9<=ev['bar']<=10) or (p['op']==5 and 13<=ev['bar']<=14)):voice_adjust=-2
             if ev.get('voice')=='tenor':
