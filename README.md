@@ -137,6 +137,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 119 | Aster Underpass | 7/8, 5/8, 9/8, 11/8, 4/4, 6/8, 5/4 (changing) | 127 | [Score](pieces/CWS_Op_119_Aster_Underpass/CWS_Op_119_Aster_Underpass.pdf) | [MP3](pieces/CWS_Op_119_Aster_Underpass/CWS_Op_119_Aster_Underpass.mp3) |
 | CWS Op. 120 | Juniper Anchorage | 4/4 | 171 | [Score](pieces/CWS_Op_120_Juniper_Anchorage/CWS_Op_120_Juniper_Anchorage.pdf) | [MP3](pieces/CWS_Op_120_Juniper_Anchorage/CWS_Op_120_Juniper_Anchorage.mp3) |
 | CWS Op. 121 | Tamarisk Window | 4/4 | 221 | [Score](pieces/CWS_Op_121_Tamarisk_Window/CWS_Op_121_Tamarisk_Window.pdf) | [MP3](pieces/CWS_Op_121_Tamarisk_Window/CWS_Op_121_Tamarisk_Window.mp3) |
+| CWS Op. 122 | Heather Backwater | 12/8 | 129 | [Score](pieces/CWS_Op_122_Heather_Backwater/CWS_Op_122_Heather_Backwater.pdf) | [MP3](pieces/CWS_Op_122_Heather_Backwater/CWS_Op_122_Heather_Backwater.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
