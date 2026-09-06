@@ -18,13 +18,14 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 12, Cloud Causeway — complete: 16 bars of 4/4, 121 sounded pitches, one inspected page, 84.90 seconds. A D-major ballad with B-minor shadows, a borrowed C-Lydian reflection, seven upper-voice ties across bar lines and twelve LH rhythm patterns. Two bass entries were lifted an octave for ease of playing. MusicXML/MIDI, audio, timing and layout checks passed; published; awaiting listening feedback.
 - Op. 13, Alder Passage — complete locally: 22 bars of 6/8, 133 sounded pitches, one inspected page, 75.90 seconds. The high E-minor opening returns an octave lower after C-major and D-major colours; the close spreads its added ninth between the hands. Seventeen LH rhythm patterns. Score/MIDI, audio, timing and layout checks passed; awaiting publication and listening feedback.
 - Op. 14, Salt Promenade — complete locally: 16 bars of 9/8, 130 sounded pitches, one inspected page, 76.97 seconds. A new branch from Silt Reverie moves through C minor, E-flat, D-flat and an F-to-B-flat dominant passage. Twelve LH rhythm patterns, one lower-voice tie, and a spacious added-ninth close. Score/MIDI, audio, timing and layout checks passed; awaiting publication and listening feedback.
-- Next: compose Op. 15, Pearl Footbridge; publish Op. 13–15 together.
+- Op. 15, Pearl Footbridge — complete locally: 19 bars of 3/4, 125 sounded pitches, one inspected page, 77.77 seconds. Salt Promenade's secondary descent becomes a B-flat-major melody; a G-dominant turn and borrowed E-flat minor lead to a major-ninth close. A bass landing was lowered for an easier connection. Score/MIDI, audio, timing, ancestry and layout checks passed; awaiting publication and listening feedback.
+- Next: publish Op. 13–15, then compose Op. 16, Fern Vestibule.
 
 ## Growth work to complete during this run
 
 - The family view now focuses on up to six nearby relatives; sculpture geometry is cached for at most twelve pieces, so the full catalogue does not allocate every curve at once.
 - Before collection downloads approach GitHub's file-size limit, split complete downloads into named volumes and expose all volume links. Check total Pages site size as audio accumulates. Do not push an oversized aggregate ZIP.
-- The music validator now checks whole-piece duplication/transposition and independently integrates MIDI tempo messages to verify audio/highlight onset times. It also reports left-hand rhythm-pattern variety and sounded pitches per minute. These statistics supplement score review and do not establish beauty.
+- The music validator now checks whole-piece duplication/transposition and independently integrates MIDI tempo messages to verify audio/highlight onset times. Declared ancestral fragments are now checked against their source notes and stated transposition. It also reports left-hand rhythm-pattern variety and sounded pitches per minute. These statistics supplement score review and do not establish beauty.
 
 Do not mark an opus complete on the strength of generated files alone. Each needs structural and audio checks, inspected score pages, documented ancestry, and a deliberate musical review. Keep generated candidates distinct from Craig's listening approval.
 

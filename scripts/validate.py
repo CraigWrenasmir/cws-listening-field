@@ -2,6 +2,7 @@ from pathlib import Path
 import json, xml.etree.ElementTree as ET, collections, subprocess, argparse
 import mido
 from music21 import converter, note, chord
+from music21.pitch import Pitch
 from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text());report=[]
@@ -59,6 +60,16 @@ for p in cat:
   signature=fingerprint(p)
   for earlier in cat:
    if earlier['op']<p['op']:assert signature!=fingerprint(earlier),('Whole-piece duplicate or transposition',p['op'],earlier['op'])
+ # Documented fragments are checked against both the ancestor and the child.
+ # Octave placement may change; the declared transposition relates pitch classes.
+ if p.get('ancestry'):
+  a=p['ancestry'];ancestor=next(x for x in cat if x['op']==a['source_opus'])
+  assert a['source_opus']==p['parent_opus']<p['op']
+  fragment=[e for e in ancestor['events'] if e['hand']==a['source_hand'] and a['source_start_beat']<=e['offset']<a['source_end_beat']][:4]
+  source_classes=[Pitch(n).pitchClass for n in a['source_pitches']]
+  assert [max(e['pitches'])%12 for e in fragment]==source_classes,('Ancestor fragment mismatch',p['op'])
+  child_classes=[Pitch(n).pitchClass for n in p['motif']['pitches']]
+  assert [(n+a['transposition_semitones'])%12 for n in source_classes]==child_classes,('Ancestral interval mismatch',p['op'])
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
  for measure in r.findall('.//part/measure'):
   cursor=0;max_end=0
