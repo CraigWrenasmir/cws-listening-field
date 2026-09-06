@@ -607,4 +607,72 @@ B2:2 G3:2
   phrase_arcs=[[0,15.5,3],[16,31.5,4],[32,47.5,4],[48,68,-2]],
   lower_entries=[[8,12],[40,44],[60,64]],inner_entries=[[20,28]],tenor_entries=[[20,28]],pedal_lift=.2,gate=.99,
   note='The outer Gs stay still as the middle texture lights up in alternate hands. Major thirds and sixths darken by a semitone in the second ripple bar. Each short note stays light and the pedal supplies continuity between hands; the slow outer line returns to the foreground afterwards.'))
+,
+dict(op=81,title='Magnolia Interval',key='bb',fifths=-5,meter='6/4',bpm=52,
+ description='Tamarisk Confluence’s inner ripple supplies B-flat–D-flat–E-flat–D-flat, now stretched into a quiet B-flat-minor melody. A D-flat pentatonic sweep appears alone in the treble, then returns two octaves lower at four-thirds of its original note lengths while the RH rests. The reunited voices move through E major, A dominant and D minor before a B-flat minor sixth/ninth close.',
+ difficulty='Advanced solo-hand exchanges, triplets and flexible minor-ballad voicing',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Bar 7 has twelve unaccompanied RH sixteenth notes over three beats, followed by a held D-flat. Bar 8 echoes those twelve pitches two octaves lower as LH eighth-note triplets over four beats; both RH voices remain silent. Let the returning lower contour expand naturally. The final close contains a soft C/D-flat second inside the RH chord, with an independently held G below it.',
+ parent_opus=80,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['Bb','Db','Eb','Db']),
+ ancestry=dict(source_opus=80,source_hand='rh',source_voice='inner',source_start_beat=20,source_end_beat=22,source_pitches=['B','D','E','D'],transposition_semitones=-1),
+ tuplet_groups=[dict(hand='lh',actual=3,normal=2,count=12)],
+ system_starts=[1,3,5,7,8,9,11,13],page_starts=[8],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.24] for bar,cuts in enumerate([[0,2,3,4,6],[0,2,3,4,6],[0,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,5,6],[0,1.5,3,6],[0,2,4,6],[0,2,3,5,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,3,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+Bb4:2 Db5:1 Eb5:2 Db5:1
+F5:3 Eb5:1 Db5:2
+Gb5:2 F5:1 Eb5:3
+C5+F5:3 Bb4+Eb5:1 Ab4+Db5:2
+F5:2 Ab5:1 G5:1 F5:2
+Eb5:6
+Db5:.25 Eb5:.25 F5:.25 Ab5:.25 Bb5:.25 Db6:.25 Eb6:.25 Db6:.25 Bb5:.25 Ab5:.25 F5:.25 Eb5:.25 Db5:3
+R:6
+F5:3 Eb5:1 Db5:2
+G#5:2 F#5:1 E5:3
+G5:2 F#5:1 E5:3
+F5:3 E5:1 D5:2
+F5:2 Eb5:1 Db5:3
+Eb5:2 Db5:1 C5:3
+C5+Db5+F5:6
+''',
+ rh_inner='''
+F4:3 Ab4:3
+Bb4:2 Ab4:2 Bb4:2
+Bb4:3 Db5:3
+R:6
+C5:3 Db5:1 C5:2
+A4:2 G4:2 Bb4:2
+R:6
+R:6
+C5:2 Bb4:1 Ab4:3
+B4:3 D#5:3
+C#5:3 B4:3
+A4:2 C5:1 B4:1 A4:2
+Bb4:3 Ab4:3
+A4:3 Gb4:1 F4:2
+G4:6
+''',
+ lh='''
+Bb2:2 F3:1 Ab3:1 C4:1 Bb3:1
+Gb2:3 Db3:1 F3:2
+Eb3:1 Bb3:2 Db4:1 Gb3:2
+Ab2:2 Eb3:1 Gb3:1 Bb3:1 C4:1
+Db3:2 Ab3:1 C4:1 Eb4:1 Db4:1
+C3:2 G3:1 Bb3:1 E4:1 Eb4:1
+R:6
+Db3:1/3 Eb3:1/3 F3:1/3 Ab3:1/3 Bb3:1/3 Db4:1/3 Eb4:1/3 Db4:1/3 Bb3:1/3 Ab3:1/3 F3:1/3 Eb3:1/3 Db3:2
+Bb2:2 F3:1 Ab3:2 C4:1
+E3:2 B3:1 D#4:1 F#4:1 C#4:1
+A2:2 E3:1 G3:1 B3:1 C#4:1
+D3:2 A3:1 C4:1 E4:1 D4:1
+Gb3:2 Db3:1 F3:1 Bb3:2
+F3:2 C4:1 Eb4:1 Gb3:1 A3:1
+Bb2:3 F3:3
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'pp',7:'p',9:'pp',10:'p',11:'mp',12:'p',13:'pp',14:'p',15:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,6),(7,7),(9,9),(10,12),(13,15)],lower_phrases=[(1,4),(5,6),(8,9),(10,12),(13,15)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('diminuendo',7,9),('crescendo',10,11),('diminuendo',12,13),('diminuendo',14,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[52,46,54,50,55,43,48,46,45,52,56,47,42,36,27],
+  phrase_arcs=[[0,35.5,4],[36,53.5,2],[54,71.5,4],[72,90,-2]],
+  lower_entries=[[6,12],[42,48],[72,78]],inner_entries=[[30,36],[66,72]],pedal_lift=.24,gate=.99,
+  note='The upper sweep is briefly unaccompanied, and the lower answer takes more time to trace the same pitches. Silence in the other hand makes each register feel distinct. The returning harmony stays gentle, with a restrained inner voice and a final minor sixth/ninth that lingers rather than closes firmly.'))
 ]
