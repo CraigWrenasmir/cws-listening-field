@@ -112,6 +112,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 94 | Jasmine Upperstorey | 6/4 | 128 | [Score](pieces/CWS_Op_094_Jasmine_Upperstorey/CWS_Op_094_Jasmine_Upperstorey.pdf) | [MP3](pieces/CWS_Op_094_Jasmine_Upperstorey/CWS_Op_094_Jasmine_Upperstorey.mp3) |
 | CWS Op. 95 | Amaranth Courtyard | 4/4 | 138 | [Score](pieces/CWS_Op_095_Amaranth_Courtyard/CWS_Op_095_Amaranth_Courtyard.pdf) | [MP3](pieces/CWS_Op_095_Amaranth_Courtyard/CWS_Op_095_Amaranth_Courtyard.mp3) |
 | CWS Op. 96 | Tilia Colonnade | 4/4 | 142 | [Score](pieces/CWS_Op_096_Tilia_Colonnade/CWS_Op_096_Tilia_Colonnade.pdf) | [MP3](pieces/CWS_Op_096_Tilia_Colonnade/CWS_Op_096_Tilia_Colonnade.mp3) |
+| CWS Op. 97 | Anemone Margin | 9/8 | 209 | [Score](pieces/CWS_Op_097_Anemone_Margin/CWS_Op_097_Anemone_Margin.pdf) | [MP3](pieces/CWS_Op_097_Anemone_Margin/CWS_Op_097_Anemone_Margin.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
