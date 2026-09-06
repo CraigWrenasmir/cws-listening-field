@@ -132,6 +132,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 114 | Flint Atrium | 4/4 | 126 | [Score](pieces/CWS_Op_114_Flint_Atrium/CWS_Op_114_Flint_Atrium.pdf) | [MP3](pieces/CWS_Op_114_Flint_Atrium/CWS_Op_114_Flint_Atrium.mp3) |
 | CWS Op. 115 | Basalt Driftway | 4/4 | 114 | [Score](pieces/CWS_Op_115_Basalt_Driftway/CWS_Op_115_Basalt_Driftway.pdf) | [MP3](pieces/CWS_Op_115_Basalt_Driftway/CWS_Op_115_Basalt_Driftway.mp3) |
 | CWS Op. 116 | Chert Pavilion | 4/4 | 131 | [Score](pieces/CWS_Op_116_Chert_Pavilion/CWS_Op_116_Chert_Pavilion.pdf) | [MP3](pieces/CWS_Op_116_Chert_Pavilion/CWS_Op_116_Chert_Pavilion.mp3) |
+| CWS Op. 117 | Rutile Colonnade | 6/4 | 183 | [Score](pieces/CWS_Op_117_Rutile_Colonnade/CWS_Op_117_Rutile_Colonnade.pdf) | [MP3](pieces/CWS_Op_117_Rutile_Colonnade/CWS_Op_117_Rutile_Colonnade.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

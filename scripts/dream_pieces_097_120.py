@@ -1454,4 +1454,62 @@ G3+D4:4
   phrase_arcs=[[0,19.8,3],[24,31,2],[32,51.8,3],[56,63,2],[64,72,-2]],
   lower_entries=[],pedal_lift=.2,gate=.995,
   note='The crossed passages keep the melodic thread in the RH while changing its register completely. Let the high LH chords remain distant and soft. Take the whole written rest to reposition each hand, and let the rising returns recover the ordinary register without haste.'))
+
+,
+dict(op=117,title='Rutile Colonnade',key='f',fifths=-4,meter='6/4',bpm=54,
+ description='Chert Pavilion’s D–C–B-flat–G becomes C–B-flat–A-flat–F. Nine-note, nine-beat phrases run across six-beat bars above slower changing harmony. A chordal passage and shared silence divide the piece; the later phrases reverse their pitch order while retaining the uneven rhythm. Their shifting accents gather into a quiet F-minor ninth.',
+ difficulty='Advanced nine-beat melodic phrases over six-beat bars',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The first four phrases begin at beats 0, 9, 18 and 27; each lasts nine quarter beats with durations 1.5, 0.5, 1, 0.5, 1.5, 1, 0.5, 1 and 1.5. In bars 11–16 their pitches return in reverse order, keeping those durations; the first reversed phrase is an octave higher. Keep the lower harmony spacious as the melody crosses the bar. Both hands rest for three beats in bar 10. Let that silence separate the two directions of the melodic line.',
+ parent_opus=116,motif=dict(hand='rh',start_beat=0,end_beat=3.5,pitches=['C','Bb','Ab','F']),
+ ancestry=dict(source_opus=116,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['D','C','Bb','G'],transposition_semitones=-2),
+ lower_sections={1:'pp',7:'p',10:'pp',11:'pp',17:'pp'},
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.18] for bar,cuts in enumerate([[0,1.5,2,3,3.5,5,6],[0,.5,1.5,3,4,4.5,5,6],[0,.5,2,3,3.5,4.5,6],[0,1.5,2,3,3.5,5,6],[0,.5,1.5,3,4.5,5,6],[0,.5,2,3,3.5,4.5,6],[0,2,3,6],[0,1,1.5,2,3,4,6],[0,3,5,6],[0,3],[0,1.5,2,3,3.5,5,6],[0,.5,1.5,3,4,4.5,5,6],[0,.5,2,3,3.5,4.5,6],[0,1.5,2,3,3.5,5,6],[0,.5,1.5,3,4.5,5,6],[0,.5,2,3,3.5,4.5,6],[0,1,1.5,2,2.5,3,4,5,6],[0,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+C5:1.5 Bb4:.5 Ab4:1 F4:.5 G4:1.5 Ab4:1
+C5:.5 Db5:1 Bb4:1.5 G5:1.5 F5:.5 Eb5:1
+C5:.5 D5:1.5 Eb5:1 G5:.5 Ab5:1 F5:1.5
+Eb5:1.5 Db5:.5 Cb5:1 Ab4:.5 Bb4:1.5 Cb5:1
+Eb5:.5 Fb5:1 Db5:1.5 C5:1.5 Bb4:.5 Ab4:1
+F4:.5 G4:1.5 Ab4:1 C5:.5 Db5:1 Bb4:1.5
+Ab4+Db5:2 G4+C5:1 F4+Bb4:3
+Eb4+Ab4:1 F4+Bb4:.5 G4+C5:1.5 Ab4+Db5:3
+G4+B4+D5:3 F4+A4+C5:2 Eb4+G4+Bb4:1
+E4+G4+Bb4+Db5:3 R:3
+Bb5:1.5 Db6:.5 C6:1 Ab5:.5 G5:1.5 F5:1
+Ab5:.5 Bb5:1 C6:1.5 F5:1.5 Ab5:.5 G5:1
+Eb5:.5 D5:1.5 C5:1 Eb5:.5 F5:1 G5:1.5
+Db5:1.5 Fb5:.5 Eb5:1 Cb5:.5 Bb4:1.5 Ab4:1
+Cb5:.5 Db5:1 Eb5:1.5 Bb4:1.5 Db5:.5 C5:1
+Ab4:.5 G4:1.5 F4:1 Ab4:.5 Bb4:1 C5:1.5
+D5:1 F5:.5 Ab5:1 G5:.5 F5:1 Eb5:1 Db5:1
+F4+G4+Ab4+C5+Eb5:6
+''',
+ lh='''
+F2+C3:3 Eb3+Ab3:3
+Db3+Ab3:4 C3+G3:2
+C3+G3:3 Bb3+Eb4:3
+Ab2+Eb3:2 Gb3+Cb4:4
+Cb3+Gb3:3 Bb2+F3:3
+F3+C4:3 Eb3+Ab3:3
+Db3+Ab3:3 C3+G3:3
+Bb2+F3:2 Ab3+Db4:2 G3+C4:2
+E3+B3:3 D3+A3:3
+C3+G3:3 R:3
+Db3+Ab3:3 C3+G3:3
+F3+C4:4 Eb3+Bb3:2
+Ab2+Eb3:3 G3+C4:3
+Cb3+Gb3:2 Bb2+F3:4
+Ab2+Eb3:3 Db3+Ab3:3
+Bb2+F3:3 Ab3+Db4:3
+Bb2:1 F3:1 Ab3:1 D3:1 F3:1 B3:1
+F3+C4:6
+''',sections={1:'p',3:'mp',4:'p',6:'pp',7:'p',8:'mp',9:'p',10:'pp',11:'p',13:'mp',14:'p',16:'pp',17:'p',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,8),(9,10),(11,13),(14,16),(17,18)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('crescendo',7,8),('crescendo',11,13),('diminuendo',14,16),('diminuendo',17,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,51,55,50,48,45,49,52,47,39,51,49,53,47,44,41,35,27],
+  phrase_arcs=[[0,9,3],[9,18,3],[18,27,3],[27,36,2],[36,48,3],[48,57,-2],[60,69,3],[69,78,3],[78,87,3],[87,96,2],[96,108,-2]],
+  lower_entries=[],pedal_lift=.18,gate=.995,
+  note='Shape each nine-beat melody as a single breath across the six-beat bars. Let the chordal middle grow warmer before its shared silence. The reversed phrases should have the same patient movement even as their contours turn upwards and the first rises into a higher register.'))
 ]
