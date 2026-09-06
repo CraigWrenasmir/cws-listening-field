@@ -156,4 +156,61 @@ Bb2:1 D3+A3:2
   phrase_arcs=[[0,8,3],[9,20,3],[21,35,5],[36,44,2],[45,57,-1]],
   lower_entries=[[3,12],[15,21],[24,33],[39,54]],pedal_bars=list(range(1,20)),pedal_lift=.2,gate=.99,
   note='The five-bar middle crosses the phrase boundary with a sustained F. E-flat minor is held back slightly; the return settles into a slower, softer B-flat-major ninth.'))
+,
+dict(op=16,title='Fern Vestibule',key='F',fifths=-1,meter='4/4',bpm=54,
+ description='Bracken Meridian\'s D-F-E-A phrase reappears in the bass beneath a held upper C. The two lines take turns moving, unfolding through F major, D minor and a borrowed E-flat window. Unequal phrase spans and a quiet B-flat-minor approach make the final F-major ninth feel like entering a familiar room from the rain.',
+ parent_opus=8,motif=dict(hand='lh',start_beat=8,end_beat=12,pitches=['D','F','E','A']),
+ ancestry=dict(source_opus=8,source_hand='lh',source_start_beat=32,source_end_beat=36,source_pitches=['D','F','E','A'],transposition_semitones=0),
+ rh='''
+R:1 A4:1 C5:1 E5:1~
+E5:1 D5:.5 C5:.5 A4:1 G4:1
+C5:3 A4:1
+F4:1 A4:.5 C5:1.5 B4:1
+Bb4:1 D5:.5 F5:1.5 E5:1~
+E5:1 D5:.5 C5:.5 A4:1 Bb4:1
+A4:1 C5:.5 B4:.5 G4:1 R:1
+A4:2 E5:.5 C5:.5 D5:1~
+D5:1 C5:.5 A4:.5 G4:1 F4:1
+G4:1 Bb4:.5 D5:1.5 C5:1~
+C5:1 Bb4:.5 G4:.5 F4:1 D4:1
+E4:1 G4:.5 Bb4:.5 A4:1 R:1
+R:.5 F4:.5 A4:1 C5:2
+D5:1 F5:.5 G5:.5 E5:2~
+E5:1 D5:.5 Bb4:.5 A4:1 G4:1
+F4:.5 A4:.5 C5:1 D5:1 C5:1~
+C5:1 Bb4:.5 G4:.5 F4:2
+E4:1 G4:.5 Bb4:.5 A4:1 G4:1
+C5:1 A4:.5 G4:.5 F4:2
+Db5:1 C5:.5 Ab4:.5 G4:2
+A4:1 G4:1 G4+C5:2
+''',
+ lh='''
+F3:2 A3+C4:2
+E3:1 C3:1 G3+Bb3:2
+D3:1 F3:.5 E3:.5 A3:2
+F3:1 C3:1 E3+A3:2
+Bb2:1.5 F3+A3:1.5 D3:1
+G3:1 Bb3:.5 A3:.5 F3:1 D3:1
+C3:1.5 E3+Bb3:1.5 R:1
+D3:2 F3+A3:1 C4:1~
+C4:.5 A3:.5 F3:1 D3:1 Bb2:1
+Eb3:2 G3+Bb3:1.5 R:.5
+G3:1 Bb3:.5 A3:.5 F3:1 D3:1
+C3:1 E3+Bb3:2 G3:1
+F3:1 A3:.5 C4:.5 D4:1 C4:1
+D3:1.5 F3+A3:1.5 E3:1
+G3:1 D3:.5 F3:.5 Bb3:1 A3:1
+F3:2 C4:1 A3:1~
+A3:1 G3:.5 F3:.5 D3:1 Bb2:1
+C3:1.5 E3+Bb3:1.5 G3:1
+F3:1 C4:1 A3:1 F3:1
+Bb2:1 Db3+Ab3:2 F3:1
+F3:1 A3:1 F3+A3:2
+''',sections={1:'p',5:'pp',8:'p',10:'mp',13:'p',17:'pp'},words={1:'poco rubato',20:'poco rit.'},
+ slurs=[(1,4),(5,7),(8,12),(13,15),(16,18),(19,21)],lower_phrases=[(2,4),(6,7),(8,9),(11,13),(15,17),(19,21)],
+ hairpins=[('diminuendo',2,4),('crescendo',5,6),('diminuendo',6,7),('crescendo',8,10),('diminuendo',10,12),('crescendo',13,14),('diminuendo',14,15),('diminuendo',17,21)],tempo_changes={},group=4,
+ performance=dict(rubato=[54,55,52,48,53,55,49,54,53,56,52,47,53,55,49,52,49,47,46,43,37],
+  phrase_arcs=[[0,15,3],[16,27,3],[28,47,4],[48,59,4],[60,71,2],[72,84,-2]],
+  lower_entries=[[4,16],[20,28],[28,36],[40,52],[56,68],[72,83]],pedal_bars=list(range(1,22)),pedal_lift=.22,gate=.99,
+  note='Sustained upper notes allow the bass phrases to come forward. The two voices exchange motion without a repeating accompaniment cell; the minor plagal colour yields slowly to F-major warmth.'))
 ]

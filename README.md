@@ -31,6 +31,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 13 | Alder Passage | 6/8 | 133 | [Score](pieces/CWS_Op_013_Alder_Passage/CWS_Op_013_Alder_Passage.pdf) | [MP3](pieces/CWS_Op_013_Alder_Passage/CWS_Op_013_Alder_Passage.mp3) |
 | CWS Op. 14 | Salt Promenade | 9/8 | 130 | [Score](pieces/CWS_Op_014_Salt_Promenade/CWS_Op_014_Salt_Promenade.pdf) | [MP3](pieces/CWS_Op_014_Salt_Promenade/CWS_Op_014_Salt_Promenade.mp3) |
 | CWS Op. 15 | Pearl Footbridge | 3/4 | 125 | [Score](pieces/CWS_Op_015_Pearl_Footbridge/CWS_Op_015_Pearl_Footbridge.pdf) | [MP3](pieces/CWS_Op_015_Pearl_Footbridge/CWS_Op_015_Pearl_Footbridge.mp3) |
+| CWS Op. 16 | Fern Vestibule | 4/4 | 165 | [Score](pieces/CWS_Op_016_Fern_Vestibule/CWS_Op_016_Fern_Vestibule.pdf) | [MP3](pieces/CWS_Op_016_Fern_Vestibule/CWS_Op_016_Fern_Vestibule.mp3) |
 
 [Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
 
