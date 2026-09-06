@@ -62,6 +62,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 44 | Quartz Overpass | 9/8 | 177 | [Score](pieces/CWS_Op_044_Quartz_Overpass/CWS_Op_044_Quartz_Overpass.pdf) | [MP3](pieces/CWS_Op_044_Quartz_Overpass/CWS_Op_044_Quartz_Overpass.mp3) |
 | CWS Op. 45 | Sable Orchard | 4/4 | 185 | [Score](pieces/CWS_Op_045_Sable_Orchard/CWS_Op_045_Sable_Orchard.pdf) | [MP3](pieces/CWS_Op_045_Sable_Orchard/CWS_Op_045_Sable_Orchard.mp3) |
 | CWS Op. 46 | Balsam Oblique | 11/8 | 136 | [Score](pieces/CWS_Op_046_Balsam_Oblique/CWS_Op_046_Balsam_Oblique.pdf) | [MP3](pieces/CWS_Op_046_Balsam_Oblique/CWS_Op_046_Balsam_Oblique.mp3) |
+| CWS Op. 47 | Mauve Esplanade | 4/4 | 185 | [Score](pieces/CWS_Op_047_Mauve_Esplanade/CWS_Op_047_Mauve_Esplanade.pdf) | [MP3](pieces/CWS_Op_047_Mauve_Esplanade/CWS_Op_047_Mauve_Esplanade.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

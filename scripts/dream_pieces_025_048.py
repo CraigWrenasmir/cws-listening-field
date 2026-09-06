@@ -1268,4 +1268,84 @@ F#2+C#3:5.5
   phrase_arcs=[[0,21,3],[22,38,4],[38.5,60,4],[60.5,77,-2]],
   lower_entries=[[0,16.5],[16.5,33],[33,49.5],[49.5,60.5],[60.5,77]],pedal_bars=list(range(1,15)),pedal_lift=.25,gate=.99,
   note='The uneven bar length is absorbed into long melodic gestures. Brightness grows with the move into the upper register, then recedes through the distant tonal areas. The final minor ninth is held quietly, with no added accent on the last half-beat.'))
+,
+dict(op=47,title='Mauve Esplanade',key='G',fifths=1,meter='4/4',bpm=58,
+ description='Balsam Oblique’s descent becomes D–B–A–G. The upper melody introduces it, the right-hand inner voice repeats it a bar later, and the bass takes it an octave lower in the following bar. These three entrances open into freer counterpoint. F-minor, E-flat and E-major reflections interrupt the G-major landscape before the voices settle together in a lower register.',
+ difficulty='Advanced imitative counterpoint',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The opening idea enters successively in the upper voice, RH inner voice and bass. Its pitch and rhythm remain intact during these first three entrances, while the other voices continue. Separate RH stems distinguish the sustained melody from the moving inner voice; the later register descent requires a gradual change of balance.',
+ parent_opus=46,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['D','B','A','G']),
+ ancestry=dict(source_opus=46,source_hand='rh',source_start_beat=0,source_end_beat=5.5,source_pitches=['F#','D#','C#','B'],transposition_semitones=8),
+ rh='''
+D5:1 B4:.5 A4:.5 G4:2
+F#5:2 E5:2
+D5:3 C5:1
+B4:4
+E5:2 D5:2
+F5:3 Eb5:1
+D5:2 C5:2
+Eb5:3 D5:1
+E5:3 F#5:1
+G5:2 E5:2
+F#5:3 E5:1
+D5:4
+F5:2 Eb5:2
+D5:3 C5:1
+Db5:2 C5:2
+D5:2 E5:2
+E5:3 D5:1
+C5:2 B4:2
+A4:3 F#4:1
+G4:4
+''',
+ rh_inner='''
+R:4
+D5:1 B4:.5 A4:.5 G4:2
+F#4:1 A4:.5 B4:.5 A4:2
+E4:1 G4:.5 A4:.5 F#4:2
+G4:1 B4:.5 C5:.5 A4:2
+Ab4:1.5 C5:.5 Db5:1 C5:1
+F4:.5 Ab4:1.5 Bb4:1 G4:1
+G4:1 Bb4:.5 C5:.5 Bb4:2
+G#4:.5 B4:1.5 C#5:1 B4:1
+A4:2 C5:.5 D5:.5 C5:1
+A4:1.5 C5:.5 D5:1 C5:1
+G4:1 A4:.5 B4:.5 C5:1 B4:1
+A4:1 C5:2 D5:.5 C5:.5
+F4:1 A4:1 Bb4:.5 A4:1.5
+F4:2 Ab4:.5 Bb4:.5 Ab4:1
+G4:.5 B4:.5 C5:2 B4:1
+G4:1 B4:.5 C5:.5 A4:2
+E4:1.5 G4:.5 A4:1 G4:1
+C4:1 E4:1 G4:.5 E4:1.5
+B3:1 D4:.5 E4:.5 A3+D4:2
+''',
+ lh='''
+G2:1 D3:1 B3:1 A3:1
+D3:2 A3:1 C4:1
+D4:1 B3:.5 A3:.5 G3:2
+E3:1.5 B3:.5 D4:2
+C3:3 G3:.5 B3:.5
+F3:2.5 C4:.5 Eb3:1
+Bb2:1 F3:.5 Ab3:1.5 D4:1
+Eb3:.5 Bb3:.5 D4:3
+E3:1.5 B3:.5 D#4:1 G#3:1
+A2:1.5 E3:.5 G3:2
+D3:1 A3:.5 C4:.5 F#3:2
+G3:2 D4:1 B3:.5 F#3:.5
+F3:2 C4:.5 A3:1.5
+Bb2:2.5 F3:.5 A3:1
+Db3:1 Ab3:.5 C4:2.5
+G3:1 D4:.5 F3:.5 B3:2
+C3:3 G3:1
+A2:2 E3:1 G3:.5 B3:.5
+D3:1.5 A3:.5 C3:1 D3:1
+G2:2 D3:1 G2:1
+''',sections={1:'p',3:'mp',4:'pp',5:'p',6:'mp',8:'pp',9:'p',11:'mp',12:'pp',13:'p',16:'mp',18:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,17),(18,20)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,15),(16,18),(19,20)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,6),('diminuendo',6,8),('crescendo',9,11),('diminuendo',11,12),('crescendo',13,16),('diminuendo',16,17),('diminuendo',18,20)],tempo_changes={},group=4,
+ performance=dict(rubato=[58,56,60,49,54,58,53,48,54,57,61,49,54,51,55,59,50,46,41,33],
+  phrase_arcs=[[0,15,3],[16,31,4],[32,47,4],[48,67,4],[68,80,-2]],
+  lower_entries=[[8,12],[12,24],[24,36],[36,48],[48,60],[60,72],[72,80]],pedal_bars=list(range(1,21)),pedal_lift=.24,gate=.99,
+  note='The same opening idea keeps its shape as the register and voice change. The bass entrance receives a little extra presence, while the inner echo remains lighter than the upper melody. Later phrases broaden and contract before the voices draw into the quiet final register.'))
 ]
