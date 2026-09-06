@@ -433,4 +433,54 @@ C3:1 G3:1 B3:.5 A3:.5 G3:2 C3+G3:2
   phrase_arcs=[[0,20,4],[21,34,3],[35,62,5],[63,84,-1]],
   lower_entries=[[0,14],[14,35],[35,56],[56,70],[70,82]],pedal_bars=list(range(1,13)),pedal_lift=.28,gate=.99,
   note='The unequal phrases gather and release across seven-beat bars. The bass travels independently beneath the sustained treble; the chromatic side-step holds back slightly before the F-minor return gains motion.'))
+,
+dict(op=22,title='Sedge Observatory',key='f',fifths=-4,meter='5/4',bpm=56,
+ description='Rain Arcade\'s C-E-flat-G-B-flat becomes a quiet F-A-flat-C-E-flat bass phrase. Upper voicings stack fourths and let the natural sixth brighten F minor. Five-beat spans move through D-flat and A-flat, then a G-dominant passage opens an unexpected C-major window. Altered dominant colour and a fleeting minor-major seventh deepen the return to F minor.',
+ difficulty='Early advanced',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Sustained three-note voicings span up to a major seventh; syncopated five-beat phrasing and chromatic inner notes require independent voicing. The LH deliberately drops an eleventh after its held E-flat in bar 3; the two-beat preparation allows a controlled register change. No chord requires a simultaneous stretch beyond an octave.',
+ parent_opus=21,motif=dict(hand='lh',start_beat=10,end_beat=15,pitches=['F','Ab','C','Eb']),
+ ancestry=dict(source_opus=21,source_hand='rh',source_start_beat=70,source_end_beat=74,source_pitches=['C','Eb','G','Bb'],transposition_semitones=5),
+ rh='''
+G4+Bb4+Eb5:2.5 F4+Ab4+D5:1.5 C5:1
+Eb5:1 Db5:.5 C5:.5 Ab4:1 G4:1 F4:1~
+F4:1 Ab4:.5 C5:.5 Eb5:1 D5:1 C5:1
+Bb4:1 Db5:.5 F5:.5 Ab5:2 G5:1~
+G5:1 F5:.5 Eb5:.5 Db5:1 Bb4:1 C5:1
+Ab4:1 C5:.5 Eb5:.5 G5:1 Bb5:1 Ab5:1
+G5:1 F5:.5 D5:.5 C5:1 B4:1 G4:1~
+G4:1 E4:.5 G4:.5 B4:1 D5:1 C5:1~
+C5:1 Db5:.5 Eb5:.5 G5:1 F5:.5 Eb5:.5 Db5:1
+C5:1 Ab4:.5 G4:.5 F4:1 Eb4+Ab4+D5:2
+G4+Bb4+Eb5:2.5 F4+Ab4+D5:1.5 C5:1
+Db5:1 F5:.5 Ab5:.5 C6:1 Bb5:1 Ab5:1
+G5:1 F5:.5 Eb5:.5 C5:1 Bb4:1 Ab4:1
+G4:1 Bb4:.5 Db5:.5 E5:1 D5:1 C5:1
+F4:1 Ab4:.5 C5:.5 E5:1 Eb5:.5 C5:.5 Ab4:1
+G4:1 F4:1 Eb4+Ab4+D5:1 F4+Ab4+C5:2
+''',
+ lh='''
+F2:1 C3:.5 G3:.5 Ab3:1 Eb3:1 C3:1
+Db3:1.5 Ab3:1 C4:.5 F3:1 R:1
+F3:1.5 Ab3:.5 C4:1 Eb4:2
+Bb2:1 F3:.5 Ab3:.5 C4:1 Db4:1 F3:1
+Eb3:1 Db3+G3:1.5 Bb3:.5 C4:1 R:1
+Ab3:1 Eb3:.5 G3:.5 C4:1 Bb3:1 Eb3:1
+G2:1 D3:1 F3:.5 G3:.5 B3:1 D4:1
+C3:1.5 G3:1 E3:.5 B3:1 D4:1
+C3:1 E3+Bb3:2 G3:.5 Db4:.5 C4:1
+F3:1 C4:.5 Ab3:.5 G3:1 Eb3:1 F3:1~
+F3:1 C4:1 Eb4:.5 D4:.5 Ab3:1 G3:1
+Db3:1 Ab3:.5 C4:.5 F3:1 Eb3:1 Db3:1
+Bb2:1.5 F3:1 Ab3:.5 Db4:1 C4:1
+C3:1 E3+Bb3:1.5 G3:.5 Db4:.5 C4:.5 R:1
+F3:1 C4:.5 Ab3:.5 G3:1 Eb3:1 C3:1
+F2:1 C3:1 Eb3+Ab3:1 F3+C4:2
+''',sections={1:'p',4:'pp',6:'mp',8:'p',11:'pp',14:'p'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,10),(11,13),(14,16)],lower_phrases=[(1,3),(4,5),(7,9),(10,12),(13,16)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,6),('diminuendo',6,8),('crescendo',8,9),('diminuendo',9,10),('crescendo',11,12),('diminuendo',12,13),('diminuendo',14,16)],tempo_changes={},group=3,
+ performance=dict(rubato=[56,54,51,55,57,58,56,52,57,49,53,56,50,53,47,40],
+  phrase_arcs=[[0,14,3],[15,29,4],[30,49,5],[50,64,4],[65,80,-2]],
+  lower_entries=[[0,15],[15,25],[30,45],[45,60],[60,78]],pedal_bars=list(range(1,17)),pedal_lift=.24,gate=.99,
+  note='Quiet quartal shapes contrast with a singing upper line. The bass moves independently through syncopated entries, and the C-major window briefly releases the tension before the altered-dominant return.'))
 ]

@@ -37,6 +37,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 19 | Glass Coppice | 12/8 | 139 | [Score](pieces/CWS_Op_019_Glass_Coppice/CWS_Op_019_Glass_Coppice.pdf) | [MP3](pieces/CWS_Op_019_Glass_Coppice/CWS_Op_019_Glass_Coppice.mp3) |
 | CWS Op. 20 | Ochre Underpass | 9/8 | 126 | [Score](pieces/CWS_Op_020_Ochre_Underpass/CWS_Op_020_Ochre_Underpass.pdf) | [MP3](pieces/CWS_Op_020_Ochre_Underpass/CWS_Op_020_Ochre_Underpass.mp3) |
 | CWS Op. 21 | Rain Arcade | 7/4 | 187 | [Score](pieces/CWS_Op_021_Rain_Arcade/CWS_Op_021_Rain_Arcade.pdf) | [MP3](pieces/CWS_Op_021_Rain_Arcade/CWS_Op_021_Rain_Arcade.mp3) |
+| CWS Op. 22 | Sedge Observatory | 5/4 | 186 | [Score](pieces/CWS_Op_022_Sedge_Observatory/CWS_Op_022_Sedge_Observatory.pdf) | [MP3](pieces/CWS_Op_022_Sedge_Observatory/CWS_Op_022_Sedge_Observatory.mp3) |
 
 [Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
 
