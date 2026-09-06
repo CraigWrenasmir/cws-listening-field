@@ -7762,5 +7762,306 @@
       "sounded_pitches_per_minute": 126.5,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Ginkgo Crossing",
+    "opus": 77,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 150,
+    "audio_seconds": 96.28,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 16,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced seven-against-five with an entering inner voice",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 1, 5 and 9, seven RH eighth-note septuplets and five LH eighth-note quintuplets each fill two quarter beats. The RH inner voice rests for those two beats, entering with the three-beat settling note. Practise each line as a single smooth contour before joining the hands, and let their shared arrival stay unaccented."
+    },
+    "notated_tuplet_notes": {
+      "1:7:4": 21,
+      "2:5:4": 15
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.76
+      ],
+      [
+        2,
+        3.76
+      ],
+      [
+        4,
+        4.76
+      ],
+      [
+        5,
+        6.76
+      ],
+      [
+        7,
+        8.76
+      ],
+      [
+        9,
+        9.76
+      ],
+      [
+        10,
+        11.76
+      ],
+      [
+        12,
+        13.76
+      ],
+      [
+        14,
+        14.76
+      ],
+      [
+        15,
+        16.76
+      ],
+      [
+        17,
+        18.759999999999998
+      ],
+      [
+        19,
+        19.759999999999998
+      ],
+      [
+        20,
+        21.76
+      ],
+      [
+        22,
+        23.759999999999998
+      ],
+      [
+        24,
+        24.759999999999998
+      ],
+      [
+        25,
+        26.76
+      ],
+      [
+        27,
+        28.759999999999998
+      ],
+      [
+        29,
+        29.759999999999998
+      ],
+      [
+        30,
+        31.76
+      ],
+      [
+        32,
+        33.76
+      ],
+      [
+        34,
+        34.76
+      ],
+      [
+        35,
+        36.76
+      ],
+      [
+        37,
+        38.76
+      ],
+      [
+        39,
+        39.76
+      ],
+      [
+        40,
+        41.76
+      ],
+      [
+        42,
+        43.76
+      ],
+      [
+        44,
+        44.76
+      ],
+      [
+        45,
+        46.76
+      ],
+      [
+        47,
+        48.76
+      ],
+      [
+        49,
+        49.76
+      ],
+      [
+        50,
+        51.76
+      ],
+      [
+        52,
+        53.76
+      ],
+      [
+        54,
+        54.76
+      ],
+      [
+        55,
+        56.76
+      ],
+      [
+        57,
+        58.76
+      ],
+      [
+        59,
+        59.76
+      ],
+      [
+        60,
+        61.76
+      ],
+      [
+        62,
+        63.76
+      ],
+      [
+        64,
+        64.76
+      ],
+      [
+        65,
+        66.76
+      ],
+      [
+        67,
+        68.76
+      ],
+      [
+        69,
+        69.76
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "verified_polyrhythm_spans": [
+      {
+        "start_beat": 0,
+        "end_beat": 2,
+        "rh_notes": 7,
+        "lh_notes": 5
+      },
+      {
+        "start_beat": 20,
+        "end_beat": 22,
+        "rh_notes": 7,
+        "lh_notes": 5
+      },
+      {
+        "start_beat": 40,
+        "end_beat": 42,
+        "rh_notes": 7,
+        "lh_notes": 5
+      }
+    ],
+    "verified_tuplet_brackets": [
+      {
+        "hand": "rh",
+        "voice": "upper",
+        "start_beat": 0,
+        "end_beat": 2,
+        "actual": 7,
+        "normal": 4,
+        "stem": "up"
+      },
+      {
+        "hand": "lh",
+        "voice": "bass",
+        "start_beat": 0,
+        "end_beat": 2,
+        "actual": 5,
+        "normal": 4,
+        "stem": "down"
+      },
+      {
+        "hand": "rh",
+        "voice": "upper",
+        "start_beat": 20,
+        "end_beat": 22,
+        "actual": 7,
+        "normal": 4,
+        "stem": "up"
+      },
+      {
+        "hand": "lh",
+        "voice": "bass",
+        "start_beat": 20,
+        "end_beat": 22,
+        "actual": 5,
+        "normal": 4,
+        "stem": "down"
+      },
+      {
+        "hand": "rh",
+        "voice": "upper",
+        "start_beat": 40,
+        "end_beat": 42,
+        "actual": 7,
+        "normal": 4,
+        "stem": "up"
+      },
+      {
+        "hand": "lh",
+        "voice": "bass",
+        "start_beat": 40,
+        "end_beat": 42,
+        "actual": 5,
+        "normal": 4,
+        "stem": "down"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 96.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

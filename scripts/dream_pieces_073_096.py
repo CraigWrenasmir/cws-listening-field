@@ -294,4 +294,71 @@ Eb3+Bb3:3
   phrase_arcs=[[0,14.5,3],[15,29.5,4],[30,47.5,4],[48,59.5,4],[60,72,-2]],
   lower_entries=[[3,6],[18,24],[33,36],[45,48],[57,60],[66,69]],pedal_lift=.2,gate=.985,
   note='The uppermost chord notes carry the line while the adjacent inner pitches remain gentle. Single-note bars create space between the denser shapes. Pedal refreshes clear each close voicing before its successor, and the last major ninth settles without a forceful cadence.'))
+,
+dict(op=77,title='Ginkgo Crossing',key='D',fifths=2,meter='5/4',bpm=56,
+ description='Mallow Crescent’s upper descent becomes F-sharp–E–D–E inside a seven-note phrase. Seven upper notes and five lower notes share two beats, then settle into a held three-beat harmony. Three crossings rise, turn and finally descend through D-major, C-major and quieter minor colours. A soft inner voice enters only after each crossing, leading towards a D-major ninth.',
+ difficulty='Advanced seven-against-five with an entering inner voice',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 1, 5 and 9, seven RH eighth-note septuplets and five LH eighth-note quintuplets each fill two quarter beats. The RH inner voice rests for those two beats, entering with the three-beat settling note. Practise each line as a single smooth contour before joining the hands, and let their shared arrival stay unaccented.',
+ parent_opus=76,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=2,pitches=['F#','E','D','E']),
+ ancestry=dict(source_opus=76,source_hand='rh',source_start_beat=0,source_end_beat=6,source_pitches=['D','C','Bb','C'],transposition_semitones=4),
+ tuplet_groups=[dict(hand='rh',actual=7,normal=4,count=21),dict(hand='lh',actual=5,normal=4,count=15)],
+ tuplet_spans=[dict(hand=hand,voice=voice,start_beat=b*5,end_beat=b*5+2,actual=count,normal=4,stem=stem) for b in [0,4,8] for hand,voice,count,stem in [('rh','upper',7,'up'),('lh','bass',5,'down')]],
+ polyrhythms=[dict(start_beat=b*5,end_beat=b*5+2,rh_notes=7,lh_notes=5) for b in [0,4,8]],
+ system_starts=[1,3,5,7,9,11,13],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[b*5+s,b*5+e] for b in range(14) for s,e in [(0,1.76),(2,3.76),(4,4.76)]],
+ rh='''
+F#5:2/7 E5:2/7 D5:2/7 E5:2/7 F#5:2/7 A5:2/7 G5:2/7 F#5:3
+E5:3 D5:1 C#5:1
+D5+G5:3 F#5:1 E5:1
+F5:3 Eb5:1 Db5:1
+C5:2/7 D5:2/7 E5:2/7 G5:2/7 A5:2/7 G5:2/7 F5:2/7 E5:3
+D5:3 C5:1 B4:1
+E5:2 G5:1 F#5:2
+D5:3 C#5:1 B4:1
+A5:2/7 G5:2/7 F#5:2/7 E5:2/7 D5:2/7 C#5:2/7 B4:2/7 A4:3
+G4+B4+E5:3 D5:1 C5:1
+C5+F5+Bb5:3 A5:1 G5:1
+F#5:3 E5:1 D5:1
+E5:2 D5:1 C#5:2
+F#4+A4+C#5+E5:5
+''',
+ rh_inner='''
+R:2 A4:3
+G4:2 B4:1 A4:2
+B4:3 A4:2
+Ab4:3 C5:2
+R:2 C5:3
+A4:2 G4:1 F#4:2
+B4:3 D5:2
+G4:3 F#4:2
+R:2 E4:3
+F#4:3 E4:2
+Bb4:3 C5:2
+A4:2 C5:1 B4:2
+G4:3 F#4:2
+R:5
+''',
+ lh='''
+D3:2/5 F#3:2/5 A3:2/5 C#4:2/5 B3:2/5 A3:3
+G2:2 D3:1 F#3:1 A3:1
+E3:1 B3:1 D4:1 C#4:2
+Bb2:2 F3:1 Ab3:1 C4:1
+C3:2/5 E3:2/5 G3:2/5 B3:2/5 A3:2/5 G3:3
+D3:1 A3:1 C4:1 E4:2
+E3:2 B3:1 D4:1 C#4:1
+A2:1 E3:1 G3:1 B3:2
+G3:2/5 F#3:2/5 E3:2/5 D3:2/5 C#3:2/5 B2:3
+E3:1 B3:1 D4:1 C4:2
+F3:1 C4:1 Eb4:1 B3:2
+G2:2 D3:1 F#3:1 A3:1
+A2:1 E3:1 G3:1 B3:1 C#4:1
+D3+A3:5
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'p',6:'pp',7:'mp',8:'pp',9:'p',10:'pp',11:'mp',12:'p',13:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,14)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,14)],
+ hairpins=[('diminuendo',1,2),('diminuendo',3,4),('diminuendo',5,6),('diminuendo',7,8),('diminuendo',9,10),('diminuendo',11,14)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,48,59,51,57,45,60,46,53,44,58,49,39,28],
+  phrase_arcs=[[0,19.5,4],[20,39.5,4],[40,70,-2]],
+  lower_entries=[[5,10],[25,30],[50,55],[60,65]],inner_entries=[[2,5],[22,25],[42,45]],pedal_lift=.24,gate=.985,
+  note='The seven-note and five-note figures share a destination without accenting every unequal subdivision. The inner voice joins only when the two hands settle, giving each crossing a softer after-image. The final descent withdraws into a close major ninth.'))
 ]
