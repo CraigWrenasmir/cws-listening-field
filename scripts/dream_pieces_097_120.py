@@ -322,4 +322,59 @@ R:6
   phrase_arcs=[[0,23.7,4],[24,47.7,3],[48,71.7,4],[72,83.7,3],[84,108,-2]],
   tenor_entries=[[0,6],[36,42],[60,66],[84,90]],inner_entries=[[42,60],[66,72]],lower_entries=[[102,108]],pedal_lift=.2,gate=.995,
   note='Let the reflected voices have their own gentle direction. The four-voice middle becomes more luminous without growing much louder. The reversed opening recollects the earlier music in a quieter register; the final phrase takes progressively more time, ending in a soft major ninth.'))
+,
+dict(op=101,title='Mimosa Escapement',key='F',fifths=-1,meter='6/8',bpm=56,
+ description='Lunaria Interstice’s descending tenor becomes A–G–F–E. This phrase gradually opens out: its durations grow to twice, four times and finally six times their original lengths. Shorter replies bring E-flat and D-flat colours into the F-major setting. The final E stays finger-held through three bars as the bass passes from C dominant through a G-flat altered dominant into F-major ninth.',
+ difficulty='Advanced sustained phrasing and rhythmic augmentation',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The four-note phrase begins in bars 1, 3, 7 and 13, with written durations scaled by 1, 2, 4 and 6. Preserve the connected line through the ties in bars 7–8, 9–10 and 16–18. The final E is one nine-quarter-beat sound, held by the RH while the LH changes harmony and pedal beneath it. The last LH chord is compact but needs four softly balanced notes.',
+ parent_opus=100,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['A','G','F','E']),
+ ancestry=dict(source_opus=100,source_hand='lh',source_voice='tenor',source_start_beat=0,source_end_beat=6,source_pitches=['G','F','Eb','D'],transposition_semitones=2),
+ system_starts=[1,4,7,9,11,13,16],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*3+left,(bar-1)*3+right-.18] for bar,cuts in enumerate([[0,.75,1.5,2,3],[0,1,1.5,2,3],[0,1,2,3],[0,1.5,3],[0,1,2,3],[0,1,1.5,2,3],[0,1,1.5,2,3],[0,1,2,3],[0,1.5,3],[0,1,3],[0,1,2,3],[0,1,1.5,2,3],[0,1,2,3],[0,2,3],[0,1,1.5,2,3],[0,1,3],[0,1,3],[0,3]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+A4:.5 G4:.5 F4:.5 E4:1.5
+D4:1 F4:.5 G4:.5 A4:1
+A4:1 G4:1 F4:1
+E4:3
+G4:1 Bb4:.5 C5:.5 D5:1
+C5:2 Bb4:1
+A4:2 G4:1~
+G4:1 F4:2
+E4:3~
+E4:3
+G4:1 Bb4:1 Db5:1
+C5:1 Ab4:1 Gb4:1
+A4:3
+G4:3
+F4:3
+E4:3~
+E4:3~
+E4:3
+''',
+ lh='''
+F3:.75 C4:.75 D4:.5 C4:1
+Bb2:1 F3:.5 A3:.5 C4:1
+D3:1 A3:1 C4:1
+A2+C3:1.5 G3+B3:1.5
+Bb2:1 F3:1 A3:1
+Eb3:1 Bb3:.5 D4:.5 C4:1
+F3:1 C4:.5 Eb4:.5 D4:1
+C3:1 G3:1 Bb3:1
+D3+F3:1.5 A3+C4:1.5
+C3+E3:1 G3+B3:2
+Ab2:1 Eb3:1 G3:1
+Db3:1 Ab3:.5 C4:.5 Bb3:1
+F3:1 C4:1 D4:1
+Eb3+G3:2 Bb3+D4:1
+Bb2:1 F3:.5 Ab3:.5 C4:1
+C3+E3:1 G3+Bb3:2
+Gb2+Bb2:1 Fb3+A3:2
+F3+G3+A3+C4:3
+''',sections={1:'p',2:'pp',3:'p',4:'pp',5:'mp',6:'p',7:'p',8:'pp',9:'p',10:'pp',11:'mp',12:'p',13:'p',14:'pp',15:'p',16:'pp',17:'pp',18:'pp'},words={1:'poco rubato',16:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,6),(7,10),(11,12),(13,18)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16),(17,18)],
+ hairpins=[('diminuendo',1,2),('diminuendo',3,4),('diminuendo',5,6),('diminuendo',7,10),('diminuendo',11,12),('diminuendo',13,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[56,51,55,50,58,52,55,53,48,46,54,49,52,49,45,43,36,28],
+  phrase_arcs=[[0,5.8,2],[6,11.8,2],[12,17.8,3],[18,29.8,2],[30,35.8,3],[36,54,-2]],lower_entries=[[45,54]],pedal_lift=.18,gate=.995,
+  note='The slowing comes first from the written expansion of the melody. Leave its early form light and connected; the later versions have more space within the same contour. The final held E remains present through the changing lower harmony, with a little extra time before the soft F-major arrival.'))
 ]
