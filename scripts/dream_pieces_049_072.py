@@ -812,4 +812,92 @@ Bb2+F3:3
   phrase_arcs=[[0,11,3],[12,23,4],[24,38,4],[39,56,4],[57,75,-2]],
   lower_entries=[[30,33],[57,60],[69,72]],pedal_bars=list(range(1,26)),pedal_lift=.2,gate=.99,
   note='Each crossing is shaped as one small floating gesture. The lower voice comes forward when it carries the four-note figure, then recedes beneath the high melody. The closing five-bar phrase descends into a quieter register and a plain minor seventh.'))
+,
+dict(op=60,title='Cypress Orbit',key='c#',fifths=4,meter='5/4',bpm=56,
+ description='Marigold Detour’s bass figure becomes C-sharp–E–G-sharp–B, enlarged eightfold into four six-beat upper notes. These notes drift across five-beat bars while three other voices continue beneath them. D-major, G-major and A-flat reflections widen the route before it passes through E and B-flat colour. The lines gradually contract into a quiet C-sharp-minor sixth.',
+ difficulty='Advanced four-voice augmentation study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The opening upper notes each last six quarter beats, crossing the five-beat bars at different points. Preserve these long notes with the fingers through the printed pedal changes, while both inner parts and the bass continue independently. The three quicker lines should support the large upper arc without giving every bar the same accent. The final register is close and needs a very light balance.',
+ parent_opus=59,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=25,pitches=['C#','E','G#','B']),
+ ancestry=dict(source_opus=59,source_hand='lh',source_start_beat=57,source_end_beat=60,source_pitches=['Bb','Db','F','Ab'],transposition_semitones=3),
+ engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[span for i in range(16) for span in [[i*5,i*5+1.78],[i*5+2,i*5+4.78]]],
+ rh='''
+C#5:5~
+C#5:1 E5:4~
+E5:2 G#5:3~
+G#5:3 B5:2~
+B5:4 R:1
+A5:2 G#5:3
+F#5:4 E5:1
+D5:5
+Eb5:2 F5:3
+E5:5
+C#5:3 B4:2
+D5:2 C5:1 Bb4:2
+B4:5
+C#5:2 B4:1 A4:2
+G#4:2 F#4:1 E4:2
+G#4:5
+''',
+ rh_inner='''
+E4:2 G#4:1 A4:2
+G#4:1 B4:2 D#5:2
+C#5:2 D#5:1 F#5:2
+E5:1 F#5:2 G#5:2
+F#5:2 E5:2 D#5:1
+E5:2 D#5:3
+A4:2 C#5:1 D#5:2
+G4:2 B4:1 C5:2
+Ab4:3 C5:2
+G#4:2 B4:1 D5:2
+E4:2 G#4:1 A4:2
+F4:3 A4:2
+D#4:2 F#4:1 G#4:2
+F#4:3 G#4:2
+B#3:2 D#4:1 C#4:2
+E4:2 D#4:1 E4:2
+''',
+ lh='''
+C#3:2 E3:3
+B2:2 D#3:3
+A2:2 C#3:3
+F#3:5
+G#2:2 B#2:3
+C#3:2 E3:3
+D3:2 F#3:3
+G2:2 B2:3
+Ab2:2 C3:3
+E3:5
+A2:2 C#3:3
+Bb2:2 D3:3
+B2:5
+F#3:5
+G#2:2 B#2:3
+C#3:5
+''',
+ lh_upper='''
+G#3:1.5 B3:.5 D#4:1 C#4:2
+F#3:2 A3:.5 C#4:.5 B3:2
+E3:1 G#3:1 B3:1 A3:2
+A3:2 C#4:1 E4:.5 D#4:1.5
+D#3:1.5 F#3:.5 A3:1 G#3:2
+G#3:2 B3:.5 D#4:.5 C#4:2
+A3:1 C#4:1 E4:1 D4:2
+D3:2 F#3:1 A3:.5 G3:1.5
+Eb3:1.5 G3:.5 Bb3:1 Ab3:2
+B3:2 C#4:1 D4:2
+E3:2 G3:.5 B3:.5 A3:2
+F3:1 Ab3:1 C4:1 Bb3:2
+F#3:2 A3:1 G#3:2
+A3:1.5 C#4:.5 E4:3
+D#3:2 F#3:1 A3:2
+G#3:2 B3:1 A#3:2
+''',sections={1:'p',3:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'p',10:'pp',11:'p',12:'mp',13:'p',14:'pp',15:'p',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,5),(6,10),(11,14),(15,16)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,6),('crescendo',6,8),('diminuendo',8,10),('crescendo',11,12),('diminuendo',12,14),('diminuendo',15,16)],tempo_changes={},group=4,
+ performance=dict(rubato=[56,54,58,61,49,47,55,60,54,46,55,59,51,45,41,31],
+  phrase_arcs=[[0,24,4],[25,49,4],[50,69,3],[70,80,-2]],
+  lower_entries=[[15,20],[35,40],[65,70]],tenor_entries=[[5,10],[30,35],[55,60]],inner_entries=[[20,25],[45,50]],pedal_lift=.22,gate=.995,
+  note='The large four-note upper arc is kept continuous while the inner lines change pace. Tenor and inner answers briefly come closer, then return behind the melody. Pedal refreshes clear each harmonic field while held keys preserve the independent lines, and the final minor sixth fades in a closer register.'))
 ]
