@@ -86,6 +86,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 68 | Seagrass Relay | 5/4, 4/4, 6/4, 3/4 (changing) | 187 | [Score](pieces/CWS_Op_068_Seagrass_Relay/CWS_Op_068_Seagrass_Relay.pdf) | [MP3](pieces/CWS_Op_068_Seagrass_Relay/CWS_Op_068_Seagrass_Relay.mp3) |
 | CWS Op. 69 | Wisteria Remainder | 7/4 | 148 | [Score](pieces/CWS_Op_069_Wisteria_Remainder/CWS_Op_069_Wisteria_Remainder.pdf) | [MP3](pieces/CWS_Op_069_Wisteria_Remainder/CWS_Op_069_Wisteria_Remainder.mp3) |
 | CWS Op. 70 | Heather Drift | 6/4 | 127 | [Score](pieces/CWS_Op_070_Heather_Drift/CWS_Op_070_Heather_Drift.pdf) | [MP3](pieces/CWS_Op_070_Heather_Drift/CWS_Op_070_Heather_Drift.mp3) |
+| CWS Op. 71 | Acacia Radius | 11/8, 7/8, 9/8, 5/8 (changing) | 178 | [Score](pieces/CWS_Op_071_Acacia_Radius/CWS_Op_071_Acacia_Radius.pdf) | [MP3](pieces/CWS_Op_071_Acacia_Radius/CWS_Op_071_Acacia_Radius.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

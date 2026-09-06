@@ -1677,4 +1677,81 @@ C4:3 D4:3
   phrase_arcs=[[0,29.5,4],[30,59.5,4],[60,90,-2]],
   lower_entries=[[12,18],[42,48],[78,90]],tenor_entries=[[2.5,8.5],[32.5,38.5],[62.5,68.5]],pedal_lift=.24,gate=.995,
   note='Each displaced answer has the same gentle dotted-quarter shape as its upper source. The bass leaves space while the tenor crosses the bar line, returning after the fourth answer note releases. The three passages rise in register before a slow descent restores the warmth of F major.'))
+,
+dict(op=71,title='Acacia Radius',key='Bb',fifths=-2,meter='11/8',bpm=57,
+ meters=['11/8','7/8','9/8','11/8','5/8','9/8','7/8','11/8','9/8','11/8','7/8','9/8','11/8','5/8','9/8','7/8','11/8','9/8'],
+ description='Heather Drift’s opening becomes B-flat–F–A–G across an eleven-eighth bar. Later, the inner voice plays that bar backwards one octave lower, reversing both its pitches and note lengths beneath a held upper D. The changing eighth-note groups carry a six-beat upper tie and a D-major reflection before a low return opens into a B-flat major ninth.',
+ difficulty='Advanced retrograde in changing compound groups',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the eighth-note subdivision continuous through the changing signatures. The RH inner phrase in bar 10 is the exact backwards form of bar 1, one octave lower, with the reversed note lengths 1, 2, 1 and 1.5 quarter beats. Hold the upper D independently over that answer, and sustain the single upper A attack across bars 4–5.',
+ parent_opus=70,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=5.5,pitches=['Bb','F','A','G']),
+ ancestry=dict(source_opus=70,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=6,source_pitches=['F','C','E','D'],transposition_semitones=5),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[0, 2.26], [2.5, 5.26], [5.5, 8.76], [9.0, 11.26], [11.5, 13.26], [13.5, 15.26], [15.5, 16.26], [16.5, 18.76], [19.0, 21.26], [21.5, 23.76], [24.0, 25.76], [26.0, 29.26], [29.5, 31.26], [31.5, 32.26], [32.5, 34.76], [35.0, 37.26], [37.5, 39.26], [39.5, 41.76], [42.0, 44.76], [45.0, 48.26], [48.5, 50.76], [51.0, 52.76], [53.0, 55.26], [55.5, 58.26], [58.5, 60.76], [61.0, 63.26], [63.5, 65.26], [65.5, 68.76], [69.0, 71.26], [71.5, 74.26], [74.5, 76.76], [77.0, 78.76]],
+ rh='''
+Bb5:1.5 F5:1 A5:2 G5:1
+F5:2.5 Eb5:1
+D5:3 C5:.5 Bb4:1
+A5:5.5~
+A5:.5 G5:1 F5:1
+Eb5:2.5 D5:1 C5:1
+D5+G5:2 F5:1 Eb5:.5
+Gb5:3 F5:1 Eb5:1 Db5:.5
+C5:2.5 Bb4:1 Ab4:1
+D5:5.5
+E5:2 D5:.5 C#5:1
+F#5:3 E5:.5 D5:1
+Eb5:3 D5:1 C5:.5 Bb4:1
+A4:1.5 G4:1
+F4+A4+E5:3 D5:1 C5:.5
+Bb4:2.5 Ab4:1
+G4:3 F4:1 Eb4:1.5
+D4+F4+A4:4.5
+''',
+ rh_inner='''
+D5:2.5 Eb5:2 D5:1
+C5:1.5 Bb4:1 A4:1
+G4:2 A4:.5 F4:2
+F5:2 E5:1 Eb5:2.5
+D5:1.5 C5:1
+A4:1.5 G4:1.5 F4:1.5
+Bb4:1 C5:.5 Bb4:2
+Bb4:2 Db5:1 Cb5:2.5
+Eb4:1.5 Gb4:1.5 F4:1.5
+G4:1 A4:2 F4:1 Bb4:1.5
+G#4:1.5 B4:1 A4:1
+A4:2 B4:.5 G4:2
+G4:2.5 F4:1.5 Ab4:1.5
+Eb4:1 D4:.5 F4:1
+C5:3 Bb4:1 A4:.5
+F4:1.5 Eb4:1 Db4:1
+Bb3:2 C4:1 Db4:1.5 C4:1
+C4:4.5
+''',
+ lh='''
+G3:1.5 D4:1 F4:1 A3:1 Bb3:1
+Eb3:1.5 Bb3:.5 D4:1 C4:.5
+Bb3:1.5 F3:1 A3:.5 C4:1.5
+D3:2 A3:.5 C4:1 F4:1 E4:1
+G3:1 D4:.5 C4:1
+F3:1.5 C4:.5 Eb4:1 D4:1.5
+C3:1 G3:.5 Bb3:1 A3:1
+Eb3:1.5 Bb3:.5 Db4:1 Gb3:1.5 Ab3:1
+Db3:1.5 Ab3:.5 C4:1 Bb3:1.5
+G2:1.5 D3:.5 F3:1 A3:1 Bb3:1.5
+A2:1 E3:.5 G3:1 B3:1
+D3:1.5 A3:.5 C#4:1 B3:1.5
+C3:1.5 G3:1 Bb3:.5 D4:1 C4:1.5
+F3:1 C4:.5 Bb3:1
+Bb2:1.5 F3:.5 A3:1 Bb3:1.5
+Gb2:1.5 Db3:.5 F3:1 Eb3:.5
+Eb3:2 Bb2:1 D3:1 F3:1.5
+Bb2+F3:4.5
+''',sections={1:'p',2:'p',3:'pp',4:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'pp',10:'p',11:'mp',12:'p',13:'mp',14:'pp',15:'p',16:'pp',17:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,9),(10,14),(15,18)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,15),(16,18)],
+ hairpins=[('diminuendo',1,3),('diminuendo',4,6),('crescendo',7,8),('diminuendo',8,9),('crescendo',10,11),('diminuendo',11,12),('diminuendo',13,14),('diminuendo',15,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,54,47,59,53,45,55,61,47,54,60,51,57,43,51,45,37,28],
+  phrase_arcs=[[0,13,3],[13.5,25.5,4],[26,39,4],[39.5,60.5,4],[61,79,-2]],
+  lower_entries=[[13.5,21.5],[29.5,35],[61,69]],inner_entries=[[39.5,45]],pedal_lift=.24,gate=.995,
+  note='The changing groups share an unhurried eighth-note current. Pedal refreshes separate the chromatic inner steps while the tied upper notes remain held. The inner retrograde enters clearly beneath the sustained upper D. A held A bridges the earlier contracting bar line; later major colour gives way to a lower, softer return and an open major ninth.'))
 ]

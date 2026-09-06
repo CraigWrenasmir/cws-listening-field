@@ -6199,5 +6199,260 @@
       "sounded_pitches_per_minute": 63.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Acacia Radius",
+    "opus": 71,
+    "score_pages": 2,
+    "bars": 18,
+    "pitch_onsets": 178,
+    "audio_seconds": 105.74,
+    "hands": {
+      "rh": {
+        "low": 58,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 12,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 42,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 16,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced retrograde in changing compound groups",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Keep the eighth-note subdivision continuous through the changing signatures. The RH inner phrase in bar 10 is the exact backwards form of bar 1, one octave lower, with the reversed note lengths 1, 2, 1 and 1.5 quarter beats. Hold the upper D independently over that answer, and sustain the single upper A attack across bars 4\u20135."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.26
+      ],
+      [
+        2.5,
+        5.26
+      ],
+      [
+        5.5,
+        8.76
+      ],
+      [
+        9.0,
+        11.26
+      ],
+      [
+        11.5,
+        13.26
+      ],
+      [
+        13.5,
+        15.26
+      ],
+      [
+        15.5,
+        16.26
+      ],
+      [
+        16.5,
+        18.76
+      ],
+      [
+        19.0,
+        21.26
+      ],
+      [
+        21.5,
+        23.76
+      ],
+      [
+        24.0,
+        25.76
+      ],
+      [
+        26.0,
+        29.26
+      ],
+      [
+        29.5,
+        31.26
+      ],
+      [
+        31.5,
+        32.26
+      ],
+      [
+        32.5,
+        34.76
+      ],
+      [
+        35.0,
+        37.26
+      ],
+      [
+        37.5,
+        39.26
+      ],
+      [
+        39.5,
+        41.76
+      ],
+      [
+        42.0,
+        44.76
+      ],
+      [
+        45.0,
+        48.26
+      ],
+      [
+        48.5,
+        50.76
+      ],
+      [
+        51.0,
+        52.76
+      ],
+      [
+        53.0,
+        55.26
+      ],
+      [
+        55.5,
+        58.26
+      ],
+      [
+        58.5,
+        60.76
+      ],
+      [
+        61.0,
+        63.26
+      ],
+      [
+        63.5,
+        65.26
+      ],
+      [
+        65.5,
+        68.76
+      ],
+      [
+        69.0,
+        71.26
+      ],
+      [
+        71.5,
+        74.26
+      ],
+      [
+        74.5,
+        76.76
+      ],
+      [
+        77.0,
+        78.76
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "11/8"
+      },
+      {
+        "beat": 5.5,
+        "meter": "7/8"
+      },
+      {
+        "beat": 9.0,
+        "meter": "9/8"
+      },
+      {
+        "beat": 13.5,
+        "meter": "11/8"
+      },
+      {
+        "beat": 19.0,
+        "meter": "5/8"
+      },
+      {
+        "beat": 21.5,
+        "meter": "9/8"
+      },
+      {
+        "beat": 26.0,
+        "meter": "7/8"
+      },
+      {
+        "beat": 29.5,
+        "meter": "11/8"
+      },
+      {
+        "beat": 35.0,
+        "meter": "9/8"
+      },
+      {
+        "beat": 39.5,
+        "meter": "11/8"
+      },
+      {
+        "beat": 45.0,
+        "meter": "7/8"
+      },
+      {
+        "beat": 48.5,
+        "meter": "9/8"
+      },
+      {
+        "beat": 53.0,
+        "meter": "11/8"
+      },
+      {
+        "beat": 58.5,
+        "meter": "5/8"
+      },
+      {
+        "beat": 61.0,
+        "meter": "9/8"
+      },
+      {
+        "beat": 65.5,
+        "meter": "7/8"
+      },
+      {
+        "beat": 69.0,
+        "meter": "11/8"
+      },
+      {
+        "beat": 74.5,
+        "meter": "9/8"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 12,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 103.7,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
