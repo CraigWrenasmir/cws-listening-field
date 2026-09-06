@@ -611,4 +611,71 @@ G3:3 F#3:3
   phrase_arcs=[[0,23,4],[24,53,4],[54,83,4],[84,114,-2]],
   lower_entries=[[18,24],[72,78],[102,114]],inner_entries=[[12,18]],tenor_entries=[[6,12],[42,48],[96,102]],pedal_bars=list(range(1,20)),pedal_lift=.24,gate=.995,
   note='The opening phrase is passed between voices with a little prominence for the tenor, inner-voice and bass entries. The later upper melody unfolds in longer spans over softer inner movement. As the opening returns, the register contracts and the final minor chord is allowed to fade without a new surge.'))
+,
+dict(op=57,title='Tamarisk Angle',key='Gb',fifths=-6,meter='7/8',bpm=58,
+ description='Juniper Ferry’s tenor fragment becomes G-flat–B-flat–D-flat–C-flat. Open stacks of fourths surround a melody that drifts across the seven-eighth bars. A whole-tone ascent reaches towards a nearby G-major reflection; later a falling triplet gesture returns to the flat-side colours. The ending leaves a softly spaced sixth, ninth and raised fourth around G-flat.',
+ difficulty='Advanced quartal and whole-tone study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the three-note fourth-based voicings balanced, with the upper note singing. Two groups of six eighth-note triplets cross two quarter beats, followed by a longer arrival. Ties carry the melody across the seven-eighth bar lines. The six-flat notation and neighbouring G-major passage need careful reading; the ending’s three upper whole tones should be soft and evenly voiced.',
+ parent_opus=56,motif=dict(hand='rh',start_beat=0,end_beat=3.5,pitches=['Gb','Bb','Db','Cb']),
+ ancestry=dict(source_opus=56,source_hand='lh',source_voice='tenor',source_start_beat=54,source_end_beat=60,source_pitches=['G','B','D','C'],transposition_semitones=11),
+ tuplet_groups=[dict(hand='rh',actual=3,normal=2,count=12)],page_starts=[13],
+ rh='''
+Gb4:1 Bb4:.5 Db5:1 Cb5:1
+Bb4:2 Ab4:.5 Gb4:1
+Ab4+Db5+Gb5:2 F5:.5 Eb5:1
+Db5:3.5~
+Db5:1 Eb5:.5 Gb5:2
+C5+F5+Bb5:2 Ab5:.5 Gb5:1
+Bb4+Eb5+Ab5:2 Gb5:1 F5:.5
+Ab4+Db5+Gb5:3.5
+Gb5:1/3 Ab5:1/3 Bb5:1/3 C6:1/3 D6:1/3 E6:1/3 D6:1.5
+B5:1.5 A5:.5 G5:1.5
+A4+D5+G5:2 F#5:.5 E5:1
+F#5:3.5~
+F#5:1.5 E5:.5 D5:1.5
+G4+C5+F5:2 E5:.5 D5:1
+E5:1 D5:.5 C5:2
+Eb5:2 Db5:.5 Cb5:1
+Bb5:1/3 Ab5:1/3 Gb5:1/3 F5:1/3 Eb5:1/3 Db5:1/3 Cb5:1.5
+Bb4+Eb5+Ab5:2 Gb5:.5 F5:1
+F4+Bb4+Eb5:2 Db5:1 Cb5:.5
+Ab4+Db5+Gb5:3.5
+Bb4:1 Ab4:.5 Gb4:2
+Ab4:.5 Bb4:.5 Db5:1 Cb5:1.5
+Bb4:1 Ab4:.5 F4:1 Eb4:1
+Ab4+Bb4+C5:3.5
+''',
+ lh='''
+Eb3:2 Bb3:.5 Db4:1
+Cb3:1.5 Gb3:.5 Bb3:1.5
+Ab2:1 Db3:.5 Gb3:2
+Db3:2 Ab3:1 F3:.5
+Gb3:1 Bb3:.5 Ab3:2
+F3:1 C4:.5 Eb4:2
+Eb3:2 Bb3:.5 Db4:1
+Db3:1 Ab3:1 Cb4:1.5
+Gb3:2 C4:1 D4:.5
+G3:1 B3:.5 D4:2
+C3:1.5 G3:.5 B3:1.5
+B2:2 F#3:1 A3:.5
+E3:1 B3:.5 G3:2
+F3:2 C4:.5 A3:1
+A2:1.5 E3:1 G3:1
+Ab2:2 Eb3:.5 Gb3:1
+Db3:2 Ab3:1 Gb3:.5
+Cb3:1.5 Gb3:.5 Bb3:1.5
+Bb2:1.5 F3:.5 Ab3:1.5
+Ab2:1.5 Db3:.5 Gb3:1.5
+Gb3:2 Db4:.5 Bb3:1
+Eb3:1.5 Bb3:1 Db4:1
+Db3:1 Ab3:.5 Cb4:1 Ab3:1
+Gb2+Db3+Eb3:3.5
+''',sections={1:'p',3:'mp',4:'pp',5:'p',6:'mp',8:'pp',9:'mp',10:'p',12:'pp',13:'p',14:'mp',15:'p',16:'pp',17:'mp',18:'p',20:'pp',21:'p',23:'pp'},words={1:'poco rubato',23:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,13),(14,16),(17,20),(21,24)],lower_phrases=[(1,3),(4,6),(7,10),(11,13),(14,17),(18,20),(21,24)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,6),('diminuendo',6,8),('diminuendo',9,12),('crescendo',13,14),('diminuendo',14,16),('diminuendo',17,20),('diminuendo',21,24)],tempo_changes={},group=4,
+ performance=dict(rubato=[58,54,61,48,56,62,55,47,64,59,54,49,57,61,53,48,62,56,52,46,53,49,42,31],
+  phrase_arcs=[[0,13,3],[14,27,4],[28,45,4],[45.5,55,3],[56,69,4],[70,84,-2]],
+  lower_entries=[[10.5,17.5],[35,42],[66.5,73.5]],pedal_bars=list(range(1,25)),pedal_lift=.2,gate=.995,
+  note='The fourth-based voicings remain quiet and open. The whole-tone ascent is one brief arc into the brighter neighbouring key; its later descending answer folds back into the darker flats. The final upper whole tones are balanced gently over the widely spaced bass.'))
 ]
