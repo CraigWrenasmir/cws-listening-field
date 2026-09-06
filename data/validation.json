@@ -19208,5 +19208,451 @@
       "sounded_pitches_per_minute": 74.3,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Chalcedony Landing",
+    "opus": 111,
+    "score_pages": 3,
+    "bars": 16,
+    "pitch_onsets": 156,
+    "audio_seconds": 134.71,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 43,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 6,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced inner-voice tuplets under held melody notes",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 4, 8 and 12, hold the upper E, G and F for the whole six-beat bar. After one quarter beat the RH inner voice enters: five equal eighths in the time of four, seven in four, then nine in eight. Each flourish crosses two equal LH notes; the final crossing lasts four beats rather than two. Keep the held melody present while allowing the ornament to move lightly beneath it. Two of the combined RH shapes reach an octave. The high middle phrases should retain the same soft touch as the opening."
+    },
+    "notated_tuplet_notes": {
+      "1:5:4": 5,
+      "1:7:4": 7,
+      "1:9:8": 9
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8200000000000001
+      ],
+      [
+        1,
+        1.32
+      ],
+      [
+        1.5,
+        1.82
+      ],
+      [
+        2,
+        2.32
+      ],
+      [
+        2.5,
+        2.82
+      ],
+      [
+        3,
+        3.82
+      ],
+      [
+        4,
+        5.82
+      ],
+      [
+        6,
+        7.82
+      ],
+      [
+        8,
+        8.82
+      ],
+      [
+        9,
+        9.82
+      ],
+      [
+        10,
+        11.82
+      ],
+      [
+        12,
+        12.82
+      ],
+      [
+        13,
+        13.32
+      ],
+      [
+        13.5,
+        13.82
+      ],
+      [
+        14,
+        14.82
+      ],
+      [
+        15,
+        15.82
+      ],
+      [
+        16,
+        17.82
+      ],
+      [
+        18,
+        18.82
+      ],
+      [
+        19,
+        19.82
+      ],
+      [
+        20,
+        20.82
+      ],
+      [
+        21,
+        23.82
+      ],
+      [
+        24,
+        24.82
+      ],
+      [
+        25,
+        25.32
+      ],
+      [
+        25.5,
+        25.82
+      ],
+      [
+        26,
+        26.82
+      ],
+      [
+        27,
+        29.82
+      ],
+      [
+        30,
+        30.82
+      ],
+      [
+        31,
+        31.82
+      ],
+      [
+        32,
+        32.82
+      ],
+      [
+        33,
+        33.82
+      ],
+      [
+        34,
+        35.82
+      ],
+      [
+        36,
+        36.82
+      ],
+      [
+        37,
+        37.32
+      ],
+      [
+        37.5,
+        37.82
+      ],
+      [
+        38,
+        39.82
+      ],
+      [
+        40,
+        41.82
+      ],
+      [
+        42,
+        42.82
+      ],
+      [
+        43,
+        43.82
+      ],
+      [
+        44,
+        44.82
+      ],
+      [
+        45,
+        47.82
+      ],
+      [
+        48,
+        48.82
+      ],
+      [
+        49,
+        49.32
+      ],
+      [
+        49.5,
+        49.82
+      ],
+      [
+        50,
+        50.82
+      ],
+      [
+        51,
+        51.82
+      ],
+      [
+        52,
+        53.82
+      ],
+      [
+        54,
+        54.82
+      ],
+      [
+        55,
+        55.32
+      ],
+      [
+        55.5,
+        55.82
+      ],
+      [
+        56,
+        56.82
+      ],
+      [
+        57,
+        57.82
+      ],
+      [
+        58,
+        59.82
+      ],
+      [
+        60,
+        60.82
+      ],
+      [
+        61,
+        61.32
+      ],
+      [
+        61.5,
+        61.82
+      ],
+      [
+        62,
+        62.82
+      ],
+      [
+        63,
+        63.82
+      ],
+      [
+        64,
+        65.82
+      ],
+      [
+        66,
+        66.82
+      ],
+      [
+        67,
+        68.82
+      ],
+      [
+        69,
+        70.82
+      ],
+      [
+        71,
+        71.82
+      ],
+      [
+        72,
+        72.82
+      ],
+      [
+        73,
+        73.32
+      ],
+      [
+        73.5,
+        73.82
+      ],
+      [
+        74,
+        74.82
+      ],
+      [
+        75,
+        75.82
+      ],
+      [
+        76,
+        77.82
+      ],
+      [
+        78,
+        79.82
+      ],
+      [
+        80,
+        80.82
+      ],
+      [
+        81,
+        81.82
+      ],
+      [
+        82,
+        83.82
+      ],
+      [
+        84,
+        84.82
+      ],
+      [
+        85,
+        85.32
+      ],
+      [
+        85.5,
+        85.82
+      ],
+      [
+        86,
+        86.82
+      ],
+      [
+        87,
+        87.82
+      ],
+      [
+        88,
+        89.82
+      ],
+      [
+        90,
+        95.82
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "verified_nonprinting_voice_rests": {
+      "inner": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "verified_polyrhythm_spans": [
+      {
+        "start_beat": 19,
+        "end_beat": 21,
+        "rh_notes": 5,
+        "lh_notes": 2
+      },
+      {
+        "start_beat": 43,
+        "end_beat": 45,
+        "rh_notes": 7,
+        "lh_notes": 2
+      },
+      {
+        "start_beat": 67,
+        "end_beat": 71,
+        "rh_notes": 9,
+        "lh_notes": 2
+      }
+    ],
+    "verified_tuplet_brackets": [
+      {
+        "hand": "rh",
+        "voice": "inner",
+        "start_beat": 19,
+        "end_beat": 21,
+        "actual": 5,
+        "normal": 4,
+        "stem": "down",
+        "show_number": "both",
+        "placement": "below"
+      },
+      {
+        "hand": "rh",
+        "voice": "inner",
+        "start_beat": 43,
+        "end_beat": 45,
+        "actual": 7,
+        "normal": 4,
+        "stem": "down",
+        "show_number": "both",
+        "placement": "below"
+      },
+      {
+        "hand": "rh",
+        "voice": "inner",
+        "start_beat": 67,
+        "end_beat": 71,
+        "actual": 9,
+        "normal": 8,
+        "stem": "down",
+        "show_number": "both",
+        "placement": "below"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 71.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

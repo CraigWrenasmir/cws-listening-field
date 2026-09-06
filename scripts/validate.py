@@ -255,7 +255,7 @@ for p in cat:
    marks=n.findall('notations/tuplet')
    expected=[('start',str(number))] if i==0 else [('stop',str(number))] if i==len(group)-1 else []
    assert [(t.get('type'),t.get('number')) for t in marks]==expected,('Tuplet bracket span',p['op'],event['id'])
-   if i==0:assert marks[0].get('bracket')=='yes' and marks[0].get('placement')=='above'
+   if i==0:assert marks[0].get('bracket')=='yes' and marks[0].get('placement')==spec.get('placement','above')
    if i==0:assert marks[0].get('show-number')==spec.get('show_number','actual')
  for spec in p.get('beam_spans',[]):
   step,levels={'eighth':(.5,1),'16th':(.25,2),'32nd':(.125,3)}[spec['note_type']]

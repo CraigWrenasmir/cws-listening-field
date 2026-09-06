@@ -1058,4 +1058,77 @@ R:4
   phrase_arcs=[[0,15.8,3],[16,39.8,1],[40,55.8,3],[56,63.8,2],[64,80,-2]],
   tenor_entries=[[16,40]],lower_entries=[],pedal_lift=.18,gate=.995,
   note='Let the upper chord decay naturally through the chromatic bass descent; holding the keys preserves its resonance without creating new attacks. Shape the tenor in three long breaths above the changing bass. The return becomes more mobile and rises into a higher register, then settles softly into the added sixth and ninth.'))
+,
+dict(op=111,title='Chalcedony Landing',key='a',fifths=0,meter='12/8',bpm=54,
+ description='Nacre Turnstile’s F–A-flat–B-flat–C becomes A–C–D–E. Three held upper notes leave room for increasingly long inner flourishes: five notes in two beats, seven in two, then nine in four. Each begins after a one-beat breath and crosses two slower LH notes. The surrounding melody rises into brighter registers before returning to a quiet A-minor ninth.',
+ difficulty='Advanced inner-voice tuplets under held melody notes',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 4, 8 and 12, hold the upper E, G and F for the whole six-beat bar. After one quarter beat the RH inner voice enters: five equal eighths in the time of four, seven in four, then nine in eight. Each flourish crosses two equal LH notes; the final crossing lasts four beats rather than two. Keep the held melody present while allowing the ornament to move lightly beneath it. Two of the combined RH shapes reach an octave. The high middle phrases should retain the same soft touch as the opening.',
+ parent_opus=110,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['A','C','D','E']),
+ ancestry=dict(source_opus=110,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=4,source_pitches=['F','Ab','Bb','C'],transposition_semitones=4),
+ hidden_voice_rests={'inner':[1,2,3,5,6,7,9,10,11,13,14,15,16]},
+ tuplet_spans=[dict(hand='rh',voice='inner',start_beat=19,end_beat=21,actual=5,normal=4,stem='down',show_number='both',placement='below'),dict(hand='rh',voice='inner',start_beat=43,end_beat=45,actual=7,normal=4,stem='down',show_number='both',placement='below'),dict(hand='rh',voice='inner',start_beat=67,end_beat=71,actual=9,normal=8,stem='down',show_number='both',placement='below')],
+ polyrhythms=[dict(start_beat=19,end_beat=21,rh_notes=5,lh_notes=2),dict(start_beat=43,end_beat=45,rh_notes=7,lh_notes=2),dict(start_beat=67,end_beat=71,rh_notes=9,lh_notes=2)],
+ system_starts=[1,3,4,5,7,8,9,11,12,13,15],page_starts=[7,12],engraving=dict(spacing_system=12,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.18] for bar,cuts in enumerate([[0,1,1.5,2,2.5,3,4,6],[0,2,3,4,6],[0,1,1.5,2,3,4,6],[0,1,2,3,6],[0,1,1.5,2,3,6],[0,1,2,3,4,6],[0,1,1.5,2,4,6],[0,1,2,3,6],[0,1,1.5,2,3,4,6],[0,1,1.5,2,3,4,6],[0,1,1.5,2,3,4,6],[0,1,3,5,6],[0,1,1.5,2,3,4,6],[0,2,3,4,6],[0,1,1.5,2,3,4,6],[0,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+A4:1.5 C5:.5 D5:1 E5:3
+G5:2 F5:1 E5:1 D5:2
+C5:1.5 B4:.5 A4:2 G4:2
+E5:3~ E5:3
+F5:1.5 A5:.5 C6:1 B5:3
+G5:2 E5:1 D5:1 C5:2
+B4:1 D5:.5 F5:.5 A5:2 G5:2
+G5:3~ G5:3
+G#5:1 B5:.5 D6:.5 C6:2 B5:2
+A5:1.5 G5:.5 F5:2 E5:2
+D5:1.5 F5:.5 A5:1 G5:3
+F5:3~ F5:3
+E5:1.5 G5:.5 B5:1 A5:3
+G5:2 F5:1 E5:1 D5:2
+C5:1.5 B4:.5 A4:2 G4:2
+G4+B4+C5+E5:3~ G4+B4+C5+E5:3
+''',
+ rh_inner='''
+R:6
+R:6
+R:6
+R:1 F4:2/5 G4:2/5 A4:2/5 C5:2/5 B4:2/5 R:3
+R:6
+R:6
+R:6
+R:1 D5:2/7 C5:2/7 A4:2/7 G4:2/7 A4:2/7 C5:2/7 E5:2/7 R:3
+R:6
+R:6
+R:6
+R:1 Bb4:4/9 A4:4/9 G4:4/9 F4:4/9 G4:4/9 A4:4/9 C5:4/9 D5:4/9 E5:4/9 R:1
+R:6
+R:6
+R:6
+R:6
+''',
+ lh='''
+A2:1 E3:.5 G3:1 C4:1.5 B3:2
+F3+A3:2 E3+G3:1 D3+F3:1 C4:2
+D3:1 A3:.5 C4:1.5 F3:1 E3:2
+F3:1 C4:1 E4:1 A3:3
+D3:1 A3:1 C4:1 F3:3
+G2:1 D3:1 F3:1 B3:1 E3:2
+C3:1 G3:.5 Bb3:.5 E4:2 D4:2
+C3:1 G3:1 B3:1 E3:3
+E3:1 B3:1 D4:1 G#3:1 F3:2
+A2:1 E3:1 G3:1 C4:1 B3:2
+G3:1 D4:1 F4:1 Bb3:1 A3:2
+Bb2:1 F3:2 A3:2 D4:1
+A2:1 E3:.5 G3:.5 C4:1 B3:1 E3:2
+F3+A3:2 E3+G3:1 D3+F3:1 C4:2
+D3:1 A3:1 C4:1 G#3:1 B3:2
+A3+E4:3~ A3+E4:3
+''',sections={1:'p',2:'mp',3:'pp',4:'p',5:'mp',6:'p',7:'pp',8:'p',9:'mp',10:'p',11:'pp',12:'p',13:'p',14:'pp',15:'pp',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,10),(11,14),(15,16)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16)],
+ hairpins=[('crescendo',1,2),('crescendo',3,5),('diminuendo',6,7),('crescendo',8,9),('diminuendo',10,11),('diminuendo',13,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,51,46,49,57,51,46,48,57,51,45,47,49,43,36,28],
+  phrase_arcs=[[0,17.8,3],[18,35.8,3],[36,59.8,3],[60,83.8,3],[84,96,-2]],
+  inner_entries=[[19,21],[43,45],[67,71]],lower_entries=[[90,96]],pedal_lift=.18,gate=.995,
+  note='Treat the inner flourishes as measured freedom around the held melody. The last one has more time to unfold, rather than simply becoming faster. Let the high middle phrases carry some lightness, then draw back into the lower register and the open minor-ninth ending.'))
 ]

@@ -17,6 +17,8 @@ def apply_tuplet_spans(root, events, piece):
         assert direction in ('up', 'down')
         show_number = spec.get('show_number', 'actual')
         assert show_number in ('actual', 'both')
+        placement = spec.get('placement', 'above')
+        assert placement in ('above', 'below')
         for i, event in enumerate(group):
             assert event['id'] not in used and len(event['pitches']) == 1
             used.add(event['id'])
@@ -56,6 +58,6 @@ def apply_tuplet_spans(root, events, piece):
             n.insert(list(n).index(notation), beam)
             if i == 0:
                 ET.SubElement(notation, 'tuplet', type='start', number=str(number),
-                              bracket='yes', placement='above', **{'show-number': show_number})
+                              bracket='yes', placement=placement, **{'show-number': show_number})
             if i == count-1:
                 ET.SubElement(notation, 'tuplet', type='stop', number=str(number))
