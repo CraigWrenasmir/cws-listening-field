@@ -41,6 +41,18 @@ for p in cat:
     del active[(msg.channel,msg.note)]
   assert not active
  assert collections.Counter(midi_notes)==collections.Counter(expected),('MIDI pitch/onset mismatch',stem)
+ if p.get('pedal_spans'):
+  expected_pedal=[(onset_tick(start),onset_tick(end)) for start,end in p['pedal_spans']]
+  for channel in [0,1]:
+   actual_pedal=[];down=None
+   for tr in mid.tracks:
+    tick=0
+    for message in tr:
+     tick+=message.time
+     if message.type=='control_change' and message.control==64 and message.channel==channel:
+      if message.value>=64 and down is None:down=onset_tick(tick/mid.ticks_per_beat)
+      elif message.value<64 and down is not None:actual_pedal.append((down,onset_tick(tick/mid.ticks_per_beat)));down=None
+   assert down is None and actual_pedal==expected_pedal,('MIDI pedal span mismatch',p['op'],channel,actual_pedal)
  # Check audible clock time independently by integrating the actual MIDI tempo
  # messages. The score player must follow rubato and tied onsets exactly.
  seconds=0;heard=collections.defaultdict(list);planned=collections.defaultdict(list)
@@ -74,17 +86,25 @@ for p in cat:
   child_classes=[Pitch(n).pitchClass for n in p['motif']['pitches']]
   assert [(n+a['transposition_semitones'])%12 for n in source_classes]==child_classes,('Ancestral interval mismatch',p['op'])
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
+ pedal_directions=[]
  for measure in r.findall('.//part/measure'):
   cursor=0;max_end=0
   for el in measure:
    if el.tag=='attributes' and el.find('divisions') is not None:divisions=int(el.findtext('divisions'))
    elif el.tag=='backup':cursor-=int(el.findtext('duration'))
    elif el.tag=='forward':cursor+=int(el.findtext('duration'))
+   elif el.tag=='direction' and el.find('direction-type/pedal') is not None:
+    direction=el.find('direction-type/pedal')
+    beat=(int(measure.get('number'))-1)*p['beats_per_bar']+(cursor+float(el.findtext('offset','0')))/divisions
+    pedal_directions.append((onset_tick(beat),direction.get('type'),el.findtext('staff','1')))
    elif el.tag=='note':
     dur=int(el.findtext('duration','0'))
     if el.find('chord') is None:cursor+=dur
     max_end=max(max_end,cursor)
   assert max_end==p['beats_per_bar']*divisions,(stem,measure.get('number'),max_end)
+ if p.get('pedal_spans'):
+  expected_marks=sorted((onset_tick(beat),kind,'2') for span in p['pedal_spans'] for beat,kind in zip(span,['start','stop']))
+  assert sorted(pedal_directions)==expected_marks,('Printed pedal span mismatch',p['op'],pedal_directions,expected_marks)
  # Every slur must close on the staff where it started.
  opened={}
  for n in r.findall('.//note'):
@@ -129,6 +149,7 @@ for p in cat:
  report[-1]['midi_highlight_timing_error_seconds']=round(timing_error,7)
  if p['op']>=21:report[-1]['technical_review']=dict(difficulty=p['difficulty'],limits=limits,note=p['technical_note'])
  if tuplets:report[-1]['notated_tuplet_notes']={':'.join(map(str,k)):v for k,v in tuplets.items()}
+ if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p['op']>=7:
   patterns=[]
   for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']%p['beats_per_bar'],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))

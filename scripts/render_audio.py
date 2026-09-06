@@ -94,13 +94,16 @@ for p in cat:
             ev['seconds']=round(seconds_at(ev['offset']),6)
             ev['end_seconds']=round(seconds_at(ev['offset']+ev['duration']),6)
             ev['velocity']=vel
-        # Brief pedal catches near phrase ends only. Lines remain clear elsewhere.
-        for mi in range(1,p['bars']+1):
-            if (mi in performance.get('pedal_bars',[])) if performance else (mi%4==0 or mi==p['bars']):
-                on=((mi-1)*bpb+.1)*TPB
-                off=(mi*bpb-performance.get('pedal_lift',.04))*TPB
-                scheduled.append((round(on),2,mido.Message('control_change',control=64,value=80,channel=hi)))
-                scheduled.append((round(off),-1,mido.Message('control_change',control=64,value=0,channel=hi)))
+        # Explicit spans match the printed pedal marks. Earlier works retain
+        # their existing per-bar rendering unchanged.
+        pedal_spans=p.get('pedal_spans')
+        if pedal_spans is None:
+            pedal_spans=[((mi-1)*bpb+.1,mi*bpb-performance.get('pedal_lift',.04))
+                         for mi in range(1,p['bars']+1)
+                         if ((mi in performance.get('pedal_bars',[])) if performance else (mi%4==0 or mi==p['bars']))]
+        for startbeat,endbeat in pedal_spans:
+            scheduled.append((round(startbeat*TPB),2,mido.Message('control_change',control=64,value=80,channel=hi)))
+            scheduled.append((round(endbeat*TPB),-1,mido.Message('control_change',control=64,value=0,channel=hi)))
         scheduled.sort(key=lambda x:(x[0],x[1]))
         last=0
         for tick,_,message in scheduled:

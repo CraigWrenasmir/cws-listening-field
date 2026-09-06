@@ -291,6 +291,22 @@ def make_score(p):
         sl=spanner.Slur(seq[0],seq[-1]);sl.placement='below';parts[1].insert(0,sl)
     for kind,start,end in p['hairpins']:
         hp=(dynamics.Crescendo if kind=='crescendo' else dynamics.Diminuendo)(refs[('rh',start)][0],refs[('rh',end)][0]);hp.placement='below';parts[0].insert(0,hp)
+    previous_end=0
+    for start,end in p.get('pedal_spans',[]):
+        assert previous_end<=start<end<=len(rows)*bpb
+        anchors=[]
+        for position in [start,end]:
+            measure_number=min(len(rows),int(position//bpb)+1)
+            anchor=spanner.SpannerAnchor()
+            parts[1].measure(measure_number).insert(position-(measure_number-1)*bpb,anchor)
+            anchors.append(anchor)
+        mark=expressions.PedalMark(*anchors)
+        mark.pedalType=expressions.PedalType.Sustain
+        # A single start-with-line imports consistently in Verovio. music21's
+        # SymbolLine export adds a separate MusicXML resume at the same instant.
+        mark.pedalForm=expressions.PedalForm.Line
+        mark.placement='below';parts[1].insert(0,mark)
+        previous_end=end
     for part in parts: sc.insert(0,part)
     sc.insert(0,layout.StaffGroup(parts,symbol='brace',barTogether=True))
     sc.insert(0,layout.ScoreLayout(scalingMillimeters=7,scalingTenths=40))
@@ -337,6 +353,8 @@ def main():
         # Only standard tempo directions belong on the printed score. This also
         # removes any tempo adjective automatically inferred by the exporter.
         for measure in root.findall('.//part/measure'):
+            for pedal in measure.findall('direction/direction-type/pedal'):
+                if pedal.get('type')=='start':pedal.set('sign','yes')
             for direction in list(measure.findall('direction')):
                 for dt in list(direction.findall('direction-type')):
                     for words in list(dt.findall('words')):
