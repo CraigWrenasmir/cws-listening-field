@@ -1088,5 +1088,56 @@
       "sounded_pitches_per_minute": 122.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Pollen Cloister",
+    "opus": 31,
+    "score_pages": 1,
+    "bars": 16,
+    "pitch_onsets": 158,
+    "audio_seconds": 84.11,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 45,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced three-voice cantilena",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 16,
+        "rapid_leap": 9
+      },
+      "note": "The right hand sustains a slow upper melody while playing an independent lower voice. Opposite stem directions distinguish the two lines. All simultaneously held notes in that hand, including the opening octave, are checked together for reach; the inner line must stay quieter without breaking the upper sustain. The left hand carries the third voice."
+    },
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 10,
+      "sounded_pitches_per_minute": 116.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

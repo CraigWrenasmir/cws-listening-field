@@ -46,7 +46,7 @@ for p in cat:
    text=re.sub(r'@font-face\s*\{[^}]*\}','',text)
    (ROOT/s).write_text(text)
  entry=dict(op=p['op'],title=p['title'],slug=f'cws-op-{p["op"]:03d}-'+p['title'].lower().replace(' ','-'),stamp=p['composition_stamp'],beats=p['bars']*p['beats_per_bar'],duration=p['duration_seconds'],performance=p['performance_seconds'],audio=prefix+'.mp3',pdf=prefix+'.pdf',midi=prefix+'.mid',xml=prefix+'.musicxml',scores=scores,parent=parent,motif=motif,note_onsets=p['note_onsets'],pages=pages,
-  events=[dict(id=e['id'],h=e['hand'],b=e['offset'],d=e['duration'],p=max(e['pitches']),ps=e['pitches'],s=e['seconds'],e=e['end_seconds']) for e in p['events']])
+  events=[dict(id=e['id'],h=e['hand'],b=e['offset'],d=e['duration'],p=max(e['pitches']),ps=e['pitches'],s=e['seconds'],e=e['end_seconds'],**({'v':e['voice']} if e.get('voice') else {})) for e in p['events']])
  manifest.append(entry)
 (ROOT/'library.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
 index=ROOT/'index.html';html=index.read_text()

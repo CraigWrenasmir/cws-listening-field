@@ -1,5 +1,5 @@
 from pathlib import Path
-import json, xml.etree.ElementTree as ET, collections, subprocess, argparse
+import json, xml.etree.ElementTree as ET, collections, subprocess, argparse, re
 import mido
 from music21 import converter, note, chord
 from music21.pitch import Pitch
@@ -80,11 +80,30 @@ for p in cat:
  if p.get('ancestry'):
   a=p['ancestry'];ancestor=next(x for x in cat if x['op']==a['source_opus'])
   assert a['source_opus']==p['parent_opus']<p['op']
-  fragment=[e for e in ancestor['events'] if e['hand']==a['source_hand'] and a['source_start_beat']<=e['offset']<a['source_end_beat']][:4]
+  fragment=[e for e in ancestor['events'] if e['hand']==a['source_hand'] and (not a.get('source_voice') or e.get('voice')==a['source_voice']) and a['source_start_beat']<=e['offset']<a['source_end_beat']][:4]
   source_classes=[Pitch(n).pitchClass for n in a['source_pitches']]
   assert [max(e['pitches'])%12 for e in fragment]==source_classes,('Ancestor fragment mismatch',p['op'])
   child_classes=[Pitch(n).pitchClass for n in p['motif']['pitches']]
   assert [(n+a['transposition_semitones'])%12 for n in source_classes]==child_classes,('Ancestral interval mismatch',p['op'])
+ if p.get('voice_structure'):
+  notation_voices=collections.defaultdict(set);voice_labels=collections.defaultdict(set)
+  durations=collections.defaultdict(float);source_events={e['id']:e for e in p['events']}
+  for measure in r.findall('.//part/measure'):
+   if measure.find('attributes/divisions') is not None:voice_divisions=int(measure.findtext('attributes/divisions'))
+   for n in measure.findall('note'):
+    if n.find('rest') is not None:continue
+    staff=n.findtext('staff','1');xml_voice=n.findtext('voice');notation_voices[staff].add(xml_voice)
+    match=re.match(r'(cws\d+-(?:rh|lh)-m\d+-n\d+)',n.get('id',''));assert match
+    event=source_events[match[1]];voice_labels[(staff,xml_voice)].add(event['voice'])
+    assert staff==('1' if event['hand']=='rh' else '2'),('Notated event moved to wrong hand',p['op'],event['id'])
+    pitch=n.find('pitch');midi=(int(pitch.findtext('octave'))+1)*12+dict(C=0,D=2,E=4,F=5,G=7,A=9,B=11)[pitch.findtext('step')]+int(pitch.findtext('alter','0'))
+    durations[(event['id'],midi)]+=int(n.findtext('duration'))/voice_divisions
+  assert len(notation_voices['1'])==2 and len(notation_voices['2'])==1 and None not in notation_voices['1'],('Missing independent notated voices',p['op'],notation_voices)
+  assert sorted(tuple(v) for v in voice_labels.values())==[('bass',),('inner',),('upper',)],('Notated voice assignments differ',p['op'],voice_labels)
+  expected_durations={(e['id'],pitch):e['duration'] for e in p['events'] for pitch in e['pitches']}
+  assert durations.keys()==expected_durations.keys()
+  for key,value in expected_durations.items():assert abs(durations[key]-value)<1/960,('Notated polyphonic sustain differs',p['op'],key)
+  for hand,voices in p['voice_structure'].items():assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
  pedal_directions=[]
  for measure in r.findall('.//part/measure'):
@@ -135,8 +154,12 @@ for p in cat:
  for hand in ['rh','lh']:
   evs=sorted([e for e in p['events'] if e['hand']==hand],key=lambda e:e['offset'])
   pitches=[pi for e in evs for pi in e['pitches']]
-  leaps=[min(abs(a-b) for a in prev['pitches'] for b in curr['pitches']) for prev,curr in zip(evs,evs[1:])]
-  rapid=[leap for leap,prev,curr in zip(leaps,evs,evs[1:]) if curr['offset']-prev['offset']<=.5]
+  leaps=[];rapid=[]
+  for voice in set(e.get('voice','single') for e in evs):
+   line=[e for e in evs if e.get('voice','single')==voice]
+   for prev,curr in zip(line,line[1:]):
+    leap=min(abs(a-b) for a in prev['pitches'] for b in curr['pitches']);leaps.append(leap)
+    if curr['offset']-prev['offset']<=.5:rapid.append(leap)
   stats[hand]=dict(low=min(pitches),high=max(pitches),maximum_melodic_leap_semitones=max(leaps),maximum_eighth_note_leap_semitones=max(rapid,default=0),maximum_simultaneous_span_semitones=max(max(e['pitches'])-min(e['pitches']) for e in evs))
   assert stats[hand]['maximum_simultaneous_span_semitones']<=limits['chord_span'],('Hand span needs review',p['op'],hand,stats[hand],limits)
   if p['op']>=7:
@@ -146,6 +169,14 @@ for p in cat:
  for beat in sorted(set(e['offset'] for e in p['events'])):
   active={h:[pi for e in p['events'] if e['hand']==h and e['offset']<=beat<e['offset']+e['duration'] for pi in e['pitches']] for h in ['rh','lh']}
   if active['rh'] and active['lh']:assert min(active['rh'])>=max(active['lh']),(stem,beat,active)
+  if p.get('voice_structure'):
+   for hand,pitches in active.items():
+    assert len(pitches)==len(set(pitches)),('Overlapping same-hand pitch',p['op'],beat,hand,pitches)
+    if pitches:
+     span=max(pitches)-min(pitches)
+     assert span<=limits['chord_span'],('Polyphonic hand span needs review',p['op'],beat,hand,span)
+     stats[hand]['maximum_simultaneous_span_semitones']=max(stats[hand]['maximum_simultaneous_span_semitones'],span)
+   assert not set(active['rh'])&set(active['lh']),('Both hands need the same key',p['op'],beat)
  probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration:stream=codec_name,sample_rate,channels','-of','json',str(d/(stem+'.mp3'))]))
  assert abs(float(probe['format']['duration'])-p['duration_seconds'])<.1
  report.append(dict(piece=p['title'],opus=p['op'],score_pages=pages,bars=p['bars'],pitch_onsets=score_count,audio_seconds=p['duration_seconds'],hands=stats,checks='PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration'))
@@ -153,6 +184,7 @@ for p in cat:
  if p['op']>=21:report[-1]['technical_review']=dict(difficulty=p['difficulty'],limits=limits,note=p['technical_note'])
  if tuplets:report[-1]['notated_tuplet_notes']={':'.join(map(str,k)):v for k,v in tuplets.items()}
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
+ if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
  if p['op']>=7:
   patterns=[]
   for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']%p['beats_per_bar'],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))

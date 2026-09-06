@@ -31,6 +31,8 @@ body{background:light-dark(#f1f2ed,#14242a);font-family:Arial,sans-serif}
 @media(max-width:620px){#cws-listening-field .lf-listening-path{margin:0 20px 24px}#cws-listening-field .lf-path-order{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}#cws-listening-field .lf-path-order button{font-size:15px}#cws-listening-field .lf-path-details summary{min-height:44px}}
 #cws-listening-field{max-width:1280px;margin:0 auto;min-height:100vh}
 #cws-listening-field .lf-title{font-weight:400}
+#cws-listening-field .lf-legend{flex-wrap:wrap;gap:10px 18px}
+#cws-listening-field .lf-legend i.lf-inner{background:var(--lf-copper)}
 #cws-listening-field .lf-downloads{display:flex;flex-wrap:wrap;gap:8px 24px;padding:0 32px 24px;font-size:14px}
 #cws-listening-field a{color:var(--lf-ink);text-decoration-thickness:1px;text-underline-offset:4px}
 #cws-listening-field a:hover{color:var(--lf-copper)}

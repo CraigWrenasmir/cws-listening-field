@@ -317,4 +317,72 @@ Bb2+F3:3.5
   phrase_arcs=[[0,10,3],[10.5,17,4],[17.5,27,2],[28,38,4],[38.5,52,3],[52.5,70,-2]],
   lower_entries=[[0,10.5],[10.5,21],[21,28],[28,38.5],[38.5,45.5],[45.5,59.5],[59.5,70]],pedal_bars=list(range(1,21)),pedal_lift=.2,gate=.99,
   note='The phrasing follows the held melody across bar lines. Bass replies stay softer and change their grouping, allowing the seven-eighth spans to pass without a hard accent at each bar. The final return gradually broadens into its sustained tonic.'))
+,
+dict(op=31,title='Pollen Cloister',key='d',fifths=-1,meter='4/4',bpm=57,
+ description='A slow upper D-F-A-C unfolds over four bars, remembering Fallow Tramway in D minor. Beneath it, a separately notated inner voice moves through small replies while the bass follows its own line. E-flat-major colour opens the first return; later, D dominant turns towards a brief G-major light before C minor and A dominant lead back to the held final D.',
+ difficulty='Advanced three-voice cantilena',
+ technique_limits=dict(chord_span=12,melodic_leap=16,rapid_leap=9),
+ technical_note='The right hand sustains a slow upper melody while playing an independent lower voice. Opposite stem directions distinguish the two lines. All simultaneously held notes in that hand, including the opening octave, are checked together for reach; the inner line must stay quieter without breaking the upper sustain. The left hand carries the third voice.',
+ parent_opus=29,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=16,pitches=['D','F','A','C']),
+ ancestry=dict(source_opus=29,source_hand='lh',source_start_beat=0,source_end_beat=4,source_pitches=['C','Eb','G','Bb'],transposition_semitones=2),
+ rh='''
+D5:4
+F5:4
+A5:4
+C6:4
+Bb5:2 A5:2
+G5:3 F5:1
+E5:2 D5:2
+F5:4
+E5:3 G5:1
+A5:2 G5:2
+F#5:3 E5:1
+G5:4
+F5:2 Eb5:2
+D5:2 C#5:2
+E5:2 D5:2~
+D5:4
+''',
+ rh_inner='''
+D4:1 F4:1 A4:1 C5:1
+A4:1 C5:.5 E5:.5 D5:1 C5:1
+Bb4:1 D5:1 F5:.5 G5:.5 E5:1
+E5:1 G5:1 Bb5:.5 A5:.5 G5:1
+Eb5:1 G5:.5 A5:.5 F5:1 E5:1
+D5:1 F5:.5 Eb5:.5 D5:1 C5:1
+B4:1 A4:.5 G4:.5 F4:1 E4:1
+A4:1 C5:.5 E5:.5 D5:1 C5:1
+G4:1 B4:1 D5:.5 C5:.5 B4:1
+C5:1 E5:.5 G5:.5 F5:1 E5:1
+A4:1 C5:1 D5:.5 C5:.5 B4:1
+B4:1 D5:.5 F#5:.5 E5:1 D5:1
+C5:1 Bb4:.5 G4:.5 Ab4:1 G4:1
+A4:1 G4:1 E4:1 G4:1
+A4:1 C5:.5 B4:.5 A4:1 F4:1
+F4:1 A4:1 C5:1 A4:1
+''',
+ lh='''
+D3:2 A3:1 F3:1
+F3:1 C4:1 A3:2
+Bb2:1 F3:1 A3:1 D4:1
+C3:2 G3:1 Bb3:1
+Eb3:1 Bb3:1 D4:1 G3:1
+G3:1 D4:1 Bb3:1 A3:1
+A2:1 E3:1 G3:1 C#4:1
+D3:1 A3:1 C4:1 F3:1
+C3:1 G3:1 E3:2
+F3:2 C4:1 A3:1
+D3:1 A3:1 C4:1 F#3:1
+G3:1 D4:1 B3:1 A3:1
+C3:1 G3:1 Bb3:1 Eb3:1
+A2:1 E3:1 G3:1 C#4:1
+D3:1 A3:1 F3:1 E3:1
+D3+A3:4
+''',sections={1:'p',3:'mp',5:'p',7:'pp',9:'p',11:'mp',13:'p',15:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('diminuendo',5,8),('crescendo',9,11),('diminuendo',11,12),('diminuendo',13,16)],tempo_changes={},group=4,
+ performance=dict(rubato=[57,55,58,53,55,51,48,44,53,55,57,50,49,45,41,34],
+  phrase_arcs=[[0,15,3],[16,31,3],[32,47,4],[48,64,-2]],
+  lower_entries=[[0,8],[8,16],[16,24],[24,32],[32,40],[40,48],[48,56]],pedal_bars=list(range(1,17)),pedal_lift=.24,gate=.99,
+  note='The upper line remains present through its long notes; the separately scheduled inner line is voiced seven velocity steps softer. Bass phrases receive their own gentle prominence. The final upper D remains held across the bar line while the inner voice completes its reply.'))
 ]

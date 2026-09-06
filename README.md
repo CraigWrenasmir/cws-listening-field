@@ -1,6 +1,6 @@
 # The Listening Field
 
-**CWS / FIRST STUDIES** — a growing collection of piano miniatures presented as freely rotating sculptures of their two voices.
+**CWS / FIRST STUDIES** — a growing collection of piano miniatures presented as freely rotating sculptures of their musical voices, played with two hands.
 
 [Open the public gallery on GitHub Pages](https://craigwrenasmir.github.io/cws-listening-field/).
 
@@ -46,6 +46,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 28 | Birch Hypotenuse | 3/4 | 159 | [Score](pieces/CWS_Op_028_Birch_Hypotenuse/CWS_Op_028_Birch_Hypotenuse.pdf) | [MP3](pieces/CWS_Op_028_Birch_Hypotenuse/CWS_Op_028_Birch_Hypotenuse.mp3) |
 | CWS Op. 29 | Fallow Tramway | 5/4 | 167 | [Score](pieces/CWS_Op_029_Fallow_Tramway/CWS_Op_029_Fallow_Tramway.pdf) | [MP3](pieces/CWS_Op_029_Fallow_Tramway/CWS_Op_029_Fallow_Tramway.mp3) |
 | CWS Op. 30 | Cedar Ellipsis | 7/8 | 186 | [Score](pieces/CWS_Op_030_Cedar_Ellipsis/CWS_Op_030_Cedar_Ellipsis.pdf) | [MP3](pieces/CWS_Op_030_Cedar_Ellipsis/CWS_Op_030_Cedar_Ellipsis.mp3) |
+| CWS Op. 31 | Pollen Cloister | 4/4 | 158 | [Score](pieces/CWS_Op_031_Pollen_Cloister/CWS_Op_031_Pollen_Cloister.pdf) | [MP3](pieces/CWS_Op_031_Pollen_Cloister/CWS_Op_031_Pollen_Cloister.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
@@ -99,6 +100,8 @@ Composition stamps use `YYYYMMDDHHMMSS` in Sydney local time and remain stable a
 ## How the sculptures work
 
 Musical time travels around an open, folded arc. Pitch and hand assignment shape the contours in three dimensions. The artwork is a visual interpretation of the voices; chord events use their highest pitch for the contour while the score highlights the whole chord. Quaternion trackball rotation permits turning, tilting and rolling. The Turn, Tilt and Roll buttons move by 30 degrees; Shift-click reverses direction.
+
+From Op. 31, some studies include a separately notated inner voice in the right hand. It has its own copper contour and playback glow, while the score distinguishes it with downward stems beneath the sustained upper melody. The hand-span review includes every simultaneously held pitch across both right-hand voices.
 
 Playback timing comes from the same event data used to create the MIDI performance. Phrase shaping, the slowing close and final fermata are reflected in both the audio and note highlights. The first three recordings retain their original faint reverb; Op. 4–6 use the slightly warmer room setting.
 

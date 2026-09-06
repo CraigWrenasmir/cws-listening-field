@@ -10,7 +10,7 @@ for(const p of data){
  const visited=new Set();let parent=p;while(parent?.parent){assert(!visited.has(parent.op),'Cyclic musical ancestry');visited.add(parent.op);parent=data.find(a=>a.op===parent.parent);}
  const scoreText=(await Promise.all(p.scores.map(url=>readFile(new URL(url,root),'utf8')))).join('\n');
  for(const e of p.events){assert(e.s>=0&&e.e>e.s&&e.e<=p.performance+.1);assert(scoreText.includes('id="'+e.id+'"'),'Missing score note '+e.id);}
- const motif=p.events.filter(e=>e.h===p.motif.hand&&e.b>=p.motif.start_beat&&e.b<p.motif.end_beat).slice(0,4);
+ const motif=p.events.filter(e=>e.h===p.motif.hand&&(!p.motif.voice||e.v===p.motif.voice)&&e.b>=p.motif.start_beat&&e.b<p.motif.end_beat).slice(0,4);
  const pitchClass={Cb:11,C:0,'C#':1,Db:1,D:2,'D#':3,Eb:3,E:4,'E#':5,Fb:4,F:5,'F#':6,Gb:6,G:7,'G#':8,Ab:8,A:9,'A#':10,Bb:10,B:11,'B#':0};
  assert.deepEqual(motif.map(e=>e.p%12),p.motif.pitches.map(n=>pitchClass[n]),'Motif mismatch in '+p.title);
  for(const file of [p.audio,p.pdf,p.midi,p.xml,...p.scores]){assert(!file.includes('..'));assert((await stat(new URL(file,root))).size>0);}

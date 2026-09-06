@@ -281,6 +281,45 @@ def make_score(p):
             part.append(m)
         assert held is None,('Unclosed tie',p['op'],hand)
         parts.append(part)
+    if p.get('rh_inner'):
+        inner_rows=parse_rows(p['rh_inner']);held=None
+        assert len(inner_rows)==len(parse_rows(p['rh']))
+        for event in all_events:event['voice']='upper' if event['hand']=='rh' else 'bass'
+        for mi,row in enumerate(inner_rows,1):
+            assert abs(sum(d for _,d in row)-bpb)<1e-8,(p['title'],'inner',mi,row)
+            measure=parts[0].measure(mi);upper=stream.Voice(id='1');inner=stream.Voice(id='2')
+            for n in list(measure.notesAndRests):
+                position=n.offset;measure.remove(n)
+                if not n.isRest:n.stemDirection='up'
+                upper.insert(position,n)
+            measure.insert(0,upper)
+            offset=0;refs[('inner',mi)]=[]
+            for ei,(ps,dur) in enumerate(row):
+                sustain=ps.endswith('~');ps=ps.rstrip('~')
+                if ps=='R':n=note.Rest(quarterLength=dur)
+                elif '+' in ps:n=chord.Chord(ps.split('+'),quarterLength=dur)
+                else:n=note.Note(ps,quarterLength=dur)
+                n.id=f'cws{p["op"]}-rh-m{mi}-n{ei+1001}'
+                if held:
+                    assert ps!='R' and [x.midi for x in n.pitches]==held['pitches'],('Invalid inner tie',p['op'],mi,ei)
+                    n.id=held['id']+f'-tie-{mi}-{ei+1001}'
+                    n.tie=tie.Tie('continue' if sustain else 'stop')
+                elif sustain:n.tie=tie.Tie('start')
+                if ps!='R':
+                    n.stemDirection='down';refs[('inner',mi)].append(n)
+                    if isinstance(n,chord.Chord):
+                        for pi,cn in enumerate(n.notes):cn.id=n.id+f'-pitch-{pi+1}'
+                    if held:
+                        held['duration']+=dur;event=held
+                    else:
+                        event=dict(id=n.id,hand='rh',voice='inner',bar=mi,offset=(mi-1)*bpb+offset,duration=dur,pitches=[x.midi for x in n.pitches],spellings=[x.nameWithOctave for x in n.pitches])
+                        all_events.append(event)
+                    held=event if sustain else None
+                else:assert not sustain
+                inner.insert(offset,n);offset+=dur
+            measure.insert(0,inner)
+        assert held is None,('Unclosed inner tie',p['op'])
+        all_events.sort(key=lambda e:(e['hand'],e['offset'],0 if e['voice']=='upper' else 1))
     for start,end in p['slurs']:
         seq=[n for mi in range(start,end+1) for n in refs[('rh',mi)]]
         if seq:
@@ -370,7 +409,8 @@ def main():
         assert onset_count<=256
         bpb=float(meter.TimeSignature(p['meter']).barDuration.quarterLength)
         entry=dict(prior.get(p['op'],{}))
-        entry.update({k:v for k,v in p.items() if k not in ('rh','lh','slurs','subtitle','tempo','words')})
+        entry.update({k:v for k,v in p.items() if k not in ('rh','rh_inner','lh','slurs','subtitle','tempo','words')})
+        if p.get('rh_inner'):entry['voice_structure']=dict(rh=['upper','inner'],lh=['bass'])
         for field in ['subtitle','tempo','words']:entry.pop(field,None)
         # Keep the existing performance metadata when only engraving changes.
         old_events={e['id']:e for e in prior.get(p['op'],{}).get('events',[])}

@@ -18,7 +18,11 @@ function updateRotation(){
  canvas.dataset.orientation=orientation.map(v=>v.toFixed(6)).join(',');
 }
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-const tracks=data.map(p=>['rh','lh'].map(hand=>p.events.filter(e=>e.h===hand)));
+const tracks=data.map(p=>{
+ const voices=['rh','lh'].map(hand=>p.events.filter(e=>e.h===hand&&e.v!=='inner'));
+ const inner=p.events.filter(e=>e.v==='inner');if(inner.length)voices.push(inner);
+ return voices.map(events=>events.sort((a,b)=>a.b-b.b));
+});
 const range=data.map(p=>[p.title,p.motif.pitches.join(' · ')]);
 const byOp=new Map(data.map((p,i)=>[p.op,i]));
 // An editorial walk: root and sibling, then Velvet Estuary's branch, ending in C major.
@@ -56,13 +60,13 @@ function traceValue(index,hand,t){
  const eased=f*f*(3-2*f);return a.p+(b.p-a.p)*eased;
 }
 function modelPoint(index,hand,t,thread){
- const pitch=traceValue(index,hand,t),base=hand===0?70:51;
+ const pitch=traceValue(index,hand,t),base=hand===0?70:hand===1?51:70;
  const theta=-2.68+t*5.15;
- const radial=133+(pitch-base)*2.5*state.relief+(hand? -10:12)+thread*2.25;
+ const radial=133+(pitch-base)*2.5*state.relief+(hand===0?12:hand===1?-10:1)+thread*2.25;
  // Musical time folds around an open arc. Pitch and hand separate the lines in depth.
  const x=Math.cos(theta)*radial*1.4+Math.sin(t*Math.PI*2)*13;
  const y=-(Math.sin(theta)*radial*.72+(t-.5)*47+(pitch-base)*.8);
- const z=(pitch-base)*4.3*state.relief+(hand?-19:19)+thread*1.65*Math.sin(theta*1.5)+12*Math.sin(t*Math.PI*2);
+ const z=(pitch-base)*4.3*state.relief+(hand===0?19:hand===1?-19:0)+thread*1.65*Math.sin(theta*1.5)+12*Math.sin(t*Math.PI*2);
  return [x,y,z];
 }
 function project(p,cx,cy,scale){
@@ -76,13 +80,13 @@ function rebuildGeometry(){
  radius=1;geometry.clear();
  // The norm is convex along each thread offset: the two outside threads
  // bound every inner thread. Compute their radius without storing the catalogue.
- data.forEach((_,index)=>{for(let hand=0;hand<2;hand++)for(const thread of [-Math.floor(state.density/2),Math.floor(state.density/2)])for(let i=0;i<=240;i++)radius=Math.max(radius,Math.hypot(...modelPoint(index,hand,i/240,thread)));});
+ data.forEach((_,index)=>{for(let hand=0;hand<tracks[index].length;hand++)for(const thread of [-Math.floor(state.density/2),Math.floor(state.density/2)])for(let i=0;i<=240;i++)radius=Math.max(radius,Math.hypot(...modelPoint(index,hand,i/240,thread)));});
  radius/=Math.sqrt(1-(radius/1000)**2);
 }
 function geometryFor(index){
  if(!geometry.has(index)){
   const curves=[];
-  for(let hand=1;hand>=0;hand--)for(let thread=-Math.floor(state.density/2);thread<=Math.floor(state.density/2);thread++){
+  for(let hand=tracks[index].length-1;hand>=0;hand--)for(let thread=-Math.floor(state.density/2);thread<=Math.floor(state.density/2);thread++){
    const points=[];
    for(let i=0;i<=240;i++)points.push(modelPoint(index,hand,i/240,thread));
    curves.push({hand,thread,points});
@@ -110,13 +114,13 @@ function drawWork(index,cx,cy,scale,opacity){
  }
  segments.sort((a,b)=>a.depth-b.depth);
  for(const segment of segments){
-  ctx.strokeStyle=segment.hand?palette.lower:palette.ink;
+  ctx.strokeStyle=segment.hand===2?palette.copper:segment.hand?palette.lower:palette.ink;
   ctx.lineWidth=segment.thread===0?1.05:.65;
   ctx.globalAlpha=opacity*(segment.thread===0?.82:.43)*(.76+.24*Math.max(-1,Math.min(1,segment.depth/180)));
   ctx.beginPath();segment.points.forEach((p,j)=>j?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.stroke();
  }
  if(state.kinship && zoom>.85){
-  const motif=data[index].motif,hand=motif.hand==='lh'?1:0,from=motif.start_beat/data[index].beats,to=motif.end_beat/data[index].beats;
+  const motif=data[index].motif,hand=motif.voice==='inner'?2:motif.hand==='lh'?1:0,from=motif.start_beat/data[index].beats,to=motif.end_beat/data[index].beats;
   ctx.strokeStyle=palette.copper;ctx.globalAlpha=1;ctx.lineWidth=2.2;strokePath(index,hand,0,cx,cy,scale,from,to);
   const midpoint=point(index,hand,(from+to)/2,0,cx,cy,scale);ctx.beginPath();ctx.arc(midpoint[0],midpoint[1],3,0,Math.PI*2);ctx.fillStyle=palette.copper;ctx.fill();
   ctx.fillStyle=chosen?palette.ink:palette.lower;ctx.globalAlpha=1;ctx.textAlign='center';ctx.font=(w<500?'14px':'18px')+' Georgia';
@@ -124,7 +128,7 @@ function drawWork(index,cx,cy,scale,opacity){
   ctx.font='12px monospace';ctx.fillStyle=palette.copper;ctx.fillText(range[index][1],cx,cy+radius*scale+(w<500?55:44));
  }
  if(chosen && audio.currentTime>0 && audio.currentTime<data[index].performance){
-  for(let hand=0;hand<2;hand++){
+  for(let hand=0;hand<tracks[index].length;hand++){
    const e=active(index,hand,audio.currentTime);if(!e)continue;
    const t=e.b/data[index].beats;const pt=point(index,hand,t,0,cx,cy,scale);
    ctx.globalAlpha=.12;ctx.fillStyle=palette.copper;ctx.beginPath();ctx.arc(pt[0],pt[1],13*pt[3],0,Math.PI*2);ctx.fill();
@@ -223,6 +227,7 @@ function choose(index,keepPlaylist=false){
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
  refreshFamily();
  q('#lf-title').textContent=names[index];q('#lf-opus').textContent='CWS Op. '+data[index].op;q('#lf-stamp').textContent=data[index].stamp;
+ q('#lf-inner-legend').hidden=tracks[index].length<3;
  updateNavigation();q('#lf-time').textContent='0:00 / '+formatTime(data[index].duration);q('#lf-progress').value=0;q('#lf-progress').max=data[index].duration;q('#lf-progress').setAttribute('aria-valuetext','0:00 of '+formatTime(data[index].duration));
  [['pdf','pdf'],['audio','audio'],['midi','midi'],['xml','xml']].forEach(([id,field])=>{q('#lf-download-'+id).href=data[index][field];});
  if(location.hash.slice(1)!==data[index].slug)history.replaceState(null,'','#'+data[index].slug);
