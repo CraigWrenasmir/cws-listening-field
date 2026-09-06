@@ -1395,4 +1395,58 @@ Ab3:2 C4:2
   phrase_arcs=[[0,15.5,3],[16,35.5,4],[36,59.5,3],[60,76,-2]],
   lower_entries=[[0,8]],inner_entries=[[20,32],[44,56],[72,76]],tenor_entries=[[32,40],[56,64]],pedal_lift=.2,gate=.995,
   note='The six inner waves remain softer than the long notes above them, with a small swell towards each wave’s crest. Their first ascent opens into brighter harmony, and the second group descends into softer colours. The chromatic opening returns quietly before the final ninth remains in the air.'))
+,
+dict(op=92,title='Gorse Undertow',key='D',fifths=2,meter='4/4',bpm=54,
+ description='Lotus Interchange’s tenor gives this melody D–E–B–D. Paired notes a sixth apart rise in quarter-note triplets, then settle into longer harmonies. The gesture later passes to the LH below a simpler upper line. D-major warmth moves through C, A-flat and E-flat colours, and a final G-sharp leaves a Lydian light above D major.',
+ difficulty='Advanced legato sixths in triplets, transferred between the hands',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Bars 6–8 place three RH pairs across two quarter beats while the LH keeps its quarter-note motion. In bars 12–14 the LH takes the paired triplets beneath longer upper notes. Connect the sixths with balanced fingers and small wrist movements; keep the lower note of each pair lighter. The final upper G-sharp is an intentional raised fourth above the D-major foundation.',
+ parent_opus=91,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['D','E','B','D']),
+ ancestry=dict(source_opus=91,source_hand='lh',source_voice='tenor',source_start_beat=16,source_end_beat=24,source_pitches=['C','D','A','C'],transposition_semitones=2),
+ system_starts=[1,4,6,8,10,12,14,16],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ tuplet_hands=['rh','lh'],tuplet_groups=[dict(hand='rh',actual=3,normal=2,count=18),dict(hand='lh',actual=3,normal=2,count=18)],
+ polyrhythms=[dict(start_beat=s,end_beat=s+2,rh_notes=3,lh_notes=2) for s in [20,24,28]],
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.18] for bar,cuts in enumerate([[0,1,1.5,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2/3,4/3,2,3,4],[0,2/3,4/3,2,3,4],[0,2/3,4/3,2,3,4],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+D5:1 E5:.5 B4:.5 D5:2
+C#5:2 E5:1 F#5:1
+G5:2 F#5:1 E5:1
+D5:3 C#5:1
+E5:1 F#5:1 G5:2
+F#4+D5:2/3 G4+E5:2/3 A4+F#5:2/3 B4+G5:2
+F#4+D5:2/3 G#4+E5:2/3 A4+F#5:2/3 B4+G#5:2
+G4+E5:2/3 A4+F#5:2/3 B4+G5:2/3 C5+A5:2
+G5:1 E5:1 D5:2
+F5:2 Ab5:1 G5:1
+Eb5:2 D5:1 C5:1
+B4:2 A4:1 G4:1
+C5:3 B4:1
+A4:2 F#4:1 G4:1
+G4+B4+D5:3 A4+C#5+E5:1
+A4+C#5+E5+G#5:4
+''',
+ lh='''
+D3:1 A3:1 C#4:1 B3:1
+B2:2 F#3:1 A3:1
+G2:1 D3:1 F#3:1 A3:1
+E3:2 B3:1 D4:1
+A2:1 E3:1 G3:1 C#4:1
+D3:1 A3:1 C4:1 B3:1
+E3:1 B3:1 D4:1 C#4:1
+C3:1 G3:1 B3:1 D4:1
+F3:2 C4:1 A3:1
+Ab2:1 Eb3:1 G3:1 Bb3:1
+Eb3:1 Bb3:1 Db4:1 Bb3:1
+G2+E3:2/3 A2+F#3:2/3 B2+G3:2/3 C3+A3:2
+A2+F#3:2/3 B2+G#3:2/3 C3+A3:2/3 D3+B3:2
+B2+G3:2/3 C#3+A3:2/3 D3+B3:2/3 E3+C#4:2
+A2:1 E3:1 G3:1 C#4:1
+D3+F#3:4
+''',sections={1:'p',2:'pp',3:'p',4:'pp',5:'p',6:'mp',7:'p',8:'mp',9:'pp',10:'p',11:'pp',12:'p',13:'mp',14:'pp',15:'p',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,5),(6,9),(10,14),(15,16)],lower_phrases=[(1,5),(6,9),(10,11),(12,14),(15,16)],
+ hairpins=[('crescendo',1,3),('crescendo',4,6),('diminuendo',7,9),('crescendo',10,13),('diminuendo',14,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,48,56,45,52,57,51,55,44,49,43,52,48,42,35,28],
+  phrase_arcs=[[0,19.5,3],[20,35.5,4],[36,43.5,2],[44,55.5,3],[56,64,-2]],
+  lower_entries=[[44,56]],pedal_lift=.18,gate=.99,
+  note='The paired notes rise as a single relaxed gesture, with the upper member gently prominent. Later the bass receives the same kind of motion without making the pulse heavier. The last dominant loosens into a quiet major ninth with a raised fourth.'))
 ]
