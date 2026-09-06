@@ -310,4 +310,43 @@ G3:1 D4:1 G3+B3:3
   phrase_arcs=[[0,14,3],[15,34,4],[35,49,4],[50,75,-1]],
   lower_entries=[[5,15],[15,30],[35,50],[55,73]],pedal_bars=list(range(1,16)),pedal_lift=.25,gate=.99,
   note='The five-beat span breathes through sustained notes and varied bass entries. The middle rise briefly gains momentum; the last five-bar phrase unwinds into the added sixth and ninth.'))
+,
+dict(op=19,title='Glass Coppice',key='d',fifths=-1,meter='12/8',bpm=66,
+ description='A quiet chorale of upper thirds floats above a more mobile bass. Salt Promenade\'s C-E-flat-D-G becomes D-F-E-A in the left hand at bar 4. The D-minor landscape opens through F major to a brief A-flat-major reflection, then returns through gentle dominant colour to an unadorned minor close.',
+ parent_opus=14,motif=dict(hand='lh',start_beat=18,end_beat=24,pitches=['D','F','E','A']),
+ ancestry=dict(source_opus=14,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['C','Eb','D','G'],transposition_semitones=2),
+ rh='''
+F4+A4:3 E4+G4:1.5 D4+F4:1.5
+C4+E4:2 D4+F4:1 E4+G4:2 R:1
+F4+A4:2 G4+Bb4:1 A4+C5:2 E5:1
+A4+C5:3 G4+B4:1.5 E4+G4:1.5
+F4+Bb4:2 A4:1 G4:1 D5:1 F5:1~
+F5:1 E5:.5 D5:.5 Bb4:1 A4:1 G4:1 R:1
+A4+C5:3 G4+B4:1.5 F4+A4:1.5
+G4+Bb4:2 Ab4+C5:1 Eb5:1 C5:1 Bb4:1~
+Bb4:1 A4:.5 G4:.5 F4:1 A4:1 C5:1 D5:1
+C#5:2 Bb4:.5 A4:.5 G4:1 E4:1 R:1
+F4+A4:2 E4+G4:1 D4+F4:2 A4:1
+F4:1 A4:1 D5:1 A4+D5:3
+''',
+ lh='''
+D3:1 A3:.5 G3:.5 F3:1 E3:1 C3:2
+Bb2:1 F3:.5 A3:.5 D3:1 G3:1 F3:2
+F3:2 A3:1 C4:1 G3:1 E3:1
+D3:1.5 F3:.5 E3:1 A3:3
+G3:1 Bb3:.5 A3:.5 F3:1 D3:1 G3:2
+C3:1 E3+Bb3:2 G3:1 D4:1 C4:1
+F3:1.5 C4:1.5 A3:1 G3:.5 F3:.5 E3:1
+Ab2:1 Eb3:1 G3:1 C4:1 Bb3:1 Eb3:1
+G3:1 D4:1 Bb3:1 A3:.5 G3:.5 F3:1 D3:1
+A2:1 E3:1 G3+C#4:2 Bb3:1 E3:1
+D3:2 A3:1 C4:1 A3:1 F3:1
+D3:2 A3:1 D3+F3:3
+''',sections={1:'p',4:'pp',5:'p',8:'mp',10:'pp'},words={1:'poco rubato',11:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,9),(10,12)],lower_phrases=[(1,2),(3,5),(7,9),(10,12)],
+ hairpins=[('crescendo',1,3),('crescendo',4,5),('diminuendo',5,6),('crescendo',7,8),('diminuendo',8,9),('diminuendo',10,12)],tempo_changes={},group=3,
+ performance=dict(rubato=[66,64,61,63,66,59,63,61,57,55,51,44],
+  phrase_arcs=[[0,17,3],[18,35,4],[36,53,4],[54,72,-2]],
+  lower_entries=[[0,12],[12,30],[36,54],[54,70]],pedal_bars=list(range(1,13)),pedal_lift=.23,gate=.99,
+  note='The bass has the more mobile line beneath sustained upper thirds. The A-flat reflection relaxes the pulse, and the last three-bar phrase lets the colour clear into a plain D-minor ending.'))
 ]
