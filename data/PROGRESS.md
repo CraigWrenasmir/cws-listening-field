@@ -23,7 +23,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 17, Moth Belvedere — complete: 20 bars of 6/8, 130 sounded pitches, one inspected page, 71.32 seconds. A solo-bass opening precedes the A-major melody; F-sharp minor and a distant C-major/D-dominant reflection lead into an A-sixth/ninth close. One short bass connection was lowered for comfortable motion. Score/MIDI, audio, ancestry and layout checks passed; published; awaiting listening feedback.
 - Op. 18, Marsh Afterimage — complete: 15 bars of 5/4, 130 sounded pitches, one inspected page, 99.23 seconds. Long sustained notes allow the five-beat bars to float; G-major colour moves through C and F before a sixth/ninth close. No rapid LH leaps; maximum rapid RH interval four semitones. Score/MIDI, audio, ancestry and layout checks passed; published; awaiting listening feedback.
 - Op. 19, Glass Coppice — complete locally: 12 bars of 12/8, 139 sounded pitches, one inspected page, 80.77 seconds. Upper thirds form a quiet chorale above a more mobile bass, which carries the ancestral D–F–E–A. F and A-flat colour return to a plain D-minor close. Score/MIDI, audio, ancestry and layout checks passed; awaiting publication and listening feedback.
-- Next: compose Op. 20, Ochre Underpass; publish Op. 19–21 together.
+- Op. 20, Ochre Underpass — complete locally: 15 bars of 9/8, 126 sounded pitches, one inspected page, 76.05 seconds. The ancestral bass phrase moves to the treble in B minor; a D-major middle and a D-dominant turn into G add warmth before the close. Score/MIDI, audio, ancestry and layout checks passed; awaiting publication and listening feedback.
+- Next: compose Op. 21, Rain Arcade; publish Op. 19–21 together.
 
 ## Growth work to complete during this run
 

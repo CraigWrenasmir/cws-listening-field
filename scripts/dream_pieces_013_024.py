@@ -349,4 +349,49 @@ D3:2 A3:1 D3+F3:3
   phrase_arcs=[[0,17,3],[18,35,4],[36,53,4],[54,72,-2]],
   lower_entries=[[0,12],[12,30],[36,54],[54,70]],pedal_bars=list(range(1,13)),pedal_lift=.23,gate=.99,
   note='The bass has the more mobile line beneath sustained upper thirds. The A-flat reflection relaxes the pulse, and the last three-bar phrase lets the colour clear into a plain D-minor ending.'))
+,
+dict(op=20,title='Ochre Underpass',key='b',fifths=2,meter='9/8',bpm=63,
+ description='Glass Coppice\'s bass phrase moves into the treble as B-D-C-sharp-F-sharp. Close-register lines travel through B minor, E minor and a warmer D-major middle, with a quiet D-dominant turn into G. The closing phrase narrows gradually and leaves a simple B-minor chord beneath the resonance.',
+ parent_opus=19,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['B','D','C#','F#']),
+ ancestry=dict(source_opus=19,source_hand='lh',source_start_beat=18,source_end_beat=24,source_pitches=['D','F','E','A'],transposition_semitones=-3),
+ rh='''
+B4:1.5 D5:.5 C#5:1 F#4:1.5
+A4:2 F#4:.5 E4:1 D4:1
+E4:1 G4:.5 B4:1 D5:1 C#5:1~
+C#5:1 B4:.5 G4:1 F#4:1 R:1
+D5:1.5 F#5:.5 E5:1 C#5:1.5
+B4:2 A4:.5 F#4:1 E4:1
+F#4:1 A4:.5 C#5:1 E5:1 D5:1~
+D5:1 C5:.5 A4:1 G4:1 F#4:1
+G4:1.5 B4:.5 D5:1 F#5:1.5
+E5:1 D5:.5 B4:1 A4:1 G4:1
+F#4:1.5 E4:.5 C#4:1 E4:1 R:.5
+A#4:1 C#5:.5 E5:1 D5:1 C#5:1~
+C#5:1 B4:.5 A4:1 F#4:1 D4:1
+E4:1 G4:.5 B4:1 A#4:.5 F#4:1 R:.5
+D4:1 F#4:1 B4:1 D4+F#4:1.5
+''',
+ lh='''
+B2:1.5 F#3:1.5 D3:1.5
+G2:1.5 D3+F#3:2 R:1
+E3:1 G3+D4:2 B3:1.5
+F#3:1 E3+A#3:2 C#3:1.5
+D3:1.5 F#3+C#4:1.5 A3:1.5
+G3:2 B3+D4:1 E3:1 R:.5
+D3:1 A3+C#4:2 F#3:1.5
+D3:1.5 F#3+C4:1.5 A3:1 R:.5
+G3:1.5 B3+D4:1 D3:1 C3:1
+E3:1.5 G3+D4:2 B3:1
+C#3:1 E3+G3:2 B3:1 R:.5
+F#3:1 E3+A#3:1.5 C#3:1 R:1
+B2:1.5 D3+F#3:2 C#3:1
+E3:1 G3+B3:1 F#3:1 A#3+E4:1.5
+B2:1.5 F#3:1 B2+D3:2
+''',sections={1:'p',5:'mp',8:'p',11:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,11),(12,15)],lower_phrases=[(2,4),(6,8),(10,11),(13,15)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('diminuendo',5,8),('diminuendo',9,11),('crescendo',12,13),('diminuendo',13,15)],tempo_changes={},group=3,
+ performance=dict(rubato=[63,61,64,57,65,63,62,57,63,59,53,59,55,50,43],
+  phrase_arcs=[[0,17,3],[18,35,4],[36,49,3],[49.5,67.5,-1]],
+  lower_entries=[[4.5,18],[22.5,36],[40.5,49.5],[54,66]],pedal_bars=list(range(1,16)),pedal_lift=.22,gate=.99,
+  note='The D-major passage gathers warmth without increasing volume beyond mezzo piano. The final four-bar line descends through quieter inner notes before the unadorned minor landing.'))
 ]
