@@ -847,4 +847,79 @@ B2:1 F#3:1 A#3:2 B2+F#3:3
   phrase_arcs=[[0,20,3],[21,41,3],[42,62,4],[63,84,-2]],
   lower_entries=[[0,14],[14,35],[35,56],[56,70],[70,84]],pedal_bars=list(range(1,13)),pedal_lift=.27,gate=.99,
   note='The opening bass turn is brought forward in the balance. Upper rests allow its resonance to remain without adding a new attack. The middle gradually opens into brighter registers, then the last two phrases lose weight and pace.'))
+,
+dict(op=40,title='Pale Sluice',key='g',fifths=-2,meter='5/4',bpm=57,
+ description='An ascending fragment from Serein Switchyard moves into the bass as G–A–B-flat–D. Above it, a slower melody and an independent inner line open different lengths of phrase. The G-minor centre travels through B-flat, B and E major before a C-major reflection leads towards E minor. A semitone descent into E-flat minor turns the music back towards G, with a quiet added sixth in the close.',
+ difficulty='Advanced three-voice study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The right hand sustains an upper melody while an independently notated inner voice moves beneath it. The bass carries the opening ancestral idea. Five-beat bars, separate phrase lengths and chromatic shifts between distant tonal areas require independent voicing. The score uses two pages to give the three lines space.',
+ parent_opus=39,motif=dict(hand='lh',voice='bass',start_beat=0,end_beat=5,pitches=['G','A','Bb','D']),
+ ancestry=dict(source_opus=39,source_hand='rh',source_start_beat=49,source_end_beat=53,source_pitches=['E','F#','G','B'],transposition_semitones=3),
+ page_starts=[10],
+ rh='''
+D5:5
+F5:3 Eb5:2
+E5:2 D5:3
+F#5:3 E5:2
+D5:5
+F5:2 E5:1 D5:2
+Eb5:3 D5:2
+G5:3 F5:2
+A5:2 G5:1 F5:2
+F#5:2 E5:3
+G#5:3 F#5:2
+G5:2 E5:3
+E5:2 D5:3
+D#5:3 C#5:2
+B4:5
+Bb4:2 Db5:3
+C5:3 A4:2
+Bb4:2 A4:1 G4:2
+''',
+ rh_inner='''
+G4:1 Bb4:1 A4:3
+G4:.5 Bb4:1.5 D5:1 C5:2
+A4:1 C5:1 G4:2 A4:1
+A4:1 C5:2 D5:1 C5:1
+G4:1 A4:.5 Bb4:.5 C5:1 Bb4:2
+B4:1 C5:1 B4:.5 A4:.5 G4:2
+G4:.5 Bb4:1.5 C5:1 Bb4:2
+A4:1 C5:1 D5:1 Eb5:1 C5:1
+C5:1 D5:2 E5:1 D5:1
+B4:1 C#5:.5 D#5:.5 A#4:2 B4:1
+B4:2 D#5:1 E5:1 D#5:1
+B4:1 D5:1 C5:1 B4:1 G4:1
+A4:1 C5:.5 B4:.5 A4:2 G#4:1
+F#4:1 A4:1 B4:1 A4:1 G#4:1
+E4:1 G4:1 A4:1 F#4:2
+Eb4:1 Gb4:1 Ab4:1 Bb4:1 Ab4:1
+F#4:1 G4:1 A4:1 F#4:2
+D4:1 F4:1 E4:1 D4+E4:2
+''',
+ lh='''
+G3:1 A3:.5 Bb3:.5 D4:3
+Eb3:2 Bb3:1 D4:1 G3:1
+A2:1 E3:1 G3:2 C4:1
+D3:2 A3:1 C4:.5 E3:.5 F#3:1
+G3:1 D4:1 Bb3:1 F3:2
+G2:1 D3:1 F3:1 B3:2
+C3:2 G3:1 Bb3:1 Eb3:1
+F3:1 C4:1 Eb3:1 A3:1 G3:1
+Bb2:1 F3:1 A3:2 D4:1
+B2:2 F#3:1 A#3:1 D#4:1
+E3:1 B3:1 D#4:1 G#3:2
+C3:1.5 G3:.5 B3:1 E4:1 D4:1
+F#3:1 C4:1 E3:1 A3:1 G#3:1
+B2:1 F#3:1 A3:2 D#4:1
+E3:2 B3:1 G3:1 F#3:1
+Eb3:1 Bb3:1 Db4:1 Gb3:2
+D3:1 A3:1 C4:1 E3:1 F#3:1
+G2:1 D3:1 Bb3:1 G2+D3:2
+''',sections={1:'p',3:'mp',5:'pp',7:'p',8:'mp',10:'pp',11:'p',12:'mp',14:'p',15:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,4),(5,7),(8,12),(13,15),(16,18)],lower_phrases=[(1,3),(4,6),(7,9),(10,11),(12,14),(15,16),(17,18)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,7),('diminuendo',8,10),('crescendo',10,12),('diminuendo',13,15),('diminuendo',16,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,54,60,52,49,55,58,61,55,49,55,59,54,49,45,48,42,33],
+  phrase_arcs=[[0,19,3],[20,34,3],[35,59,4],[60,74,2],[75,90,-2]],
+  lower_entries=[[0,15],[15,30],[30,45],[45,55],[55,70],[70,80],[80,90]],pedal_bars=list(range(1,19)),pedal_lift=.24,gate=.99,
+  note='The upper line remains distinct from the softer inner motion; the bass opening has a little extra presence. Broader five-bar upper phrasing crosses the shorter lower phrases. The two final semitone shifts are allowed to settle before the last minor-sixth sonority.'))
 ]
