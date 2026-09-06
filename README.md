@@ -64,6 +64,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 46 | Balsam Oblique | 11/8 | 136 | [Score](pieces/CWS_Op_046_Balsam_Oblique/CWS_Op_046_Balsam_Oblique.pdf) | [MP3](pieces/CWS_Op_046_Balsam_Oblique/CWS_Op_046_Balsam_Oblique.mp3) |
 | CWS Op. 47 | Mauve Esplanade | 4/4 | 185 | [Score](pieces/CWS_Op_047_Mauve_Esplanade/CWS_Op_047_Mauve_Esplanade.pdf) | [MP3](pieces/CWS_Op_047_Mauve_Esplanade/CWS_Op_047_Mauve_Esplanade.mp3) |
 | CWS Op. 48 | Thistle Horizon | 4/4 | 211 | [Score](pieces/CWS_Op_048_Thistle_Horizon/CWS_Op_048_Thistle_Horizon.pdf) | [MP3](pieces/CWS_Op_048_Thistle_Horizon/CWS_Op_048_Thistle_Horizon.mp3) |
+| CWS Op. 49 | Dew Pavilion | 4/4 | 181 | [Score](pieces/CWS_Op_049_Dew_Pavilion/CWS_Op_049_Dew_Pavilion.pdf) | [MP3](pieces/CWS_Op_049_Dew_Pavilion/CWS_Op_049_Dew_Pavilion.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
@@ -118,7 +119,7 @@ Composition stamps use `YYYYMMDDHHMMSS` in Sydney local time and remain stable a
 
 Musical time travels around an open, folded arc. Pitch and hand assignment shape the contours in three dimensions. The artwork is a visual interpretation of the voices; chord events use their highest pitch for the contour while the score highlights the whole chord. Quaternion trackball rotation permits turning, tilting and rolling. The Turn, Tilt and Roll buttons move by 30 degrees; Shift-click reverses direction.
 
-From Op. 31, some studies include a separately notated inner voice in the right hand. It has its own copper contour and playback glow, while the score distinguishes it with downward stems beneath the sustained upper melody. The hand-span review includes every simultaneously held pitch across both right-hand voices.
+From Op. 31, some studies include a separately notated inner voice in the right hand. It has its own copper contour and playback glow, while the score distinguishes it with downward stems beneath the sustained upper melody. The hand-span review includes every simultaneously held pitch across both right-hand voices. From Op. 49, an optional left-hand tenor voice has a green contour and upward stems above the bass. This supports four independent voices played by two hands. Whole-hand reach, shared-key conflicts, MusicXML voice assignments and each voice’s sustained durations are verified.
 
 Playback timing comes from the same event data used to create the MIDI performance. Phrase shaping, the slowing close and final fermata are reflected in both the audio and note highlights. The first three recordings retain their original faint reverb; Op. 4–6 use the slightly warmer room setting.
 

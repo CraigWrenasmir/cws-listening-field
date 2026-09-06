@@ -2207,5 +2207,187 @@
       "sounded_pitches_per_minute": 88.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Dew Pavilion",
+    "opus": 49,
+    "score_pages": 1,
+    "bars": 16,
+    "pitch_onsets": 181,
+    "audio_seconds": 83.28,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 41,
+        "high": 66,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 6,
+        "maximum_simultaneous_span_semitones": 12
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-voice counterpoint",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Each hand carries two independently notated voices. The opening tenor phrase needs to sing above the bass while the right hand sustains its melody. Bass changes keep the moving tenor within an octave of the held lower note. Printed half-bar pedal changes require finger sustain across the refreshes; the left-hand span reaches an octave."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.78
+      ],
+      [
+        2,
+        3.7800000000000002
+      ],
+      [
+        4,
+        5.78
+      ],
+      [
+        6,
+        7.78
+      ],
+      [
+        8,
+        9.78
+      ],
+      [
+        10,
+        11.78
+      ],
+      [
+        12,
+        13.78
+      ],
+      [
+        14,
+        15.78
+      ],
+      [
+        16,
+        17.78
+      ],
+      [
+        18,
+        19.78
+      ],
+      [
+        20,
+        21.78
+      ],
+      [
+        22,
+        23.78
+      ],
+      [
+        24,
+        25.78
+      ],
+      [
+        26,
+        27.78
+      ],
+      [
+        28,
+        29.78
+      ],
+      [
+        30,
+        31.78
+      ],
+      [
+        32,
+        33.78
+      ],
+      [
+        34,
+        35.78
+      ],
+      [
+        36,
+        37.78
+      ],
+      [
+        38,
+        39.78
+      ],
+      [
+        40,
+        41.78
+      ],
+      [
+        42,
+        43.78
+      ],
+      [
+        44,
+        45.78
+      ],
+      [
+        46,
+        47.78
+      ],
+      [
+        48,
+        49.78
+      ],
+      [
+        50,
+        51.78
+      ],
+      [
+        52,
+        53.78
+      ],
+      [
+        54,
+        55.78
+      ],
+      [
+        56,
+        57.78
+      ],
+      [
+        58,
+        59.78
+      ],
+      [
+        60,
+        61.78
+      ],
+      [
+        62,
+        63.78
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 134.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -22,7 +22,7 @@ canvas.setPointerCapture=()=>{};canvas.releasePointerCapture=()=>{};
 Object.defineProperties(audio,{currentTime:{get:()=>time,set:v=>{time=Number(v);ended=false;}},paused:{get:()=>paused},duration:{get:()=>duration},ended:{get:()=>ended},readyState:{get:()=>4},src:{get:()=>src,set:v=>{src=v;time=0;ended=false;duration=data.find(p=>p.audio===v).duration;queueMicrotask(()=>audio.dispatchEvent(new window.Event('loadedmetadata')));}}});
 audio.play=async()=>{if(rejectPlay)throw new Error('Playback denied');paused=false;audio.dispatchEvent(new window.Event('play'));};audio.pause=()=>{paused=true;audio.dispatchEvent(new window.Event('pause'));};
 const location={hash:''},history={replaceState(a,b,url){location.hash=url;}};
-const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#965432','--lf-paper':'#f1f2ed'};
+const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#965432','--lf-tenor':'#526e58','--lf-paper':'#f1f2ed'};
 let observer;
 class ResizeObserver{constructor(callback){this.callback=callback;observer=this;}observe(){queueMicrotask(()=>this.callback());}}
 const sandbox={document,window,DOMParser,location,history,ResizeObserver,devicePixelRatio:1,console:{error:e=>errors.push(e.message)},matchMedia:()=>({matches:true,addEventListener(){}}),getComputedStyle:el=>({color:el.style.color,getPropertyValue:key=>colours[key]}),requestAnimationFrame:fn=>{frames.set(++nextFrame,fn);return nextFrame;},fetch:async url=>{try{const body=await readFile(new URL(url,root),'utf8');return {ok:true,json:async()=>JSON.parse(body),text:async()=>body};}catch{return {ok:false};}}};
@@ -37,14 +37,16 @@ assert(audio.paused,'Loading the site must not autoplay');
 for(let i=0;i<data.length;i++){
  const p=data[i];click(`[data-work="${i}"]`);await settle();tick();
  assert.equal(document.querySelector('#lf-title').textContent,p.title);assert.equal(location.hash,'#'+p.slug);assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),p.pdf);assert.equal(duration,p.duration);
- const inner=p.events.find(e=>e.v==='inner');assert.equal(document.querySelector('#lf-inner-legend').hidden,!inner);
+ const extraVoices=['inner','tenor'].map(kind=>{const event=p.events.find(e=>e.v===kind);assert.equal(document.querySelector('#lf-'+kind+'-legend').hidden,!event);return event;}).filter(Boolean);
+ const voiceProbes=extraVoices.map(e=>e.s+Math.min(.1,(e.e-e.s)/2));
+ const soundingAt=time=>p.events.filter(e=>e.s<=time&&time<e.e);
  click('#lf-play');await settle();audio.currentTime=20;tick();assert(!audio.paused);assert(document.querySelector('#lf-time').textContent.startsWith('0:20 /'));
  const initial=canvas.dataset.orientation;click('[data-rotate="1"]');tick();assert.notEqual(canvas.dataset.orientation,initial);assert.equal(audio.currentTime,20);assert(!audio.paused);
- if(inner){audio.currentTime=inner.s+.1;tick();assert.equal(drawings.filter(d=>d.includes('opacity="0.12"')).length,3,'All three independent voices need a playback glow');}
- click('#lf-score-toggle');await until(()=>document.querySelector('#lf-score-body .lf-score-page'));const last=p.events.find(e=>e.ps.length>1);audio.currentTime=last.s+.1;tick();
- assert(document.querySelector('#lf-score-body').querySelector(`[id="${last.id}"].lf-now`),'Final dyad is not highlighted: '+p.title+'; body='+document.querySelector('#lf-score-body').innerHTML.slice(0,180)+'; highlighted='+document.querySelectorAll('.lf-now').length+'; errors='+errors.join(','));
+ for(const time of voiceProbes){audio.currentTime=time;tick();assert.equal(drawings.filter(d=>d.includes('opacity="0.12"')).length,new Set(soundingAt(time).map(e=>e.v||e.h)).size,'Each sounding voice needs its own playback glow');}
+ click('#lf-score-toggle');await until(()=>document.querySelector('#lf-score-body .lf-score-page'));const last=p.events.find(e=>e.ps.length>1)||p.events.at(-1);audio.currentTime=last.s+.1;tick();
+ assert(document.querySelector('#lf-score-body').querySelector(`[id="${last.id}"].lf-now`),'Selected score event is not highlighted: '+p.title+'; body='+document.querySelector('#lf-score-body').innerHTML.slice(0,180)+'; highlighted='+document.querySelectorAll('.lf-now').length+'; errors='+errors.join(','));
  assert(document.querySelector('#lf-score-title').textContent===p.title);
- if(inner){audio.currentTime=inner.s+.1;tick();const sounding=p.events.filter(e=>e.s<=audio.currentTime&&audio.currentTime<e.e);assert.equal(new Set(sounding.map(e=>e.v)).size,3);for(const e of sounding)assert(document.querySelector('#lf-score-body').querySelector(`[id="${e.id}"].lf-now`),'An independent voice is missing its score highlight');}
+ for(const time of voiceProbes){audio.currentTime=time;tick();for(const e of soundingAt(time))assert(document.querySelector('#lf-score-body').querySelector(`[id="${e.id}"].lf-now`),'An independent voice is missing its score highlight');}
  const tied=document.querySelector('#lf-score-body [id*="-tie-"]');
  if(tied){const event=p.events.find(e=>e.id===tied.getAttribute('data-event'));assert(event,'Tie fragment needs a sounded-event mapping');audio.currentTime=event.e-.1;tick();assert(tied.classList.contains('lf-now'),'Tied continuation must remain highlighted to its notated release');}
  click('#lf-play');click('#lf-score-toggle');tick();

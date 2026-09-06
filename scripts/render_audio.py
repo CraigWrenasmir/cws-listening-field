@@ -69,6 +69,9 @@ for p in cat:
             if ev.get('voice')=='inner':voice_adjust=-7
             if performance and hi==1 and any(start<=ev['offset']<end for start,end in performance['lower_entries']):voice_adjust=-2
             if hi==1 and ((p['op'] in [2,6] and ev['bar']<=4) or (p['op']==3 and 13<=ev['bar']<=14) or (p['op']==4 and 9<=ev['bar']<=10) or (p['op']==5 and 13<=ev['bar']<=14)):voice_adjust=-2
+            if ev.get('voice')=='tenor':
+                voice_adjust=-6
+                if performance and any(start<=ev['offset']<end for start,end in performance.get('tenor_entries',[])):voice_adjust=-1
             phrase_pos=((ev['bar']-1)%4*bpb+(ev['offset']%bpb))/(4*bpb)
             swell=round(2*math.sin(phrase_pos*math.pi))
             if performance:

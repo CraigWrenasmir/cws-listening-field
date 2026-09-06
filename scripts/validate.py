@@ -104,9 +104,13 @@ for p in cat:
   assert durations.keys()==expected_durations.keys()
   for key,value in expected_durations.items():assert abs(durations[key]-value)<1/960,('Notated sustain differs',p['op'],key)
   if p.get('voice_structure'):
-   assert len(notation_voices['1'])==2 and len(notation_voices['2'])==1 and None not in notation_voices['1'],('Missing independent notated voices',p['op'],notation_voices)
-   assert sorted(tuple(v) for v in voice_labels.values())==[('bass',),('inner',),('upper',)],('Notated voice assignments differ',p['op'],voice_labels)
-   for hand,voices in p['voice_structure'].items():assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
+   expected_labels=sorted((voice,) for voices in p['voice_structure'].values() for voice in voices)
+   assert sorted(tuple(v) for v in voice_labels.values())==expected_labels,('Notated voice assignments differ',p['op'],voice_labels)
+   for hand,voices in p['voice_structure'].items():
+    staff='1' if hand=='rh' else '2'
+    assert len(notation_voices[staff])==len(voices),('Missing independent notated voices',p['op'],staff,notation_voices)
+    if len(voices)>1:assert None not in notation_voices[staff]
+    assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
  pedal_directions=[]
  for measure in r.findall('.//part/measure'):
