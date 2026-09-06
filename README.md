@@ -135,6 +135,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 117 | Rutile Colonnade | 6/4 | 183 | [Score](pieces/CWS_Op_117_Rutile_Colonnade/CWS_Op_117_Rutile_Colonnade.pdf) | [MP3](pieces/CWS_Op_117_Rutile_Colonnade/CWS_Op_117_Rutile_Colonnade.mp3) |
 | CWS Op. 118 | Sorrel Doorway | 4/4 | 151 | [Score](pieces/CWS_Op_118_Sorrel_Doorway/CWS_Op_118_Sorrel_Doorway.pdf) | [MP3](pieces/CWS_Op_118_Sorrel_Doorway/CWS_Op_118_Sorrel_Doorway.mp3) |
 | CWS Op. 119 | Aster Underpass | 7/8, 5/8, 9/8, 11/8, 4/4, 6/8, 5/4 (changing) | 127 | [Score](pieces/CWS_Op_119_Aster_Underpass/CWS_Op_119_Aster_Underpass.pdf) | [MP3](pieces/CWS_Op_119_Aster_Underpass/CWS_Op_119_Aster_Underpass.mp3) |
+| CWS Op. 120 | Juniper Anchorage | 4/4 | 171 | [Score](pieces/CWS_Op_120_Juniper_Anchorage/CWS_Op_120_Juniper_Anchorage.pdf) | [MP3](pieces/CWS_Op_120_Juniper_Anchorage/CWS_Op_120_Juniper_Anchorage.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

@@ -1647,4 +1647,65 @@ D3+A3:3~ D3+A3:2
   phrase_arcs=[[0,10.5,3],[10.5,19.5,3],[19.5,29,3],[29,33.5,2],[33.5,45,3],[45,48.5,2],[48.5,62,-2]],
   inner_entries=[[15,19.5],[29.5,33.5],[40.5,45],[45.5,48.5]],lower_entries=[],pedal_lift=.18,gate=.995,
   note='Let the changing bar lengths follow the melody’s breathing. When the upper note ends, keep the inner phrase audible through its remaining notes rather than treating the upper rest as a break in the music. The final inner chord should settle beneath the D without drawing attention away from it.'))
+
+,
+dict(op=120,title='Juniper Anchorage',key='Eb',fifths=-3,meter='4/4',bpm=54,
+ description='Aster Underpass’s inner A–C–B–A becomes G–B-flat–A–G in a higher, major-key melody. A seven-note line and a five-note line unfold together, then exchange hands two octaves apart. A later exchange rises a whole tone before returning through softer flat-side harmony to E-flat-major ninth.',
+ difficulty='Advanced seven-against-five with exchanged melodic lines',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The first two beats of bars 5 and 13 contain seven RH notes against five LH notes. In bars 6 and 14 the complete lines exchange hands: the seven-note line moves two octaves down to the LH, and the five-note line two octaves up to the RH. Both still fill two quarter beats. The later pair is two semitones higher. Follow each contour through the exchange and let the shared longer arrival at beat 3 remain light. The full ratios are printed above each group.',
+ parent_opus=119,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['G','Bb','A','G']),
+ ancestry=dict(source_opus=119,source_hand='rh',source_voice='inner',source_start_beat=15,source_end_beat=19,source_pitches=['A','C','B','A'],transposition_semitones=-2),
+ tuplet_groups=[dict(hand='rh',actual=7,normal=4,count=14),dict(hand='rh',actual=5,normal=4,count=10),dict(hand='lh',actual=5,normal=4,count=10),dict(hand='lh',actual=7,normal=4,count=14)],
+ tuplet_spans=[dict(hand=hand,start_beat=start,end_beat=start+2,actual=count,normal=4,stem='down' if hand=='rh' else 'up',show_number='both') for start,rh_count,lh_count in [(16,7,5),(20,5,7),(48,7,5),(52,5,7)] for hand,count in [('rh',rh_count),('lh',lh_count)]],
+ polyrhythms=[dict(start_beat=start,end_beat=start+2,rh_notes=rh_count,lh_notes=lh_count) for start,rh_count,lh_count in [(16,7,5),(20,5,7),(48,7,5),(52,5,7)]],
+ lower_sections={1:'pp',5:'p',7:'pp',11:'p',13:'p',15:'pp'},
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.18] for bar,cuts in enumerate([[0,1,1.5,2.5,4],[0,1.5,2,3,4],[0,1,1.5,2.5,4],[0,1,2,3,4],[0,.8,2,4],[0,.8,2,4],[0,1.5,2,3,4],[0,1,1.5,2,2.5,4],[0,1,1.5,2,2.5,4],[0,2,3,4],[0,1,1.5,2.5,4],[0,1,2,3,4],[0,.8,2,4],[0,.8,2,4],[0,1,1.5,2,2.5,4],[0,1,2,2.5,3,4],[0,1,1.5,2.5,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G5:1 Bb5:.5 A5:1 G5:1.5
+F5:1.5 Eb5:.5 D5:1 Bb4:1
+C5:1 Eb5:.5 G5:1 F5:1.5
+D5:1 F5:1 Ab5:1 G5:1
+G5:2/7 F5:2/7 Eb5:2/7 D5:2/7 C5:2/7 D5:2/7 F5:2/7 Eb5:2
+Eb5:2/5 G5:2/5 Bb5:2/5 C6:2/5 Bb5:2/5 Ab5:2
+G5:1.5 F5:.5 Eb5:1 D5:1
+C5:1 D5:.5 F5:1 Eb5:1.5
+B4:1 D5:.5 F5:1 E5:1.5
+C5:2 Bb4:1 G4:1
+F4:1 Ab4:.5 C5:1 Bb4:1.5
+A4:1 C5:1 E5:1 D5:1
+A5:2/7 G5:2/7 F5:2/7 E5:2/7 D5:2/7 E5:2/7 G5:2/7 F5:2
+F5:2/5 A5:2/5 C6:2/5 D6:2/5 C6:2/5 Bb5:2
+Ab5:1 G5:.5 F5:1 Eb5:1.5
+D5:1 C5:1 Bb4:.5 Ab4:.5 G4:1
+F4:1 G4:.5 Bb4:1 A4:1.5
+D5+Eb5+F5+G5+Bb5:4
+''',
+ lh='''
+Eb3:1 Bb3:.5 D4:1 F3:1.5
+Ab2+Eb3:2 G3+C4:2
+F3+C4:1.5 Eb3+Bb3:2.5
+Bb2:1 F3:1 Ab3:1 D4:1
+Eb3:2/5 G3:2/5 Bb3:2/5 C4:2/5 Bb3:2/5 Ab3+Db4:2
+G3:2/7 F3:2/7 Eb3:2/7 D3:2/7 C3:2/7 D3:2/7 F3:2/7 Eb3+Bb3:2
+C3+G3:1.5 Bb3+Eb4:2.5
+Ab2:1.5 Eb3:.5 G3:1 Bb3:1
+G2+D3:2 F3+B3:2
+C3+G3:2 Bb3+Eb4:2
+Db3+Ab3:1.5 C4+F4:2.5
+D3+A3:2 C4+F#4:2
+F3:2/5 A3:2/5 C4:2/5 D4:2/5 C4:2/5 Bb3+Eb4:2
+A3:2/7 G3:2/7 F3:2/7 E3:2/7 D3:2/7 E3:2/7 G3:2/7 F3+C4:2
+Db3+Ab3:2 C4+F4:2
+Bb2+F3:2 Ab3+D4:2
+Ab2+Eb3:1.5 G3+C4:2.5
+Eb3+Bb3:4
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'p',7:'pp',8:'p',9:'mp',10:'pp',11:'p',12:'mp',13:'p',14:'p',15:'pp',16:'p',17:'pp',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,18)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16),(17,18)],
+ hairpins=[('crescendo',3,4),('crescendo',11,12),('diminuendo',15,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,48,52,56,49,47,44,49,53,43,48,52,47,45,41,39,32,25],
+  phrase_arcs=[[0,8,3],[8,16,3],[16,24,3],[24,32,2],[32,40,3],[40,48,3],[48,56,3],[56,72,-2]],
+  lower_entries=[[16,22],[48,54]],pedal_lift=.18,gate=.995,
+  note='Let the two short lines move at their own speeds within the same span, then recognise their contours as they exchange registers. The shared longer notes are points of release. Bring the lower ribbon forward gently after each exchange, and let the final major ninth settle without an emphatic cadence.'))
 ]

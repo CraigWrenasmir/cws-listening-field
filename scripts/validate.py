@@ -241,10 +241,19 @@ for p in cat:
  for group in p.get('tuplet_groups',[]):
   key=('1' if group['hand']=='rh' else '2',group['actual'],group['normal'])
   assert tuplets[key]==group['count'],('Notated tuplet count mismatch',p['op'],group,tuplets[key])
+ tuplet_bar_numbers={}
  for number,spec in enumerate(p.get('tuplet_spans',[]),1):
   group=sorted([e for e in p['events'] if e['hand']==spec['hand'] and (not spec.get('voice') or e.get('voice')==spec['voice']) and spec['start_beat']<=e['offset']<spec['end_beat']-1e-8],key=lambda e:e['offset'])
   assert len(group)==spec['actual']
   xml_notes={n.get('id'):n for n in r.findall('.//part/measure/note') if n.get('id')}
+  if len(p.get('tuplet_spans',[]))>6:
+   assert len({e['bar'] for e in group})==1
+   first_mark=xml_notes[group[0]['id']].find('notations/tuplet[@type="start"]')
+   assert first_mark is not None,('Missing explicit tuplet start',p['op'],group[0]['id'])
+   number=int(first_mark.get('number','0'))
+   bar_numbers=tuplet_bar_numbers.setdefault(group[0]['bar'],set())
+   assert 1<=number<=6 and number not in bar_numbers,('Unsafe tuplet bracket number',p['op'],group[0]['bar'],number)
+   bar_numbers.add(number)
   for i,event in enumerate(group):
    n=xml_notes[event['id']]
    assert n.findtext('type')==n.findtext('time-modification/normal-type')=='eighth'

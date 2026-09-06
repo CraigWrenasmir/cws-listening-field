@@ -5,13 +5,24 @@ import xml.etree.ElementTree as ET
 def apply_tuplet_spans(root, events, piece):
     notes = {n.get('id'): n for n in root.findall('.//part/measure/note') if n.get('id')}
     used = set()
-    for number, spec in enumerate(piece.get('tuplet_spans', []), 1):
+    numbers_by_bar = {}
+    spans = piece.get('tuplet_spans', [])
+    for number, spec in enumerate(spans, 1):
         start, end = spec['start_beat'], spec['end_beat']
         count, normal = spec['actual'], spec['normal']
         group = sorted((e for e in events if e['hand'] == spec['hand']
                         and (not spec.get('voice') or e.get('voice') == spec['voice'])
                         and start <= e['offset'] < end - 1e-8), key=lambda e: e['offset'])
         assert len(group) == count and len({e['bar'] for e in group}) == 1
+        if len(spans) > 6:
+            # The score importer accepts bracket numbers 1–6. These groups
+            # stay within one bar; reserve a number for the whole bar because
+            # MusicXML serialises staves and voices in separate runs.
+            bar_numbers = numbers_by_bar.setdefault(group[0]['bar'], set())
+            available = set(range(1, 7)) - bar_numbers
+            assert available, ('More than six explicit tuplet groups in one bar', piece['op'], group[0]['bar'])
+            number = min(available)
+            bar_numbers.add(number)
         assert abs(end - start - normal * .5) < 1e-8
         direction = spec.get('stem', 'down')
         assert direction in ('up', 'down')
