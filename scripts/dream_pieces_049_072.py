@@ -286,4 +286,52 @@ Bb2+F3:6
   phrase_arcs=[[0,17,3],[18,41,4],[42,59,3],[60,72,-2]],
   lower_entries=[[0,12],[24,42],[48,60]],pedal_lift=.22,gate=.995,
   note='The long upper suspensions stay connected while the lower pairs change colour. The bass movement is kept gentle and unaccented. The G-major reflection opens slightly, then the phrase withdraws through the borrowed minor colours into the final added ninth.'))
+,
+dict(op=53,title='Viridian Terrace',key='Eb',fifths=-3,meter='7/4',bpm=57,
+ description='Cobalt Avenue’s descending G–F–E-flat–D-flat becomes the opening thought. Its falling line passes through E-flat, B-flat minor and G-flat before two floating seven-against-three gestures open into C-major and A-flat light. The gestures are separated by a quieter chromatic route; the last descent returns to E-flat with a luminous major seventh and ninth.',
+ difficulty='Advanced seven-against-three duet',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 5 and 10, seven quarter-note septuplets in the right hand share four beats with three half-note triplets in the left. Both hands arrive together on beat five. Shape each whole gesture, then release into the longer following note. The surrounding seven-beat bars contain ties and unequal phrases, with sustained voicings spanning up to a major seventh.',
+ parent_opus=52,motif=dict(hand='rh',start_beat=0,end_beat=7,pitches=['G','F','Eb','Db']),
+ ancestry=dict(source_opus=52,source_hand='rh',source_start_beat=42,source_end_beat=48,source_pitches=['G','F','Eb','Db'],transposition_semitones=0),
+ tuplet_groups=[dict(hand='rh',actual=7,normal=4,count=14),dict(hand='lh',actual=3,normal=2,count=6)],
+ polyrhythms=[dict(start_beat=28,end_beat=32,rh_notes=7,lh_notes=3),dict(start_beat=63,end_beat=67,rh_notes=7,lh_notes=3)],
+ rh='''
+G5:2 F5:.5 Eb5:.5 Db5:1 C5:3~
+C5:2 Db5:1 F5:1 Eb5:3
+Bb4+Db5+Ab5:3 Gb5:1 F5:1 Eb5:2
+Bb4+Db5+F5:4 Eb5:1 Db5:2
+E5:4/7 G5:4/7 B5:4/7 D6:4/7 C6:4/7 A5:4/7 G5:4/7 F#5:3
+E5:2 D5:.5 C5:.5 B4:1 A4:3
+G4+B4+F#5:3 E5:2 D5:2~
+D5:2 C#5:1 B4:.5 A4:.5 G4:3
+F4+A4+E5:4 D5:1 C5:2
+C5:4/7 Eb5:4/7 G5:4/7 Bb5:4/7 Ab5:4/7 F5:4/7 Eb5:4/7 D5:3
+C5:2 Bb4:1 Ab4:.5 G4:.5 F4:3
+Ab4+C5+G5:3 F5:1 Eb5:1 Db5:2
+D5:2 C5:1 Bb4:.5 Ab4:.5 G4:1 F4:2
+G4+Bb4+D5:3 F4+G4+Bb4:4
+''',
+ lh='''
+Eb3:2 Bb3:1 Db4:1 C4:3
+Bb2:3 F3:.5 Ab3:.5 C4:2 Bb3:1
+Ab2:2 Eb3:1 G3:2 Bb3:1 Ab3:1
+Gb2:3 Db3:1 F3:1 Ab3:2
+C3:4/3 E3:4/3 G3:4/3 A3:2 G3:1
+A2:2 E3:2 G3:.5 B3:.5 C4:2
+G2:3 D3:1 F#3:2 A3:1
+E3:1.5 G3:.5 B3:2 F#3:1 E3:2
+D3:2 A3:1 C4:1 E3:3
+Ab2:4/3 C3:4/3 Eb3:4/3 F3:2 G3:1
+Db3:3 Ab3:1 C4:1 Eb4:2
+F3:2 C4:1 Eb4:1 D4:2 C4:1
+Bb2:3 F3:1 Ab3:2 C4:1
+Eb3+Bb3:7
+''',sections={1:'p',3:'mp',4:'pp',5:'mp',6:'p',7:'pp',8:'p',9:'pp',10:'mp',11:'p',13:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,4),(5,7),(8,11),(12,14)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,14)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('diminuendo',5,7),('crescendo',8,10),('diminuendo',10,11),('diminuendo',12,14)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,54,58,49,61,53,47,54,50,60,51,55,45,32],
+  phrase_arcs=[[0,27,3],[28,48,4],[49,76,4],[77,98,-2]],
+  lower_entries=[[7,14],[49,56],[70,77]],pedal_bars=list(range(1,15)),pedal_lift=.25,gate=.99,
+  note='The two cross-rhythmic gestures expand and settle as single waves, with no extra accents on their individual notes. The lower voice answers between them. Longer tied notes keep the surrounding phrases connected, and the closing major colour recedes into the room.'))
 ]

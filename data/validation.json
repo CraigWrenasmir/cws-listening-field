@@ -2930,5 +2930,65 @@
       "sounded_pitches_per_minute": 77.7,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Viridian Terrace",
+    "opus": 53,
+    "score_pages": 1,
+    "bars": 14,
+    "pitch_onsets": 138,
+    "audio_seconds": 125.51,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 42,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced seven-against-three duet",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 5 and 10, seven quarter-note septuplets in the right hand share four beats with three half-note triplets in the left. Both hands arrive together on beat five. Shape each whole gesture, then release into the longer following note. The surrounding seven-beat bars contain ties and unequal phrases, with sustained voicings spanning up to a major seventh."
+    },
+    "notated_tuplet_notes": {
+      "1:7:4": 14,
+      "2:3:2": 6
+    },
+    "verified_polyrhythm_spans": [
+      {
+        "start_beat": 28,
+        "end_beat": 32,
+        "rh_notes": 7,
+        "lh_notes": 3
+      },
+      {
+        "start_beat": 63,
+        "end_beat": 67,
+        "rh_notes": 7,
+        "lh_notes": 3
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 11,
+      "left_hand_most_frequent_pattern_bars": 2,
+      "sounded_pitches_per_minute": 67.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
