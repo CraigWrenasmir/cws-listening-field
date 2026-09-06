@@ -1507,4 +1507,53 @@ G3:1 A3:.5 B3:.5 D4:1 E4:1 D4:1 G3:1
   phrase_arcs=[[0,23.5,4],[24,47.5,3],[48,66,-2],[66,72,-3]],
   lower_entries=[],tenor_entries=[[24,30],[48,54],[66,72]],pedal_lift=.22,gate=.995,
   note='The upper phrase becomes a memory with more air between its surviving notes. Do not hurry the spaces: the tenor gradually takes the foreground while the bass remains held and quiet. The final high fifth is left suspended above a simple minor foundation.'))
+,
+dict(op=94,title='Jasmine Upperstorey',key='E',fifths=4,meter='6/4',bpm=58,
+ beam_spans=[dict(hand='rh',start_beat=a,end_beat=b,note_type='32nd',stem=d) for a,b,d in [(32,33,'up'),(33,34,'down'),(54,55,'down'),(55,56,'up')]],
+ description='Ilex Elsewhere’s growing tenor gives the upper line B–C-sharp–D-sharp–F-sharp. Two brief thirty-second-note cascades open the keyboard: the first climbs from B3 towards E6, and the second descends from C-sharp6 towards A3 before turning upward. Held lower fifths support these passages. Slower phrases pass through D and C colours, leaving an E ninth with its fourth still suspended.',
+ difficulty='Advanced short cascades across more than two octaves',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Bar 6 contains sixteen thirty-second notes across beats 3–4; bar 10 places another sixteen across beats 1–2. Prepare a fluid thumb-crossing fingering for each entire passage, keeping the small steps connected and the crest unforced. The LH holds a quiet fifth through each cascade. The ending retains A above E as a suspension, without resolving it into a major third.',
+ parent_opus=93,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['B','C#','D#','F#']),
+ ancestry=dict(source_opus=93,source_hand='lh',source_voice='tenor',source_start_beat=48,source_end_beat=51,source_pitches=['G','A','B','D'],transposition_semitones=4),
+ system_starts=[1,3,5,6,7,9,10,11,13],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.2] for bar,cuts in enumerate([[0,1,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,1,2,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,1,2,3,4,6],[0,3,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+B4:1 C#5:1 D#5:1 F#5:1 E5:2
+D#5:2 B4:1 C#5:1 D#5:2
+E5:3 F#5:1 G#5:2
+F#5:2 E5:2 D#5:2
+C#5:2 B4:1 G#4:3
+G#4:2 B3:1/8 D#4:1/8 E4:1/8 F#4:1/8 G#4:1/8 B4:1/8 C#5:1/8 D#5:1/8 E5:1/8 F#5:1/8 G#5:1/8 B5:1/8 C#6:1/8 D#6:1/8 E6:1/8 D#6:1/8 B5:2
+A5:2 G#5:1 F#5:1 E5:2
+D5:2 F#5:1 A5:1 G5:2
+F#5:2 E5:2 C#5:2
+C#6:1/8 B5:1/8 A5:1/8 F#5:1/8 E5:1/8 C#5:1/8 B4:1/8 A4:1/8 F#4:1/8 E4:1/8 C#4:1/8 B3:1/8 A3:1/8 B3:1/8 C#4:1/8 E4:1/8 F#4:4
+G4:2 B4:1 D5:1 C5:2
+C#5:2 E5:1 F#5:1 E5:2
+D5:1 C#5:1 B4:2 A4:2
+A4+B4+D5+F#5:6
+''',
+ lh='''
+E3:2 B3:1 D#4:1 C#4:2
+C#3:2 G#3:1 B3:1 C#4:2
+A2:2 E3:1 G#3:1 B3:2
+F#3:2 E3:4
+B2:2 F#3:1 A3:1 E3:2
+E2+B2:6
+A2:2 E3:1 G#3:1 C#4:2
+D3:2 A3:1 C4:1 E4:2
+E3:2 B3:1 D4:1 C#4:2
+A2+E3:6
+C3:2 G3:1 B3:1 D4:2
+F#3:2 C#4:1 E4:1 D4:2
+B2:2 F#3:1 A3:1 C#4:2
+E3+B3:6
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'pp',6:'p',7:'pp',8:'mp',9:'pp',10:'p',11:'pp',12:'p',13:'pp',14:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,5),(6,8),(9,12),(13,14)],lower_phrases=[(1,4),(7,9),(11,14)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,5),('diminuendo',6,7),('diminuendo',8,9),('crescendo',10,12),('diminuendo',13,14)],tempo_changes={},group=2,
+ performance=dict(rubato=[58,50,57,46,44,60,48,55,43,56,45,50,39,30],
+  phrase_arcs=[[0,29.5,4],[30,35.8,4],[36,53.5,3],[54,59.8,3],[60,71.5,2],[72,84,-2]],
+  lower_entries=[[18,24],[60,66]],pedal_lift=.2,gate=.985,
+  note='Each cascade is a brief release inside a broader, quieter phrase. The ascent opens upward without accenting every note; the descent softens as it reaches the lower register. Held fifths leave room beneath both gestures, and the final suspended harmony stays open.'))
 ]

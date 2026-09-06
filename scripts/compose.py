@@ -3,6 +3,7 @@ from fractions import Fraction
 from bisect import bisect_right
 from meter_plan import bar_plan
 from tuplet_engraving import apply_tuplet_spans
+from beam_engraving import apply_beam_spans
 import json, math, argparse, xml.etree.ElementTree as ET
 from new_pieces import NEW_PIECES
 from dream_pieces import DREAM_PIECES
@@ -469,6 +470,7 @@ def main():
             for creator in list(ident.findall('creator')):
                 if creator.get('type')=='composer':ident.remove(creator)
         apply_tuplet_spans(root,events,p)
+        apply_beam_spans(root,events,p)
         tree.write(xmlpath,encoding='utf-8',xml_declaration=True)
         onset_count=sum(len(e['pitches']) for e in events)
         assert onset_count<=256

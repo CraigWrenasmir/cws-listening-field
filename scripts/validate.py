@@ -205,6 +205,17 @@ for p in cat:
    assert [(t.get('type'),t.get('number')) for t in marks]==expected,('Tuplet bracket span',p['op'],event['id'])
    if i==0:assert marks[0].get('bracket')=='yes' and marks[0].get('placement')=='above'
    if i==0:assert marks[0].get('show-number')==spec.get('show_number','actual')
+ for spec in p.get('beam_spans',[]):
+  step,levels={'eighth':(.5,1),'16th':(.25,2),'32nd':(.125,3)}[spec['note_type']]
+  group=sorted([e for e in p['events'] if e['hand']==spec['hand'] and (not spec.get('voice') or e.get('voice')==spec['voice']) and spec['start_beat']<=e['offset']<spec['end_beat']-1e-8],key=lambda e:e['offset'])
+  assert len(group)>=2 and abs(spec['end_beat']-spec['start_beat']-len(group)*step)<1e-8
+  xml_notes={n.get('id'):n for n in r.findall('.//part/measure/note') if n.get('id')}
+  for i,event in enumerate(group):
+   n=xml_notes[event['id']]
+   assert len(event['pitches'])==1 and abs(event['offset']-spec['start_beat']-i*step)<1e-8 and abs(event['duration']-step)<1e-8
+   assert n.findtext('type')==spec['note_type'] and n.findtext('stem')==spec['stem'] and n.find('time-modification') is None and n.find('dot') is None and n.find('tie') is None
+   mark='begin' if i==0 else 'end' if i==len(group)-1 else 'continue'
+   assert [(b.get('number'),b.text) for b in n.findall('beam')]==[(str(j+1),mark) for j in range(levels)],('Explicit beam group',p['op'],event['id'])
  for crossing in p.get('polyrhythms',[]):
   start=crossing['start_beat'];end=crossing['end_beat']
   for hand in ['rh','lh']:
@@ -289,6 +300,7 @@ for p in cat:
  if p.get('hidden_voice_rests'):report[-1]['verified_nonprinting_voice_rests']=p['hidden_voice_rests']
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
  if p.get('tuplet_spans'):report[-1]['verified_tuplet_brackets']=p['tuplet_spans']
+ if p.get('beam_spans'):report[-1]['verified_beam_groups']=p['beam_spans']
  if p.get('clef_changes'):report[-1]['verified_clef_changes']=p['clef_changes']
  if crossings:report[-1]['verified_hand_crossings']=crossings
  if transition_leaps:report[-1]['verified_transition_leaps']=transition_leaps
