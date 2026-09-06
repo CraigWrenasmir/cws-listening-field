@@ -2063,5 +2063,47 @@
       "sounded_pitches_per_minute": 114.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Balsam Oblique",
+    "opus": 46,
+    "score_pages": 1,
+    "bars": 14,
+    "pitch_onsets": 136,
+    "audio_seconds": 101.55,
+    "hands": {
+      "rh": {
+        "low": 66,
+        "high": 88,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 42,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced asymmetric-metre study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Each bar contains eleven eighth notes. Phrases use different internal groupings and lengths, so the extra half-beat needs to feel like breathing space. Sustained voicings alternate with freer melodic movement across a wide register; chromatic approaches require careful pedalling and quiet releases."
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 82.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -1222,4 +1222,50 @@ C3+G3:4
   phrase_arcs=[[0,11,3],[12,31,4],[32,47,4],[48,67,4],[68,80,-2]],
   lower_entries=[[0,8],[8,20],[20,32],[32,44],[44,56],[56,68],[68,80]],pedal_bars=list(range(1,21)),pedal_lift=.26,gate=.99,
   note='The highest chord tone carries the phrase; the inner notes remain softer. The dominant approaches ease into their resolutions rather than accenting them. Rubato follows the changing three-, four- and five-bar phrases, with a quiet release into the final sixth/ninth chord.'))
+,
+dict(op=46,title='Balsam Oblique',key='f#',fifths=3,meter='11/8',bpm=57,
+ description='Sable Orchard’s descending C–A–G–F becomes F-sharp–D-sharp–C-sharp–B, lending a Dorian colour to the minor opening. Eleven-eighth bars let the phrase linger beyond a familiar length. A-minor, F-major and D-flat colours briefly change the landscape before B major and E minor turn towards the F-sharp-minor return. The final ninth remains unresolved.',
+ difficulty='Advanced asymmetric-metre study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Each bar contains eleven eighth notes. Phrases use different internal groupings and lengths, so the extra half-beat needs to feel like breathing space. Sustained voicings alternate with freer melodic movement across a wide register; chromatic approaches require careful pedalling and quiet releases.',
+ parent_opus=45,motif=dict(hand='rh',start_beat=0,end_beat=5.5,pitches=['F#','D#','C#','B']),
+ ancestry=dict(source_opus=45,source_hand='rh',source_start_beat=68,source_end_beat=72,source_pitches=['C','A','G','F'],transposition_semitones=6),
+ rh='''
+F#5:1.5 D#5:.5 C#5:.5 B4:3
+A4+C#5+G#5:3 F#5:1 E5:1.5
+D#5:2 C#5:.5 B4:.5 A4:1 F#4:1.5
+G#4+B4+F#5:2.5 E5:1 D#5:1 C#5:1
+C5+E5+B5:3 A5:1 G5:1.5
+F5+A5+E6:2.5 D6:1 C6:1 A5:1
+Ab5:2 G5:.5 Eb5:.5 Db5:1 C5:1.5
+B4+D#5+A#5:3 G#5:1 F#5:1.5
+E5:1 F#5:.5 G5:.5 B5:1 A5:1 G5:1.5
+G#4+B4+F5:2 E5:.5 D5:.5 C#5:1 B4:1.5
+A4+C#5+G#5:3 F#5:1 E5:1.5
+D5:2.5 C#5:.5 B4:.5 A4:2
+G#4+B4+F5:2.5 E5:1 D5:1 C#5:1
+A4+C#5+G#5:5.5
+''',
+ lh='''
+F#2:2.5 C#3:1 A3:1 E3:1
+B2:1 F#3:1 A3:1 D#4:1.5 C#4:1
+E3:1 B3:1 D#4:1 G#3:1 F#3:1.5
+C#3:1.5 G#3:.5 B3:1 E4:1 F#3:1.5
+A2:2.5 E3:1 G3:1 C4:1
+F3:1 C4:1 E3:1 A3:1.5 G3:1
+Db3:1.5 Ab3:1 C4:.5 F3:1.5 Eb3:1
+B2:1 F#3:1 A#3:1 D#4:1 C#4:1.5
+E3:2 B3:1 D4:1 G3:1.5
+C#3:1 G#3:1 B3:1 D4:1.5 F3:1
+F#3:1 C#4:1 E3:1 A3:1.5 G#3:1
+D3:1.5 A3:1 C#4:1 F#3:1 E3:1
+C#3:2 G#3:1 B3:1 D4:.5 F3:1
+F#2+C#3:5.5
+''',sections={1:'p',3:'mp',4:'pp',5:'p',6:'mp',7:'p',8:'pp',9:'mp',11:'p',12:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,4),(5,7),(8,11),(12,14)],lower_phrases=[(1,3),(4,6),(7,9),(10,11),(12,14)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,6),('diminuendo',6,7),('crescendo',8,9),('diminuendo',9,11),('diminuendo',12,14)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,54,60,49,55,61,51,49,58,54,47,45,40,32],
+  phrase_arcs=[[0,21,3],[22,38,4],[38.5,60,4],[60.5,77,-2]],
+  lower_entries=[[0,16.5],[16.5,33],[33,49.5],[49.5,60.5],[60.5,77]],pedal_bars=list(range(1,15)),pedal_lift=.25,gate=.99,
+  note='The uneven bar length is absorbed into long melodic gestures. Brightness grows with the move into the upper register, then recedes through the distant tonal areas. The final minor ninth is held quietly, with no added accent on the last half-beat.'))
 ]
