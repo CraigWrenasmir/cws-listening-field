@@ -954,5 +954,51 @@
       "sounded_pitches_per_minute": 111.9,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Birch Hypotenuse",
+    "opus": 28,
+    "score_pages": 1,
+    "bars": 22,
+    "pitch_onsets": 159,
+    "audio_seconds": 84.77,
+    "hands": {
+      "rh": {
+        "low": 67,
+        "high": 88,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 4
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced quintuplet study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Five eighth notes occupy two quarter-note beats, crossing the slower notes in the other hand. The upper line reaches E6. Two descending LH elevenths, E-flat4 to B-flat2 and C4 to G2, connect the upper bass reply to a resonant new root; each follows a full quarter note at the slow tempo. These planned register changes require hand travel. Three-note voicings stay within an octave, and the melodic quintuplets use small intervals."
+    },
+    "notated_tuplet_notes": {
+      "1:5:4": 10,
+      "2:5:4": 5
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 9,
+      "sounded_pitches_per_minute": 116.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

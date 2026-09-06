@@ -147,4 +147,67 @@ Db3+Ab3:4
   phrase_arcs=[[0,11,3],[12,27,4],[28,35,2],[36,47,4],[48,63,4],[64,71,1],[72,84,-2]],
   lower_entries=[[0,12],[12,24],[28,36],[40,48],[48,64],[72,84]],pedal_bars=list(range(1,22)),pedal_lift=.24,gate=.99,
   note='Long bass values alternate with replies and triplets, rather than supplying a continuous walking pulse. The distant A-major window is softened before the two chromatic approach chords; the last tonic is allowed to settle.'))
+,
+dict(op=28,title='Birch Hypotenuse',key='G',fifths=1,meter='3/4',bpm=57,
+ description='A high G-B-D-E memory from Moss Interchange opens above a widely spaced bass. Five-note figures first glimmer in E minor, then carry a whole-tone ascent over D dominant before the return to G. Near the end, the bass takes up the quintuplet motion while the treble holds still. The final added ninth keeps a little distance in the otherwise warm close.',
+ difficulty='Advanced quintuplet study',system_starts=[1,4,8,12,16,20],
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Five eighth notes occupy two quarter-note beats, crossing the slower notes in the other hand. The upper line reaches E6. Two descending LH elevenths, E-flat4 to B-flat2 and C4 to G2, connect the upper bass reply to a resonant new root; each follows a full quarter note at the slow tempo. These planned register changes require hand travel. Three-note voicings stay within an octave, and the melodic quintuplets use small intervals.',
+ tuplet_groups=[dict(hand='rh',actual=5,normal=4,count=10),dict(hand='lh',actual=5,normal=4,count=5)],
+ parent_opus=27,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['G','B','D','E']),
+ ancestry=dict(source_opus=27,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['Db','F','Ab','Bb'],transposition_semitones=6),
+ rh='''
+G5:.5 B5:.5 D6:1 E6:1~
+E6:1 D6:.5 B5:.5 A5:1
+G5:2 F#5:1
+E5:2/5 F#5:2/5 G5:2/5 B5:2/5 D6:2/5 C6:1
+B5:1 A5:.5 G5:.5 F#5:1~
+F#5:1 E5:.5 D5:.5 B4:1
+G4+B4+F#5:2 E5:1
+E5:1 G5:.5 B5:.5 D6:1
+C6:1 B5:.5 G5:.5 F#5:1~
+F#5:.5 G5:.5 E5:1 D5:1
+Eb5+G5+C6:2 Bb5:1
+A5:1 G5:.5 F5:.5 D5:1
+C5+E5+B5:2 A5:1
+D5:2/5 E5:2/5 F#5:2/5 G#5:2/5 A#5:2/5 C6:1
+B5:1 A5:.5 G5:.5 E5:1~
+E5:1 D5:.5 B4:.5 A4:1
+C5+E5+B5:2 A5:1
+G5:2 F#5:1
+F5:1 E5:.5 D5:.5 C5:1
+B4+D5+A5:2 G5:1~
+G5:1 F#5:.5 E5:.5 D5:1
+B4+D5+A5:3
+''',
+ lh='''
+G2:1 D3:1 B3:1
+E3:1.5 B3:.5 D4:1
+G3:1 F#3:.5 E3:.5 D3:1
+E3:1 B3:1 G3:1
+C3:1 G3:.5 B3:.5 E4:1
+A3:1 E3:1 G3:1
+B2:1 F#3:.5 A3:.5 D#4:1
+C3:1 G3:1 B3:1
+E3:1.5 B3:.5 D4:1
+C3:1 G3:.5 A3:.5 B3:1
+F3:1 C4:1 Eb4:1
+Bb2:1 F3:1 A3:1
+A2:1 E3:.5 G3:.5 B3:1
+D3:1 A3:1 C4:1
+G3:1 D4:.5 B3:.5 E3:1
+E3+G3:1.5 B3:.5 D4:1
+C3:1 G3:1 E4:1
+C3:2/5 D3:2/5 E3:2/5 G3:2/5 B3:2/5 A3:1
+D3:1 F#3:.5 A3:.5 C4:1
+G2:1 D3:1 F#3:1
+G3:1 D4:.5 B3:.5 A3:1
+G3+B3:3
+''',sections={1:'p',4:'mp',8:'p',11:'mp',13:'p',16:'pp'},words={1:'poco rubato',20:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,11),(12,15),(16,19),(20,22)],lower_phrases=[(1,3),(4,7),(8,10),(11,12),(13,15),(16,19),(20,22)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,5),('diminuendo',5,7),('crescendo',8,10),('diminuendo',11,12),('crescendo',13,14),('diminuendo',14,15),('diminuendo',20,22)],tempo_changes={},group=4,
+ performance=dict(rubato=[57,54,50,59,57,53,48,57,54,52,56,49,54,57,49,48,51,49,46,43,39,34],
+  phrase_arcs=[[0,8,3],[9,20,4],[21,32,4],[33,44,4],[45,56,2],[57,66,-2]],
+  lower_entries=[[0,9],[9,21],[21,30],[33,45],[45,57]],pedal_bars=list(range(1,23)),pedal_lift=.2,gate=.99,
+  note='The quintuplets flow as single gestures across two beats. The whole-tone ascent briefly suspends the tonal centre; the following B restores G-major warmth. The bass quintuplet answers beneath a still upper note, then the ending broadens.'))
 ]

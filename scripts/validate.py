@@ -123,6 +123,9 @@ for p in cat:
    tuplets[(n.findtext('staff','1'),int(modification.findtext('actual-notes')),int(modification.findtext('normal-notes')))]+=1
  for hand in p.get('tuplet_hands',[]):
   assert tuplets[('1' if hand=='rh' else '2',3,2)]>0,('Missing notated triplets',p['op'],hand)
+ for group in p.get('tuplet_groups',[]):
+  key=('1' if group['hand']=='rh' else '2',group['actual'],group['normal'])
+  assert tuplets[key]==group['count'],('Notated tuplet count mismatch',p['op'],group,tuplets[key])
  pages=len(PdfReader(d/(stem+'.pdf')).pages)
  assert 1<=pages<=4
  stats={}
