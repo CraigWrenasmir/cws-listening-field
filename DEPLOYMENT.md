@@ -13,3 +13,9 @@ The host should serve `.json` as JSON, `.svg` as SVG, `.pdf` as PDF and `.mp3` a
 An earlier copy remains on Sites at https://cws-listening-field.wrenasmir.chatgpt.site. `.openai/hosting.json` preserves that copy's project binding. It is separate from the primary GitHub Pages deployment and does not update when GitHub changes. Future publishing should target GitHub Pages unless Craig requests otherwise.
 
 No custom domain or DNS changes are configured. The eventual `wrenasmir.com` subdomain can be connected to GitHub Pages later.
+
+## Collection size
+
+Downloads are grouped into volumes of up to 24 works. Each volume has a concatenated score PDF and an archive containing its piece assets. The original collection URLs now name Volume 01; later volumes receive numbered filenames. `downloads/index.html` and `downloads/volumes.json` always cover the full current catalogue. Adding a piece to a later volume does not rewrite a completed earlier volume.
+
+GitHub blocks repository files above [100 MiB](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github), and a published [Pages site must remain within 1 GB](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits). The build checks use earlier review thresholds: 90 MiB per file and 950 million bytes for the site source tree. Review actual size as the music grows. If necessary, distribute completed ZIP volumes as assets in this repository's GitHub Releases and link them from the download index; keep the main gallery on GitHub Pages. Do not silently switch hosts or rewrite repository history.

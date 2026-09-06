@@ -1,12 +1,13 @@
 """Publish catalogue metadata and downloadable collections from checked piece assets."""
 from pathlib import Path
-import json,zipfile,re,xml.etree.ElementTree as ET,argparse
-from pypdf import PdfWriter,PdfReader
+import json,re,xml.etree.ElementTree as ET,argparse
+from pypdf import PdfReader
+from collection_volumes import build_volumes
 ROOT=Path(__file__).resolve().parents[1]
 cat=json.loads((ROOT/'data/catalog.json').read_text())
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
 legacy={1:dict(parent_opus=None,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['D','F','E','A'])),2:dict(parent_opus=1,motif=dict(hand='lh',start_beat=0,end_beat=3,pitches=['D','F','E','A'])),3:dict(parent_opus=1,motif=dict(hand='rh',start_beat=48,end_beat=52,pitches=['A','C','B','E']))}
-manifest=[];writer=PdfWriter()
+manifest=[]
 for p in cat:
  parent=p.get('parent_opus',legacy.get(p['op'],{}).get('parent_opus'))
  motif=p.get('motif',legacy.get(p['op'],{}).get('motif'))
@@ -46,19 +47,9 @@ for p in cat:
    (ROOT/s).write_text(text)
  entry=dict(op=p['op'],title=p['title'],slug=f'cws-op-{p["op"]:03d}-'+p['title'].lower().replace(' ','-'),stamp=p['composition_stamp'],beats=p['bars']*p['beats_per_bar'],duration=p['duration_seconds'],performance=p['performance_seconds'],audio=prefix+'.mp3',pdf=prefix+'.pdf',midi=prefix+'.mid',xml=prefix+'.musicxml',scores=scores,parent=parent,motif=motif,note_onsets=p['note_onsets'],pages=pages,
   events=[dict(id=e['id'],h=e['hand'],b=e['offset'],d=e['duration'],p=max(e['pitches']),ps=e['pitches'],s=e['seconds'],e=e['end_seconds']) for e in p['events']])
- manifest.append(entry);writer.append(str(folder/(stem+'.pdf')),outline_item=f'CWS Op. {p["op"]} - {p["title"]}')
+ manifest.append(entry)
 (ROOT/'library.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
-downloads=ROOT/'downloads';downloads.mkdir(exist_ok=True)
-writer.add_metadata({'/Title':f'CWS First Studies - {len(cat)} Piano Pieces','/Author':'CWS Library - studies with Maple (AI)'})
-with (downloads/'CWS_First_Studies_Scores.pdf').open('wb') as f:writer.write(f)
-with zipfile.ZipFile(downloads/'CWS_First_Studies.zip','w',zipfile.ZIP_DEFLATED) as z:
- for p in cat:
-  for path in sorted((ROOT/'pieces'/p['folder']).glob('*')):
-   if path.is_file():z.write(path,str(path.relative_to(ROOT)))
- for name in ['data/STYLE.md','licenses/Leipzig-OFL.txt','licenses/GeneralUser-GS.txt']:
-  z.write(ROOT/name,name)
- z.write(downloads/'CWS_First_Studies_Scores.pdf','CWS_First_Studies_Scores.pdf')
-with zipfile.ZipFile(downloads/'CWS_First_Studies.zip') as z:assert z.testzip() is None
+volumes=build_volumes(ROOT,cat,args.opus)
 readme=ROOT/'README.md'
 if readme.exists():
  text=readme.read_text()
@@ -66,8 +57,8 @@ if readme.exists():
  for p in cat:
   prefix=f'pieces/{p["folder"]}/{p["stem"]}'
   table+=f'| CWS Op. {p["op"]} | {p["title"]} | {p["meter"]} | {p["note_onsets"]} | [Score]({prefix}.pdf) | [MP3]({prefix}.mp3) |\n'
- table+='\n[Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).\n\n'
+ table+='\n[Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.\n\n'
  text=re.sub(r'## Catalogue\n.*?(?=## Run the gallery)',lambda _:table,text,flags=re.S)
  text=text.replace('all six works','all catalogue works')
  readme.write_text(text)
-print(f'Prepared {len(manifest)} works, {len(writer.pages)} combined score pages, and full downloads.')
+print(f'Prepared {len(manifest)} works in {len(volumes)} download volumes, with {sum(v["pages"] for v in volumes)} score pages.')

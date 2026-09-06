@@ -432,8 +432,7 @@ C3:1 G3:1 B3:.5 A3:.5 G3:2 C3+G3:2
  performance=dict(rubato=[58,57,52,57,54,59,55,57,50,55,51,42],
   phrase_arcs=[[0,20,4],[21,34,3],[35,62,5],[63,84,-1]],
   lower_entries=[[0,14],[14,35],[35,56],[56,70],[70,82]],pedal_bars=list(range(1,13)),pedal_lift=.28,gate=.99,
-  note='The unequal phrases gather and release across seven-beat bars. The bass travels independently beneath the sustained treble; the chromatic side-step holds back slightly before the F-minor return gains motion.'))
-,
+  note='The unequal phrases gather and release across seven-beat bars. The bass travels independently beneath the sustained treble; the chromatic side-step holds back slightly before the F-minor return gains motion.')),
 dict(op=22,title='Sedge Observatory',key='f',fifths=-4,meter='5/4',bpm=56,
  description='Rain Arcade\'s C-E-flat-G-B-flat becomes a quiet F-A-flat-C-E-flat bass phrase. Upper voicings stack fourths and let the natural sixth brighten F minor. Five-beat spans move through D-flat and A-flat, then a G-dominant passage opens an unexpected C-major window. Altered dominant colour and a fleeting minor-major seventh deepen the return to F minor.',
  difficulty='Early advanced',
@@ -482,8 +481,7 @@ F2:1 C3:1 Eb3+Ab3:1 F3+C4:2
  performance=dict(rubato=[56,54,51,55,57,58,56,52,57,49,53,56,50,53,47,40],
   phrase_arcs=[[0,14,3],[15,29,4],[30,49,5],[50,64,4],[65,80,-2]],
   lower_entries=[[0,15],[15,25],[30,45],[45,60],[60,78]],pedal_bars=list(range(1,17)),pedal_lift=.24,gate=.99,
-  note='Quiet quartal shapes contrast with a singing upper line. The bass moves independently through syncopated entries, and the C-major window briefly releases the tension before the altered-dominant return.'))
-,
+  note='Quiet quartal shapes contrast with a singing upper line. The bass moves independently through syncopated entries, and the C-major window briefly releases the tension before the altered-dominant return.')),
 dict(op=23,title='Tern Palimpsest',key='g',fifths=-2,meter='4/4',bpm=62,
  description='The F-A-flat-C-E-flat bass of Sedge Observatory rises into G-B-flat-D-F. Triplet quarters float over the other hand\'s duple pulse, then pass into the bass while the upper voice sustains. G minor moves through F and B-flat, an A-flat/D-flat reflection and a C-minor return; a clear final triad gathers the layers into one place.',
  difficulty='Advanced rhythmic independence',
@@ -535,5 +533,63 @@ G2:1 D3:1 G3+Bb3:2
  performance=dict(rubato=[62,60,55,61,62,60,54,63,60,54,59,62,58,54,52,48,40],
   phrase_arcs=[[0,11,3],[12,27,4],[28,39,4],[40,55,4],[56,68,-2]],
   lower_entries=[[4,12],[20,32],[36,48],[52,66]],pedal_bars=list(range(1,18)),pedal_lift=.25,gate=.99,
-  note='The triplets retain their exact three-to-two relationship through the rubato map. Their transfer to the bass brings the lower line forward while the upper voice holds back; the final phrase resolves into a single shared cadence.'))
+  note='The triplets retain their exact three-to-two relationship through the rubato map. Their transfer to the bass brings the lower line forward while the upper voice holds back; the final phrase resolves into a single shared cadence.')),
+dict(op=24,title='Amber Isobath',key='bb',fifths=-5,meter='4/4',bpm=60,
+ description='Tern Palimpsest\'s triplet figure becomes B-flat-D-flat-F-A-flat. Brief ornamental runs appear within the longer line, while the bass takes up the triplets at quieter points. B-flat minor opens into D-flat and G-flat; a held natural sixth brushes the new harmony before resolving. The final dominant leads unexpectedly into a widely voiced B-flat-major ninth.',
+ difficulty='Advanced cross-rhythm and voicing',
+ technique_limits=dict(chord_span=10,melodic_leap=14,rapid_leap=7),
+ technical_note='Triplet quarters transfer between the hands; short sixteenth-note turns interrupt sustained phrases without changing the underlying pulse. Five-flat reading, chromatic suspensions and a final change from minor to major require careful voicing. The planned LH major-ninth shifts occur on separate beats; the widest RH chord is a minor sixth.',
+ tuplet_hands=['rh','lh'],
+ parent_opus=23,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['Bb','Db','F','Ab']),
+ ancestry=dict(source_opus=23,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['G','Bb','D','F'],transposition_semitones=3),
+ rh='''
+Bb4:2/3 Db5:2/3 F5:2/3 Ab5:2~
+Ab5:1 Gb5:.5 F5:.5 Db5:1 C5:1
+Bb4:1 Db5:.5 F5:.5 Ab5:1 Gb5:1
+F5:1 Eb5:.25 Db5:.25 C5:.25 A4:.25 Bb4:1 C5:1
+Db5+F5+Ab5:3 C5:1
+F5:1 Ab5:.5 C6:.5 Bb5:1 Ab5:1
+Gb5:1 F5:.5 Db5:.5 C5:1 Bb4:1
+A4:1 C5:.5 Eb5:.5 Gb5:1 F5:1~
+F5:2 Eb5:.5 Db5:.5 C5:1
+Bb4:1 Db5:.5 F5:.5 Ab5:2~
+Ab5:1 Gb5:.25 F5:.25 Eb5:.25 C5:.25 Db5:1 Eb5:1
+F5:1 Eb5:.5 C5:.5 Bb4:1 Ab4:1
+Bb4:2/3 Db5:2/3 F5:2/3 Ab5:1 G5:1~
+G5:1 F5:.5 Eb5:.5 Db5:1 Bb4:1
+C5:1 Eb5:.5 Gb5:.5 Bb5:1 Ab5:1
+G5:1 F5:.5 Eb5:.5 C5:1 A4:1
+Bb4:1 Db5:.5 F5:.5 Ab5:1 G5:1
+Gb5:1 F5:.5 Eb5:.5 Db5:1 Bb4:1
+A4:1 C5:.25 D5:.25 Eb5:.25 G5:.25 F5:1 Eb5:1
+D5:1 C5:1 A4+C5+F5:2
+''',
+ lh='''
+Bb2:1 F3:1 Ab3:1 C4:1
+Gb3:1 Db4:.5 Bb3:.5 F3:1 Eb3:1
+Eb3:1 Gb3+Db4:1.5 Bb3:.5 R:1
+F3:1 Eb3+A3:1.5 C4:.5 Gb3:1
+Bb2:2/3 Db3:2/3 F3:2/3 Ab3:1 C4:1
+Db3:1 Ab3:1 C4:1 F3:1
+Gb3:1 Bb3+F4:1.5 Db4:.5 R:1
+F3:1 A3:1 Eb4:.5 C4:.5 Gb3:1
+Bb2:2/3 Db3:2/3 F3:2/3 C4:1 Ab3:1
+Eb3:1 Bb3:.5 Db4:.5 Gb3:1 F3:1
+Ab3:1 Gb3+C4:1.5 Eb3:.5 R:1
+Db3:1 Ab3:1 C4:.5 Bb3:.5 F3:1
+Bb2:1 F3:1 Ab3:1 C4:1
+Gb3:1.5 Db4:1 Bb3:.5 F3:1
+C3:1 Eb3+Bb3:1 Gb3:.5 F3:.5 Eb3:1
+F3:2/3 A3:2/3 C4:2/3 Eb4:1 C4:1
+Bb2:1 F3:1 Ab3:1 C4:1
+Eb3:1 Gb3+Db4:1.5 Bb3:.5 F3:1
+F3:1 A3:1 Eb4:.5 D4:.5 C4:1
+Bb2:1 F3:1 Bb2+D3:2
+''',sections={1:'p',5:'pp',6:'mp',9:'p',13:'pp',16:'p',18:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,15),(16,20)],lower_phrases=[(2,5),(7,9),(11,13),(15,17),(18,20)],
+ hairpins=[('diminuendo',1,4),('crescendo',5,6),('diminuendo',6,8),('crescendo',9,10),('diminuendo',10,12),('crescendo',13,14),('diminuendo',14,15),('diminuendo',16,20)],tempo_changes={},group=4,
+ performance=dict(rubato=[60,58,61,54,58,63,59,53,58,60,61,53,57,53,51,56,54,50,46,39],
+  phrase_arcs=[[0,15,3],[16,31,5],[32,47,4],[48,59,3],[60,80,-1]],
+  lower_entries=[[4,20],[24,36],[40,52],[56,68],[68,79]],pedal_bars=list(range(1,21)),pedal_lift=.26,gate=.99,
+  note='The short ornamental turns stay within the continuous tempo map rather than becoming an automated fill. Bass triplets come forward under held upper notes; the final major third is quieter than the preceding dominant.'))
 ]

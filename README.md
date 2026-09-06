@@ -39,8 +39,9 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 21 | Rain Arcade | 7/4 | 187 | [Score](pieces/CWS_Op_021_Rain_Arcade/CWS_Op_021_Rain_Arcade.pdf) | [MP3](pieces/CWS_Op_021_Rain_Arcade/CWS_Op_021_Rain_Arcade.mp3) |
 | CWS Op. 22 | Sedge Observatory | 5/4 | 186 | [Score](pieces/CWS_Op_022_Sedge_Observatory/CWS_Op_022_Sedge_Observatory.pdf) | [MP3](pieces/CWS_Op_022_Sedge_Observatory/CWS_Op_022_Sedge_Observatory.mp3) |
 | CWS Op. 23 | Tern Palimpsest | 4/4 | 151 | [Score](pieces/CWS_Op_023_Tern_Palimpsest/CWS_Op_023_Tern_Palimpsest.pdf) | [MP3](pieces/CWS_Op_023_Tern_Palimpsest/CWS_Op_023_Tern_Palimpsest.mp3) |
+| CWS Op. 24 | Amber Isobath | 4/4 | 190 | [Score](pieces/CWS_Op_024_Amber_Isobath/CWS_Op_024_Amber_Isobath.pdf) | [MP3](pieces/CWS_Op_024_Amber_Isobath/CWS_Op_024_Amber_Isobath.mp3) |
 
-[Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
+[Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
 ## Run the gallery
 
