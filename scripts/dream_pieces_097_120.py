@@ -1203,4 +1203,52 @@ R:6
   phrase_arcs=[[0,23.8,3],[24,35.8,3],[36,47.8,2],[48,71.8,3],[72,83.8,2],[84,96,-2]],
   tenor_entries=[[24,36],[72,84]],lower_entries=[],pedal_lift=.18,gate=.995,
   note='The moving fourths should feel broad and buoyant rather than percussive. Let the tenor retain its own line above the held D. When the passage returns in reverse, soften its arrival and let the motion gradually unwind into the close.'))
+,
+dict(op=113,title='Selenite Walkway',key='eb',fifths=-6,meter='5/4',bpm=52,
+ description='Marl Sundial’s D–F–A–G becomes E-flat–G-flat–B-flat–A-flat in an unaccompanied lower phrase. The RH answers it two octaves higher. Three shared pauses then separate the later phrases: four quarter beats, two and a half, and one. The gaps draw closer together as the wandering jazz harmonies return to E-flat-minor ninth.',
+ difficulty='Advanced harmonic listening with spacious, flexible phrasing',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The LH begins alone; bar 2 repeats its complete phrase two octaves higher in the RH. Keep the written silences between bars 6–7, 10–11 and 13–14 clear of the pedal. These gaps last four, two-and-a-half and one quarter beats respectively. The room resonance may linger, but the hands should make no new sound in those rests. Let the increasingly shorter breaths guide the return. This is a quieter contrast to the surrounding denser studies.',
+ parent_opus=112,motif=dict(hand='lh',start_beat=0,end_beat=5,pitches=['Eb','Gb','Bb','Ab']),
+ ancestry=dict(source_opus=112,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=6,source_pitches=['D','F','A','G'],transposition_semitones=1),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*5+left,(bar-1)*5+right-.18] for bar,cuts in enumerate([[0,1.5,2,3,5],[0,1,1.5,2,3,5],[0,2,3,4,5],[0,1,2.5,3,5],[0,1,1.5,2,3,5],[0,1,2,3],[2,3.5,4,5],[0,1,1.5,2,3,5],[0,1,1.5,2,3,5],[0,1,2,3,4],[1.5,2.5,3,5],[0,1,2,3,5],[0,1,1.5,2,2.5,4.5],[.5,5]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+R:5
+Eb5:1.5 Gb5:.5 Bb5:1 Ab5:2
+F5:2 Eb5:1 Db5:1 Bb4:1
+R:1 Ab4:1.5 C5:.5 Eb5:2
+D5:1 F5:.5 A5:1.5 G5:2
+F5:1 Eb5:1 C5:1 R:2
+R:2 D5:1.5 F5:.5 Ab5:1
+G5:1.5 E5:.5 C5:1 B4:2
+Bb4:1 Db5:.5 E5:1.5 G5:2
+F5:2 Eb5:1 C5:1 R:1
+R:1.5 Gb5:1 Bb5:.5 Ab5:2
+F5:1 Eb5:1 Db5:1 Bb4:2
+Gb4:1 Bb4:.5 Db5:1 C5:2 R:.5
+R:.5 F4+Gb4+Bb4+Db5:1.5~ F4+Gb4+Bb4+Db5:3
+''',
+ lh='''
+Eb3:1.5 Gb3:.5 Bb3:1 Ab3:2
+R:1 Eb3+Bb3:2 Db4+F4:2
+Gb3:2 Db4:1 F4:1 Eb4:1
+Db3+Ab3:3 C4+F4:2
+Bb2:1 F3:1 Ab3:1 C4:2
+A3+C4:2 G3+Bb3:1 R:2
+R:2 E3+Bb3:3
+A2:1 E3:1 G3:1 C4:2
+C3:1 G3:1 Bb3:1 Db4:2
+F3:1 C4:1 Eb4:2 R:1
+R:1.5 Eb3+Bb3:3.5
+Gb3:1 Db4:1 F4:1 Ab3:2
+F3+Ab3:2 Eb3+Gb3:2.5 R:.5
+R:.5 Eb3+Bb3:1.5~ Eb3+Bb3:3
+''',sections={1:'p',2:'p',3:'pp',4:'p',5:'mp',6:'pp',7:'pp',8:'p',9:'mp',10:'pp',11:'p',12:'pp',13:'pp',14:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(2,3),(4,6),(7,10),(11,12),(13,14)],lower_phrases=[(1,1),(2,3),(4,5),(8,9),(11,12)],
+ hairpins=[('crescendo',2,3),('crescendo',4,5),('crescendo',7,9),('diminuendo',11,12)],tempo_changes={},group=2,
+ performance=dict(rubato=[51,53,47,49,55,43,45,50,54,42,47,43,36,27],
+  phrase_arcs=[[0,4.8,3],[5,14.8,3],[15,27.8,3],[32,48.8,3],[51.5,64.4,2],[65.5,70,-2]],
+  lower_entries=[[0,5]],pedal_lift=.18,gate=.995,
+  note='Give the solitary lower opening the same singing quality as its higher answer. The three written gaps are part of the form: let them hang without filling them, then make the next phrase feel like a continuation of the same thought. The final pause is short enough for the last chord to feel close and warm.'))
 ]

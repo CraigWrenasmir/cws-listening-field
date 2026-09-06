@@ -20052,5 +20052,269 @@
       "sounded_pitches_per_minute": 83.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Selenite Walkway",
+    "opus": 113,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 96,
+    "audio_seconds": 103.13,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 6,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 8
+      },
+      "lh": {
+        "low": 45,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced harmonic listening with spacious, flexible phrasing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The LH begins alone; bar 2 repeats its complete phrase two octaves higher in the RH. Keep the written silences between bars 6\u20137, 10\u201311 and 13\u201314 clear of the pedal. These gaps last four, two-and-a-half and one quarter beats respectively. The room resonance may linger, but the hands should make no new sound in those rests. Let the increasingly shorter breaths guide the return. This is a quieter contrast to the surrounding denser studies."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.32
+      ],
+      [
+        1.5,
+        1.82
+      ],
+      [
+        2,
+        2.82
+      ],
+      [
+        3,
+        4.82
+      ],
+      [
+        5,
+        5.82
+      ],
+      [
+        6,
+        6.32
+      ],
+      [
+        6.5,
+        6.82
+      ],
+      [
+        7,
+        7.82
+      ],
+      [
+        8,
+        9.82
+      ],
+      [
+        10,
+        11.82
+      ],
+      [
+        12,
+        12.82
+      ],
+      [
+        13,
+        13.82
+      ],
+      [
+        14,
+        14.82
+      ],
+      [
+        15,
+        15.82
+      ],
+      [
+        16,
+        17.32
+      ],
+      [
+        17.5,
+        17.82
+      ],
+      [
+        18,
+        19.82
+      ],
+      [
+        20,
+        20.82
+      ],
+      [
+        21,
+        21.32
+      ],
+      [
+        21.5,
+        21.82
+      ],
+      [
+        22,
+        22.82
+      ],
+      [
+        23,
+        24.82
+      ],
+      [
+        25,
+        25.82
+      ],
+      [
+        26,
+        26.82
+      ],
+      [
+        27,
+        27.82
+      ],
+      [
+        32,
+        33.32
+      ],
+      [
+        33.5,
+        33.82
+      ],
+      [
+        34,
+        34.82
+      ],
+      [
+        35,
+        35.82
+      ],
+      [
+        36,
+        36.32
+      ],
+      [
+        36.5,
+        36.82
+      ],
+      [
+        37,
+        37.82
+      ],
+      [
+        38,
+        39.82
+      ],
+      [
+        40,
+        40.82
+      ],
+      [
+        41,
+        41.32
+      ],
+      [
+        41.5,
+        41.82
+      ],
+      [
+        42,
+        42.82
+      ],
+      [
+        43,
+        44.82
+      ],
+      [
+        45,
+        45.82
+      ],
+      [
+        46,
+        46.82
+      ],
+      [
+        47,
+        47.82
+      ],
+      [
+        48,
+        48.82
+      ],
+      [
+        51.5,
+        52.32
+      ],
+      [
+        52.5,
+        52.82
+      ],
+      [
+        53,
+        54.82
+      ],
+      [
+        55,
+        55.82
+      ],
+      [
+        56,
+        56.82
+      ],
+      [
+        57,
+        57.82
+      ],
+      [
+        58,
+        59.82
+      ],
+      [
+        60,
+        60.82
+      ],
+      [
+        61,
+        61.32
+      ],
+      [
+        61.5,
+        61.82
+      ],
+      [
+        62,
+        62.32
+      ],
+      [
+        62.5,
+        64.32
+      ],
+      [
+        65.5,
+        69.82
+      ]
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 11,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 57.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
