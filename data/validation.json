@@ -5163,5 +5163,262 @@
       "sounded_pitches_per_minute": 133.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Nacre Driftway",
+    "opus": 67,
+    "score_pages": 2,
+    "bars": 17,
+    "pitch_onsets": 167,
+    "audio_seconds": 102.78,
+    "hands": {
+      "rh": {
+        "low": 58,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 42,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced three-voice inverted reflection",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Shape the opening four-note melody over a quieter inner line. In bar 9 the RH inner voice gives its exact interval inversion, G-flat\u2013E-flat\u2013D-flat\u2013E-flat, beneath the held upper B-flat. Retain both voice lengths through the pedal changes and let the inner answer emerge. The upper F in bars 4\u20135 is one sustained note across the bar line."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        1.27
+      ],
+      [
+        1.5,
+        2.77
+      ],
+      [
+        3.0,
+        4.27
+      ],
+      [
+        4.5,
+        5.77
+      ],
+      [
+        6.0,
+        7.27
+      ],
+      [
+        7.5,
+        8.77
+      ],
+      [
+        9.0,
+        10.27
+      ],
+      [
+        10.5,
+        11.77
+      ],
+      [
+        12.0,
+        13.27
+      ],
+      [
+        13.5,
+        14.77
+      ],
+      [
+        15.0,
+        16.27
+      ],
+      [
+        16.5,
+        17.77
+      ],
+      [
+        18.0,
+        19.27
+      ],
+      [
+        19.5,
+        20.77
+      ],
+      [
+        21.0,
+        22.27
+      ],
+      [
+        22.5,
+        23.77
+      ],
+      [
+        24.0,
+        25.27
+      ],
+      [
+        25.5,
+        26.77
+      ],
+      [
+        27.0,
+        28.27
+      ],
+      [
+        28.5,
+        29.77
+      ],
+      [
+        30.0,
+        31.27
+      ],
+      [
+        31.5,
+        32.77
+      ],
+      [
+        33.0,
+        34.27
+      ],
+      [
+        34.5,
+        35.77
+      ],
+      [
+        36.0,
+        37.27
+      ],
+      [
+        37.5,
+        38.77
+      ],
+      [
+        39.0,
+        40.27
+      ],
+      [
+        40.5,
+        41.77
+      ],
+      [
+        42.0,
+        43.27
+      ],
+      [
+        43.5,
+        44.77
+      ],
+      [
+        45.0,
+        46.27
+      ],
+      [
+        46.5,
+        47.77
+      ],
+      [
+        48.0,
+        49.27
+      ],
+      [
+        49.5,
+        50.77
+      ],
+      [
+        51.0,
+        52.27
+      ],
+      [
+        52.5,
+        53.77
+      ],
+      [
+        54.0,
+        55.27
+      ],
+      [
+        55.5,
+        56.77
+      ],
+      [
+        57.0,
+        58.27
+      ],
+      [
+        58.5,
+        59.77
+      ],
+      [
+        60.0,
+        61.27
+      ],
+      [
+        61.5,
+        62.77
+      ],
+      [
+        63.0,
+        64.27
+      ],
+      [
+        64.5,
+        65.77
+      ],
+      [
+        66.0,
+        67.27
+      ],
+      [
+        67.5,
+        68.77
+      ],
+      [
+        69.0,
+        70.27
+      ],
+      [
+        70.5,
+        71.77
+      ],
+      [
+        72.0,
+        73.27
+      ],
+      [
+        73.5,
+        74.77
+      ],
+      [
+        75.0,
+        76.27
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 100.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

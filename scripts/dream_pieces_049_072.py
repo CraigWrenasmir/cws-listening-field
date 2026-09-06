@@ -1431,4 +1431,77 @@ E3:1.5 F#3:1
   phrase_arcs=[[0,17,4],[17.5,32,4],[32.5,49.5,4],[50,62.5,-2]],
   lower_entries=[[0,12.5],[50,62.5]],inner_entries=[[12.5,17.5],[30,35],[45,50]],tenor_entries=[[20,27.5],[35,42.5]],pedal_lift=.25,gate=.995,
   note='The opening bass descent and upper ascent stay gently present while the two inner voices speak more softly. The five-eighth bars share one long breath through each larger phrase. Delayed inner entries and the held upper E keep the surface from becoming a repeated accompaniment pattern; the final descent narrows towards the minor sixth.'))
+,
+dict(op=67,title='Nacre Driftway',key='Gb',fifths=-6,meter='9/8',bpm=56,
+ description='A new branch returns to Velvet Estuary’s A–C–D–C, now E-flat–G-flat–A-flat–G-flat. A quieter inner voice later turns the melody’s intervals upside down beneath a held B-flat. Compound pulses and long ties carry the three voices through G-flat, C-flat minor colour and a distant D-major reflection, before the close opens into a G-flat major ninth.',
+ difficulty='Advanced three-voice inverted reflection',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Shape the opening four-note melody over a quieter inner line. In bar 9 the RH inner voice gives its exact interval inversion, G-flat–E-flat–D-flat–E-flat, beneath the held upper B-flat. Retain both voice lengths through the pedal changes and let the inner answer emerge. The upper F in bars 4–5 is one sustained note across the bar line.',
+ parent_opus=2,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4.5,pitches=['Eb','Gb','Ab','Gb']),
+ ancestry=dict(source_opus=2,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['A','C','D','C'],transposition_semitones=6),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*1.5,i*1.5+1.27] for i in range(51)],
+ rh='''
+Eb5:1.5 Gb5:1.5 Ab5:1 Gb5:.5
+F5:3 Eb5:1 Db5:.5
+Eb5:1.5 Db5:1 Cb5:.5 Bb4:1.5
+F5:4.5~
+F5:1.5 Eb5:1.5 Db5:1 Cb5:.5
+Bb4:3 Ab4:1 Gb4:.5
+Ab4:1.5 Bb4:1 Db5:.5 Eb5:1.5
+Fb5:3 Eb5:1 Db5:.5
+Bb4:4.5
+A4:3 B4:1 C#5:.5
+D5:1.5 F#5:1 E5:.5 C#5:1.5
+C5:3 Bb4:1 Db5:.5
+Gb5:1.5 Ab5:1.5 Bb5:1 Ab5:.5
+Gb5:3 F5:1 Eb5:.5
+Db5:1.5 Cb5:1 Bb4:.5 Ab4:1.5
+Bb4:3 Ab4:1 Gb4:.5
+F4+Ab4:4.5
+''',
+ rh_inner='''
+Bb4:3 Db5:1.5
+Ab4:1.5 Cb5:1 Bb4:.5 Ab4:1.5
+Gb4:2 R:.5 Ab4:2
+Db5:1.5 Eb5:1.5 Db5:1.5
+Cb5:1.5 Ab4:1.5 Gb4:1.5
+F4:1.5 Eb4:1.5 Db4:1.5
+Eb4:1.5 Gb4:1 F4:.5 Ab4:1.5
+Ab4:2 R:.5 Cb5:2
+Gb4:1.5 Eb4:1.5 Db4:1 Eb4:.5
+F#4:1.5 E4:1.5 D4:1.5
+A4:1.5 D5:1 B4:.5 A4:1.5
+E4:1.5 G4:1.5 F4:1.5
+Eb5:1.5 F5:1 Eb5:.5 Db5:1.5
+Bb4:1.5 Db5:1 Cb5:.5 Ab4:1.5
+Gb4:1.5 F4:1.5 Eb4:1.5
+Db4:1.5 F4:1.5 Eb4:1.5
+Bb3:4.5
+''',
+ lh='''
+Eb3:1.5 Bb3:1 Db4:.5 Cb4:1.5
+Db3:1 Ab3:.5 Cb4:1.5 Bb3:1.5
+Cb3:2 Gb3:.5 Bb3:1 Ab3:1
+Bb2:1.5 F3:1.5 Ab3:1.5
+Eb3:1 Bb3:.5 Db4:1.5 Cb4:1.5
+Db3:1.5 Ab3:1.5 Gb3:1.5
+Cb3:1 Gb3:.5 Bb3:1.5 Ab3:1.5
+Fb3:2 Cb4:.5 Eb4:1 Db4:1
+Cb3:1.5 Gb3:1 Bb3:.5 Ab3:1.5
+D3:1 A3:.5 C#4:1.5 B3:1.5
+B2:1.5 F#3:1.5 A3:1.5
+C3:1 G3:.5 Bb3:1.5 A3:1.5
+Eb3:1.5 Bb3:1 Db4:.5 Cb4:1.5
+Cb3:2 Gb3:.5 Bb3:1 Ab3:1
+Db3:1 Ab3:.5 Cb4:1.5 Bb3:1.5
+Cb3:1.5 Gb3:1.5 F3:1.5
+Gb2+Db3:3 Eb3:1.5
+''',sections={1:'p',2:'p',3:'pp',4:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'pp',10:'p',11:'mp',12:'pp',13:'mp',14:'p',15:'pp',16:'pp'},words={1:'poco rubato',16:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,9),(10,12),(13,17)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,15),(16,17)],
+ hairpins=[('diminuendo',1,3),('diminuendo',4,6),('crescendo',7,8),('diminuendo',8,9),('crescendo',10,11),('diminuendo',11,12),('diminuendo',13,17)],tempo_changes={},group=3,
+ performance=dict(rubato=[56,54,47,58,53,43,54,60,46,53,59,47,57,51,45,38,28],
+  phrase_arcs=[[0,13,3],[13.5,26.5,4],[27,40,4],[40.5,53.5,4],[54,76.5,-2]],
+  lower_entries=[[13.5,22.5],[31.5,36],[58.5,63]],inner_entries=[[36,40.5]],pedal_lift=.23,gate=.995,
+  note='The compound pulses flow underneath longer melodic spans. The inner inversion in bar 9 comes forward while the upper B-flat stays quiet. A distant major reflection provides a brief lift, then the returning melody gradually loses height and settles into a spacious major ninth.'))
 ]
