@@ -59,6 +59,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 41 | Opal Stairwell | 3/4 | 121 | [Score](pieces/CWS_Op_041_Opal_Stairwell/CWS_Op_041_Opal_Stairwell.pdf) | [MP3](pieces/CWS_Op_041_Opal_Stairwell/CWS_Op_041_Opal_Stairwell.mp3) |
 | CWS Op. 42 | Sorrel Pendulum | 6/8 | 123 | [Score](pieces/CWS_Op_042_Sorrel_Pendulum/CWS_Op_042_Sorrel_Pendulum.pdf) | [MP3](pieces/CWS_Op_042_Sorrel_Pendulum/CWS_Op_042_Sorrel_Pendulum.mp3) |
 | CWS Op. 43 | Silver Culvert | 5/4 | 112 | [Score](pieces/CWS_Op_043_Silver_Culvert/CWS_Op_043_Silver_Culvert.pdf) | [MP3](pieces/CWS_Op_043_Silver_Culvert/CWS_Op_043_Silver_Culvert.mp3) |
+| CWS Op. 44 | Quartz Overpass | 9/8 | 177 | [Score](pieces/CWS_Op_044_Quartz_Overpass/CWS_Op_044_Quartz_Overpass.pdf) | [MP3](pieces/CWS_Op_044_Quartz_Overpass/CWS_Op_044_Quartz_Overpass.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

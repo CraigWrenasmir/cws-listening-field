@@ -1970,5 +1970,56 @@
       "sounded_pitches_per_minute": 68.5,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Quartz Overpass",
+    "opus": 44,
+    "score_pages": 1,
+    "bars": 16,
+    "pitch_onsets": 177,
+    "audio_seconds": 89.41,
+    "hands": {
+      "rh": {
+        "low": 57,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 41,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced three-voice reverie",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The upper melody and right-hand inner line have separate durations and stems. The inner line must remain soft while the fingers sustain the melody above it. Broad compound-metre phrases, chromatic inner tones and a gradual descent into a lower register require close control of balance and release."
+    },
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 7,
+      "sounded_pitches_per_minute": 122.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

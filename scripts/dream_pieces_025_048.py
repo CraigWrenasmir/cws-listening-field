@@ -1096,4 +1096,72 @@ F3:2 C3+F3:3
   phrase_arcs=[[0,19,3],[20,44,4],[45,59,3],[60,80,-2]],
   lower_entries=[[0,3],[8,12],[15,20],[23,30],[30,35],[38,45],[45,48],[53,57],[60,70],[70,80]],pedal_lift=.2,gate=.99,
   note='The melodic handovers keep a similar dynamic weight, with the bass lifted slightly when it takes over a phrase. Pedal clears around the exposed exchanges. The two hands gradually overlap more fully before the final compact major-ninth chord.'))
+,
+dict(op=44,title='Quartz Overpass',key='F',fifths=-1,meter='9/8',bpm=59,
+ description='Velvet Estuary’s A–C–D–C opening returns in a broader nine-eighth span, with a separately moving inner voice. The bass also recalls the earlier D–F–E–A turn. F and D-minor colours open through E-flat and D-flat before B dominant leads into an E-minor reflection. The return descends into a low, intimate F-major sixth.',
+ difficulty='Advanced three-voice reverie',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The upper melody and right-hand inner line have separate durations and stems. The inner line must remain soft while the fingers sustain the melody above it. Broad compound-metre phrases, chromatic inner tones and a gradual descent into a lower register require close control of balance and release.',
+ parent_opus=2,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6.5,pitches=['A','C','D','C']),
+ ancestry=dict(source_opus=2,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['A','C','D','C'],transposition_semitones=0),
+ rh='''
+A4:3 C5:1.5
+D5:1.5 C5:.5 A4:.5 G4:2
+E5:2.5 D5:2
+F5:3 E5:1.5
+D5:3 C5:1.5
+Eb5:2 D5:1 C5:1.5
+Db5:3 Eb5:1.5
+F5:2.5 Eb5:2
+E5:3 D5:1.5
+D#5:2 C#5:1 B4:1.5
+E5:2.5 F#5:2
+G5:3 F#5:1.5
+F5:2.5 E5:2
+D5:2 C5:1.5 A4:1
+G4:3 E4:1.5
+F4:4.5
+''',
+ rh_inner='''
+F4:1 E4:.5 G4:1 F4:2
+F4:1 A4:.5 F4:1 E4:2
+G4:1 A4:1 C5:.5 B4:1 A4:1
+A4:1 C5:.5 D5:1 C5:2
+F4:1 A4:.5 Bb4:1 A4:2
+G4:1 Bb4:1 F4:1 Ab4:1.5
+F4:1 Ab4:1.5 C5:1 Bb4:1
+Ab4:1 C5:.5 Db5:1 Bb4:1 C5:1
+G4:1 B4:1 C5:.5 A4:1 G4:1
+F#4:1 A4:.5 G#4:1 F#4:1 A4:1
+G4:1 B4:.5 C5:1 B4:1 D5:1
+B4:1 D5:1.5 E5:1 D5:1
+A4:1 C5:.5 D5:1 C5:1 G4:1
+F4:1 G4:1 Bb4:.5 G4:.5 F4:1.5
+C4:1 D4:.5 F4:1 E4:.5 C4:1.5
+A3:1 C4:1 D4:1 E4:.5 D4:1
+''',
+ lh='''
+D3:1 F3:.5 E3:.5 A2:2.5
+Bb2:2 F3:1 A3:.5 D4:1
+C3:1 G3:1 Bb3:1 E3:1.5
+F3:1 C4:1 E3:1 A3:1.5
+D3:1 A3:.5 C4:.5 F3:2.5
+Eb3:2 Bb3:.5 Db4:.5 G3:1.5
+Db3:1 Ab3:1 C4:1 F3:1.5
+Bb2:1 F3:.5 Ab3:1 Db4:1 C4:1
+C3:1 G3:1 B3:1 E3:1.5
+B2:1 F#3:1 A3:1 D#4:1.5
+E3:1 B3:.5 D4:1 G3:1 F#3:1
+G3:1 D4:1 B3:1 F#3:1.5
+F3:1 C4:1 E3:1 A3:1.5
+D3:1 A3:.5 C4:.5 F3:1.5 E3:1
+C3:1 G3:1 Bb3:.5 E3:2
+F2:1 C3:1 A2:1 F2+C3:1.5
+''',sections={1:'p',3:'mp',5:'pp',6:'p',8:'mp',9:'pp',11:'p',12:'mp',13:'p',15:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,13),(14,16)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,14),(15,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,8),('crescendo',9,12),('diminuendo',12,13),('diminuendo',14,16)],tempo_changes={},group=4,
+ performance=dict(rubato=[59,56,61,53,50,55,58,61,49,54,58,62,53,49,43,34],
+  phrase_arcs=[[0,17,3],[18,35,4],[36,58,4],[58.5,72,-2]],
+  lower_entries=[[0,13.5],[13.5,27],[27,40.5],[40.5,54],[54,63],[63,72]],pedal_bars=list(range(1,17)),pedal_lift=.24,gate=.99,
+  note='The remembered opening is slower and more spacious, while the inner voice remains beneath it in the balance. The five-bar central phrase opens gradually, then the closing register descent draws all three voices nearer together.'))
 ]
