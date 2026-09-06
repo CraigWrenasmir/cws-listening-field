@@ -225,4 +225,101 @@ R:7
  performance=dict(rubato=[54,49,57,48,53,56,45,50,55,52,48,51,44,39,27],
   phrase_arcs=[[0,18.7,3],[19,37.7,4],[38,58.7,3],[59,75,-2]],tenor_entries=[[9,15],[38,44],[53,59]],lower_entries=[[0,5],[68,75]],pedal_lift=.18,gate=.995,
   note='The changing bar lengths follow the upper breath. Keep the sustained lower notes soft, and allow the tenor triplets to move independently beneath the slower melody. The A-natural opening recolours into A-flat; its shorter return makes room for a long, quiet last chord.'))
+,
+dict(op=100,title='Lunaria Interstice',key='C',fifths=0,meter='6/4',bpm=56,
+ description='Cyclamen Slipway’s ascending tenor fragment becomes G–A–B–C in the upper melody. A lower line reflects every interval in the opposite direction. The reflection returns in two new harmonic settings, while an additional RH voice opens the middle of the piece into four-part counterpoint. Near the end, both original lines return in reverse order, then give way to a quiet C-major ninth.',
+ difficulty='Advanced contrary-motion counterpoint and four-voice balance',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The upper and tenor lines are exact interval reflections in bars 1, 7 and 11. In bar 15 both opening lines return in reverse order. Keep the bass lighter than the moving tenor, and distinguish the RH inner voice in bars 7–12 without hardening the melody. Sustained lower notes and moving tenor together reach an octave. The mirrored lines should sound like two phrases responding to one another, with no extra accent at each vertical meeting.',
+ parent_opus=99,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['G','A','B','C']),
+ ancestry=dict(source_opus=99,source_hand='lh',source_voice='tenor',source_start_beat=9,source_end_beat=11,source_pitches=['Ab','Bb','C','Db'],transposition_semitones=-1),
+ hidden_voice_rests={'inner':[1,2,3,4,5,6,13,14,15,16,17,18],'tenor':[18]},
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[7,13],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.2] for bar,cuts in enumerate([[0,1.5,3,4.5,6],[0,2,3,4,6],[0,2,3,4,6],[0,1,2,3,4,5,6],[0,1,2,3,4,5,6],[0,1,2,3,4,6],[0,1.5,2,3,4,4.5,5,6],[0,2,3,4,6],[0,1,2,3,4,6],[0,1,2,3,4,6],[0,1.5,3,4.5,6],[0,1,2,3,4,6],[0,1,2,3,4,5,6],[0,1,2,3,4,5,6],[0,1.5,3,4.5,6],[0,2,3,4,5,6],[0,1,2,3,4,5,6],[0,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G4:1.5 A4:1.5 B4:1.5 C5:1.5
+B4:2 D5:1 F#5:1 E5:2
+G5:3 F#5:1 E5:2
+E5:2 D5:1 C5:2 B4:1
+C5:1 Eb5:1 F5:1 Eb5:1 Db5:2
+Bb4:2 Db5:1 F5:3
+Db5:1.5 Eb5:1.5 F5:1.5 Gb5:1.5
+F5:3 Eb5:1 Db5:2
+E5:1 F#5:1 G#5:1 B5:3
+A5:3 G5:1 E5:2
+F5:1.5 Eb5:1.5 Db5:1.5 C5:1.5
+Bb4:2 Db5:1 F5:1 Eb5:2
+D5:1 F5:.5 G5:.5 A5:1 C6:1 B5:1 A5:1
+G5:2 F5:1 E5:1 D5:2
+C5:1.5 B4:1.5 A4:1.5 G4:1.5
+F4:2 Ab4:1 C5:1 Bb4:2
+A4:1 B4:1 D5:1 F5:1 E5:1 D5:1
+E4+G4+B4+D5:3~ E4+G4+B4+D5:3
+''',
+ rh_inner='''
+R:6
+R:6
+R:6
+R:6
+R:6
+R:6
+Ab4:2 Bb4:2 Cb5:1 Bb4:1
+Ab4:3 G4:1 F4:2
+B4:2 C#5:1 D#5:3
+C5:1 D5:1 E5:1 D5:1 C5:2
+Bb4:3 Ab4:3
+F4:2 Ab4:1 C5:1 Bb4:2
+R:6
+R:6
+R:6
+R:6
+R:6
+R:6
+''',
+ lh='''
+C3:6
+B2:3 F#3:3
+E3:4 C3:2
+A2:3 E3:3
+Db3:3 F3:3
+Gb2:3 Db3:3
+Gb3:6
+Db3:6
+E3:3 C#3:3
+F3:4 D3:2
+Db3:3 Eb3:3
+Ab2:3 Eb3:3
+G3:2 D3:2 F3:2
+C3:6
+C3:6
+Db3:3 F3:3
+G3:3 D3:3
+C3+G3:3~ C3+G3:3
+''',
+ lh_upper='''
+G3:1.5 F3:1.5 Eb3:1.5 D3:1.5
+D3:2 F#3:1 A3:1 G3:2
+G3:2 B3:1 D4:1 C4:2
+E3:1 G3:1 A3:1 C4:1 B3:1 A3:1
+F3:2 Ab3:1 C4:1 Bb3:1 Ab3:1
+Db3:1 F3:1 Gb3:1 Ab3:1 F3:2
+Db4:1.5 Cb4:1.5 A3:1.5 Ab3:1.5
+F3:2 Ab3:1 C4:1 Bb3:2
+G#3:1 B3:1 D#4:1 C#4:1 B3:2
+A3:2 C4:1 E4:1 D4:2
+F3:1.5 G3:1.5 A3:1.5 Bb3:1.5
+Eb3:1 G3:1 Ab3:1 Bb3:1 G3:2
+B3:2 A3:2 C4:2
+G3:1 A3:1 Bb3:1 A3:1 G3:1 E3:1
+D3:1.5 Eb3:1.5 F3:1.5 G3:1.5
+Ab3:2 C4:1 Db4:1 C4:1 Ab3:1
+B3:2 C4:1 A3:1 G3:1 F3:1
+R:6
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'p',6:'pp',7:'mp',8:'p',9:'mp',10:'p',11:'pp',12:'p',13:'mp',14:'p',15:'pp',16:'p',17:'pp',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,14),(15,18)],lower_phrases=[],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('diminuendo',7,8),('diminuendo',9,12),('diminuendo',13,14),('diminuendo',15,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,51,58,49,54,48,57,50,60,52,46,51,59,50,44,47,37,28],
+  phrase_arcs=[[0,23.7,4],[24,47.7,3],[48,71.7,4],[72,83.7,3],[84,108,-2]],
+  tenor_entries=[[0,6],[36,42],[60,66],[84,90]],inner_entries=[[42,60],[66,72]],lower_entries=[[102,108]],pedal_lift=.2,gate=.995,
+  note='Let the reflected voices have their own gentle direction. The four-voice middle becomes more luminous without growing much louder. The reversed opening recollects the earlier music in a quieter register; the final phrase takes progressively more time, ending in a soft major ninth.'))
 ]
