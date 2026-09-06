@@ -1065,4 +1065,111 @@ Db3+Ab3:4
   phrase_arcs=[[0,14.5,3],[15,31.5,4],[32,46.5,4],[47,61,4],[61.5,73,-2]],
   lower_entries=[[8,11],[36.5,40.5],[58,61.5]],pedal_bars=list(range(1,21)),pedal_lift=.2,gate=.995,
   note='The uneven measures share a continuous underlying subdivision, while the larger phrases gather and release. The lower line answers beneath the held upper F and through the neighbouring tonal window. A final major ninth settles softly after the last descending phrase.'))
+,
+dict(op=63,title='Myrtle Folly',key='F',fifths=-1,meter='3/4',bpm=57,
+ description='Daphne Slipway’s opening turn becomes F–G–F–E in the left-hand tenor before the upper melody enters. A steadier three-beat frame gives space to the two lower voices and two small tenor triplet gestures. The treble rises into a new register, passes through E-minor and A-flat reflections, then descends towards a close, gently added F-major sixth.',
+ difficulty='Advanced tenor-led nocturne',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The left-hand tenor opens above a held bass; the right-hand melody enters in bar 2. In bars 9 and 19, the tenor’s three quarter-note triplets share two beats while the bass stays held. Keep those lines distinct through the half-bar pedal refreshes. Prepare the RH register change before bar 9 during its preceding quarter note, then let the high melody recede gradually.',
+ parent_opus=62,motif=dict(hand='lh',voice='tenor',start_beat=0,end_beat=3,pitches=['F','G','F','E']),
+ ancestry=dict(source_opus=62,source_hand='rh',source_start_beat=0,source_end_beat=3.5,source_pitches=['Db','Eb','Db','C'],transposition_semitones=4),
+ tuplet_groups=[dict(hand='lh',actual=3,normal=2,count=6)],
+ page_starts=[17],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*1.5,i*1.5+1.28] for i in range(56)],
+ rh='''
+R:3
+A4:3
+G4:2 F4:1
+E4:3
+F4:1.5 G4:.5 A4:1
+C5:2 Bb4:1
+A4:3
+G4:2 E4:1
+F5:3
+E5:1 D5:.5 C5:1.5
+D5:3
+C5:2 B4:1
+B4:1.5 D5:.5 E5:1
+F#5:3
+G5:2 F#5:1
+E5:2 D5:1
+Eb5:3
+Db5:2 C5:1
+F5:3
+Eb5:2 Db5:1
+C5:3
+Bb4:1.5 C5:.5 D5:1
+Db5:2 C5:1
+Bb4:3
+A4:1.5 G4:.5 F4:1
+E4:2 F4:1
+G4:1 E4:1 C4:1
+F4+A4:3
+''',
+ lh='''
+C3:3
+F3:2 D3:1
+Bb2:1 D3:2
+C3:1 E3:2
+F3:3
+Eb3:1 G3:2
+D3:3
+C3:1 E3:2
+D3:3
+A2:1 C3:2
+G2:1 B2:2
+C3:3
+E3:3
+B2:1 D#3:2
+E3:3
+A2:1 C3:2
+Ab2:1 C3:2
+Bb2:1 Db3:2
+Db3:3
+Gb2:1 Bb2:2
+F3:3
+Bb2:1 D3:2
+Gb2:1 Bb2:2
+C3:1 E3:2
+F3:3
+D3:3
+C3:3
+F3:3
+''',
+ lh_upper='''
+F3:1.5 G3:.5 F3:.5 E3:.5
+C4:1 A3:.5 G3:.5 F3:1
+F3:1 A3:.5 C4:.5 Bb3:1
+G3:1 Bb3:.5 D4:.5 C4:1
+A3:1 C4:.5 D4:.5 C4:1
+Bb3:1 D4:.5 F4:.5 Eb4:1
+F3:1 A3:1 C4:1
+G3:1 Bb3:.5 A3:.5 G3:1
+F3:2/3 A3:2/3 C4:2/3 B3:1
+E3:1 G3:.5 B3:.5 A3:1
+D3:1 F#3:1 A3:1
+E3:1 G3:.5 A3:.5 G3:1
+G3:1 B3:.5 D4:.5 C4:1
+F#3:1 A3:1 C#4:1
+G3:1 B3:1 D4:1
+E3:1 G3:.5 B3:.5 A3:1
+Eb3:1 G3:1 Bb3:1
+F3:1 Ab3:.5 C4:.5 Bb3:1
+F3:2/3 Ab3:2/3 C4:2/3 Bb3:1
+Db3:1 F3:.5 Ab3:.5 Gb3:1
+Ab3:1 C4:.5 Eb4:.5 D4:1
+F3:1 Ab3:1 C4:1
+Db3:1 F3:.5 Ab3:.5 Gb3:1
+G3:1 Bb3:.5 Db4:.5 C4:1
+A3:1 C4:.5 D4:.5 C4:1
+F3:1 A3:1 C4:1
+E3:1 G3:1 Bb3:1
+C4:1 D4:2
+''',sections={1:'p',2:'p',3:'mp',4:'pp',5:'p',6:'mp',8:'pp',9:'p',11:'mp',12:'pp',13:'p',15:'mp',16:'p',17:'pp',18:'p',19:'mp',20:'pp',21:'p',22:'mp',24:'pp',25:'p',27:'pp'},words={1:'poco rubato',27:'poco rit.'},
+ slurs=[(2,4),(5,8),(9,12),(13,16),(17,20),(21,24),(25,28)],lower_phrases=[(1,4),(5,7),(8,10),(11,13),(14,17),(18,20),(21,24),(25,28)],
+ hairpins=[('crescendo',2,3),('diminuendo',3,4),('crescendo',5,6),('diminuendo',6,8),('crescendo',9,11),('diminuendo',11,12),('crescendo',13,15),('diminuendo',15,16),('crescendo',17,19),('diminuendo',19,20),('crescendo',21,22),('diminuendo',22,24),('diminuendo',25,28)],tempo_changes={},group=4,
+ performance=dict(rubato=[57,54,59,46,55,60,54,47,58,55,62,48,56,60,64,53,47,55,61,48,56,60,52,46,53,47,40,30],
+  phrase_arcs=[[0,11,3],[12,23,4],[24,35,4],[36,47,4],[48,59,3],[60,71,4],[72,84,-2]],
+  lower_entries=[[9,12],[33,36],[69,72]],tenor_entries=[[0,3],[24,27],[54,57]],pedal_lift=.22,gate=.995,
+  note='The tenor begins clearly above the quieter bass. Its two triplet gestures return gently to the foreground while the upper melody holds. The rise in register opens the middle of the piece, and the final four-bar descent returns to the warmth of a close major sixth.'))
 ]
