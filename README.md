@@ -117,6 +117,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 99 | Cyclamen Slipway | 5/4, 4/4, 6/4, 7/4 (changing) | 140 | [Score](pieces/CWS_Op_099_Cyclamen_Slipway/CWS_Op_099_Cyclamen_Slipway.pdf) | [MP3](pieces/CWS_Op_099_Cyclamen_Slipway/CWS_Op_099_Cyclamen_Slipway.mp3) |
 | CWS Op. 100 | Lunaria Interstice | 6/4 | 204 | [Score](pieces/CWS_Op_100_Lunaria_Interstice/CWS_Op_100_Lunaria_Interstice.pdf) | [MP3](pieces/CWS_Op_100_Lunaria_Interstice/CWS_Op_100_Lunaria_Interstice.mp3) |
 | CWS Op. 101 | Mimosa Escapement | 6/8 | 99 | [Score](pieces/CWS_Op_101_Mimosa_Escapement/CWS_Op_101_Mimosa_Escapement.pdf) | [MP3](pieces/CWS_Op_101_Mimosa_Escapement/CWS_Op_101_Mimosa_Escapement.mp3) |
+| CWS Op. 102 | Calluna Observatory | 4/4 | 208 | [Score](pieces/CWS_Op_102_Calluna_Observatory/CWS_Op_102_Calluna_Observatory.pdf) | [MP3](pieces/CWS_Op_102_Calluna_Observatory/CWS_Op_102_Calluna_Observatory.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

@@ -377,4 +377,89 @@ F3+G3+A3+C4:3
  performance=dict(rubato=[56,51,55,50,58,52,55,53,48,46,54,49,52,49,45,43,36,28],
   phrase_arcs=[[0,5.8,2],[6,11.8,2],[12,17.8,3],[18,29.8,2],[30,35.8,3],[36,54,-2]],lower_entries=[[45,54]],pedal_lift=.18,gate=.995,
   note='The slowing comes first from the written expansion of the melody. Leave its early form light and connected; the later versions have more space within the same contour. The final held E remains present through the changing lower harmony, with a little extra time before the soft F-major arrival.'))
+,
+dict(op=102,title='Calluna Observatory',key='b',fifths=2,meter='4/4',bpm=56,
+ description='Mimosa Escapement’s descending phrase becomes B–A–G–F-sharp. Two long inner-voice flourishes place eleven equal notes across a complete four-beat bar, below a finger-held upper note and above two slower lower chords. Their related shapes illuminate G and E-flat harmonies. The surrounding counter-lines move through B minor, C, F and D-flat colours before a quiet B-minor sixth and ninth.',
+ difficulty='Advanced eleven-note tuplets beneath a sustained melody',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 6 and 14 the RH inner voice plays eleven equal eighths in the time of eight, with one continuous 11:8 bracket. The upper note lasts all four beats; the LH changes dyads at the halfway point, between the sixth and seventh inner attacks. Keep the eleven-note line light and even inside the broader phrase. The combined RH stretch stays within ten semitones. The final G-sharp gives the minor close its sixth.',
+ parent_opus=101,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['B','A','G','F#']),
+ ancestry=dict(source_opus=101,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['A','G','F','E'],transposition_semitones=2),
+ hidden_voice_rests={'inner':[1,2]},
+ tuplet_groups=[dict(hand='rh',actual=11,normal=8,count=22)],
+ tuplet_spans=[dict(hand='rh',voice='inner',start_beat=s,end_beat=s+4,actual=11,normal=8,stem='down',show_number='both') for s in [20,52]],
+ system_starts=[1,3,5,6,7,9,11,13,14,15,17,19],page_starts=[7,14],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,1,2,3,4],[0,1,2,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+B4:1 A4:1 G4:1 F#4:1
+E4:1 G4:.5 A4:.5 B4:2
+C#5:2 E5:1 D5:1
+C#5:1 B4:1 A4:2
+D5:1 F#5:1 A5:2
+B5:4
+A5:2 G5:1 F#5:1
+E5:1 D5:1 C#5:2
+D5:2 F5:1 G5:1
+A5:2 G5:1 E5:1
+F5:1 Ab5:1 G5:2
+Eb5:2 D5:1 C5:1
+D5:1 F5:1 Bb5:2
+G5:4
+F5:2 Eb5:1 D5:1
+C5:1 Eb5:1 G5:2
+F#5:1 E5:1 D5:1 C#5:1
+B4:1 D5:.5 E5:.5 F#5:2
+A5:2 G#5:1 F#5:1
+B4+D5+F#5+G#5:4
+''',
+ rh_inner='''
+R:4
+R:4
+E4:2 G4:1 F#4:1
+E4:1 D4:1 C#4:2
+A4:1 C5:1 D5:2
+D5:4/11 E5:4/11 F#5:4/11 G5:4/11 A5:4/11 G5:4/11 F#5:4/11 E5:4/11 D5:4/11 C#5:4/11 D5:4/11
+C5:2 B4:1 A4:1
+G4:1 F#4:1 E4:2
+A4:2 C5:1 D5:1
+C5:2 B4:1 G4:1
+Ab4:1 C5:1 Bb4:2
+G4:2 F4:1 Eb4:1
+Bb4:1 C5:1 D5:2
+Bb4:4/11 C5:4/11 D5:4/11 Eb5:4/11 F5:4/11 Eb5:4/11 D5:4/11 C5:4/11 Bb4:4/11 A4:4/11 Bb4:4/11
+Ab4:2 G4:1 F4:1
+E4:1 G4:1 B4:2
+A4:1 G4:1 F#4:1 E4:1
+F#4:1 A4:.5 B4:.5 C#5:2
+C#5:2 B4:1 A4:1
+C#5:4
+''',
+ lh='''
+B2:1 F#3:1 A3:1 C#4:1
+E3:1 B3:.5 D4:.5 C#4:2
+A2:1 E3:1 G3:1 B3:1
+F#3:1 C#3:1 E3:1 A3:1
+D3:1 A3:1 C4:1 E4:1
+G3+D4:2 F#3+A3:2
+C3:1 G3:1 B3:1 D4:1
+F#3:2 C#3:1 E3:1
+G2:1 D3:1 F3:1 A3:1
+F3:1 C4:1 E4:1 D4:1
+Db3:1 Ab3:1 C4:1 Eb4:1
+Ab3:1 Eb3:1 G3:1 Bb3:1
+Bb2:1 F3:1 Ab3:1 C4:1
+Eb3+Bb3:2 D3+F3:2
+Ab2:1 Eb3:1 G3:1 Bb3:1
+C3:1 G3:1 Bb3:1 D4:1
+E3:1 B3:1 D4:1 C#4:1
+B2:1 F#3:1 A3:1 C#4:1
+F#3:1 C#4:1 E4:1 D#4:1
+B2+F#3:4
+''',sections={1:'p',2:'pp',3:'p',4:'pp',5:'mp',6:'p',7:'pp',8:'p',9:'p',10:'mp',11:'p',12:'pp',13:'mp',14:'p',15:'pp',16:'p',17:'pp',18:'p',19:'pp',20:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,16),(17,20)],lower_phrases=[(1,2),(3,4),(5,5),(6,6),(7,8),(9,10),(11,12),(13,13),(14,14),(15,16),(17,18),(19,20)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,7),('crescendo',8,10),('diminuendo',11,12),('diminuendo',13,16),('diminuendo',17,20)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,50,54,48,58,53,46,51,54,57,49,45,56,52,44,50,46,49,36,28],
+  phrase_arcs=[[0,15.8,3],[16,31.8,4],[32,47.8,3],[48,63.8,4],[64,80,-2]],
+  inner_entries=[[20,24],[52,56]],lower_entries=[[44,48],[60,68]],pedal_lift=.2,gate=.995,
+  note='Each eleven-note flourish occupies one slow breath below a held melody. Its midpoint passes across the LH chord change without an accent. Leave space around those two phrases, and let the later descent settle into the warmer Dorian colour of the final minor sixth and ninth.'))
 ]

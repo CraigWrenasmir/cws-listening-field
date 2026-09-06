@@ -9,7 +9,7 @@ from new_pieces import NEW_PIECES
 from dream_pieces import DREAM_PIECES
 from datetime import datetime
 from zoneinfo import ZoneInfo
-from music21 import stream, note, chord, meter, key, clef, tempo, dynamics, expressions, layout, metadata, instrument, spanner, articulations, bar, duration, tie
+from music21 import defaults, stream, note, chord, meter, key, clef, tempo, dynamics, expressions, layout, metadata, instrument, spanner, articulations, bar, duration, tie
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'pieces'
@@ -418,6 +418,21 @@ def make_score(p):
     return sc,all_events
 
 
+def write_musicxml(score, piece, path):
+    # The default 10080 divisions cannot exactly represent elevenths.
+    # Preserve it for existing notation and extend it only when a written
+    # duration requires another denominator. Restore the library setting.
+    previous = defaults.divisionsPerQuarter
+    denominators = [Fraction(token.split(':')[1].rstrip('~')).denominator
+                    for voice in ('rh', 'rh_inner', 'lh', 'lh_upper')
+                    for token in piece.get(voice, '').split()]
+    try:
+        defaults.divisionsPerQuarter = math.lcm(previous, *denominators)
+        score.write('musicxml', fp=path)
+    finally:
+        defaults.divisionsPerQuarter = previous
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
     prior={p['op']:p for p in json.loads((ROOT/'data/catalog.json').read_text())} if (ROOT/'data/catalog.json').exists() else {}
@@ -432,7 +447,7 @@ def main():
         stem=folder.name
         sc,events=make_score(p)
         xmlpath=folder/(stem+'.musicxml')
-        sc.write('musicxml',fp=xmlpath)
+        write_musicxml(sc,p,xmlpath)
         tree=ET.parse(xmlpath)
         root=tree.getroot()
         # Exporter boilerplate is replaced with a clear credit. The catalogue belongs to CWS;
