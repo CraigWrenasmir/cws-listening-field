@@ -242,4 +242,48 @@ G3:2 Bb3:1 A3:2
   phrase_arcs=[[0,14,3],[15,39,4],[40,59,4],[60,75,-2]],
   lower_entries=[[0,5],[40,45],[65,75]],tenor_entries=[[15,20],[45,50]],pedal_lift=.22,gate=.995,
   note='The quintuplet tenor comes forward slightly while the held bass remains quiet. Its five-note gesture leads into a shared arrival on the last beat, with the upper voices retaining their own timing. The final minor sixth is allowed to settle without a hard accent.'))
+,
+dict(op=52,title='Cobalt Avenue',key='Bb',fifths=-2,meter='6/4',bpm=54,
+ description='Pewter Lagoon’s inner phrase becomes B-flat–C–D–F. Long tied notes hang above two-note lower harmonies that descend and change at their own pace. A G-major reflection briefly brightens the route before A-flat and D-flat colours lead into E-flat minor. A softly altered F dominant returns to a B-flat-major ninth.',
+ difficulty='Advanced spacious duet',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The melody sustains through several changes of lower harmony. Open fifths, fourths and an occasional wider sixth move in the left hand, with pedal changes aligned to those shifts. Preserve the tied notes with the fingers while allowing each lower sonority to clear; the exposed texture needs gentle control of balance.',
+ parent_opus=51,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['Bb','C','D','F']),
+ ancestry=dict(source_opus=51,source_hand='rh',source_voice='inner',source_start_beat=45,source_end_beat=50,source_pitches=['Eb','F','G','Bb'],transposition_semitones=7),
+ engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[0,1.78],[2,3.78],[4,5.78],[6,8.78],[9,10.78],[11,11.78],[12,13.78],[14,15.78],[16,17.78],[18,20.78],[21,22.78],[23,23.78],[24,25.78],[26,27.78],[28,29.78],[30,31.78],[32,33.78],[34,35.78],[36,38.78],[39,39.78],[40,41.78],[42,43.78],[44,45.78],[46,47.78],[48,50.78],[51,51.78],[52,53.78],[54,55.78],[56,57.78],[58,59.78],[60,61.78],[62,63.78],[64,65.78],[66,71.78]],
+ rh='''
+Bb4:1 C5:.5 D5:.5 F5:4~
+F5:1.5 Eb5:.5 D5:1 C5:1 A4:2
+Bb4+D5+A5:3 G5:1 F5:1 Eb5:1
+E5:2 D5:1 C5:3~
+C5:1 D5:.5 E5:.5 F#5:2 G5:2
+F#5:3 E5:1 D5:2
+E5+G5+D6:3 C#6:1 B5:1 A5:1
+G5:2 F5:.5 Eb5:.5 Db5:1 C5:2
+F4+Ab4+Eb5:4 Db5:1 C5:1
+Bb4+Db5+Ab5:3 Gb5:1 F5:1 Eb5:1
+A4+C5+Gb5:2 F5:1 Eb5:1 D5:1 C5:1
+D4+F4+C5:6
+''',
+ lh='''
+Bb2:2 F3+A3:2 D3+G3:2
+G2+D3:3 F3+Bb3:2 A3:1
+Eb3+Bb3:2 D3+A3:2 C3+G3:2
+F3+A3:3 C3+G3:2 Bb2+F3:1
+G2+D3:2 F#3+A3:2 E3+B3:2
+D3+A3:2 C3+G3:2 B2+F#3:2
+C3+G3:3 B2+F#3:1 A2+E3:2
+Ab2+Eb3:2 G3+Bb3:2 F3+C4:2
+Db3+Ab3:3 C3+G3:1 Bb2+F3:2
+Eb3+Bb3:2 Db3+Ab3:2 C3+Gb3:2
+F3+C4:2 Eb3+Bb3:2 C3+A3:2
+Bb2+F3:6
+''',sections={1:'p',3:'mp',4:'pp',5:'p',6:'mp',8:'p',9:'pp',10:'p',11:'pp'},words={1:'poco rubato',11:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,10),(11,12)],lower_phrases=[(1,2),(3,5),(6,8),(9,10),(11,12)],
+ hairpins=[('crescendo',1,3),('crescendo',4,6),('diminuendo',6,7),('diminuendo',8,9),('diminuendo',10,12)],tempo_changes={},group=3,
+ performance=dict(rubato=[54,51,55,50,56,59,52,49,46,51,44,32],
+  phrase_arcs=[[0,17,3],[18,41,4],[42,59,3],[60,72,-2]],
+  lower_entries=[[0,12],[24,42],[48,60]],pedal_lift=.22,gate=.995,
+  note='The long upper suspensions stay connected while the lower pairs change colour. The bass movement is kept gentle and unaccented. The G-major reflection opens slightly, then the phrase withdraws through the borrowed minor colours into the final added ninth.'))
 ]
