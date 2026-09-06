@@ -158,6 +158,12 @@ for p in cat:
  if p.get('pedal_spans'):
   expected_marks=sorted((onset_tick(beat),kind,'2') for span in p['pedal_spans'] for beat,kind in zip(span,['start','stop']))
   assert sorted(pedal_directions)==expected_marks,('Printed pedal span mismatch',p['op'],pedal_directions,expected_marks)
+  svg_ns='{http://www.w3.org/2000/svg}'
+  rendered_pedals=set()
+  for svg in d.glob(stem+'_page_*.svg'):
+   for group in ET.parse(svg).getroot().findall('.//'+svg_ns+'g[@class="pedal"]'):
+    if len(group):rendered_pedals.add(group.get('id'))
+  assert None not in rendered_pedals and len(rendered_pedals)==len(p['pedal_spans']),('Pedal span omitted by engraving',p['op'],len(rendered_pedals),len(p['pedal_spans']))
  if p.get('clef_changes'):
   actual_clefs=collections.defaultdict(list)
   for measure in r.findall('.//part/measure'):

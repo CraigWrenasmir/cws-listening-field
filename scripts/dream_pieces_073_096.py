@@ -1633,4 +1633,93 @@ A2+E3:4
   phrase_arcs=[[0,15.8,4],[16,23.8,2],[24,43.5,3],[44,63.5,2],[64,72,-2]],
   lower_entries=[[0,4],[16,20]],inner_entries=[[0,20],[44,48]],pedal_lift=.22,gate=.995,
   note='The held A stays quiet but present while the chromatic inner line approaches it. At their meeting, the arriving voice gives the pitch a fresh, gentle attack and becomes the melody. The later phrases keep exchanging emphasis before the major-ninth close.'))
+,
+dict(op=96,title='Tilia Colonnade',key='f',fifths=-4,meter='4/4',bpm=56,
+ description='Amaranth Courtyard’s rising inner line becomes C–D-flat–D–E-flat at the head of an eight-note subject. This short fugato passes the whole phrase through the tenor, RH inner voice, upper voice a fifth higher, and finally the bass. A held E colours the opening, while the later voices keep independent counter-lines. The final inner A-flat rises to A, and the lower A-flat releases, opening the minor harmony into an F-major ninth.',
+ difficulty='Advanced four-voice fugato with chromatic imitation',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The eight-note subject begins in the tenor at bar 1, the RH inner voice at bar 3, the upper voice at bar 5 and the bass at bar 7. Its dotted-eighth/sixteenth opening and longer fifth note keep the phrase supple. Bring each entry forward without losing the counter-lines. The first two bars hold an E in the RH inner voice. At the ending, release both A-flats as the inner A arrives so the major colour is clear.',
+ parent_opus=95,motif=dict(hand='lh',voice='tenor',start_beat=0,end_beat=4,pitches=['C','Db','D','Eb']),
+ ancestry=dict(source_opus=95,source_hand='rh',source_voice='inner',source_start_beat=0,source_end_beat=8,source_pitches=['C#','D','D#','E'],transposition_semitones=-1),
+ clef_changes={'lh':{2:'treble',3:'bass'}},
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,.75,1,2,4],[0,1.5,2,3,4],[0,.75,1,2,4],[0,1,1.5,2,3,4],[0,.75,1,2,4],[0,1,1.5,2,3,4],[0,.75,1,2,3,4],[0,1,1.5,2,3,4],[0,2,3,4],[0,1,2,4],[0,2,3,4],[0,1,2,4],[0,2,3,4],[0,1,2,4],[0,1,2,3,4],[0,2,4]],1) for left,right in zip(cuts,cuts[1:]) if right-left>=.5],
+ rh='''
+R:4
+R:4
+R:4
+R:4
+G5:.75 Ab5:.25 A5:1 Bb5:2
+D6:1.5 C6:.5 A5:1 G5:1
+A5:2 G5:1 F5:1
+Eb5:2 D5:1 C5:1
+F5:3 Eb5:1
+F5:1 Ab5:1 G5:2
+Eb5:2 F5:1 G5:1
+Eb5:1 Db5:1 C5:2
+F5:2 Eb5:1 Db5:1
+E5:1 F5:1 G5:2
+E5:2 D5:1 C5:1
+C5+E5+G5:4
+''',
+ rh_inner='''
+E5:4~
+E5:4
+C5:.75 Db5:.25 D5:1 Eb5:2
+G5:1.5 F5:.5 D5:1 C5:1
+D5:2 F5:2
+G5:2 F5:2
+C5:2 Db5:2
+Bb4:2 A4:2
+A4:2 C5:2
+Db5:2 C5:2
+G4:2 Ab4:2
+C5:2 Bb4:2
+Ab4:2 Gb4:2
+A4:2 Bb4:2
+Bb4:2 A4:2
+Ab4:2 A4:2
+''',
+ lh='''
+F3:4
+Ab3:4
+F3:4
+Db3:4
+C3:4
+E3:4
+C3:.75 Db3:.25 D3:1 Eb3:2
+G3:1.5 F3:.5 D3:1 C3:1
+F3:4
+Bb2:4
+Eb3:4
+Ab2:4
+Db3:4
+G2:4
+C3:4
+F3:4
+''',
+ lh_upper='''
+C4:.75 Db4:.25 D4:1 Eb4:2
+G4:1.5 F4:.5 D4:1 C4:1
+Ab3:2 Bb3:2
+F3:1 Ab3:1 C4:2
+G3:2 Bb3:2
+B3:1 C4:1 D4:2
+A3:1 Bb3:1 A3:1 G3:1
+Bb3:1 A3:1 F3:1 G3:1
+C4:2 D4:1 Eb4:1
+F3:1 Ab3:1 Bb3:2
+Bb3:2 Db4:1 C4:1
+Eb3:1 Gb3:1 Ab3:2
+Ab3:2 C4:1 Bb3:1
+D3:1 F3:1 G3:2
+G3:1 Bb3:1 Ab3:1 C4:1
+Ab3:2 C4:2
+''',sections={1:'p',2:'pp',3:'p',4:'p',5:'mp',6:'p',7:'p',8:'pp',9:'p',10:'mp',11:'p',12:'pp',13:'p',14:'mp',15:'p',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(5,6),(7,10),(11,14),(15,16)],lower_phrases=[(7,8)],
+ hairpins=[('crescendo',5,6),('diminuendo',7,8),('crescendo',9,10),('diminuendo',11,12),('diminuendo',13,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,48,53,46,57,52,49,43,51,55,47,44,48,42,35,27],
+  phrase_arcs=[[0,7.8,3],[8,15.8,3],[16,23.8,4],[24,31.8,3],[32,47.5,3],[48,64,-2]],
+  lower_entries=[[24,32]],inner_entries=[[8,16],[60,64]],tenor_entries=[[0,8],[40,48]],pedal_lift=.2,gate=.995,
+  note='Each subject entry gently changes the focus of the four-part texture. The opening held E is a distant light above the tenor, then the inner and upper entries move the phrase through the keyboard. The bass brings it home before the coda, where the final A-flat-to-A change brightens the harmony without a large crescendo.'))
 ]
