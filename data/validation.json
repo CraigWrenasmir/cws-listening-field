@@ -22138,5 +22138,478 @@
       "sounded_pitches_per_minute": 81.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Aster Underpass",
+    "opus": 119,
+    "score_pages": 2,
+    "bars": 16,
+    "pitch_onsets": 127,
+    "audio_seconds": 96.25,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 44,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced changing metre and independent inner-voice continuations",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Keep the quarter-beat pulse flexible but continuous through the changing metres. In bars 5, 9, 12 and 13 the RH inner line begins beneath a held upper note, then continues after the upper voice releases into its written rest. The slurs on the lower-stem voice mark those inner phrases. Their endings last beyond the upper releases by 2.5, 1.5, 2.5 and 2 quarter beats respectively. Balance the final four-note inner chord quietly beneath the upper D."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8200000000000001
+      ],
+      [
+        1,
+        1.32
+      ],
+      [
+        1.5,
+        2.32
+      ],
+      [
+        2.5,
+        3.32
+      ],
+      [
+        3.5,
+        3.82
+      ],
+      [
+        4.0,
+        4.32
+      ],
+      [
+        4.5,
+        4.82
+      ],
+      [
+        5.0,
+        5.82
+      ],
+      [
+        6,
+        7.32
+      ],
+      [
+        7.5,
+        7.82
+      ],
+      [
+        8,
+        8.32
+      ],
+      [
+        8.5,
+        8.82
+      ],
+      [
+        9,
+        10.32
+      ],
+      [
+        10.5,
+        11.32
+      ],
+      [
+        11.5,
+        11.82
+      ],
+      [
+        12.0,
+        12.32
+      ],
+      [
+        12.5,
+        13.82
+      ],
+      [
+        14,
+        14.82
+      ],
+      [
+        15,
+        15.82
+      ],
+      [
+        16,
+        16.82
+      ],
+      [
+        17,
+        17.82
+      ],
+      [
+        18,
+        18.82
+      ],
+      [
+        19,
+        19.32
+      ],
+      [
+        19.5,
+        19.82
+      ],
+      [
+        20.0,
+        20.32
+      ],
+      [
+        20.5,
+        20.82
+      ],
+      [
+        21.0,
+        21.82
+      ],
+      [
+        22,
+        23.32
+      ],
+      [
+        23.5,
+        23.82
+      ],
+      [
+        24,
+        24.82
+      ],
+      [
+        25,
+        25.82
+      ],
+      [
+        26,
+        26.82
+      ],
+      [
+        27,
+        27.32
+      ],
+      [
+        27.5,
+        28.82
+      ],
+      [
+        29,
+        29.32
+      ],
+      [
+        29.5,
+        30.32
+      ],
+      [
+        30.5,
+        30.82
+      ],
+      [
+        31,
+        31.32
+      ],
+      [
+        31.5,
+        31.82
+      ],
+      [
+        32,
+        32.32
+      ],
+      [
+        32.5,
+        33.32
+      ],
+      [
+        33.5,
+        33.82
+      ],
+      [
+        34.0,
+        34.82
+      ],
+      [
+        35.0,
+        35.32
+      ],
+      [
+        35.5,
+        36.82
+      ],
+      [
+        37,
+        37.82
+      ],
+      [
+        38,
+        38.32
+      ],
+      [
+        38.5,
+        39.32
+      ],
+      [
+        39.5,
+        40.32
+      ],
+      [
+        40.5,
+        40.82
+      ],
+      [
+        41.0,
+        41.32
+      ],
+      [
+        41.5,
+        42.32
+      ],
+      [
+        42.5,
+        43.32
+      ],
+      [
+        43.5,
+        43.82
+      ],
+      [
+        44.0,
+        44.32
+      ],
+      [
+        44.5,
+        44.82
+      ],
+      [
+        45,
+        45.32
+      ],
+      [
+        45.5,
+        45.82
+      ],
+      [
+        46,
+        46.32
+      ],
+      [
+        46.5,
+        47.32
+      ],
+      [
+        47.5,
+        48.32
+      ],
+      [
+        48.5,
+        49.32
+      ],
+      [
+        49.5,
+        49.82
+      ],
+      [
+        50.0,
+        50.82
+      ],
+      [
+        51.0,
+        51.32
+      ],
+      [
+        51.5,
+        52.82
+      ],
+      [
+        53,
+        53.82
+      ],
+      [
+        54,
+        54.32
+      ],
+      [
+        54.5,
+        54.82
+      ],
+      [
+        55,
+        55.32
+      ],
+      [
+        55.5,
+        56.82
+      ],
+      [
+        57,
+        61.82
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "mp",
+        "4": "p",
+        "6": "pp",
+        "7": "p",
+        "8": "mp",
+        "9": "p",
+        "10": "p",
+        "11": "p",
+        "13": "pp",
+        "14": "p",
+        "15": "pp",
+        "16": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "7": "p",
+        "9": "pp",
+        "11": "p",
+        "12": "pp",
+        "14": "pp"
+      }
+    },
+    "verified_voice_phrases": [
+      {
+        "voice": "inner",
+        "start_beat": 15,
+        "end_beat": 19.5,
+        "swell": 4
+      },
+      {
+        "voice": "inner",
+        "start_beat": 29.5,
+        "end_beat": 33.5,
+        "swell": 4
+      },
+      {
+        "voice": "inner",
+        "start_beat": 40.5,
+        "end_beat": 45,
+        "swell": 4
+      },
+      {
+        "voice": "inner",
+        "start_beat": 45.5,
+        "end_beat": 48.5,
+        "swell": 3
+      }
+    ],
+    "verified_nonprinting_voice_rests": {
+      "inner": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        14,
+        15
+      ]
+    },
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "7/8"
+      },
+      {
+        "beat": 3.5,
+        "meter": "5/8"
+      },
+      {
+        "beat": 6.0,
+        "meter": "9/8"
+      },
+      {
+        "beat": 10.5,
+        "meter": "7/8"
+      },
+      {
+        "beat": 14.0,
+        "meter": "11/8"
+      },
+      {
+        "beat": 19.5,
+        "meter": "5/8"
+      },
+      {
+        "beat": 22.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 26.0,
+        "meter": "6/8"
+      },
+      {
+        "beat": 29.0,
+        "meter": "9/8"
+      },
+      {
+        "beat": 33.5,
+        "meter": "7/8"
+      },
+      {
+        "beat": 37.0,
+        "meter": "5/8"
+      },
+      {
+        "beat": 39.5,
+        "meter": "11/8"
+      },
+      {
+        "beat": 45.0,
+        "meter": "7/8"
+      },
+      {
+        "beat": 48.5,
+        "meter": "9/8"
+      },
+      {
+        "beat": 53.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 57.0,
+        "meter": "5/4"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 14,
+      "left_hand_most_frequent_pattern_bars": 2,
+      "sounded_pitches_per_minute": 81.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

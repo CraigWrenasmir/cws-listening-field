@@ -1572,4 +1572,79 @@ G3+D4:4
   phrase_arcs=[[0,8,3],[8,16,3],[16,24,2],[24,32,3],[32,40,3],[40,48,3],[48,56,3],[56,64,2],[64,76,-2]],
   lower_entries=[],pedal_lift=.2,gate=.995,
   note='Let the same diminished chord feel suspended each time, with the upper line suggesting where it might settle. The four resolutions should arrive gently and take a little more time. Keep the held lower chords soft enough for their common tones to remain a background glow.'))
+
+,
+dict(op=119,title='Aster Underpass',key='d',fifths=-1,meter='7/8',bpm=52,
+ meters=['7/8','5/8','9/8','7/8','11/8','5/8','4/4','6/8','9/8','7/8','5/8','11/8','7/8','9/8','4/4','5/4'],
+ description='Sorrel Doorway’s E-flat–D–C–B-flat becomes F–E–D–C. Unequal bars follow the lengths of the upper phrases. Four inner-voice lines enter beneath sustained upper notes and continue alone after those notes end, carrying the thought through the written upper rests. D-minor warmth passes through darker flat-side colours before the final ninth.',
+ difficulty='Advanced changing metre and independent inner-voice continuations',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the quarter-beat pulse flexible but continuous through the changing metres. In bars 5, 9, 12 and 13 the RH inner line begins beneath a held upper note, then continues after the upper voice releases into its written rest. The slurs on the lower-stem voice mark those inner phrases. Their endings last beyond the upper releases by 2.5, 1.5, 2.5 and 2 quarter beats respectively. Balance the final four-note inner chord quietly beneath the upper D.',
+ parent_opus=118,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=3.5,pitches=['F','E','D','C']),
+ ancestry=dict(source_opus=118,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['Eb','D','C','Bb'],transposition_semitones=2),
+ hidden_voice_rests={'inner':[1,2,3,4,6,7,8,10,11,14,15]},
+ voice_phrases=[dict(voice='inner',start_beat=15,end_beat=19.5,swell=4),dict(voice='inner',start_beat=29.5,end_beat=33.5,swell=4),dict(voice='inner',start_beat=40.5,end_beat=45,swell=4),dict(voice='inner',start_beat=45.5,end_beat=48.5,swell=3)],
+ lower_sections={1:'pp',7:'p',9:'pp',11:'p',12:'pp',14:'pp'},
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[start+left,start+right-.18] for start,cuts in [(0,[0,1,1.5,2.5,3.5]),(3.5,[0,.5,1,1.5,2.5]),(6,[0,1.5,2,2.5,3,4.5]),(10.5,[0,1,1.5,2,3.5]),(14,[0,1,2,3,4,5,5.5]),(19.5,[0,.5,1,1.5,2.5]),(22,[0,1.5,2,3,4]),(26,[0,1,1.5,3]),(29,[0,.5,1.5,2,2.5,3,3.5,4.5]),(33.5,[0,.5,1.5,2,3.5]),(37,[0,1,1.5,2.5]),(39.5,[0,1,1.5,2,3,4,4.5,5,5.5]),(45,[0,.5,1,1.5,2.5,3.5]),(48.5,[0,1,1.5,2.5,3,4.5]),(53,[0,1,1.5,2,2.5,4]),(57,[0,5])] for left,right in zip(cuts,cuts[1:])],
+ rh='''
+F5:1 E5:.5 D5:1 C5:1
+Bb4:.5 D5:.5 F5:1.5
+A5:1.5 G5:.5 F5:1 E5:1.5
+D5:1 F5:.5 A5:.5 G5:1.5
+D5:3 R:2.5
+F4:.5 A4:.5 C5:1.5
+Eb5:1.5 D5:.5 C5:1 Bb4:1
+Ab4:1 C5:.5 Eb5:1.5
+F5:3 R:1.5
+Bb4:.5 Db5:1 F5:2
+Gb5:1 F5:.5 Eb5:1
+Eb5:3 R:2.5
+F5:1.5 R:2
+C5:1 A4:.5 G4:1 E4:2
+F4:1 A4:.5 C5:1 Bb4:1.5
+D5:3~ D5:2
+''',
+ rh_inner='''
+R:3.5
+R:2.5
+R:4.5
+R:3.5
+R:1 A4:1 C5:1 B4:1 A4:1 G4:.5
+R:2.5
+R:4
+R:3
+R:.5 C5:1 D5:.5 Eb5:.5 D5:1 C5:1
+R:3.5
+R:2.5
+R:1 Bb4:1 Db5:1 Cb5:1 Bb4:1 Ab4:.5
+R:.5 C5:.5 D5:.5 E5:1 D5:1
+R:4.5
+R:4
+E4+F4+A4+C5:3~ E4+F4+A4+C5:2
+''',
+ lh='''
+D3:1 A3:.5 C4:1 F3:1
+Bb2+F3:1.5 A3+D4:1
+F3:1.5 C4:1 E4:2
+G3+D4:2 F3+C4:1.5
+G3+D4:3 F3+C4:2.5
+Bb2+F3:1.5 A3+D4:1
+C3:1.5 G3:.5 Bb3:1 Eb4:1
+Ab2+Eb3:1.5 G3+C4:1.5
+Bb2:1.5 F3:1.5 Ab3:1.5
+Eb3+Bb3:2 Db3+Ab3:1.5
+Cb3:1 Gb3:.5 Bb3:1
+Ab2:1.5 Eb3:1.5 Gb3:1.5 Bb3:1
+D3:1.5 A3:1 C4:1
+Bb2+F3:1.5 A3+D4:1.5 G3+C4:1.5
+E3+Bb3:2 A2+E3:2
+D3+A3:3~ D3+A3:2
+''',sections={1:'p',3:'mp',4:'p',6:'pp',7:'p',8:'mp',9:'p',10:'p',11:'p',13:'pp',14:'p',15:'pp',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,3),(4,5),(6,8),(10,12),(14,16)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',14,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[52,48,54,49,46,43,50,53,47,45,49,43,40,42,33,25],
+  phrase_arcs=[[0,10.5,3],[10.5,19.5,3],[19.5,29,3],[29,33.5,2],[33.5,45,3],[45,48.5,2],[48.5,62,-2]],
+  inner_entries=[[15,19.5],[29.5,33.5],[40.5,45],[45.5,48.5]],lower_entries=[],pedal_lift=.18,gate=.995,
+  note='Let the changing bar lengths follow the melody’s breathing. When the upper note ends, keep the inner phrase audible through its remaining notes rather than treating the upper rest as a break in the music. The final inner chord should settle beneath the D without drawing attention away from it.'))
 ]
