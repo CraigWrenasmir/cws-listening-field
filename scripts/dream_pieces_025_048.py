@@ -1164,4 +1164,62 @@ F2:1 C3:1 A2:1 F2+C3:1.5
   phrase_arcs=[[0,17,3],[18,35,4],[36,58,4],[58.5,72,-2]],
   lower_entries=[[0,13.5],[13.5,27],[27,40.5],[40.5,54],[54,63],[63,72]],pedal_bars=list(range(1,17)),pedal_lift=.24,gate=.99,
   note='The remembered opening is slower and more spacious, while the inner voice remains beneath it in the balance. The five-bar central phrase opens gradually, then the closing register descent draws all three voices nearer together.'))
+,
+dict(op=45,title='Sable Orchard',key='C',fifths=0,meter='4/4',bpm=57,
+ description='A turn from Quartz Overpass’s inner voice becomes C–D–F–E in the melody. Four-note jazz voicings gather beneath its replies. F minor and B-flat dominant return to C through a backdoor cadence; a later D-flat dominant offers a different approach to the same centre. An A-minor reflection and borrowed A-flat colour deepen the route before a soft C sixth/ninth close.',
+ difficulty='Advanced jazz voicing study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Four-note RH voicings place the melody above close inner intervals. The chords remain within an octave, but balancing four fingers softly requires control. Backdoor cadences and a tritone substitute depend on clear semitone voice leading; the bass changes register and rhythm independently.',
+ parent_opus=44,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['C','D','F','E']),
+ ancestry=dict(source_opus=44,source_hand='rh',source_voice='inner',source_start_beat=63,source_end_beat=66,source_pitches=['C','D','F','E'],transposition_semitones=0),
+ rh='''
+C5:1 D5:.5 F5:.5 E5:2
+G5:1 E5:.5 D5:.5 C5:2
+F4+A4+C5+E5:2 D5:1 C5:1
+F4+A4+B4+E5:2 D5:1 C5:1
+E4+G4+B4+D5:2 E5:2
+Ab4+C5+Eb5+G5:2 F5:.5 Eb5:.5 C5:1
+Ab4+C5+D5+G5:2 F5:1 D5:1
+G4+B4+D5+E5:3 R:1
+G#4+B4+D5+F5:2 E5:1 D5:1
+G4+B4+C5+E5:2 D5:.5 C5:.5 A4:1
+F#4+A4+C5+E5:2 G#5:1 F#5:1
+F4+Ab4+B4+Eb5:2 D5:1 C5:1
+E4+G4+B4+D5:2 E5:1 G5:1
+G4+Bb4+C5+Eb5:2 D5:1 C5:1
+Ab4+C5+Eb5+G5:2 F5:1 Eb5:1
+Ab4+C5+D5+G5:2 F5:.5 Eb5:.5 D5:1
+G4+B4+D5+E5:3 D5:1
+C5:1 A4:.5 G4:.5 F4:2
+F4+Ab4+B4+Eb5:2 D5:1 B4:1
+E4+G4+A4+D5:4
+''',
+ lh='''
+C3:2 G3:1 B3:1
+A2:1 E3:1 G3:1 B3:.5 A3:.5
+D3:1 A3:1 C4:2
+G3:1 D4:.5 F3:.5 B3:2
+C3:1 G3:1 E3:2
+F3:2 C4:1 Ab3:1
+Bb2:1 F3:1 Ab3:.5 C4:.5 D4:1
+C3:2 G3:1 B3:1
+E3:1 B3:1 D4:.5 F3:.5 G#3:1
+A2:1 E3:.5 G3:.5 B3:1 C4:1
+D3:2 A3:1 C4:1
+Db3:1 Ab3:1 B3:1 F3:1
+C3:1 G3:1 B3:1 E3:1
+Ab2:2 Eb3:1 G3:1
+F3:1 C4:1 Eb4:1 Ab3:1
+Bb2:1 F3:1 Ab3:1 D4:1
+C3:2 G3:1 E3:1
+D3:1 A3:.5 C4:.5 F3:2
+G3:1 D4:1 F3:1 Ab3:1
+C3+G3:4
+''',sections={1:'p',3:'mp',5:'pp',6:'p',7:'mp',8:'pp',9:'p',11:'mp',13:'pp',15:'p',16:'mp',18:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,3),(4,8),(9,12),(13,17),(18,20)],lower_phrases=[(1,2),(3,5),(6,8),(9,11),(12,14),(15,17),(18,20)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,5),('crescendo',6,7),('diminuendo',7,8),('crescendo',9,11),('diminuendo',11,12),('crescendo',13,16),('diminuendo',16,17),('diminuendo',18,20)],tempo_changes={},group=4,
+ performance=dict(rubato=[57,54,59,56,49,55,59,47,54,57,61,51,48,53,56,59,49,46,41,33],
+  phrase_arcs=[[0,11,3],[12,31,4],[32,47,4],[48,67,4],[68,80,-2]],
+  lower_entries=[[0,8],[8,20],[20,32],[32,44],[44,56],[56,68],[68,80]],pedal_bars=list(range(1,21)),pedal_lift=.26,gate=.99,
+  note='The highest chord tone carries the phrase; the inner notes remain softer. The dominant approaches ease into their resolutions rather than accenting them. Rubato follows the changing three-, four- and five-bar phrases, with a quiet release into the final sixth/ninth chord.'))
 ]

@@ -2021,5 +2021,47 @@
       "sounded_pitches_per_minute": 122.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Sable Orchard",
+    "opus": 45,
+    "score_pages": 1,
+    "bars": 20,
+    "pitch_onsets": 185,
+    "audio_seconds": 100.21,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 80,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 44,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced jazz voicing study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Four-note RH voicings place the melody above close inner intervals. The chords remain within an octave, but balancing four fingers softly requires control. Backdoor cadences and a tritone substitute depend on clear semitone voice leading; the bass changes register and rhythm independently."
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 114.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
