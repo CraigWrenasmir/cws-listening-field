@@ -1449,4 +1449,62 @@ D3+F#3:4
   phrase_arcs=[[0,19.5,3],[20,35.5,4],[36,43.5,2],[44,55.5,3],[56,64,-2]],
   lower_entries=[[44,56]],pedal_lift=.18,gate=.99,
   note='The paired notes rise as a single relaxed gesture, with the upper member gently prominent. Later the bass receives the same kind of motion without making the pulse heavier. The last dominant loosens into a quiet major ninth with a raised fourth.'))
+,
+dict(op=93,title='Ilex Elsewhere',key='e',fifths=1,meter='12/8',bpm=54,
+ description='The upper notes of Gorse Undertow’s first LH sixths become E–F-sharp–G–A. A seven-note opening phrase returns with four notes, then two, then only its B. The surviving notes keep their original places in the bar; silence gradually opens between them. Meanwhile the tenor grows more active above held bass notes. Major-colour windows interrupt the E-minor centre, and the last high B remains after the lower line settles.',
+ difficulty='Advanced three-voice control and phrasing through increasing silence',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Compare the RH in bars 1, 5, 9 and 12: the returning phrase sheds notes without moving the survivors. The last B is extended to the end of the bar. Keep the rests spacious, allowing the tenor to become the expressive centre. The LH holds each six-beat bass note while the tenor moves above it; several combined LH spans reach an octave. Clear the pedal without releasing the written bass.',
+ parent_opus=92,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=3,pitches=['E','F#','G','A']),
+ ancestry=dict(source_opus=92,source_hand='lh',source_start_beat=44,source_end_beat=48,source_pitches=['E','F#','G','A'],transposition_semitones=0),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.22] for bar,cuts in enumerate([[0,1,1.5,2,3,4,5,6],[0,1,2,3,4,6],[0,2,3,4,6],[0,1,2,4,6],[0,1,1.5,2,3,4,5,6],[0,2,3,4,6],[0,2,3,4,6],[0,1,2,3,4,6],[0,1,1.5,2,3,3.5,4,5,6],[0,1,2,3,4,6],[0,1,2,3,4,6],[0,1,1.5,2,3,4,5,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+E5:1 F#5:.5 G5:.5 A5:1 B5:1 D6:1 C6:1
+B5:3 A5:1 G5:2
+G5:2 F#5:1 E5:3
+F5:1 Ab5:1 G5:2 Eb5:2
+E5:1 R:.5 G5:.5 R:1 B5:1 R:1 C6:1
+A5:3 G5:1 E5:2
+F#5:2 A5:1 C6:1 B5:2
+G5:3 F#5:1 E5:2
+R:1.5 G5:.5 R:1 B5:1 R:2
+A5:2 G5:1 F5:3
+F#5:1 E5:1 D#5:4
+R:3 B5:3
+''',
+ lh='''
+E3:6
+C3:6
+A2:6
+Ab2:6
+E3:6
+F3:6
+D3:6
+G2:6
+E3:6
+D3:6
+B2:6
+E3:6
+''',
+ lh_upper='''
+B3:2 D4:1 C4:1 B3:2
+G3:1 B3:1 C4:2 G3:2
+E3:2 G3:1 F#3:1 A3:2
+Eb3:1 G3:1 Ab3:2 F3:2
+B3:1 D4:.5 E4:.5 D4:1 C4:1 B3:1 A3:1
+C4:2 D4:1 E4:1 C4:2
+A3:2 C4:1 D4:1 F#3:2
+D3:1 F#3:1 G3:2 E3:2
+G3:1 A3:.5 B3:.5 D4:1 E4:.5 D4:.5 C4:1 B3:1
+A3:1 C4:1 D4:1 B3:1 C4:2
+F#3:2 A3:1 G3:1 B3:2
+G3:1 A3:.5 B3:.5 D4:1 E4:1 D4:1 G3:1
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'p',7:'mp',8:'pp',9:'pp',10:'p',11:'pp',12:'pp'},words={1:'poco rubato',11:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,11)],lower_phrases=[],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('diminuendo',7,8),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,48,51,45,49,53,46,50,43,48,36,30],
+  phrase_arcs=[[0,23.5,4],[24,47.5,3],[48,66,-2],[66,72,-3]],
+  lower_entries=[],tenor_entries=[[24,30],[48,54],[66,72]],pedal_lift=.22,gate=.995,
+  note='The upper phrase becomes a memory with more air between its surviving notes. Do not hurry the spaces: the tenor gradually takes the foreground while the bass remains held and quiet. The final high fifth is left suspended above a simple minor foundation.'))
 ]
