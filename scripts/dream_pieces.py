@@ -104,5 +104,59 @@ F3+A3:4
  performance=dict(rubato=[56,55,52,50,55,57,54,49,54,53,57,55,54,51,53,50,47,42],
   phrase_arcs=[[.5,11,3],[12,31,4],[32,43,4],[44,63,3],[64,72,-2]],
   lower_entries=[[32,40],[64,70]],pedal_bars=list(range(1,19)),pedal_lift=.22,gate=.99,
-  note='The melody begins after the first bass attack; explicitly tied suspensions carry through changing harmony. A broad tempo arch is authored for each phrase.'))
+  note='The melody begins after the first bass attack; explicitly tied suspensions carry through changing harmony. A broad tempo arch is authored for each phrase.')),
+dict(op=9,title='Lichen Aperture',key='a',fifths=0,meter='3/4',bpm=54,
+ description='The shared thought becomes A-C-B-E, slipping over the first bar line into a small A-minor nocturne. Unequal phrases and suspended upper notes soften the triple metre. F-major sevenths surround a brief Dorian opening towards D and G major; the final added ninth remains luminous above A minor.',
+ parent_opus=8,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['A','C','B','E']),
+ rh='''
+A4:1.5 C5:.5 B4:.5 E5:.5~
+E5:1 D5:.5 C5:.5 A4:1
+G4:2 B4:.5 D5:.5~
+D5:1 E5:.5 G5:.5 F5:1
+E5:1.5 C5:.5 B4:1~
+B4:.5 A4:1.5 R:1
+A4+C5:1.5 E5:.5 D5:1
+F5:1 E5:.5 D5:.5 C5:1~
+C5:.5 B4:.5 G4:1 R:1
+A4:1 C5:.5 E5:1 D5:.5
+F#5:1.5 E5:.5 C5:1
+B4:1.5 A4:.5 G4:.5 R:.5
+C5:1 E5:1 D5:1
+B4:1 D5:.5 C5:.5 A4:1~
+A4:1.5 C5:.5 B4:.5 E5:.5
+D5:1 C5:.5 A4:1 R:.5
+G4:1.5 B4:.5 D5:1~
+D5:.5 C5:.5 A4:1 G4:1
+F4:1 E4:.5 D4:.5 G#4:1
+A4:1 B4+E5:2
+''',
+ lh='''
+A2+E3:3
+F3:1 A3+C4:1.5 R:.5
+C3:1 E3+B3:2
+D3:1 F3+A3:2
+E3:1 G#3+D4:1.5 R:.5
+A2:1 E3+G3:2
+F3:1 A3+C4:1 E3:1
+D3:1 F3+A3:2
+G2:1 F3+B3:1.5 R:.5
+C3:1 E3+B3:2
+D3:1 F#3+C4:2
+G3:1 B3+D4:1.5 R:.5
+F3:1 A3+C4:2
+E3:1 G#3+D4:1.5 R:.5
+A2:1 E3+G3:2
+F3:1 A3+C4:1.5 R:.5
+G3:1 F3+B3:1 R:1
+C3:1 E3+B3:1.5 R:.5
+D3:1 F3+A3:1 E3:1
+A3+C4:3
+''',sections={1:'p',7:'p',10:'mp',13:'p',17:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,6),(7,9),(10,14),(15,18),(19,20)],lower_phrases=[(1,3),(7,10),(15,17)],
+ hairpins=[('crescendo',3,4),('diminuendo',5,6),('crescendo',7,8),('diminuendo',8,9),('crescendo',10,11),('diminuendo',12,14),('diminuendo',17,20)],
+ tempo_changes={},group=4,
+ performance=dict(rubato=[54,53,55,51,50,47,53,54,49,55,57,53,52,48,52,50,48,47,44,39],
+  phrase_arcs=[[0,11,3],[12,18,-2],[18,26,3],[27,41,4],[42,53,3],[54,60,-2]],
+  lower_entries=[[0,9],[18,24]],pedal_bars=list(range(1,21)),pedal_lift=.2,gate=.99,
+  note='The triple pulse is softened by ties and phrase lengths of four, two, three, five, four and two bars. The Dorian colour receives a small forward motion, then recedes.'))
 ]
