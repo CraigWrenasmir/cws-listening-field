@@ -804,4 +804,47 @@ Db3+Ab3:4
   phrase_arcs=[[0,15,3],[16,31,3],[32,43,4],[44,63,3],[64,80,-2]],
   lower_entries=[[4,8],[12,24],[24,32],[36,40],[40,48],[48,60],[60,72],[72,80]],pedal_bars=list(range(1,21)),pedal_lift=.25,gate=.99,
   note='The echoed melody receives a little extra bass presence, while the upper answer softens. Rubato follows the longer phrase, allowing the imitation to sound conversational. The F-major clearing is slightly brighter, with a gradual withdrawal through the final five bars.'))
+,
+dict(op=39,title='Serein Switchyard',key='B',fifths=5,meter='7/4',bpm=55,
+ description='A small turn from Hollow Canopy becomes B–D-sharp–C-sharp–A-sharp in the bass. The upper line leaves gaps around its replies, allowing the lower phrases to remain audible. B-major colour travels through A and D into a G-major clearing, then returns through borrowed E minor and a quiet altered dominant. The opening bass idea appears in the treble at the close.',
+ difficulty='Advanced spacious study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Seven-beat bars contain irregularly placed entrances and rests. A short quarter-note triplet figure appears first in the upper voice and later in the bass. Widely separated registers, chromatic voice leading and quiet three-note voicings require tonal control; the pauses are part of the phrasing.',
+ tuplet_hands=['rh','lh'],
+ parent_opus=38,motif=dict(hand='lh',start_beat=0,end_beat=7,pitches=['B','D#','C#','A#']),
+ ancestry=dict(source_opus=38,source_hand='rh',source_start_beat=52,source_end_beat=56,source_pitches=['Db','F','Eb','C'],transposition_semitones=10),
+ rh='''
+F#4+D#5:4 C#5:2 R:1
+R:1 A#4:2 C#5:1 D#5:.5 F#5:.5 E5:2
+B4+D#5+A#5:3 G#5:1 F#5:2 E5:1
+C#5+E5+B5:2 A5:1 G#5:.5 F#5:.5 E5:2 R:1
+F#5:3 E5:1 D5:2/3 E5:2/3 F#5:2/3 R:1
+R:1 E5:2 D5:1 C#5:.5 B4:.5 A4:2
+B4+D5+A5:3 G5:1 F#5:2 D5:1
+E5:2 F#5:.5 G5:.5 B5:1 A5:2 G5:1
+E5:4 D5:2 R:1
+A#4+D5+G5:2 F#5:1 E5:.5 D5:.5 C#5:2 B4:1
+B4:3 G4:1 F#4:1 E4:1 R:1
+B4:1 D#5:1 C#5:1 A#4:1 D#4+F#4+C#5:3
+''',
+ lh='''
+B2:2 D#3:1 C#3:1 A#2:3
+E3:3 B3:1 D#4:1 G#3:2
+G#2:2 D#3:1 F#3:1 B3:2 R:1
+A2:1 E3:2 G#3:1 B3:1 C#4:2
+D3:2 A3:1 C#4:2 F#3:1 E3:1
+A2:2 E3:1 G3:2 C#4:1 B3:1
+G3:1 D4:2 B3:1 A3:1 F#3:2
+E3:3 B3:1 D4:1 G3:1 F#3:1
+C3:1 G3:2/3 B3:2/3 D4:2/3 E4:3 B3:1
+F#3:2 C#4:1 E3:1 A#3:2 R:1
+E3:1 B3:1 D4:1 G3:2 B2:2
+B2:1 F#3:1 A#3:2 B2+F#3:3
+''',sections={1:'pp',3:'p',4:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'pp',10:'p',11:'pp'},words={1:'poco rubato',11:'poco rit.'},
+ slurs=[(1,3),(4,6),(7,9),(10,12)],lower_phrases=[(1,2),(3,5),(6,8),(9,10),(11,12)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('crescendo',7,8),('diminuendo',8,9),('diminuendo',10,12)],tempo_changes={},group=3,
+ performance=dict(rubato=[55,52,57,59,52,48,54,58,47,52,43,34],
+  phrase_arcs=[[0,20,3],[21,41,3],[42,62,4],[63,84,-2]],
+  lower_entries=[[0,14],[14,35],[35,56],[56,70],[70,84]],pedal_bars=list(range(1,13)),pedal_lift=.27,gate=.99,
+  note='The opening bass turn is brought forward in the balance. Upper rests allow its resonance to remain without adding a new attack. The middle gradually opens into brighter registers, then the last two phrases lose weight and pace.'))
 ]

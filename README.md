@@ -54,6 +54,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 36 | River Interstice | 5/4 | 174 | [Score](pieces/CWS_Op_036_River_Interstice/CWS_Op_036_River_Interstice.pdf) | [MP3](pieces/CWS_Op_036_River_Interstice/CWS_Op_036_River_Interstice.mp3) |
 | CWS Op. 37 | Fluvial Mirror | 4/4 | 152 | [Score](pieces/CWS_Op_037_Fluvial_Mirror/CWS_Op_037_Fluvial_Mirror.pdf) | [MP3](pieces/CWS_Op_037_Fluvial_Mirror/CWS_Op_037_Fluvial_Mirror.mp3) |
 | CWS Op. 38 | Hollow Canopy | 4/4 | 164 | [Score](pieces/CWS_Op_038_Hollow_Canopy/CWS_Op_038_Hollow_Canopy.pdf) | [MP3](pieces/CWS_Op_038_Hollow_Canopy/CWS_Op_038_Hollow_Canopy.mp3) |
+| CWS Op. 39 | Serein Switchyard | 7/4 | 121 | [Score](pieces/CWS_Op_039_Serein_Switchyard/CWS_Op_039_Serein_Switchyard.pdf) | [MP3](pieces/CWS_Op_039_Serein_Switchyard/CWS_Op_039_Serein_Switchyard.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

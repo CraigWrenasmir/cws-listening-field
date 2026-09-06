@@ -46,7 +46,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 34–36 publication is verified; Craig's listening feedback remains outstanding.
 - Op. 37, Fluvial Mirror — complete locally: 17 bars of 4/4, 152 sounded pitches, one inspected page, 88.17 seconds. Two four-beat spans set seven RH notes against five LH notes, first in A minor and then A-flat major. Both polyrhythmic spans, the notated 7:4/5:4 groups and their shared arrivals are verified. Independent MIDI-clock error remains below one microsecond. A borrowed F-minor colour leads through G dominant into C. Score/MIDI, notated durations, hand reach, ancestry, audio and layout passed. Awaiting publication and listening feedback.
 - Op. 38, Hollow Canopy — complete locally: 20 bars of 4/4, 164 sounded pitches, one inspected page, 101.88 seconds. Exact octave imitations in bars 2 and 10 match the earlier RH pitches, durations and relative onsets. D-flat and F-major exchanges pass through D minor, C and E major before a borrowed minor colour softens the return. Score/MIDI, durations, ancestry, audio and layout passed. RH span eleven semitones; LH slow leap fourteen and quicker shift nine. Awaiting publication and listening feedback.
-- Next: compose Op. 39, Serein Switchyard; publish Op. 37–39 together.
+- Op. 39, Serein Switchyard — complete locally: 12 bars of 7/4, 121 sounded pitches, one inspected page, 110.07 seconds. The ancestor appears first in the bass and returns in the treble. Upper rests and broad bass phrases make space around B-major, A/D/G-major and borrowed E-minor colours. A triplet gesture transfers between the hands. Score/MIDI, notated durations, ancestry, audio and layout passed. RH span eleven semitones; LH slow leap fourteen with no rapid leaps. Awaiting publication and listening feedback.
+- Next: publish Op. 37–39, then compose Op. 40, Pale Sluice.
 
 ## Growth work to complete during this run
 
