@@ -674,4 +674,87 @@ D3+A3:3
   phrase_arcs=[[0,14.8,3],[15,23.8,2],[24,35.8,4],[36,47.8,3],[48,59.8,3],[60,72,-2]],
   lower_entries=[[15,21],[39,45],[63,69]],pedal_lift=.18,gate=.995,
   note='The pulse can be heard in two or in three without changing the length of the bar. Let the hemiola passages float between those readings, keeping the upper notes connected and the lower chords soft. The tied phrases ease the transitions, and the last close-spaced minor ninth settles slowly.'))
+,
+dict(op=106,title='Silver Tidelock',key='c#',fifths=4,meter='9/8',bpm=54,
+ description='Ochre Vestibule’s F-sharp–A–B–A becomes G-sharp–B–C-sharp–B. A six-note upper phrase is echoed an octave lower by the tenor, first a dotted quarter late, then an eighth late in a new key, and finally with both lines together. A sustained bass gives these converging echoes a quiet foundation. F-major, E-minor and A-flat shadows lead back to C-sharp-minor ninth.',
+ difficulty='Advanced converging canons and sustained-bass counterpoint',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The complete six-note phrases in bars 1–2, 7–8 and 15–16 are echoed by the tenor an octave lower. Their entry delays are 1.5, 0.5 and zero quarter beats respectively; preserve the exact written ties as the earlier echoes cross bar lines. Keep the LH bass finger-held beneath the tenor, including its nine-beat E across bars 7–8. The two opening lines meet in octave motion in bars 15–16, without an extra accent.',
+ parent_opus=105,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4.5,pitches=['G#','B','C#','B']),
+ ancestry=dict(source_opus=105,source_hand='rh',source_start_beat=27,source_end_beat=30,source_pitches=['F#','A','B','A'],transposition_semitones=2),
+ hidden_voice_rests={'tenor':[20]},
+ system_starts=[1,3,5,7,9,11,13,15,17,19],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4.5+left,(bar-1)*4.5+right-.18] for bar,cuts in enumerate([[0,1,1.5,2,2.5,3,3.5,4.5],[0,1.5,2.5,4,4.5],[0,1,1.5,2.5,3.5,4.5],[0,2,2.5,3.5,4.5],[0,1,2,3,4.5],[0,2,2.5,3.5,4.5],[0,.5,1,1.5,2,2.5,4.5],[0,.5,2.5,3,4.5],[0,.5,1,1.5,2,2.5,3,4.5],[0,1.5,2.5,3.5,4.5],[0,2,2.5,3.5,4.5],[0,1.5,2.5,3.5,4.5],[0,1,1.5,2.5,4.5],[0,2,2.5,3.5,4.5],[0,1,1.5,2,4.5],[0,2.5,4.5],[0,1,1.5,2,2.5,4.5],[0,1.5,2.5,3.5,4.5],[0,1,2,3,4.5],[0,4.5]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G#4:1 B4:.5 C#5:.5 B4:2.5
+A4:2.5 G#4:2
+B4:1 D#5:.5 E5:1 F#5:2
+E5:2 D#5:.5 C#5:1 B4:1
+A4:1 C5:1 D5:1 E5:1.5
+F#5:2 E5:.5 D5:1 C5:1
+B4:1 D5:.5 E5:.5 D5:2.5
+C5:2.5 B4:2
+A4:1 C5:1 D5:1 E5:1.5
+G5:1.5 F#5:1 E5:1 D5:1
+Eb5:2 Gb5:.5 Ab5:1 Bb5:1
+Ab5:1.5 Gb5:1 F5:1 Eb5:1
+D5:1 F5:.5 G5:1 A5:2
+G5:2 F5:.5 E5:1 D5:1
+F#4:1 A4:.5 B4:.5 A4:2.5
+G4:2.5 F#4:2
+G#4:1 B4:.5 C#5:1 D#5:2
+E5:1.5 D#5:1 C#5:1 B4:1
+A4:1 C#5:1 E5:1 D#5:1.5
+G#4+B4+D#5+E5:3~ G#4+B4+D#5+E5:1.5
+''',
+ lh='''
+C#3:3~ C#3:1.5
+F#3:3~ F#3:1.5
+E3:3~ E3:1.5
+C#3:3~ C#3:1.5
+F3:3~ F3:1.5
+G3:3~ G3:1.5
+E3:3~ E3:1.5~
+E3:3~ E3:1.5
+C3:3~ C3:1.5
+C3:3~ C3:1.5
+Ab3:3~ Ab3:1.5
+Db3:3~ Db3:1.5
+F3:3~ F3:1.5
+C3:3~ C3:1.5
+B2:3~ B2:1.5
+E3:3~ E3:1.5
+E3:2 G#3:2.5
+B2:3~ B2:1.5
+C#3:3~ C#3:1.5
+C#3+G#3:3~ C#3+G#3:1.5
+''',
+ lh_upper='''
+R:1.5 G#3:1 B3:.5 C#4:.5 B3:1~
+B3:1.5 A3:2.5 G#3:.5~
+G#3:1.5 A3:1 B3:1 C#4:1
+A3:2 G#3:.5 F#3:1 E3:1
+A3:1 C4:1 D4:1 B3:1.5
+B3:2 D4:.5 F4:1 E4:1
+R:.5 B3:1 D4:.5 E4:.5 D4:2~
+D4:.5 C4:2.5 B3:1.5~
+B3:.5 A3:1 G3:1 F#3:2
+C4:1.5 B3:1 A3:1 G3:1
+Cb4:2 Db4:.5 Eb4:1 F4:1
+Bb3:1.5 Ab3:1 Gb3:1 F3:1
+A3:1 C4:.5 D4:1 E4:2
+C4:2 Bb3:.5 A3:1 G3:1
+F#3:1 A3:.5 B3:.5 A3:2.5
+G3:2.5 F#3:2
+G#3:1 B3:.5 D#4:1 C#4:2
+B3:1.5 A3:1 G#3:1 F#3:1
+A3:1 G#3:1 F#3:1 E3:1.5
+R:4.5
+''',sections={1:'p',2:'pp',3:'p',4:'pp',5:'p',6:'mp',7:'p',8:'pp',9:'p',10:'mp',11:'p',12:'pp',13:'mp',14:'p',15:'pp',16:'pp',17:'p',18:'pp',19:'pp',20:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,6),(7,10),(11,14),(15,20)],lower_phrases=[],
+ hairpins=[('crescendo',1,3),('diminuendo',4,5),('diminuendo',6,8),('crescendo',9,10),('diminuendo',11,12),('diminuendo',13,16),('diminuendo',17,20)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,48,53,46,52,57,51,45,52,56,49,44,55,48,43,41,48,43,35,27],
+  phrase_arcs=[[0,17.8,3],[18,26.8,3],[27,44.8,4],[45,62.8,3],[63,90,-2]],
+  tenor_entries=[[1.5,10.5],[27.5,36.5],[63,72]],lower_entries=[[85.5,90]],pedal_lift=.18,gate=.995,
+  note='Let the tenor echo retain the upper phrase’s shape, even as the distance between their entries contracts. The long bass holds stay quieter than either line. When the voices arrive together, let that convergence feel settled; the final phrase then opens out into a soft minor ninth.'))
 ]

@@ -17338,5 +17338,403 @@
       "sounded_pitches_per_minute": 105.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Silver Tidelock",
+    "opus": 106,
+    "score_pages": 2,
+    "bars": 20,
+    "pitch_onsets": 163,
+    "audio_seconds": 125.45,
+    "hands": {
+      "rh": {
+        "low": 66,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 8,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 8
+      },
+      "lh": {
+        "low": 47,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 12
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced converging canons and sustained-bass counterpoint",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The complete six-note phrases in bars 1\u20132, 7\u20138 and 15\u201316 are echoed by the tenor an octave lower. Their entry delays are 1.5, 0.5 and zero quarter beats respectively; preserve the exact written ties as the earlier echoes cross bar lines. Keep the LH bass finger-held beneath the tenor, including its nine-beat E across bars 7\u20138. The two opening lines meet in octave motion in bars 15\u201316, without an extra accent."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        0.8200000000000001
+      ],
+      [
+        1.0,
+        1.32
+      ],
+      [
+        1.5,
+        1.82
+      ],
+      [
+        2.0,
+        2.32
+      ],
+      [
+        2.5,
+        2.82
+      ],
+      [
+        3.0,
+        3.32
+      ],
+      [
+        3.5,
+        4.32
+      ],
+      [
+        4.5,
+        5.82
+      ],
+      [
+        6.0,
+        6.82
+      ],
+      [
+        7.0,
+        8.32
+      ],
+      [
+        8.5,
+        8.82
+      ],
+      [
+        9.0,
+        9.82
+      ],
+      [
+        10.0,
+        10.32
+      ],
+      [
+        10.5,
+        11.32
+      ],
+      [
+        11.5,
+        12.32
+      ],
+      [
+        12.5,
+        13.32
+      ],
+      [
+        13.5,
+        15.32
+      ],
+      [
+        15.5,
+        15.82
+      ],
+      [
+        16.0,
+        16.82
+      ],
+      [
+        17.0,
+        17.82
+      ],
+      [
+        18.0,
+        18.82
+      ],
+      [
+        19.0,
+        19.82
+      ],
+      [
+        20.0,
+        20.82
+      ],
+      [
+        21.0,
+        22.32
+      ],
+      [
+        22.5,
+        24.32
+      ],
+      [
+        24.5,
+        24.82
+      ],
+      [
+        25.0,
+        25.82
+      ],
+      [
+        26.0,
+        26.82
+      ],
+      [
+        27.0,
+        27.32
+      ],
+      [
+        27.5,
+        27.82
+      ],
+      [
+        28.0,
+        28.32
+      ],
+      [
+        28.5,
+        28.82
+      ],
+      [
+        29.0,
+        29.32
+      ],
+      [
+        29.5,
+        31.32
+      ],
+      [
+        31.5,
+        31.82
+      ],
+      [
+        32.0,
+        33.82
+      ],
+      [
+        34.0,
+        34.32
+      ],
+      [
+        34.5,
+        35.82
+      ],
+      [
+        36.0,
+        36.32
+      ],
+      [
+        36.5,
+        36.82
+      ],
+      [
+        37.0,
+        37.32
+      ],
+      [
+        37.5,
+        37.82
+      ],
+      [
+        38.0,
+        38.32
+      ],
+      [
+        38.5,
+        38.82
+      ],
+      [
+        39.0,
+        40.32
+      ],
+      [
+        40.5,
+        41.82
+      ],
+      [
+        42.0,
+        42.82
+      ],
+      [
+        43.0,
+        43.82
+      ],
+      [
+        44.0,
+        44.82
+      ],
+      [
+        45.0,
+        46.82
+      ],
+      [
+        47.0,
+        47.32
+      ],
+      [
+        47.5,
+        48.32
+      ],
+      [
+        48.5,
+        49.32
+      ],
+      [
+        49.5,
+        50.82
+      ],
+      [
+        51.0,
+        51.82
+      ],
+      [
+        52.0,
+        52.82
+      ],
+      [
+        53.0,
+        53.82
+      ],
+      [
+        54.0,
+        54.82
+      ],
+      [
+        55.0,
+        55.32
+      ],
+      [
+        55.5,
+        56.32
+      ],
+      [
+        56.5,
+        58.32
+      ],
+      [
+        58.5,
+        60.32
+      ],
+      [
+        60.5,
+        60.82
+      ],
+      [
+        61.0,
+        61.82
+      ],
+      [
+        62.0,
+        62.82
+      ],
+      [
+        63.0,
+        63.82
+      ],
+      [
+        64.0,
+        64.32
+      ],
+      [
+        64.5,
+        64.82
+      ],
+      [
+        65.0,
+        67.32
+      ],
+      [
+        67.5,
+        69.82
+      ],
+      [
+        70.0,
+        71.82
+      ],
+      [
+        72.0,
+        72.82
+      ],
+      [
+        73.0,
+        73.32
+      ],
+      [
+        73.5,
+        73.82
+      ],
+      [
+        74.0,
+        74.32
+      ],
+      [
+        74.5,
+        76.32
+      ],
+      [
+        76.5,
+        77.82
+      ],
+      [
+        78.0,
+        78.82
+      ],
+      [
+        79.0,
+        79.82
+      ],
+      [
+        80.0,
+        80.82
+      ],
+      [
+        81.0,
+        81.82
+      ],
+      [
+        82.0,
+        82.82
+      ],
+      [
+        83.0,
+        83.82
+      ],
+      [
+        84.0,
+        85.32
+      ],
+      [
+        85.5,
+        89.82
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "verified_nonprinting_voice_rests": {
+      "tenor": [
+        20
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 14,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 79.7,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
