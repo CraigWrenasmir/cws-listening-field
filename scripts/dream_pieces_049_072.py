@@ -436,4 +436,80 @@ B2+F#3:3
   phrase_arcs=[[0,11,2],[12,29,3],[30,41,4],[42,53,3],[54,71,4],[72,81,-2]],
   lower_entries=[[9,12],[18,24],[42,48],[66,72]],pedal_bars=list(range(1,28)),pedal_lift=.2,gate=.995,
   note='The six-bar chromatic inner descent stays softer than the upper melody, with a small breath in tempo at its end. The later brighter harmonies open gradually. The final return is closer and quieter than the beginning, with the last bare minor chord fading naturally.'))
+,
+dict(op=55,title='Aster Verge',key='d',fifths=-1,meter='9/8',bpm=59,
+ description='Fennel Tangent’s chromatic inner descent contracts into A–A-flat–G–F-sharp in the left-hand tenor. A long upper E floats above it. The lower line opens through G minor, F, E-flat and D-flat, then a brighter E-major/A-dominant passage turns back towards D. The chromatic opening returns beneath a descending treble, and a quiet added ninth remains at the close.',
+ difficulty='Advanced compound-metre tenor study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Hold the bass with the left-hand fifth finger while its tenor moves independently. The opening tenor’s semitone descent is a passing line, not a set of accented chords. Printed pedal refreshes follow the three compound pulses while the bass remains physically held. Upper ties and unequal phrase lengths soften the metre; keep the melody above the tenor in balance.',
+ parent_opus=54,motif=dict(hand='lh',voice='tenor',start_beat=0,end_beat=4.5,pitches=['A','Ab','G','F#']),
+ ancestry=dict(source_opus=54,source_hand='rh',source_voice='inner',source_start_beat=12,source_end_beat=24,source_pitches=['F#','F','E','Eb'],transposition_semitones=3),
+ page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*1.5,i*1.5+1.28] for i in range(54)],
+ rh='''
+E5:4.5~
+E5:1.5 D5:.5 C5:.5 Bb4:2
+G4+B4+F5:3 E5:.5 D5:1
+A4+C5+G5:3 F5:1 E5:.5
+D5:1.5 F5:.5 A5:.5 G5:2
+Gb5:2 F5:.5 Eb5:2
+C5:1.5 Bb4:.5 Ab4:.5 G4:2
+F4+Ab4+Eb5:3 Db5:.5 C5:1
+B4+D#5+A5:3 G#5:1 F#5:.5
+G4+B4+F#5:1.5 E5:.5 D5:.5 C#5:2
+F5:1.5 E5:.5 D5:.5 C5:2
+A4+C5+F5:3 E5:.5 D5:1
+E5:1.5 D5:.5 B4:.5 A4:2
+Eb5:1.5 Db5:.5 C5:.5 Bb4:2
+D5+F5+A5:3 G5:1 F5:.5
+C#5:1.5 E5:.5 G5:.5 Bb5:2
+A5:1.5 G5:.5 F5:.5 E5:2
+A4:1.5 E4+A4:3
+''',
+ lh='''
+D3:4.5
+G2:1.5 Bb2:3
+C3:1.5 E3:3
+F3:4.5
+Bb2:1.5 D3:3
+Eb3:1.5 G3:3
+Ab2:1.5 C3:3
+Db3:1.5 F3:3
+E3:4.5
+A2:1.5 C#3:3
+D3:4.5
+G2:1.5 B2:3
+C3:1.5 E3:3
+F3:4.5
+Bb2:1.5 D3:3
+A2:1.5 C#3:3
+D3:4.5
+D3:4.5
+''',
+ lh_upper='''
+A3:1.5 Ab3:.5 G3:1 F#3:1.5
+D3:1.5 F3:.5 A3:1 G3:1.5
+G3:1 B3:.5 D4:1 C4:2
+A3:1.5 C4:.5 D4:1 C4:1.5
+F3:1 A3:.5 C4:1 Bb3:2
+Bb3:1 Db4:.5 F4:1 Eb4:2
+Eb3:1.5 G3:.5 Bb3:.5 Ab3:2
+Ab3:1 C4:.5 Eb4:1 Db4:2
+G#3:1.5 B3:.5 D4:.5 C#4:2
+E3:1 G3:.5 B3:1 A3:2
+F3:1.5 A3:.5 C4:1 B3:1.5
+D3:1 F3:.5 A3:1 G3:2
+G3:1.5 B3:.5 D4:.5 C4:2
+Ab3:1.5 C4:.5 Eb4:.5 D4:2
+F3:1 Ab3:.5 C4:1 Bb3:2
+E3:1 G3:.5 Bb3:1 A3:2
+A3:1.5 Ab3:.5 G3:1 F#3:1.5
+F3:1.5 E3:1.5 F3:1.5
+''',sections={1:'p',3:'mp',4:'pp',5:'p',6:'mp',7:'p',8:'pp',9:'mp',10:'p',11:'pp',12:'p',13:'mp',14:'pp',15:'p',16:'mp',17:'p',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,13),(14,18)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,15),(16,18)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,6),('diminuendo',6,8),('diminuendo',9,11),('crescendo',11,13),('crescendo',14,16),('diminuendo',16,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[59,55,62,49,57,61,54,48,63,56,50,59,62,49,57,60,46,32],
+  phrase_arcs=[[0,17,3],[18,35,4],[36,58,4],[58.5,81,3]],
+  lower_entries=[[9,13.5],[36,40.5],[63,67.5]],tenor_entries=[[0,4.5],[27,36],[72,76.5]],pedal_lift=.22,gate=.995,
+  note='The opening chromatic tenor is slightly more present beneath a softly held upper E. Three gentle pedal refreshes per bar keep the changing line clear. The large harmonic journey gradually opens, then the returning tenor and descending melody come closer together before the final added ninth.'))
 ]
