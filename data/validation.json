@@ -7522,5 +7522,245 @@
       "sounded_pitches_per_minute": 61.3,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Mallow Crescent",
+    "opus": 76,
+    "score_pages": 2,
+    "bars": 24,
+    "pitch_onsets": 192,
+    "audio_seconds": 93.88,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 77,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 42,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced quiet voicing of adjacent-note chords",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Most RH chord shapes contain four notes with a major or minor second inside. Give their top notes a clear, soft melody and keep the other chord notes lighter. The chord spans remain compact; the difficulty lies in even attacks and voicing. Pedal changes follow the denser chord changes in bars 1, 6, 13, 17, 19 and 23, clearing their adjacent pitches before the next shape."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.8
+      ],
+      [
+        2,
+        2.8
+      ],
+      [
+        3,
+        4.3
+      ],
+      [
+        4.5,
+        5.8
+      ],
+      [
+        6,
+        7.8
+      ],
+      [
+        8,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        12.8
+      ],
+      [
+        13,
+        13.8
+      ],
+      [
+        14,
+        14.8
+      ],
+      [
+        15,
+        16.3
+      ],
+      [
+        16.5,
+        17.8
+      ],
+      [
+        18,
+        19.3
+      ],
+      [
+        19.5,
+        20.8
+      ],
+      [
+        21,
+        22.3
+      ],
+      [
+        22.5,
+        23.8
+      ],
+      [
+        24,
+        25.8
+      ],
+      [
+        26,
+        26.8
+      ],
+      [
+        27,
+        28.3
+      ],
+      [
+        28.5,
+        29.8
+      ],
+      [
+        30,
+        31.8
+      ],
+      [
+        32,
+        32.8
+      ],
+      [
+        33,
+        34.3
+      ],
+      [
+        34.5,
+        35.8
+      ],
+      [
+        36,
+        37.3
+      ],
+      [
+        37.5,
+        38.8
+      ],
+      [
+        39,
+        40.3
+      ],
+      [
+        40.5,
+        41.8
+      ],
+      [
+        42,
+        42.8
+      ],
+      [
+        43,
+        44.8
+      ],
+      [
+        45,
+        46.3
+      ],
+      [
+        46.5,
+        47.8
+      ],
+      [
+        48,
+        49.3
+      ],
+      [
+        49.5,
+        50.8
+      ],
+      [
+        51,
+        52.3
+      ],
+      [
+        52.5,
+        53.8
+      ],
+      [
+        54,
+        54.8
+      ],
+      [
+        55,
+        55.8
+      ],
+      [
+        56,
+        56.8
+      ],
+      [
+        57,
+        58.3
+      ],
+      [
+        58.5,
+        59.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        62.8
+      ],
+      [
+        63,
+        64.3
+      ],
+      [
+        64.5,
+        65.8
+      ],
+      [
+        66,
+        67.3
+      ],
+      [
+        67.5,
+        68.8
+      ],
+      [
+        69,
+        71.8
+      ]
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 126.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

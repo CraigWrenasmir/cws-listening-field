@@ -226,4 +226,72 @@ E3:6 F#3:3
   phrase_arcs=[[0,35.5,4],[36,62.5,4],[63,99,-2]],
   lower_entries=[[9,18],[27,36],[54,63],[81,90]],inner_entries=[[42,45],[65,72],[91,99]],pedal_lift=.24,gate=.99,
   note='The inner voice withdraws to leave each whole-tone sweep light and clear, then returns beneath the held melody. The longer nine-beat spans breathe across several lower-line changes. A pedal lift clears the inner C before its resolution to B, followed by the added ninth in the bass. The last harmony unfolds gradually while its upper notes remain held.'))
+,
+dict(op=76,title='Mallow Crescent',key='Eb',fifths=-3,meter='3/4',bpm=56,
+ description='Rowan Afterglow’s inner descent becomes D–C–B-flat–C at the top of softly clustered chords. Neighbouring seconds remain inside the voicings while the upper line alternates with single-note space. C- and D-major reflections, a brief E-flat-minor shade and the returning opening shapes lead to an E-flat major ninth.',
+ difficulty='Advanced quiet voicing of adjacent-note chords',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Most RH chord shapes contain four notes with a major or minor second inside. Give their top notes a clear, soft melody and keep the other chord notes lighter. The chord spans remain compact; the difficulty lies in even attacks and voicing. Pedal changes follow the denser chord changes in bars 1, 6, 13, 17, 19 and 23, clearing their adjacent pitches before the next shape.',
+ parent_opus=75,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['D','C','Bb','C']),
+ ancestry=dict(source_opus=75,source_hand='rh',source_voice='inner',source_start_beat=0,source_end_beat=12,source_pitches=['B','A','G','A'],transposition_semitones=3),
+ system_starts=[1,5,9,13,17,21],page_starts=[13],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*3+left,(bar-1)*3+right-.2] for bar,cuts in enumerate([[0,1,2,3],[0,1.5,3],[0,2,3],[0,3],[0,1,2,3],[0,1.5,3],[0,1.5,3],[0,1.5,3],[0,2,3],[0,1.5,3],[0,2,3],[0,1.5,3],[0,1.5,3],[0,1.5,3],[0,1,3],[0,1.5,3],[0,1.5,3],[0,1.5,3],[0,1,2,3],[0,1.5,3],[0,2,3],[0,1.5,3],[0,1.5,3],[0,3]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G4+Bb4+C5+D5:1 F4+Ab4+Bb4+C5:1 Eb4+G4+A4+Bb4:1
+C5:3
+F4+Ab4+Bb4+C5:2 Eb4+G4+A4+Bb4:1
+G4+Bb4+D5+F5:3
+Eb5:2 D5:1
+G4+Bb4+C5+D5:1.5 F4+Ab4+Bb4+C5:1.5
+E4+G4+A4+B4:3
+C5:2 D5:1
+F#4+A4+B4+C#5:2 E4+G4+A4+B4:1
+D5:3
+G4+Bb4+C5+D5:2 F4+Ab4+Bb4+C5:1
+Bb4:3
+Ab4+C5+Db5+Eb5:1.5 G4+Bb4+C5+D5:1.5
+C5:2 Bb4:1
+F4+Ab4+Bb4+C5:1 Eb4+Gb4+Ab4+Bb4:2
+Ab4:3
+E4+G4+A4+B4:1.5 F#4+A4+B4+C#5:1.5
+D5:2 C#5:1
+G4+Bb4+C5+D5:1 F4+Ab4+Bb4+C5:1 Eb4+G4+A4+Bb4:1
+C5:3
+Eb4+G4+A4+Bb4:2 D4+F4+G4+A4:1
+G4:2 F4:1
+D4+F4+G4+A4:1.5 Eb4+G4+A4+Bb4:1.5
+D4+F4+G4+Bb4:3
+''',
+ lh='''
+Eb3:1 Bb3:2
+Ab2:1.5 Eb3:.5 G3:1
+F3:1 C4:2
+Bb2+F3:3
+Eb3:1 G3:.5 Bb3:1.5
+Ab2:1 Eb3:1 Gb3:1
+C3:1 G3:.5 B3:1.5
+G2:1 D3:1 F3:1
+D3:1 A3:.5 C#4:.5 B3:1
+B2:1 F#3:1 A3:1
+Eb3:1 Bb3:.5 D4:.5 C4:1
+Ab2:1.5 Eb3:.5 G3:1
+Db3:1 Ab3:1 Bb3:1
+Gb2:1 Db3:1 F3:1
+Eb3:1 Bb3:.5 Db4:1.5
+Ab2:1 Eb3:1 Gb3:1
+C3:1 G3:.5 B3:1.5
+D3:1 A3:1 C#4:1
+Eb3:1 Bb3:2
+Ab2:1.5 Eb3:.5 G3:1
+C3:1 G3:.5 Bb3:1.5
+F3:1 C4:1 Eb4:1
+Bb2:1 F3:.5 G3:1.5
+Eb3+Bb3:3
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'mp',7:'pp',8:'p',9:'mp',10:'pp',11:'p',12:'pp',13:'mp',14:'p',15:'mp',16:'pp',17:'p',18:'mp',19:'p',20:'pp',21:'p',22:'pp',23:'pp'},words={1:'poco rubato',23:'poco rit.'},
+ slurs=[(1,5),(6,10),(11,16),(17,20),(21,24)],lower_phrases=[(1,4),(5,7),(8,10),(11,13),(14,16),(17,20),(21,24)],
+ hairpins=[('diminuendo',1,2),('diminuendo',4,5),('diminuendo',6,7),('diminuendo',9,10),('diminuendo',11,12),('diminuendo',13,14),('diminuendo',15,16),('crescendo',17,18),('diminuendo',19,20),('diminuendo',21,24)],tempo_changes={},group=4,
+ performance=dict(rubato=[56,48,55,60,51,58,46,54,59,45,53,46,60,51,57,44,54,61,52,45,50,43,37,28],
+  phrase_arcs=[[0,14.5,3],[15,29.5,4],[30,47.5,4],[48,59.5,4],[60,72,-2]],
+  lower_entries=[[3,6],[18,24],[33,36],[45,48],[57,60],[66,69]],pedal_lift=.2,gate=.985,
+  note='The uppermost chord notes carry the line while the adjacent inner pitches remain gentle. Single-note bars create space between the denser shapes. Pedal refreshes clear each close voicing before its successor, and the last major ninth settles without a forceful cadence.'))
 ]
