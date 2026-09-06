@@ -462,4 +462,63 @@ B2+F#3:4
   phrase_arcs=[[0,15.8,3],[16,31.8,4],[32,47.8,3],[48,63.8,4],[64,80,-2]],
   inner_entries=[[20,24],[52,56]],lower_entries=[[44,48],[60,68]],pedal_lift=.2,gate=.995,
   note='Each eleven-note flourish occupies one slow breath below a held melody. Its midpoint passes across the LH chord change without an accent. Leave space around those two phrases, and let the later descent settle into the warmer Dorian colour of the final minor sixth and ninth.'))
+,
+dict(op=103,title='Rain Prospect',key='Eb',fifths=-3,meter='4/4',bpm=54,
+ description='Calluna Observatory’s E-flat–D–C–D becomes a melody above late-arriving jazz voicings. The left hand often enters after the upper phrase and leaves space between its chords. Three written pauses shared by both hands widen from one to one-and-a-half to two quarter beats. D-flat and C-major reflections lead back to a soft E-flat-major ninth.',
+ difficulty='Advanced jazz voicing, delayed accompaniment and shared phrasing',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the LH chord entries supple and quieter than the melody, especially when they arrive after an upper note. The shared rests across bars 4–5, 10–11 and 16–17 grow progressively longer; release the pedal before each gap and let the room carry the sound. The upper thirds in bars 9–10 and 15–16 should retain a single melodic direction. Balance the four-note RH closing chord lightly.',
+ parent_opus=102,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['Eb','D','C','D']),
+ ancestry=dict(source_opus=102,source_hand='rh',source_voice='upper',source_start_beat=44,source_end_beat=49,source_pitches=['Eb','D','C','D'],transposition_semitones=0),
+ system_starts=[1,3,5,7,9,11,13,15,17,19],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right] for bar,spans in enumerate([[(1.5,2.8),(3,3.8)],[(0,1.3),(2,3.8)],[(.5,1.8),(2,2.8)],[(0,1.3),(1.5,3.3)],[(1.5,3.8)],[(0,.8),(1,2.8)],[(.5,1.8),(2,3.8)],[(0,1.8),(2,3.3)],[(1,1.8),(2,3.8)],[(0,.8),(1,2.8)],[(1.5,2.8),(3,3.8)],[(0,1.3),(2,3.8)],[(.5,1.8),(2,2.8)],[(0,1.8),(2,3.3)],[(1,1.8),(2,3.8)],[(0,.8),(1,2.3)],[(1.5,2.8),(3,3.8)],[(0,1.3),(2,3.8)],[(0,1.3),(1.5,2.8)],[(0,3.8)]],1) for left,right in spans],
+ rh='''
+Eb5:1 D5:.5 C5:1 D5:1.5
+G5:2 F5:.5 Eb5:.5 D5:1
+C5:1 Eb5:1 G5:1 F5:1
+Eb5:1.5 D5:1 C5:1 R:.5
+R:.5 Db5:1 F5:.5 Ab5:2
+G5:1 F5:1 Eb5:2
+Db5:1 F5:1 Eb5:1 C5:1
+Bb4:2 Db5:.5 Eb5:.5 F5:1
+Eb5+G5:1 Db5+F5:1 C5+Eb5:2
+Bb4+Db5:1 C5+Eb5:1 Db5+F5:1 R:1
+R:.5 E5:1 G5:.5 B5:2
+A5:2 G5:.5 F5:.5 E5:1
+D5:1 F5:1 A5:1 G5:1
+F5:2 Eb5:1 D5:1
+C5+Eb5:1 D5+F5:1 Eb5+G5:2
+D5+F5:1 C5+Eb5:1 Bb4+Db5:.5 R:1.5
+R:.5 Eb5:1 D5:.5 C5:1 D5:1
+F5:1 Eb5:.5 D5:.5 C5:2
+D5+F5:1 C5+Eb5:1 Bb4+D5:2
+G4+Bb4+D5+F5:4
+''',
+ lh='''
+R:1.5 Ab3+C4:1.5 Bb3+D4:1
+G3+Bb3+D4:1.5 R:.5 Eb3+Bb3:2
+R:.5 Ab3+C4+Eb4:1.5 G3+Bb3+D4:1 R:1
+C3+G3:1.5 Bb3+Eb4:2 R:.5
+R:1.5 F3+Ab3+C4:2.5
+Bb2+F3:1 Ab3+C4+D4:2 R:1
+R:.5 Eb3+Bb3:1.5 G3+Bb3+Db4:2
+Ab2+Eb3:2 G3+Bb3+C4:1.5 R:.5
+R:1 Db3+Ab3:1 F3+Ab3+C4:2
+Bb2+F3:1 Ab3+C4:2 R:1
+R:1.5 C3+G3:1.5 E3+B3:1
+F3+C4:1.5 R:.5 A3+C4+E4:2
+R:.5 Bb2+F3:1.5 A3+C4+E4:1 R:1
+Eb3+Bb3:2 G3+C4:1.5 R:.5
+R:1 Ab2+Eb3:1 G3+Bb3+Db4:2
+Bb2+F3:1 Ab3+C4:1.5 R:1.5
+R:1.5 Ab3+C4:1.5 Bb3+D4:1
+G3+Bb3+Eb4:1.5 R:.5 F3+C4:2
+Bb2+F3:1.5 Ab3+C4:1.5 R:1
+Eb3+Bb3:4
+''',sections={1:'p',2:'pp',3:'mp',4:'pp',5:'p',6:'pp',7:'p',8:'pp',9:'mp',10:'pp',11:'p',12:'mp',13:'p',14:'pp',15:'mp',16:'pp',17:'p',18:'pp',19:'pp',20:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,4),(5,10),(11,16),(17,20)],lower_phrases=[],
+ hairpins=[('crescendo',1,3),('diminuendo',5,8),('diminuendo',9,10),('crescendo',11,13),('diminuendo',14,16),('diminuendo',17,20)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,49,55,45,52,48,53,46,51,42,56,50,54,45,49,39,47,44,36,28],
+  phrase_arcs=[[0,15.5,3],[16.5,39,4],[40.5,62.5,4],[64.5,80,-2]],lower_entries=[[18,20],[42,44]],pedal_lift=.2,gate=.995,
+  note='Let the melody begin before the lower harmony settles beneath it. The growing written pauses are breaths inside the larger arc, with the pedal released and the room left to resonate. The final return stays quieter, and the last major ninth has time to fade.'))
 ]
