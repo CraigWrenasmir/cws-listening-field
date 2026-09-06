@@ -170,4 +170,60 @@ C#3+G#3:6
   phrase_arcs=[[0,23.5,4],[24,47.5,4],[48,71.5,4],[72,96,-2]],
   lower_entries=[[6,12],[30,36],[60,66],[84,90]],pedal_lift=.24,gate=.985,
   note='The nine-note figures rise or fall as complete arcs, staying light over the slower lower notes. Their settling tails let the compound metre breathe. The final four bars become progressively quieter and closer in register, leaving the minor ninth to ring in the warm room.'))
+,
+dict(op=75,title='Rowan Afterglow',key='e',fifths=1,meter='9/4',bpm=55,
+ description='Camellia Wake’s opening becomes E–F-sharp–D–G inside a longer, nine-beat phrase. A quiet inner voice supports the melody, then withdraws for two whole-tone sweeps, one rising and one falling. Their brighter dominant colours dissolve into warmer minor and major harmony. At the close, an inner C falls to B before the bass adds the final ninth.',
+ difficulty='Advanced whole-tone sweeps with an independent inner voice',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The six eighth-note triplets in bars 5 and 8 each fill two beats and move entirely by whole tones. The RH inner voice rests during those runs, returning beneath their held arrivals. Keep the nine-beat bars inside the longer phrases rather than accenting each subdivision. In the last bar, let the inner C resolve to B while the upper E-minor chord remains held.',
+ parent_opus=74,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=9,pitches=['E','F#','D','G']),
+ ancestry=dict(source_opus=74,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['C#','D#','B','E'],transposition_semitones=3),
+ tuplet_groups=[dict(hand='rh',actual=3,normal=2,count=12)],
+ system_starts=[1,3,5,7,9],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*3,i*3+2.76] for i in range(30)]+[[90,90.76],[91,93.76],[94,95.76],[96,98.76]],
+ rh='''
+E5:2 F#5:1 D5:3 G5:3
+F#5:4 E5:2 D5:3
+E5:3 G5:1 F#5:2 D5:3
+C5:3 E5:2 D5:1 B4:3
+E5:1/3 F#5:1/3 G#5:1/3 Bb5:1/3 C6:1/3 D6:1/3 E6:4 D6:1 B5:2
+A5:4 G5:2 F#5:3
+E5:3 G5:1 F#5:2 D5:3
+D6:1/3 C6:1/3 Bb5:1/3 G#5:1/3 F#5:1/3 E5:1/3 D5:4 C5:1 B4:2
+C5+E5+B5:4 A5:2 G5:3
+F#5:3 E5:2 D#5:1 B4:3
+E4+G4+B4:9
+''',
+ rh_inner='''
+B4:3 A4:3 G4:3
+A4:3 C5:2 B4:1 A4:3
+G4:3 B4:3 A4:3
+G4:3 B4:2 A4:1 F#4:3
+R:6 G5:1 F#5:2
+E5:3 D5:3 C5:3
+G4:3 B4:3 A4:3
+R:2 G4:4 A4:1 F#4:2
+G5:4 F5:2 E5:3
+A4:3 G4:2 F#4:1 D4:3
+R:1 C4:3 B3:5
+''',
+ lh='''
+E3:2 B3:1 D4:1 F#4:2 E4:1 B3:2
+C3:3 G3:1 B3:2 D4:1 C4:2
+A2:2 E3:1 G3:2 B3:1 C4:1 G3:2
+B2:3 F#3:1 A3:2 C#4:1 B3:2
+C3:3 G3:1 Bb3:2 E4:1 D4:2
+A2:3 E3:1 G3:2 B3:1 C4:2
+D3:2 A3:1 C4:2 E4:1 D4:1 A3:2
+Ab2:3 E3:1 Gb3:2 C4:1 Bb3:2
+C3:2 G3:1 B3:2 D4:1 C4:1 G3:2
+B2:3 F#3:1 A3:2 C4:1 B3:2
+E3:6 F#3:3
+''',sections={1:'p',2:'p',3:'mp',4:'pp',5:'mp',6:'p',7:'pp',8:'mp',9:'p',10:'pp',11:'pp'},words={1:'poco rubato',10:'poco rit.'},
+ slurs=[(1,4),(5,7),(8,11)],lower_phrases=[(1,3),(4,6),(7,9),(10,11)],
+ hairpins=[('crescendo',1,2),('diminuendo',3,4),('diminuendo',5,7),('diminuendo',8,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,52,58,45,58,51,44,57,49,38,27],
+  phrase_arcs=[[0,35.5,4],[36,62.5,4],[63,99,-2]],
+  lower_entries=[[9,18],[27,36],[54,63],[81,90]],inner_entries=[[42,45],[65,72],[91,99]],pedal_lift=.24,gate=.99,
+  note='The inner voice withdraws to leave each whole-tone sweep light and clear, then returns beneath the held melody. The longer nine-beat spans breathe across several lower-line changes. A pedal lift clears the inner C before its resolution to B, followed by the added ninth in the bass. The last harmony unfolds gradually while its upper notes remain held.'))
 ]

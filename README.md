@@ -90,6 +90,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 72 | Elder Anchorage | 8/4 | 101 | [Score](pieces/CWS_Op_072_Elder_Anchorage/CWS_Op_072_Elder_Anchorage.pdf) | [MP3](pieces/CWS_Op_072_Elder_Anchorage/CWS_Op_072_Elder_Anchorage.mp3) |
 | CWS Op. 73 | Orchid Trestle | 5/4 | 245 | [Score](pieces/CWS_Op_073_Orchid_Trestle/CWS_Op_073_Orchid_Trestle.pdf) | [MP3](pieces/CWS_Op_073_Orchid_Trestle/CWS_Op_073_Orchid_Trestle.mp3) |
 | CWS Op. 74 | Camellia Wake | 12/8 | 165 | [Score](pieces/CWS_Op_074_Camellia_Wake/CWS_Op_074_Camellia_Wake.pdf) | [MP3](pieces/CWS_Op_074_Camellia_Wake/CWS_Op_074_Camellia_Wake.mp3) |
+| CWS Op. 75 | Rowan Afterglow | 9/4 | 142 | [Score](pieces/CWS_Op_075_Rowan_Afterglow/CWS_Op_075_Rowan_Afterglow.pdf) | [MP3](pieces/CWS_Op_075_Rowan_Afterglow/CWS_Op_075_Rowan_Afterglow.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
