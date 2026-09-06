@@ -101,6 +101,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 83 | Dahlia Overpass | 6/4 | 153 | [Score](pieces/CWS_Op_083_Dahlia_Overpass/CWS_Op_083_Dahlia_Overpass.pdf) | [MP3](pieces/CWS_Op_083_Dahlia_Overpass/CWS_Op_083_Dahlia_Overpass.mp3) |
 | CWS Op. 84 | Celandine Spire | 3/4, 4/4, 5/4, 6/4 (changing) | 135 | [Score](pieces/CWS_Op_084_Celandine_Spire/CWS_Op_084_Celandine_Spire.pdf) | [MP3](pieces/CWS_Op_084_Celandine_Spire/CWS_Op_084_Celandine_Spire.mp3) |
 | CWS Op. 85 | Yarrow Elevation | 5/4, 4/4, 6/4, 3/4, 7/4 (changing) | 111 | [Score](pieces/CWS_Op_085_Yarrow_Elevation/CWS_Op_085_Yarrow_Elevation.pdf) | [MP3](pieces/CWS_Op_085_Yarrow_Elevation/CWS_Op_085_Yarrow_Elevation.mp3) |
+| CWS Op. 86 | Eglantine Terrace | 4/4 | 155 | [Score](pieces/CWS_Op_086_Eglantine_Terrace/CWS_Op_086_Eglantine_Terrace.pdf) | [MP3](pieces/CWS_Op_086_Eglantine_Terrace/CWS_Op_086_Eglantine_Terrace.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

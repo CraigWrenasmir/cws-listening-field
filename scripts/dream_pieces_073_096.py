@@ -924,4 +924,104 @@ F#3+C#4:6
   phrase_arcs=[[0,17.5,3],[18,42.5,4],[43,61.5,3],[62,86,-2]],
   lower_entries=[[37,43],[75,80]],pedal_lift=.25,gate=.995,
   note='The chord fields remain quiet and sustained while the melody changes its sense of direction. Returning harmonies have different upper colours and gentler phrase endings. Pedal refreshes clear the melody while the lower keys stay held, and the separate coda lets the minor sixth/ninth settle slowly.'))
+,
+dict(op=86,title='Eglantine Terrace',key='Bb',fifths=-2,meter='4/4',bpm=52,
+ description='Yarrow Elevation’s opening contour enters the tenor as F–A-flat–B-flat–A-flat. Across eight bars, the upper melody rises from D5 to D6 while the bass falls chromatically from B-flat2 to E-flat2. Two inner voices give those opposite motions changing jazz colours. F-sharp-minor and B-major reflections interrupt the return before a late major seventh completes the B-flat-major thirteenth close.',
+ difficulty='Advanced four-voice control over opposing sustained lines',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The first eight upper notes each last a whole bar while the bass descends by semitone at every bar line. Keep both outer lines sustained and voice the shorter inner notes softly. The opening LH tenor briefly reaches an octave above the finger-held bass; later LH spans remain within a major seventh. The final upper chord and inner G stay held while the tenor moves from F to A.',
+ parent_opus=85,motif=dict(hand='lh',voice='tenor',start_beat=0,end_beat=4,pitches=['F','Ab','Bb','Ab']),
+ ancestry=dict(source_opus=85,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['F#','A','B','A'],transposition_semitones=-1),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.24] for bar,cuts in enumerate([[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,4],[0,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,2,4],[0,2,3,4],[0,2,3,4],[0,1,2,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,2,3,4],[0,2,3,4],[0,1,2,4],[0,2,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+D5:4
+Eb5:4
+F5:4
+G5:4
+A5:4
+Bb5:4
+C6:4
+D6:4
+C6:2 Bb5:2
+Ab5:3 F5:1
+E5:2 F#5:1 A5:1
+G#5:2 F#5:2
+Gb5:2 F5:1 Eb5:1
+G5:2 F5:1 Eb5:1
+F5:2 Eb5:1 D5:1
+E5:2 D5:1 C5:1
+Eb5:2 Db5:1 Bb4:1
+D5:2 C5:2
+C5+D5+F5:4
+''',
+ rh_inner='''
+F4:2 G4:2
+G4:2 F4:1 E4:1
+Bb4:3 C5:1
+B4:2 D5:2
+C#5:2 D#5:2
+D5:2 F5:2
+E5:2 G5:2
+F5:1 G5:1 Bb5:2
+Eb5:2 F5:2
+C5:2 Db5:2
+C#5:2 D5:1 E5:1
+D#5:2 C#5:2
+Bb4:2 C5:1 Db5:1
+C5:2 Bb4:2
+A4:2 G4:1 F4:1
+Bb4:2 A4:1 G4:1
+Gb4:2 F4:1 Eb4:1
+A4:2 Eb4:2
+G4:4
+''',
+ lh='''
+Bb2:4
+A2:4
+Ab2:4
+G2:4
+F#2:4
+F2:4
+E2:4
+Eb2:4
+Ab2:4
+Db3:4
+F#2:4
+B2:4
+Eb3:4
+Ab2:4
+Bb2:4
+G2:4
+Eb3:4
+F2:4
+Bb2:4
+''',
+ lh_upper='''
+F3:1 Ab3:1 Bb3:1 Ab3:1
+E3:2 F#3:2
+Eb3:1 F3:1 G3:2
+D3:2 E3:1 F3:1
+C#3:1 D#3:1 E3:2
+C3:2 D3:1 Eb3:1
+B2:2 C3:1 D3:1
+Bb2:2 C3:1 D3:1
+Eb3:2 G3:2
+Ab3:2 Bb3:1 C4:1
+C#3:2 D#3:1 E3:1
+F#3:1 G#3:1 A#3:2
+Gb3:2 Ab3:1 Bb3:1
+Eb3:1 Gb3:1 F3:2
+F3:2 G3:1 A3:1
+D3:2 E3:1 F3:1
+Gb3:2 Ab3:1 Bb3:1
+C3:1 D3:1 Eb3:2
+F3:2 A3:2
+''',sections={1:'p',2:'p',3:'p',4:'mp',5:'pp',6:'p',7:'p',8:'mp',9:'pp',10:'p',11:'pp',12:'mp',13:'p',14:'p',15:'pp',16:'p',17:'pp',18:'p',19:'pp'},words={1:'poco rubato',18:'poco rit.'},
+ slurs=[(1,8),(9,13),(14,19)],lower_phrases=[],
+ hairpins=[('crescendo',1,4),('crescendo',5,8),('diminuendo',9,11),('diminuendo',12,15),('diminuendo',16,19)],tempo_changes={},group=3,
+ performance=dict(rubato=[52,48,55,50,46,53,44,57,43,51,48,54,46,50,45,49,40,35,26],
+  phrase_arcs=[[0,15.5,3],[16,31.5,4],[32,51.5,3],[52,76,-2]],
+  lower_entries=[[0,32],[64,72]],inner_entries=[[8,16],[40,48]],tenor_entries=[[0,4],[32,40],[72,76]],pedal_lift=.24,gate=.995,
+  note='The outer lines take opposite directions over eight long notes, while the middle voices move quietly inside them. The ascending melody grows gradually brighter as the low bass recedes. Later harmonic reflections relax the register, and the last tenor A arrives gently under an already held upper harmony.'))
 ]

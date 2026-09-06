@@ -10576,5 +10576,295 @@
       "sounded_pitches_per_minute": 52.5,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Eglantine Terrace",
+    "opus": 86,
+    "score_pages": 2,
+    "bars": 19,
+    "pitch_onsets": 155,
+    "audio_seconds": 107.67,
+    "hands": {
+      "rh": {
+        "low": 63,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 39,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 12
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-voice control over opposing sustained lines",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The first eight upper notes each last a whole bar while the bass descends by semitone at every bar line. Keep both outer lines sustained and voice the shorter inner notes softly. The opening LH tenor briefly reaches an octave above the finger-held bass; later LH spans remain within a major seventh. The final upper chord and inner G stay held while the tenor moves from F to A."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.76
+      ],
+      [
+        1,
+        1.76
+      ],
+      [
+        2,
+        2.76
+      ],
+      [
+        3,
+        3.76
+      ],
+      [
+        4,
+        5.76
+      ],
+      [
+        6,
+        6.76
+      ],
+      [
+        7,
+        7.76
+      ],
+      [
+        8,
+        8.76
+      ],
+      [
+        9,
+        9.76
+      ],
+      [
+        10,
+        10.76
+      ],
+      [
+        11,
+        11.76
+      ],
+      [
+        12,
+        13.76
+      ],
+      [
+        14,
+        14.76
+      ],
+      [
+        15,
+        15.76
+      ],
+      [
+        16,
+        16.76
+      ],
+      [
+        17,
+        17.76
+      ],
+      [
+        18,
+        19.76
+      ],
+      [
+        20,
+        21.76
+      ],
+      [
+        22,
+        22.76
+      ],
+      [
+        23,
+        23.76
+      ],
+      [
+        24,
+        25.76
+      ],
+      [
+        26,
+        26.76
+      ],
+      [
+        27,
+        27.76
+      ],
+      [
+        28,
+        28.76
+      ],
+      [
+        29,
+        29.76
+      ],
+      [
+        30,
+        30.76
+      ],
+      [
+        31,
+        31.76
+      ],
+      [
+        32,
+        33.76
+      ],
+      [
+        34,
+        35.76
+      ],
+      [
+        36,
+        37.76
+      ],
+      [
+        38,
+        38.76
+      ],
+      [
+        39,
+        39.76
+      ],
+      [
+        40,
+        41.76
+      ],
+      [
+        42,
+        42.76
+      ],
+      [
+        43,
+        43.76
+      ],
+      [
+        44,
+        44.76
+      ],
+      [
+        45,
+        45.76
+      ],
+      [
+        46,
+        47.76
+      ],
+      [
+        48,
+        49.76
+      ],
+      [
+        50,
+        50.76
+      ],
+      [
+        51,
+        51.76
+      ],
+      [
+        52,
+        52.76
+      ],
+      [
+        53,
+        53.76
+      ],
+      [
+        54,
+        54.76
+      ],
+      [
+        55,
+        55.76
+      ],
+      [
+        56,
+        57.76
+      ],
+      [
+        58,
+        58.76
+      ],
+      [
+        59,
+        59.76
+      ],
+      [
+        60,
+        61.76
+      ],
+      [
+        62,
+        62.76
+      ],
+      [
+        63,
+        63.76
+      ],
+      [
+        64,
+        65.76
+      ],
+      [
+        66,
+        66.76
+      ],
+      [
+        67,
+        67.76
+      ],
+      [
+        68,
+        68.76
+      ],
+      [
+        69,
+        69.76
+      ],
+      [
+        70,
+        71.76
+      ],
+      [
+        72,
+        73.76
+      ],
+      [
+        74,
+        75.76
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 10,
+      "sounded_pitches_per_minute": 88.7,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
