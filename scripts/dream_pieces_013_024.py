@@ -58,4 +58,51 @@ E3+G3:3
   phrase_arcs=[[0,11,3],[12,26,4],[27,35,3],[36,47,4],[48,56,2],[57,66,-2]],
   lower_entries=[[3,12],[15,27],[27,36],[45,57]],pedal_bars=list(range(1,23)),pedal_lift=.21,gate=.99,
   note='The opening stays suspended while the lower voice answers. The middle phrase moves forward briefly; the lower return and six-bar close gradually give up that momentum.'))
+,
+dict(op=14,title='Salt Promenade',key='c',fifths=-3,meter='9/8',bpm=66,
+ description='A side path from Silt Reverie carries C-E-flat-D-G through a slow nine-beat metre. C-minor ninths open into E-flat and a soft D-flat-major reflection; F and B-flat dominants briefly brighten the middle. The melody crosses the bass at different phrase boundaries, then settles into a widely spaced C-minor added ninth.',
+ parent_opus=7,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['C','Eb','D','G']),
+ ancestry=dict(source_opus=7,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['D','F','E','A'],transposition_semitones=-2),
+ rh='''
+R:.5 C5:1 Eb5:.5 D5:1 G4:1.5
+Bb4:2 G4:.5 F4:1 Eb4:1
+F4:1 Ab4:.5 C5:1 Eb5:1 D5:1~
+D5:1 C5:.5 Ab4:1 G4:1 R:1
+G4:1.5 Bb4:.5 D5:1 F5:1.5
+Eb5:1.5 Db5:.5 Ab4:1 F4:1.5
+G4:1 B4:.5 D5:1 F5:1 Eb5:1~
+Eb5:1 D5:.5 C5:1 Bb4:1 R:1
+A4:1.5 C5:.5 Eb5:1 G5:1.5
+F5:1 D5:.5 C5:1 Ab4:1 Bb4:1~
+Bb4:1 G4:.5 F4:1 G4:1 D5:1
+C5:1.5 Ab4:.5 G4:1 Eb4:1 R:.5
+C5:1 Eb5:.5 D5:1 G4:2
+Ab4:1 C5:.5 Eb5:1 D5:1 C5:1~
+C5:1 B4:.5 A4:.5 G4:1 F4:.5 D4:1
+Eb4:1 G4:1 D4+G4:2.5
+''',
+ lh='''
+C3:1.5 G3+Bb3:1.5 Eb3:1.5
+Ab2:1.5 Eb3+G3:2 R:1
+F3:2 Ab3+C4:1.5 Eb3:1
+Bb2:1 D3+Ab3:2 F3:1 R:.5
+Eb3:2 Bb3+D4:1 C4:1.5
+Db3:1.5 F3+Ab3:2 R:1
+G3:1 F3+B3:1.5 D4:.5 Ab3:1.5
+C3:1.5 Eb3+Bb3:2 R:1
+F3:1 A3+Eb4:1.5 C4:1 R:1
+Bb3:1 Ab3:1 F3:1 D3:1.5
+Eb3:1.5 G3+Bb3:1.5 D3:.5 R:1
+Ab2:2 Eb3+G3:1.5 C4:1
+C3:1.5 Eb3+Bb3:1 G3:1 F3:1~
+F3:1 Ab3+C4:2 Eb3:1 R:.5
+G3:1 F3+B3:1.5 A3:.5 G3:1.5
+C3:1 G3:1 C3+Eb3:2.5
+''',sections={1:'p',5:'pp',7:'p',9:'mp',12:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,6),(7,8),(9,12),(13,16)],lower_phrases=[(2,4),(6,8),(10,11),(13,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('diminuendo',5,6),('diminuendo',7,8),('diminuendo',9,12),('diminuendo',14,16)],tempo_changes={},group=3,
+ performance=dict(rubato=[66,65,67,60,64,58,66,59,68,65,63,57,62,59,54,45],
+  phrase_arcs=[[0,17,4],[18,26,2],[27,35,3],[36,53,4],[54,72,-1]],
+  lower_entries=[[4.5,18],[22.5,36],[40.5,49.5],[54,68]],pedal_bars=list(range(1,17)),pedal_lift=.25,gate=.99,
+  note='The melody lingers over the new D-flat colour, then opens into the F-dominant phrase. The lower voice briefly leads the B-flat descent; the final bass settles before the upper added ninth.'))
 ]

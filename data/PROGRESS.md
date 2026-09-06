@@ -17,7 +17,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 11, Fen Lantern — complete: 14 bars of 12/8, 133 sounded pitches, one inspected page, 90.13 seconds. E-flat major with C-minor and F-dominant colour; twelve distinct LH rhythmic patterns, broad compound-metre phrases. MusicXML/MIDI, audio, timing, originality and layout checks passed. Published; awaiting listening feedback.
 - Op. 12, Cloud Causeway — complete: 16 bars of 4/4, 121 sounded pitches, one inspected page, 84.90 seconds. A D-major ballad with B-minor shadows, a borrowed C-Lydian reflection, seven upper-voice ties across bar lines and twelve LH rhythm patterns. Two bass entries were lifted an octave for ease of playing. MusicXML/MIDI, audio, timing and layout checks passed; published; awaiting listening feedback.
 - Op. 13, Alder Passage — complete locally: 22 bars of 6/8, 133 sounded pitches, one inspected page, 75.90 seconds. The high E-minor opening returns an octave lower after C-major and D-major colours; the close spreads its added ninth between the hands. Seventeen LH rhythm patterns. Score/MIDI, audio, timing and layout checks passed; awaiting publication and listening feedback.
-- Next: compose Op. 14, Salt Promenade; publish Op. 13–15 together.
+- Op. 14, Salt Promenade — complete locally: 16 bars of 9/8, 130 sounded pitches, one inspected page, 76.97 seconds. A new branch from Silt Reverie moves through C minor, E-flat, D-flat and an F-to-B-flat dominant passage. Twelve LH rhythm patterns, one lower-voice tie, and a spacious added-ninth close. Score/MIDI, audio, timing and layout checks passed; awaiting publication and listening feedback.
+- Next: compose Op. 15, Pearl Footbridge; publish Op. 13–15 together.
 
 ## Growth work to complete during this run
 
