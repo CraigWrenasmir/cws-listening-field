@@ -244,7 +244,8 @@ def make_score(p):
                 if mi in p['words'] and p['words'][mi] in ('poco rit.','poco rubato','a tempo'):
                     word=expressions.TextExpression(p['words'][mi]); word.placement='above'; word.style.fontStyle='italic';word.style.fontSize=10
                     m.insert(0,word)
-                if (mi-1)%p['group']==0:
+                new_system=mi in p['system_starts'] if p.get('system_starts') else (mi-1)%p['group']==0
+                if new_system:
                     m.insert(0,layout.SystemLayout(isNew=True))
             offset=0
             refs[(hand,mi)]=[]

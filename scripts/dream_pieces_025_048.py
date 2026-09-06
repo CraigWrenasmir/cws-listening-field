@@ -86,4 +86,65 @@ F#2:1 C#3:1 E3:1 F#3+A3:3
   phrase_arcs=[[0,11,2],[12,23,3],[24,35,4],[36,47,3],[48,59,3],[60,72,-2]],
   lower_entries=[[0,12],[12,24],[24,36],[36,48],[48,60]],pedal_bars=[],gate=.99,
   note='The score and MIDI use the same explicit pedal spans. Harmonic changes, rather than every bar line, determine the release; each long field is softly voiced to keep its upper extensions clear.'))
+,
+dict(op=27,title='Moss Interchange',key='Db',fifths=-5,meter='4/4',bpm=61,
+ description='Rain Arcade\'s rising C-E-G-A returns as D-flat-F-A-flat-B-flat, with its last note held over a bass reply. Unequal phrases move through F minor and B-flat minor before an E-minor-to-A-major window. A D dominant chord approaches the home key from a semitone above. The later return is quieter, ending with the plain tonic after an added-ninth recollection.',
+ difficulty='Advanced jazz ballad',system_starts=[1,4,8,11,15,19],
+ technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=9),
+ technical_note='Held upper notes, triplets in both hands, displaced bass replies and chromatic three-note voicings require independent phrasing. The D-dominant approach to D-flat needs careful inner-voice balance. Bass chords are held as written; the slow line allows planned register changes.',
+ tuplet_hands=['rh','lh'],
+ parent_opus=21,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['Db','F','Ab','Bb']),
+ ancestry=dict(source_opus=21,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['C','E','G','A'],transposition_semitones=1),
+ rh='''
+Db5:1 F5:.5 Ab5:.5 Bb5:2~
+Bb5:1 Ab5:.5 F5:.5 Eb5:1 C5:1~
+C5:.5 Db5:.5 F4+Ab4+Eb5:2 R:1
+Ab4:2/3 C5:2/3 Eb5:2/3 G5:1 F5:1
+Eb5:1 Db5:.5 C5:.5 Ab4:1 F4:1~
+F4:1 Ab4:.5 Bb4:.5 Db5:1 C5:1
+Bb4:1 A4:.5 G4:.5 F4+Ab4+C5:2
+E4+G4+B4:2 D5:1 C#5:1~
+C#5:1 B4:.5 A4:.5 G#4+B4+F#5:2
+F5:1 Eb5:.5 Db5:.5 C5:1 Bb4:1
+A4+C5+F#5:2 E5:1 Eb5:1
+Db5:3 F5:.5 Ab5:.5
+Bb5:1 Ab5:.5 Gb5:.5 F5:1 Eb5:1~
+Eb5:1 D5:.5 C5:.5 Bb4:1 A4:1
+Ab4:2/3 C5:2/3 Eb5:2/3 G5:2
+F5:1 Eb5:.5 C5:.5 Bb4:1 Ab4:1
+Gb4+Bb4+F5:2 Eb5:1 Db5:1
+C5:1 Bb4:.5 Ab4:.5 Gb4+Bb4+Eb5:2
+F4+Ab4+Eb5:2 Db5:1 C5:1~
+C5:1 Bb4:.5 Ab4:.5 F4:1 Eb4:1
+F4+Ab4+Db5:4
+''',
+ lh='''
+Db3:2 Ab3:1 F3:1
+Bb2:1 F3:.5 Ab3:.5 Db4:1 F3:1
+Db3+F3:2 Ab3:.5 C4:.5 Eb3:1
+F3:1 C4:2/3 Eb4:2/3 Ab3:2/3 G3:1
+Bb2:1.5 F3:.5 Ab3+Db4:2
+Gb3:1 Db4:.5 F3:.5 Bb3:1 Ab3:1
+F3:1 Eb3:1 A3:1 C4:1
+E3:2 B3:1 D4:.5 F#3:.5
+A2:1 E3:1 G#3+B3:2
+Ab2:1.5 Eb3:.5 Gb3:1 C4:1
+D3:1 A3:.5 C4:.5 F#3:2
+Db3:2 Ab3:1 F3:1
+Gb3:1 Bb3:2/3 Db4:2/3 F3:2/3 Ab3:1
+C3:1 G3:1 Bb3+E4:2
+F3:1 C4:.5 Eb4:.5 Ab3:1 G3:1
+Bb2:2 F3:1 Ab3:1
+Gb3:1.5 Db4:.5 Bb3:1 Ab3:1
+Ab2:1 Eb3:.5 Gb3:.5 C4:1 Ab3:1
+Db3+Ab3:2 F3:1 C4:1
+Gb3:1 Db4:.5 Bb3:.5 Ab3:1 Eb3:1
+Db3+Ab3:4
+''',sections={1:'p',4:'mp',8:'pp',10:'mp',12:'p',17:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,9),(10,12),(13,16),(17,18),(19,21)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,16),(17,18),(19,21)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,6),('diminuendo',6,7),('crescendo',8,9),('diminuendo',10,12),('crescendo',13,15),('diminuendo',15,16),('diminuendo',19,21)],tempo_changes={},group=4,
+ performance=dict(rubato=[61,58,53,63,59,61,55,54,51,60,55,51,60,58,61,54,52,49,47,42,35],
+  phrase_arcs=[[0,11,3],[12,27,4],[28,35,2],[36,47,4],[48,63,4],[64,71,1],[72,84,-2]],
+  lower_entries=[[0,12],[12,24],[28,36],[40,48],[48,64],[72,84]],pedal_bars=list(range(1,22)),pedal_lift=.24,gate=.99,
+  note='Long bass values alternate with replies and triplets, rather than supplying a continuous walking pulse. The distant A-major window is softened before the two chromatic approach chords; the last tonic is allowed to settle.'))
 ]
