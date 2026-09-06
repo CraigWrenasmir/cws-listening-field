@@ -1556,4 +1556,81 @@ E3+B3:6
   phrase_arcs=[[0,29.5,4],[30,35.8,4],[36,53.5,3],[54,59.8,3],[60,71.5,2],[72,84,-2]],
   lower_entries=[[18,24],[60,66]],pedal_lift=.2,gate=.985,
   note='Each cascade is a brief release inside a broader, quieter phrase. The ascent opens upward without accenting every note; the descent softens as it reaches the lower register. Held fifths leave room beneath both gestures, and the final suspended harmony stays open.'))
+,
+dict(op=95,title='Amaranth Courtyard',key='A',fifths=3,meter='4/4',bpm=52,
+ description='Jasmine Upperstorey’s suspended E harmony opens into A major. Its bass contour becomes A–E–G-sharp–F-sharp in the LH. A high A stays held for sixteen beats while the inner line climbs chromatically from C-sharp towards it. As the held voice releases, the inner line arrives on A and takes over the melody. Later minor-colour reflections return to a quiet A-major ninth.',
+ difficulty='Advanced chromatic inner-voice control and a melodic handover',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Hold the upper A through bars 1–4 while the inner line rises by semitone in two-beat notes. At bar 5 the upper voice rests, and the former inner voice quietly rearticulates A before continuing downward. The A is never assigned to both voices at once. The opening LH melody is in treble clef; bass clef resumes in bar 2. Let the moving voice change prominence as the handover occurs.',
+ parent_opus=94,motif=dict(hand='lh',voice='bass',start_beat=0,end_beat=4,pitches=['A','E','G#','F#']),
+ ancestry=dict(source_opus=94,source_hand='lh',source_start_beat=0,source_end_beat=6,source_pitches=['E','B','D#','C#'],transposition_semitones=5),
+ clef_changes={'lh':{1:'treble',2:'bass'}},
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.22] for bar,cuts in enumerate([[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+A5:4~
+A5:4~
+A5:4~
+A5:4
+R:4
+E5:3 F#5:1
+G#5:2 F#5:1 E5:1
+D5:2 F5:1 A5:1
+G5:3 F5:1
+E5:2 G5:1 B5:1
+A5:3 G#5:1
+F#5:2 E5:1 C#5:1
+D5:3 C#5:1
+B4:1 D5:1 E5:2
+C5:2 E5:1 G5:1
+F#5:1 E5:1 D5:2
+C#5:1 B4:1 A4:2
+C#5+E5+G#5:4
+''',
+ rh_inner='''
+C#5:2 D5:2
+D#5:2 E5:2
+F5:2 F#5:2
+G5:2 G#5:2
+A5:2 G#5:1 F#5:1
+B4:2 C#5:2
+D5:2 C#5:2
+A4:2 C5:2
+Bb4:3 Ab4:1
+C5:2 D5:2
+D5:2 E5:2
+B4:2 A4:1 G#4:1
+G4:2 A4:2
+G4:2 A4:2
+G4:2 B4:2
+A4:2 B4:2
+G4:2 F#4:2
+B4:4
+''',
+ lh='''
+A3:1 E4:1 G#4:1 F#4:1
+B3:2 F#3:1 A3:1
+C3:1 G3:1 Bb3:1 D4:1
+D3:1 A3:1 C4:1 E4:1
+A3:1 E4:1 C#4:1 B3:1
+A2:1 E3:1 G#3:1 B3:1
+F#3:2 C#4:1 E4:1
+D3:1 A3:1 C4:1 B3:1
+Eb3:2 Bb3:1 Db4:1
+C3:1 G3:1 B3:1 A3:1
+F3:2 C4:1 E4:1
+B2:1 F#3:1 A3:1 D4:1
+E3:1 B3:1 D4:1 C#4:1
+G3:2 D4:1 B3:1
+C3:1 G3:1 B3:1 D4:1
+D3:1 A3:1 C4:1 F#3:1
+E3:1 B3:1 D4:1 G#3:1
+A2+E3:4
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'pp',10:'p',11:'p',12:'pp',13:'p',14:'pp',15:'mp',16:'p',17:'pp',18:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(6,11),(12,16),(17,18)],lower_phrases=[(1,4),(5,8),(9,12),(13,16),(17,18)],
+ hairpins=[('crescendo',1,4),('crescendo',6,8),('diminuendo',9,11),('diminuendo',12,14),('diminuendo',15,18)],tempo_changes={},group=2,
+ performance=dict(rubato=[52,47,54,50,45,49,53,56,44,52,48,43,47,45,51,42,35,27],
+  phrase_arcs=[[0,15.8,4],[16,23.8,2],[24,43.5,3],[44,63.5,2],[64,72,-2]],
+  lower_entries=[[0,4],[16,20]],inner_entries=[[0,20],[44,48]],pedal_lift=.22,gate=.995,
+  note='The held A stays quiet but present while the chromatic inner line approaches it. At their meeting, the arriving voice gives the pitch a fresh, gentle attack and becomes the melody. The later phrases keep exchanging emphasis before the major-ninth close.'))
 ]
