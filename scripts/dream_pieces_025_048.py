@@ -1348,4 +1348,109 @@ G2:2 D3:1 G2:1
   phrase_arcs=[[0,15,3],[16,31,4],[32,47,4],[48,67,4],[68,80,-2]],
   lower_entries=[[8,12],[12,24],[24,36],[36,48],[48,60],[60,72],[72,80]],pedal_bars=list(range(1,21)),pedal_lift=.24,gate=.99,
   note='The same opening idea keeps its shape as the register and voice change. The bass entrance receives a little extra presence, while the inner echo remains lighter than the upper melody. Later phrases broaden and contract before the voices draw into the quiet final register.'))
+,
+dict(op=48,title='Thistle Horizon',key='E',fifths=4,meter='4/4',bpm=54,
+ description='A small inner-voice turn from Mauve Esplanade unfolds across four whole bars as G-sharp–B–C-sharp–B. The long upper melody floats above two more mobile lines. Warm E-major colour travels through minor and chromatic reflections before the final seven-bar descent draws the voices down into an open added-ninth sonority. This longer reverie closes the second volume.',
+ difficulty='Advanced sustained three-voice nocturne',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The high melody sustains across changing inner notes while the bass follows its own pace. Long six- and seven-bar phrases need careful control of tone and release. The upper line falls from C-sharp6 to E4, while the inner line eventually reaches F-sharp3 and stays quieter throughout. The two-page layout gives the sustained lines room.',
+ parent_opus=47,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=16,pitches=['G#','B','C#','B']),
+ ancestry=dict(source_opus=47,source_hand='rh',source_voice='inner',source_start_beat=32,source_end_beat=36,source_pitches=['G#','B','C#','B'],transposition_semitones=0),
+ page_starts=[17],
+ rh='''
+G#5:4
+B5:4
+C#6:4
+B5:4
+A5:3 G#5:1
+G5:4
+F5:3 E5:1
+Eb5:4
+F5:2 G5:2
+Ab5:4
+A5:3 G5:1
+F#5:4
+G5:4
+A5:2 G5:2
+F#5:3 E5:1
+D5:4
+Eb5:3 Db5:1
+D5:2 E5:2
+F5:3 E5:1
+D#5:4
+E5:4
+C#5:3 B4:1
+A4:4
+Ab4:3 Gb4:1
+F4:4
+F#4:2 G#4:2
+F#4:3 D#4:1
+E4:4
+''',
+ rh_inner='''
+B4:1 E5:1 F#5:2
+D#5:1 F#5:1 G#5:2
+E5:1 G#5:1 A5:2
+D#5:1 F#5:1 A5:2
+C#5:1 E5:.5 F#5:.5 E5:2
+C5:1 E5:1 F5:2
+Ab4:1 C5:1 Db5:2
+Ab4:1 Bb4:.5 C5:.5 Db5:2
+Bb4:1 Db5:1 Eb5:2
+C5:1 Eb5:1 F5:2
+C#5:1 E5:1 F#5:2
+B4:1 D#5:.5 E5:.5 C#5:2
+B4:1 D5:1 F#5:2
+C5:1 E5:.5 F#5:.5 D5:2
+A4:1 C5:1 D5:2
+G4:1 B4:.5 C5:.5 A4:2
+Gb4:1 Bb4:1 C5:2
+G4:1 B4:1 C5:2
+A4:1 C5:.5 D5:.5 B4:2
+F#4:1 A4:1 C#5:2
+G#4:1 B4:.5 C#5:.5 D#5:2
+E4:1 G#4:1 A4:2
+C#4:1 E4:1 F#4:2
+C4:1 Eb4:.5 F4:.5 Eb4:2
+Ab3:1 C4:1 Eb4:2
+B3:1 D#4:1 E4:2
+A3:1 C#4:.5 E4:.5 C#4:2
+G#3:1 B3:.5 C#4:.5 F#3+B3:2
+''',
+ lh='''
+E3:2 B3:1 G#3:1
+C#3:1 G#3:1 B3:2
+F#3:2 C#4:1 A3:1
+B2:1 F#3:1 A3:2
+A2:2 E3:1 G#3:1
+C3:1 G3:1 B3:2
+F3:2 C4:1 Eb3:1
+Db3:1 Ab3:1 C4:2
+Eb3:2 Bb3:1 Db4:1
+Ab3:1 Eb3:1 G3:2
+D3:2 A3:1 C#4:1
+B2:1 F#3:1 A3:2
+E3:3 B3:1
+A2:2 E3:.5 G3:1.5
+D3:1 A3:2 C4:1
+G3:3 D4:1
+Eb3:1.5 Bb3:.5 Db4:2
+C3:2 G3:1 B3:1
+D3:2 A3:.5 C4:1.5
+B2:1 F#3:1 A3:2
+E3:3 B3:1
+A2:2.5 E3:.5 G#3:1
+F#2:2 C#3:2
+Ab2:3 Eb3:1
+Db3:2 Ab2:2
+B2:1 F#3:1 A2:2
+B2:3 F#2:1
+E2:4
+''',sections={1:'pp',3:'p',5:'mp',6:'p',8:'pp',9:'p',11:'mp',12:'p',14:'mp',16:'pp',17:'p',19:'mp',21:'pp',24:'p',26:'pp'},words={1:'poco rubato',26:'poco rit.'},
+ slurs=[(1,4),(5,10),(11,16),(17,21),(22,28)],lower_phrases=[(1,3),(4,7),(8,10),(11,14),(15,18),(19,21),(22,25),(26,28)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('diminuendo',5,8),('crescendo',8,9),('diminuendo',9,10),('diminuendo',11,12),('crescendo',13,14),('diminuendo',14,16),('crescendo',17,19),('diminuendo',19,21),('diminuendo',22,28)],tempo_changes={},group=4,
+ performance=dict(rubato=[54,51,56,48,57,53,49,46,52,48,58,52,54,59,51,46,52,55,58,49,45,49,46,50,44,40,36,29],
+  phrase_arcs=[[0,15,3],[16,39,3],[40,63,4],[64,83,4],[84,112,-3]],
+  lower_entries=[[0,12],[12,28],[28,40],[40,56],[56,72],[72,84],[84,100],[100,112]],pedal_bars=list(range(1,29)),pedal_lift=.24,gate=.995,
+  note='Long upper tones stay present without being struck again. The inner voice and bass shape the harmonic movement beneath them. The high opening gradually gives way to a lower, closer texture, with the last seven bars losing weight as well as pace.'))
 ]
