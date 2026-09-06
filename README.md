@@ -6,7 +6,7 @@
 
 Drag a sculpture to turn it through 360 degrees, play the complete recording, open the score with live note highlighting, or follow the shared musical phrases through **Trace kinship**. Each piece has PDF, MP3, MIDI and MusicXML downloads. The text index provides direct access, and the URL fragment preserves the selected opus.
 
-The music explores sweet melancholy, flowing minimalism and independent voices. *Velvet Estuary* is the reference for the continuing collection. From Op. 7, the writing becomes more languid and spacious: phrases cross bar lines, jazz-inflected sevenths and ninths resolve gently, and the recordings follow deliberately shaped rubato. Op. 1–6 retain their original music and recordings. The ongoing target is 300 studies; see the [composition checkpoint](data/PROGRESS.md) for completed work.
+The music explores sweet melancholy, flowing minimalism and independent voices. *Velvet Estuary* is the reference for the continuing collection. From Op. 7, the writing becomes more languid and spacious: phrases cross bar lines, jazz-inflected sevenths and ninths resolve gently, and the recordings follow deliberately shaped rubato. Op. 1–6 retain their original music and recordings. From Op. 21, the collection progressively explores more experimental and advanced writing, including irregular metre, richer jazz voicings and greater rhythmic independence. The ongoing target is 300 studies; see the [composition checkpoint](data/PROGRESS.md) for completed work.
 
 **A walk towards light** plays the complete collection once. It begins with Moss Atlas and Orchard Static, moves through Velvet Estuary and its growing family, and closes with Willow Transit. The order follows musical ancestry towards a warmer C-major ending. The player shows the current total duration. Use **Play collection**, pause with the main player, or skip with the previous/next controls; the sculptures, scores, downloads and note highlights follow each transition. Expand the listening order to begin at any point. Choosing a piece from the catalogue or kinship view returns to individual listening. The playlist stops after its final piece; if a browser prevents the next recording from starting, press Play to continue.
 
@@ -36,6 +36,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 18 | Marsh Afterimage | 5/4 | 130 | [Score](pieces/CWS_Op_018_Marsh_Afterimage/CWS_Op_018_Marsh_Afterimage.pdf) | [MP3](pieces/CWS_Op_018_Marsh_Afterimage/CWS_Op_018_Marsh_Afterimage.mp3) |
 | CWS Op. 19 | Glass Coppice | 12/8 | 139 | [Score](pieces/CWS_Op_019_Glass_Coppice/CWS_Op_019_Glass_Coppice.pdf) | [MP3](pieces/CWS_Op_019_Glass_Coppice/CWS_Op_019_Glass_Coppice.mp3) |
 | CWS Op. 20 | Ochre Underpass | 9/8 | 126 | [Score](pieces/CWS_Op_020_Ochre_Underpass/CWS_Op_020_Ochre_Underpass.pdf) | [MP3](pieces/CWS_Op_020_Ochre_Underpass/CWS_Op_020_Ochre_Underpass.mp3) |
+| CWS Op. 21 | Rain Arcade | 7/4 | 187 | [Score](pieces/CWS_Op_021_Rain_Arcade/CWS_Op_021_Rain_Arcade.pdf) | [MP3](pieces/CWS_Op_021_Rain_Arcade/CWS_Op_021_Rain_Arcade.mp3) |
 
 [Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
 
@@ -84,7 +85,7 @@ npm run build
 
 On Apple Silicon macOS with Homebrew Cairo, use `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib .venv/bin/python scripts/engrave.py --opus 4 5 6` if Cairo cannot be located. Inspect the rendered score pages in `work/qa/` before publishing. Do not rerender approved audio as part of an unrelated website change.
 
-Composition stamps use `YYYYMMDDHHMMSS` in Sydney local time and remain stable across revisions. The first three retain their documented first-save timestamp; new stamps record the first saved score. The provisional ceiling is four printed pages and 256 sounded pitch onsets per piece. Each chord pitch and repeated attack counts separately; tied continuations do not add onsets. The intended playing level is late beginner to early intermediate, pending keyboard feedback.
+Composition stamps use `YYYYMMDDHHMMSS` in Sydney local time and remain stable across revisions. The first three retain their documented first-save timestamp; new stamps record the first saved score. The provisional ceiling is four printed pages and 256 sounded pitch onsets per piece. Each chord pitch and repeated attack counts separately; tied continuations do not add onsets. Op. 1–20 began as late-beginner to intermediate studies. From Op. 21, the repertoire becomes progressively more experimental and advanced; individual technical demands are documented in the source catalogue, pending keyboard feedback.
 
 ## How the sculptures work
 

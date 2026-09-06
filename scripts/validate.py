@@ -96,16 +96,19 @@ for p in cat:
  pages=len(PdfReader(d/(stem+'.pdf')).pages)
  assert 1<=pages<=4
  stats={}
+ limits=p.get('technique_limits',dict(chord_span=7,melodic_leap=12,rapid_leap=7))
+ if p['op']>=21:
+  assert p.get('difficulty') and p.get('technical_note') and p.get('technique_limits'),('Document the technical review',p['op'])
  for hand in ['rh','lh']:
   evs=sorted([e for e in p['events'] if e['hand']==hand],key=lambda e:e['offset'])
   pitches=[pi for e in evs for pi in e['pitches']]
   leaps=[min(abs(a-b) for a in prev['pitches'] for b in curr['pitches']) for prev,curr in zip(evs,evs[1:])]
   rapid=[leap for leap,prev,curr in zip(leaps,evs,evs[1:]) if curr['offset']-prev['offset']<=.5]
   stats[hand]=dict(low=min(pitches),high=max(pitches),maximum_melodic_leap_semitones=max(leaps),maximum_eighth_note_leap_semitones=max(rapid,default=0),maximum_simultaneous_span_semitones=max(max(e['pitches'])-min(e['pitches']) for e in evs))
-  assert stats[hand]['maximum_simultaneous_span_semitones']<=7
+  assert stats[hand]['maximum_simultaneous_span_semitones']<=limits['chord_span'],('Hand span needs review',p['op'],hand,stats[hand],limits)
   if p['op']>=7:
-   assert stats[hand]['maximum_eighth_note_leap_semitones']<=7,('Rapid leap needs review',stem,hand,stats[hand])
-   assert stats[hand]['maximum_melodic_leap_semitones']<=12,('Wide leap needs review',stem,hand,stats[hand])
+   assert stats[hand]['maximum_eighth_note_leap_semitones']<=limits['rapid_leap'],('Rapid leap needs review',stem,hand,stats[hand],limits)
+   assert stats[hand]['maximum_melodic_leap_semitones']<=limits['melodic_leap'],('Wide leap needs review',stem,hand,stats[hand],limits)
  # Ensure hands do not cross, using notated durations (not the shorter demo release).
  for beat in sorted(set(e['offset'] for e in p['events'])):
   active={h:[pi for e in p['events'] if e['hand']==h and e['offset']<=beat<e['offset']+e['duration'] for pi in e['pitches']] for h in ['rh','lh']}
@@ -114,6 +117,7 @@ for p in cat:
  assert abs(float(probe['format']['duration'])-p['duration_seconds'])<.1
  report.append(dict(piece=p['title'],opus=p['op'],score_pages=pages,bars=p['bars'],pitch_onsets=score_count,audio_seconds=p['duration_seconds'],hands=stats,checks='PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration'))
  report[-1]['midi_highlight_timing_error_seconds']=round(timing_error,7)
+ if p['op']>=21:report[-1]['technical_review']=dict(difficulty=p['difficulty'],limits=limits,note=p['technical_note'])
  if p['op']>=7:
   patterns=[]
   for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']%p['beats_per_bar'],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))

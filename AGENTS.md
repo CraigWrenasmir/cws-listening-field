@@ -4,6 +4,7 @@ This is Craig Warren Smith's piano library, developed with Maple. Preserve the a
 
 - Read `data/STYLE.md` before composing or engraving. Straight piano, two hands, sweet melancholy, warm isolation, gentle impressionist flow and independent voices. Velvet Estuary is the primary reference.
 - Every composition needs a two-word title, the next CWS opus number and a documented musical ancestor. Compose complete pieces deliberately; do not fill the catalogue with arbitrary note permutations.
+- Craig's latest direction supersedes the original beginner/intermediate limit: from Op. 21, move progressively towards more experimental and advanced repertoire. Preserve the earlier music, and record/review new technical demands individually. See `data/EXPERIMENTAL_ARC.md`.
 - Maximum four printable pages and the provisional ceiling of 256 sounded pitch onsets. Count each chord pitch and repeated attack; exclude tied continuations.
 - Retain CWS / FIRST STUDIES, title, opus and conventional musical markings. No subtitles, dedication line or prose playing instructions on the score. Preserve numeric composition stamps across revisions.
 - Preserve existing recordings unless a musical/audio change is requested. New recordings use the warm-room settings in `data/library_style.json`.

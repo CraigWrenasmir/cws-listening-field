@@ -4,7 +4,7 @@ Craig authorised 294 further studies on 6 September 2026. Mac sleep is acceptabl
 
 ## Direction
 
-More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and spaciousness associated with Clair de Lune as a broad reference, without quoting it. Reduce mechanical rhythmic repetition in the composition itself. Preserve all Op. 1–6 assets. Two hands, late beginner to early intermediate, four printed pages maximum, 256 sounded pitch onsets maximum. Maintain the approved header, two-word title, opus and stable numeric stamp. Publish completed work on the existing GitHub Pages site.
+More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and spaciousness associated with Clair de Lune as a broad reference, without quoting it. Reduce mechanical rhythmic repetition in the composition itself. Preserve all Op. 1–6 assets. Two hands; the original late-beginner/intermediate scope applies to Op. 1–20. Craig has now explicitly asked for increasingly experimental and advanced repertoire from here onward. Follow `data/EXPERIMENTAL_ARC.md`; the old playing-level clause in the active goal is superseded by this latest instruction. Four printed pages maximum and 256 sounded pitch onsets maximum remain. Maintain the approved header, two-word title, opus and stable numeric stamp. Publish completed work on the existing GitHub Pages site.
 
 ## Checkpoint
 
@@ -24,7 +24,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 18, Marsh Afterimage — complete: 15 bars of 5/4, 130 sounded pitches, one inspected page, 99.23 seconds. Long sustained notes allow the five-beat bars to float; G-major colour moves through C and F before a sixth/ninth close. No rapid LH leaps; maximum rapid RH interval four semitones. Score/MIDI, audio, ancestry and layout checks passed; published; awaiting listening feedback.
 - Op. 19, Glass Coppice — complete locally: 12 bars of 12/8, 139 sounded pitches, one inspected page, 80.77 seconds. Upper thirds form a quiet chorale above a more mobile bass, which carries the ancestral D–F–E–A. F and A-flat colour return to a plain D-minor close. Score/MIDI, audio, ancestry and layout checks passed; awaiting publication and listening feedback.
 - Op. 20, Ochre Underpass — complete locally: 15 bars of 9/8, 126 sounded pitches, one inspected page, 76.05 seconds. The ancestral bass phrase moves to the treble in B minor; a D-major middle and a D-dominant turn into G add warmth before the close. Score/MIDI, audio, ancestry and layout checks passed; awaiting publication and listening feedback.
-- Next: compose Op. 21, Rain Arcade; publish Op. 19–21 together.
+- Op. 21, Rain Arcade — complete locally: 12 bars of 7/4, 187 sounded pitches, one inspected page, 101.59 seconds. The first transition towards advanced repertoire: wider three-note RH voicings, irregular phrase spans, independent bass travel, a chromatic D-flat side-step and an A-flat reflection. Reviewed RH chord span 11 semitones, LH slow leap 14 and quicker shift 8. Technical demands are documented; score/MIDI, audio, ancestry and layout checks passed. Awaiting publication and listening feedback.
+- Next: publish Op. 19–21, then compose Op. 22, Sedge Observatory, continuing the more experimental direction.
 
 ## Growth work to complete during this run
 

@@ -309,8 +309,7 @@ G3:1 D4:1 G3+B3:3
  performance=dict(rubato=[52,51,47,52,53,54,47,55,51,46,51,49,47,43,37],
   phrase_arcs=[[0,14,3],[15,34,4],[35,49,4],[50,75,-1]],
   lower_entries=[[5,15],[15,30],[35,50],[55,73]],pedal_bars=list(range(1,16)),pedal_lift=.25,gate=.99,
-  note='The five-beat span breathes through sustained notes and varied bass entries. The middle rise briefly gains momentum; the last five-bar phrase unwinds into the added sixth and ninth.'))
-,
+  note='The five-beat span breathes through sustained notes and varied bass entries. The middle rise briefly gains momentum; the last five-bar phrase unwinds into the added sixth and ninth.')),
 dict(op=19,title='Glass Coppice',key='d',fifths=-1,meter='12/8',bpm=66,
  description='A quiet chorale of upper thirds floats above a more mobile bass. Salt Promenade\'s C-E-flat-D-G becomes D-F-E-A in the left hand at bar 4. The D-minor landscape opens through F major to a brief A-flat-major reflection, then returns through gentle dominant colour to an unadorned minor close.',
  parent_opus=14,motif=dict(hand='lh',start_beat=18,end_beat=24,pitches=['D','F','E','A']),
@@ -348,8 +347,7 @@ D3:2 A3:1 D3+F3:3
  performance=dict(rubato=[66,64,61,63,66,59,63,61,57,55,51,44],
   phrase_arcs=[[0,17,3],[18,35,4],[36,53,4],[54,72,-2]],
   lower_entries=[[0,12],[12,30],[36,54],[54,70]],pedal_bars=list(range(1,13)),pedal_lift=.23,gate=.99,
-  note='The bass has the more mobile line beneath sustained upper thirds. The A-flat reflection relaxes the pulse, and the last three-bar phrase lets the colour clear into a plain D-minor ending.'))
-,
+  note='The bass has the more mobile line beneath sustained upper thirds. The A-flat reflection relaxes the pulse, and the last three-bar phrase lets the colour clear into a plain D-minor ending.')),
 dict(op=20,title='Ochre Underpass',key='b',fifths=2,meter='9/8',bpm=63,
  description='Glass Coppice\'s bass phrase moves into the treble as B-D-C-sharp-F-sharp. Close-register lines travel through B minor, E minor and a warmer D-major middle, with a quiet D-dominant turn into G. The closing phrase narrows gradually and leaves a simple B-minor chord beneath the resonance.',
  parent_opus=19,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['B','D','C#','F#']),
@@ -393,5 +391,46 @@ B2:1.5 F#3:1 B2+D3:2
  performance=dict(rubato=[63,61,64,57,65,63,62,57,63,59,53,59,55,50,43],
   phrase_arcs=[[0,17,3],[18,35,4],[36,49,3],[49.5,67.5,-1]],
   lower_entries=[[4.5,18],[22.5,36],[40.5,49.5],[54,66]],pedal_bars=list(range(1,16)),pedal_lift=.22,gate=.99,
-  note='The D-major passage gathers warmth without increasing volume beyond mezzo piano. The final four-bar line descends through quieter inner notes before the unadorned minor landing.'))
+  note='The D-major passage gathers warmth without increasing volume beyond mezzo piano. The final four-bar line descends through quieter inner notes before the unadorned minor landing.')),
+dict(op=21,title='Rain Arcade',key='C',fifths=0,meter='7/4',bpm=58,
+ description='Marsh Afterimage\'s rising figure becomes C-E-G-A in an expansive seven-beat span. A moving lower line and displaced upper entrances pass through A minor, D dominant and G major before a chromatic shift into D-flat carries a held E towards E-flat. F-minor ninths and a G-dominant return restore C; an A-flat reflection briefly colours the final phrase.',
+ difficulty='Upper intermediate / early advanced',
+ technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=9),
+ technical_note='Seven-beat measures with shifting phrase groupings, tied suspensions, three-note RH voicings reaching a major seventh, an intentional LH major-ninth drop after a held chord, and one quicker minor-sixth bass shift. The slow tempo allows planned hand travel; all chords are sounded together as notated, without hidden rolling.',
+ parent_opus=18,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['C','E','G','A']),
+ ancestry=dict(source_opus=18,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['G','B','D','E'],transposition_semitones=5),
+ rh='''
+C5:1 E5:.5 G5:.5 A5:3 G5:1 E5:1~
+E5:1 D5:.5 C5:.5 A4:1 G4:.5 A4:.5 C5:1 E5:1 F5:1~
+F5:1 E5:.5 D5:.5 B4:1 A4:.5 G4:.5 F4+A4+E5:2 D5:1
+C5:2 E5:.5 G5:.5 B5:1 A5:1 G5:.5 E5:.5 D5:1~
+D5:1 C5:.5 A4:.5 F#4:1 E4:.5 F#4:.5 A4:1 C5:1 E5:1
+D5:1 B4:.5 A4:.5 G4:1 A4:.5 B4:.5 D5:1 F#5:1 E5:1~
+E5:1 Eb5:.5 F5:.5 Ab5:1 C6:1 Bb5:.5 Ab5:.5 F5:1 Eb5:1~
+Eb5:1 C5:.5 Ab4:.5 G4:1 Bb4:.5 C5:.5 Eb5:1 G5:1 F5:1
+E5:1 D5:.5 B4:.5 Ab4:1 G4:.5 F4:.5 D4+G4+B4:2 C5:1~
+C5:1 E5:.5 G5:.5 A5:2 G5:.5 E5:.5 D5:1 B4:1
+C5:1 Eb5:.5 G5:.5 Bb5:1 Ab5:.5 G5:.5 Eb5:1 D5:1 C5:1~
+C5:1 B4:.5 A4:.5 G4:1 E4+G4+D5:2 G4+C5+E5:2
+''',
+ lh='''
+C3:1.5 G3:1 E4:1.5 D4:.5 B3:.5 A3:2
+F3:1 C4:1 A3:.5 G3:.5 E3:1 F3:1 A3+C4:2
+G2:1 D3:1 F3:1 B3:1 A3:1 F3:1 R:1
+A2:1.5 E3:1 C4:.5 G3:1 E3:1 B3:1 R:1
+D3:1 A3:1 F#3:.5 E3:.5 C4:1 A3:.5 F#3:.5 E3:1 D3:1
+G2:1.5 D3:1 F#3:.5 B3:1 A3:1 G3:1 D3:1
+Db3:1.5 Ab3:1 C4:.5 F3:1 Ab3+Eb4:2 C4:1
+F3:1 C4:1 Ab3:.5 G3:.5 Eb3:1 Bb3:1 C4:1 Ab3:1
+G3:1 F3:1 B3:.5 A3:.5 Ab3:1 D3:1 G3+B3:1 R:1
+C3:1 E3:.5 G3:.5 B3:1 D4:1 A3:.5 G3:.5 E3:1 R:1
+Ab2:1.5 Eb3:1 C4:.5 G3:1 Bb3+Eb4:1.5 D4:.5 C4:1
+C3:1 G3:1 B3:.5 A3:.5 G3:2 C3+G3:2
+''',sections={1:'p',4:'pp',6:'mp',9:'p',10:'pp'},words={1:'poco rubato',12:'poco rit.'},
+ slurs=[(1,3),(4,5),(6,9),(10,12)],lower_phrases=[(1,2),(3,5),(6,8),(9,10),(11,12)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,5),('diminuendo',5,6),('crescendo',6,8),('diminuendo',8,9),('crescendo',10,11),('diminuendo',11,12)],tempo_changes={},group=2,
+ performance=dict(rubato=[58,57,52,57,54,59,55,57,50,55,51,42],
+  phrase_arcs=[[0,20,4],[21,34,3],[35,62,5],[63,84,-1]],
+  lower_entries=[[0,14],[14,35],[35,56],[56,70],[70,82]],pedal_bars=list(range(1,13)),pedal_lift=.28,gate=.99,
+  note='The unequal phrases gather and release across seven-beat bars. The bass travels independently beneath the sustained treble; the chromatic side-step holds back slightly before the F-minor return gains motion.'))
 ]
