@@ -7,6 +7,9 @@ from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text());report=[]
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
+# Compare score onsets at the exported MIDI resolution. This also represents
+# triplet thirds exactly on the 960-tick grid, without float equality errors.
+def onset_tick(beat):return round(float(beat)*960)
 for p in cat:
  if args.opus is not None and p['op'] not in args.opus:continue
  d=OUT/p['folder'];stem=p['stem'];r=ET.parse(d/(stem+'.musicxml')).getroot()
@@ -20,8 +23,8 @@ for p in cat:
    ns=[n] if isinstance(n,note.Note) else list(n.notes)
    for cn in ns:
     if cn.tie is None or cn.tie.type=='start':
-     score_count+=1;actual.append((round(float(n.offset),6),cn.pitch.midi))
- expected=[(e['offset'],pi) for e in p['events'] for pi in e['pitches']]
+     score_count+=1;actual.append((onset_tick(n.offset),cn.pitch.midi))
+ expected=[(onset_tick(e['offset']),pi) for e in p['events'] for pi in e['pitches']]
  assert collections.Counter(actual)==collections.Counter(expected),('MusicXML pitch/onset mismatch',stem)
  assert score_count==p['note_onsets']<=256
  mid=mido.MidiFile(d/(stem+'.mid'));midi_notes=[]
@@ -32,7 +35,7 @@ for p in cat:
    if msg.type=='note_on' and msg.velocity>0:
     assert (msg.channel,msg.note) not in active
     active[(msg.channel,msg.note)]=tick
-    midi_notes.append((tick/mid.ticks_per_beat,msg.note))
+    midi_notes.append((onset_tick(tick/mid.ticks_per_beat),msg.note))
    if msg.type=='note_off' or (msg.type=='note_on' and msg.velocity==0):
     assert (msg.channel,msg.note) in active
     del active[(msg.channel,msg.note)]
@@ -93,6 +96,13 @@ for p in cat:
    elif sl.get('type')=='stop':
     assert opened.pop(sn)==n.findtext('staff')
  assert not opened
+ tuplets=collections.Counter()
+ for n in r.findall('.//note'):
+  modification=n.find('time-modification')
+  if modification is not None:
+   tuplets[(n.findtext('staff','1'),int(modification.findtext('actual-notes')),int(modification.findtext('normal-notes')))]+=1
+ for hand in p.get('tuplet_hands',[]):
+  assert tuplets[('1' if hand=='rh' else '2',3,2)]>0,('Missing notated triplets',p['op'],hand)
  pages=len(PdfReader(d/(stem+'.pdf')).pages)
  assert 1<=pages<=4
  stats={}
@@ -118,6 +128,7 @@ for p in cat:
  report.append(dict(piece=p['title'],opus=p['op'],score_pages=pages,bars=p['bars'],pitch_onsets=score_count,audio_seconds=p['duration_seconds'],hands=stats,checks='PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration'))
  report[-1]['midi_highlight_timing_error_seconds']=round(timing_error,7)
  if p['op']>=21:report[-1]['technical_review']=dict(difficulty=p['difficulty'],limits=limits,note=p['technical_note'])
+ if tuplets:report[-1]['notated_tuplet_notes']={':'.join(map(str,k)):v for k,v in tuplets.items()}
  if p['op']>=7:
   patterns=[]
   for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']%p['beats_per_bar'],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))

@@ -483,4 +483,57 @@ F2:1 C3:1 Eb3+Ab3:1 F3+C4:2
   phrase_arcs=[[0,14,3],[15,29,4],[30,49,5],[50,64,4],[65,80,-2]],
   lower_entries=[[0,15],[15,25],[30,45],[45,60],[60,78]],pedal_bars=list(range(1,17)),pedal_lift=.24,gate=.99,
   note='Quiet quartal shapes contrast with a singing upper line. The bass moves independently through syncopated entries, and the C-major window briefly releases the tension before the altered-dominant return.'))
+,
+dict(op=23,title='Tern Palimpsest',key='g',fifths=-2,meter='4/4',bpm=62,
+ description='The F-A-flat-C-E-flat bass of Sedge Observatory rises into G-B-flat-D-F. Triplet quarters float over the other hand\'s duple pulse, then pass into the bass while the upper voice sustains. G minor moves through F and B-flat, an A-flat/D-flat reflection and a C-minor return; a clear final triad gathers the layers into one place.',
+ difficulty='Advanced rhythmic independence',
+ technique_limits=dict(chord_span=7,melodic_leap=14,rapid_leap=7),
+ technical_note='Quarter-note triplets against duple quarter notes create real 3:2 crossings; the triplet figure transfers between the hands. Compact chords keep the focus on independent pulse, legato and voicing. A planned LH major-ninth register change follows bar 7; no hidden timing jitter or chord rolling is used.',
+ tuplet_hands=['rh','lh'],
+ parent_opus=22,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['G','Bb','D','F']),
+ ancestry=dict(source_opus=22,source_hand='lh',source_start_beat=10,source_end_beat=15,source_pitches=['F','Ab','C','Eb'],transposition_semitones=2),
+ rh='''
+G4:2/3 Bb4:2/3 D5:2/3 F5:2~
+F5:1 Eb5:.5 D5:.5 Bb4:1 A4:1
+G4:1 A4:.5 C5:.5 Eb5:1 D5:1
+D5:2/3 F5:2/3 A5:2/3 G5:1 F#5:1
+G5:1 D5:.5 Bb4:.5 A4:1 G4:1~
+G4:1 Bb4:2/3 D5:2/3 F5:2/3 E5:1
+E5:2 C5:1 A4:1
+Bb4:1 D5:.5 F5:.5 A5:1 G5:1
+F5:2/3 Eb5:2/3 C5:2/3 Bb4:1 Ab4:1
+G4:1 Bb4:.5 Db5:.5 F5:1 Eb5:1~
+Eb5:1 D5:.5 B4:.5 Ab4:1 G4:1
+C5:1 Eb5:.5 G5:.5 Bb5:2
+A5:2/3 F#5:2/3 D5:2/3 C5:1 A4:1
+G4:2/3 Bb4:2/3 D5:2/3 F5:1 E5:1
+D5:1 C5:.5 A4:.5 G4:1 F4:1
+F#4:1 A4:.5 C5:.5 Eb5:1 D5:1~
+D5:1 C5:.5 Bb4:.5 G4+Bb4+D5:2
+''',
+ lh='''
+G2:1 D3:1 F3:1 A3:1
+Bb2:1 F3:.5 A3:.5 D3:1 R:1
+C3:1 Eb3+Bb3:1.5 G3:.5 D4:1
+D3:1 A3:1 C4:1 F#3:1
+G3:1 D4:.5 Bb3:.5 F3:1 R:1
+C3:1 E3:1 Bb3:1 G3:1
+F3:2/3 A3:2/3 C4:2/3 E4:1 C4:1
+Bb2:1 D3+A3:2 F3:1
+Ab2:1 Eb3:1 G3:1 C4:1
+Db3:1 Ab3:1 F3:1 Eb3:1
+G3:1 F3+B3:1.5 Ab3:.5 D4:1
+C3:2/3 Eb3:2/3 G3:2/3 Bb3:1 D4:1
+D3:1 F#3+C4:1.5 A3:.5 R:1
+G3:1 D3:1 Bb3:1 A3:1~
+A3:.5 G3:.5 Eb3+Bb3:2 C3:1
+D3:1 C3+F#3:1.5 A3:.5 Eb3:1
+G2:1 D3:1 G3+Bb3:2
+''',sections={1:'p',4:'pp',8:'mp',11:'p',14:'pp'},words={1:'poco rubato',16:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,10),(11,14),(15,17)],lower_phrases=[(2,3),(6,8),(10,12),(14,17)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,6),('diminuendo',6,7),('diminuendo',8,10),('crescendo',11,12),('diminuendo',12,14),('diminuendo',15,17)],tempo_changes={},group=3,
+ performance=dict(rubato=[62,60,55,61,62,60,54,63,60,54,59,62,58,54,52,48,40],
+  phrase_arcs=[[0,11,3],[12,27,4],[28,39,4],[40,55,4],[56,68,-2]],
+  lower_entries=[[4,12],[20,32],[36,48],[52,66]],pedal_bars=list(range(1,18)),pedal_lift=.25,gate=.99,
+  note='The triplets retain their exact three-to-two relationship through the rubato map. Their transfer to the bass brings the lower line forward while the upper voice holds back; the final phrase resolves into a single shared cadence.'))
 ]

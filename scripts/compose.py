@@ -1,4 +1,5 @@
 from pathlib import Path
+from fractions import Fraction
 import json, math, argparse, xml.etree.ElementTree as ET
 from new_pieces import NEW_PIECES
 from dream_pieces import DREAM_PIECES
@@ -198,7 +199,7 @@ def parse_rows(s):
         for tok in row.split():
             pitches,dur=tok.split(':')
             if dur.endswith('~'):pitches+='~';dur=dur[:-1]
-            events.append((pitches,float(dur)))
+            events.append((pitches,float(Fraction(dur))))
         rows.append(events)
     return rows
 

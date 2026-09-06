@@ -22,7 +22,8 @@
         "maximum_simultaneous_span_semitones": 3
       }
     },
-    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration"
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 9e-06
   },
   {
     "piece": "Velvet Estuary",
@@ -692,6 +693,52 @@
       "left_hand_rhythm_patterns": 11,
       "left_hand_most_frequent_pattern_bars": 5,
       "sounded_pitches_per_minute": 117.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Tern Palimpsest",
+    "opus": 23,
+    "score_pages": 1,
+    "bars": 17,
+    "pitch_onsets": 151,
+    "audio_seconds": 78.53,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced rhythmic independence",
+      "limits": {
+        "chord_span": 7,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Quarter-note triplets against duple quarter notes create real 3:2 crossings; the triplet figure transfers between the hands. Compact chords keep the focus on independent pulse, legato and voicing. A planned LH major-ninth register change follows bar 7; no hidden timing jitter or chord rolling is used."
+    },
+    "notated_tuplet_notes": {
+      "1:3:2": 18,
+      "2:3:2": 6
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 119.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
   }
