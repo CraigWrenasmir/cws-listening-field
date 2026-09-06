@@ -1342,4 +1342,56 @@ R:4
   phrase_arcs=[[0,7.8,3],[8,15.8,2],[16,31.8,3],[32,39.8,3],[40,47.8,2],[48,64,-2]],
   inner_entries=[[1,7],[33,39]],tenor_entries=[[8,14],[40,46]],lower_entries=[[9,15],[41,47]],pedal_lift=.18,gate=.995,
   note='Let each answer emerge as a second singing line, with the leading voice still audible. The left-hand exchanges should feel like the same music heard from a lower register, rather than a change of character. Keep the connecting chordal passages warm, and let the final return lose weight as it settles into the ninth.'))
+,
+dict(op=115,title='Basalt Driftway',key='f',fifths=-4,meter='4/4',bpm=54,
+ description='Flint Atrium’s G–F–E-flat–C becomes C–B-flat–A-flat–F. Four appearances of the six-note descending phrase begin at successively later points in the bar: zero, half a beat, one beat and one-and-a-half beats. Its harmony moves through F minor, G minor and E-flat minor before returning. Ties let the melody float over the bar lines and the changing lower voicings.',
+ difficulty='Advanced displaced phrase entries and cross-bar sustains',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The six-note phrase begins in bars 1, 5, 9 and 13, displaced by another half quarter beat on each appearance. Its durations remain 1.5, 0.5, 1, 2, 1 and 2 quarter beats. Observe the cross-bar ties, especially where an arrival continues into the next bar rather than beginning again. The second phrase is two semitones higher, the third two lower, and the fourth returns to the original pitches. Keep the quieter LH dyads separate from the melody’s changing points of arrival.',
+ parent_opus=114,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['C','Bb','Ab','F']),
+ ancestry=dict(source_opus=114,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=4,source_pitches=['G','F','Eb','C'],transposition_semitones=5),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.18] for bar,cuts in enumerate([[0,1.5,2,3,4],[0,1,2,4],[0,1,1.5,2,3,4],[0,1,1.5,2,4],[0,.5,1.5,2,2.5,3.5,4],[0,1.5,2,2.5,4],[0,.5,1,1.5,2,3,4],[0,1,2,2.5,3,4],[0,1,1.5,2.5,3,4],[0,2,3,4],[0,1,1.5,2,3,4],[0,1,1.5,2,3,4],[0,1.5,2,3,3.5,4],[0,.5,2,2.5,3.5,4],[0,1,1.5,2,2.5,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+C6:1.5 Bb5:.5 Ab5:1 F5:1~
+F5:1 Eb5:1 C5:2
+Ab5:1 G5:.5 F5:.5 Eb5:2
+D5:1 F5:.5 Ab5:.5 C6:2
+R:.5 D6:1.5 C6:.5 Bb5:1 G5:.5~
+G5:1.5 F5:1 D5:1.5~
+D5:.5 R:.5 F5:1 A5:1 Ab5:1
+G5:1 F5:1 Eb5:.5 Db5:.5 C5:1
+R:1 Bb5:1.5 Ab5:.5 Gb5:1
+Eb5:2 Db5:1 Bb4:1~
+Bb4:1 R:.5 Db5:.5 F5:1 Ab5:1
+G5:1 F5:.5 Eb5:.5 C5:1 Bb4:1
+R:1.5 C6:1.5 Bb5:.5 Ab5:.5~
+Ab5:.5 F5:2 Eb5:1 C5:.5~
+C5:1.5 B4:.5 Ab4:1 G4:1
+F4+G4+Ab4+C5+Eb5:4
+''',
+ lh='''
+F3:1.5 C4:.5 Eb4:2
+Db3+Ab3:2 G3+C4:2
+Bb2:1 F3:.5 Ab3:1.5 C4:1
+D3+Ab3:1.5 C4+F4:2.5
+G3:1.5 D4:1 Bb3:1.5
+Eb3+Bb3:2 A3+D4:2
+C3:1 G3:.5 Bb3:1.5 E4:1
+F3+A3:2 Eb3+G3:2
+Eb3:1.5 Bb3:1 Db4:1.5
+Cb3+Gb3:2 F3+Bb3:2
+Ab2:1 Eb3:.5 Gb3:1.5 C4:1
+Db3+Ab3:1.5 C4+E4:2.5
+F3:1.5 C4:.5 Eb4:2
+Db3+Ab3:2 G3+C4:2
+Bb2:1 F3:.5 Ab3:1.5 B3:1
+F3+C4:4
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'p',6:'pp',7:'mp',8:'p',9:'p',10:'pp',11:'mp',12:'p',13:'p',14:'pp',15:'pp',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,7),(8,8),(9,11),(12,12),(13,16)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('crescendo',7,8),('crescendo',9,11),('diminuendo',12,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,47,55,49,53,46,54,48,51,44,52,45,48,41,34,26],
+  phrase_arcs=[[0,7.8,3],[8,15.8,3],[16.5,24.4,3],[25,32.8,2],[33,40.8,3],[41.5,49.3,2],[49.5,57.4,2],[57.5,64,-2]],
+  lower_entries=[],pedal_lift=.18,gate=.995,
+  note='Let the melody’s later entries feel like a phrase leaning gently across the pulse. Keep the long notes connected through their ties while the lower voicings change underneath. The last appearance should be the least insistent, opening into a soft ninth at the close.'))
 ]
