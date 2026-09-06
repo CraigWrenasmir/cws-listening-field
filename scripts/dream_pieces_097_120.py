@@ -1512,4 +1512,64 @@ F3+C4:6
   phrase_arcs=[[0,9,3],[9,18,3],[18,27,3],[27,36,2],[36,48,3],[48,57,-2],[60,69,3],[69,78,3],[78,87,3],[87,96,2],[96,108,-2]],
   lower_entries=[],pedal_lift=.18,gate=.995,
   note='Shape each nine-beat melody as a single breath across the six-beat bars. Let the chordal middle grow warmer before its shared silence. The reversed phrases should have the same patient movement even as their contours turn upwards and the first rises into a higher register.'))
+
+,
+dict(op=118,title='Sorrel Doorway',key='g',fifths=-2,meter='4/4',bpm=53,
+ description='Rutile Colonnade’s D-flat–C–B-flat–A-flat becomes E-flat–D–C–B-flat. One quietly held diminished chord opens into four different minor-seventh harmonies: G, B-flat, C-sharp and E. The upper lines change rhythm and spelling as each new tonal centre emerges. Connecting phrases carry their colours into a final G-minor sixth/ninth.',
+ difficulty='Advanced enharmonic pivots and changing minor centres',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The LH diminished chords in bars 3, 7, 11 and 15 use the same four sounding pitches, with different spellings where needed. Each resolves into a different minor-seventh chord in the next bar. The RH’s last note in each diminished passage rises a semitone to the new tonic; the four approaches have different rhythms. Keep the held LH chords very quiet so the changing melodic direction remains clear. The C-sharp-minor passage uses B-sharp as its leading note. Take time over the chord changes and the final register descent.',
+ parent_opus=117,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['Eb','D','C','Bb']),
+ ancestry=dict(source_opus=117,source_hand='rh',source_start_beat=36,source_end_beat=43,source_pitches=['Db','C','Bb','Ab'],transposition_semitones=2),
+ lower_sections={1:'pp',9:'p',11:'pp',13:'p',15:'pp',17:'pp'},
+ system_starts=[1,3,5,7,9,11,13,15,17],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,1,1.5,3,4],[0,1.5,2,3,4],[0,4],[0,4],[0,1,1.5,2.5,4],[0,2,3,4],[0,4],[0,4],[0,1.5,2,3,4],[0,.5,1.5,2.5,4],[0,4],[0,4],[0,1,1.5,2,2.5,4],[0,1,1.5,2,3,4],[0,4],[0,4],[0,1,1.5,2.5,4],[0,1,2,2.5,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+Eb5:1 D5:.5 C5:1.5 Bb4:1
+F5:1.5 Eb5:.5 D5:1 A4:1
+A4:1 C5:.5 Eb5:1 F#5:1.5
+G5:1 F5:.5 D5:1 Bb4:1.5
+Ab4:1 C5:.5 Eb5:1 D5:1.5
+C5:2 Bb4:1 Ab4:1
+C5:.5 Eb5:1 Gb5:1.5 A5:1
+Bb5:1.5 Ab5:.5 F5:.5 Db5:1.5
+Ab5:1.5 Gb5:.5 F5:1 Eb5:1
+D5:.5 F5:1 Ab5:1 E5:1.5
+D#5:1.5 F#5:.5 A5:.5 B#5:1.5
+C#6:2 B5:.5 G#5:.5 E5:1
+D5:1 F5:.5 A5:1 G5:1.5
+F#5:1 E5:1 D5:1 B4:1
+F#4:.5 A4:.5 C5:1 D#5:2
+E5:1 D5:1 B4:1 G4:1
+Bb4:1 D5:.5 F5:1 E5:1.5
+D5:1 C5:1 A4:.5 F#4:.5 E4:1
+G4+A4+Bb4+D5+E5:4
+''',
+ lh='''
+G2:1 D3:.5 F3:1.5 A3:1
+Eb3+Bb3:2 D3+A3:2
+F#3+A3+C4+Eb4:4
+G3+Bb3+D4+F4:4
+Ab2:1 Eb3:.5 G3:1 Bb3:1.5
+Db3+Ab3:2 C4+F4:2
+Gb3+A3+C4+Eb4:4
+Bb2+Db3+F3+Ab3:4
+Gb3+Db4:2 F3+C4:2
+E3+B3:1.5 G3+D4:2.5
+F#3+A3+B#3+D#4:4
+C#3+E3+G#3+B3:4
+D3+A3:2 C4+F4:2
+B2+F#3:1.5 A3+D4:2.5
+F#3+A3+C4+D#4:4
+E3+G3+B3+D4:4
+Eb3+Bb3:1.5 G3+D4:2.5
+D3:1 A3:1 C4:1 F#3:1
+G3+D4:4
+''',sections={1:'p',2:'mp',3:'p',4:'pp',5:'p',6:'pp',7:'p',8:'pp',9:'mp',10:'p',11:'p',12:'pp',13:'mp',14:'p',15:'p',16:'pp',17:'p',18:'pp',19:'pp'},words={1:'poco rubato',18:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16),(17,19)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16),(17,18)],
+ hairpins=[('crescendo',1,2),('diminuendo',17,19)],tempo_changes={},group=2,
+ performance=dict(rubato=[53,50,49,42,51,46,48,41,53,47,46,39,50,44,43,37,41,33,25],
+  phrase_arcs=[[0,8,3],[8,16,3],[16,24,2],[24,32,3],[32,40,3],[40,48,3],[48,56,3],[56,64,2],[64,76,-2]],
+  lower_entries=[],pedal_lift=.2,gate=.995,
+  note='Let the same diminished chord feel suspended each time, with the upper line suggesting where it might settle. The four resolutions should arrive gently and take a little more time. Keep the held lower chords soft enough for their common tones to remain a background glow.'))
 ]

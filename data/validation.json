@@ -21859,5 +21859,284 @@
       "sounded_pitches_per_minute": 72.9,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Sorrel Doorway",
+    "opus": 118,
+    "score_pages": 2,
+    "bars": 19,
+    "pitch_onsets": 151,
+    "audio_seconds": 114.52,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 85,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 10
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced enharmonic pivots and changing minor centres",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The LH diminished chords in bars 3, 7, 11 and 15 use the same four sounding pitches, with different spellings where needed. Each resolves into a different minor-seventh chord in the next bar. The RH\u2019s last note in each diminished passage rises a semitone to the new tonic; the four approaches have different rhythms. Keep the held LH chords very quiet so the changing melodic direction remains clear. The C-sharp-minor passage uses B-sharp as its leading note. Take time over the chord changes and the final register descent."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.3
+      ],
+      [
+        1.5,
+        2.8
+      ],
+      [
+        3,
+        3.8
+      ],
+      [
+        4,
+        5.3
+      ],
+      [
+        5.5,
+        5.8
+      ],
+      [
+        6,
+        6.8
+      ],
+      [
+        7,
+        7.8
+      ],
+      [
+        8,
+        11.8
+      ],
+      [
+        12,
+        15.8
+      ],
+      [
+        16,
+        16.8
+      ],
+      [
+        17,
+        17.3
+      ],
+      [
+        17.5,
+        18.3
+      ],
+      [
+        18.5,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        22.8
+      ],
+      [
+        23,
+        23.8
+      ],
+      [
+        24,
+        27.8
+      ],
+      [
+        28,
+        31.8
+      ],
+      [
+        32,
+        33.3
+      ],
+      [
+        33.5,
+        33.8
+      ],
+      [
+        34,
+        34.8
+      ],
+      [
+        35,
+        35.8
+      ],
+      [
+        36,
+        36.3
+      ],
+      [
+        36.5,
+        37.3
+      ],
+      [
+        37.5,
+        38.3
+      ],
+      [
+        38.5,
+        39.8
+      ],
+      [
+        40,
+        43.8
+      ],
+      [
+        44,
+        47.8
+      ],
+      [
+        48,
+        48.8
+      ],
+      [
+        49,
+        49.3
+      ],
+      [
+        49.5,
+        49.8
+      ],
+      [
+        50,
+        50.3
+      ],
+      [
+        50.5,
+        51.8
+      ],
+      [
+        52,
+        52.8
+      ],
+      [
+        53,
+        53.3
+      ],
+      [
+        53.5,
+        53.8
+      ],
+      [
+        54,
+        54.8
+      ],
+      [
+        55,
+        55.8
+      ],
+      [
+        56,
+        59.8
+      ],
+      [
+        60,
+        63.8
+      ],
+      [
+        64,
+        64.8
+      ],
+      [
+        65,
+        65.3
+      ],
+      [
+        65.5,
+        66.3
+      ],
+      [
+        66.5,
+        67.8
+      ],
+      [
+        68,
+        68.8
+      ],
+      [
+        69,
+        69.8
+      ],
+      [
+        70,
+        70.3
+      ],
+      [
+        70.5,
+        70.8
+      ],
+      [
+        71,
+        71.8
+      ],
+      [
+        72,
+        75.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "2": "mp",
+        "3": "p",
+        "4": "pp",
+        "5": "p",
+        "6": "pp",
+        "7": "p",
+        "8": "pp",
+        "9": "mp",
+        "10": "p",
+        "11": "p",
+        "12": "pp",
+        "13": "mp",
+        "14": "p",
+        "15": "p",
+        "16": "pp",
+        "17": "p",
+        "18": "pp",
+        "19": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "9": "p",
+        "11": "pp",
+        "13": "p",
+        "15": "pp",
+        "17": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 81.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
