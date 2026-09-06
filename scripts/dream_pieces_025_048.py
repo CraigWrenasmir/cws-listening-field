@@ -1045,4 +1045,55 @@ Ab2+Eb3:3
   phrase_arcs=[[0,8,3],[9,20,4],[21,32,4],[33,44,3],[45,54,-2]],
   lower_entries=[[0,6],[6,15],[15,24],[24,30],[30,39],[39,48],[48,54]],pedal_bars=list(range(1,19)),pedal_lift=.22,gate=.99,
   note='The cross-rhythms remain soft and even within each hand, arriving without an accent on the shared final beat. Harmonic shifts carry the phrase forward. The last three bars gradually withdraw into a low, warm sixth/ninth voicing.'))
+,
+dict(op=43,title='Silver Culvert',key='F',fifths=-1,meter='5/4',bpm=56,
+ description='Sorrel Pendulum’s descending turn becomes C–A–G–F in the left hand. The melody then passes between the hands, with rests making room for the next reply. F-major colour opens towards G and E minor before a D-flat reflection interrupts the exchange. A move through B-flat major and minor brings the music back to a closely voiced F-major ninth.',
+ difficulty='Advanced exchanged-phrase study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Several phrases pass between the hands without a gap in the melodic line, while the other hand rests. The tone needs to remain consistent through each handover. Printed pedal changes clarify these exchanges and the late shift from B-flat major to minor. Elsewhere the hands overlap in independent phrases.',
+ parent_opus=42,motif=dict(hand='lh',start_beat=0,end_beat=3,pitches=['C','A','G','F']),
+ ancestry=dict(source_opus=42,source_hand='rh',source_start_beat=24,source_end_beat=27,source_pitches=['B','G#','F#','E'],transposition_semitones=1),
+ pedal_spans=[[0,2.8],[3,4.8],[5,7.8],[8,9.8],[10,11.8],[12,14.8],[15,19.8],[20,24.8],[25,29.8],[30,34.8],[35,39.8],[40,44.8],[45,47.8],[48,49.8],[50,52.8],[53,54.8],[55,56.8],[57,59.8],[60,64.8],[65,67.8],[68,69.8],[70,74.8],[75,79.8]],
+ rh='''
+R:3 F4+A4+E5:2
+D5:1 C5:.5 A4:.5 G4:1 R:2
+R:2 G4:1 A4:.5 C5:.5 Bb4:1
+A4:3 R:2
+R:1 C5:1 D5:.5 E5:.5 G5:2
+F#5:2 E5:1 D5:2
+B4+D5+A5:3 G5:1 R:1
+R:1 F#5:1 G5:.5 B5:.5 A5:2
+G5:2 E5:.5 D5:.5 C5:2
+R:3 Db5:1 F5:1
+Eb5:1 Db5:.5 Bb4:.5 Ab4:1 R:2
+R:2 A4:1 C5:.5 Eb5:.5 D5:1
+C5:3 D5:1 Eb5:1
+D5:2 C5:1 Ab4:2
+G4+Bb4+E5:2 D5:1 C5:2
+A4:1 G4:.5 F4:.5 E4+G4+A4:3
+''',
+ lh='''
+C4:1 A3:.5 G3:.5 F3:1 R:2
+R:3 D3:1 A3:1
+Bb3:1 A3:1 R:3
+F3:1 C4:1 E4:1 D4:1 C4:1
+E3:1 R:2 C4:1 B3:1
+D3:2 A3:1 C4:1 F#3:1
+G3:1 D4:1 B3:1 R:1 A3:1
+E3:1 R:2 G3:1 F#3:1
+C3:1 G3:1 B3:1 R:2
+Db3:1 Ab3:.5 C4:.5 F3:1 R:2
+R:3 Eb3:1 Bb3:1
+F3:1 C4:1 R:3
+Bb2:1 F3:1 A3:1 D4:1 C4:1
+Bb3:2 F3:1 Ab3:1 Db4:1
+C3:1 G3:1 Bb3:1 E3:2
+F3:2 C3+F3:3
+''',sections={1:'p',4:'pp',5:'p',7:'mp',9:'pp',10:'p',13:'mp',14:'p',15:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,9),(10,12),(13,16)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,14),(15,16)],
+ hairpins=[('diminuendo',1,4),('crescendo',5,7),('diminuendo',7,9),('crescendo',10,12),('diminuendo',13,16)],tempo_changes={},group=4,
+ performance=dict(rubato=[56,54,58,49,54,58,60,54,47,52,55,57,54,49,43,34],
+  phrase_arcs=[[0,19,3],[20,44,4],[45,59,3],[60,80,-2]],
+  lower_entries=[[0,3],[8,12],[15,20],[23,30],[30,35],[38,45],[45,48],[53,57],[60,70],[70,80]],pedal_lift=.2,gate=.99,
+  note='The melodic handovers keep a similar dynamic weight, with the bass lifted slightly when it takes over a phrase. Pedal clears around the exposed exchanges. The two hands gradually overlap more fully before the final compact major-ninth chord.'))
 ]
