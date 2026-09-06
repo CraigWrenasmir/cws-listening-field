@@ -4,12 +4,13 @@ import {fileURLToPath} from 'node:url';
 const root=new URL('../',import.meta.url),data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
 assert(data.length>=6);assert.equal(new Set(data.map(p=>p.op)).size,data.length);assert.equal(new Set(data.map(p=>p.slug)).size,data.length);
 for(const p of data){
+ assert(p.beats>0);
  assert(p.duration>15&&p.performance<p.duration);assert(p.pages>=1&&p.pages<=4);assert(p.note_onsets<=256);assert(/^\d{14}$/.test(p.stamp));
  assert.equal(p.events.reduce((n,e)=>n+e.ps.length,0),p.note_onsets);
  if(p.parent)assert(data.some(a=>a.op===p.parent));
  const visited=new Set();let parent=p;while(parent?.parent){assert(!visited.has(parent.op),'Cyclic musical ancestry');visited.add(parent.op);parent=data.find(a=>a.op===parent.parent);}
  const scoreText=(await Promise.all(p.scores.map(url=>readFile(new URL(url,root),'utf8')))).join('\n');
- for(const e of p.events){assert(e.s>=0&&e.e>e.s&&e.e<=p.performance+.1);assert(scoreText.includes('id="'+e.id+'"'),'Missing score note '+e.id);}
+ for(const e of p.events){assert(e.b>=0&&e.d>0&&e.b+e.d<=p.beats+.001);assert(e.s>=0&&e.e>e.s&&e.e<=p.performance+.1);assert(scoreText.includes('id="'+e.id+'"'),'Missing score note '+e.id);}
  const motif=p.events.filter(e=>e.h===p.motif.hand&&(!p.motif.voice||e.v===p.motif.voice)&&e.b>=p.motif.start_beat&&e.b<p.motif.end_beat).slice(0,4);
  const pitchClass={Cb:11,C:0,'C#':1,Db:1,D:2,'D#':3,Eb:3,E:4,'E#':5,Fb:4,F:5,'F#':6,Gb:6,G:7,'G#':8,Ab:8,A:9,'A#':10,Bb:10,B:11,'B#':0};
  assert.deepEqual(motif.map(e=>e.p%12),p.motif.pitches.map(n=>pitchClass[n]),'Motif mismatch in '+p.title);

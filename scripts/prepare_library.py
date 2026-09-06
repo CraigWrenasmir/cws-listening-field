@@ -3,6 +3,7 @@ from pathlib import Path
 import json,re,xml.etree.ElementTree as ET,argparse
 from pypdf import PdfReader
 from collection_volumes import build_volumes
+from meter_plan import bar_plan
 ROOT=Path(__file__).resolve().parents[1]
 cat=json.loads((ROOT/'data/catalog.json').read_text())
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
@@ -45,7 +46,7 @@ for p in cat:
    text=ET.tostring(tree.getroot(),encoding='unicode')
    text=re.sub(r'@font-face\s*\{[^}]*\}','',text)
    (ROOT/s).write_text(text)
- entry=dict(op=p['op'],title=p['title'],slug=f'cws-op-{p["op"]:03d}-'+p['title'].lower().replace(' ','-'),stamp=p['composition_stamp'],beats=p['bars']*p['beats_per_bar'],duration=p['duration_seconds'],performance=p['performance_seconds'],audio=prefix+'.mp3',pdf=prefix+'.pdf',midi=prefix+'.mid',xml=prefix+'.musicxml',scores=scores,parent=parent,motif=motif,note_onsets=p['note_onsets'],pages=pages,
+ entry=dict(op=p['op'],title=p['title'],slug=f'cws-op-{p["op"]:03d}-'+p['title'].lower().replace(' ','-'),stamp=p['composition_stamp'],beats=bar_plan(p)[3],duration=p['duration_seconds'],performance=p['performance_seconds'],audio=prefix+'.mp3',pdf=prefix+'.pdf',midi=prefix+'.mid',xml=prefix+'.musicxml',scores=scores,parent=parent,motif=motif,note_onsets=p['note_onsets'],pages=pages,
   events=[dict(id=e['id'],h=e['hand'],b=e['offset'],d=e['duration'],p=max(e['pitches']),ps=e['pitches'],s=e['seconds'],e=e['end_seconds'],**({'v':e['voice']} if e.get('voice') else {})) for e in p['events']])
  manifest.append(entry)
 (ROOT/'library.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
@@ -60,7 +61,8 @@ if readme.exists():
  table='## Catalogue\n\n| Opus | Piece | Metre | Sounded notes | PDF | Recording |\n|---|---|---|---:|---|---|\n'
  for p in cat:
   prefix=f'pieces/{p["folder"]}/{p["stem"]}'
-  table+=f'| CWS Op. {p["op"]} | {p["title"]} | {p["meter"]} | {p["note_onsets"]} | [Score]({prefix}.pdf) | [MP3]({prefix}.mp3) |\n'
+  metre_label=', '.join(dict.fromkeys(p['meters']))+' (changing)' if p.get('meters') else p['meter']
+  table+=f'| CWS Op. {p["op"]} | {p["title"]} | {metre_label} | {p["note_onsets"]} | [Score]({prefix}.pdf) | [MP3]({prefix}.mp3) |\n'
  table+='\n[Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.\n\n'
  text=re.sub(r'## Catalogue\n.*?(?=## Run the gallery)',lambda _:table,text,flags=re.S)
  text=text.replace('all six works','all catalogue works')

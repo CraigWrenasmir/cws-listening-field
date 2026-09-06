@@ -1,5 +1,7 @@
 from pathlib import Path
 from fractions import Fraction
+from bisect import bisect_right
+from meter_plan import bar_plan
 import json, math, argparse, xml.etree.ElementTree as ET
 from new_pieces import NEW_PIECES
 from dream_pieces import DREAM_PIECES
@@ -214,7 +216,7 @@ def make_score(p):
     all_events=[]
     parts=[]
     refs={}
-    bpb=float(meter.TimeSignature(p['meter']).barDuration.quarterLength)
+    metres,bar_lengths,bar_starts,total_beats=bar_plan(p,len(parse_rows(p['rh'])))
     for hand in ['rh','lh']:
         held=None
         part=stream.PartStaff(id=hand)
@@ -226,10 +228,11 @@ def make_score(p):
         rows=parse_rows(p[hand])
         assert len(rows)==len(parse_rows(p['rh']))
         for mi,row in enumerate(rows,1):
-            assert abs(sum(d for _,d in row)-bpb)<1e-8,(p['title'],hand,mi,row)
+            assert abs(sum(d for _,d in row)-bar_lengths[mi-1])<1e-8,(p['title'],hand,mi,row)
             m=stream.Measure(number=mi)
+            if mi==1 or metres[mi-1]!=metres[mi-2]:
+                m.insert(0,meter.TimeSignature(metres[mi-1]))
             if mi==1:
-                m.insert(0,meter.TimeSignature(p['meter']))
                 m.insert(0,key.KeySignature(p['fifths']))
                 m.insert(0,clef.TrebleClef() if hand=='rh' else clef.BassClef())
             if hand=='rh':
@@ -270,7 +273,7 @@ def make_score(p):
                         held['duration']+=dur
                         event=held
                     else:
-                        event=dict(id=n.id,hand=hand,bar=mi,offset=(mi-1)*bpb+offset,duration=dur,pitches=pitches,spellings=[x.nameWithOctave for x in n.pitches])
+                        event=dict(id=n.id,hand=hand,bar=mi,offset=bar_starts[mi-1]+offset,duration=dur,pitches=pitches,spellings=[x.nameWithOctave for x in n.pitches])
                         all_events.append(event)
                     held=event if sustain else None
                 else:assert not sustain
@@ -287,7 +290,7 @@ def make_score(p):
         assert len(inner_rows)==len(parse_rows(p['rh']))
         for event in all_events:event['voice']='upper' if event['hand']=='rh' else 'bass'
         for mi,row in enumerate(inner_rows,1):
-            assert abs(sum(d for _,d in row)-bpb)<1e-8,(p['title'],'inner',mi,row)
+            assert abs(sum(d for _,d in row)-bar_lengths[mi-1])<1e-8,(p['title'],'inner',mi,row)
             measure=parts[0].measure(mi);upper=stream.Voice(id='1');inner=stream.Voice(id='2')
             for n in list(measure.notesAndRests):
                 position=n.offset;measure.remove(n)
@@ -313,7 +316,7 @@ def make_score(p):
                     if held:
                         held['duration']+=dur;event=held
                     else:
-                        event=dict(id=n.id,hand='rh',voice='inner',bar=mi,offset=(mi-1)*bpb+offset,duration=dur,pitches=[x.midi for x in n.pitches],spellings=[x.nameWithOctave for x in n.pitches])
+                        event=dict(id=n.id,hand='rh',voice='inner',bar=mi,offset=bar_starts[mi-1]+offset,duration=dur,pitches=[x.midi for x in n.pitches],spellings=[x.nameWithOctave for x in n.pitches])
                         all_events.append(event)
                     held=event if sustain else None
                 else:assert not sustain
@@ -326,7 +329,7 @@ def make_score(p):
         assert len(tenor_rows)==len(parse_rows(p['lh']))
         for event in all_events:event.setdefault('voice','upper' if event['hand']=='rh' else 'bass')
         for mi,row in enumerate(tenor_rows,1):
-            assert abs(sum(d for _,d in row)-bpb)<1e-8,(p['title'],'tenor',mi,row)
+            assert abs(sum(d for _,d in row)-bar_lengths[mi-1])<1e-8,(p['title'],'tenor',mi,row)
             measure=parts[1].measure(mi);bass=stream.Voice(id='1');tenor=stream.Voice(id='2')
             for n in list(measure.notesAndRests):
                 position=n.offset;measure.remove(n)
@@ -353,7 +356,7 @@ def make_score(p):
                     if held:
                         held['duration']+=dur;event=held
                     else:
-                        event=dict(id=n.id,hand='lh',voice='tenor',bar=mi,offset=(mi-1)*bpb+offset,duration=dur,pitches=[x.midi for x in n.pitches],spellings=[x.nameWithOctave for x in n.pitches])
+                        event=dict(id=n.id,hand='lh',voice='tenor',bar=mi,offset=bar_starts[mi-1]+offset,duration=dur,pitches=[x.midi for x in n.pitches],spellings=[x.nameWithOctave for x in n.pitches])
                         all_events.append(event)
                     held=event if sustain else None
                 else:assert not sustain
@@ -374,12 +377,12 @@ def make_score(p):
         hp=(dynamics.Crescendo if kind=='crescendo' else dynamics.Diminuendo)(refs[('rh',start)][0],refs[('rh',end)][0]);hp.placement='below';parts[0].insert(0,hp)
     previous_end=0
     for start,end in p.get('pedal_spans',[]):
-        assert previous_end<=start<end<=len(rows)*bpb
+        assert previous_end<=start<end<=total_beats
         anchors=[]
         for position in [start,end]:
-            measure_number=min(len(rows),int(position//bpb)+1)
+            measure_number=min(len(rows),bisect_right(bar_starts,position))
             anchor=spanner.SpannerAnchor()
-            parts[1].measure(measure_number).insert(position-(measure_number-1)*bpb,anchor)
+            parts[1].measure(measure_number).insert(position-bar_starts[measure_number-1],anchor)
             anchors.append(anchor)
         mark=expressions.PedalMark(*anchors)
         mark.pedalType=expressions.PedalType.Sustain
@@ -448,7 +451,8 @@ def main():
         tree.write(xmlpath,encoding='utf-8',xml_declaration=True)
         onset_count=sum(len(e['pitches']) for e in events)
         assert onset_count<=256
-        bpb=float(meter.TimeSignature(p['meter']).barDuration.quarterLength)
+        metres,bar_lengths,bar_starts,total_beats=bar_plan(p,len(parse_rows(p['rh'])))
+        bpb=None if p.get('meters') else bar_lengths[0]
         entry=dict(prior.get(p['op'],{}))
         entry.update({k:v for k,v in p.items() if k not in ('rh','rh_inner','lh','lh_upper','slurs','subtitle','tempo','words')})
         if p.get('rh_inner') or p.get('lh_upper'):
@@ -469,6 +473,10 @@ def main():
         entry.update(folder=folder.name,stem=stem,bars=len(parse_rows(p['rh'])),beats_per_bar=bpb,note_onsets=onset_count,events=events,
                      version=STYLE['format_version'],note_limit=256,page_limit=4,
                      composition_time=record['composition_time'],composition_stamp=record['composition_stamp'],composition_time_source=record['source'])
+        if p.get('meters'):
+            entry.update(bar_beats=bar_lengths,bar_offsets=bar_starts,total_beats=total_beats)
+        else:
+            for field in ['meters','bar_beats','bar_offsets','total_beats']:entry.pop(field,None)
         (folder/(stem+'.json')).write_text(json.dumps(entry,indent=2)+'\n')
         catalog.append(entry)
         print(p['title'],len(parse_rows(p['rh'])),'bars;',onset_count,'sounded pitch onsets')

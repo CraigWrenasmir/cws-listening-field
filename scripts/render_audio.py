@@ -1,6 +1,8 @@
 from pathlib import Path
 import json, math, subprocess, wave, argparse, os
 import mido
+from bisect import bisect_right
+from meter_plan import bar_plan
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text())
@@ -11,7 +13,8 @@ TPB=960
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
 for p in cat:
     if args.opus is not None and p['op'] not in args.opus:continue
-    d=OUT/p['folder'];stem=p['stem'];bpb=p['beats_per_bar'];beats=bpb*p['bars']
+    d=OUT/p['folder'];stem=p['stem']
+    metres,bar_lengths,bar_starts,beats=bar_plan(p);bpb=bar_lengths[0]
     performance=p.get('performance',{})
     mid=mido.MidiFile(type=1,ticks_per_beat=TPB)
     conductor=mido.MidiTrack();mid.tracks.append(conductor)
@@ -36,13 +39,20 @@ for p in cat:
         if mi==p['bars']:bpm*=.75 # the notated final fermata
         bar_bpms.append(bpm)
     tempo_map=[]
-    positions=np.arange(0,beats,.5) if performance else np.arange(0,beats,bpb)
-    last_tick=0
+    positions=sorted(set(np.arange(0,beats,.5))|set(bar_starts)) if performance else bar_starts
+    conductor_events=[]
+    for i,signature in enumerate(metres[1:],1):
+        if signature!=metres[i-1]:
+            numerator,denominator=map(int,signature.split('/'))
+            conductor_events.append((round(bar_starts[i]*TPB),0,mido.MetaMessage('time_signature',numerator=numerator,denominator=denominator)))
     for beat in positions:
-        bpm=float(np.interp(beat,np.arange(p['bars'])*bpb,bar_bpms)) if performance else bar_bpms[round(beat/bpb)]
+        bpm=float(np.interp(beat,bar_starts,bar_bpms)) if performance else bar_bpms[bisect_right(bar_starts,beat)-1]
         microseconds=mido.bpm2tempo(bpm);tick=round(float(beat)*TPB)
-        conductor.append(mido.MetaMessage('set_tempo',tempo=microseconds,time=tick-last_tick));last_tick=tick
+        conductor_events.append((tick,1,mido.MetaMessage('set_tempo',tempo=microseconds)))
         tempo_map.append(dict(beat=float(beat),microseconds=microseconds))
+    last_tick=0
+    for tick,_,message in sorted(conductor_events,key=lambda event:(event[0],event[1])):
+        message.time=tick-last_tick;conductor.append(message);last_tick=tick
     conductor.append(mido.MetaMessage('end_of_track',time=round(beats*TPB)-last_tick))
     def seconds_at(beat):
         total=0
@@ -79,7 +89,7 @@ for p in cat:
             if performance:
                 swell=sum(round(amount*math.sin(math.pi*(ev['offset']-start)/(end-start))) for start,end,amount in performance['phrase_arcs'] if start<=ev['offset']<=end)
             for kind,startbar,endbar in p['hairpins']:
-                startbeat=(startbar-1)*bpb;endbeat=(endbar-1)*bpb
+                startbeat=bar_starts[startbar-1];endbeat=bar_starts[endbar-1]
                 if startbeat<=ev['offset']<=endbeat:
                     position=(ev['offset']-startbeat)/(endbeat-startbeat)
                     if kind=='crescendo':swell+=round(7*position)
@@ -106,7 +116,7 @@ for p in cat:
         # their existing per-bar rendering unchanged.
         pedal_spans=p.get('pedal_spans')
         if pedal_spans is None:
-            pedal_spans=[((mi-1)*bpb+.1,mi*bpb-performance.get('pedal_lift',.04))
+            pedal_spans=[(bar_starts[mi-1]+.1,bar_starts[mi-1]+bar_lengths[mi-1]-performance.get('pedal_lift',.04))
                          for mi in range(1,p['bars']+1)
                          if ((mi in performance.get('pedal_bars',[])) if performance else (mi%4==0 or mi==p['bars']))]
         for startbeat,endbeat in pedal_spans:

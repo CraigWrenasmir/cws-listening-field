@@ -4,6 +4,7 @@ import mido
 from music21 import converter, note, chord
 from music21.pitch import Pitch
 from pypdf import PdfReader
+from meter_plan import bar_plan
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text());report=[]
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
@@ -13,6 +14,12 @@ def onset_tick(beat):return round(float(beat)*960)
 for p in cat:
  if args.opus is not None and p['op'] not in args.opus:continue
  d=OUT/p['folder'];stem=p['stem'];r=ET.parse(d/(stem+'.musicxml')).getroot()
+ metres,bar_lengths,bar_starts,total_beats=bar_plan(p)
+ if p.get('meters'):
+  assert p['bar_beats']==bar_lengths and p['bar_offsets']==bar_starts and p['total_beats']==total_beats
+  for event in p['events']:
+   i=event['bar']-1
+   assert bar_starts[i]<=event['offset']<bar_starts[i]+bar_lengths[i]
  ids=[n.get('id') for n in r.findall('.//note') if n.get('id')]
  assert len(ids)==len(set(ids)),('duplicate IDs',stem)
  score=converter.parse(str(d/(stem+'.musicxml')))
@@ -27,11 +34,12 @@ for p in cat:
  expected=[(onset_tick(e['offset']),pi) for e in p['events'] for pi in e['pitches']]
  assert collections.Counter(actual)==collections.Counter(expected),('MusicXML pitch/onset mismatch',stem)
  assert score_count==p['note_onsets']<=256
- mid=mido.MidiFile(d/(stem+'.mid'));midi_notes=[]
+ mid=mido.MidiFile(d/(stem+'.mid'));midi_notes=[];midi_metres=[]
  for tr in mid.tracks:
   tick=0;active={}
   for msg in tr:
    tick+=msg.time
+   if msg.type=='time_signature':midi_metres.append((onset_tick(tick/mid.ticks_per_beat),f'{msg.numerator}/{msg.denominator}'))
    if msg.type=='note_on' and msg.velocity>0:
     assert (msg.channel,msg.note) not in active
     active[(msg.channel,msg.note)]=tick
@@ -41,6 +49,8 @@ for p in cat:
     del active[(msg.channel,msg.note)]
   assert not active
  assert collections.Counter(midi_notes)==collections.Counter(expected),('MIDI pitch/onset mismatch',stem)
+ expected_meters=[(onset_tick(bar_starts[i]),signature) for i,signature in enumerate(metres) if i==0 or signature!=metres[i-1]]
+ assert midi_metres==expected_meters,('MIDI metre change mismatch',p['op'],midi_metres,expected_meters)
  if p.get('pedal_spans'):
   expected_pedal=[(onset_tick(start),onset_tick(end)) for start,end in p['pedal_spans']]
   for channel in [0,1]:
@@ -112,22 +122,33 @@ for p in cat:
     if len(voices)>1:assert None not in notation_voices[staff]
     assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
- pedal_directions=[]
+ pedal_directions=[];notated_signature=None;notated_meters=[]
  for measure in r.findall('.//part/measure'):
-  cursor=0;max_end=0
+  mi=int(measure.get('number'))-1
+  cursor=0;max_end=0;voice_durations=collections.Counter()
+  signatures={f'{t.findtext("beats")}/{t.findtext("beat-type")}' for t in measure.findall('attributes/time')}
+  if signatures:
+   assert len(signatures)==1,('Hands have conflicting metres',p['op'],mi+1,signatures)
+   signature=signatures.pop()
+   if signature!=notated_signature:notated_meters.append((onset_tick(bar_starts[mi]),signature))
+   notated_signature=signature
+  assert notated_signature==metres[mi],('Printed metre mismatch',p['op'],mi+1,notated_signature,metres[mi])
   for el in measure:
    if el.tag=='attributes' and el.find('divisions') is not None:divisions=int(el.findtext('divisions'))
    elif el.tag=='backup':cursor-=int(el.findtext('duration'))
    elif el.tag=='forward':cursor+=int(el.findtext('duration'))
    elif el.tag=='direction' and el.find('direction-type/pedal') is not None:
     direction=el.find('direction-type/pedal')
-    beat=(int(measure.get('number'))-1)*p['beats_per_bar']+(cursor+float(el.findtext('offset','0')))/divisions
+    beat=bar_starts[mi]+(cursor+float(el.findtext('offset','0')))/divisions
     pedal_directions.append((onset_tick(beat),direction.get('type'),el.findtext('staff','1')))
    elif el.tag=='note':
     dur=int(el.findtext('duration','0'))
-    if el.find('chord') is None:cursor+=dur
+    if el.find('chord') is None:
+     cursor+=dur;voice_durations[(el.findtext('staff','1'),el.findtext('voice','1'))]+=dur
     max_end=max(max_end,cursor)
-  assert max_end==p['beats_per_bar']*divisions,(stem,measure.get('number'),max_end)
+  assert max_end==bar_lengths[mi]*divisions,(stem,measure.get('number'),max_end)
+  if p.get('meters'):assert all(value==bar_lengths[mi]*divisions for value in voice_durations.values()),('Independent bar duration mismatch',p['op'],mi+1,voice_durations)
+ assert notated_meters==expected_meters,('Printed metre changes differ',p['op'],notated_meters,expected_meters)
  if p.get('pedal_spans'):
   expected_marks=sorted((onset_tick(beat),kind,'2') for span in p['pedal_spans'] for beat,kind in zip(span,['start','stop']))
   assert sorted(pedal_directions)==expected_marks,('Printed pedal span mismatch',p['op'],pedal_directions,expected_marks)
@@ -200,9 +221,10 @@ for p in cat:
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
+ if p.get('meters'):report[-1]['verified_meter_changes']=[dict(beat=tick/960,meter=signature) for tick,signature in expected_meters]
  if p['op']>=7:
   patterns=[]
-  for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']%p['beats_per_bar'],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))
+  for measure in range(1,p['bars']+1):patterns.append(tuple((e['offset']-bar_starts[measure-1],e['duration'],len(e['pitches'])) for e in p['events'] if e['hand']=='lh' and e['bar']==measure))
   report[-1]['musical_review_support']=dict(whole_piece_duplicate_or_transposition=False,left_hand_rhythm_patterns=len(set(patterns)),left_hand_most_frequent_pattern_bars=collections.Counter(patterns).most_common(1)[0][1],sounded_pitches_per_minute=round(p['note_onsets']/p['performance_seconds']*60,1),note='These structural checks do not establish artistic quality or replace listening feedback.')
  print(json.dumps(report[-1]))
 report_path=ROOT/'data/validation.json'

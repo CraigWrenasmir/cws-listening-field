@@ -900,4 +900,109 @@ G#3:2 B3:1 A#3:2
   phrase_arcs=[[0,24,4],[25,49,4],[50,69,3],[70,80,-2]],
   lower_entries=[[15,20],[35,40],[65,70]],tenor_entries=[[5,10],[30,35],[55,60]],inner_entries=[[20,25],[45,50]],pedal_lift=.22,gate=.995,
   note='The large four-note upper arc is kept continuous while the inner lines change pace. Tenor and inner answers briefly come closer, then return behind the melody. Pedal refreshes clear each harmonic field while held keys preserve the independent lines, and the final minor sixth fades in a closer register.'))
+,
+dict(op=61,title='Saffron Traverse',key='f',fifths=-4,meter='4/4',bpm=56,
+ meters=['4/4','5/4','3/4','4/4','4/4','5/4','5/4','3/4','4/4','5/4','3/4','4/4','5/4','4/4','3/4','5/4','4/4','3/4','4/4','5/4'],
+ description='Cypress Orbit’s tenor becomes F–A-flat–C–B-flat. Four voices move through bars of four, five and three quarter beats, allowing the phrases to expand and contract. The upper C remains held across the first change of metre; later an E-major reflection sustains through another boundary. D-flat, G and A-flat colours return to a close F-minor added ninth.',
+ difficulty='Advanced four-voice changing-metre study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the quarter-note pulse continuous as the printed metre changes between 4/4, 5/4 and 3/4. The upper line sometimes remains held across a change, while the inner voices and bass continue independently. Follow the phrase shape rather than accenting every new bar. Pedal refreshes follow the actual changing bar lengths, with finger sustain retaining the longer notes.',
+ parent_opus=60,motif=dict(hand='lh',voice='tenor',start_beat=0,end_beat=4,pitches=['F','Ab','C','Bb']),
+ ancestry=dict(source_opus=60,source_hand='lh',source_voice='tenor',source_start_beat=0,source_end_beat=5,source_pitches=['G#','B','D#','C#'],transposition_semitones=9),
+ page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=420),system_starts=[1,4,7,9,11,14,17,19],
+ pedal_spans=[[0,1.78],[2,3.78],[4,5.78],[6,8.78],[9,9.78],[10,11.78],[12,13.78],[14,15.78],[16,17.78],[18,19.78],[20,21.78],[22,24.78],[25,26.78],[27,29.78],[30,31.28],[31.5,32.78],[33,34.28],[34.5,36.78],[37,38.78],[39,41.78],[42,43.28],[43.5,44.78],[45,46.78],[47,48.78],[49,50.78],[51,53.78],[54,55.78],[56,57.78],[58,58.78],[59,60.78],[61,62.78],[63,65.78],[66,67.78],[68,69.78],[70,71.28],[71.5,72.78],[73,74.78],[75,76.78],[77,78.78],[79,81.78]],
+ rh='''
+C5:4~
+C5:1 Eb5:4
+Db5:2 C5:1
+Bb4:4
+C5:2 Eb5:2
+F5:3 Eb5:2
+D5:5
+C5:3
+Eb5:2 F5:2
+Gb5:3 F5:2
+E5:3~
+E5:1 D5:1 C5:2
+Db5:5
+C5:2 Bb4:2
+Ab4:3
+Bb4:2 C5:1 Db5:2
+C5:4~
+C5:1 Bb4:1 Ab4:1
+G4:2 F4:2
+Ab4:3 G4:2
+''',
+ rh_inner='''
+Ab4:1 Bb4:1 Ab4:2
+G4:2 Bb4:1 Db5:2
+F4:1 Ab4:1 Bb4:1
+Eb4:1 G4:.5 Ab4:.5 G4:2
+Ab4:2 G4:1 Bb4:1
+A4:2 C5:1 D5:2
+G4:2 B4:1 C5:2
+E4:1 G4:1 Bb4:1
+Ab4:1 C5:1 Db5:2
+Bb4:1 Db5:1 Eb5:1 Db5:2
+G#4:1 B4:1 C#5:1
+G4:1 B4:1 A4:2
+F4:2 Ab4:1 C5:2
+Eb4:1 G4:1 Ab4:2
+Db4:1 F4:1 Gb4:1
+Eb4:2 G4:1 Bb4:2
+Ab4:1 Bb4:1 Ab4:2
+G4:1 F4:1 Eb4:1
+C4:1 Eb4:1 Db4:2
+F4:2 Eb4:1 F4:2
+''',
+ lh='''
+Db3:4
+F3:5
+Bb2:1 D3:2
+Eb3:2 G3:2
+Ab2:2 C3:2
+D3:2 F3:3
+G2:2 B2:3
+C3:3
+Ab2:1.5 C3:2.5
+Db3:2 F3:3
+E3:3
+C3:2 E3:2
+Db3:2 F3:3
+F3:4
+Gb2:1 Bb2:2
+Eb3:2 G3:3
+Db3:4
+C3:3
+C3:2 E3:2
+F3:5
+''',
+ lh_upper='''
+F3:1 Ab3:1 C4:1 Bb3:1
+Ab3:1 C4:1 Eb4:1 D4:2
+F3:1 Ab3:1 C4:1
+Bb3:1 D4:1 F4:.5 Eb4:1.5
+Eb3:1 G3:1 Bb3:1 Ab3:1
+A3:1 C4:1 E4:1 D4:2
+D3:1 F#3:1 A3:1 G3:2
+G3:1 Bb3:1 A3:1
+Eb3:1 G3:.5 Bb3:.5 Ab3:2
+Ab3:1 C4:1 Eb4:1 Db4:2
+G#3:1 B3:1 D#4:1
+G3:1 B3:1 D4:.5 C4:1.5
+Ab3:1 C4:1 Eb4:1 Db4:2
+Ab3:1 C4:.5 Eb4:.5 D4:2
+Db3:1 F3:1 Ab3:1
+Bb3:1 D4:1 F4:1 Eb4:2
+F3:1 Ab3:1 C4:1 Bb3:1
+G3:1 Bb3:1 Ab3:1
+G3:1 Bb3:1 Ab3:1 Bb3:1
+Ab3:2 C4:1 Ab3:2
+''',sections={1:'p',2:'mp',3:'pp',4:'p',6:'mp',7:'p',8:'pp',9:'p',10:'mp',11:'pp',12:'p',13:'mp',14:'p',15:'pp',16:'mp',17:'p',18:'pp',19:'p',20:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(1,3),(4,8),(9,12),(13,16),(17,20)],lower_phrases=[(1,2),(3,5),(6,8),(9,11),(12,14),(15,17),(18,20)],
+ hairpins=[('crescendo',1,2),('diminuendo',2,3),('crescendo',4,6),('diminuendo',6,8),('crescendo',9,10),('diminuendo',10,11),('crescendo',12,13),('diminuendo',13,15),('diminuendo',16,20)],tempo_changes={},group=3,
+ performance=dict(rubato=[56,59,48,53,57,62,54,46,55,61,48,54,59,52,45,60,51,44,40,30],
+  phrase_arcs=[[0,11,3],[12,32,4],[33,48,4],[49,65,4],[66,82,-2]],
+  lower_entries=[[9,12],[25,30],[58,61],[73,77]],tenor_entries=[[0,4],[16,20],[66,70]],inner_entries=[[20,25],[45,49]],pedal_lift=.22,gate=.995,
+  note='The quarter pulse stays continuous while each phrase is given a different amount of room. The tenor opening and its late return come gently forward. Upper ties bridge metre changes without a fresh accent, and the last phrase closes around a soft minor added ninth.'))
 ]
