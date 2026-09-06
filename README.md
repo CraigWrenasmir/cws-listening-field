@@ -95,6 +95,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 77 | Ginkgo Crossing | 5/4 | 150 | [Score](pieces/CWS_Op_077_Ginkgo_Crossing/CWS_Op_077_Ginkgo_Crossing.pdf) | [MP3](pieces/CWS_Op_077_Ginkgo_Crossing/CWS_Op_077_Ginkgo_Crossing.mp3) |
 | CWS Op. 78 | Saffron Interstice | 7/4, 5/4, 4/4, 6/4, 3/4 (changing) | 165 | [Score](pieces/CWS_Op_078_Saffron_Interstice/CWS_Op_078_Saffron_Interstice.pdf) | [MP3](pieces/CWS_Op_078_Saffron_Interstice/CWS_Op_078_Saffron_Interstice.mp3) |
 | CWS Op. 79 | Clover Backwater | 4/4 | 165 | [Score](pieces/CWS_Op_079_Clover_Backwater/CWS_Op_079_Clover_Backwater.pdf) | [MP3](pieces/CWS_Op_079_Clover_Backwater/CWS_Op_079_Clover_Backwater.mp3) |
+| CWS Op. 80 | Tamarisk Confluence | 4/4 | 178 | [Score](pieces/CWS_Op_080_Tamarisk_Confluence/CWS_Op_080_Tamarisk_Confluence.pdf) | [MP3](pieces/CWS_Op_080_Tamarisk_Confluence/CWS_Op_080_Tamarisk_Confluence.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

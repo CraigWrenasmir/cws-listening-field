@@ -514,4 +514,97 @@ Eb3+Bb3:4
   phrase_arcs=[[0,19.5,4],[20,39.5,4],[40,55.5,3],[56,71.5,4],[72,88,-2]],
   lower_entries=[[8,12],[32,36],[44,48],[68,72]],pedal_lift=.22,gate=.99,
   note='The melody leans gently into its delayed entries and remains held across bar lines. The lower chord shapes answer the tune without a fixed repeated accompaniment. Quieter bass attacks leave the upper chord tones audible; the return slows across its last three bars into a plain major harmony.'))
+,
+dict(op=80,title='Tamarisk Confluence',key='G',fifths=1,meter='4/4',bpm=53,
+ description='Clover Backwater’s rising figure becomes G–B–D–F-sharp. At the centre, a held upper G and bass G surround a continuous ripple passed between the inner voices. One bar uses major colours and the next minor colours, while the outer notes remain unchanged. E-flat and A-flat reflections lead back through E minor and a borrowed C-minor shade to G sixth/ninth.',
+ difficulty='Advanced interlocking inner voices beneath sustained outer notes',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 6–7, the LH tenor and RH inner voice alternate sixteenth notes, beginning with the tenor. Each inner voice rests during the other’s note. Hold the upper G from the end of bar 5 through bar 7, and the bass G throughout bars 5–7. The LH changes to treble clef at bar 5 and returns to bass at bar 8. Pedal supports the ripple but the outer notes remain finger-held through its refreshes.',
+ parent_opus=79,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['G','B','D','F#']),
+ ancestry=dict(source_opus=79,source_hand='rh',source_start_beat=0,source_end_beat=8,source_pitches=['Eb','G','Bb','D'],transposition_semitones=4),
+ clef_changes={'lh':{5:'treble',8:'bass'}},
+ system_starts=[1,4,6,7,8,11,14],page_starts=[8],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,2,3,4],[0,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,2,4],[0,2,4],[0,2,3,4],[0,2,4],[0,1,2,4],[0,2,3,4],[0,1,2,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,4],[0,1,2,4],[0,2,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G4:1 B4:1 D5:1 F#5:1
+E5:2 D5:1 B4:1
+C5:3 B4:1
+F#5:1 E5:1 D5:2
+B5:2 A5:1 G5:1~
+G5:4~
+G5:4
+F5:2 Eb5:2
+D5:1 Eb5:1 G5:2
+F#5:3 E5:1
+D5:1.5 C5:.5 A4:2
+B4:1 D5:1 F#5:2
+G5:2 F#5:1 E5:1
+F#5:1 E5:1 C5:2
+D5:3 B4:1
+Eb5:2 D5:1 C5:1
+A4+B4+D5:4
+''',
+ rh_inner='''
+R:3 A4:1
+G4:2 F4:1 E4:1
+G4:2 E4:2
+A4:2 C5:2
+D5:2 C5:1 B4:1
+R:.25 B4:.25 R:.25 D5:.25 R:.25 E5:.25 R:.25 D5:.25 R:.25 B4:.25 R:.25 A4:.25 R:.25 B4:.25 R:.25 D5:.25
+R:.25 Bb4:.25 R:.25 D5:.25 R:.25 Eb5:.25 R:.25 D5:.25 R:.25 Bb4:.25 R:.25 A4:.25 R:.25 Bb4:.25 R:.25 D5:.25
+Bb4:2 G4:2
+Bb4:2 C5:2
+C#5:2 B4:2
+F#4:2 E4:2
+G4:2 B4:2
+C5:2 B4:1 A4:1
+A4:2 G4:2
+G4:2 E4:2
+A4:2 G4:2
+E4:4
+''',
+ lh='''
+G2:2 D3:2
+C3:2 G2:2
+A2:3 E3:1
+D3:2 A2:2
+G3:4~
+G3:4~
+G3:4
+Eb3:3 Bb2:1
+Ab2:2 Eb3:2
+D3:2 A2:2
+B2:3 F#3:1
+E3:2 B2:2
+A2:2 E3:2
+D3:2 A2:2
+G2:2 D3:2
+C3:2 G2:2
+G2:2 D3:2
+''',
+ lh_upper='''
+B2:2 F#3:2
+E3:2 D3:2
+C3:2 G3:1 A3:1
+F#3:1 G3:1 F#3:1 E3:1
+D4:2 E4:1 F#4:1
+B3:.25 R:.25 D4:.25 R:.25 E4:.25 R:.25 F#4:.25 R:.25 E4:.25 R:.25 D4:.25 R:.25 B3:.25 R:.25 A3:.25 R:.25
+Bb3:.25 R:.25 D4:.25 R:.25 Eb4:.25 R:.25 F4:.25 R:.25 Eb4:.25 R:.25 D4:.25 R:.25 Bb3:.25 R:.25 A3:.25 R:.25
+G3:2 F3:1 Eb3:1
+C3:2 F3:2
+F#3:1 A3:1 G3:2
+D#3:2 A3:1 C4:1
+G3:1 F#3:1 D3:2
+C3:1 D3:1 G3:1 F#3:1
+F#3:1 G3:1 F#3:1 E3:1
+B2:1 D3:1 F#3:2
+Eb3:1 F3:1 Eb3:2
+B2:2 G3:2
+''',sections={1:'p',2:'pp',4:'p',5:'mp',6:'p',7:'pp',8:'pp',9:'p',10:'mp',11:'p',12:'pp',13:'p',14:'p',15:'pp',16:'p',17:'pp'},words={1:'poco rubato',16:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,17)],lower_phrases=[(1,4),(5,8),(9,12),(13,17)],
+ hairpins=[('diminuendo',1,3),('diminuendo',5,8),('crescendo',9,10),('diminuendo',11,12),('diminuendo',13,15),('diminuendo',16,17)],tempo_changes={},group=3,
+ performance=dict(rubato=[53,48,44,54,58,51,46,41,49,55,46,42,52,45,39,35,27],
+  phrase_arcs=[[0,15.5,3],[16,31.5,4],[32,47.5,4],[48,68,-2]],
+  lower_entries=[[8,12],[40,44],[60,64]],inner_entries=[[20,28]],tenor_entries=[[20,28]],pedal_lift=.2,gate=.99,
+  note='The outer Gs stay still as the middle texture lights up in alternate hands. Major thirds and sixths darken by a semitone in the second ripple bar. Each short note stays light and the pedal supplies continuity between hands; the slow outer line returns to the foreground afterwards.'))
 ]
