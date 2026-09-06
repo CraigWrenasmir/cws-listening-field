@@ -129,6 +129,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 111 | Chalcedony Landing | 12/8 | 156 | [Score](pieces/CWS_Op_111_Chalcedony_Landing/CWS_Op_111_Chalcedony_Landing.pdf) | [MP3](pieces/CWS_Op_111_Chalcedony_Landing/CWS_Op_111_Chalcedony_Landing.mp3) |
 | CWS Op. 112 | Marl Sundial | 6/4 | 185 | [Score](pieces/CWS_Op_112_Marl_Sundial/CWS_Op_112_Marl_Sundial.pdf) | [MP3](pieces/CWS_Op_112_Marl_Sundial/CWS_Op_112_Marl_Sundial.mp3) |
 | CWS Op. 113 | Selenite Walkway | 5/4 | 96 | [Score](pieces/CWS_Op_113_Selenite_Walkway/CWS_Op_113_Selenite_Walkway.pdf) | [MP3](pieces/CWS_Op_113_Selenite_Walkway/CWS_Op_113_Selenite_Walkway.mp3) |
+| CWS Op. 114 | Flint Atrium | 4/4 | 126 | [Score](pieces/CWS_Op_114_Flint_Atrium/CWS_Op_114_Flint_Atrium.pdf) | [MP3](pieces/CWS_Op_114_Flint_Atrium/CWS_Op_114_Flint_Atrium.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

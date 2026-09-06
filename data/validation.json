@@ -20316,5 +20316,404 @@
       "sounded_pitches_per_minute": 57.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Flint Atrium",
+    "opus": 114,
+    "score_pages": 2,
+    "bars": 16,
+    "pitch_onsets": 126,
+    "audio_seconds": 91.61,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 36,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 15,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced alternating canons within each hand",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 1\u20132 and 9\u201310 the RH inner voice answers the upper voice one quarter beat later and seven semitones lower. In bars 3\u20134 and 11\u201312 the LH bass answers its tenor by the same delay and interval. Keep each six-note phrase distinct through the overlap. Separate staff dynamics bring the LH exchanges forward while the RH holds quiet chords. The later pair of canons is two semitones above the first. Allow time for the lower hand to travel out of its deep register after each answer."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8200000000000001
+      ],
+      [
+        1,
+        1.82
+      ],
+      [
+        2,
+        2.82
+      ],
+      [
+        3,
+        3.82
+      ],
+      [
+        4,
+        4.82
+      ],
+      [
+        5,
+        5.82
+      ],
+      [
+        6,
+        6.82
+      ],
+      [
+        7,
+        7.82
+      ],
+      [
+        8,
+        8.82
+      ],
+      [
+        9,
+        9.82
+      ],
+      [
+        10,
+        10.82
+      ],
+      [
+        11,
+        11.82
+      ],
+      [
+        12,
+        12.82
+      ],
+      [
+        13,
+        13.82
+      ],
+      [
+        14,
+        14.82
+      ],
+      [
+        15,
+        15.82
+      ],
+      [
+        16,
+        16.82
+      ],
+      [
+        17,
+        17.32
+      ],
+      [
+        17.5,
+        17.82
+      ],
+      [
+        18,
+        18.82
+      ],
+      [
+        19,
+        19.82
+      ],
+      [
+        20,
+        20.82
+      ],
+      [
+        21,
+        21.32
+      ],
+      [
+        21.5,
+        21.82
+      ],
+      [
+        22,
+        22.32
+      ],
+      [
+        22.5,
+        22.82
+      ],
+      [
+        23,
+        23.82
+      ],
+      [
+        24,
+        24.82
+      ],
+      [
+        25,
+        25.82
+      ],
+      [
+        26,
+        26.82
+      ],
+      [
+        27,
+        27.82
+      ],
+      [
+        28,
+        28.82
+      ],
+      [
+        29,
+        29.32
+      ],
+      [
+        29.5,
+        29.82
+      ],
+      [
+        30,
+        30.82
+      ],
+      [
+        31,
+        31.82
+      ],
+      [
+        32,
+        32.82
+      ],
+      [
+        33,
+        33.82
+      ],
+      [
+        34,
+        34.82
+      ],
+      [
+        35,
+        35.82
+      ],
+      [
+        36,
+        36.82
+      ],
+      [
+        37,
+        37.82
+      ],
+      [
+        38,
+        38.82
+      ],
+      [
+        39,
+        39.82
+      ],
+      [
+        40,
+        40.82
+      ],
+      [
+        41,
+        41.82
+      ],
+      [
+        42,
+        42.82
+      ],
+      [
+        43,
+        43.82
+      ],
+      [
+        44,
+        44.82
+      ],
+      [
+        45,
+        45.82
+      ],
+      [
+        46,
+        46.82
+      ],
+      [
+        47,
+        47.82
+      ],
+      [
+        48,
+        48.82
+      ],
+      [
+        49,
+        49.82
+      ],
+      [
+        50,
+        50.82
+      ],
+      [
+        51,
+        51.82
+      ],
+      [
+        52,
+        52.82
+      ],
+      [
+        53,
+        53.32
+      ],
+      [
+        53.5,
+        53.82
+      ],
+      [
+        54,
+        54.82
+      ],
+      [
+        55,
+        55.82
+      ],
+      [
+        56,
+        56.82
+      ],
+      [
+        57,
+        57.82
+      ],
+      [
+        58,
+        58.82
+      ],
+      [
+        59,
+        59.82
+      ],
+      [
+        60,
+        63.82
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "pp",
+        "4": "pp",
+        "5": "p",
+        "6": "mp",
+        "7": "p",
+        "8": "pp",
+        "9": "p",
+        "11": "pp",
+        "12": "pp",
+        "13": "p",
+        "14": "pp",
+        "15": "pp",
+        "16": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "3": "p",
+        "5": "pp",
+        "11": "p",
+        "13": "pp"
+      }
+    },
+    "verified_voice_phrases": [
+      {
+        "voice": "inner",
+        "start_beat": 1,
+        "end_beat": 7,
+        "swell": 3
+      },
+      {
+        "voice": "tenor",
+        "start_beat": 8,
+        "end_beat": 14,
+        "swell": 3
+      },
+      {
+        "voice": "inner",
+        "start_beat": 33,
+        "end_beat": 39,
+        "swell": 3
+      },
+      {
+        "voice": "tenor",
+        "start_beat": 40,
+        "end_beat": 46,
+        "swell": 3
+      }
+    ],
+    "verified_nonprinting_voice_rests": {
+      "inner": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "tenor": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 7,
+      "sounded_pitches_per_minute": 85.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

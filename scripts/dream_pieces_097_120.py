@@ -1251,4 +1251,95 @@ R:.5 Eb3+Bb3:1.5~ Eb3+Bb3:3
   phrase_arcs=[[0,4.8,3],[5,14.8,3],[15,27.8,3],[32,48.8,3],[51.5,64.4,2],[65.5,70,-2]],
   lower_entries=[[0,5]],pedal_lift=.18,gate=.995,
   note='Give the solitary lower opening the same singing quality as its higher answer. The three written gaps are part of the form: let them hang without filling them, then make the next phrase feel like a continuation of the same thought. The final pause is short enough for the last chord to feel close and warm.'))
+,
+dict(op=114,title='Flint Atrium',key='c',fifths=-3,meter='4/4',bpm=54,
+ description='Selenite Walkway’s F–E-flat–D-flat–B-flat becomes G–F–E-flat–C. A six-note descending subject receives an answer one beat later and a fifth lower, first in the RH inner voice, then in the LH bass beneath its tenor. A later D-minor reflection repeats both exchanges one whole tone higher. Chordal windows connect the canons before the C-minor ninth close.',
+ difficulty='Advanced alternating canons within each hand',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 1–2 and 9–10 the RH inner voice answers the upper voice one quarter beat later and seven semitones lower. In bars 3–4 and 11–12 the LH bass answers its tenor by the same delay and interval. Keep each six-note phrase distinct through the overlap. Separate staff dynamics bring the LH exchanges forward while the RH holds quiet chords. The later pair of canons is two semitones above the first. Allow time for the lower hand to travel out of its deep register after each answer.',
+ parent_opus=113,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['G','F','Eb','C']),
+ ancestry=dict(source_opus=113,source_hand='rh',source_start_beat=55,source_end_beat=60,source_pitches=['F','Eb','Db','Bb'],transposition_semitones=2),
+ lower_sections={1:'pp',3:'p',5:'pp',11:'p',13:'pp'},
+ hidden_voice_rests={'inner':[3,4,5,6,7,8,11,12,13,14,15,16],'tenor':[1,2,5,6,7,8,9,10,13,14,15,16]},
+ voice_phrases=[dict(voice='inner',start_beat=1,end_beat=7,swell=3),dict(voice='tenor',start_beat=8,end_beat=14,swell=3),dict(voice='inner',start_beat=33,end_beat=39,swell=3),dict(voice='tenor',start_beat=40,end_beat=46,swell=3)],
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=14,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.18] for bar,cuts in enumerate([[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,1.5,2,3,4],[0,1,1.5,2,2.5,3,4],[0,1,2,3,4],[0,1,1.5,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,1.5,2,3,4],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G5:1 F5:1 Eb5:1 C5:1
+Bb4:1 G4:1 R:2
+Bb4+Eb5+G5:4
+Ab4+C5+F5:4
+Ab5:1 G5:.5 F5:.5 Eb5:2
+D5:1 F5:.5 Ab5:1 G5:1.5
+F5:1 Eb5:1 D5:1 C5:1
+Bb4:1 D5:.5 F5:.5 Ab5:2
+A5:1 G5:1 F5:1 D5:1
+C5:1 A4:1 R:2
+C5+F5+A5:4
+Bb4+D5+G5:4
+G5:1 F5:1 Eb5:1 D5:1
+C5:1 Eb5:.5 F5:.5 G5:2
+Bb4:1 Ab4:1 G4:1 F4:1
+D4+Eb4+G4+Bb4:4
+''',
+ rh_inner='''
+R:1 C5:1 Bb4:1 Ab4:1
+F4:1 Eb4:1 C4:1 R:1
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+R:1 D5:1 C5:1 Bb4:1
+G4:1 F4:1 D4:1 R:1
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+''',
+ lh='''
+C3:4
+Ab2:4
+R:1 C3:1 Bb2:1 Ab2:1
+F2:1 Eb2:1 C2:1 R:1
+Eb3:1 Bb3:1 D4:1 G3:1
+G2:1 D3:1 F3:1 B3:1
+Ab2:1 Eb3:1 G3:1 Bb3:1
+A2:1 E3:1 G3:1 C#4:1
+D3:4
+Bb2:4
+R:1 D3:1 C3:1 Bb2:1
+G2:1 F2:1 D2:1 R:1
+C3:1 G3:1 Bb3:1 Eb4:1
+Ab3:1 Eb3:1 G3:1 Bb3:1
+G2:1 D3:1 F3:1 B3:1
+C3+G3:4
+''',
+ lh_upper='''
+R:4
+R:4
+G3:1 F3:1 Eb3:1 C3:1
+Bb2:1 G2:1 R:2
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+A3:1 G3:1 F3:1 D3:1
+C3:1 A2:1 R:2
+R:4
+R:4
+R:4
+R:4
+''',sections={1:'p',3:'pp',4:'pp',5:'p',6:'mp',7:'p',8:'pp',9:'p',11:'pp',12:'pp',13:'p',14:'pp',15:'pp',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,8),(9,10),(11,12),(13,16)],lower_phrases=[(3,4),(5,6),(7,8),(11,12),(13,14),(15,16)],
+ hairpins=[('crescendo',5,6),('diminuendo',7,8),('diminuendo',13,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,48,52,45,55,58,51,46,54,47,50,44,47,42,35,27],
+  phrase_arcs=[[0,7.8,3],[8,15.8,2],[16,31.8,3],[32,39.8,3],[40,47.8,2],[48,64,-2]],
+  inner_entries=[[1,7],[33,39]],tenor_entries=[[8,14],[40,46]],lower_entries=[[9,15],[41,47]],pedal_lift=.18,gate=.995,
+  note='Let each answer emerge as a second singing line, with the leading voice still audible. The left-hand exchanges should feel like the same music heard from a lower register, rather than a change of character. Keep the connecting chordal passages warm, and let the final return lose weight as it settles into the ninth.'))
 ]
