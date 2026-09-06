@@ -210,4 +210,53 @@ G3+B3:3
   phrase_arcs=[[0,8,3],[9,20,4],[21,32,4],[33,44,4],[45,56,2],[57,66,-2]],
   lower_entries=[[0,9],[9,21],[21,30],[33,45],[45,57]],pedal_bars=list(range(1,23)),pedal_lift=.2,gate=.99,
   note='The quintuplets flow as single gestures across two beats. The whole-tone ascent briefly suspends the tonal centre; the following B restores G-major warmth. The bass quintuplet answers beneath a still upper note, then the ending broadens.'))
+,
+dict(op=29,title='Fallow Tramway',key='c',fifths=-3,meter='5/4',bpm=58,
+ description='The bass begins alone with Haze Contour\'s four-note memory shifted to C-E-flat-G-B-flat. The upper voice arrives a beat later and keeps its own five-beat phrases. C minor opens unexpectedly into E minor; E-flat major then softens the change. A chromatic B dominant brushes against C minor before the distant E-minor colour returns, and a quieter F-minor/G-dominant passage finally settles the piece.',
+ difficulty='Advanced chromatic counterpoint',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The melody enters after the bass, with phrase endings displaced between the hands. Distant tonal colours require fluent accidental reading and close control of the two-note and three-note voicings. Brief triplets pass between the hands. The bass reaches across registers at the slow tempo; it remains below the treble throughout.',
+ tuplet_hands=['rh','lh'],
+ parent_opus=26,motif=dict(hand='lh',start_beat=0,end_beat=4,pitches=['C','Eb','G','Bb']),
+ ancestry=dict(source_opus=26,source_hand='rh',source_start_beat=12,source_end_beat=15,source_pitches=['F#','A','C#','E'],transposition_semitones=6),
+ rh='''
+R:1 G5:3 D5:1~
+D5:1 Eb5:.5 G5:.5 Ab5:2 G5:1
+F5:1 Eb5:.5 D5:.5 C5:1 Bb4:1 R:1
+B4+E5:2 F#5:.5 G5:.5 B5:1 A5:1
+G5:1 F#5:.5 E5:.5 D5:2 C5:1
+Bb4+Eb5:2 F5:2/3 G5:2/3 Bb5:2/3 Ab5:1
+G5:1 F5:.5 Eb5:.5 D5:1 C5:1 Ab4:1~
+Ab4:1 G4:.5 F4:.5 Eb4+Ab4:2 G4:1
+F#4+A4+D#5:2 E5:1 F#5:.5 A5:.5 G5:1
+G5:2 F5:.5 Eb5:.5 D5:1 C5:1
+B4+E5:2 G5:1 F#5:1 E5:1~
+E5:1 Eb5:.5 D5:.5 C5:1 Bb4:1 G4:1
+F4+Ab4+Eb5:2 D5:1 C5:.5 Bb4:.5 Ab4:1
+G4+B4+F5:2 Eb5:1 D5:.5 C5:.5 B4:1
+Eb4+G4+D5:3 C5:1 G4+C5+Eb5:1
+''',
+ lh='''
+C3:1 Eb3:.5 G3:.5 Bb3:1 D4:1 C4:1
+Ab2:1 Eb3:1 G3:1 C4:.5 Bb3:.5 Ab3:1
+F3:1 C4:1 Ab3:1 G3:.5 F3:.5 Eb3:1
+E3:1 B3:1 D4:1 G3:1 F#3:1
+C3:1 G3:.5 B3:.5 E4:1 D4:1 C4:1
+Eb3:1 Bb3:1 D4:1 G3:.5 F3:.5 Eb3:1
+Ab2:1 Eb3:1 G3:.5 Bb3:.5 C4:1 Ab3:1
+F3:1 Ab3:2/3 C4:2/3 Eb3:2/3 C4:1 Ab3:1
+B2:1 F#3:1 A3:1 D#4:1 C4:1
+C3:1 G3:1 Bb3:1 Eb4:1 D4:.5 C4:.5
+E3:1 B3:1 D4:.5 E4:.5 G3:1 F#3:1
+Eb3:1 Bb3:1 D4:1 F3:1 G3:1
+F3:1 C4:1 Eb4:1 Ab3:.5 G3:.5 F3:1
+G2:1 D3:1 F3:1 Ab3:1 B3:1
+C3:1 G3:1 Bb3:1 Eb3+G3:2
+''',sections={1:'p',4:'pp',6:'mp',8:'p',9:'mp',11:'pp',14:'p',15:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,3),(4,5),(6,8),(9,10),(11,12),(13,15)],lower_phrases=[(1,2),(3,5),(6,7),(8,10),(11,13),(14,15)],
+ hairpins=[('crescendo',1,2),('diminuendo',2,3),('diminuendo',4,5),('diminuendo',6,8),('diminuendo',9,10),('crescendo',11,12),('diminuendo',13,15)],tempo_changes={},group=3,
+ performance=dict(rubato=[58,55,49,54,50,57,53,47,56,48,52,47,49,43,35],
+  phrase_arcs=[[0,14,4],[15,24,2],[25,39,4],[40,49,3],[50,59,2],[60,75,-2]],
+  lower_entries=[[0,10],[10,25],[25,35],[35,50],[50,65],[65,75]],pedal_bars=list(range(1,16)),pedal_lift=.24,gate=.99,
+  note='The bass speaks before the melody and releases its phrases at different points. The remote minor colours stay quiet; the closer dominant passages carry a little more weight. Each return to C minor broadens, with the final tonic separated from its preceding ninth colour.'))
 ]

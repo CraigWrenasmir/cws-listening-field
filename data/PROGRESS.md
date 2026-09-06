@@ -33,7 +33,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 27, Moss Interchange — complete locally: 21 bars of 4/4, 183 sounded pitches, one inspected page, 100.94 seconds. Rain Arcade's rising figure becomes a D-flat jazz ballad, with an E-minor/A-major window and a D-dominant approach back to the tonic. 6 RH and 6 LH triplet notes; RH span eleven semitones, LH slow leap twelve and quicker shift nine. One bass connection was revised and phrase-based system breaks avoid a stranded final bar. Score/MIDI, audio, ancestry and layout checks passed. Awaiting publication and listening feedback.
 - Op. 25–27 publication is now verified; Craig's listening feedback remains outstanding.
 - Op. 28, Birch Hypotenuse — complete locally: 22 bars of 3/4, 159 sounded pitches, one inspected page, 84.77 seconds. Ten RH and five LH quintuplet notes are independently verified as 5:4 in MusicXML. A whole-tone ascent over D dominant resolves into G; the bass later answers in quintuplets. The upper line reaches E6, and two intentional LH eleventh descents were reviewed and documented after full quarter notes at the slow tempo. Score/MIDI, audio, ancestry and layout checks passed. Awaiting publication and listening feedback.
-- Next: compose Op. 29; publish Op. 28–30 together.
+- Op. 29, Fallow Tramway — complete locally: 15 bars of 5/4, 167 sounded pitches, one inspected page, 98.06 seconds. The bass introduces a C-minor ancestor before the upper voice enters. C minor and E minor recur as contrasting colours; a chromatic B-dominant approach gives way to a more settled F-minor/G-dominant close. The two hands end phrases at different points. Three triplet notes in each hand, RH span eleven semitones, LH slow leap sixteen and quicker shift nine. Score/MIDI, audio, ancestry and layout checks passed. Awaiting publication and listening feedback.
+- Next: compose Op. 30; publish Op. 28–30 together.
 
 ## Growth work to complete during this run
 
