@@ -247,6 +247,7 @@ def make_score(p):
                 new_system=mi in p['system_starts'] if p.get('system_starts') else (mi-1)%p['group']==0
                 if new_system:
                     m.insert(0,layout.SystemLayout(isNew=True))
+                if mi in p.get('page_starts',[]):m.insert(0,layout.PageLayout(isNew=True))
             offset=0
             refs[(hand,mi)]=[]
             for ei,(ps,dur) in enumerate(row):

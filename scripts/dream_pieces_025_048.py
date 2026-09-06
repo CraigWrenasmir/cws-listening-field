@@ -539,4 +539,108 @@ Eb3+Bb3:6
   phrase_arcs=[[0,11,2],[12,23,3],[24,35,2],[36,47,3],[48,59,1],[60,72,-2]],
   lower_entries=[[0,12],[12,24],[24,36],[36,48],[48,60]],pedal_bars=[],gate=.995,
   note='Sustained colour and silence carry the phrasing. The explicitly written pedal changes preserve each field but release at the harmonic turns; the two colours within bar 11 receive separate pedal spans. The final ninth is allowed to recede with the room sound.'))
+,
+dict(op=35,title='Lunar Towpath',key='bb',fifths=-5,meter='4/4',bpm=61,
+ description='Tidal Lacuna\'s small turn becomes B-flat-D-flat-C-B-flat in a longer three-voice nocturne. The upper phrase passes through three-, four- and five-bar spans while the inner line changes pace beneath it. A D-flat region opens towards E-flat major; a later circle through F, A minor and G major returns by a semitone to G-flat. The final B-flat-minor sixth keeps the close warm and slightly unresolved.',
+ difficulty='Advanced extended three-voice nocturne',page_starts=[17],
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='A longer form asks for sustained independent voicing across changing tonal regions. The upper line remains connected while the right-hand inner voice alternates unequal note lengths. Whole-hand reach is checked across both voices. The score uses two pages, with the page turn at the new A-minor region after bar 16; the bass has planned slow register changes.',
+ parent_opus=34,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=8,pitches=['Bb','Db','C','Bb']),
+ ancestry=dict(source_opus=34,source_hand='rh',source_start_beat=0,source_end_beat=6,source_pitches=['Eb','Gb','F','Eb'],transposition_semitones=-5),
+ rh='''
+Bb4:3 Db5:1
+C5:1 Bb4:3
+Eb5:3 Db5:1
+C5:2 A4:2
+Db5:4
+F5:3 Eb5:1
+Db5:2 C5:2
+Bb4:2 C5:2
+Eb5:3 F5:1
+G5:2 F5:2
+E5:2 D5:2
+F5:2 G5:2
+A5:3 G5:1
+E5:3 Db5:1
+C5:2 E5:2
+D5:2 B4:2
+C5:3 E5:1
+F#5:2 E5:2
+D5:3 B4:1
+Db5:2 F5:2
+Gb5:2 F5:2
+Eb5:3 C5:1
+Db5:4
+E5:2 Eb5:2
+C5:3 Ab4:1
+A4:2 C5:2
+Db5:2 C5:2
+Bb4:4
+''',
+ rh_inner='''
+Db4:1 F4:1 Ab4:2
+Gb4:1.5 Ab4:.5 F4:2
+Gb4:2 Bb4:1 C5:1
+F4:1 Eb4:2 Gb4:1
+F4:1.5 Ab4:.5 C5:2
+Ab4:2 C5:1 Db5:1
+Gb4:1 Bb4:.5 Ab4:1.5 Gb4:1
+Gb4:.5 Ab4:.5 G4:1 Gb4:2
+Ab4:1.5 C5:.5 Db5:2
+Ab4:2 C5:1 Eb5:1
+Ab4:1 C5:.5 F4:2.5
+Bb4:1 D5:1.5 Eb5:1.5
+Bb4:1 D5:1 F5:2
+G4:1.5 Bb4:.5 C5:2
+A4:2 G4:1 C5:1
+G#4:1 A4:.5 G#4:.5 E4:2
+E4:1 G4:1 B4:2
+A4:1.5 C5:.5 B4:2
+G4:2 A4:1 G4:1
+Ab4:.5 Bb4:1.5 C5:2
+Bb4:1 Db5:1 Eb5:2
+Ab4:2 Gb4:1 Bb4:1
+F4:1 Ab4:1.5 C5:1.5
+G4:1 Bb4:.5 Db5:2.5
+F4:1 G4:.5 Eb4:2.5
+F4:2 Eb4:1 Gb4:1
+F4:1.5 Ab4:.5 G4:2
+Db4+G4:4
+''',
+ lh='''
+Bb2:2 F3:1 Ab3:1
+Gb3:1 Db4:1 Bb3:2
+Eb3:1 Bb3:1 F3:2
+F3:2 C4:1 A3:1
+Bb2:1 F3:1 Db4:2
+Db3:2 Ab3:1 C4:1
+Gb3:1 Db4:1 Bb3:2
+Ab2:1 Eb3:1 C4:2
+Db3:2 Ab3:1 C4:1
+F3:1 C4:1 Ab3:2
+Bb2:1 F3:1 D4:2
+Eb3:2 Bb3:1 G3:1
+G2:1 D3:1 F3:2
+C3:1 G3:1 E3:2
+F3:2 C4:1 A3:1
+E3:1 B3:1 D4:2
+A2:1 E3:1 G3:2
+D3:2 A3:1 F#3:1
+G3:1 D4:1 B3:2
+Gb3:2 Db4:1 Bb3:1
+Eb3:1 Bb3:1 Gb3:2
+Ab2:1 Eb3:1 C4:2
+Db3:2 Ab3:1 F3:1
+C3:1 G3:1 E3:2
+F3:2 C4:1 Ab3:1
+F3:1 C4:1 Eb3:2
+Bb2:2 F3:1 Ab3:1
+Bb2+F3:4
+''',sections={1:'p',5:'mp',9:'pp',11:'p',13:'mp',15:'pp',17:'p',19:'mp',21:'p',25:'pp'},words={1:'poco rubato',26:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,12),(13,16),(17,21),(22,25),(26,28)],lower_phrases=[(1,4),(5,6),(7,10),(11,14),(15,18),(19,22),(23,25),(26,28)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,5),('diminuendo',5,7),('crescendo',8,11),('diminuendo',11,12),('diminuendo',13,16),('crescendo',17,19),('diminuendo',19,21),('diminuendo',22,25),('diminuendo',26,28)],tempo_changes={},group=4,
+ performance=dict(rubato=[61,58,54,58,61,57,52,57,55,59,61,53,62,57,51,47,55,59,61,55,49,53,49,51,45,43,39,33],
+  phrase_arcs=[[0,11,3],[12,27,4],[28,47,4],[48,63,3],[64,83,4],[84,99,2],[100,112,-2]],
+  lower_entries=[[0,16],[16,24],[24,40],[40,56],[56,72],[72,88],[88,100],[100,112]],pedal_bars=list(range(1,29)),pedal_lift=.24,gate=.99,
+  note='The upper phrase length expands and contracts while the inner replies retain their own timing. Harmonic distance grows in the middle of the piece, then the G-to-G-flat shift draws the music back towards its first landscape. The final sixth is quieter than the preceding dominant.'))
 ]

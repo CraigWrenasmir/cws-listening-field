@@ -50,6 +50,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 32 | Indigo Turnstile | 9/8 | 216 | [Score](pieces/CWS_Op_032_Indigo_Turnstile/CWS_Op_032_Indigo_Turnstile.pdf) | [MP3](pieces/CWS_Op_032_Indigo_Turnstile/CWS_Op_032_Indigo_Turnstile.mp3) |
 | CWS Op. 33 | Violet Concourse | 6/4 | 189 | [Score](pieces/CWS_Op_033_Violet_Concourse/CWS_Op_033_Violet_Concourse.pdf) | [MP3](pieces/CWS_Op_033_Violet_Concourse/CWS_Op_033_Violet_Concourse.mp3) |
 | CWS Op. 34 | Tidal Lacuna | 6/4 | 95 | [Score](pieces/CWS_Op_034_Tidal_Lacuna/CWS_Op_034_Tidal_Lacuna.pdf) | [MP3](pieces/CWS_Op_034_Tidal_Lacuna/CWS_Op_034_Tidal_Lacuna.mp3) |
+| CWS Op. 35 | Lunar Towpath | 4/4 | 222 | [Score](pieces/CWS_Op_035_Lunar_Towpath/CWS_Op_035_Lunar_Towpath.pdf) | [MP3](pieces/CWS_Op_035_Lunar_Towpath/CWS_Op_035_Lunar_Towpath.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
