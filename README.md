@@ -28,6 +28,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 10 | Reed Parallax | 6/8 | 107 | [Score](pieces/CWS_Op_010_Reed_Parallax/CWS_Op_010_Reed_Parallax.pdf) | [MP3](pieces/CWS_Op_010_Reed_Parallax/CWS_Op_010_Reed_Parallax.mp3) |
 | CWS Op. 11 | Fen Lantern | 12/8 | 133 | [Score](pieces/CWS_Op_011_Fen_Lantern/CWS_Op_011_Fen_Lantern.pdf) | [MP3](pieces/CWS_Op_011_Fen_Lantern/CWS_Op_011_Fen_Lantern.mp3) |
 | CWS Op. 12 | Cloud Causeway | 4/4 | 121 | [Score](pieces/CWS_Op_012_Cloud_Causeway/CWS_Op_012_Cloud_Causeway.pdf) | [MP3](pieces/CWS_Op_012_Cloud_Causeway/CWS_Op_012_Cloud_Causeway.mp3) |
+| CWS Op. 13 | Alder Passage | 6/8 | 133 | [Score](pieces/CWS_Op_013_Alder_Passage/CWS_Op_013_Alder_Passage.pdf) | [MP3](pieces/CWS_Op_013_Alder_Passage/CWS_Op_013_Alder_Passage.mp3) |
 
 [Download all scores](downloads/CWS_First_Studies_Scores.pdf) or the [complete collection](downloads/CWS_First_Studies.zip).
 

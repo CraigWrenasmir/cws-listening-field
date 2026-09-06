@@ -298,3 +298,6 @@ D3+F#3:4
   lower_entries=[[4,12],[20,32],[36,44]],pedal_bars=list(range(1,17)),pedal_lift=.23,gate=.99,
   note='The two hands breathe at different places; the bass phrase continues into the brief C-Lydian colour. The closing descent stays soft and unhurried.'))
 ]
+
+from dream_pieces_013_024 import PIECES as CONTINUATION_013_024
+DREAM_PIECES.extend(CONTINUATION_013_024)
