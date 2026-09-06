@@ -334,4 +334,106 @@ Eb3+Bb3:7
   phrase_arcs=[[0,27,3],[28,48,4],[49,76,4],[77,98,-2]],
   lower_entries=[[7,14],[49,56],[70,77]],pedal_bars=list(range(1,15)),pedal_lift=.25,gate=.99,
   note='The two cross-rhythmic gestures expand and settle as single waves, with no extra accents on their individual notes. The lower voice answers between them. Longer tied notes keep the surrounding phrases connected, and the closing major colour recedes into the room.'))
+,
+dict(op=54,title='Fennel Tangent',key='b',fifths=2,meter='3/4',bpm=56,
+ description='Viridian Terrace’s D–C-sharp–B–A descent enters a B-minor three-voice study. In the first long departure, the inner voice falls chromatically from F-sharp to C-sharp over six bars while the melody and bass take different routes. Later C-minor, A-flat and E-major windows widen the landscape before the opening returns and settles into a bare, quiet B minor.',
+ difficulty='Advanced chromatic inner-voice study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The right hand carries a singing upper line and a distinct inner voice. In bars 5–10, hold each inner note for the complete bar while changing the upper notes without losing balance. The chromatic descent must remain connected through changing harmonies. Later inner lines become more mobile; the bass needs an unhurried, independent shape.',
+ parent_opus=53,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=3,pitches=['D','C#','B','A']),
+ ancestry=dict(source_opus=53,source_hand='rh',source_start_beat=47,source_end_beat=56,source_pitches=['D','C#','B','A'],transposition_semitones=0),
+ page_starts=[17],
+ rh='''
+D5:1 C#5:.5 B4:.5 A4:1
+B4:3
+A4:2 G4:1
+F#4:2 R:1
+E5:1 D5:1 B4:1
+Eb5:2 Db5:1
+D5:1 C#5:.5 B4:.5 A4:1
+Db5:2 Bb4:1
+C5:1 Bb4:1 A4:1
+B4:1 A4:.5 G4:.5 F#4:1
+B4:3
+D5:2 C#5:1
+E5:1 D5:2
+D5:3
+Eb5:2 D5:1
+C5:3
+F5:1 Eb5:1 Db5:1
+C5:3
+B4:1 C#5:.5 D#5:.5 E5:1
+C#5:3
+F#5:1 E5:1 D5:1
+B4:2 A4:1
+G4:3
+A#4:1 G#4:.5 F#4:.5 E4:1
+D5:1 C#5:.5 B4:.5 A4:1
+B4:2 A4:1
+A4:1 F#4:2
+''',
+ rh_inner='''
+F#4:1 F4:.5 E4:.5 D4:1
+D4:1 F#4:2
+C#4:1 E4:1 D4:1
+A3:1 C#4:1 E4:1
+F#4:3
+F4:3
+E4:3
+Eb4:3
+D4:3
+C#4:3
+D4:1 F#4:.5 A4:.5 G4:1
+F#4:1 A4:1 B4:1
+B4:1 A4:1 G4:1
+G4:1 F#4:.5 E4:1.5
+G4:1 Bb4:.5 A4:.5 G4:1
+Eb4:1 G4:2
+Ab4:1 C5:1 Bb4:1
+Db4:1 F4:1 Ab4:1
+G#4:3
+E4:1 G#4:.5 B4:.5 A4:1
+A4:1 C#5:.5 B4:.5 A4:1
+D4:1 F#4:.5 G4:.5 F#4:1
+B3:1 D4:1 E4:1
+C#4:3
+F#4:1 F4:.5 E4:.5 D4:1
+G4:1 F#4:2
+D4:3
+''',
+ lh='''
+B2:2 F#3:1
+G3:3
+A2:1 E3:2
+F#2:1 C#3:1 E3:1
+G2:2 D3:1
+Bb2:1 F3:2
+A2+E3:3
+Ab2:2 Eb3:1
+G2:1 D3:2
+F#2:2 C#3:1
+B2:1 F#3:1 A3:1
+D3:2 A3:1
+G2:1 D3:1 F#3:1
+E3:2 B3:1
+C3:1 G3:2
+Ab2:2 Eb3:1
+Db3:1 Ab3:2
+Bb2:1 F3:1 Ab3:1
+E3:3
+A2:2 E3:1
+D3:1 A3:1 F#3:1
+G2:2 D3:1
+C3:1 G3:2
+F#2:1 C#3:2
+B2:2 F#3:1
+E3:1 B3:2
+B2+F#3:3
+''',sections={1:'p',3:'pp',5:'p',6:'mp',7:'p',10:'pp',11:'p',13:'mp',14:'pp',15:'p',17:'mp',18:'pp',19:'p',21:'mp',22:'p',24:'pp',25:'p',26:'pp'},words={1:'poco rubato',26:'poco rit.'},
+ slurs=[(1,4),(5,10),(11,14),(15,18),(19,24),(25,27)],lower_phrases=[(1,3),(4,7),(8,10),(11,13),(14,16),(17,20),(21,24),(25,27)],
+ hairpins=[('diminuendo',1,4),('crescendo',5,6),('diminuendo',7,10),('crescendo',11,13),('diminuendo',13,14),('crescendo',15,17),('diminuendo',17,18),('crescendo',19,21),('diminuendo',21,24),('diminuendo',25,27)],tempo_changes={},group=4,
+ performance=dict(rubato=[56,53,51,45,55,59,56,54,51,46,55,58,60,48,55,52,58,47,56,59,61,54,50,45,51,42,31],
+  phrase_arcs=[[0,11,2],[12,29,3],[30,41,4],[42,53,3],[54,71,4],[72,81,-2]],
+  lower_entries=[[9,12],[18,24],[42,48],[66,72]],pedal_bars=list(range(1,28)),pedal_lift=.2,gate=.995,
+  note='The six-bar chromatic inner descent stays softer than the upper melody, with a small breath in tempo at its end. The later brighter harmonies open gradually. The final return is closer and quieter than the beginning, with the last bare minor chord fading naturally.'))
 ]

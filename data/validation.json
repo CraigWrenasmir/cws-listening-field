@@ -2990,5 +2990,56 @@
       "sounded_pitches_per_minute": 67.5,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Fennel Tangent",
+    "opus": 54,
+    "score_pages": 2,
+    "bars": 27,
+    "pitch_onsets": 186,
+    "audio_seconds": 100.49,
+    "hands": {
+      "rh": {
+        "low": 57,
+        "high": 78,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 42,
+        "high": 59,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced chromatic inner-voice study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The right hand carries a singing upper line and a distinct inner voice. In bars 5\u201310, hold each inner note for the complete bar while changing the upper notes without losing balance. The chromatic descent must remain connected through changing harmonies. Later inner lines become more mobile; the bass needs an unhurried, independent shape."
+    },
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 10,
+      "sounded_pitches_per_minute": 114.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -69,6 +69,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 51 | Pewter Lagoon | 5/4 | 186 | [Score](pieces/CWS_Op_051_Pewter_Lagoon/CWS_Op_051_Pewter_Lagoon.pdf) | [MP3](pieces/CWS_Op_051_Pewter_Lagoon/CWS_Op_051_Pewter_Lagoon.mp3) |
 | CWS Op. 52 | Cobalt Avenue | 6/4 | 122 | [Score](pieces/CWS_Op_052_Cobalt_Avenue/CWS_Op_052_Cobalt_Avenue.pdf) | [MP3](pieces/CWS_Op_052_Cobalt_Avenue/CWS_Op_052_Cobalt_Avenue.mp3) |
 | CWS Op. 53 | Viridian Terrace | 7/4 | 138 | [Score](pieces/CWS_Op_053_Viridian_Terrace/CWS_Op_053_Viridian_Terrace.pdf) | [MP3](pieces/CWS_Op_053_Viridian_Terrace/CWS_Op_053_Viridian_Terrace.mp3) |
+| CWS Op. 54 | Fennel Tangent | 3/4 | 186 | [Score](pieces/CWS_Op_054_Fennel_Tangent/CWS_Op_054_Fennel_Tangent.pdf) | [MP3](pieces/CWS_Op_054_Fennel_Tangent/CWS_Op_054_Fennel_Tangent.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
