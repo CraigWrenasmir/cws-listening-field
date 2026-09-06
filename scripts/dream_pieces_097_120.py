@@ -899,4 +899,79 @@ Gb3+Bb3:4
   phrase_arcs=[[0,15.8,3],[16,31.8,3],[32,47.8,4],[48,64,-2]],
   tenor_entries=[[0,32],[48,64]],lower_entries=[],pedal_lift=.2,gate=.995,
   note='The lower melody begins in the foreground while the upper chords remain soft. Its transfer to the RH changes the balance without changing the four-bar phrase. On the lower-voice return, let the accompaniment soften again; the final chord brings both hands to the same quiet dynamic.'))
+,
+dict(op=109,title='Calcite Interchange',key='g',fifths=-2,meter='5/4',bpm=53,
+ description='Slate Semaphore’s lower F–A-flat–B-flat–C becomes upper G–B-flat–C–D. A minor-key opening gives way to a brighter passage over one held G: seven five-beat upper phrases move past five seven-beat tenor phrases, meeting again after thirty-five beats. Their different breathing points create a gentle drift. Borrowed minor colours return before the G-minor ninth close.',
+ difficulty='Advanced unequal phrase lengths over a sustained bass',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 5–11, hold bass G3 for thirty-five quarter beats while the LH tenor sings five seven-beat phrases above it. The RH has seven five-beat phrases. These are differing phrase lengths, not tuplets: their common pulse remains a quarter note. The tenor crosses four bar lines with ties; do not rearticulate those notes. B-natural gives the central passage its warmer colour before B-flat returns. Keep each hand’s phrase direction independent of the printed bar lines.',
+ parent_opus=108,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=5,pitches=['G','Bb','C','D']),
+ ancestry=dict(source_opus=108,source_hand='lh',source_voice='tenor',source_start_beat=56,source_end_beat=60,source_pitches=['F','Ab','Bb','C'],transposition_semitones=2),
+ voice_phrases=[dict(voice='tenor',start_beat=start,end_beat=start+7,swell=4) for start in [20,27,34,41,48]],
+ lower_sections={1:'pp',5:'p',12:'pp'},hidden_voice_rests={'tenor':[1,2,3,4,12,13,14,15,16,17]},
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*5+left,(bar-1)*5+right-.18] for bar,cuts in enumerate([[0,1,1.5,2,3,5],[0,1,1.5,2,2.5,3,5],[0,2,3,5],[0,1,1.5,2,3,5],[0,1,1.5,3,5],[0,1,1.5,2,3,3.5,5],[0,1,1.5,2,3,4,5],[0,.5,1,1.5,2,3,4,5],[0,1,1.5,2.5,3,4,5],[0,1,1.5,3,4.5,5],[0,1,1.5,3,5],[0,1,2,2.5,3,5],[0,1,1.5,2,3,5],[0,1,2,3,5],[0,1,1.5,2,3,5],[0,1,2,3,5],[0,5]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G4:1 Bb4:.5 C5:1.5 D5:2
+F5:1.5 Eb5:1 D5:.5 C5:2
+Bb4:2 A4:1 G4:2
+F4:1 A4:.5 C5:1.5 Eb5:2
+G4:1 B4:.5 D5:1.5 E5:2
+D5:1 C5:.5 A4:1.5 G4:2
+B4:1 D5:.5 F5:1.5 E5:2
+A4:1 C5:.5 D5:1.5 G5:2
+F5:1 E5:.5 C5:1.5 B4:2
+D5:1 B4:.5 A4:1.5 G4:2
+A4:1 D5:.5 C5:1.5 B4:2
+Eb5:2 D5:.5 C5:.5 Bb4:2
+Db5:1 F5:.5 Ab5:1.5 G5:2
+F5:1 Eb5:1 D5:1 C5:2
+Bb4:1 D5:.5 F5:1.5 E5:2
+D5:1 C5:1 A4:1 G4:2
+A4+Bb4+D5+F5:3~ A4+Bb4+D5+F5:2
+''',
+ lh='''
+G2:1 D3:1 F3:1 A3:2
+Eb3:1 Bb3:1 D4:1 G3:2
+C3:2 G3:1 Bb3:2
+D3:1 A3:1 C4:1 F#3:2
+G3:3~ G3:2~
+G3:3~ G3:2~
+G3:3~ G3:2~
+G3:3~ G3:2~
+G3:3~ G3:2~
+G3:3~ G3:2~
+G3:3~ G3:2
+Eb3:1 Bb3:1 D4:1 G3:2
+Bb2:1 F3:1 Ab3:1 C4:2
+Eb3+G3:2 D3+F#3:1 C4:2
+C3:1 G3:1 Bb3:1 E4:2
+D3:1 A3:1 C4:1 F#3:2
+G3+D4:3~ G3+D4:2
+''',
+ lh_upper='''
+R:5
+R:5
+R:5
+R:5
+B3:1.5 D4:1.5 E4:2
+D4:2 A3:1.5 C4:1.5
+D4:2 F4:2 E4:1~
+E4:.5 D4:1.5 B3:2 A3:1~
+A3:1 C4:1.5 B3:1.5 A3:1~
+A3:1 D4:2 F4:1.5 E4:.5~
+E4:1 D4:2 B3:2
+R:5
+R:5
+R:5
+R:5
+R:5
+R:5
+''',sections={1:'p',2:'mp',3:'p',4:'pp',5:'p',6:'p',7:'p',8:'mp',9:'p',10:'p',11:'pp',12:'p',13:'mp',14:'p',15:'p',16:'pp',17:'pp'},words={1:'poco rubato',16:'poco rit.'},
+ slurs=[(1,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10),(11,11),(12,14),(15,17)],lower_phrases=[(1,2),(3,4),(12,13),(14,15),(16,17)],
+ hairpins=[('crescendo',1,2),('diminuendo',3,4),('crescendo',5,8),('diminuendo',9,11),('crescendo',12,13),('diminuendo',14,17)],tempo_changes={},group=2,
+ performance=dict(rubato=[53,47,49,43,54,52,53,51,54,50,46,48,53,49,46,38,28],
+  phrase_arcs=[[0,19.8,3],[20,24.8,2],[25,29.8,2],[30,34.8,2],[35,39.8,2],[40,44.8,2],[45,49.8,2],[50,54.8,1],[55,69.8,3],[70,85,-2]],
+  tenor_entries=[[20,55]],lower_entries=[],pedal_lift=.18,gate=.995,
+  note='Keep the G bass very soft beneath the two circulating melodies. The upper line breathes every five beats; the tenor makes a longer seven-beat journey. Let the return to minor colour feel like a change of light rather than an abrupt interruption. The final ninth opens out as the pulse slows.'))
 ]

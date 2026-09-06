@@ -148,6 +148,22 @@ for p in cat:
    for pitch in event['pitches']:
     expected_velocity=event['velocity']-(4 if p.get('performance') and len(event['pitches'])>1 and pitch<max(event['pitches']) else 0)
     assert note_velocities[(channel,onset_tick(event['offset']),pitch)]==expected_velocity,('MIDI voicing differs',p['op'],event['id'])
+ if p.get('voice_phrases'):
+  starts={};slur_pairs=[]
+  notes=r.findall('.//part/measure/note')
+  for n in notes:
+   for slur in n.findall('notations/slur'):
+    pair_key=(n.findtext('staff','1'),slur.get('number','1'))
+    if slur.get('type')=='start':starts[pair_key]=n.get('id')
+    elif slur.get('type')=='stop':
+     assert pair_key in starts,('Unmatched voice phrase slur',p['op'])
+     slur_pairs.append((starts.pop(pair_key),n.get('id')))
+  for phrase in p['voice_phrases']:
+   events=sorted([e for e in p['events'] if e.get('voice')==phrase['voice'] and phrase['start_beat']<=e['offset']<phrase['end_beat']],key=lambda e:e['offset'])
+   assert events[0]['offset']==phrase['start_beat'] and events[-1]['offset']+events[-1]['duration']==phrase['end_beat']
+   last=events[-1]['id']
+   end_notes=[n for n in notes if n.find('chord') is None and (n.get('id')==last or n.get('id','').startswith(last+'-tie-'))]
+   assert (events[0]['id'],end_notes[-1].get('id')) in slur_pairs,('Independent voice phrase slur differs',p['op'],phrase)
  if p.get('hidden_voice_rests'):
   expected_hidden={f'cws{p["op"]}-{hand}-m{bar}-n1001':(staff,voice) for voice,bars in p['hidden_voice_rests'].items() for hand,staff in [('rh','1') if voice=='inner' else ('lh','2')] for bar in bars}
   hidden=[n for n in r.findall('.//part/measure/note') if n.get('print-object')=='no']
@@ -332,6 +348,7 @@ for p in cat:
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
  if p.get('lower_sections'):report[-1]['verified_staff_dynamics']={'rh':p['sections'],'lh':p['lower_sections']}
+ if p.get('voice_phrases'):report[-1]['verified_voice_phrases']=p['voice_phrases']
  if p.get('hidden_voice_rests'):report[-1]['verified_nonprinting_voice_rests']=p['hidden_voice_rests']
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
  if p.get('tuplet_spans'):report[-1]['verified_tuplet_brackets']=p['tuplet_spans']

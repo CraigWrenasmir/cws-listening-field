@@ -88,7 +88,10 @@ for p in cat:
             phrase_pos=((ev['bar']-1)%4*bpb+(ev['offset']%bpb))/(4*bpb)
             swell=round(2*math.sin(phrase_pos*math.pi))
             if performance:
-                swell=sum(round(amount*math.sin(math.pi*(ev['offset']-start)/(end-start))) for start,end,amount in performance['phrase_arcs'] if start<=ev['offset']<=end)
+                voice_arcs=[(f['start_beat'],f['end_beat'],f['swell']) for f in p.get('voice_phrases',[])
+                            if f['voice']==ev.get('voice') and f['start_beat']<=ev['offset']<f['end_beat']]
+                arcs=voice_arcs or performance['phrase_arcs']
+                swell=sum(round(amount*math.sin(math.pi*(ev['offset']-start)/(end-start))) for start,end,amount in arcs if start<=ev['offset']<=end)
             for kind,startbar,endbar in p['hairpins']:
                 startbeat=bar_starts[startbar-1];endbeat=bar_starts[endbar-1]
                 if startbeat<=ev['offset']<=endbeat:

@@ -400,6 +400,21 @@ def make_score(p):
     for start,end in lower_phrases:
         seq=[n for mi in range(start,end+1) for n in refs[('lh',mi)]]
         sl=spanner.Slur(seq[0],seq[-1]);sl.placement='below';parts[1].insert(0,sl)
+    for voice in ('inner','tenor'):
+        spans=sorted((f['start_beat'],f['end_beat']) for f in p.get('voice_phrases',[]) if f['voice']==voice)
+        assert all(a[1]<=b[0] for a,b in zip(spans,spans[1:])),('Overlapping voice phrases',p['op'],voice)
+    for phrase in p.get('voice_phrases',[]):
+        voice=phrase['voice'];start=phrase['start_beat'];end=phrase['end_beat']
+        assert voice in ('inner','tenor') and 0<=start<end<=total_beats
+        assert -7<=phrase['swell']<=7
+        events=sorted([e for e in all_events if e.get('voice')==voice and start<=e['offset']<end],key=lambda e:e['offset'])
+        assert len(events)>=2 and events[0]['offset']==start and events[-1]['offset']+events[-1]['duration']==end,('Voice phrase boundaries must match notes',p['op'],phrase)
+        assert all(e['offset']+e['duration']<=end for e in events)
+        event_ids=[e['id'] for e in events]
+        seq=[n for mi in range(1,len(bar_lengths)+1) for n in refs[(voice,mi)]
+             if any(n.id==eid or n.id.startswith(eid+'-tie-') for eid in event_ids)]
+        sl=spanner.Slur(seq[0],seq[-1]);sl.placement='above' if voice=='tenor' else 'below'
+        parts[1 if voice=='tenor' else 0].insert(0,sl)
     for kind,start,end in p['hairpins']:
         hp=(dynamics.Crescendo if kind=='crescendo' else dynamics.Diminuendo)(refs[('rh',start)][0],refs[('rh',end)][0]);hp.placement='below';parts[0].insert(0,hp)
     previous_end=0
