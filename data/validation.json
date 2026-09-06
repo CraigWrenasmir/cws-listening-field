@@ -8063,5 +8063,313 @@
       "sounded_pitches_per_minute": 96.3,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Saffron Interstice",
+    "opus": 78,
+    "score_pages": 2,
+    "bars": 16,
+    "pitch_onsets": 165,
+    "audio_seconds": 116.59,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 83,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 43,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced four-voice colour changes and irregular phrase lengths",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Bars 7\u20138 hold the upper G continuously across the bar line. The two inner lines move in contrary chromatic steps, each note lasting two beats; voice them independently while the upper note remains quiet. Changing metres follow phrase lengths. The RH inner voice is absent for the first four beats, and the bass and tenor divide the wider opening and final harmonies between successive positions."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.76
+      ],
+      [
+        2,
+        3.76
+      ],
+      [
+        4,
+        6.76
+      ],
+      [
+        7,
+        8.76
+      ],
+      [
+        9,
+        9.76
+      ],
+      [
+        10,
+        11.76
+      ],
+      [
+        12,
+        13.76
+      ],
+      [
+        14,
+        15.76
+      ],
+      [
+        16,
+        17.76
+      ],
+      [
+        18,
+        18.76
+      ],
+      [
+        19,
+        19.76
+      ],
+      [
+        20,
+        21.76
+      ],
+      [
+        22,
+        23.76
+      ],
+      [
+        24,
+        24.76
+      ],
+      [
+        25,
+        26.76
+      ],
+      [
+        27,
+        27.76
+      ],
+      [
+        28,
+        28.76
+      ],
+      [
+        29,
+        29.76
+      ],
+      [
+        30,
+        31.76
+      ],
+      [
+        32,
+        33.76
+      ],
+      [
+        34,
+        35.76
+      ],
+      [
+        36,
+        37.76
+      ],
+      [
+        38,
+        39.76
+      ],
+      [
+        40,
+        40.76
+      ],
+      [
+        41,
+        41.76
+      ],
+      [
+        42,
+        43.76
+      ],
+      [
+        44,
+        45.76
+      ],
+      [
+        46,
+        46.76
+      ],
+      [
+        47,
+        48.76
+      ],
+      [
+        49,
+        50.76
+      ],
+      [
+        51,
+        51.76
+      ],
+      [
+        52,
+        52.76
+      ],
+      [
+        53,
+        55.76
+      ],
+      [
+        56,
+        56.76
+      ],
+      [
+        57,
+        57.76
+      ],
+      [
+        58,
+        58.76
+      ],
+      [
+        59,
+        60.76
+      ],
+      [
+        61,
+        61.76
+      ],
+      [
+        62,
+        62.76
+      ],
+      [
+        63,
+        64.76
+      ],
+      [
+        65,
+        65.76
+      ],
+      [
+        66,
+        67.76
+      ],
+      [
+        68,
+        69.76
+      ],
+      [
+        70,
+        70.76
+      ],
+      [
+        71,
+        71.76
+      ],
+      [
+        72,
+        73.76
+      ],
+      [
+        74,
+        77.76
+      ],
+      [
+        78,
+        80.76
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "7/4"
+      },
+      {
+        "beat": 7.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 12.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 16.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 22.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 27.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 30.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 38.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 44.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 49.0,
+        "meter": "7/4"
+      },
+      {
+        "beat": 56.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 59.0,
+        "meter": "4/4"
+      },
+      {
+        "beat": 63.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 68.0,
+        "meter": "6/4"
+      },
+      {
+        "beat": 74.0,
+        "meter": "7/4"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 12,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 87.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

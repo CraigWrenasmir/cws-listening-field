@@ -361,4 +361,93 @@ D3+A3:5
   phrase_arcs=[[0,19.5,4],[20,39.5,4],[40,70,-2]],
   lower_entries=[[5,10],[25,30],[50,55],[60,65]],inner_entries=[[2,5],[22,25],[42,45]],pedal_lift=.24,gate=.985,
   note='The seven-note and five-note figures share a destination without accenting every unequal subdivision. The inner voice joins only when the two hands settle, giving each crossing a softer after-image. The final descent withdraws into a close major ninth.'))
+,
+dict(op=78,title='Saffron Interstice',key='Ab',fifths=-4,meter='7/4',bpm=56,
+ meters=['7/4','5/4','4/4','6/4','5/4','3/4','4/4','4/4','6/4','5/4','7/4','3/4','4/4','5/4','6/4','7/4'],
+ description='Ginkgo Crossing’s opening bass becomes an A-flat major-seventh ascent in the melody. Four voices pass through irregular, breathing spans. At the centre, an eight-beat upper G remains still while the inner C–B–B-flat–A falls against E-flat–E–F–F-sharp in the tenor. The resulting minor-to-major changes open a G-major clearing before the return through B-flat minor and borrowed D-flat minor towards A-flat sixth/ninth.',
+ difficulty='Advanced four-voice colour changes and irregular phrase lengths',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Bars 7–8 hold the upper G continuously across the bar line. The two inner lines move in contrary chromatic steps, each note lasting two beats; voice them independently while the upper note remains quiet. Changing metres follow phrase lengths. The RH inner voice is absent for the first four beats, and the bass and tenor divide the wider opening and final harmonies between successive positions.',
+ parent_opus=77,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=7,pitches=['Ab','C','Eb','G']),
+ ancestry=dict(source_opus=77,source_hand='lh',source_voice='bass',source_start_beat=0,source_end_beat=2,source_pitches=['D','F#','A','C#'],transposition_semitones=6),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[start+left,start+right-.24] for start,cuts in zip([0,7,12,16,22,27,30,34,38,44,49,56,59,63,68,74],[[0,2,4,7],[0,2,3,5],[0,2,4],[0,2,3,4,6],[0,2,3,5],[0,1,2,3],[0,2,4],[0,2,4],[0,2,3,4,6],[0,2,3,5],[0,2,3,4,7],[0,1,2,3],[0,2,3,4],[0,2,3,5],[0,2,3,4,6],[0,4,7]]) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+Ab4:1.5 C5:1 Eb5:1.5 G5:3
+F5:3 Eb5:1 Db5:1
+C5:2 Ab4:1 Bb4:1
+D5:3 C5:1 Ab4:2
+G5:2 F5:1 Eb5:2
+F5:1 Ab5:1 G5:1
+G5:4~
+G5:4
+B5:2 A5:1 G5:3
+F#5:2 E5:1 D5:2
+F5:3 Eb5:1 Db5:3
+G5:1 F5:1 E5:1
+Eb5:2 C5:1 Bb4:1
+Fb5:3 Eb5:1 Db5:1
+F5:3 Eb5:1 Db5:2
+Bb4+C5:7
+''',
+ rh_inner='''
+R:4 G4:3
+Ab4:2 C5:1 Bb4:2
+G4:2 F4:2
+Ab4:3 G4:1 F4:2
+Bb4:3 C5:2
+D5:1 F5:1 E5:1
+C5:2 B4:2
+Bb4:2 A4:2
+D5:2 C5:1 B4:3
+B4:2 A4:1 G4:2
+C5:2 Db5:1 C5:1 Ab4:3
+Db5:1 C5:1 Bb4:1
+Bb4:2 Ab4:1 G4:1
+Ab4:2 Bb4:1 Ab4:2
+Bb4:2 Ab4:1 G4:3
+F4:7
+''',
+ lh='''
+Ab2:4 Eb3:3
+Db3:3 Ab2:2
+F3:1 C3:3
+Bb2:4 F3:2
+Eb3:3 Bb2:2
+B2:2 F3:1
+C3:4
+D3:4
+G2:3 D3:3
+E3:2 B2:3
+Bb2:3 F3:4
+Eb3:2 Bb2:1
+Ab2:2 Eb3:2
+Db3:3 Ab2:2
+Eb3:2 Bb2:2 Db3:2
+Ab2:4 Eb3:3
+''',
+ lh_upper='''
+Eb3:2 F3:1 G3:1 Bb3:3
+F3:2 Ab3:1 Gb3:2
+Ab3:1 G3:1 Ab3:2
+F3:2 Ab3:2 D4:2
+G3:2 Ab3:1 G3:2
+D3:1 F3:1 Ab3:1
+Eb3:2 E3:2
+F3:2 F#3:2
+B2:2 D3:1 F#3:1 E3:2
+G3:1 F#3:1 D3:1 F#3:2
+Db3:2 Ab3:1 Bb3:2 Ab3:2
+G3:1 F3:1 Db3:1
+C3:1 Eb3:1 G3:1 F3:1
+Fb3:2 Ab3:1 Gb3:2
+Ab3:2 G3:2 Bb3:2
+C3:4 Ab3:3
+''',sections={1:'p',2:'pp',4:'mp',5:'p',6:'pp',7:'p',8:'mp',9:'pp',10:'p',11:'mp',12:'p',13:'pp',14:'p',15:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,5),(6,10),(11,16)],lower_phrases=[(1,4),(5,8),(9,12),(13,16)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,5),('diminuendo',6,9),('diminuendo',11,14),('diminuendo',15,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,49,52,57,48,53,46,44,50,46,54,44,49,42,38,29],
+  phrase_arcs=[[0,26.5,3],[27,48.5,4],[49,81,-2]],
+  lower_entries=[[12,16],[44,49],[59,63]],inner_entries=[[30,38],[63,68]],tenor_entries=[[30,38],[49,56]],pedal_lift=.24,gate=.99,
+  note='An upper note stays finger-held through four inner harmonies, with pedal refreshes at each chromatic step. The inner parts briefly become the melody while the outer voices stay calm. Irregular spans follow the phrase, and the final sixth/ninth is allowed to settle with a lighter lower arrival.'))
 ]
