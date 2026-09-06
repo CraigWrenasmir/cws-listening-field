@@ -62,3 +62,48 @@ for beat, expected in [(27,56),(28.5,58),(34,60),(35.5,54),(41,52),(48,47)]:
     event = next(e for e in piece['events'] if e.get('voice') == 'tenor' and e['offset'] == beat)
     assert event['velocity'] == expected, (beat, event['velocity'], expected)
 print('PASS: six independently calculated tenor phrase velocities')
+
+# Chord phrases attach their slurs to a written pitch ID, rather than the
+# source event ID. Check the three real dyad phrases from Op. 121.
+dyad_piece = next(p for p in catalogue if p['op'] == 121)
+with tempfile.TemporaryDirectory(prefix='dyad-voice-phrases-', dir=ROOT / 'work') as folder:
+    fixture = Path(folder)
+    for name in ('scripts', 'data', 'pieces', 'work'):
+        (fixture / name).mkdir()
+    for name in ('validate.py', 'meter_plan.py'):
+        shutil.copy2(ROOT / 'scripts' / name, fixture / 'scripts' / name)
+    shutil.copytree(ROOT / 'pieces' / dyad_piece['folder'], fixture / 'pieces' / dyad_piece['folder'])
+    (fixture / 'data/catalog.json').write_text(json.dumps(catalogue))
+    path = fixture / 'pieces' / dyad_piece['folder'] / (dyad_piece['stem'] + '.musicxml')
+    tree = ET.parse(path)
+    opened, pairs = {}, set()
+    for n in tree.findall('.//part/measure/note'):
+        for mark in n.findall('notations/slur'):
+            key = (n.findtext('staff', '1'), mark.get('number'))
+            if mark.get('type') == 'start':
+                opened[key] = n.get('id')
+            else:
+                pairs.add((opened.pop(key), n.get('id')))
+    assert {
+        ('cws121-rh-m5-n1001-pitch-1', 'cws121-rh-m5-n1008-pitch-1'),
+        ('cws121-rh-m11-n1001-pitch-1', 'cws121-rh-m11-n1016-pitch-1'),
+        ('cws121-rh-m15-n1001-pitch-1', 'cws121-rh-m15-n1032-pitch-1'),
+    } <= pairs
+    for mutated in (False, True):
+        if mutated:
+            old = tree.find('.//note[@id="cws121-rh-m15-n1032-pitch-1"]/notations')
+            stop = old.find('slur[@type="stop"]')
+            assert stop is not None
+            old.remove(stop)
+            target = tree.find('.//note[@id="cws121-rh-m15-n1031-pitch-1"]')
+            new = target.find('notations')
+            if new is None:
+                new = ET.SubElement(target, 'notations')
+            new.append(stop)
+            tree.write(path, encoding='utf-8', xml_declaration=True)
+        result = subprocess.run([sys.executable, str(fixture / 'scripts/validate.py'), '--opus', '121'], capture_output=True, text=True)
+        if mutated:
+            assert result.returncode != 0 and 'Independent voice phrase slur differs' in result.stderr, result.stderr
+        else:
+            assert result.returncode == 0, result.stderr
+        print('PASS: prematurely ended dyad slur rejected' if mutated else 'PASS: all three dyad phrase endpoints verified')

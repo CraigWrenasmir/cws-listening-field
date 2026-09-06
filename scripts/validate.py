@@ -161,9 +161,14 @@ for p in cat:
   for phrase in p['voice_phrases']:
    events=sorted([e for e in p['events'] if e.get('voice')==phrase['voice'] and phrase['start_beat']<=e['offset']<phrase['end_beat']],key=lambda e:e['offset'])
    assert events[0]['offset']==phrase['start_beat'] and events[-1]['offset']+events[-1]['duration']==phrase['end_beat']
-   last=events[-1]['id']
-   end_notes=[n for n in notes if n.find('chord') is None and (n.get('id')==last or n.get('id','').startswith(last+'-tie-'))]
-   assert (events[0]['id'],end_notes[-1].get('id')) in slur_pairs,('Independent voice phrase slur differs',p['op'],phrase)
+   # A chord's first written pitch carries its slur. Tied fragments and
+   # chord-pitch IDs still belong to the same source sounding event.
+   endpoints=[]
+   for event,position in [(events[0],0),(events[-1],-1)]:
+    representatives=[n for n in notes if n.find('chord') is None and re.match(r'^'+re.escape(event['id'])+r'(?:-|$)',n.get('id',''))]
+    assert representatives,('Missing voice phrase endpoint',p['op'],event['id'])
+    endpoints.append(representatives[position].get('id'))
+   assert tuple(endpoints) in slur_pairs,('Independent voice phrase slur differs',p['op'],phrase)
  if p.get('hidden_voice_rests'):
   expected_hidden={f'cws{p["op"]}-{hand}-m{bar}-n1001':(staff,voice) for voice,bars in p['hidden_voice_rests'].items() for hand,staff in [('rh','1') if voice=='inner' else ('lh','2')] for bar in bars}
   hidden=[n for n in r.findall('.//part/measure/note') if n.get('print-object')=='no']
