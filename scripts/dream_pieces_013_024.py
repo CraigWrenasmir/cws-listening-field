@@ -155,8 +155,7 @@ Bb2:1 D3+A3:2
  performance=dict(rubato=[50,49,46,49,50,52,46,53,55,51,49,44,49,46,43,47,45,41,36],
   phrase_arcs=[[0,8,3],[9,20,3],[21,35,5],[36,44,2],[45,57,-1]],
   lower_entries=[[3,12],[15,21],[24,33],[39,54]],pedal_bars=list(range(1,20)),pedal_lift=.2,gate=.99,
-  note='The five-bar middle crosses the phrase boundary with a sustained F. E-flat minor is held back slightly; the return settles into a slower, softer B-flat-major ninth.'))
-,
+  note='The five-bar middle crosses the phrase boundary with a sustained F. E-flat minor is held back slightly; the return settles into a slower, softer B-flat-major ninth.')),
 dict(op=16,title='Fern Vestibule',key='F',fifths=-1,meter='4/4',bpm=54,
  description='Bracken Meridian\'s D-F-E-A phrase reappears in the bass beneath a held upper C. The two lines take turns moving, unfolding through F major, D minor and a borrowed E-flat window. Unequal phrase spans and a quiet B-flat-minor approach make the final F-major ninth feel like entering a familiar room from the rain.',
  parent_opus=8,motif=dict(hand='lh',start_beat=8,end_beat=12,pitches=['D','F','E','A']),
@@ -212,8 +211,7 @@ F3:1 A3:1 F3+A3:2
  performance=dict(rubato=[54,55,52,48,53,55,49,54,53,56,52,47,53,55,49,52,49,47,46,43,37],
   phrase_arcs=[[0,15,3],[16,27,3],[28,47,4],[48,59,4],[60,71,2],[72,84,-2]],
   lower_entries=[[4,16],[20,28],[28,36],[40,52],[56,68],[72,83]],pedal_bars=list(range(1,22)),pedal_lift=.22,gate=.99,
-  note='Sustained upper notes allow the bass phrases to come forward. The two voices exchange motion without a repeating accompaniment cell; the minor plagal colour yields slowly to F-major warmth.'))
-,
+  note='Sustained upper notes allow the bass phrases to come forward. The two voices exchange motion without a repeating accompaniment cell; the minor plagal colour yields slowly to F-major warmth.')),
 dict(op=17,title='Moth Belvedere',key='A',fifths=3,meter='6/8',bpm=60,
  description='A solitary bass opens the space before A-C-sharp-E-F-sharp enters above it, drawn from Fern Vestibule\'s returning melody. A major drifts into F-sharp minor and B minor; a brief C-major and D-dominant reflection adds a more distant light. The final A-major sixth keeps the ending open and warm.',
  parent_opus=16,motif=dict(hand='rh',start_beat=3,end_beat=6,pitches=['A','C#','E','F#']),
@@ -267,5 +265,49 @@ A2:1 C#3+E3:2
  performance=dict(rubato=[56,60,58,55,52,58,62,57,51,59,56,54,49,61,57,52,56,52,47,40],
   phrase_arcs=[[0,14,3],[15,26,4],[27,38,3],[39,47,4],[48,60,-2]],
   lower_entries=[[0,9],[9,15],[21,30],[39,48],[51,59]],pedal_bars=list(range(1,21)),pedal_lift=.24,gate=.99,
-  note='The opening bass is voiced as a melody before the treble arrives. The C-major window gathers a little motion, then the final upper line gradually settles into the lower register.'))
+  note='The opening bass is voiced as a melody before the treble arrives. The C-major window gathers a little motion, then the final upper line gradually settles into the lower register.')),
+dict(op=18,title='Marsh Afterimage',key='G',fifths=1,meter='5/4',bpm=52,
+ description='Moth Belvedere\'s rising phrase becomes G-B-D-E and lingers inside a slow five-beat measure. The opening E outlasts its first harmony, and the bass answers in widely spaced steps. C-major and F-major colour soften a G-centred landscape; the final sixth and ninth keep a little light suspended above the tonic.',
+ parent_opus=17,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['G','B','D','E']),
+ ancestry=dict(source_opus=17,source_hand='rh',source_start_beat=3,source_end_beat=6,source_pitches=['A','C#','E','F#'],transposition_semitones=-2),
+ rh='''
+G4:1 B4:.5 D5:.5 E5:3~
+E5:1 D5:1 B4:1 A4:1 R:1
+C5:2 B4:.5 A4:.5 G4:1 F#4:1
+G4:2 B4:1 D5:1 F#5:1~
+F#5:1 E5:1 D5:.5 B4:.5 A4:2
+G4:1 B4:.5 D5:.5 F5:2 E5:1~
+E5:1 D5:1 C5:1 B4:1 R:1
+D5:1 F#5:1 A5:2 G5:1
+F#5:1 D5:.5 C#5:.5 B4:2 A4:1
+G4:2 B4:.5 D5:.5 E5:1 D5:1
+G4:1 B4:.5 D5:.5 E5:2 D5:1
+C5:2 Bb4:.5 G4:.5 E4:1 F4:1
+A4:1 C5:.5 E5:.5 D5:2 C5:1
+B4:1 A4:.5 F#4:.5 E4:1 D4:1 F#4:1~
+F#4:1 G4:1 A4:1 A4+E5:2
+''',
+ lh='''
+G3:2 B3+D4:1 D3:2
+E3:1 G3+B3:2 D3:1 R:1
+C3:2 E3+B3:2 G3:1
+G3:1.5 D4:1.5 B3:1 G3:1
+A3:1 G3+C4:2 E3:1 R:1
+G3:1 F3+B3:2 D4:1 B3:1
+C3:2 E3+B3:1.5 G3:.5 R:1
+D3:1 F#3+C#4:2 A3:1 F#3:1
+B3:1 A3:1 F#3:1 D3:1 R:1
+E3:2 G3+B3:1.5 D3:1 R:.5
+G3:2 D4:1 B3:1 G3:1
+C3:1 E3+Bb3:2 G3:1 R:1
+F3:2 A3+C4:1 E3:1 C3:1
+D3:1 C3+F#3:2 A3:1 R:1
+G3:1 D4:1 G3+B3:3
+''',sections={1:'p',4:'pp',8:'mp',11:'p',13:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,10),(11,15)],lower_phrases=[(2,3),(4,6),(8,10),(12,15)],
+ hairpins=[('diminuendo',1,3),('crescendo',4,6),('diminuendo',6,7),('diminuendo',8,10),('crescendo',11,12),('diminuendo',12,15)],tempo_changes={},group=3,
+ performance=dict(rubato=[52,51,47,52,53,54,47,55,51,46,51,49,47,43,37],
+  phrase_arcs=[[0,14,3],[15,34,4],[35,49,4],[50,75,-1]],
+  lower_entries=[[5,15],[15,30],[35,50],[55,73]],pedal_bars=list(range(1,16)),pedal_lift=.25,gate=.99,
+  note='The five-beat span breathes through sustained notes and varied bass entries. The middle rise briefly gains momentum; the last five-bar phrase unwinds into the added sixth and ninth.'))
 ]
