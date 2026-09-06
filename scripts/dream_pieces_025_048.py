@@ -989,4 +989,60 @@ D3+A3:3
   phrase_arcs=[[0,8,2],[9,23,3],[24,35,3],[36,47,4],[48,62,3],[63,72,-2]],
   lower_entries=[[0,9],[9,18],[18,30],[30,36],[36,45],[45,54],[54,63],[63,72]],pedal_lift=.22,gate=.995,
   note='The sustained bass is not reattacked at the bar lines. Its held key preserves the centre while the pedal clears each upper sonority. The whole-tone ascent broadens towards its peak, then releases into G; the final change from minor to major remains very soft.'))
+,
+dict(op=42,title='Sorrel Pendulum',key='Ab',fifths=-4,meter='6/8',bpm=55,
+ description='Opal Stairwell’s whole-tone fragment becomes A-flat–B-flat–C–D, now heard as a Lydian opening. Three upper notes cross five lower notes in three short passages, each returning to the ordinary pulse together. A-flat and D-flat colours give way to E and B major before a semitone return opens the route to an A-flat sixth/ninth close.',
+ difficulty='Advanced three-against-five study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Bars 5, 10 and 15 place three RH quarter-note triplets against five LH eighth-note quintuplets over two quarter-note beats. The final beat of each bar brings the hands back together. These crossings sit within compound metre and require independent grouping, gentle arrivals and careful balance across widely separated registers.',
+ tuplet_groups=[dict(hand='rh',actual=3,normal=2,count=9),dict(hand='lh',actual=5,normal=4,count=15)],
+ polyrhythms=[dict(start_beat=12,end_beat=14,rh_notes=3,lh_notes=5),dict(start_beat=27,end_beat=29,rh_notes=3,lh_notes=5),dict(start_beat=42,end_beat=44,rh_notes=3,lh_notes=5)],
+ parent_opus=41,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['Ab','Bb','C','D']),
+ ancestry=dict(source_opus=41,source_hand='rh',source_start_beat=36,source_end_beat=39,source_pitches=['E','F#','G#','Bb'],transposition_semitones=4),
+ rh='''
+Ab4:.5 Bb4:.5 C5:1 D5:1
+Eb5:2 C5:1
+Bb4+C5+G5:2 F5:1
+Eb5:.5 F5:.5 Ab5:1 G5:1
+F5:2/3 Ab5:2/3 C6:2/3 Bb5:1
+Ab5:1 G5:.5 F5:.5 Eb5:1
+G5:2 Eb5:1
+E5+G#5+D#6:2 C#6:1
+B5:1 G#5:.5 F#5:.5 E5:1
+D#5:2/3 F#5:2/3 A#5:2/3 G#5:1
+F#5:1 E5:.5 D#5:.5 C#5:1
+C5+Eb5+Bb5:2 Ab5:1
+G5:2 F5:1
+E5+G5+D6:2 C6:1
+Ab5:2/3 F5:2/3 Eb5:2/3 C5:1
+Bb4+Db5+G5:2 F5:1
+G4+Bb4+Db5:2 C5:1
+C4+F4+Bb4:3
+''',
+ lh='''
+Ab2:1 Eb3:1 G3:1
+Ab3:3
+F3:2 C4:1
+Db3:1 Ab3:1 C4:1
+Db3:2/5 Ab3:2/5 C4:2/5 Eb4:2/5 F4:2/5 Eb4:1
+Bb3:1 F4:1 D4:1
+Eb3:2 Bb3:1
+E3:1 B3:1 G#3:1
+C#3:1 G#3:1 B3:1
+B2:2/5 F#3:2/5 A#3:2/5 C#4:2/5 D#4:2/5 C#4:1
+E3:1 B3:.5 D#4:.5 G#3:1
+Ab2:1 Eb3:1 G3:1
+Db3:2 Ab3:1
+C3:1 G3:1 Bb3:1
+F3:2/5 C4:2/5 Eb4:2/5 G3:2/5 Ab3:2/5 C4:1
+Bb2:1 F3:1 Ab3:1
+Eb3:1 Bb3:1 G3:1
+Ab2+Eb3:3
+''',sections={1:'p',3:'mp',5:'p',7:'pp',8:'p',10:'mp',11:'p',13:'pp',14:'mp',15:'p',17:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,11),(12,15),(16,18)],lower_phrases=[(1,2),(3,5),(6,8),(9,10),(11,13),(14,16),(17,18)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,7),('crescendo',8,10),('diminuendo',10,11),('crescendo',12,14),('diminuendo',14,15),('diminuendo',16,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[55,51,57,56,58,53,47,54,56,59,50,53,47,55,51,46,41,33],
+  phrase_arcs=[[0,8,3],[9,20,4],[21,32,4],[33,44,3],[45,54,-2]],
+  lower_entries=[[0,6],[6,15],[15,24],[24,30],[30,39],[39,48],[48,54]],pedal_bars=list(range(1,19)),pedal_lift=.22,gate=.99,
+  note='The cross-rhythms remain soft and even within each hand, arriving without an accent on the shared final beat. Harmonic shifts carry the phrase forward. The last three bars gradually withdraw into a low, warm sixth/ninth voicing.'))
 ]
