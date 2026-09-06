@@ -8371,5 +8371,313 @@
       "sounded_pitches_per_minute": 87.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Clover Backwater",
+    "opus": 79,
+    "score_pages": 2,
+    "bars": 22,
+    "pitch_onsets": 165,
+    "audio_seconds": 120.67,
+    "hands": {
+      "rh": {
+        "low": 67,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced syncopated ballad phrasing and quiet shell voicings",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Keep the melody continuous through the offbeat entries and tied bar lines. The LH separates bass notes from upper shell chords; these are successive positions, not notes to stretch for simultaneously. Several chromatic colours sit inside dominant harmonies. The rests in the LH opening phrases and the long upper notes leave room for flexible, unhurried voicing."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.28
+      ],
+      [
+        1.5,
+        2.78
+      ],
+      [
+        3,
+        3.78
+      ],
+      [
+        4,
+        5.28
+      ],
+      [
+        5.5,
+        6.78
+      ],
+      [
+        7,
+        7.78
+      ],
+      [
+        8,
+        9.78
+      ],
+      [
+        10,
+        11.28
+      ],
+      [
+        11.5,
+        11.78
+      ],
+      [
+        12,
+        13.28
+      ],
+      [
+        13.5,
+        14.78
+      ],
+      [
+        15,
+        15.78
+      ],
+      [
+        16,
+        17.78
+      ],
+      [
+        18,
+        18.78
+      ],
+      [
+        19,
+        19.78
+      ],
+      [
+        20,
+        20.78
+      ],
+      [
+        21,
+        22.78
+      ],
+      [
+        23,
+        23.78
+      ],
+      [
+        24,
+        25.28
+      ],
+      [
+        25.5,
+        26.78
+      ],
+      [
+        27,
+        27.78
+      ],
+      [
+        28,
+        29.78
+      ],
+      [
+        30,
+        31.28
+      ],
+      [
+        31.5,
+        31.78
+      ],
+      [
+        32,
+        32.78
+      ],
+      [
+        33,
+        34.28
+      ],
+      [
+        34.5,
+        35.78
+      ],
+      [
+        36,
+        37.78
+      ],
+      [
+        38,
+        38.78
+      ],
+      [
+        39,
+        39.78
+      ],
+      [
+        40,
+        40.78
+      ],
+      [
+        41,
+        42.28
+      ],
+      [
+        42.5,
+        43.78
+      ],
+      [
+        44,
+        44.78
+      ],
+      [
+        45,
+        46.78
+      ],
+      [
+        47,
+        47.78
+      ],
+      [
+        48,
+        49.28
+      ],
+      [
+        49.5,
+        50.78
+      ],
+      [
+        51,
+        51.78
+      ],
+      [
+        52,
+        53.78
+      ],
+      [
+        54,
+        54.78
+      ],
+      [
+        55,
+        55.78
+      ],
+      [
+        56,
+        57.28
+      ],
+      [
+        57.5,
+        58.78
+      ],
+      [
+        59,
+        59.78
+      ],
+      [
+        60,
+        60.78
+      ],
+      [
+        61,
+        61.78
+      ],
+      [
+        62,
+        63.78
+      ],
+      [
+        64,
+        64.78
+      ],
+      [
+        65,
+        65.78
+      ],
+      [
+        66,
+        67.78
+      ],
+      [
+        68,
+        69.78
+      ],
+      [
+        70,
+        70.78
+      ],
+      [
+        71,
+        71.78
+      ],
+      [
+        72,
+        72.78
+      ],
+      [
+        73,
+        73.78
+      ],
+      [
+        74,
+        74.78
+      ],
+      [
+        75,
+        75.78
+      ],
+      [
+        76,
+        77.78
+      ],
+      [
+        78,
+        78.78
+      ],
+      [
+        79,
+        79.78
+      ],
+      [
+        80,
+        80.78
+      ],
+      [
+        81,
+        81.78
+      ],
+      [
+        82,
+        83.78
+      ],
+      [
+        84,
+        84.78
+      ],
+      [
+        85,
+        87.78
+      ]
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 16,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 84.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -450,4 +450,68 @@ C3:4 Ab3:3
   phrase_arcs=[[0,26.5,3],[27,48.5,4],[49,81,-2]],
   lower_entries=[[12,16],[44,49],[59,63]],inner_entries=[[30,38],[63,68]],tenor_entries=[[30,38],[49,56]],pedal_lift=.24,gate=.99,
   note='An upper note stays finger-held through four inner harmonies, with pedal refreshes at each chromatic step. The inner parts briefly become the melody while the outer voices stay calm. Irregular spans follow the phrase, and the final sixth/ninth is allowed to settle with a lighter lower arrival.'))
+,
+dict(op=79,title='Clover Backwater',key='Eb',fifths=-3,meter='4/4',bpm=54,
+ description='Saffron Interstice’s opening ascent returns as E-flat–G–B-flat–D, with offbeat entries and ties that carry the melody across bar lines. Left-hand bass notes alternate with spare jazz shell voicings. An E-major/A-dominant window leads through D minor and C major; a later D-major reflection and altered C/B-flat colours draw the line back towards E-flat.',
+ difficulty='Advanced syncopated ballad phrasing and quiet shell voicings',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the melody continuous through the offbeat entries and tied bar lines. The LH separates bass notes from upper shell chords; these are successive positions, not notes to stretch for simultaneously. Several chromatic colours sit inside dominant harmonies. The rests in the LH opening phrases and the long upper notes leave room for flexible, unhurried voicing.',
+ parent_opus=78,motif=dict(hand='rh',start_beat=0,end_beat=8,pitches=['Eb','G','Bb','D']),
+ ancestry=dict(source_opus=78,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=7,source_pitches=['Ab','C','Eb','G'],transposition_semitones=7),
+ system_starts=[1,4,7,10,13,16,19],page_starts=[13],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.22] for bar,cuts in enumerate([[0,1.5,3,4],[0,1.5,3,4],[0,2,3.5,4],[0,1.5,3,4],[0,2,3,4],[0,1,3,4],[0,1.5,3,4],[0,2,3.5,4],[0,1,2.5,4],[0,2,3,4],[0,1,2.5,4],[0,1,3,4],[0,1.5,3,4],[0,2,3,4],[0,1.5,3,4],[0,1,2,4],[0,1,2,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,4],[0,1,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+Eb5:1.5 G5:2 Bb5:.5~
+Bb5:1 D6:2 C6:1
+Ab5:1.5 G5:.5 F5:1 Eb5:1
+D5+G5:2 C5+F5:1.5 Bb4+Eb5:.5~
+Bb4+Eb5:1 G4+D5:1 Eb5:2
+F#5:1.5 G#5:1 B5:1.5~
+B5:.5 A5:1.5 G5:2
+F5:1.5 E5:.5 D5:2~
+D5:1 B4:1.5 A4:1.5
+G4+B4+E5:3 D5:1
+F5:1 Ab5:1.5 G5:1.5
+Eb5:1.5 D5:1.5 C5:1
+G5:2 Ab5:1 G5:1~
+G5:.5 F5:1.5 Eb5:2
+F#5:1.5 E5:1.5 A5:1
+Bb5:1 A5:1.5 G5:1.5~
+G5:1 F5:1 Eb5:2
+C5:1.5 Eb5:.5 G5:2
+Gb5:1 F5:1 D5:2
+F5:1.5 G5:1.5 Bb5:1~
+Bb5:1 G5:1 F5:2~
+F5:1 G4+Bb4+Eb5:3
+''',
+ lh='''
+Eb3:1.5 Bb3+D4:1.5 G3+C4:1
+Ab2:1 R:.5 Eb3+G3:1.5 C4:1
+F3:2 Ab3+Eb4:1.5 G3:.5
+Bb2:1 R:.5 Ab3+D4:1.5 G3+C4:1
+Eb3:2 G3+Bb3:1 F3+A3:1
+E3:1 B3+D#4:2 G#3+C#4:1
+A2:1.5 G3+C#4:1.5 F#3+B3:1
+D3:2 F3+C4:1.5 E3+A3:.5
+G2:1 F3+B3:1.5 E3+A3:1.5
+C3:2 G3+B3:1 D3:1
+Db3:1 Ab3+Cb4:1.5 F3+Bb3:1.5
+C3:1 G3+Bb3:2 Eb3:1
+F3:1.5 Ab3+Eb4:1.5 C4:1
+Bb2:2 Ab3+D4:1 G3+C4:1
+D3:1.5 A3+C#4:1.5 F#3+B3:1
+G3:1 D3:1 Bb3+E4:2
+C3:1 Bb3+E4:1 A3+D4:2
+F3:2 Ab3+Eb4:1 G3+C4:1
+Bb2:1 Ab3+D4:1 Cb4:1 F3:1
+Eb3:2 Bb3+D4:1 G3+C4:1
+Ab2:1 Eb3+G3:1 C4:2
+Eb3+Bb3:4
+''',sections={1:'p',3:'pp',4:'mp',5:'p',6:'pp',7:'p',8:'pp',10:'p',11:'mp',12:'pp',13:'p',14:'pp',15:'p',16:'mp',17:'p',18:'pp',19:'p',20:'pp',21:'pp'},words={1:'poco rubato',21:'poco rit.'},
+ slurs=[(1,5),(6,10),(11,14),(15,18),(19,22)],lower_phrases=[(1,5),(6,9),(10,12),(13,15),(16,19),(20,22)],
+ hairpins=[('diminuendo',1,3),('diminuendo',4,5),('crescendo',6,7),('diminuendo',8,10),('diminuendo',11,14),('crescendo',15,16),('diminuendo',17,18),('diminuendo',19,22)],tempo_changes={},group=3,
+ performance=dict(rubato=[54,58,48,56,45,52,58,49,45,40,57,46,54,44,51,59,50,43,48,43,35,26],
+  phrase_arcs=[[0,19.5,4],[20,39.5,4],[40,55.5,3],[56,71.5,4],[72,88,-2]],
+  lower_entries=[[8,12],[32,36],[44,48],[68,72]],pedal_lift=.22,gate=.99,
+  note='The melody leans gently into its delayed entries and remains held across bar lines. The lower chord shapes answer the tune without a fixed repeated accompaniment. Quieter bass attacks leave the upper chord tones audible; the return slows across its last three bars into a plain major harmony.'))
 ]
