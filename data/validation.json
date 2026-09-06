@@ -1185,5 +1185,56 @@
       "sounded_pitches_per_minute": 126.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Violet Concourse",
+    "opus": 33,
+    "score_pages": 1,
+    "bars": 12,
+    "pitch_onsets": 189,
+    "audio_seconds": 95.75,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 43,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced three-voice meditation",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The upper melody must stay connected through long holds, including the opening nine-quarter-note E, while the same hand shapes a separate inner line. Inner-note lengths change beneath the slower melody. Every simultaneously held pitch is included in the hand-span check; the widest right-hand reach is an octave. The bass is an independent third voice."
+    },
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 122.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

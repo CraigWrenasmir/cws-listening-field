@@ -440,4 +440,60 @@ F3:1.5 C4+F4:3
   phrase_arcs=[[0,8,3],[9,22,4],[22.5,40,3],[40.5,58,4],[58.5,71,2],[72,81,-2]],
   lower_entries=[[0,13.5],[13.5,22.5],[22.5,31.5],[31.5,40.5],[40.5,49.5],[49.5,63],[63,72]],pedal_bars=list(range(1,19)),pedal_lift=.22,gate=.99,
   note='The five-note gestures remain smooth across the compound pulse. Distant major chords are voiced softly, and the return passages carry the melodic thread across them. The final A natural warms the minor centre before the closing sixth-and-ninth colour is allowed to linger.'))
+,
+dict(op=33,title='Violet Concourse',key='a',fifths=0,meter='6/4',bpm=57,
+ description='The bass remembers Indigo Turnstile as A-G-E-F while a high E stays suspended across the first bar line. An independent right-hand inner voice changes its pace beneath the slower melody. E-major and D-major colours open windows within the A-minor centre; the final return sheds its third and rests on an open fifth.',
+ difficulty='Advanced three-voice meditation',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The upper melody must stay connected through long holds, including the opening nine-quarter-note E, while the same hand shapes a separate inner line. Inner-note lengths change beneath the slower melody. Every simultaneously held pitch is included in the hand-span check; the widest right-hand reach is an octave. The bass is an independent third voice.',
+ parent_opus=32,motif=dict(hand='lh',start_beat=0,end_beat=3,pitches=['A','G','E','F']),
+ ancestry=dict(source_opus=32,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['F','Eb','C','Db'],transposition_semitones=4),
+ rh='''
+E5:6~
+E5:3 F5:1 G5:2
+A5:3 G5:1 E5:2
+D5:2 E5:1 G5:1 F5:2
+E5:3 D#5:1 C#5:2
+D5:3 C5:1 B4:2
+C5:2 D5:1 E5:3
+F5:4 E5:2
+F#5:3 A5:1 G5:2
+E5:2 D5:2 C5:2
+B4:3 C5:1 D5:2
+C5:2 B4:1 A4:3
+''',
+ rh_inner='''
+C5:1 B4:1 A4:1 G4:1 E4:1 G4:1
+A4:1 C5:1 D5:.5 C5:.5 B4:1 A4:2
+C5:1 E5:.5 F5:.5 G5:1 F5:1 C5:1 B4:1
+G4:1 B4:1 C5:.5 B4:.5 D5:1 A4:1 C5:1
+G#4:1 B4:1 C#5:.5 B4:.5 G#4:1 F#4:1 E4:1
+F4:1 A4:1 C5:.5 B4:.5 A4:1 F4:1 E4:1
+E4:1 G4:.5 A4:.5 B4:1 G4:1 A4:1 C5:1
+A4:1 C5:1 E5:.5 D5:.5 C5:1 B4:1 G4:1
+A4:1 C#5:.5 E5:.5 D5:1 C#5:1 B4:1 D5:1
+G4:1 B4:1 A4:.5 G4:.5 F#4:1 E4:1 G4:1
+E4:1 G#4:1 A4:.5 G#4:.5 E4:1 G4:1 G#4:1
+E4:1 G4:1 F#4:.5 E4:.5 C4:1 D4:1 E4:1
+''',
+ lh='''
+A2:1 G3:1 E3:.5 F3:.5 E3:1 B2:1 C3:1
+F3:2 C4:1 A3:1 G3:.5 E3:.5 F3:1
+D3:1 A3:1 C4:1 F3:1 G3:1 A3:1
+G2:1 D3:1 F3:1 A3:1 B3:.5 A3:.5 G3:1
+E3:2 B3:1 D#4:1 F#3:1 G#3:1
+B2:1 F3:1 A3:.5 C4:.5 D4:1 F3:1 E3:1
+A2:1 E3:1 G3:1 B3:1 C4:.5 B3:.5 A3:1
+F3:1 C4:1 A3:1 E3:1 G3:1 A3:1
+D3:1 A3:1 C#4:1 E3:1 F#3:1 A3:1
+E3:2 B3:1 D4:1 G3:1 F#3:1
+E3:1 B3:1 D4:.5 F3:.5 G#3:1 B3:1 E3:1
+A2:1 E3:1 G3:1 A2+E3:3
+''',sections={1:'p',3:'mp',5:'pp',7:'p',9:'mp',10:'p',12:'pp'},words={1:'poco rubato',11:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,4),('crescendo',5,7),('diminuendo',7,8),('diminuendo',9,10),('diminuendo',11,12)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,54,58,51,52,47,53,48,55,48,43,35],
+  phrase_arcs=[[0,23,4],[24,47,3],[48,72,-2]],
+  lower_entries=[[0,12],[12,24],[24,36],[36,48],[48,60],[60,72]],pedal_bars=list(range(1,13)),pedal_lift=.24,gate=.99,
+  note='The opening upper E remains held while the inner voice and bass each complete a reply. The inner voice stays quieter and keeps its own changing note lengths. The contrasting major colours are softly voiced before all three lines return to the open A-E close.'))
 ]
