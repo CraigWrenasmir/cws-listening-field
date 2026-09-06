@@ -1628,5 +1628,145 @@
       "sounded_pitches_per_minute": 105.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Opal Stairwell",
+    "opus": 41,
+    "score_pages": 1,
+    "bars": 24,
+    "pitch_onsets": 121,
+    "audio_seconds": 92.06,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 45,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced resonance study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Tied bass notes must remain held through the printed pedal changes, preserving their tone while the upper harmony clears. The opening D lasts nine quarter-note beats. A whole-tone line rises into the sixth octave and then resolves; independent sustain, wide register changes and quiet chord voicing are the principal demands."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.78
+      ],
+      [
+        3,
+        5.779999999999999
+      ],
+      [
+        6,
+        8.78
+      ],
+      [
+        9,
+        11.78
+      ],
+      [
+        12,
+        14.78
+      ],
+      [
+        15,
+        17.78
+      ],
+      [
+        18,
+        20.78
+      ],
+      [
+        21,
+        23.78
+      ],
+      [
+        24,
+        26.78
+      ],
+      [
+        27,
+        29.78
+      ],
+      [
+        30,
+        32.78
+      ],
+      [
+        33,
+        35.78
+      ],
+      [
+        36,
+        38.78
+      ],
+      [
+        39,
+        41.78
+      ],
+      [
+        42,
+        44.78
+      ],
+      [
+        45,
+        47.78
+      ],
+      [
+        48,
+        50.78
+      ],
+      [
+        51,
+        53.78
+      ],
+      [
+        54,
+        56.78
+      ],
+      [
+        57,
+        59.78
+      ],
+      [
+        60,
+        62.78
+      ],
+      [
+        63,
+        65.78
+      ],
+      [
+        66,
+        68.78
+      ],
+      [
+        69,
+        71.78
+      ]
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 7,
+      "sounded_pitches_per_minute": 81.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

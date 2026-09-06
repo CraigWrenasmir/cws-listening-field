@@ -922,4 +922,71 @@ G2:1 D3:1 Bb3:1 G2+D3:2
   phrase_arcs=[[0,19,3],[20,34,3],[35,59,4],[60,74,2],[75,90,-2]],
   lower_entries=[[0,15],[15,30],[30,45],[45,55],[55,70],[70,80],[80,90]],pedal_bars=list(range(1,19)),pedal_lift=.24,gate=.99,
   note='The upper line remains distinct from the softer inner motion; the bass opening has a little extra presence. Broader five-bar upper phrasing crosses the shorter lower phrases. The two final semitone shifts are allowed to settle before the last minor-sixth sonority.'))
+,
+dict(op=41,title='Opal Stairwell',key='d',fifths=-1,meter='3/4',bpm=56,
+ description='A fragment from Pale Sluice’s inner voice opens as D–F–G–E. A bass D stays held across three bars while the upper harmony changes. A D-flat reflection interrupts the minor landscape, and a later whole-tone ascent briefly blurs the tonal centre before settling into G major. The return to D minor opens into a quiet major-ninth ending.',
+ difficulty='Advanced resonance study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Tied bass notes must remain held through the printed pedal changes, preserving their tone while the upper harmony clears. The opening D lasts nine quarter-note beats. A whole-tone line rises into the sixth octave and then resolves; independent sustain, wide register changes and quiet chord voicing are the principal demands.',
+ parent_opus=40,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['D','F','G','E']),
+ ancestry=dict(source_opus=40,source_hand='rh',source_voice='inner',source_start_beat=70,source_end_beat=75,source_pitches=['E','G','A','F#'],transposition_semitones=10),
+ pedal_spans=[[i*3,i*3+2.78] for i in range(24)],
+ rh='''
+D5:.5 F5:.5 G5:1 E5:1
+D5:2 C5:1
+A4+C5+F5:3
+E5:1 F5:.5 A5:.5 G5:1
+F5:2 E5:1
+D5:2 R:1
+F4+A4+E5:2 D5:1
+C5:1 D5:.5 E5:.5 A4:1
+F4+Ab4+Eb5:3
+C5:.5 Db5:.5 Eb5:1 Bb4:1
+B4+D5+G5:2 F5:1
+E4+B4+D5:3
+E5:1 F#5:.5 G#5:.5 Bb5:1
+C6:1 D6:.5 C6:.5 Bb5:1
+A5:2 F#5:1
+G5:2 F#5:1
+E5+G5+D6:2 C6:1
+B5:1 A5:.5 G5:.5 F#5:1
+E5:2 D5:1
+C#5+E5+B5:2 A5:1
+G5:1 F5:.5 E5:.5 D5:1
+Bb4+D5+A5:2 G5:1
+C#5+E5+G5:2 F#5:1
+F#4+A4+E5:3
+''',
+ lh='''
+D3:3~
+D3:3~
+D3:3
+G3:2 D4:1
+Bb3:1 A3:.5 F3:.5 E3:1
+A2:1 E3:1 G3:1
+F3:3~
+F3:3
+Db3:3~
+Db3:2 Ab3:1
+G3:2 D4:1
+C3:1 E3:1 G3:1
+D3:3~
+D3:3
+D3:1 A3:1 C4:1
+G3:1 D4:1 B3:1
+C3:1 G3:1 B3:1
+E3:3
+A2:2 E3:1
+A3:1 E4:1 G3:1
+D3:3
+G3:2 D4:1
+A3:1 G3:1 E3:1
+D3+A3:3
+''',sections={1:'p',4:'mp',6:'pp',9:'p',11:'mp',12:'pp',13:'p',15:'mp',17:'p',19:'pp',20:'p',22:'pp'},words={1:'poco rubato',23:'poco rit.'},
+ slurs=[(1,3),(4,8),(9,12),(13,16),(17,21),(22,24)],lower_phrases=[(1,3),(4,6),(7,10),(11,12),(13,15),(16,18),(19,21),(22,24)],
+ hairpins=[('diminuendo',1,3),('diminuendo',4,6),('crescendo',7,9),('diminuendo',9,12),('crescendo',13,15),('diminuendo',15,16),('diminuendo',17,19),('diminuendo',20,24)],tempo_changes={},group=4,
+ performance=dict(rubato=[56,53,48,58,54,47,52,55,49,53,56,46,57,61,55,49,56,52,46,53,49,44,39,32],
+  phrase_arcs=[[0,8,2],[9,23,3],[24,35,3],[36,47,4],[48,62,3],[63,72,-2]],
+  lower_entries=[[0,9],[9,18],[18,30],[30,36],[36,45],[45,54],[54,63],[63,72]],pedal_lift=.22,gate=.995,
+  note='The sustained bass is not reattacked at the bar lines. Its held key preserves the centre while the pedal clears each upper sonority. The whole-tone ascent broadens towards its peak, then releases into G; the final change from minor to major remains very soft.'))
 ]

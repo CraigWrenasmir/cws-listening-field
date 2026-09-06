@@ -49,7 +49,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 39, Serein Switchyard — complete locally: 12 bars of 7/4, 121 sounded pitches, one inspected page, 110.07 seconds. The ancestor appears first in the bass and returns in the treble. Upper rests and broad bass phrases make space around B-major, A/D/G-major and borrowed E-minor colours. A triplet gesture transfers between the hands. Score/MIDI, notated durations, ancestry, audio and layout passed. RH span eleven semitones; LH slow leap fourteen with no rapid leaps. Awaiting publication and listening feedback.
 - Op. 37–39 publication is verified; Craig’s listening feedback remains outstanding.
 - Op. 40, Pale Sluice — complete locally: 18 bars of 5/4, 194 sounded pitches, two inspected pages, 113.56 seconds. Three independent voices carry a G-minor bass ancestor through B-flat, B, E and C-major colours. E minor descends by semitone before the return to G minor with an added sixth. Notated voice assignments and durations, physical hand reach, MIDI, ancestry, audio and both page layouts passed. Combined RH span ten semitones; LH slow leap fifteen and quicker shift eight. Awaiting publication and listening feedback.
-- Next: compose Op. 41, Opal Stairwell; publish Op. 40–42 together.
+- Op. 41, Opal Stairwell — complete locally: 24 bars of 3/4, 121 sounded pitches, one inspected page, 92.06 seconds. The opening bass D lasts nine beats through three printed pedal changes; later tied bass notes preserve their centres beneath changing harmony. A whole-tone ascent resolves through G major before a D-major ninth closes the minor landscape. All 24 written pedal spans match MIDI. Score/MIDI, durations, ancestry, audio and layout passed; RH span eleven semitones, LH slow leap fourteen and quick shift four. Awaiting publication and listening feedback.
+- Next: compose Op. 42, Sorrel Pendulum; publish Op. 40–42 together.
 
 ## Growth work to complete during this run
 

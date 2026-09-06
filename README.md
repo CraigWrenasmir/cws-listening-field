@@ -56,6 +56,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 38 | Hollow Canopy | 4/4 | 164 | [Score](pieces/CWS_Op_038_Hollow_Canopy/CWS_Op_038_Hollow_Canopy.pdf) | [MP3](pieces/CWS_Op_038_Hollow_Canopy/CWS_Op_038_Hollow_Canopy.mp3) |
 | CWS Op. 39 | Serein Switchyard | 7/4 | 121 | [Score](pieces/CWS_Op_039_Serein_Switchyard/CWS_Op_039_Serein_Switchyard.pdf) | [MP3](pieces/CWS_Op_039_Serein_Switchyard/CWS_Op_039_Serein_Switchyard.mp3) |
 | CWS Op. 40 | Pale Sluice | 5/4 | 194 | [Score](pieces/CWS_Op_040_Pale_Sluice/CWS_Op_040_Pale_Sluice.pdf) | [MP3](pieces/CWS_Op_040_Pale_Sluice/CWS_Op_040_Pale_Sluice.mp3) |
+| CWS Op. 41 | Opal Stairwell | 3/4 | 121 | [Score](pieces/CWS_Op_041_Opal_Stairwell/CWS_Op_041_Opal_Stairwell.pdf) | [MP3](pieces/CWS_Op_041_Opal_Stairwell/CWS_Op_041_Opal_Stairwell.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
