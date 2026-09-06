@@ -757,4 +757,75 @@ R:4.5
   phrase_arcs=[[0,17.8,3],[18,26.8,3],[27,44.8,4],[45,62.8,3],[63,90,-2]],
   tenor_entries=[[1.5,10.5],[27.5,36.5],[63,72]],lower_entries=[[85.5,90]],pedal_lift=.18,gate=.995,
   note='Let the tenor echo retain the upper phrase’s shape, even as the distance between their entries contracts. The long bass holds stay quieter than either line. When the voices arrive together, let that convergence feel settled; the final phrase then opens out into a soft minor ninth.'))
+,
+dict(op=107,title='Fluorite Quayside',key='c',fifths=-3,meter='4/4',bpm=54,
+ description='Silver Tidelock’s A–C-sharp–E–D-sharp becomes A-flat–C–E-flat–D. Two eight-beat passages leave the minor-key melody for a whole-tone field: E-flat is held above the first, F above the second, while inner dyads and lower notes shift underneath. The returning melody gathers those colours into a quiet C-minor sixth and ninth.',
+ difficulty='Advanced whole-tone harmony and sustained upper-note voicing',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Hold the upper E-flat through bars 5–6 and F through bars 9–10. Each of those two-bar passages uses only D-flat, E-flat, F, G, A and B. The moving RH dyads stay beneath the held note; the widest combination reaches an octave. Keep the upper note present without pressing the lower pair. The final A-natural retains a little of the whole-tone colour inside the C-minor close.',
+ parent_opus=106,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['Ab','C','Eb','D']),
+ ancestry=dict(source_opus=106,source_hand='rh',source_voice='upper',source_start_beat=81,source_end_beat=85.5,source_pitches=['A','C#','E','D#'],transposition_semitones=-1),
+ hidden_voice_rests={'inner':[1,2,3,4,7,8,11,12,13,14,15,16]},
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,1,1.5,2,2.5,4],[0,1.5,2,3,4],[0,1,1.5,2,3,4],[0,2,3,4],[0,2,4],[0,2,4],[0,1,1.5,2,3,4],[0,1,2,4],[0,2,4],[0,2,4],[0,1,2,3,4],[0,1,1.5,2,4],[0,1,2,3,4],[0,1,1.5,2,4],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+Ab4:1 C5:.5 Eb5:1 D5:1.5
+G5:2 F5:1 Eb5:1
+D5:1 F5:.5 G5:.5 Bb5:2
+Ab5:2 G5:1 F5:1
+Eb5:4~
+Eb5:4
+C5:1 Eb5:.5 F5:.5 G5:2
+Ab5:1 G5:1 Eb5:2
+F5:4~
+F5:4
+Eb5:2 D5:1 C5:1
+Bb4:1 D5:.5 F5:.5 Ab5:2
+G5:1 F5:1 Eb5:1 D5:1
+C5:1 Eb5:.5 F5:.5 Eb5:2
+D5:1 C5:1 Bb4:1 G4:1
+A4+D5+Eb5+G5:4
+''',
+ rh_inner='''
+R:4
+R:4
+R:4
+R:4
+G4+B4:2 A4+Db5:2
+F4+A4:2 Eb4+G4:2
+R:4
+R:4
+A4+Db5:2 B4+Eb5:2
+G4+B4:2 F4+A4:2
+R:4
+R:4
+R:4
+R:4
+R:4
+R:4
+''',
+ lh='''
+C3:1 G3:.5 Bb3:.5 D4:2
+Ab2+Eb3:1.5 G3+Bb3:2.5
+Bb2:1 F3:1 Ab3:1 C4:1
+F3+Ab3:2 Eb3+G3:2
+Eb3:2 A3:2
+B2:2 F3:2
+Ab2:1 Eb3:1 G3:1 Bb3:1
+Db3+Ab3:2 C4+Eb4:2
+Db3:2 G3:2
+A2:2 Eb3:2
+G2:1 D3:1 F3:1 Bb3:1
+C3+G3:2 Bb3+Eb4:2
+Ab3:1 Eb3:1 G3:1 Bb3:1
+F3+A3:2 Eb3+G3:2
+G2:1 D3:1 F3:1 B3:1
+C3+G3:4
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'pp',6:'pp',7:'p',8:'mp',9:'pp',10:'pp',11:'p',12:'mp',13:'p',14:'pp',15:'pp',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,6),('crescendo',7,8),('crescendo',9,12),('diminuendo',13,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[53,47,55,49,48,43,52,47,49,44,46,51,48,43,36,27],
+  phrase_arcs=[[0,15.8,3],[16,23.8,1],[24,31.8,3],[32,39.8,1],[40,47.8,3],[48,64,-2]],
+  inner_entries=[[16,24],[32,40]],lower_entries=[[56,64]],pedal_lift=.2,gate=.995,
+  note='The held upper notes give the whole-tone fields a point of stillness while the lower colours move. Let those passages feel suspended, then recover a more melodic direction on returning to the minor-key phrases. The final natural sixth keeps the closing harmony open and warm.'))
 ]
