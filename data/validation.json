@@ -9583,5 +9583,286 @@
       "sounded_pitches_per_minute": 80.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Dahlia Overpass",
+    "opus": 83,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 153,
+    "audio_seconds": 119.76,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 43,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 17,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced two-voice canons within one hand and independent bass",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 1\u20132 the RH inner voice echoes six upper notes one beat late and seven semitones lower. In bars 8\u20139 the inner voice leads, and the upper voice answers one beat late and seven semitones higher. Keep the two stem directions distinct, including their separate rests and releases. The widest combined RH span is an octave, reached briefly during the second canon."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.78
+      ],
+      [
+        2,
+        3.78
+      ],
+      [
+        4,
+        5.78
+      ],
+      [
+        6,
+        7.78
+      ],
+      [
+        8,
+        9.78
+      ],
+      [
+        10,
+        11.78
+      ],
+      [
+        12,
+        13.78
+      ],
+      [
+        14,
+        14.78
+      ],
+      [
+        15,
+        15.78
+      ],
+      [
+        16,
+        17.78
+      ],
+      [
+        18,
+        18.78
+      ],
+      [
+        19,
+        20.78
+      ],
+      [
+        21,
+        21.78
+      ],
+      [
+        22,
+        23.78
+      ],
+      [
+        24,
+        25.78
+      ],
+      [
+        26,
+        26.78
+      ],
+      [
+        27,
+        27.78
+      ],
+      [
+        28,
+        29.78
+      ],
+      [
+        30,
+        31.78
+      ],
+      [
+        32,
+        32.78
+      ],
+      [
+        33,
+        33.78
+      ],
+      [
+        34,
+        35.78
+      ],
+      [
+        36,
+        37.78
+      ],
+      [
+        38,
+        38.78
+      ],
+      [
+        39,
+        39.78
+      ],
+      [
+        40,
+        40.78
+      ],
+      [
+        41,
+        41.78
+      ],
+      [
+        42,
+        43.78
+      ],
+      [
+        44,
+        44.78
+      ],
+      [
+        45,
+        45.78
+      ],
+      [
+        46,
+        46.78
+      ],
+      [
+        47,
+        47.78
+      ],
+      [
+        48,
+        49.78
+      ],
+      [
+        50,
+        50.78
+      ],
+      [
+        51,
+        51.78
+      ],
+      [
+        52,
+        53.78
+      ],
+      [
+        54,
+        54.78
+      ],
+      [
+        55,
+        56.78
+      ],
+      [
+        57,
+        57.78
+      ],
+      [
+        58,
+        59.78
+      ],
+      [
+        60,
+        61.78
+      ],
+      [
+        62,
+        62.78
+      ],
+      [
+        63,
+        63.78
+      ],
+      [
+        64,
+        64.78
+      ],
+      [
+        65,
+        65.78
+      ],
+      [
+        66,
+        67.78
+      ],
+      [
+        68,
+        68.78
+      ],
+      [
+        69,
+        69.78
+      ],
+      [
+        70,
+        70.78
+      ],
+      [
+        71,
+        71.78
+      ],
+      [
+        72,
+        73.78
+      ],
+      [
+        74,
+        74.78
+      ],
+      [
+        75,
+        75.78
+      ],
+      [
+        76,
+        76.78
+      ],
+      [
+        77,
+        77.78
+      ],
+      [
+        78,
+        80.78
+      ],
+      [
+        81,
+        83.78
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 78.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -743,4 +743,68 @@ F3+D4:3.5
   phrase_arcs=[[0,13.5,3],[14,27.5,4],[28,45.5,-1],[45.5,62.5,4],[63,84,-2]],
   lower_entries=[[28,42],[56,59.5],[73.5,77]],pedal_lift=.2,gate=.99,
   note='The diminished chord is one sustained event, growing quieter while the bass gives it successive meanings. The pedal clears around each lower change without releasing those upper keys. Brighter reflections regain movement, and the final return settles into a compact minor sixth/ninth.'))
+,
+dict(op=83,title='Dahlia Overpass',key='c',fifths=-3,meter='6/4',bpm=55,
+ description='A new branch from Velvet Estuary turns its opening intervals into G–B-flat–C–B-flat. Six upper quarter notes are answered one beat later, a perfect fifth below, by the RH inner voice. In the middle, the inner voice leads the same contour an octave lower and the upper voice answers a fifth above. Jazz-coloured C-minor, G-minor and brighter E-minor reflections lead towards a late-arriving ninth in the close.',
+ difficulty='Advanced two-voice canons within one hand and independent bass',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 1–2 the RH inner voice echoes six upper notes one beat late and seven semitones lower. In bars 8–9 the inner voice leads, and the upper voice answers one beat late and seven semitones higher. Keep the two stem directions distinct, including their separate rests and releases. The widest combined RH span is an octave, reached briefly during the second canon.',
+ parent_opus=2,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['G','Bb','C','Bb']),
+ ancestry=dict(source_opus=2,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['A','C','D','C'],transposition_semitones=-2),
+ system_starts=[1,3,5,7,8,10,12],page_starts=[8],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.22] for bar,cuts in enumerate([[0,2,4,6],[0,2,4,6],[0,2,3,4,6],[0,1,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,5,6],[0,2,3,4,5,6],[0,2,3,4,6],[0,1,3,4,6],[0,2,3,4,5,6],[0,2,3,4,5,6],[0,2,3,4,5,6],[0,3,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+G5:1 Bb5:1 C6:1 Bb5:1 F5:1 D5:1
+E5:2 D5:2 Bb4:2
+G5:3 F5:1 Eb5:2
+F5:2 Eb5:1 D5:3
+Bb5:2 A5:1 G5:3
+G5:1 Ab5:2 F5:1 Eb5:2
+F5:3 D5:1 C5:2
+R:1 D5:1 F5:1 G5:1 F5:1 C5:1
+A4:1 C5:2 D5:1 F5:2
+E5:3 D5:1 B4:2
+F#5:2 E5:1 D5:3
+Eb5:3 D5:1 C5:2
+F5:2 Eb5:1 Db5:3
+C5+Eb5:6
+''',
+ rh_inner='''
+R:1 C5:1 Eb5:1 F5:1 Eb5:1 Bb4:1
+G4:1 R:1 G4:2 F4:2
+Bb4:2 C5:1 Bb4:1 G4:2
+A4:3 C5:1 Bb4:2
+D5:2 C5:1 Bb4:3
+C5:3 D5:1 C5:2
+Bb4:2 A4:1 G4:3
+G4:1 Bb4:1 C5:1 Bb4:1 F4:1 D4:1
+F4:2 E4:2 A4:2
+A4:2 G4:2 F#4:2
+B4:2 A4:1 G4:3
+Bb4:2 Ab4:2 G4:2
+B4:2 Bb4:1 G4:3
+A4:6
+''',
+ lh='''
+C3:2 G3:1 Bb3:1 D4:1 C4:1
+F3:2 C4:1 Eb4:1 Bb3:2
+Ab2:2 Eb3:1 G3:1 Bb3:2
+D3:1 A3:2 C4:1 F#3:2
+G2:3 D3:1 F3:2
+Eb3:2 Bb3:1 Db4:1 C4:2
+C3:2 G3:1 Bb3:1 D4:1 C4:1
+G2:2 D3:1 F3:1 A3:1 Bb3:1
+F3:2 C4:1 D4:1 C4:2
+E3:1 B3:2 D4:1 C4:2
+B2:2 F#3:1 A3:1 B3:2
+Ab2:2 Eb3:1 Gb3:1 Bb3:1 C4:1
+G2:2 D3:1 F3:1 Ab3:1 B3:1
+C3:3 G3+D4:3
+''',sections={1:'p',2:'pp',3:'p',4:'mp',5:'pp',6:'p',7:'pp',8:'p',9:'pp',10:'p',11:'mp',12:'pp',13:'p',14:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,3),(4,7),(8,10),(11,14)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,14)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,4),('diminuendo',5,7),('diminuendo',8,9),('crescendo',10,11),('diminuendo',12,14)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,48,51,56,46,54,43,50,47,51,55,45,37,27],
+  phrase_arcs=[[0,17.5,3],[18,41.5,4],[42,59.5,3],[60,84,-2]],
+  lower_entries=[[12,18],[36,42],[66,72]],inner_entries=[[1,7],[42,48]],pedal_lift=.22,gate=.99,
+  note='The answering voice emerges gently without obscuring its leader. At the second canon the roles exchange: the lower RH line leads and the upper line enters after a breath. The independent bass shapes the harmony beneath both, and the last ninth arrives only after the upper sixth has settled.'))
 ]
