@@ -127,6 +127,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 109 | Calcite Interchange | 5/4 | 126 | [Score](pieces/CWS_Op_109_Calcite_Interchange/CWS_Op_109_Calcite_Interchange.pdf) | [MP3](pieces/CWS_Op_109_Calcite_Interchange/CWS_Op_109_Calcite_Interchange.mp3) |
 | CWS Op. 110 | Nacre Turnstile | 4/4 | 135 | [Score](pieces/CWS_Op_110_Nacre_Turnstile/CWS_Op_110_Nacre_Turnstile.pdf) | [MP3](pieces/CWS_Op_110_Nacre_Turnstile/CWS_Op_110_Nacre_Turnstile.mp3) |
 | CWS Op. 111 | Chalcedony Landing | 12/8 | 156 | [Score](pieces/CWS_Op_111_Chalcedony_Landing/CWS_Op_111_Chalcedony_Landing.pdf) | [MP3](pieces/CWS_Op_111_Chalcedony_Landing/CWS_Op_111_Chalcedony_Landing.mp3) |
+| CWS Op. 112 | Marl Sundial | 6/4 | 185 | [Score](pieces/CWS_Op_112_Marl_Sundial/CWS_Op_112_Marl_Sundial.pdf) | [MP3](pieces/CWS_Op_112_Marl_Sundial/CWS_Op_112_Marl_Sundial.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

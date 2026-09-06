@@ -1131,4 +1131,76 @@ A3+E4:3~ A3+E4:3
   phrase_arcs=[[0,17.8,3],[18,35.8,3],[36,59.8,3],[60,83.8,3],[84,96,-2]],
   inner_entries=[[19,21],[43,45],[67,71]],lower_entries=[[90,96]],pedal_lift=.18,gate=.995,
   note='Treat the inner flourishes as measured freedom around the held melody. The last one has more time to unfold, rather than simply becoming faster. Let the high middle phrases carry some lightness, then draw back into the lower register and the open minor-ninth ending.'))
+,
+dict(op=112,title='Marl Sundial',key='d',fifths=-1,meter='6/4',bpm=54,
+ description='Chalcedony Landing’s E–G–B–A becomes D–F–A–G. A lyrical opening leads to eight moving RH chords built from stacked fourths and a top octave, while a chromatic tenor line travels over a held D. Both moving parts later retrace their pitches in exact reverse order. The surrounding phrases rise into brighter jazz colours before the final D-minor ninth.',
+ difficulty='Advanced quartal chord movement and paired retrograde',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The eight RH chords in bars 5–6 each contain two stacked perfect fourths and a top note one octave above the root. Their complete shapes span an octave and move in dotted-quarter steps. The LH holds D3 through both bars while its tenor moves independently above it. Bars 13–14 reverse the order of all eight chords and all eight tenor notes, retaining their original durations. Keep the top of each chord present and the middle pitches softer. The close contains an adjacent E–F inside the RH voicing.',
+ parent_opus=111,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['D','F','A','G']),
+ ancestry=dict(source_opus=111,source_hand='rh',source_voice='upper',source_start_beat=72,source_end_beat=78,source_pitches=['E','G','B','A'],transposition_semitones=-2),
+ lower_sections={1:'pp',5:'p',7:'pp',13:'p',15:'pp'},hidden_voice_rests={'tenor':[1,2,3,4,7,8,9,10,11,12,15,16]},
+ voice_phrases=[dict(voice='tenor',start_beat=24,end_beat=36,swell=4),dict(voice='tenor',start_beat=72,end_beat=84,swell=3)],
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*6+left,(bar-1)*6+right-.18] for bar,cuts in enumerate([[0,1,1.5,2,3,6],[0,2,3,4,6],[0,1,1.5,2,3,6],[0,1,1.5,2,3,4,6],[0,1.5,3,4.5,6],[0,1.5,3,4.5,6],[0,2,3,4,6],[0,1,1.5,2,3,4,6],[0,1,1.5,2,3,6],[0,1,2,3,4,6],[0,1,1.5,2,3,6],[0,1,1.5,2,3,4,6],[0,1.5,3,4.5,6],[0,1.5,3,4.5,6],[0,2,3,4,6],[0,6]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+D5:1.5 F5:.5 A5:1 G5:3
+E5:2 D5:1 C5:1 A4:2
+Bb4:1.5 D5:.5 F5:1 E5:3
+C5:1.5 A4:.5 G4:2 F4:2
+D4+G4+C5+D5:1.5 E4+A4+D5+E5:1.5 F#4+B4+E5+F#5:1.5 G#4+C#5+F#5+G#5:1.5
+G4+C5+F5+G5:1.5 F4+Bb4+Eb5+F5:1.5 E4+A4+D5+E5:1.5 D4+G4+C5+D5:1.5
+F5:2 Eb5:1 D5:1 C5:2
+Bb4:1.5 Db5:.5 E5:1 G5:3
+F5:1.5 A5:.5 C6:1 B5:3
+A5:2 G5:1 E5:1 D5:2
+C5:1.5 E5:.5 G5:1 F#5:3
+D5:1.5 F5:.5 A5:1 G5:3
+D4+G4+C5+D5:1.5 E4+A4+D5+E5:1.5 F4+Bb4+Eb5+F5:1.5 G4+C5+F5+G5:1.5
+G#4+C#5+F#5+G#5:1.5 F#4+B4+E5+F#5:1.5 E4+A4+D5+E5:1.5 D4+G4+C5+D5:1.5
+F5:2 E5:1 D5:1 C5:2
+E4+F4+A4+C5+D5:3~ E4+F4+A4+C5+D5:3
+''',
+ lh='''
+D3:1 A3:1 C4:1 E3:3
+Bb2+F3:2 A3+C4:2 G3:2
+G3:1 D4:1 F4:1 A3:3
+C3:1 G3:1 Bb3:1 E4:1 A3:2
+D3:3~ D3:3~
+D3:3~ D3:3
+Eb3+Bb3:2 D3+A3:2 C4:2
+C3:1 G3:1 Bb3:1 Db4:1 E3:2
+F3:1 C4:1 E4:1 A3:3
+D3:1 A3:1 C4:1 F3:1 E3:2
+G3:1 D4:1 F4:1 B3:3
+A2:1 E3:1 G3:1 C4:1 B3:2
+D3:3~ D3:3~
+D3:3~ D3:3
+G3+Bb3:2 F3+A3:2 E3+G3:2
+D3+A3:3~ D3+A3:3
+''',
+ lh_upper='''
+R:6
+R:6
+R:6
+R:6
+F3:1.5 F#3:1.5 G3:1.5 Ab3:1.5
+B3:1.5 Bb3:1.5 A3:1.5 G3:1.5
+R:6
+R:6
+R:6
+R:6
+R:6
+R:6
+G3:1.5 A3:1.5 Bb3:1.5 B3:1.5
+Ab3:1.5 G3:1.5 F#3:1.5 F3:1.5
+R:6
+R:6
+''',sections={1:'p',2:'pp',3:'mp',4:'pp',5:'p',6:'p',7:'pp',8:'p',9:'mp',10:'p',11:'mp',12:'p',13:'p',14:'pp',15:'pp',16:'pp'},words={1:'poco rubato',15:'poco rit.'},
+ slurs=[(1,4),(5,6),(7,8),(9,12),(13,14),(15,16)],lower_phrases=[(1,2),(3,4),(7,8),(9,10),(11,12),(15,16)],
+ hairpins=[('crescendo',1,3),('crescendo',4,5),('crescendo',8,9),('crescendo',10,11),('diminuendo',12,14),('diminuendo',15,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,48,56,46,51,45,48,51,56,49,54,46,47,41,35,27],
+  phrase_arcs=[[0,23.8,3],[24,35.8,3],[36,47.8,2],[48,71.8,3],[72,83.8,2],[84,96,-2]],
+  tenor_entries=[[24,36],[72,84]],lower_entries=[],pedal_lift=.18,gate=.995,
+  note='The moving fourths should feel broad and buoyant rather than percussive. Let the tenor retain its own line above the held D. When the passage returns in reverse, soften its arrival and let the motion gradually unwind into the close.'))
 ]
