@@ -11269,5 +11269,276 @@
       "sounded_pitches_per_minute": 80.3,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Cress Vantage",
+    "opus": 88,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 95,
+    "audio_seconds": 84.64,
+    "hands": {
+      "rh": {
+        "low": 49,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 43,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 20,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced register exchange with a prepared crossed-hands passage",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Both hands rest for one quarter beat before and after bars 7\u20138. During the crossing, the upper written staff is the RH in bass clef (m.d.), and the lower written staff is the LH in treble clef (m.s.). Keep the low RH chords held while the LH plays above. The twenty-semitone LH return to bar 9 follows the full written rest; the RH returns through a rising line. Hand labels and normal clefs resume at bar 9."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.78
+      ],
+      [
+        2,
+        2.78
+      ],
+      [
+        3,
+        3.78
+      ],
+      [
+        4,
+        5.78
+      ],
+      [
+        6,
+        6.78
+      ],
+      [
+        7,
+        7.78
+      ],
+      [
+        8,
+        8.78
+      ],
+      [
+        9,
+        9.78
+      ],
+      [
+        10,
+        10.78
+      ],
+      [
+        11,
+        11.78
+      ],
+      [
+        12,
+        13.78
+      ],
+      [
+        14,
+        14.78
+      ],
+      [
+        15,
+        15.78
+      ],
+      [
+        16,
+        16.78
+      ],
+      [
+        17,
+        17.78
+      ],
+      [
+        18,
+        18.78
+      ],
+      [
+        19,
+        19.78
+      ],
+      [
+        20,
+        20.78
+      ],
+      [
+        21,
+        21.78
+      ],
+      [
+        22,
+        22.78
+      ],
+      [
+        24,
+        24.78
+      ],
+      [
+        25,
+        25.78
+      ],
+      [
+        26,
+        26.78
+      ],
+      [
+        27,
+        27.78
+      ],
+      [
+        28,
+        28.78
+      ],
+      [
+        29,
+        29.78
+      ],
+      [
+        30,
+        30.78
+      ],
+      [
+        32,
+        32.78
+      ],
+      [
+        33,
+        33.78
+      ],
+      [
+        34,
+        34.78
+      ],
+      [
+        35,
+        35.78
+      ],
+      [
+        36,
+        36.78
+      ],
+      [
+        37,
+        37.78
+      ],
+      [
+        38,
+        38.78
+      ],
+      [
+        39,
+        39.78
+      ],
+      [
+        40,
+        40.78
+      ],
+      [
+        41,
+        41.78
+      ],
+      [
+        42,
+        42.78
+      ],
+      [
+        43,
+        43.78
+      ],
+      [
+        44,
+        45.78
+      ],
+      [
+        46,
+        46.78
+      ],
+      [
+        47,
+        47.78
+      ],
+      [
+        48,
+        48.78
+      ],
+      [
+        49,
+        49.78
+      ],
+      [
+        50,
+        50.78
+      ],
+      [
+        51,
+        51.78
+      ],
+      [
+        52,
+        55.78
+      ]
+    ],
+    "verified_clef_changes": {
+      "rh": {
+        "7": "bass",
+        "9": "treble"
+      },
+      "lh": {
+        "7": "treble",
+        "9": "bass"
+      }
+    },
+    "verified_hand_crossings": [
+      {
+        "start_beat": 24,
+        "end_beat": 31,
+        "rest_before": 1,
+        "rest_after": 1,
+        "max_transition_leap": 20
+      }
+    ],
+    "verified_transition_leaps": [
+      {
+        "hand": "lh",
+        "voice": "single",
+        "from_beat": 30.0,
+        "to_beat": 32.0,
+        "rest_beats": 1.0,
+        "semitones": 20
+      }
+    ],
+    "verified_hand_labels": {
+      "rh": {
+        "7": "m.d.",
+        "9": "m.d."
+      },
+      "lh": {
+        "7": "m.s.",
+        "9": "m.s."
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 7,
+      "sounded_pitches_per_minute": 69.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

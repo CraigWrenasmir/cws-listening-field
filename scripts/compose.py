@@ -240,6 +240,11 @@ def make_score(p):
                 clef_name=clef_changes.get(mi,'treble' if hand=='rh' else 'bass')
                 assert clef_name in ('treble','bass'),('Unsupported clef',p['op'],hand,mi)
                 m.insert(0,clef.TrebleClef() if clef_name=='treble' else clef.BassClef())
+            hand_label=p.get('hand_labels',{}).get(hand,{}).get(mi)
+            if hand_label:
+                assert hand_label==('m.d.' if hand=='rh' else 'm.s.')
+                word=expressions.TextExpression(hand_label);word.placement='above';word.style.fontStyle='italic';word.style.fontSize=10
+                m.insert(0,word)
             if hand=='rh':
                 if mi==1:
                     compound=p['meter'] in ('6/8','9/8','12/8')
@@ -439,7 +444,7 @@ def main():
                     slur.set('number',str(int(slur.get('number','1'))+8))
             for fermata in n.findall('notations/fermata'):
                 fermata.set('type','upright')
-        # Only standard tempo directions belong on the printed score. This also
+        # Only standard tempo and hand directions belong on the printed score. This also
         # removes any tempo adjective automatically inferred by the exporter.
         for measure in root.findall('.//part/measure'):
             for pedal in measure.findall('direction/direction-type/pedal'):
@@ -447,7 +452,7 @@ def main():
             for direction in list(measure.findall('direction')):
                 for dt in list(direction.findall('direction-type')):
                     for words in list(dt.findall('words')):
-                        if words.text not in ('poco rit.','poco rubato','a tempo'):dt.remove(words)
+                        if words.text not in ('poco rit.','poco rubato','a tempo','m.d.','m.s.'):dt.remove(words)
                     if not len(dt):direction.remove(dt)
                 if direction.find('direction-type') is None:measure.remove(direction)
         if ident is not None:

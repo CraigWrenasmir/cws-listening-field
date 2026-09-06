@@ -103,6 +103,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 85 | Yarrow Elevation | 5/4, 4/4, 6/4, 3/4, 7/4 (changing) | 111 | [Score](pieces/CWS_Op_085_Yarrow_Elevation/CWS_Op_085_Yarrow_Elevation.pdf) | [MP3](pieces/CWS_Op_085_Yarrow_Elevation/CWS_Op_085_Yarrow_Elevation.mp3) |
 | CWS Op. 86 | Eglantine Terrace | 4/4 | 155 | [Score](pieces/CWS_Op_086_Eglantine_Terrace/CWS_Op_086_Eglantine_Terrace.pdf) | [MP3](pieces/CWS_Op_086_Eglantine_Terrace/CWS_Op_086_Eglantine_Terrace.mp3) |
 | CWS Op. 87 | Verbena Switchyard | 7/4, 4/4, 5/4, 3/4, 6/4, 7/8 (changing) | 166 | [Score](pieces/CWS_Op_087_Verbena_Switchyard/CWS_Op_087_Verbena_Switchyard.pdf) | [MP3](pieces/CWS_Op_087_Verbena_Switchyard/CWS_Op_087_Verbena_Switchyard.mp3) |
+| CWS Op. 88 | Cress Vantage | 4/4 | 95 | [Score](pieces/CWS_Op_088_Cress_Vantage/CWS_Op_088_Cress_Vantage.pdf) | [MP3](pieces/CWS_Op_088_Cress_Vantage/CWS_Op_088_Cress_Vantage.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

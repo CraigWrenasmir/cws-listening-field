@@ -210,6 +210,8 @@ for p in cat:
  assert 1<=pages<=4
  stats={}
  limits=p.get('technique_limits',dict(chord_span=7,melodic_leap=12,rapid_leap=7))
+ crossings=p.get('hand_crossings',[])
+ transition_leaps=[]
  if p['op']>=21:
   assert p.get('difficulty') and p.get('technical_note') and p.get('technique_limits'),('Document the technical review',p['op'])
  for hand in ['rh','lh']:
@@ -221,16 +223,48 @@ for p in cat:
    for prev,curr in zip(line,line[1:]):
     leap=min(abs(a-b) for a in prev['pitches'] for b in curr['pitches']);leaps.append(leap)
     if curr['offset']-prev['offset']<=.5:rapid.append(leap)
+    if crossings:
+     allowed=limits['melodic_leap']
+     for crossing in crossings:
+      for boundary,rest in [(crossing['start_beat'],crossing['rest_before']),(crossing['end_beat']+crossing['rest_after'],crossing['rest_after'])]:
+       if abs(curr['offset']-boundary)<1e-8 and prev['offset']+prev['duration']<=boundary-rest+1e-8:
+        allowed=max(allowed,crossing.get('max_transition_leap',allowed))
+     assert leap<=allowed,('Wide leap needs review',stem,hand,prev['id'],curr['id'],leap,allowed)
+     if leap>limits['melodic_leap']:transition_leaps.append(dict(hand=hand,voice=voice,from_beat=prev['offset'],to_beat=curr['offset'],rest_beats=curr['offset']-prev['offset']-prev['duration'],semitones=leap))
   stats[hand]=dict(low=min(pitches),high=max(pitches),maximum_melodic_leap_semitones=max(leaps),maximum_eighth_note_leap_semitones=max(rapid,default=0),maximum_simultaneous_span_semitones=max(max(e['pitches'])-min(e['pitches']) for e in evs))
   assert stats[hand]['maximum_simultaneous_span_semitones']<=limits['chord_span'],('Hand span needs review',p['op'],hand,stats[hand],limits)
   if p['op']>=7:
    assert stats[hand]['maximum_eighth_note_leap_semitones']<=limits['rapid_leap'],('Rapid leap needs review',stem,hand,stats[hand],limits)
-   assert stats[hand]['maximum_melodic_leap_semitones']<=limits['melodic_leap'],('Wide leap needs review',stem,hand,stats[hand],limits)
- # Ensure hands do not cross, using notated durations (not the shorter demo release).
+   if not crossings:assert stats[hand]['maximum_melodic_leap_semitones']<=limits['melodic_leap'],('Wide leap needs review',stem,hand,stats[hand],limits)
+ previous_end=-1
+ for crossing in crossings:
+  start,end=crossing['start_beat'],crossing['end_beat']
+  before,after=crossing['rest_before'],crossing['rest_after']
+  assert before>0 and after>0 and 0<=start-before<start<end<end+after<total_beats
+  assert start-before>=previous_end,('Overlapping hand-crossing transitions',p['op'])
+  previous_end=end+after
+  for left,right in [(start-before,start),(end,end+after)]:
+   assert not any(e['offset']<right-1e-8 and e['offset']+e['duration']>left+1e-8 for e in p['events']),('Hand-crossing transition needs written silence',p['op'],left,right)
+  for hand,label in [('rh','m.d.'),('lh','m.s.')]:
+   assert any(e['hand']==hand and abs(e['offset']-start)<1e-8 for e in p['events'])
+   for boundary in [start,end+after]:
+    bar=next((i+1 for i,t in enumerate(bar_starts) if abs(t-boundary)<1e-8),None)
+    assert bar and p.get('hand_labels',{}).get(hand,{}).get(str(bar))==label,('Missing hand label at register exchange',p['op'],hand,boundary)
+ if p.get('hand_labels'):
+  expected_labels=sorted((int(bar),'1' if hand=='rh' else '2',label) for hand,labels in p['hand_labels'].items() for bar,label in labels.items())
+  actual_labels=[]
+  for measure in r.findall('.//part/measure'):
+   for direction in measure.findall('direction'):
+    for word in direction.findall('direction-type/words'):
+     if word.text in ('m.d.','m.s.'):actual_labels.append((int(measure.get('number')),direction.findtext('staff','1'),word.text))
+  assert sorted(actual_labels)==expected_labels,('Printed hand labels',p['op'],actual_labels,expected_labels)
+ # Check the declared hand order using full notated durations.
  for beat in sorted(set(e['offset'] for e in p['events'])):
   active={h:[pi for e in p['events'] if e['hand']==h and e['offset']<=beat<e['offset']+e['duration'] for pi in e['pitches']] for h in ['rh','lh']}
-  if active['rh'] and active['lh']:assert min(active['rh'])>=max(active['lh']),(stem,beat,active)
-  if p.get('voice_structure'):
+  crossed=any(c['start_beat']<=beat<c['end_beat'] for c in crossings)
+  lower,upper=('rh','lh') if crossed else ('lh','rh')
+  if active['rh'] and active['lh']:assert min(active[upper])>=max(active[lower]),('Hand order',stem,beat,active)
+  if p.get('voice_structure') or crossings:
    for hand,pitches in active.items():
     assert len(pitches)==len(set(pitches)),('Overlapping same-hand pitch',p['op'],beat,hand,pitches)
     if pitches:
@@ -249,6 +283,9 @@ for p in cat:
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
  if p.get('tuplet_spans'):report[-1]['verified_tuplet_brackets']=p['tuplet_spans']
  if p.get('clef_changes'):report[-1]['verified_clef_changes']=p['clef_changes']
+ if crossings:report[-1]['verified_hand_crossings']=crossings
+ if transition_leaps:report[-1]['verified_transition_leaps']=transition_leaps
+ if p.get('hand_labels'):report[-1]['verified_hand_labels']=p['hand_labels']
  if p.get('meters'):report[-1]['verified_meter_changes']=[dict(beat=tick/960,meter=signature) for tick,signature in expected_meters]
  if p['op']>=7:
   patterns=[]

@@ -1101,4 +1101,55 @@ G#2:3 D#3:3
   phrase_arcs=[[0,28.5,4],[29,50,3],[50.5,69,2],[69.5,87.5,-2]],
   lower_entries=[[29,32.5],[41.5,47.5]],inner_entries=[[55.5,69.5]],pedal_lift=.23,gate=.99,
   note='The bass compresses the opening phrase into a light passing memory. Later, the same contour unfolds slowly in the inner voice while the upper notes take another route. The three note-value scales remain connected through voicing and phrase rubato, and the final minor sixth/ninth is kept quiet.'))
+,
+dict(op=88,title='Cress Vantage',key='f',fifths=-4,meter='4/4',bpm=53,
+ description='Verbena Switchyard’s opening contour becomes F–A-flat–B-flat–A-flat. A short F-minor opening moves towards brighter chords, then the hands exchange registers: the RH holds lower harmonies while the LH carries a high melody. Written pauses give the exchange room. Returning through suspended C colours and B-flat minor, the piece settles in F major with sixth and ninth colours.',
+ difficulty='Advanced register exchange with a prepared crossed-hands passage',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Both hands rest for one quarter beat before and after bars 7–8. During the crossing, the upper written staff is the RH in bass clef (m.d.), and the lower written staff is the LH in treble clef (m.s.). Keep the low RH chords held while the LH plays above. The twenty-semitone LH return to bar 9 follows the full written rest; the RH returns through a rising line. Hand labels and normal clefs resume at bar 9.',
+ parent_opus=87,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['F','Ab','Bb','Ab']),
+ ancestry=dict(source_opus=87,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=4,source_pitches=['G#','B','C#','B'],transposition_semitones=-3),
+ hand_crossings=[dict(start_beat=24,end_beat=31,rest_before=1,rest_after=1,max_transition_leap=20)],
+ hand_labels={'rh':{7:'m.d.',9:'m.d.'},'lh':{7:'m.s.',9:'m.s.'}},
+ clef_changes={'rh':{7:'bass',9:'treble'},'lh':{7:'treble',9:'bass'}},
+ system_starts=[1,4,6,7,9,11,13],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.22] for bar,cuts in enumerate([[0,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,1,2,3],[0,1,2,3,4],[0,1,2,3],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,2,3,4],[0,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+F5:1 Ab5:1 Bb5:1 Ab5:1
+G5:2 F5:1 Eb5:1
+C5+F5+A5:2 G5:1 F5:1
+Eb5:1 F5:1 G5:2
+E5:2 G5:1 F5:1
+D5+F5+A5:3 R:1
+F3+A3+C4:4
+Db3+F3+Ab3:3 R:1
+G4:1 Bb4:1 D5:1 F5:1
+F5:3 E5:1
+Eb5:1 Db5:1 C5:2
+D5:2 E5:1 G5:1
+Bb4+D5+E5:3 C5:1
+A4+C5+D5+G5:4
+''',
+ lh='''
+F3:2 C4:1 Eb4:1
+Db3:2 Ab3:1 C4:1
+Bb2:1 F3:1 Ab3:1 C4:1
+Eb3:2 Bb3:1 D4:1
+C3:1 G3:1 Bb3:1 D4:1
+D3:1 A3:1 C4:1 R:1
+E5:1 G5:1 A5:1 G5:1
+Eb5:1 F5:1 Ab5:1 R:1
+C4:1 G3:1 Bb3:1 D4:1
+F3:1 C4:1 E4:1 D4:1
+Bb2:1 F3:1 Ab3:1 Bb3:1
+G2:2 D3:1 F3:1
+C3:1 G3:1 Bb3:1 E3:1
+F3+C4:4
+''',sections={1:'p',2:'pp',3:'mp',4:'p',5:'p',6:'pp',7:'p',8:'pp',9:'p',10:'pp',11:'p',12:'mp',13:'p',14:'pp'},words={1:'poco rubato',13:'poco rit.'},
+ slurs=[(1,5),(7,8),(9,14)],lower_phrases=[(1,5),(7,8),(9,12),(13,14)],
+ hairpins=[('crescendo',1,3),('diminuendo',4,5),('diminuendo',7,8),('diminuendo',9,11),('diminuendo',12,14)],tempo_changes={},group=3,
+ performance=dict(rubato=[53,47,55,50,48,40,48,42,49,44,47,51,36,25],
+  phrase_arcs=[[0,19.5,4],[24,31,1],[32,56,-2]],
+  lower_entries=[[24,31],[40,44]],pedal_lift=.22,gate=.985,
+  note='The written pauses release both hands for the register exchange. A quiet low RH chord supports the brighter LH tune, with pedal refreshes clearing each upper note while the chord stays finger-held. The hands unwind through another pause, and the rising RH return leads towards a soft major sixth/ninth.'))
 ]
