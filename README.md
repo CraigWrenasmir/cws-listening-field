@@ -47,6 +47,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 29 | Fallow Tramway | 5/4 | 167 | [Score](pieces/CWS_Op_029_Fallow_Tramway/CWS_Op_029_Fallow_Tramway.pdf) | [MP3](pieces/CWS_Op_029_Fallow_Tramway/CWS_Op_029_Fallow_Tramway.mp3) |
 | CWS Op. 30 | Cedar Ellipsis | 7/8 | 186 | [Score](pieces/CWS_Op_030_Cedar_Ellipsis/CWS_Op_030_Cedar_Ellipsis.pdf) | [MP3](pieces/CWS_Op_030_Cedar_Ellipsis/CWS_Op_030_Cedar_Ellipsis.mp3) |
 | CWS Op. 31 | Pollen Cloister | 4/4 | 158 | [Score](pieces/CWS_Op_031_Pollen_Cloister/CWS_Op_031_Pollen_Cloister.pdf) | [MP3](pieces/CWS_Op_031_Pollen_Cloister/CWS_Op_031_Pollen_Cloister.mp3) |
+| CWS Op. 32 | Indigo Turnstile | 9/8 | 216 | [Score](pieces/CWS_Op_032_Indigo_Turnstile/CWS_Op_032_Indigo_Turnstile.pdf) | [MP3](pieces/CWS_Op_032_Indigo_Turnstile/CWS_Op_032_Indigo_Turnstile.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

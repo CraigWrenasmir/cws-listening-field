@@ -385,4 +385,59 @@ D3+A3:4
   phrase_arcs=[[0,15,3],[16,31,3],[32,47,4],[48,64,-2]],
   lower_entries=[[0,8],[8,16],[16,24],[24,32],[32,40],[40,48],[48,56]],pedal_bars=list(range(1,17)),pedal_lift=.24,gate=.99,
   note='The upper line remains present through its long notes; the separately scheduled inner line is voiced seven velocity steps softer. Bass phrases receive their own gentle prominence. The final upper D remains held across the bar line while the inner voice completes its reply.'))
+,
+dict(op=32,title='Indigo Turnstile',key='f',fifths=-4,meter='9/8',bpm=57,
+ description='A descending turn from Pollen Cloister\'s inner voice becomes F-E-flat-C-D-flat at the surface. F minor moves through D-flat and an unexpected B-major colour; later an E-major quintuplet figure reflects that distant light. The five-note figures cut gently across the compound metre. Near the close, A natural opens F minor into a warmer F-major sixth-and-ninth sonority.',
+ difficulty='Advanced compound-metre reverie',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Five eighth notes occupy two quarter-note beats within a nine-eighth bar, creating an independent layer across the compound pulse. The motif moves from an ancestral inner voice into the treble. Long ties, distant-key accidentals and soft three-note voicings require controlled phrasing and planned bass travel.',
+ tuplet_groups=[dict(hand='rh',actual=5,normal=4,count=10),dict(hand='lh',actual=5,normal=4,count=5)],
+ parent_opus=31,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['F','Eb','C','Db']),
+ ancestry=dict(source_opus=31,source_hand='rh',source_voice='inner',source_start_beat=48,source_end_beat=52,source_pitches=['C','Bb','G','Ab'],transposition_semitones=5),
+ rh='''
+F5:1 Eb5:.5 C5:.5 Db5:2.5~
+Db5:.5 C5:.5 Ab4:.5 G4:1 F4:1 R:1
+Ab4+C5+G5:2 Bb5:.5 Ab5:.5 G5:1 F5:.5
+Eb5:1 F5:.5 Ab5:.5 C6:1 Bb5:1 Ab5:.5
+G5:2/5 F5:2/5 Eb5:2/5 Db5:2/5 C5:2/5 Ab4:1 Bb4:1 C5:.5
+D#5+F#5+C#6:2 B5:.5 A#5:.5 F#5:1 E5:.5
+Eb5:1 D5:.5 C5:.5 Bb4:1 Ab4:1 G4:.5
+F4+Ab4+Eb5:2 C5:.5 Db5:.5 F5:1 Eb5:.5~
+Eb5:.5 C5:.5 Ab4:.5 G4:1 Bb4:1 C5:1
+Db5+F5+C6:2 Bb5:.5 Ab5:.5 G5:1 F5:.5
+E5:2/5 F#5:2/5 G#5:2/5 B5:2/5 D#6:2/5 C#6:1 B5:1 G#5:.5
+G5:1 F5:.5 Eb5:.5 D5:1 C5:1 Bb4:.5
+Ab4+C5+G5:2 F5:.5 Eb5:.5 C5:1 Db5:.5~
+Db5:.5 C5:.5 Bb4:.5 A4:1 C5:1 E5:1
+D5+F5+C6:2 Bb5:.5 A5:.5 G5:1 F5:.5
+E5:1 D5:.5 C5:.5 Bb4:1 G4:1 E4:.5
+F4+A4+E5:2 D5:.5 C5:.5 G4:1 A4:.5~
+A4:.5 C5:1 G4+A4+D5:3
+''',
+ lh='''
+F3:1 C4:1 Ab3:.5 G3:.5 F3:1 Eb3:.5
+Db3:1.5 Ab3:.5 C4:1 F3:1 Ab3:.5
+F3:1 C4:.5 Eb4:.5 G3:1 Ab3:1 Bb3:.5
+Ab3:1.5 Eb3:1 G3:.5 C4:.5 Bb3:1
+Db3:1 Ab3:1 C4:1 F3:1 Eb3:.5
+B2:1 F#3:1 A#3:.5 D#4:.5 C#4:1 G#3:.5
+C3:1 G3:.5 Bb3:.5 E4:1 Db4:.5 C4:.5 G3:.5
+F3:1.5 C4:.5 Eb4:.5 Ab3:1 G3:.5 F3:.5
+F3:1 Ab3:2/5 C4:2/5 Eb3:2/5 G3:2/5 Bb3:2/5 Ab3:1 F3:.5
+Db3:1 Ab3:1 C4:.5 F3:.5 Bb3:1 Ab3:.5
+E3:1 B3:1 D#4:1 F#3:.5 G#3:.5 F#3:.5
+C3:1 G3:1 Bb3:.5 E4:.5 D4:1 C4:.5
+F3:1 C4:.5 Eb4:.5 Ab3:1 G3:.5 F3:.5 Eb3:.5
+F3:1.5 C4:.5 E3:1 G3:.5 A3:1
+D3:1 A3:1 C4:1 F3:1 E3:.5
+C3:1 G3:.5 Bb3:.5 E3:1 F3:.5 G3:.5 Bb3:.5
+F3:1 C4:1 A3:.5 G3:.5 E3:1 F3:.5
+F3:1.5 C4+F4:3
+''',sections={1:'p',3:'mp',6:'pp',7:'p',10:'mp',11:'pp',12:'p',14:'pp',15:'p',17:'pp'},words={1:'poco rubato',17:'poco rit.'},
+ slurs=[(1,2),(3,5),(6,9),(10,13),(14,16),(17,18)],lower_phrases=[(1,3),(4,5),(6,7),(8,9),(10,11),(12,14),(15,16),(17,18)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,4),('diminuendo',4,5),('crescendo',6,7),('diminuendo',7,9),('diminuendo',10,11),('diminuendo',12,14),('diminuendo',15,16),('diminuendo',17,18)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,52,59,57,51,52,55,50,46,56,51,54,48,46,51,45,40,33],
+  phrase_arcs=[[0,8,3],[9,22,4],[22.5,40,3],[40.5,58,4],[58.5,71,2],[72,81,-2]],
+  lower_entries=[[0,13.5],[13.5,22.5],[22.5,31.5],[31.5,40.5],[40.5,49.5],[49.5,63],[63,72]],pedal_bars=list(range(1,19)),pedal_lift=.22,gate=.99,
+  note='The five-note gestures remain smooth across the compound pulse. Distant major chords are voiced softly, and the return passages carry the melodic thread across them. The final A natural warms the minor centre before the closing sixth-and-ninth colour is allowed to linger.'))
 ]

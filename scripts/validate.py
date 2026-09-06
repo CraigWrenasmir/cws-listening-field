@@ -85,7 +85,9 @@ for p in cat:
   assert [max(e['pitches'])%12 for e in fragment]==source_classes,('Ancestor fragment mismatch',p['op'])
   child_classes=[Pitch(n).pitchClass for n in p['motif']['pitches']]
   assert [(n+a['transposition_semitones'])%12 for n in source_classes]==child_classes,('Ancestral interval mismatch',p['op'])
- if p.get('voice_structure'):
+  motif=p['motif'];child=[e for e in p['events'] if e['hand']==motif['hand'] and (not motif.get('voice') or e.get('voice')==motif['voice']) and motif['start_beat']<=e['offset']<motif['end_beat']][:4]
+  assert [max(e['pitches'])%12 for e in child]==child_classes,('Child fragment mismatch',p['op'])
+ if p['op']>=7:
   notation_voices=collections.defaultdict(set);voice_labels=collections.defaultdict(set)
   durations=collections.defaultdict(float);source_events={e['id']:e for e in p['events']}
   for measure in r.findall('.//part/measure'):
@@ -94,16 +96,17 @@ for p in cat:
     if n.find('rest') is not None:continue
     staff=n.findtext('staff','1');xml_voice=n.findtext('voice');notation_voices[staff].add(xml_voice)
     match=re.match(r'(cws\d+-(?:rh|lh)-m\d+-n\d+)',n.get('id',''));assert match
-    event=source_events[match[1]];voice_labels[(staff,xml_voice)].add(event['voice'])
+    event=source_events[match[1]];voice_labels[(staff,xml_voice)].add(event.get('voice','single'))
     assert staff==('1' if event['hand']=='rh' else '2'),('Notated event moved to wrong hand',p['op'],event['id'])
     pitch=n.find('pitch');midi=(int(pitch.findtext('octave'))+1)*12+dict(C=0,D=2,E=4,F=5,G=7,A=9,B=11)[pitch.findtext('step')]+int(pitch.findtext('alter','0'))
     durations[(event['id'],midi)]+=int(n.findtext('duration'))/voice_divisions
-  assert len(notation_voices['1'])==2 and len(notation_voices['2'])==1 and None not in notation_voices['1'],('Missing independent notated voices',p['op'],notation_voices)
-  assert sorted(tuple(v) for v in voice_labels.values())==[('bass',),('inner',),('upper',)],('Notated voice assignments differ',p['op'],voice_labels)
   expected_durations={(e['id'],pitch):e['duration'] for e in p['events'] for pitch in e['pitches']}
   assert durations.keys()==expected_durations.keys()
-  for key,value in expected_durations.items():assert abs(durations[key]-value)<1/960,('Notated polyphonic sustain differs',p['op'],key)
-  for hand,voices in p['voice_structure'].items():assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
+  for key,value in expected_durations.items():assert abs(durations[key]-value)<1/960,('Notated sustain differs',p['op'],key)
+  if p.get('voice_structure'):
+   assert len(notation_voices['1'])==2 and len(notation_voices['2'])==1 and None not in notation_voices['1'],('Missing independent notated voices',p['op'],notation_voices)
+   assert sorted(tuple(v) for v in voice_labels.values())==[('bass',),('inner',),('upper',)],('Notated voice assignments differ',p['op'],voice_labels)
+   for hand,voices in p['voice_structure'].items():assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
  pedal_directions=[]
  for measure in r.findall('.//part/measure'):

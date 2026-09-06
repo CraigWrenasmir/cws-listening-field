@@ -1139,5 +1139,51 @@
       "sounded_pitches_per_minute": 116.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Indigo Turnstile",
+    "opus": 32,
+    "score_pages": 1,
+    "bars": 18,
+    "pitch_onsets": 216,
+    "audio_seconds": 105.65,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 87,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 47,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 5
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced compound-metre reverie",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Five eighth notes occupy two quarter-note beats within a nine-eighth bar, creating an independent layer across the compound pulse. The motif moves from an ancestral inner voice into the treble. Long ties, distant-key accidentals and soft three-note voicings require controlled phrasing and planned bass travel."
+    },
+    "notated_tuplet_notes": {
+      "1:5:4": 10,
+      "2:5:4": 5
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 11,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 126.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
