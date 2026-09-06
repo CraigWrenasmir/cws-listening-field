@@ -643,4 +643,53 @@ Bb2+F3:4
   phrase_arcs=[[0,11,3],[12,27,4],[28,47,4],[48,63,3],[64,83,4],[84,99,2],[100,112,-2]],
   lower_entries=[[0,16],[16,24],[24,40],[40,56],[56,72],[72,88],[88,100],[100,112]],pedal_bars=list(range(1,29)),pedal_lift=.24,gate=.99,
   note='The upper phrase length expands and contracts while the inner replies retain their own timing. Harmonic distance grows in the middle of the piece, then the G-to-G-flat shift draws the music back towards its first landscape. The final sixth is quieter than the preceding dominant.'))
+,
+dict(op=36,title='River Interstice',key='G',fifths=1,meter='5/4',bpm=57,
+ description='A bass fragment that crossed from G major into G-flat in Lunar Towpath becomes G-D-B-F-sharp in the melody here. Its last note now acts as a major seventh. Seven-note figures travel across four beats, then appear in a shorter gesture and transfer to the bass. B-flat-major colour and an altered E dominant briefly shade the path before a plain G-major close.',
+ difficulty='Advanced septuplet study',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Quarter-note septuplets place seven notes across four quarter-note beats; the shorter eighth-note group places seven across two. The figures pass between the hands while the other voice keeps its own durations. Small intervals keep the runs connected, with the upper line reaching E6. Slow bass register changes and soft three-note voicings require preparation.',
+ tuplet_groups=[dict(hand='rh',actual=7,normal=4,count=14),dict(hand='lh',actual=7,normal=4,count=7)],
+ parent_opus=35,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['G','D','B','F#']),
+ ancestry=dict(source_opus=35,source_hand='lh',source_voice='bass',source_start_beat=72,source_end_beat=78,source_pitches=['G','D','B','Gb'],transposition_semitones=0),
+ rh='''
+G5:1 D5:.5 B4:.5 F#5:3~
+F#5:1 E5:.5 D5:.5 B4:1 A4:1 G4:1
+A4+C5+G5:2 F#5:1 E5:.5 D5:.5 C5:1
+B4+D5+A5:2 G5:1 F#5:.5 E5:.5 D5:1
+D5:4/7 E5:4/7 F#5:4/7 A5:4/7 B5:4/7 C#6:4/7 E6:4/7 D6:1
+C6:1 B5:.5 A5:.5 G5:1 E5:1 D5:1
+Bb4+D5+A5:3 G5:1 F5:1
+E5+G#5+D6:2 C6:1 B5:.5 A5:.5 G#5:1
+A5:2 G5:.5 E5:.5 D5:1 C5:1
+B4+D5+A5:2 G5:1 F#5:.5 E5:.5 D5:1
+C5:2/7 D5:2/7 E5:2/7 G5:2/7 A5:2/7 B5:2/7 D6:2/7 C6:2 B5:1
+A5:1 G5:.5 E5:.5 D5:1 B4:1 A4:1
+F#4+A4+E5:3 D5:1 C5:1
+B4:1 A4:.5 G4:.5 E4+G4+D5:3
+D4+G4+B4:5
+''',
+ lh='''
+G2:1 D3:.5 B3:.5 F#3:1 A3:1 B3:1
+E3:1 B3:1 D4:1 G3:.5 F#3:.5 E3:1
+A2:1 E3:1 G3:1 B3:.5 C4:.5 E3:1
+G3:1 D4:1 B3:1 A3:.5 F#3:.5 E3:1
+D3:1 A3:1 C#4:1 F#3:1 E3:1
+C3:1.5 G3:.5 B3:1 E4:.5 D4:.5 C4:1
+Bb2:2 F3:1 A3:1 D4:1
+E3:1 B3:1 D4:.5 F3:.5 G#3:1 B3:1
+A2:1 E3:1 G3:1 B3:1 C4:.5 E3:.5
+G3:1 D4:1 B3:.5 A3:.5 F#3:1 E3:1
+C3:1 G3:1 B3:1 D4:.5 F#3:.5 G3:1
+A2:4/7 B2:4/7 C3:4/7 E3:4/7 G3:4/7 B3:4/7 D4:4/7 C4:1
+D3:1 A3:1 C4:1 E3:1 F#3:1
+E3:1 B3:.5 D4:.5 G3:1 F#3:1 E3:1
+G2+D3:5
+''',sections={1:'p',3:'mp',5:'p',7:'pp',8:'mp',9:'p',11:'mp',13:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,2),(3,6),(7,9),(10,12),(13,15)],lower_phrases=[(1,3),(4,6),(7,8),(9,10),(11,12),(13,15)],
+ hairpins=[('diminuendo',1,2),('crescendo',3,5),('diminuendo',5,6),('crescendo',7,8),('diminuendo',8,9),('crescendo',10,11),('diminuendo',11,12),('diminuendo',13,15)],tempo_changes={},group=3,
+ performance=dict(rubato=[57,52,58,56,60,52,49,57,50,55,59,51,47,42,34],
+  phrase_arcs=[[0,9,3],[10,29,4],[30,44,3],[45,59,4],[60,75,-2]],
+  lower_entries=[[0,15],[15,30],[30,40],[40,50],[50,60],[60,75]],pedal_bars=list(range(1,16)),pedal_lift=.23,gate=.99,
+  note='The septuplets are single flowing gestures, with no accent on each internal note. Their slower partner voice preserves the breadth of the phrase. The bass takes up the four-beat figure near the end, after which the music gradually settles into a plain tonic.'))
 ]

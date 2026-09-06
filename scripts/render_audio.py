@@ -92,8 +92,10 @@ for p in cat:
                 pitch_velocity=vel-(4 if performance and len(ev['pitches'])>1 and pitch<max(ev['pitches']) else 0)
                 scheduled.append((start,1,mido.Message('note_on',channel=hi,note=pitch,velocity=pitch_velocity)))
                 scheduled.append((end,0,mido.Message('note_off',channel=hi,note=pitch,velocity=0)))
-            ev['seconds']=round(seconds_at(ev['offset']),6)
-            ev['end_seconds']=round(seconds_at(ev['offset']+ev['duration']),6)
+            # Ratios such as sevenths do not divide the MIDI tick grid exactly.
+            # Follow the actual scheduled attack and the quantised score release.
+            ev['seconds']=round(seconds_at(start/TPB),6)
+            ev['end_seconds']=round(seconds_at(round((ev['offset']+ev['duration'])*TPB)/TPB),6)
             ev['velocity']=vel
         # Explicit spans match the printed pedal marks. Earlier works retain
         # their existing per-bar rendering unchanged.

@@ -1383,5 +1383,51 @@
       "sounded_pitches_per_minute": 100.7,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "River Interstice",
+    "opus": 36,
+    "score_pages": 1,
+    "bars": 15,
+    "pitch_onsets": 174,
+    "audio_seconds": 95.68,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 88,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced septuplet study",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Quarter-note septuplets place seven notes across four quarter-note beats; the shorter eighth-note group places seven across two. The figures pass between the hands while the other voice keeps its own durations. Small intervals keep the runs connected, with the upper line reaching E6. Slow bass register changes and soft three-note voicings require preparation."
+    },
+    "notated_tuplet_notes": {
+      "1:7:4": 14,
+      "2:7:4": 7
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 112.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
