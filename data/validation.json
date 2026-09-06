@@ -5898,5 +5898,306 @@
       "sounded_pitches_per_minute": 70.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Heather Drift",
+    "opus": 70,
+    "score_pages": 2,
+    "bars": 15,
+    "pitch_onsets": 127,
+    "audio_seconds": 123.75,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 41,
+        "high": 72,
+        "maximum_melodic_leap_semitones": 18,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced displaced two-hand canon",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 18,
+        "rapid_leap": 9
+      },
+      "note": "The LH tenor enters exactly two and a half beats after the RH in bars 1, 6 and 11, copying its four dotted-quarter notes one octave lower. Keep the imitation independent as its third note ties into the next bar. The bass rests during each answer and returns after it ends. LH treble clef in bars 6\u20137 and 11\u201312 makes the higher replies readable. The tenor\u2019s eighteen-semitone descent into bar 13 follows a three-and-a-half-beat rest; the bass has already brought the hand down to D4 before that F3 entry."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        1.26
+      ],
+      [
+        1.5,
+        2.76
+      ],
+      [
+        3.0,
+        4.26
+      ],
+      [
+        4.5,
+        5.76
+      ],
+      [
+        6.0,
+        7.26
+      ],
+      [
+        7.5,
+        8.76
+      ],
+      [
+        9.0,
+        10.26
+      ],
+      [
+        10.5,
+        11.76
+      ],
+      [
+        12.0,
+        13.26
+      ],
+      [
+        13.5,
+        14.76
+      ],
+      [
+        15.0,
+        16.26
+      ],
+      [
+        16.5,
+        17.76
+      ],
+      [
+        18.0,
+        19.26
+      ],
+      [
+        19.5,
+        20.76
+      ],
+      [
+        21.0,
+        22.26
+      ],
+      [
+        22.5,
+        23.76
+      ],
+      [
+        24.0,
+        25.26
+      ],
+      [
+        25.5,
+        26.76
+      ],
+      [
+        27.0,
+        28.26
+      ],
+      [
+        28.5,
+        29.76
+      ],
+      [
+        30.0,
+        31.26
+      ],
+      [
+        31.5,
+        32.76
+      ],
+      [
+        33.0,
+        34.26
+      ],
+      [
+        34.5,
+        35.76
+      ],
+      [
+        36.0,
+        37.26
+      ],
+      [
+        37.5,
+        38.76
+      ],
+      [
+        39.0,
+        40.26
+      ],
+      [
+        40.5,
+        41.76
+      ],
+      [
+        42.0,
+        43.26
+      ],
+      [
+        43.5,
+        44.76
+      ],
+      [
+        45.0,
+        46.26
+      ],
+      [
+        46.5,
+        47.76
+      ],
+      [
+        48.0,
+        49.26
+      ],
+      [
+        49.5,
+        50.76
+      ],
+      [
+        51.0,
+        52.26
+      ],
+      [
+        52.5,
+        53.76
+      ],
+      [
+        54.0,
+        55.26
+      ],
+      [
+        55.5,
+        56.76
+      ],
+      [
+        57.0,
+        58.26
+      ],
+      [
+        58.5,
+        59.76
+      ],
+      [
+        60.0,
+        61.26
+      ],
+      [
+        61.5,
+        62.76
+      ],
+      [
+        63.0,
+        64.26
+      ],
+      [
+        64.5,
+        65.76
+      ],
+      [
+        66.0,
+        67.26
+      ],
+      [
+        67.5,
+        68.76
+      ],
+      [
+        69.0,
+        70.26
+      ],
+      [
+        70.5,
+        71.76
+      ],
+      [
+        72.0,
+        73.26
+      ],
+      [
+        73.5,
+        74.76
+      ],
+      [
+        75.0,
+        76.26
+      ],
+      [
+        76.5,
+        77.76
+      ],
+      [
+        78.0,
+        79.26
+      ],
+      [
+        79.5,
+        80.76
+      ],
+      [
+        81.0,
+        82.26
+      ],
+      [
+        82.5,
+        83.76
+      ],
+      [
+        84.0,
+        85.26
+      ],
+      [
+        85.5,
+        86.76
+      ],
+      [
+        87.0,
+        88.26
+      ],
+      [
+        88.5,
+        89.76
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "verified_clef_changes": {
+      "lh": {
+        "6": "treble",
+        "8": "bass",
+        "11": "treble",
+        "13": "bass"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 63.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

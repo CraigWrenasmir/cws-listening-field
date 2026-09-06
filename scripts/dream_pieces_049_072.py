@@ -1609,4 +1609,72 @@ E3:4 F#3:3
   phrase_arcs=[[0,20.5,4],[21,41.5,4],[42,69.5,4],[70,98,-2]],
   lower_entries=[[0,7],[35,42],[63,70],[91,98]],pedal_lift=.22,gate=.985,
   note='The two brief runs remain light and even, each gathering into a longer held arrival. Their altered dominant colours release into warmer neighbouring harmonies. The bass moves forward during the held upper phrases; the final E-minor ninth decays gently with a little room reverb.'))
+,
+dict(op=70,title='Heather Drift',key='F',fifths=-1,meter='6/4',bpm=53,
+ description='Wisteria Remainder’s bass idea becomes F–C–E–D in the melody. Three four-note phrases are answered one octave lower by the left hand, entering two and a half beats late and continuing across the bar line. The bass withdraws during each answer. The same relationship opens into A-flat and then a high D-centred passage before settling into an F-major sixth.',
+ difficulty='Advanced displaced two-hand canon',
+ technique_limits=dict(chord_span=12,melodic_leap=18,rapid_leap=9),
+ technical_note='The LH tenor enters exactly two and a half beats after the RH in bars 1, 6 and 11, copying its four dotted-quarter notes one octave lower. Keep the imitation independent as its third note ties into the next bar. The bass rests during each answer and returns after it ends. LH treble clef in bars 6–7 and 11–12 makes the higher replies readable. The tenor’s eighteen-semitone descent into bar 13 follows a three-and-a-half-beat rest; the bass has already brought the hand down to D4 before that F3 entry.',
+ parent_opus=69,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=6,pitches=['F','C','E','D']),
+ ancestry=dict(source_opus=69,source_hand='lh',source_start_beat=0,source_end_beat=7,source_pitches=['E','B','D#','C#'],transposition_semitones=1),
+ clef_changes={'lh':{6:'treble',8:'bass',11:'treble',13:'bass'}},
+ system_starts=[1,4,6,9,11,14],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*1.5,i*1.5+1.26] for i in range(60)],
+ rh='''
+F4:1.5 C5:1.5 E5:1.5 D5:1.5
+G5:3 F5:1 E5:2
+D5:2 F5:1 E5:1 C5:2
+Bb4:3 Db5:1 C5:2
+E4+G4+D5:3 C5:1 B4:2
+Ab4:1.5 Eb5:1.5 G5:1.5 F5:1.5
+Bb5:3 Ab5:1 G5:2
+F5:3 Eb5:1 Db5:2
+E5:2 G#5:1 F#5:1 D#5:2
+D5:3 C5:1 B4:2
+D5:1.5 A5:1.5 C6:1.5 B5:1.5
+D6:3 C6:1 A5:2
+G5:2 F5:1 E5:1 D5:2
+Db5:3 C5:1 Bb4:2
+A4+C5:6
+''',
+ lh='''
+F2:2.5 R:3.5
+R:2.5 Bb2:2 F3:1.5
+D3:3 F3:3
+Eb3:3 G3:3
+C3:3 E3:3
+Ab3:2.5 R:3.5
+R:2.5 Db4:2 Ab3:1.5
+Db3:3 F3:3
+E3:3 G#3:3
+C3:2 E3:2 G3:2
+D4:2.5 R:3.5
+R:2.5 G3:2 D4:1.5
+D3:2 F3:1 D3:3
+Bb2:3 Db3:3
+F3:6
+''',
+ lh_upper='''
+R:2.5 F3:1.5 C4:1.5 E4:.5~
+E4:1 D4:1.5 R:3.5
+F3:2 A3:1 C4:1 B3:2
+Bb3:2 Db4:1 C4:1 Bb3:2
+G3:2 Bb3:1 D4:1 C4:2
+R:2.5 Ab3:1.5 Eb4:1.5 G4:.5~
+G4:1 F4:1.5 R:3.5
+F3:2 Ab3:1 Cb4:1 Bb3:2
+B3:2 D4:1 C#4:1 B3:2
+G3:2 Bb3:1 D4:1 C4:2
+R:2.5 D4:1.5 A4:1.5 C5:.5~
+C5:1 B4:1.5 R:3.5
+F3:1 A3:1 C4:1 B3:1 A3:2
+F3:2 Ab3:1 C4:1 Bb3:2
+C4:3 D4:3
+''',sections={1:'p',2:'p',3:'mp',4:'p',5:'pp',6:'p',7:'mp',8:'pp',9:'p',10:'pp',11:'mp',12:'p',13:'pp',14:'pp'},words={1:'poco rubato',14:'poco rit.'},
+ slurs=[(1,5),(6,10),(11,15)],lower_phrases=[(1,3),(4,5),(6,8),(9,10),(11,13),(14,15)],
+ hairpins=[('crescendo',1,3),('diminuendo',3,5),('crescendo',6,7),('diminuendo',7,8),('diminuendo',9,10),('diminuendo',11,15)],tempo_changes={},group=3,
+ performance=dict(rubato=[53,51,58,50,44,54,59,46,55,43,58,51,45,38,28],
+  phrase_arcs=[[0,29.5,4],[30,59.5,4],[60,90,-2]],
+  lower_entries=[[12,18],[42,48],[78,90]],tenor_entries=[[2.5,8.5],[32.5,38.5],[62.5,68.5]],pedal_lift=.24,gate=.995,
+  note='Each displaced answer has the same gentle dotted-quarter shape as its upper source. The bass leaves space while the tenor crosses the bar line, returning after the fourth answer note releases. The three passages rise in register before a slow descent restores the warmth of F major.'))
 ]
