@@ -213,4 +213,59 @@ F3:1 A3:1 F3+A3:2
   phrase_arcs=[[0,15,3],[16,27,3],[28,47,4],[48,59,4],[60,71,2],[72,84,-2]],
   lower_entries=[[4,16],[20,28],[28,36],[40,52],[56,68],[72,83]],pedal_bars=list(range(1,22)),pedal_lift=.22,gate=.99,
   note='Sustained upper notes allow the bass phrases to come forward. The two voices exchange motion without a repeating accompaniment cell; the minor plagal colour yields slowly to F-major warmth.'))
+,
+dict(op=17,title='Moth Belvedere',key='A',fifths=3,meter='6/8',bpm=60,
+ description='A solitary bass opens the space before A-C-sharp-E-F-sharp enters above it, drawn from Fern Vestibule\'s returning melody. A major drifts into F-sharp minor and B minor; a brief C-major and D-dominant reflection adds a more distant light. The final A-major sixth keeps the ending open and warm.',
+ parent_opus=16,motif=dict(hand='rh',start_beat=3,end_beat=6,pitches=['A','C#','E','F#']),
+ ancestry=dict(source_opus=16,source_hand='rh',source_start_beat=48,source_end_beat=53,source_pitches=['F','A','C','D'],transposition_semitones=4),
+ rh='''
+R:3
+A4:1 C#5:.5 E5:.5 F#5:1
+E5:1.5 C#5:.5 B4:1~
+B4:1 A4:.5 G#4:.5 E4:1
+F#4:1 A4:.5 C#5:.5 B4:1
+C#5:2 E5:.5 F#5:.5
+G#5:1 F#5:.5 E5:.5 C#5:1
+D5:1.5 C#5:.5 A4:1~
+A4:1 G#4:.5 E4:.5 F#4:1
+F#4:1 B4:.5 D5:.5 E5:1~
+E5:1 D5:.5 C#5:.5 B4:1
+C#5:1.5 A4:.5 G#4:1
+F#4:1 A4:.5 B4:.5 C#5:1
+C5:1 E5:.5 G5:.5 B5:1
+A5:1 G5:.5 F#5:.5 E5:1~
+E5:1 D5:.5 B4:.5 A4:1
+A4:1 C#5:.5 E5:.5 F#5:1~
+F#5:1 E5:.5 C#5:.5 B4:1
+A4:1 G#4:.5 F#4:.5 E4:1
+F#4:1 F#4+B4:2
+''',
+ lh='''
+A2:1 E3:1 B3:1
+A3:1 C#4+E4:1.5 R:.5
+F#3:1 A3+C#4:2
+D3:1.5 F#3+C#4:1.5
+E3:1 D3+G#3:1.5 R:.5
+F#3:2 C#4:1
+C#3:1 B3+E#4:2
+F#3:1 A3+E4:1.5 R:.5
+B2:1.5 D3+A3:1.5
+B3:1 A3:1 F#3:1
+E3:1 G#3+D4:1.5 B2:.5
+A2:1 C#3+G#3:1.5 E3:.5
+F#3:1 A3+C#4:1 R:1
+C3:1 E3+B3:1 G3:1
+D3:1 F#3+C4:1.5 A3:.5~
+A3:.5 G3:.5 F#3:1 E3:1
+A2:1.5 E3+G#3:1.5
+D3:1.5 F#3+A3:1 C#3:.5
+E3:1 D3+G#3:1.5 R:.5
+A2:1 C#3+E3:2
+''',sections={1:'p',6:'pp',10:'p',14:'mp',17:'pp'},words={1:'poco rubato',19:'poco rit.'},
+ slurs=[(2,5),(6,9),(10,13),(14,16),(17,20)],lower_phrases=[(1,3),(4,5),(8,10),(14,16),(18,20)],
+ hairpins=[('diminuendo',2,5),('crescendo',6,7),('diminuendo',7,9),('diminuendo',10,13),('diminuendo',14,16),('diminuendo',17,20)],tempo_changes={},group=4,
+ performance=dict(rubato=[56,60,58,55,52,58,62,57,51,59,56,54,49,61,57,52,56,52,47,40],
+  phrase_arcs=[[0,14,3],[15,26,4],[27,38,3],[39,47,4],[48,60,-2]],
+  lower_entries=[[0,9],[9,15],[21,30],[39,48],[51,59]],pedal_bars=list(range(1,21)),pedal_lift=.24,gate=.99,
+  note='The opening bass is voiced as a melody before the treble arrives. The C-major window gathers a little motion, then the final upper line gradually settles into the lower register.'))
 ]

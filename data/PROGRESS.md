@@ -20,7 +20,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 14, Salt Promenade — complete: 16 bars of 9/8, 130 sounded pitches, one inspected page, 76.97 seconds. A new branch from Silt Reverie moves through C minor, E-flat, D-flat and an F-to-B-flat dominant passage. Twelve LH rhythm patterns, one lower-voice tie, and a spacious added-ninth close. Score/MIDI, audio, timing and layout checks passed; published; awaiting listening feedback.
 - Op. 15, Pearl Footbridge — complete: 19 bars of 3/4, 125 sounded pitches, one inspected page, 77.77 seconds. Salt Promenade's secondary descent becomes a B-flat-major melody; a G-dominant turn and borrowed E-flat minor lead to a major-ninth close. A bass landing was lowered for an easier connection. Score/MIDI, audio, timing, ancestry and layout checks passed; published; awaiting listening feedback.
 - Op. 16, Fern Vestibule — complete locally: 21 bars of 4/4, 165 sounded pitches, one inspected page, 106.68 seconds. Bracken Meridian's bass phrase returns beneath a held upper C; longer lower-voice answers alternate with the melody. F-major, D-minor and E-flat colours lead through B-flat minor into a final major ninth. Score/MIDI, audio, ancestry and layout checks passed; awaiting publication and listening feedback.
-- Next: compose Op. 17, Moth Belvedere; publish Op. 16–18 together.
+- Op. 17, Moth Belvedere — complete locally: 20 bars of 6/8, 130 sounded pitches, one inspected page, 71.32 seconds. A solo-bass opening precedes the A-major melody; F-sharp minor and a distant C-major/D-dominant reflection lead into an A-sixth/ninth close. One short bass connection was lowered for comfortable motion. Score/MIDI, audio, ancestry and layout checks passed; awaiting publication and listening feedback.
+- Next: compose Op. 18, Marsh Afterimage; publish Op. 16–18 together.
 
 ## Growth work to complete during this run
 
