@@ -12110,5 +12110,341 @@
       "sounded_pitches_per_minute": 78.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Lotus Interchange",
+    "opus": 91,
+    "score_pages": 2,
+    "bars": 19,
+    "pitch_onsets": 166,
+    "audio_seconds": 105.1,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 46,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced cantabile over an independent moving inner voice",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "In bars 6\u20138 and 12\u201314, hold the upper note for all four beats while the inner voice plays eight connected eighths. The combined RH spans remain within eleven semitones. Keep the upper line prominent and the inner waves light, using finger substitution where comfortable. A separate tenor moves above the held bass; the bass and tenor need distinct weight. The final inner E resolves to E-flat under the high G."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.3
+      ],
+      [
+        1.5,
+        1.8
+      ],
+      [
+        2,
+        2.8
+      ],
+      [
+        3,
+        3.8
+      ],
+      [
+        4,
+        4.8
+      ],
+      [
+        5,
+        5.8
+      ],
+      [
+        6,
+        7.8
+      ],
+      [
+        8,
+        9.8
+      ],
+      [
+        10,
+        10.8
+      ],
+      [
+        11,
+        11.8
+      ],
+      [
+        12,
+        12.8
+      ],
+      [
+        13,
+        13.8
+      ],
+      [
+        14,
+        14.8
+      ],
+      [
+        15,
+        15.8
+      ],
+      [
+        16,
+        16.8
+      ],
+      [
+        17,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        20.8
+      ],
+      [
+        21,
+        21.8
+      ],
+      [
+        22,
+        22.8
+      ],
+      [
+        23,
+        23.8
+      ],
+      [
+        24,
+        24.8
+      ],
+      [
+        25,
+        25.8
+      ],
+      [
+        26,
+        26.8
+      ],
+      [
+        27,
+        27.8
+      ],
+      [
+        28,
+        28.8
+      ],
+      [
+        29,
+        29.8
+      ],
+      [
+        30,
+        30.8
+      ],
+      [
+        31,
+        31.8
+      ],
+      [
+        32,
+        33.8
+      ],
+      [
+        34,
+        35.8
+      ],
+      [
+        36,
+        37.8
+      ],
+      [
+        38,
+        38.8
+      ],
+      [
+        39,
+        39.8
+      ],
+      [
+        40,
+        40.8
+      ],
+      [
+        41,
+        41.8
+      ],
+      [
+        42,
+        42.8
+      ],
+      [
+        43,
+        43.8
+      ],
+      [
+        44,
+        44.8
+      ],
+      [
+        45,
+        45.8
+      ],
+      [
+        46,
+        46.8
+      ],
+      [
+        47,
+        47.8
+      ],
+      [
+        48,
+        48.8
+      ],
+      [
+        49,
+        49.8
+      ],
+      [
+        50,
+        50.8
+      ],
+      [
+        51,
+        51.8
+      ],
+      [
+        52,
+        52.8
+      ],
+      [
+        53,
+        53.8
+      ],
+      [
+        54,
+        54.8
+      ],
+      [
+        55,
+        55.8
+      ],
+      [
+        56,
+        57.8
+      ],
+      [
+        58,
+        58.8
+      ],
+      [
+        59,
+        59.8
+      ],
+      [
+        60,
+        60.8
+      ],
+      [
+        61,
+        61.3
+      ],
+      [
+        61.5,
+        61.8
+      ],
+      [
+        62,
+        63.8
+      ],
+      [
+        64,
+        64.8
+      ],
+      [
+        65,
+        65.8
+      ],
+      [
+        66,
+        67.8
+      ],
+      [
+        68,
+        68.8
+      ],
+      [
+        69,
+        69.8
+      ],
+      [
+        70,
+        71.8
+      ],
+      [
+        72,
+        72.8
+      ],
+      [
+        73,
+        73.8
+      ],
+      [
+        74,
+        75.8
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass",
+        "tenor"
+      ]
+    },
+    "verified_nonprinting_voice_rests": {
+      "inner": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "tenor": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 14,
+      "sounded_pitches_per_minute": 97.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

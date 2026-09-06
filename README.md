@@ -106,6 +106,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 88 | Cress Vantage | 4/4 | 95 | [Score](pieces/CWS_Op_088_Cress_Vantage/CWS_Op_088_Cress_Vantage.pdf) | [MP3](pieces/CWS_Op_088_Cress_Vantage/CWS_Op_088_Cress_Vantage.mp3) |
 | CWS Op. 89 | Larkspur Concourse | 6/8 | 146 | [Score](pieces/CWS_Op_089_Larkspur_Concourse/CWS_Op_089_Larkspur_Concourse.pdf) | [MP3](pieces/CWS_Op_089_Larkspur_Concourse/CWS_Op_089_Larkspur_Concourse.mp3) |
 | CWS Op. 90 | Canna Astrolabe | 5/4 | 115 | [Score](pieces/CWS_Op_090_Canna_Astrolabe/CWS_Op_090_Canna_Astrolabe.pdf) | [MP3](pieces/CWS_Op_090_Canna_Astrolabe/CWS_Op_090_Canna_Astrolabe.mp3) |
+| CWS Op. 91 | Lotus Interchange | 4/4 | 166 | [Score](pieces/CWS_Op_091_Lotus_Interchange/CWS_Op_091_Lotus_Interchange.pdf) | [MP3](pieces/CWS_Op_091_Lotus_Interchange/CWS_Op_091_Lotus_Interchange.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

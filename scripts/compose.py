@@ -218,6 +218,14 @@ def make_score(p):
     parts=[]
     refs={}
     metres,bar_lengths,bar_starts,total_beats=bar_plan(p,len(parse_rows(p['rh'])))
+    for voice,bars in p.get('hidden_voice_rests',{}).items():
+        assert voice in ('inner','tenor') and len(bars)==len(set(bars))
+        source,hand=('rh_inner','rh') if voice=='inner' else ('lh_upper','lh')
+        silent_rows=parse_rows(p[source]);main_rows=parse_rows(p[hand])
+        for number in bars:
+            assert isinstance(number,int) and 1<=number<=len(silent_rows)
+            assert silent_rows[number-1]==[('R',bar_lengths[number-1])]
+            assert any(ps!='R' for ps,_ in main_rows[number-1])
     for hand in ['rh','lh']:
         held=None
         part=stream.PartStaff(id=hand)
@@ -313,6 +321,7 @@ def make_score(p):
                 if ps=='R':n=note.Rest(quarterLength=dur)
                 elif '+' in ps:n=chord.Chord(ps.split('+'),quarterLength=dur)
                 else:n=note.Note(ps,quarterLength=dur)
+                if ps=='R' and mi in p.get('hidden_voice_rests',{}).get('inner',[]):n.style.hideObjectOnPrint=True
                 n.id=f'cws{p["op"]}-rh-m{mi}-n{ei+1001}'
                 if held:
                     assert ps!='R' and [x.midi for x in n.pitches]==held['pitches'],('Invalid inner tie',p['op'],mi,ei)
@@ -353,6 +362,7 @@ def make_score(p):
                     n=note.Rest(quarterLength=dur);n.stepShift=4
                 elif '+' in ps:n=chord.Chord(ps.split('+'),quarterLength=dur)
                 else:n=note.Note(ps,quarterLength=dur)
+                if ps=='R' and mi in p.get('hidden_voice_rests',{}).get('tenor',[]):n.style.hideObjectOnPrint=True
                 n.id=f'cws{p["op"]}-lh-m{mi}-n{ei+1001}'
                 if held:
                     assert ps!='R' and [x.midi for x in n.pitches]==held['pitches'],('Invalid tenor tie',p['op'],mi,ei)

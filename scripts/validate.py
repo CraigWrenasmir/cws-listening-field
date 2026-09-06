@@ -121,6 +121,11 @@ for p in cat:
     assert len(notation_voices[staff])==len(voices),('Missing independent notated voices',p['op'],staff,notation_voices)
     if len(voices)>1:assert None not in notation_voices[staff]
     assert {e.get('voice') for e in p['events'] if e['hand']==hand}==set(voices)
+ if p.get('hidden_voice_rests'):
+  expected_hidden={f'cws{p["op"]}-{hand}-m{bar}-n1001' for voice,bars in p['hidden_voice_rests'].items() for hand in ['rh' if voice=='inner' else 'lh'] for bar in bars}
+  hidden=[n for n in r.findall('.//part/measure/note') if n.get('print-object')=='no']
+  assert {n.get('id') for n in hidden}==expected_hidden,('Nonprinting voice rests differ',p['op'])
+  assert all(n.find('rest') is not None and n.findtext('voice')=='2' for n in hidden)
  # Verify exact bar length independently from raw MusicXML timeline/backup/chord handling.
  pedal_directions=[];notated_signature=None;notated_meters=[]
  for measure in r.findall('.//part/measure'):
@@ -143,6 +148,7 @@ for p in cat:
     pedal_directions.append((onset_tick(beat),direction.get('type'),el.findtext('staff','1')))
    elif el.tag=='note':
     dur=int(el.findtext('duration','0'))
+    if p.get('hidden_voice_rests') and el.get('print-object')=='no':assert dur==bar_lengths[mi]*divisions,('Hidden rest must fill its bar',p['op'],el.get('id'))
     if el.find('chord') is None:
      cursor+=dur;voice_durations[(el.findtext('staff','1'),el.findtext('voice','1'))]+=dur
     max_end=max(max_end,cursor)
@@ -280,6 +286,7 @@ for p in cat:
  if tuplets:report[-1]['notated_tuplet_notes']={':'.join(map(str,k)):v for k,v in tuplets.items()}
  if p.get('pedal_spans'):report[-1]['verified_notated_and_midi_pedal_spans']=p['pedal_spans']
  if p.get('voice_structure'):report[-1]['verified_independent_voices']=p['voice_structure']
+ if p.get('hidden_voice_rests'):report[-1]['verified_nonprinting_voice_rests']=p['hidden_voice_rests']
  if p.get('polyrhythms'):report[-1]['verified_polyrhythm_spans']=p['polyrhythms']
  if p.get('tuplet_spans'):report[-1]['verified_tuplet_brackets']=p['tuplet_spans']
  if p.get('clef_changes'):report[-1]['verified_clef_changes']=p['clef_changes']

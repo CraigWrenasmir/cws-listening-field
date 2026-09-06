@@ -1294,4 +1294,105 @@ Gb3:2 Bb3:3
   phrase_arcs=[[0,6.8,3],[7,13.8,2],[14,20.8,4],[21,27.8,3],[28,34.8,1],[35,49.5,3],[50,60,-3]],
   lower_entries=[],inner_entries=[[25,30],[40,45]],tenor_entries=[[0,10],[15,20],[30,35],[45,50]],pedal_lift=.21,gate=.995,
   note='The upper phrase has its own seven-beat arc above the gentler five-beat tenor. The two lines receive different emphasis as the bass harmony changes; the repeated notes keep their identity while their relationship shifts. At the shared boundary the melody opens into a free coda, ending on a floating ninth.'))
+,
+dict(op=91,title='Lotus Interchange',key='f',fifths=-4,meter='4/4',bpm=55,
+ hidden_voice_rests={'inner':[1,2,3,4],'tenor':[1,2,3,4]},
+ description='A fragment of Canna Astrolabe’s inner line becomes C–D–D-flat–C in the melody. The sparse opening grows into four voices, with six gently curling eighth-note waves inside the right hand while the upper melody stays finger-held. The first group rises through D-minor, E-minor and F-major colours; the second descends through E-flat, D-flat and C minor. The original chromatic phrase returns before a suspended ninth above F minor.',
+ difficulty='Advanced cantabile over an independent moving inner voice',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='In bars 6–8 and 12–14, hold the upper note for all four beats while the inner voice plays eight connected eighths. The combined RH spans remain within eleven semitones. Keep the upper line prominent and the inner waves light, using finger substitution where comfortable. A separate tenor moves above the held bass; the bass and tenor need distinct weight. The final inner E resolves to E-flat under the high G.',
+ parent_opus=90,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=4,pitches=['C','D','Db','C']),
+ ancestry=dict(source_opus=90,source_hand='rh',source_voice='inner',source_start_beat=0,source_end_beat=10,source_pitches=['Bb','C','Cb','Bb'],transposition_semitones=2),
+ system_starts=[1,4,6,8,10,12,14,16,18],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[(bar-1)*4+left,(bar-1)*4+right-.2] for bar,cuts in enumerate([[0,1,1.5,2,3,4],[0,1,2,4],[0,2,3,4],[0,1,2,3,4],[0,1,2,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2,4],[0,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,1,2,3,4],[0,2,3,4],[0,1,1.5,2,4],[0,1,2,4],[0,1,2,4],[0,1,2,4]],1) for left,right in zip(cuts,cuts[1:])],
+ rh='''
+C5:1 D5:.5 Db5:.5 C5:2
+Ab4:1 C5:1 Eb5:2
+F5:3 Eb5:1
+D5:2 C5:2
+E5:4
+F5:4
+G5:4
+A5:4
+G5:2 F5:2
+Eb5:3 D5:1
+D5:2 F5:1 A5:1
+G5:4
+F5:4
+Eb5:4
+E5:2 D5:1 C5:1
+C5:1 D5:.5 Db5:.5 C5:2
+Ab4:1 Bb4:1 C5:2
+Bb4:1 D5:1 Eb5:2
+G5:4
+''',
+ rh_inner='''
+R:4
+R:4
+R:4
+R:4
+G4:1 A4:1 C5:2
+A4:.5 C5:.5 D5:.5 C5:.5 Bb4:.5 A4:.5 G4:.5 A4:.5
+B4:.5 D5:.5 E5:.5 D5:.5 C5:.5 B4:.5 A4:.5 B4:.5
+C5:.5 D5:.5 F5:.5 E5:.5 D5:.5 C5:.5 B4:.5 C5:.5
+Bb4:2 A4:2
+G4:3 Ab4:1
+A4:2 C5:2
+Bb4:.5 D5:.5 Eb5:.5 D5:.5 C5:.5 Bb4:.5 A4:.5 Bb4:.5
+Ab4:.5 C5:.5 Db5:.5 C5:.5 Bb4:.5 Ab4:.5 Gb4:.5 Ab4:.5
+G4:.5 Bb4:.5 C5:.5 Bb4:.5 Ab4:.5 G4:.5 F4:.5 G4:.5
+G4:2 A4:1 Bb4:1
+Ab4:2 G4:2
+F4:2 G4:2
+F4:2 G4:2
+E5:1 Eb5:3
+''',
+ lh='''
+F3:2 C4:1 Eb4:1
+Db3:1 Ab3:1 C4:2
+Bb2:2 F3:1 Ab3:1
+C3:1 G3:1 Bb3:1 E4:1
+F3:4
+D3:4
+E3:4
+F3:4
+Bb2:4
+Eb3:4
+D3:4
+Eb3:4
+Db3:4
+C3:4
+C3:4
+F3:4
+Db3:4
+Bb2:4
+F3:4
+''',
+ lh_upper='''
+R:4
+R:4
+R:4
+R:4
+C4:2 D4:2
+A3:2 C4:2
+B3:2 D4:2
+C4:2 E4:2
+F3:2 Ab3:2
+Bb3:2 Db4:2
+A3:1 C4:1 B3:2
+Bb3:2 D4:2
+Ab3:2 C4:2
+G3:2 Bb3:2
+G3:2 Bb3:2
+C4:2 Eb4:2
+Ab3:2 C4:2
+F3:2 Ab3:2
+Ab3:2 C4:2
+''',sections={1:'p',2:'pp',3:'p',4:'pp',5:'p',6:'p',7:'mp',8:'mp',9:'p',10:'pp',11:'p',12:'mp',13:'p',14:'pp',15:'p',16:'pp',17:'p',18:'pp',19:'pp'},words={1:'poco rubato',18:'poco rit.'},
+ slurs=[(1,4),(5,9),(10,15),(16,19)],lower_phrases=[(1,4)],
+ hairpins=[('crescendo',1,3),('crescendo',5,8),('diminuendo',9,10),('diminuendo',11,14),('diminuendo',15,17),('diminuendo',18,19)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,49,52,45,51,57,59,56,46,43,52,55,49,46,44,48,41,34,29],
+  phrase_arcs=[[0,15.5,3],[16,35.5,4],[36,59.5,3],[60,76,-2]],
+  lower_entries=[[0,8]],inner_entries=[[20,32],[44,56],[72,76]],tenor_entries=[[32,40],[56,64]],pedal_lift=.2,gate=.995,
+  note='The six inner waves remain softer than the long notes above them, with a small swell towards each wave’s crest. Their first ascent opens into brighter harmony, and the second group descends into softer colours. The chromatic opening returns quietly before the final ninth remains in the air.'))
 ]
