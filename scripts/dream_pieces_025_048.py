@@ -496,4 +496,47 @@ A2:1 E3:1 G3:1 A2+E3:3
   phrase_arcs=[[0,23,4],[24,47,3],[48,72,-2]],
   lower_entries=[[0,12],[12,24],[24,36],[36,48],[48,60],[60,72]],pedal_bars=list(range(1,13)),pedal_lift=.24,gate=.99,
   note='The opening upper E remains held while the inner voice and bass each complete a reply. The inner voice stays quieter and keeps its own changing note lengths. The contrasting major colours are softly voiced before all three lines return to the open A-E close.'))
+,
+dict(op=34,title='Tidal Lacuna',key='Eb',fifths=-3,meter='6/4',bpm=48,
+ description='A small turn from Violet Concourse\'s inner voice becomes E-flat-G-flat-F-E-flat. Its minor inflection hangs above a major seventh before G natural gently changes the colour. Widely spaced replies leave room for the resonance. An E-minor window slips back by a semitone into E-flat; later C minor and two quiet dominant colours lead to an added-ninth close.',
+ difficulty='Upper intermediate / advanced quiet voicing',
+ technique_limits=dict(chord_span=12,melodic_leap=16,rapid_leap=9),
+ technical_note='This quieter study concentrates on soft three-note voicings, long sustained values and hearing the small changes between related harmonic colours. The written pedal follows each harmonic change, including the change halfway through bar 11. Slow bass register changes require preparation; all chords are sounded together.',
+ pedal_spans=[[i*6,(i+1)*6-.25] for i in range(10)]+[[60,62.75],[63,65.75],[66,71.75]],
+ parent_opus=33,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['Eb','Gb','F','Eb']),
+ ancestry=dict(source_opus=33,source_hand='rh',source_voice='inner',source_start_beat=66,source_end_beat=69,source_pitches=['E','G','F#','E'],transposition_semitones=-1),
+ rh='''
+Eb5:2 Gb5:.5 F5:.5 Eb5:3~
+Eb5:3 G5:1 F5:2
+D5+F5+C6:4 Bb5:1 A5:1
+Ab5:2 G5:.5 F5:.5 Eb5:2 R:1
+G4+B4+F#5:3 E5:1 D5:2
+Eb5+G5+D6:3 C6:1 Bb5:2
+Ab5:2 G5:.5 Eb5:.5 D5:3~
+D5:2 Db5:1 C5:1 Ab4:2
+G4+B4+F5:3 Eb5:1 D5:2
+Eb4+G4+D5:3 C5:1 Bb4:2
+F4+A4+Eb5:3 D5:1 C5:2
+G4+Bb4+F5:6
+''',
+ lh='''
+Eb3:2 Bb3:1 D4:1 F3:2
+Eb3:3 Bb3:1 D4:1 G3:1
+Bb2:2 F3:1 A3:1 D4:2
+Ab3:3 Eb3:1 G3:2
+E3:2 B3:1 D4:1 G3:2
+Eb3:3 Bb3:1 F3:2
+C3:2 G3:1 Bb3:1 Eb4:2
+Db3:3 Ab3:1 C4:1 F3:1
+G2:2 D3:1 F3:1 B3:2
+C3:3 G3:1 Bb3:1 Eb3:1
+F3:2 C4:1 Bb2:1 Ab3:1 D4:1
+Eb3+Bb3:6
+''',sections={1:'pp',3:'p',5:'pp',7:'p',9:'pp'},words={1:'poco rubato',11:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12)],
+ hairpins=[('crescendo',1,2),('diminuendo',3,4),('crescendo',5,6),('diminuendo',7,8),('diminuendo',9,10),('diminuendo',11,12)],tempo_changes={},group=3,
+ performance=dict(rubato=[48,45,47,42,45,43,46,41,42,38,35,29],
+  phrase_arcs=[[0,11,2],[12,23,3],[24,35,2],[36,47,3],[48,59,1],[60,72,-2]],
+  lower_entries=[[0,12],[12,24],[24,36],[36,48],[48,60]],pedal_bars=[],gate=.995,
+  note='Sustained colour and silence carry the phrasing. The explicitly written pedal changes preserve each field but release at the harmonic turns; the two colours within bar 11 receive separate pedal spans. The final ninth is allowed to recede with the room sound.'))
 ]

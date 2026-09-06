@@ -1236,5 +1236,101 @@
       "sounded_pitches_per_minute": 122.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Tidal Lacuna",
+    "opus": 34,
+    "score_pages": 1,
+    "bars": 12,
+    "pitch_onsets": 95,
+    "audio_seconds": 114.59,
+    "hands": {
+      "rh": {
+        "low": 63,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Upper intermediate / advanced quiet voicing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 16,
+        "rapid_leap": 9
+      },
+      "note": "This quieter study concentrates on soft three-note voicings, long sustained values and hearing the small changes between related harmonic colours. The written pedal follows each harmonic change, including the change halfway through bar 11. Slow bass register changes require preparation; all chords are sounded together."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        5.75
+      ],
+      [
+        6,
+        11.75
+      ],
+      [
+        12,
+        17.75
+      ],
+      [
+        18,
+        23.75
+      ],
+      [
+        24,
+        29.75
+      ],
+      [
+        30,
+        35.75
+      ],
+      [
+        36,
+        41.75
+      ],
+      [
+        42,
+        47.75
+      ],
+      [
+        48,
+        53.75
+      ],
+      [
+        54,
+        59.75
+      ],
+      [
+        60,
+        62.75
+      ],
+      [
+        63,
+        65.75
+      ],
+      [
+        66,
+        71.75
+      ]
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 51.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
