@@ -1754,4 +1754,65 @@ Bb2+F3:4.5
   phrase_arcs=[[0,13,3],[13.5,25.5,4],[26,39,4],[39.5,60.5,4],[61,79,-2]],
   lower_entries=[[13.5,21.5],[29.5,35],[61,69]],inner_entries=[[39.5,45]],pedal_lift=.24,gate=.995,
   note='The changing groups share an unhurried eighth-note current. Pedal refreshes separate the chromatic inner steps while the tied upper notes remain held. The inner retrograde enters clearly beneath the sustained upper D. A held A bridges the earlier contracting bar line; later major colour gives way to a lower, softer return and an open major ninth.'))
+,
+dict(op=72,title='Elder Anchorage',key='d',fifths=-1,meter='8/4',bpm=54,
+ description='Acacia Radius’s backwards phrase becomes A–B–G–C. The melody unfolds in eight-beat upper notes while the tenor presents the same four pitches in two-beat notes below. On its return the hands exchange the slow and quicker versions. Broad bass changes keep the two time scales connected through Dorian and warmer neighbouring colours, before a quiet D-minor sixth closes the third volume.',
+ difficulty='Advanced augmentation with exchanged voice roles',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The first four upper notes last eight beats each; the tenor gives the same phrase in four two-beat notes in bar 1. In bars 9–12 the tenor takes the eight-beat version while the RH plays the quicker phrase in bar 9. The two versions remain two octaves apart and differ by an exact factor of four in duration. Keep the sustained voice present without reattacking it at the pedal changes.',
+ parent_opus=71,motif=dict(hand='lh',voice='tenor',start_beat=0,end_beat=8,pitches=['A','B','G','C']),
+ ancestry=dict(source_opus=71,source_hand='rh',source_voice='inner',source_start_beat=39.5,source_end_beat=45,source_pitches=['G','A','F','Bb'],transposition_semitones=2),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ pedal_spans=[[i*2,i*2+1.76] for i in range(52)],
+ rh='''
+A5:8
+B5:8
+G5:8
+C6:8
+Bb5:3 Ab5:1 G5:2 F5:2
+Eb5:4 D5:2 C5:2
+D5:3 F5:1 E5:2 C5:2
+B4:4 D5:1 F#5:1 E5:2
+A5:2 B5:2 G5:2 C6:2
+Bb5:4 A5:2 F5:2
+E5:4 D5:2 C5:2
+Bb4:3 Db5:1 C5:2 A4:2
+F4+A4+D5:8
+''',
+ lh='''
+D3:8
+G2:4 D3:4
+Bb2:3 F3:5
+Eb3:4 G3:4
+Ab2:4 Eb3:4
+F3:4 A3:4
+D3:3 F3:2 D3:3
+E3:4 G3:4
+D3:4 F3:4
+G3:4 D3:4
+C3:4 E3:4
+F3:4 Ab3:4
+D3:8
+''',
+ lh_upper='''
+A3:2 B3:2 G3:2 C4:2
+B2:2 F3:2 A3:2 G3:2
+D3:2 F3:1 Ab3:2 G3:1 C4:2
+G3:2 Bb3:2 Db4:2 C4:2
+C3:2 Eb3:2 Gb3:2 F3:2
+A3:2 C4:2 Eb4:2 D4:2
+F3:2 A3:1 C4:1 B3:1 A3:3
+G3:2 B3:2 D4:2 C#4:2
+A3:8
+B3:8
+G3:8
+C4:8
+A3:4 B3:4
+''',sections={1:'p',2:'p',3:'mp',4:'p',5:'mp',6:'pp',7:'p',8:'mp',9:'p',10:'pp',11:'p',12:'pp',13:'pp'},words={1:'poco rubato',12:'poco rit.'},
+ slurs=[(1,4),(5,8),(9,13)],lower_phrases=[(1,3),(4,6),(7,8),(9,13)],
+ hairpins=[('crescendo',1,2),('diminuendo',3,4),('diminuendo',5,6),('crescendo',7,8),('diminuendo',9,13)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,52,58,50,56,45,53,58,51,47,43,36,27],
+  phrase_arcs=[[0,31.5,4],[32,63.5,4],[64,104,-2]],
+  lower_entries=[[8,16],[40,48],[80,88]],tenor_entries=[[0,8],[64,96]],pedal_lift=.24,gate=.995,
+  note='The quicker version is gently voiced below or above the long notes, never used as a repeated accompaniment loop. Both appearances preserve the four-to-one duration relationship. The upper register slowly recedes after the exchange, and the final minor sixth opens only after the last sustained chord has begun.'))
 ]
