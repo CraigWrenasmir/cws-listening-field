@@ -631,4 +631,44 @@ C3+Eb3+G3:2 Bb2+D3+F3:3
 C3+Eb3+G3:5
 ''',sections={1:'p',3:'mp',5:'p',7:'mp',9:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[('crescendo',2,3),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[62,62,64,58,62,63,64,58,60,57,47,32],phrase_arcs=[[0,20,2],[20,40,3],[40,60,-1]],lower_entries=[],pedal_lift=.2,gate=.96,note='Let the two hands sound like soft, separate replies across a room. The shorter answers recede slightly. Shared attacks at the close should feel like agreement after the alternating phrases.'))
+,
+dict(op=133,title='Birch Reservoir',key='Bb',fifths=-2,meter='3/4',bpm=50,
+ description='Iris Causeway’s small contour rises a whole tone, then the melody dissolves into a held chord. An F-major triad stays finger-held through four different lower harmonies; an E-flat triad repeats the process in a softer harmonic region. The changing bass makes each sustained upper shape seem to turn in the light before a warm F-major sixth and ninth.',
+ difficulty='Advanced sustained-chord voicing over changing lower harmonies',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every hand event contains at least three notes. Hold the complete RH triad through bars 3–6 without reattacking it, then hold the second triad through bars 7–10. Each lasts twelve quarter beats. Pedal clears at the lower harmonic changes while those upper keys stay down. The opening chord tops and closing inner motion should remain softer than a conventional chorale.',
+ parent_opus=132,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['D','F','G','F']),ancestry=dict(source_opus=132,source_hand='rh',source_start_beat=0,source_end_beat=10,source_pitches=['C','Eb','F','Eb'],transposition_semitones=2),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',3:'p',7:'pp',11:'p',13:'pp'},
+ pedal_spans=[[(bar-1)*3+a,(bar-1)*3+b-.2] for bar,cuts in enumerate([[0,1.5,3],[0,1,3],[0,3],[0,3],[0,3],[0,3],[0,3],[0,3],[0,3],[0,3],[0,1.5,3],[0,3],[0,1,3],[0,3]],1) for a,b in zip(cuts,cuts[1:])],
+ rh='''
+G4+Bb4+D5:1.5 A4+C5+F5:1.5
+Bb4+D5+G5:1 A4+C5+F5:2
+F4+A4+C5:3~
+F4+A4+C5:3~
+F4+A4+C5:3~
+F4+A4+C5:3
+Eb4+G4+Bb4:3~
+Eb4+G4+Bb4:3~
+Eb4+G4+Bb4:3~
+Eb4+G4+Bb4:3
+G4+Bb4+D5:1.5 F4+A4+C5:1.5
+E4+G4+Bb4+D5:3
+D4+G4+B4:1 E4+A4+C5:2
+G4+A4+C5+D5:3
+''',lh='''
+Bb2+D3+A3:3
+Eb3+G3+D4:3
+D3+F3+A3:3
+Bb2+D3+F3:3
+G2+Bb2+D3:3
+Eb3+G3+Bb3:3
+C3+Eb3+G3:3
+Ab2+C3+Eb3:3
+F3+Ab3+C4:3
+Db3+F3+Ab3:3
+F3+A3+C4:3
+C3+E3+G3:3
+E3+G3+B3:1 A2+C3+E3:2
+F3+A3+C4:3
+''',sections={1:'p',3:'pp',7:'pp',11:'p',13:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[(1,2),(11,12),(13,14)],lower_phrases=[(1,2),(3,6),(7,10),(11,14)],hairpins=[('diminuendo',11,13)],tempo_changes={},group=2,
+ performance=dict(rubato=[50,47,48,47,47,44,47,46,45,42,48,45,38,28],phrase_arcs=[[0,6,2],[6,18,1],[18,30,1],[30,42,-1]],lower_entries=[],pedal_lift=.2,gate=.995,note='The sustained triads should decay naturally while the lower changes speak gently. Avoid rearticulating their tied notes; the harmonic motion belongs to the bass and to the changing relationship between the hands.'))
 ]

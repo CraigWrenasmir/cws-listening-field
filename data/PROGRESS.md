@@ -183,7 +183,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - New commission, 7 September 2026: twenty pieces through Op. 150, with more chords, some entirely chordal pieces, and freedom to explore a new style. Preserve two hands, four pages, 256 sounded pitches, numeric stamps, and the warm dreamlike identity. This supersedes the earlier stop at Op. 130.
 - Op. 131, Alder Courtyard — complete locally: 14 bars of 4/4, 169 sounded pitches, 2 inspected score pages, 78.28 seconds. Every hand attack contains at least three pitches; ten or more distinct shapes in each hand and the final D-minor ninth were independently verified. The upper chord notes carry the tune; both hands remain within compact spans. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 132, Iris Causeway — complete locally: 12 bars of 5/4, 139 sounded pitches, 2 inspected score pages, 72.67 seconds. All forty alternating attacks in the first ten bars were independently checked, including the four-bar reversal of the leading hand. Every hand event has three or more pitches; the two closing bars join their attacks. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
-- Active batch progress: 2 of 20 completed locally. Next composition: Op. 133. Stop after Op. 150.
+- Op. 133, Birch Reservoir — complete locally: 14 bars of 3/4, 83 sounded pitches, 2 inspected score pages, 63.80 seconds. Verified all events contain at least three notes, two twelve-beat upper triads have no reattacks, all eight lower changes remain independent, and the final harmony is F6/9. Both PDF pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
+- Active batch progress: 3 of 20 completed locally. Next composition: Op. 134. Stop after Op. 150.
 
 ## Growth work to complete during this run
 
