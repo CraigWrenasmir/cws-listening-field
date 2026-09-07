@@ -28,5 +28,21 @@ export function layoutKinship(data){
  const xs=nodes.map(p=>p.x),ys=nodes.map(p=>p.y),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
  const scale=Math.min(1070/Math.max(1,maxX-minX),640/Math.max(1,maxY-minY));
  for(const node of nodes){node.x=600+(node.x-(minX+maxX)/2)*scale;node.y=390+(node.y-(minY+maxY)/2)*scale;}
+ // Fitting a growing tree can compress nearby points. Separate them in the
+ // final map coordinates so every opus retains a clear position at rest.
+ for(let pass=0;pass<120;pass++){
+  let moved=false;
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+   const a=nodes[i],b=nodes[j];let dx=b.x-a.x,dy=b.y-a.y;
+   let distance=Math.hypot(dx,dy);
+   if(distance>=24)continue;
+   if(distance<.0001){dx=1;dy=0;distance=1;}
+   const shift=(24-distance)/2+.001,ox=dx/distance*shift,oy=dy/distance*shift;
+   a.x=Math.max(65,Math.min(1135,a.x-ox));a.y=Math.max(70,Math.min(710,a.y-oy));
+   b.x=Math.max(65,Math.min(1135,b.x+ox));b.y=Math.max(70,Math.min(710,b.y+oy));
+   moved=true;
+  }
+  if(!moved)break;
+ }
  return {nodes:nodes.map(({op,parent,x,y})=>({op,parent,x,y})),links:links.map(({source,target})=>({source:source.op,target:target.op}))};
 }

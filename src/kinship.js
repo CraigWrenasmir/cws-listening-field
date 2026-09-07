@@ -1,4 +1,4 @@
-import {layoutKinship} from './kinship-layout.js';
+import {layoutKinship} from './kinship-layout.js?v=3';
 
 export function mountKinship(root,data){
  const document=root.ownerDocument,q=selector=>root.querySelector(selector),svg=q('#kf-map');
