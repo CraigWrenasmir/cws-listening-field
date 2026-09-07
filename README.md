@@ -162,6 +162,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 132 | Iris Causeway | 5/4 | 139 | [Score](pieces/CWS_Op_132_Iris_Causeway/CWS_Op_132_Iris_Causeway.pdf) | [MP3](pieces/CWS_Op_132_Iris_Causeway/CWS_Op_132_Iris_Causeway.mp3) |
 | CWS Op. 133 | Birch Reservoir | 3/4 | 83 | [Score](pieces/CWS_Op_133_Birch_Reservoir/CWS_Op_133_Birch_Reservoir.pdf) | [MP3](pieces/CWS_Op_133_Birch_Reservoir/CWS_Op_133_Birch_Reservoir.mp3) |
 | CWS Op. 134 | Sedge Arcade | 7/8 | 131 | [Score](pieces/CWS_Op_134_Sedge_Arcade/CWS_Op_134_Sedge_Arcade.pdf) | [MP3](pieces/CWS_Op_134_Sedge_Arcade/CWS_Op_134_Sedge_Arcade.mp3) |
+| CWS Op. 135 | Fern Lantern | 4/4 | 98 | [Score](pieces/CWS_Op_135_Fern_Lantern/CWS_Op_135_Fern_Lantern.pdf) | [MP3](pieces/CWS_Op_135_Fern_Lantern/CWS_Op_135_Fern_Lantern.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

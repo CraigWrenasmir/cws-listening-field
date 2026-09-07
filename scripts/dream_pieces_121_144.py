@@ -707,4 +707,54 @@ D3+F#3+A3:1.5 Eb3+G3+Bb3:2
 G2+Bb2+D3:3.5
 ''',sections={1:'p',5:'mp',9:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[72,71,73,67,73,74,71,66,70,67,56,38],phrase_arcs=[[0,14,2],[14,28,3],[28,42,-1]],lower_entries=[],pedal_lift=.2,gate=.96,note='A gently lopsided dance, with the long step floating rather than accented. The middle melody is lighter than the opening chords.'))
+,
+dict(op=135,title='Fern Lantern',key='d',fifths=-1,meter='4/4',bpm=51,
+ description='A long upper line floats over changing pairs of inner notes. The closing C–B-flat–C of Iris Causeway becomes D–C–D, stretched across three bars. Beneath it the bass initially descends while the inner harmony opens upward, then the voices draw closer in a quiet D-major ending.',
+ difficulty='Advanced independent upper melody and inner chord voicing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Hold the upper RH note while the separately stemmed inner dyads change twice per bar. Do not repeat the melody with the inner chords. The LH dyads move more slowly; let their descending opening line remain distinct. The last two bars turn the minor third to a warm major third.',
+ parent_opus=132,motif=dict(hand='rh',voice='upper',start_beat=0,end_beat=12,pitches=['D','C','D']),ancestry=dict(source_opus=132,source_hand='rh',source_start_beat=50,source_end_beat=60,source_pitches=['C','Bb','C'],transposition_semitones=2),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=500),lower_sections={1:'p',5:'pp',9:'p',11:'pp'},
+ voice_phrases=[dict(voice='inner',start_beat=0,end_beat=48,swell=-3)],
+ pedal_spans=[[i*4+j,i*4+j+1.8] for i in range(12) for j in [0,2]],
+ rh='''
+D5:4
+C5:4
+D5:4
+E5:3 D5:1
+F5:4
+Eb5:4
+D5:3 C5:1
+B4:4
+C5:4
+Bb4:2 A4:2
+A4:4
+A4:4
+''',rh_inner='''
+F4+A4:2 G4+Bb4:2
+E4+G4:2 F4+A4:2
+F4+Bb4:2 G4+B4:2
+G4+C5:2 F4+A4:2
+A4+C5:2 Ab4+C5:2
+G4+Bb4:2 F4+Ab4:2
+F4+A4:2 E4+G4:2
+D4+G4:2 E4+G4:2
+Eb4+G4:2 D4+F4:2
+D4+G4:2 C#4+E4:2
+D4+F#4:2 E4+G4:2
+D4+E4+F#4:4
+''',lh='''
+D3+F3:4
+C3+E3:4
+Bb2+D3:4
+A2+C3:2 D3+F3:2
+F3+A3:2 Db3+F3:2
+Eb3+G3:2 Ab2+C3:2
+D3+F3:2 C3+E3:2
+G2+D3:4
+C3+Eb3:2 Bb2+D3:2
+G2+D3:2 A2+E3:2
+D3+A3:4
+D3+A3:4
+''',sections={1:'p',5:'mp',7:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[('crescendo',3,5),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[51,50,52,46,53,49,48,43,48,45,37,27],phrase_arcs=[[0,16,2],[16,32,3],[32,48,-1]],inner_entries=[],lower_entries=[],pedal_lift=.2,gate=.995,note='The melody stays finger-held above the inner chord changes. Keep the dyads very soft and allow the final major third to appear without emphasis.'))
 ]
