@@ -42,20 +42,19 @@ if(initialPiece){assert.equal(document.querySelector('#lf-title').textContent,in
 else assert.equal(src,'','Overview should not load a recording');
 assert.equal(historyCalls.length,0,'Initial load must preserve the incoming address');
 assert.equal(document.querySelectorAll('[data-contour]').length,data.length,'The collection drawing must include every work');
-assert(document.querySelector('#lf-overview-stats').textContent.includes(data.length+' piano studies'));
-assert.equal(document.querySelector('#lf-latest-title').textContent,data.at(-1).title);
+assert.equal(document.querySelector('#lf-header').hidden,home());
+assert.equal(document.querySelector('#lf-colophon').hidden,home());
+assert.equal(document.querySelector('#lf-enter-kinship').getAttribute('href'),'kinship.html');
+assert.equal(document.querySelectorAll('#lf-overview a').length,1,'Entrance must have only the Kinship link');
+assert.equal(document.querySelectorAll('#lf-overview p, #lf-overview button, #lf-overview figcaption').length,0,'Entrance must have no explanation or extra controls');
 if(process.argv.includes('--routing-only')){assert.deepEqual(errors,[]);console.log('Initial route passed: '+(location.hash||'overview'));process.exit(0);}
-click('#lf-begin');await settle();tick();assert(!home());assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');assert(!audio.paused);
-click('#lf-home');tick();assert(home());assert(audio.paused);assert.equal(location.hash,'#overview');assert.equal(document.title,'The Listening Field · CWS First Studies');
-time=duration;ended=true;audio.dispatchEvent(new window.Event('ended'));assert(home(),'An old ended event must not leave the overview');
-click('#lf-overview-playlist');await settle();assert(!home());assert(!audio.paused);assert.equal(document.querySelector('#lf-title').textContent,data[0].title);assert.equal(historyCalls.at(-1)[0],'push','Starting the walk should retain the overview in browser history');
-click('#lf-overview-link');assert(home());assert(audio.paused);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');
-click('#lf-overview-family');tick();assert(!home());assert(audio.paused);assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'true');assert(document.querySelector('#lf-field').classList.contains('is-family'));
-click('#lf-home');click('#lf-overview-latest');await settle();tick();assert.equal(document.querySelector('#lf-title').textContent,data.at(-1).title);assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'false');assert(audio.paused);
+click('[data-work="1"]');click('#lf-play');await settle();tick();assert(!home());assert(!audio.paused);assert(!document.querySelector('#lf-header').hidden);
+click('#lf-home');tick();assert(home());assert(audio.paused);assert.equal(location.hash,'#overview');assert(document.querySelector('#lf-header').hidden);assert(document.querySelector('#lf-colophon').hidden);
+time=duration;ended=true;audio.dispatchEvent(new window.Event('ended'));assert(home(),'An old ended event must not leave the entrance');
+route('#'+data[1].slug);await settle();tick();assert(!home());assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');assert(audio.paused);
 click('#lf-score-toggle');await until(()=>document.querySelector('#lf-score-body .lf-score-page'));click('#lf-play');await settle();click('#lf-home');assert(home());assert(audio.paused);
-route('#'+data[1].slug);await settle();tick();assert(!home());assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');assert(document.querySelector('#lf-score-shell').hidden,'Returning from overview should reopen the sculpture');assert(!document.querySelector('#lf-field').hidden);assert(audio.paused);
+route('#'+data[1].slug);await settle();tick();assert(document.querySelector('#lf-score-shell').hidden);assert(!document.querySelector('#lf-field').hidden);assert(audio.paused);
 route('');assert(home());route('#'+data[1].slug);assert(!home(),'Back and forward must reopen even the same selected piece');route('#unrecognised');assert(home());assert(audio.paused);
-click('#lf-browse');assert(!document.querySelector('#lf-index').hidden);assert.equal(document.querySelector('#lf-index-toggle').getAttribute('aria-expanded'),'true');
 for(let i=0;i<data.length;i++){
  const p=data[i];click(`[data-work="${i}"]`);await settle();tick();
  assert.equal(document.querySelector('#lf-title').textContent,p.title);assert.equal(location.hash,'#'+p.slug);assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),p.pdf);assert.equal(duration,p.duration);

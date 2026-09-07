@@ -16,11 +16,13 @@ for(const p of data){
  assert.deepEqual(motif.map(e=>e.p%12),p.motif.pitches.map(n=>pitchClass[n]),'Motif mismatch in '+p.title);
  for(const file of [p.audio,p.pdf,p.midi,p.xml,...p.scores]){assert(!file.includes('..'));assert((await stat(new URL(file,root))).size>0);}
 }
-const html=await readFile(new URL('index.html',root),'utf8'),js=await readFile(new URL('src/app.js',root),'utf8');
+for(const [page,script] of [['index.html','src/app.js'],['kinship.html','src/kinship.js']]){
+const html=await readFile(new URL(page,root),'utf8'),js=await readFile(new URL(script,root),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
 for(const [,id] of js.matchAll(/q\('#([^']+)'\)/g))assert(ids.includes(id),'Missing DOM element '+id);
 assert(!/window\.openai|globalThis\.Tweak|Play excerpt|0:15/.test(js));
 for(const [,link] of html.matchAll(/(?:href|src)="([^"]+)"/g)){if(!link.startsWith('http')&&!link.startsWith('#'))assert((await stat(new URL(link,root))).size>=0);}
+}
 const volumes=JSON.parse(await readFile(new URL('downloads/volumes.json',root),'utf8'));
 assert.deepEqual(volumes.flatMap(v=>v.ops),data.map(p=>p.op),'Download volumes must cover the catalogue exactly once');
 const downloadPage=await readFile(new URL('downloads/index.html',root),'utf8');

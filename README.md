@@ -4,7 +4,7 @@
 
 [Open the public gallery on GitHub Pages](https://craigwrenasmir.github.io/cws-listening-field/).
 
-The root address opens a collection overview. Its layered landscape draws one contour from each study's upper voice, in opus order. Begin listening with Velvet Estuary, start the complete walk, explore its musical family, visit the latest addition, or browse the full index. Collection totals and the newest work follow the catalogue automatically. **Overview** returns to the entrance and stops playback; direct opus links still open the individual piece without autoplay.
+The root address is a minimal entrance: **The Listening Field**, a layered drawing of the studies' upper voices, and one **Kinship** link. The separate [Kinship page](kinship.html) presents every work and every documented parent connection together. Open any opus to listen; zoom, drag or pinch for a closer view, and use **All** to restore the full map. Keyboard arrows move between works; Enter opens the focused piece. The map and drawing grow with the catalogue. **Entrance** returns to the title page and stops playback; direct opus links still open the individual piece without autoplay.
 
 Drag a sculpture to turn it through 360 degrees, play the complete recording, open the score with live note highlighting, or follow the shared musical phrases through **Trace kinship**. Each piece has PDF, MP3, MIDI and MusicXML downloads. The text index provides direct access, and the URL fragment preserves the selected opus.
 

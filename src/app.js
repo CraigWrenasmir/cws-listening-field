@@ -48,14 +48,7 @@ function prepareOverview(){
   if(p.op===2||index===data.length-1)path.setAttribute('class','lf-atlas-accent');
   q('#lf-atlas-lines').append(path);
  });
- const totalMinutes=Math.round(data.reduce((sum,p)=>sum+p.duration,0)/60);
- const listeningTime=totalMinutes>=60?Math.floor(totalMinutes/60)+' hr '+totalMinutes%60+' min':totalMinutes+' min';
- q('#lf-overview-stats').replaceChildren();
- for(const text of [data.length+' piano studies',listeningTime+' of listening','Scores & recordings to keep']){const span=document.createElement('span');span.textContent=text;q('#lf-overview-stats').append(span);}
- q('#lf-atlas-range').textContent=String(data[0].op).padStart(3,'0')+' — '+String(data.at(-1).op).padStart(3,'0');
- q('#lf-overview-walk-length').textContent=data.length+' pieces · '+listeningTime;
- q('#lf-latest-title').textContent=data.at(-1).title;q('#lf-latest-opus').textContent='CWS Op. '+data.at(-1).op+' · Latest addition';
- for(const id of ['lf-begin','lf-overview-playlist','lf-overview-family','lf-overview-latest'])q('#'+id).disabled=false;
+
 }
 let family=[];
 function refreshFamily(){
@@ -253,7 +246,7 @@ function showOverview(writeHistory=true){
  playbackRequest++;scoreRequest++;state.overview=true;state.playlist=false;state.score=false;state.kinship=false;
  q('#lf-kinship').setAttribute('aria-pressed','false');q('#lf-kinship-label').hidden=true;q('#lf-drag-label').hidden=false;q('#lf-field').classList.remove('is-family');
  audio.pause();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
- q('#lf-overview').hidden=false;q('#lf-piece').hidden=true;closeIndex();
+ q('#lf-overview').hidden=false;q('#lf-piece').hidden=true;q('#lf-header').hidden=true;q('#lf-colophon').hidden=true;root.classList.add('is-entrance');closeIndex();
  q('#lf-overview-link').setAttribute('aria-current','page');
  root.querySelectorAll('[data-work]').forEach(el=>el.setAttribute('aria-current','false'));
  document.title='The Listening Field · CWS First Studies';
@@ -264,7 +257,7 @@ function showOverview(writeHistory=true){
 function choose(index,keepPlaylist=false,writeHistory=true){
  if(index<0||index>=data.length)return;
  const fromOverview=state.overview;state.overview=false;
- q('#lf-overview').hidden=true;q('#lf-piece').hidden=false;q('#lf-overview-link').removeAttribute('aria-current');closeIndex();
+ q('#lf-overview').hidden=true;q('#lf-piece').hidden=false;q('#lf-header').hidden=false;q('#lf-colophon').hidden=false;root.classList.remove('is-entrance');q('#lf-overview-link').removeAttribute('aria-current');closeIndex();
  playbackRequest++;state.playlist=keepPlaylist;
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
  refreshFamily();
@@ -312,11 +305,6 @@ q('#lf-kinship').addEventListener('click',()=>{state.kinship=!state.kinship;q('#
 q('#lf-prev').addEventListener('click',()=>move(-1));q('#lf-next').addEventListener('click',()=>move(1));
 q('#lf-index-toggle').addEventListener('click',()=>{const open=q('#lf-index').hidden;q('#lf-index').hidden=!open;q('#lf-index-toggle').setAttribute('aria-expanded',String(open));});
 for(const id of ['lf-home','lf-overview-link'])q('#'+id).addEventListener('click',event=>{event.preventDefault();showOverview();window.scrollTo({top:0,behavior:'instant'});});
-q('#lf-browse').addEventListener('click',()=>{q('#lf-index').hidden=false;q('#lf-index-toggle').setAttribute('aria-expanded','true');q('#lf-index-toggle').focus();q('#lf-index-toggle').scrollIntoView({block:'start'});});
-q('#lf-begin').addEventListener('click',()=>{choose(byOp.get(2)??0);playSelected();});
-q('#lf-overview-playlist').addEventListener('click',()=>followPath(0));
-q('#lf-overview-family').addEventListener('click',()=>{choose(byOp.get(2)??0);state.kinship=true;q('#lf-kinship').setAttribute('aria-pressed','true');q('#lf-kinship-label').hidden=false;q('#lf-drag-label').hidden=true;q('#lf-field').classList.add('is-family');resize();q('#lf-piece').scrollIntoView({block:'start'});});
-q('#lf-overview-latest').addEventListener('click',()=>{choose(data.length-1);q('#lf-piece').scrollIntoView({block:'start'});});
 data.forEach((p,i)=>{
  const button=document.createElement('button');button.type='button';button.dataset.work=i;
  const op=document.createElement('span');op.textContent=String(p.op).padStart(2,'0');const title=document.createElement('span');title.className='lf-index-title';title.textContent=p.title;const duration=document.createElement('span');duration.textContent=formatTime(p.duration);
