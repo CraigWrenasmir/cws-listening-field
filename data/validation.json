@@ -24159,5 +24159,191 @@
       "sounded_pitches_per_minute": 106.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Clover Nightwalk",
+    "opus": 124,
+    "score_pages": 2,
+    "bars": 16,
+    "pitch_onsets": 189,
+    "audio_seconds": 102.28,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 82,
+        "maximum_melodic_leap_semitones": 8,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 8
+      },
+      "lh": {
+        "low": 45,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 10,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced independent melody over a lilting ostinato",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 10
+      },
+      "note": "The left hand alternates one-quarter and one-eighth durations throughout the moving bars: a written 2:1 lilt within each dotted-quarter pulse. Keep the eighth-note arrivals light. Bars 1\u20133 repeat the same eight-note D-minor figure exactly; the right hand changes its phrase length above it. Let the final two bars lengthen naturally rather than adding another loop."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        26.8
+      ],
+      [
+        27,
+        29.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        38.8
+      ],
+      [
+        39,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        50.8
+      ],
+      [
+        51,
+        53.8
+      ],
+      [
+        54,
+        56.8
+      ],
+      [
+        57,
+        59.8
+      ],
+      [
+        60,
+        62.8
+      ],
+      [
+        63,
+        65.8
+      ],
+      [
+        66,
+        68.8
+      ],
+      [
+        69,
+        71.8
+      ],
+      [
+        72,
+        74.8
+      ],
+      [
+        75,
+        77.8
+      ],
+      [
+        78,
+        80.8
+      ],
+      [
+        81,
+        83.8
+      ],
+      [
+        84,
+        86.8
+      ],
+      [
+        87,
+        89.8
+      ],
+      [
+        90,
+        95.7
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "4": "p",
+        "6": "mp",
+        "8": "p",
+        "11": "mp",
+        "12": "p",
+        "14": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "8": "pp",
+        "11": "p",
+        "13": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 14,
+      "sounded_pitches_per_minute": 114.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -221,4 +221,54 @@ D3+A3:3
   phrase_arcs=[[0,6,3],[6,12,3],[12,24,-2],[24,30,2],[30,42,-2],[42,48,-2]],
   inner_entries=[],lower_entries=[],pedal_lift=.2,gate=.995,
   note='Let the upper hold stay as a quiet point of reference while the lower harmony changes around it. The chromatic chords should remain light enough for their tensions to pass without weight. Allow more time at both minor-ninth resolutions and let the last D minor feel settled.'))
+,
+dict(op=124,title='Clover Nightwalk',key='d',fifths=-1,meter='12/8',bpm=66,
+ description='Velvet Estuary’s A–C–D–C returns above a circling left-hand minor-ninth arpeggio. Written quarter–eighth pairs give the accompaniment a quiet triplet swing. The melody leaves space around that pulse, then travels through B-flat, G minor and D-flat before the original figure returns more softly.',
+ difficulty='Intermediate to advanced independent melody over a lilting ostinato',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=10),
+ technical_note='The left hand alternates one-quarter and one-eighth durations throughout the moving bars: a written 2:1 lilt within each dotted-quarter pulse. Keep the eighth-note arrivals light. Bars 1–3 repeat the same eight-note D-minor figure exactly; the right hand changes its phrase length above it. Let the final two bars lengthen naturally rather than adding another loop.',
+ parent_opus=2,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['A','C','D','C']),
+ ancestry=dict(source_opus=2,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['A','C','D','C'],transposition_semitones=0),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=420),
+ lower_sections={1:'pp',5:'p',8:'pp',11:'p',13:'pp'},
+ pedal_spans=[[(bar-1)*6+start,(bar-1)*6+start+2.8] for bar in range(1,16) for start in [0,3]]+[[90,95.7]],
+ rh='''
+A4:1 C5:.5 D5:1 C5:.5 A4:3
+R:1 G4:.5 A4:1 E5:.5 D5:3~
+D5:1.5 C5:1 A4:.5 G4:1 E4:2
+F4:1 A4:.5 C5:1 D5:.5 F5:3
+E5:1.5 D5:1 C5:.5 A4:3
+Bb4:1 D5:.5 F5:1 A5:.5 G5:3~
+G5:1 F5:.5 D5:1 C5:.5 Bb4:3
+Ab4:1 C5:.5 Eb5:1 F5:.5 Ab5:3
+G5:1.5 F5:1 Eb5:.5 C5:3
+E5:1 G5:.5 Bb5:1 A5:.5 G5:1 E5:2
+F5:1.5 E5:1 D5:.5 C#5:3
+A4:1 C5:.5 D5:1 C5:.5 A4:3
+R:1 F5:.5 E5:1 D5:.5 C5:3~
+C5:1 A4:.5 G4:1 E4:.5 F4:3
+E4:1.5 G4:1 C#5:.5 D5:3
+E4+F4+A4+C5:6
+''',
+ lh='''
+D3:1 F3:.5 A3:1 C4:.5 A3:1 F3:.5 E3:1 A3:.5
+D3:1 F3:.5 A3:1 C4:.5 A3:1 F3:.5 E3:1 A3:.5
+D3:1 F3:.5 A3:1 C4:.5 A3:1 F3:.5 E3:1 A3:.5
+Bb3:1 D3:.5 F3:1 A3:.5 F3:1 D3:.5 C3:1 F3:.5
+F3:1 A3:.5 C4:1 E4:.5 C4:1 A3:.5 G3:1 C4:.5
+G3:1 Bb3:.5 D4:1 F4:.5 D4:1 Bb3:.5 A3:1 D3:.5
+C3:1 E3:.5 G3:1 Bb3:.5 G3:1 E3:.5 D3:1 G3:.5
+Db3:1 F3:.5 Ab3:1 C4:.5 Ab3:1 F3:.5 Eb3:1 Ab3:.5
+Eb3:1 G3:.5 Bb3:1 D4:.5 Bb3:1 G3:.5 F3:1 Bb3:.5
+C3:1 E3:.5 G3:1 Bb3:.5 G3:1 E3:.5 D3:1 G3:.5
+A2:1 C#3:.5 E3:1 G3:.5 E3:1 C#3:.5 B2:1 E3:.5
+D3:1 F3:.5 A3:1 C4:.5 A3:1 F3:.5 E3:1 A3:.5
+D3:1 F3:.5 A3:1 C4:.5 A3:1 F3:.5 E3:1 A3:.5
+Bb3:1 D3:.5 F3:1 A3:.5 F3:1 D3:.5 C3:1 F3:.5
+A2:1.5 E3:1.5 G3+C#4:3
+D3+A3:6
+''',sections={1:'p',4:'p',6:'mp',8:'p',11:'mp',12:'p',14:'pp'},words={1:'dolce',15:'poco rit.'},
+ slurs=[(1,3),(4,5),(6,7),(8,9),(10,11),(12,14),(15,16)],lower_phrases=[(1,3),(4,5),(6,7),(8,9),(10,11),(12,14),(15,16)],
+ hairpins=[('crescendo',4,6),('diminuendo',12,14)],tempo_changes={},group=2,
+ performance=dict(rubato=[66,66,64,66,65,68,66,64,65,67,64,65,64,62,52,36],phrase_arcs=[[0,18,2],[18,30,2],[30,42,3],[42,54,2],[54,66,3],[66,84,1],[84,96,-2]],lower_entries=[],pedal_lift=.2,gate=.985,note='The score itself carries the long-short swing. Keep a mostly steady dotted-quarter pulse until the coda, with restrained phrase swells and a quiet rolling left hand.'))
 ]

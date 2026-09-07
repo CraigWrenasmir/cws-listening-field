@@ -16,3 +16,5 @@ Confirmed by Craig on 6 September 2026.
 - Continue the CWS opus sequence for new pieces. Revisions of an existing piece retain its opus number.
 
 The renderer reads the corresponding settings from `data/library_style.json`. Score format version: 0.2.
+
+- On 7 September Craig requested a bounded batch of seven pieces, Op. 124–130, with rhythmically distinctive minimalist LH repetitions/arpeggios and dreamy jazz swing. This specifically permits deliberate ostinati, superseding the earlier avoidance of repeated accompaniment for these studies. Keep the shared warm aesthetic; the phrase “without our aesthetic” is provisionally read as “within our aesthetic.” Use written rhythmic values for the lilt, preserve score/audio timing, check account usage after Op. 126, and stop at Op. 130.
