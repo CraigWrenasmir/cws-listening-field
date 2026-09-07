@@ -869,4 +869,40 @@ D3+F#3+A3:3 A2+C#3+G3:3
 D3+F#3+A3:6
 ''',sections={1:'p',3:'mp',5:'p',9:'mp',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',2,3),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[66,63,67,58,64,62,59,55,65,59,48,33],phrase_arcs=[[0,24,3],[24,48,2],[48,72,-1]],lower_entries=[],pedal_lift=.2,gate=.99,note='The fourths should have a soft, open resonance. Give the melodic thirds enough presence to warm their ambiguity, and broaden naturally in the chordal middle.'))
+,
+dict(op=139,title='Moss Vestibule',key='C',fifths=0,meter='3/4',bpm=48,
+ description='An upper triad changes only one note at a time, passing from E minor through major, minor and suspended colours before resting on C major. Sorrel Colonnade’s A–G–A becomes E–D–E. The lower chords give each tiny alteration a different depth, while unequal durations keep the transformation from becoming a pattern exercise.',
+ difficulty='Intermediate to advanced common-tone chord voicing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every event in both hands is a three-note chord. Between successive RH attacks exactly two pitches remain the same and one changes. Shape the changing note without accenting it; the final upper triad is tied across two bars while the lower harmony settles.',
+ parent_opus=136,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['E','D','E']),ancestry=dict(source_opus=136,source_hand='rh',source_start_beat=0,source_end_beat=18,source_pitches=['A','G','A'],transposition_semitones=-5),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp'},
+ pedal_spans=[[i*3,i*3+2.8] for i in range(12)],
+ rh='''
+G4+B4+E5:1 G4+B4+D5:1 G4+B4+E5:1
+G4+C5+E5:3
+A4+C5+E5:1 A4+C5+F5:2
+A4+D5+F5:3
+Bb4+D5+F5:1.5 Bb4+D5+G5:1.5
+Bb4+Eb5+G5:3
+C5+Eb5+G5:1 C5+Eb5+Ab5:2
+C5+F5+Ab5:3
+D5+F5+Ab5:1.5 D5+F5+G5:1.5
+D5+E5+G5:3
+C5+E5+G5:3~
+C5+E5+G5:3
+''',lh='''
+E3+G3+B3:3
+C3+E3+G3:3
+A2+C3+E3:1 F3+A3+C4:2
+D3+F3+A3:3
+Bb2+D3+F3:1.5 G2+Bb2+D3:1.5
+Eb3+G3+Bb3:3
+C3+Eb3+G3:1 Ab2+C3+Eb3:2
+F3+Ab3+C4:3
+Bb2+D3+F3:1.5 G2+B2+D3:1.5
+E3+G3+B3:3
+A2+C3+E3:3
+C3+E3+G3:3
+''',sections={1:'p',5:'mp',7:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',3,5),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[48,46,50,44,49,45,48,43,46,42,36,27],phrase_arcs=[[0,12,2],[12,24,3],[24,36,-1]],lower_entries=[],pedal_lift=.2,gate=.99,note='The ear follows the one altered chord tone through the changing harmony. Let the simple final major triad retain its warmth without adding a decorative flourish.'))
 ]

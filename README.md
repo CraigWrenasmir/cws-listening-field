@@ -166,6 +166,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 136 | Sorrel Colonnade | 3/2 | 85 | [Score](pieces/CWS_Op_136_Sorrel_Colonnade/CWS_Op_136_Sorrel_Colonnade.pdf) | [MP3](pieces/CWS_Op_136_Sorrel_Colonnade/CWS_Op_136_Sorrel_Colonnade.mp3) |
 | CWS Op. 137 | Hazel Switchback | 5/8, 6/8 (changing) | 153 | [Score](pieces/CWS_Op_137_Hazel_Switchback/CWS_Op_137_Hazel_Switchback.pdf) | [MP3](pieces/CWS_Op_137_Hazel_Switchback/CWS_Op_137_Hazel_Switchback.mp3) |
 | CWS Op. 138 | Marigold Station | 12/8 | 116 | [Score](pieces/CWS_Op_138_Marigold_Station/CWS_Op_138_Marigold_Station.pdf) | [MP3](pieces/CWS_Op_138_Marigold_Station/CWS_Op_138_Marigold_Station.mp3) |
+| CWS Op. 139 | Moss Vestibule | 3/4 | 99 | [Score](pieces/CWS_Op_139_Moss_Vestibule/CWS_Op_139_Moss_Vestibule.pdf) | [MP3](pieces/CWS_Op_139_Moss_Vestibule/CWS_Op_139_Moss_Vestibule.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

@@ -26802,5 +26802,110 @@
       "sounded_pitches_per_minute": 84.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Moss Vestibule",
+    "opus": 139,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 99,
+    "audio_seconds": 56.87,
+    "hands": {
+      "rh": {
+        "low": 67,
+        "high": 80,
+        "maximum_melodic_leap_semitones": 0,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced common-tone chord voicing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Every event in both hands is a three-note chord. Between successive RH attacks exactly two pitches remain the same and one changes. Shape the changing note without accenting it; the final upper triad is tied across two bars while the lower harmony settles."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        26.8
+      ],
+      [
+        27,
+        29.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "7": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "9": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 109.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
