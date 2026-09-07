@@ -72,4 +72,36 @@ Bb2+D3+A3:1.5 G2+Bb2+F3:1.5 C3+E3+Bb3:1.5
 F3+A3+C4:4.5
 ''',sections={1:'p',5:'mp',9:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[84,83,84,76,85,86,88,77,82,77,63,43],phrase_arcs=[[0,18,2],[18,36,3],[36,54,-1]],lower_entries=[],pedal_lift=.2,gate=.91,note='A relaxed three-beat sway. The swing is already in the written durations; give the shorter notes a lighter touch and keep the lower offbeats quiet.'))
+,
+dict(op=147,title='Myrrh Archipelago',key='C',fifths=0,meter='7/4',bpm=60,
+ description='Two ordinary triads combine into less ordinary islands of harmony. Marigold Station’s A–C-sharp–B becomes D–F-sharp–E. A D-major upper chord over C major opens a luminous raised-fourth colour; later E over D, G over F and E-flat over D-flat make related but distinct spaces. Written pauses separate the most distant changes before a simple C-major ending.',
+ difficulty='Advanced paired-triad colour and unequal phrase lengths',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='All hand events are triads. Hear each six-note combination as two soft layers. The RH major triads a whole tone above the LH major triads supply ninth, raised fourth and sixth colours. Keep those upper extensions quieter than the tonal bass; release both hands in the written rests.',
+ parent_opus=138,motif=dict(hand='rh',start_beat=0,end_beat=7,pitches=['D','F#','E']),ancestry=dict(source_opus=138,source_hand='rh',source_start_beat=0,source_end_beat=6,source_pitches=['A','C#','B'],transposition_semitones=5),
+ system_starts=[1,3,5,7,9],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'p',5:'pp',9:'pp'},
+ pedal_spans=[[0,2.8],[3,4.8],[5,6.8],[7,10.8],[11,13.8],[14,16.8],[17,19.7],[21,25.7],[27,27.8],[28,30.8],[31,33.7],[35,38.7],[40,41.8],[42,44.8],[45,47.7],[49,51.8],[52,55.8],[56,58.8],[59,62.8],[63,69.7]],
+ rh='''
+F#4+A4+D5:3 A4+C#5+F#5:2 G#4+B4+E5:2
+B4+D5+G5:4 A4+C5+F5:3
+G4+B4+E5:3 F4+A4+D5:3 R:1
+G4+Bb4+Eb5:5 R:1 F4+Ab4+Db5:1
+F#4+A4+D5:3 G#4+B4+E5:3 R:1
+A4+C5+F5:4 R:1 G4+B4+E5:2
+Ab4+C5+F5:3 G4+Bb4+Eb5:3 R:1
+F4+A4+D5:3 E4+G4+C5:4
+D4+F#4+A4:3 D4+F4+B4:4
+E4+G4+C5:7
+''',lh='''
+C3+E3+G3:3 D3+F#3+A3:4
+F3+A3+C4:4 Bb2+D3+F3:3
+C3+E3+G3:3 Bb2+D3+F3:3 R:1
+Db3+F3+Ab3:5 R:1 Gb2+Bb2+Db3:1
+C3+E3+G3:3 D3+F#3+A3:3 R:1
+Eb3+G3+Bb3:4 R:1 C3+E3+G3:2
+Eb3+G3+Bb3:3 Db3+F3+Ab3:3 R:1
+Bb2+D3+F3:3 A2+C3+E3:4
+C3+E3+G3:3 G2+B2+F3:4
+C3+E3+G3:7
+''',sections={1:'p',3:'mp',4:'pp',5:'p',7:'mp',9:'pp'},words={1:'dolce',9:'poco rit.'},slurs=[],lower_phrases=[],hairpins=[('diminuendo',7,9)],tempo_changes={},group=2,
+ performance=dict(rubato=[60,59,57,51,59,54,56,50,43,30],phrase_arcs=[[0,21,3],[21,42,2],[42,70,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Each paired triad has a tonal centre beneath its unusual upper colour. Let the rests clear the distant harmonies, then give the final unextended C-major chord a simple, unforced sound.'))
 ]

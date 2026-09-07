@@ -28014,5 +28014,144 @@
       "sounded_pitches_per_minute": 222.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Myrrh Archipelago",
+    "opus": 147,
+    "score_pages": 2,
+    "bars": 10,
+    "pitch_onsets": 117,
+    "audio_seconds": 94.62,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 42,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 1,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced paired-triad colour and unequal phrase lengths",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "All hand events are triads. Hear each six-note combination as two soft layers. The RH major triads a whole tone above the LH major triads supply ninth, raised fourth and sixth colours. Keep those upper extensions quieter than the tonal bass; release both hands in the written rests."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        4.8
+      ],
+      [
+        5,
+        6.8
+      ],
+      [
+        7,
+        10.8
+      ],
+      [
+        11,
+        13.8
+      ],
+      [
+        14,
+        16.8
+      ],
+      [
+        17,
+        19.7
+      ],
+      [
+        21,
+        25.7
+      ],
+      [
+        27,
+        27.8
+      ],
+      [
+        28,
+        30.8
+      ],
+      [
+        31,
+        33.7
+      ],
+      [
+        35,
+        38.7
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.7
+      ],
+      [
+        49,
+        51.8
+      ],
+      [
+        52,
+        55.8
+      ],
+      [
+        56,
+        58.8
+      ],
+      [
+        59,
+        62.8
+      ],
+      [
+        63,
+        69.7
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "mp",
+        "4": "pp",
+        "5": "p",
+        "7": "mp",
+        "9": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "5": "pp",
+        "9": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 76.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
