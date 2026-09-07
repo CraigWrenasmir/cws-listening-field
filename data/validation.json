@@ -26070,5 +26070,110 @@
       "sounded_pitches_per_minute": 81.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Sedge Arcade",
+    "opus": 134,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 131,
+    "audio_seconds": 44.7,
+    "hands": {
+      "rh": {
+        "low": 66,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 8,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced asymmetric chordal dance",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The lower rhythm is 2+2+3 eighths in bars 1\u20134 and 9\u201310, then 3+2+2 in bars 5\u20138. Keep the extra eighth supple. Upper single notes in the middle should emerge from the chord tops without a change of weight."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        3.3
+      ],
+      [
+        3.5,
+        6.8
+      ],
+      [
+        7.0,
+        10.3
+      ],
+      [
+        10.5,
+        13.8
+      ],
+      [
+        14.0,
+        17.3
+      ],
+      [
+        17.5,
+        20.8
+      ],
+      [
+        21.0,
+        24.3
+      ],
+      [
+        24.5,
+        27.8
+      ],
+      [
+        28.0,
+        31.3
+      ],
+      [
+        31.5,
+        34.8
+      ],
+      [
+        35.0,
+        38.3
+      ],
+      [
+        38.5,
+        41.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "9": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "9": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 187.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

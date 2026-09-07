@@ -671,4 +671,40 @@ E3+G3+B3:1 A2+C3+E3:2
 F3+A3+C4:3
 ''',sections={1:'p',3:'pp',7:'pp',11:'p',13:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[(1,2),(11,12),(13,14)],lower_phrases=[(1,2),(3,6),(7,10),(11,14)],hairpins=[('diminuendo',11,13)],tempo_changes={},group=2,
  performance=dict(rubato=[50,47,48,47,47,44,47,46,45,42,48,45,38,28],phrase_arcs=[[0,6,2],[6,18,1],[18,30,1],[30,42,-1]],lower_entries=[],pedal_lift=.2,gate=.995,note='The sustained triads should decay naturally while the lower changes speak gently. Avoid rearticulating their tied notes; the harmonic motion belongs to the bass and to the changing relationship between the hands.'))
+,
+dict(op=134,title='Sedge Arcade',key='g',fifths=-2,meter='7/8',bpm=72,
+ description='A seven-eighth dance with an extra breath in its last step. Birch Reservoir’s opening rises into G minor; compact lower chords sway beneath a melody that breaks free into single notes. The middle shifts the long step to the beginning, then a quiet return gathers the melody back into chords.',
+ difficulty='Intermediate to advanced asymmetric chordal dance',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The lower rhythm is 2+2+3 eighths in bars 1–4 and 9–10, then 3+2+2 in bars 5–8. Keep the extra eighth supple. Upper single notes in the middle should emerge from the chord tops without a change of weight.',
+ parent_opus=133,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['G','Bb','C','Bb']),ancestry=dict(source_opus=133,source_hand='rh',source_start_beat=0,source_end_beat=6,source_pitches=['D','F','G','F'],transposition_semitones=5),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp'},
+ pedal_spans=[[i*3.5,i*3.5+3.3] for i in range(12)],
+ rh='''
+Bb4+D5+G5:1 D5+F5+Bb5:1 Eb5+G5+C6:1.5
+D5+F5+Bb5:1 A5:0.5 G5:0.5 F5:1.5
+A4+C5+F5:2 G5:0.5 A5:1
+Bb4+D5+G5:2.5 F5:1
+Eb5:1.5 G5:1 F5:1
+D5:1.5 F5:0.5 Eb5:0.5 D5:1
+C5:1.5 Eb5:1 D5:1
+Bb4:1.5 D5:0.5 C5:0.5 A4:1
+G4+Bb4+D5:1 A4+C5+F5:1 Bb4+D5+G5:1.5
+A4+C5+F5:2 E5:0.5 D5:1
+F#4+A4+D5:1.5 G4+Bb4+Eb5:2
+G4+A4+Bb4+D5:3.5
+''',lh='''
+G2+D3:1 Bb3+D4:1 A3+D4:1.5
+Eb3+Bb3:1 G3+Bb3:1 F3+Bb3:1.5
+F3+C4:1 A3+C4:1 G3+C4:1.5
+G2+D3:1 Bb3+D4:1 A3+D4:1.5
+C3+G3:1.5 Eb3+Bb3:1 G3+Bb3:1
+Bb2+F3:1.5 D3+A3:1 F3+A3:1
+Ab2+Eb3:1.5 C3+G3:1 Eb3+G3:1
+D3+A3:1.5 C3+F#3:1 A2+F#3:1
+G2+D3:1 Bb3+D4:1 A3+D4:1.5
+C3+G3:1 Eb3+Bb3:1 A3+C4:1.5
+D3+F#3+A3:1.5 Eb3+G3+Bb3:2
+G2+Bb2+D3:3.5
+''',sections={1:'p',5:'mp',9:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[72,71,73,67,73,74,71,66,70,67,56,38],phrase_arcs=[[0,14,2],[14,28,3],[28,42,-1]],lower_entries=[],pedal_lift=.2,gate=.96,note='A gently lopsided dance, with the long step floating rather than accented. The middle melody is lighter than the opening chords.'))
 ]
