@@ -24345,5 +24345,198 @@
       "sounded_pitches_per_minute": 114.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Fen Turnstile",
+    "opus": 125,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 149,
+    "audio_seconds": 89.51,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 77,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 48,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 6,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced independence between a five-eighth ostinato and compound metre",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 10
+      },
+      "note": "Each left-hand cell lasts five eighths: quarter, eighth, quarter. Three cells occupy a bar of 15/8, while the right hand often suggests dotted-quarter pulses. Do not accent every LH restart. Bars 1\u20132 retain exactly the same nine attacks; the coda lengthens the cell and finally releases it."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        2.3
+      ],
+      [
+        2.5,
+        4.8
+      ],
+      [
+        5.0,
+        7.3
+      ],
+      [
+        7.5,
+        9.8
+      ],
+      [
+        10.0,
+        12.3
+      ],
+      [
+        12.5,
+        14.8
+      ],
+      [
+        15.0,
+        17.3
+      ],
+      [
+        17.5,
+        19.8
+      ],
+      [
+        20.0,
+        22.3
+      ],
+      [
+        22.5,
+        24.8
+      ],
+      [
+        25.0,
+        27.3
+      ],
+      [
+        27.5,
+        29.8
+      ],
+      [
+        30.0,
+        32.3
+      ],
+      [
+        32.5,
+        34.8
+      ],
+      [
+        35.0,
+        37.3
+      ],
+      [
+        37.5,
+        39.8
+      ],
+      [
+        40.0,
+        42.3
+      ],
+      [
+        42.5,
+        44.8
+      ],
+      [
+        45.0,
+        47.3
+      ],
+      [
+        47.5,
+        49.8
+      ],
+      [
+        50.0,
+        52.3
+      ],
+      [
+        52.5,
+        54.8
+      ],
+      [
+        55.0,
+        57.3
+      ],
+      [
+        57.5,
+        59.8
+      ],
+      [
+        60.0,
+        62.3
+      ],
+      [
+        62.5,
+        64.8
+      ],
+      [
+        65.0,
+        67.3
+      ],
+      [
+        67.5,
+        69.8
+      ],
+      [
+        70.0,
+        72.3
+      ],
+      [
+        72.5,
+        74.8
+      ],
+      [
+        75,
+        78.5
+      ],
+      [
+        78.75,
+        82.2
+      ],
+      [
+        82.5,
+        89.7
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "p",
+        "5": "mp",
+        "7": "p",
+        "9": "mp",
+        "10": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "7": "pp",
+        "10": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 10,
+      "sounded_pitches_per_minute": 103.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

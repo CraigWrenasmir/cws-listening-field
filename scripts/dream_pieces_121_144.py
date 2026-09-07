@@ -271,4 +271,44 @@ D3+A3:6
  slurs=[(1,3),(4,5),(6,7),(8,9),(10,11),(12,14),(15,16)],lower_phrases=[(1,3),(4,5),(6,7),(8,9),(10,11),(12,14),(15,16)],
  hairpins=[('crescendo',4,6),('diminuendo',12,14)],tempo_changes={},group=2,
  performance=dict(rubato=[66,66,64,66,65,68,66,64,65,67,64,65,64,62,52,36],phrase_arcs=[[0,18,2],[18,30,2],[30,42,3],[42,54,2],[54,66,3],[66,84,1],[84,96,-2]],lower_entries=[],pedal_lift=.2,gate=.985,note='The score itself carries the long-short swing. Keep a mostly steady dotted-quarter pulse until the coda, with restrained phrase swells and a quiet rolling left hand.'))
+,
+dict(op=125,title='Fen Turnstile',key='F',fifths=-1,meter='15/8',bpm=72,
+ description='A three-note left-hand cell takes five eighths to turn, crossing the five dotted-quarter pulses of each bar. Its long–short–long gait moves through F-major, B-flat Lydian and borrowed A-flat colours. Clover Nightwalk’s opening thought floats across those unevenly placed returns before the loop slowly opens into a major ninth.',
+ difficulty='Advanced independence between a five-eighth ostinato and compound metre',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=10),
+ technical_note='Each left-hand cell lasts five eighths: quarter, eighth, quarter. Three cells occupy a bar of 15/8, while the right hand often suggests dotted-quarter pulses. Do not accent every LH restart. Bars 1–2 retain exactly the same nine attacks; the coda lengthens the cell and finally releases it.',
+ parent_opus=124,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['A','C','D','C']),
+ ancestry=dict(source_opus=124,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['A','C','D','C'],transposition_semitones=0),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',7:'pp',10:'pp'},
+ pedal_spans=[[(bar-1)*7.5+start,(bar-1)*7.5+start+2.3] for bar in range(1,11) for start in [0,2.5,5]]+[[75,78.5],[78.75,82.2],[82.5,89.7]],
+ rh='''
+A4:1 C5:.5 D5:1 C5:2 G4:3
+R:1.5 E5:3 D5:1.5 C5:1.5
+A4:1.5 C5:1.5 E5:1.5 F5:3
+D5:2 C5:.5 A4:1.5 G4:3.5
+Bb4:1 Db5:.5 Eb5:1 Db5:2 Ab4:3
+G4:1.5 Bb4:1.5 D5:1.5 F5:3
+E5:3 D5:1 C5:.5 A4:3
+G4:2 A4:.5 C5:1.5 E5:3.5
+F5:1.5 E5:1.5 D5:1.5 B4:3
+A4:1 C5:.5 D5:1 C5:2 G4:3
+Bb4:1.5 A4:1 G4:.5 E4:1.5 G4:3
+F4+G4+A4+C5+E5:7.5
+''',
+ lh='''
+F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1
+F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1
+Bb3:1 D4:.5 A3:1 Bb3:1 D4:.5 A3:1 Bb3:1 D4:.5 A3:1
+G3:1 Bb3:.5 F3:1 G3:1 Bb3:.5 F3:1 G3:1 Bb3:.5 F3:1
+Ab3:1 C4:.5 G3:1 Ab3:1 C4:.5 G3:1 Ab3:1 C4:.5 G3:1
+Eb3:1 G3:.5 D3:1 Eb3:1 G3:.5 D3:1 Eb3:1 G3:.5 D3:1
+F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1
+A3:1 C4:.5 G3:1 A3:1 C4:.5 G3:1 A3:1 C4:.5 G3:1
+G3:1 B3:.5 F3:1 G3:1 B3:.5 F3:1 G3:1 B3:.5 F3:1
+F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1 F3:1 A3:.5 E3:1
+C3:1.5 E3:1 Bb3:.5 D4:1.5 G3:3
+F3+C4:7.5
+''',sections={1:'p',3:'p',5:'mp',7:'p',9:'mp',10:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},
+ slurs=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12)],hairpins=[('crescendo',3,5),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[72,72,73,71,72,71,72,71,73,70,58,42],phrase_arcs=[[0,15,2],[15,30,2],[30,45,3],[45,60,1],[60,75,2],[75,90,-2]],lower_entries=[],pedal_lift=.2,gate=.985,note='Keep the left-hand cell even in character but not equal in duration: the short middle note gives a small sideways lilt. The melody should float independently over the cell boundaries.'))
 ]
