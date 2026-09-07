@@ -177,6 +177,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 147 | Myrrh Archipelago | 7/4 | 117 | [Score](pieces/CWS_Op_147_Myrrh_Archipelago/CWS_Op_147_Myrrh_Archipelago.pdf) | [MP3](pieces/CWS_Op_147_Myrrh_Archipelago/CWS_Op_147_Myrrh_Archipelago.mp3) |
 | CWS Op. 148 | Hawthorn Interior | 3/2 | 124 | [Score](pieces/CWS_Op_148_Hawthorn_Interior/CWS_Op_148_Hawthorn_Interior.pdf) | [MP3](pieces/CWS_Op_148_Hawthorn_Interior/CWS_Op_148_Hawthorn_Interior.mp3) |
 | CWS Op. 149 | Willow Palimpsest | 4/4 | 211 | [Score](pieces/CWS_Op_149_Willow_Palimpsest/CWS_Op_149_Willow_Palimpsest.pdf) | [MP3](pieces/CWS_Op_149_Willow_Palimpsest/CWS_Op_149_Willow_Palimpsest.mp3) |
+| CWS Op. 150 | Camellia Solstice | 4/4 | 194 | [Score](pieces/CWS_Op_150_Camellia_Solstice/CWS_Op_150_Camellia_Solstice.pdf) | [MP3](pieces/CWS_Op_150_Camellia_Solstice/CWS_Op_150_Camellia_Solstice.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

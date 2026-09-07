@@ -180,4 +180,48 @@ D3+F3+A3:1 C3+E3+G3:1 G2+B2+D3:1 E3+G#3+B3:1
 A2+C3+E3:4
 ''',sections={1:'p',5:'mp',9:'p',13:'pp'},words={1:'cantabile',13:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,14)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',11,13)],tempo_changes={},group=2,
  performance=dict(rubato=[57,53,58,49,59,55,61,50,56,52,57,47,39,27],phrase_arcs=[[0,16,3],[16,32,4],[32,48,2],[48,56,-2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep the returning melody recognisable through the changed interiors. The three versions should feel like a remembered place seen in different light, not three equally weighted chorales.'))
+,
+dict(op=150,title='Camellia Solstice',key='F',fifths=-1,meter='4/4',bpm=54,
+ description='Velvet Estuary’s A–C–D–C returns in luminous upper chords, then descends through quieter harmonic rooms. A whole-tone-lower recollection opens the second half, giving the familiar outline a different weight. The closing voices gather into an F-major ninth held across the last two bars: a resting place for the first one hundred and fifty works.',
+ difficulty='Advanced chordal cantabile and sustained closing voicing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every sounded event is a chord of at least three pitches. The opening melody is carried by the highest chord notes; its whole-tone-lower reflection begins at bar 9. Let the middle voices stay soft, particularly in the five-note final RH chord. Both hands hold the closing harmony across bars 15–16 without rearticulation.',
+ parent_opus=2,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['A','C','D','C']),ancestry=dict(source_opus=2,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['A','C','D','C'],transposition_semitones=0),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp',13:'pp'},
+ pedal_spans=[[i*4+a,i*4+b-.2] for i,cuts in enumerate([[0,1,2,3,4],[0,3,4],[0,4],[0,2,4],[0,3,4],[0,4],[0,1,2,4],[0,3,4],[0,1,2,3,4],[0,3,4],[0,2,4],[0,4],[0,2,4],[0,1,2,4]]) for a,b in zip(cuts,cuts[1:])]+[[56,63.7]],
+ rh='''
+C5+E5+A5:1 E5+G5+C6:1 F5+A5+D6:1 E5+G5+C6:1
+D5+F5+A5:3 C5+E5+G5:1
+A4+C5+F5:4
+G4+B4+E5:2 A4+C5+F5:2
+G4+Bb4+Eb5:3 F4+Ab4+Db5:1
+F4+A4+D5:4
+E4+G4+C5:1 G4+Bb4+Eb5:1 A4+C5+F5:2
+G4+B4+E5:3 F#4+A4+D5:1
+Bb4+D5+G5:1 D5+F5+Bb5:1 Eb5+G5+C6:1 D5+F5+Bb5:1
+C5+Eb5+G5:3 Bb4+D5+F5:1
+A4+C5+F5:2 G4+Bb4+E5:2
+F4+A4+D5:4
+E4+G4+C5:2 F4+A4+D5:2
+Eb4+G4+Bb4:1 D4+F4+A4:1 E4+G4+Bb4:2
+F4+G4+A4+C5+E5:4~
+F4+G4+A4+C5+E5:4
+''',lh='''
+D3+F3+C4:1 C3+E3+B3:1 Bb2+D3+A3:1 C3+E3+B3:1
+F3+A3+C4:3 C3+E3+G3:1
+Db3+F3+Ab3:4
+C3+E3+G3:2 D3+F3+A3:2
+Ab2+C3+Eb3:3 Gb2+Bb2+Db3:1
+Bb2+D3+F3:4
+Ab2+C3+Eb3:1 Eb3+G3+Bb3:1 F3+A3+C4:2
+C3+E3+G3:3 D3+F#3+A3:1
+G2+Bb2+F3:1 F3+A3+E4:1 Eb3+G3+D4:1 F3+A3+E4:1
+Eb3+G3+Bb3:3 Bb2+D3+F3:1
+Db3+F3+Ab3:2 C3+E3+G3:2
+Bb2+D3+F3:4
+A2+C3+E3:2 D3+F3+A3:2
+Ab2+C3+Eb3:1 Bb2+D3+F3:1 C3+E3+G3:2
+F3+A3+C4:4~
+F3+A3+C4:4
+''',sections={1:'p',3:'pp',5:'p',7:'mp',9:'p',11:'pp',13:'p',15:'pp'},words={1:'cantabile',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',13,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,51,47,52,50,46,54,47,52,49,46,42,46,41,34,24],phrase_arcs=[[0,16,3],[16,32,3],[32,48,2],[48,64,-2]],lower_entries=[],pedal_lift=.2,gate=.995,note='The high chord melody should sing gently, without brilliance. Let its lower recollection feel familiar but altered, and allow the final eight-note harmony to decay naturally without another attack.'))
 ]
