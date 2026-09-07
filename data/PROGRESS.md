@@ -186,7 +186,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 133, Birch Reservoir — complete locally: 14 bars of 3/4, 83 sounded pitches, 2 inspected score pages, 63.80 seconds. Verified all events contain at least three notes, two twelve-beat upper triads have no reattacks, all eight lower changes remain independent, and the final harmony is F6/9. Both PDF pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 134, Sedge Arcade — complete locally: 12 bars of 7/8, 131 sounded pitches, 2 inspected score pages, 44.70 seconds. Verified the lower 2+2+3 pulse reverses to 3+2+2 in the middle, the upper middle is entirely single notes, and the final chord is G minor add9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 135, Fern Lantern — complete locally: 12 bars of 4/4, 98 sounded pitches, 2 inspected score pages, 72.38 seconds. Verified the three sustained opening melody notes against six inner chord changes, descending lower voices, and the final D-major add9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
-- Active batch progress: 5 of 20 completed locally. Next composition: Op. 136. Stop after Op. 150.
+- Op. 136, Sorrel Colonnade — complete locally: 10 bars of 3/2, 85 sounded pitches, 2 inspected score pages, 82.72 seconds. Verified all-chord texture, nine written gaps without either hand sustaining across them, and the A-major to A-minor pair. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
+- Active batch progress: 6 of 20 completed locally. Next composition: Op. 137. Stop after Op. 150.
 
 ## Growth work to complete during this run
 

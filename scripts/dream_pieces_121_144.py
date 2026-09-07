@@ -757,4 +757,36 @@ D3+A3:4
 D3+A3:4
 ''',sections={1:'p',5:'mp',7:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[('crescendo',3,5),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[51,50,52,46,53,49,48,43,48,45,37,27],phrase_arcs=[[0,16,2],[16,32,3],[32,48,-1]],inner_entries=[],lower_entries=[],pedal_lift=.2,gate=.995,note='The melody stays finger-held above the inner chord changes. Keep the dyads very soft and allow the final major third to appear without emphasis.'))
+,
+dict(op=136,title='Sorrel Colonnade',key='A',fifths=3,meter='3/2',bpm=57,
+ description='Islands of six-note harmony separated by written silence. Fern Lantern’s D–C–D becomes A–G–A, now a modal question inside A major. Major and minor versions of a familiar chord return with different pauses, until the gaps shorten and the last harmony is allowed to remain.',
+ difficulty='Intermediate to advanced chord balance and measured silence',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every sounded event is a chord of at least three notes. Release both hands at the rests and clear the pedal just before them. The pauses have different lengths; count them without filling them. Bars 5–6 move from A major to A minor with the same upper outline.',
+ parent_opus=135,motif=dict(hand='rh',start_beat=0,end_beat=18,pitches=['A','G','A']),ancestry=dict(source_opus=135,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=12,source_pitches=['D','C','D'],transposition_semitones=7),
+ system_starts=[1,3,5,7,9],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'pp',5:'p',7:'pp'},
+ pedal_spans=[[0,3.7],[6,8.7],[12,16.7],[18,19.7],[21,22.7],[24,27.7],[30,33.7],[36,38.7],[40,41.7],[42,43.7],[45,47.7],[48,50.7],[51,53.7],[54,59.7]],
+ rh='''
+C#4+E4+A4:4 R:2
+C4+E4+G4:3 R:3
+C#4+F#4+A4:5 R:1
+D4+F#4+B4:2 R:1 E4+G#4+B4:2 R:1
+C#4+E4+A4:4 R:2
+C4+E4+A4:4 R:2
+D4+F4+A4:3 R:1 E4+G4+B4:2
+F4+A4+C5:2 R:1 E4+G#4+B4:3
+D4+F#4+A4:3 C#4+E4+G#4:3
+B3+C#4+E4+F#4:6
+''',lh='''
+A2+C#3+E3:4 R:2
+C3+E3+B3:3 R:3
+F#2+A2+C#3:5 R:1
+D3+F#3+A3:2 R:1 E3+G#3+D4:2 R:1
+A2+C#3+E3:4 R:2
+A2+C3+E3:4 R:2
+D3+F3+C4:3 R:1 G2+B2+D3:2
+F3+A3+C4:2 R:1 E3+G#3+D4:3
+B2+D3+F#3:3 E3+G#3+B3:3
+A2+C#3+E3:6
+''',sections={1:'p',4:'mp',5:'p',7:'pp'},words={1:'dolce',9:'poco rit.'},slurs=[],lower_phrases=[],hairpins=[],tempo_changes={},group=2,
+ performance=dict(rubato=[57,54,55,57,52,48,53,51,44,31],phrase_arcs=[[0,18,1],[18,36,2],[36,60,-1]],lower_entries=[],pedal_lift=.2,gate=.97,note='Allow the written silences to separate the harmonies. Their resonance should decay into the room, and the final uninterrupted chord should feel earned by the earlier gaps.'))
 ]

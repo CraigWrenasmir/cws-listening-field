@@ -26346,5 +26346,118 @@
       "sounded_pitches_per_minute": 84.5,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Sorrel Colonnade",
+    "opus": 136,
+    "score_pages": 2,
+    "bars": 10,
+    "pitch_onsets": 85,
+    "audio_seconds": 82.72,
+    "hands": {
+      "rh": {
+        "low": 59,
+        "high": 72,
+        "maximum_melodic_leap_semitones": 1,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 42,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced chord balance and measured silence",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Every sounded event is a chord of at least three notes. Release both hands at the rests and clear the pedal just before them. The pauses have different lengths; count them without filling them. Bars 5\u20136 move from A major to A minor with the same upper outline."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        3.7
+      ],
+      [
+        6,
+        8.7
+      ],
+      [
+        12,
+        16.7
+      ],
+      [
+        18,
+        19.7
+      ],
+      [
+        21,
+        22.7
+      ],
+      [
+        24,
+        27.7
+      ],
+      [
+        30,
+        33.7
+      ],
+      [
+        36,
+        38.7
+      ],
+      [
+        40,
+        41.7
+      ],
+      [
+        42,
+        43.7
+      ],
+      [
+        45,
+        47.7
+      ],
+      [
+        48,
+        50.7
+      ],
+      [
+        51,
+        53.7
+      ],
+      [
+        54,
+        59.7
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "4": "mp",
+        "5": "p",
+        "7": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "7": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 63.8,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
