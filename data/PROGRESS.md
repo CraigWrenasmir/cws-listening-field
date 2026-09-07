@@ -1,6 +1,6 @@
 # CWS composition progress
 
-Current scope: the seven-piece batch Op. 124–130 is complete. Stop at 130 and wait for Craig’s listening feedback or another request. The older 300-work ambition is deferred.
+Current scope: Craig has authorised twenty new works, Op. 131–150, exploring new styles and fuller chordal writing, including pieces entirely made of chords. Complete and check each piece sequentially, publish the batch, and stop at 150. The older 300-work ambition remains deferred.
 
 Craig previously authorised 294 further studies on 6 September 2026. Mac sleep remains acceptable: save checkpoints and resume; do not prevent sleep.
 
@@ -179,6 +179,10 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Batch complete: seven new works, Op. 124–130. All fourteen final score pages were inspected. Full 130-work catalogue/playlist integration with simulated media, the 130-node/129-edge Kinship harness, production build and whitespace checks passed. Exactly 130 unique titles and contiguous opus numbers are present. All Op. 1–123 piece assets and the five closed download volumes remain unchanged. Volume 06 now contains Op. 121–130, 21 score pages, a 2,828,466-byte PDF and a 15,390,481-byte ZIP. Site footprint: 533.4 MiB.
 - Op. 124–130 publication was verified against commit 5c17f43dbf0d85cf4a57f8f063b55019e45dbd0f and successful Pages workflow 34093414647. Public catalogue, player, map and download manifests matched; every new score/audio asset returned HTTP 200, and all six volumes had the expected sizes. Do not start Op. 131. Craig’s listening feedback remains outstanding.
 - Playlist routes, 7 September 2026: added Follow the branches (newer sibling branches first), Generations, Distant relations (greatest remaining ancestry distance) and Gentle drift (similar registers, sounded-note densities and pitch-class distributions), alongside the preserved original Walk towards light. Every route contains all 130 works exactly once and incorporates future additions. A labelled selector and full queue preview sit beneath the player; switching pauses playback, and Play route begins the new order. Music, ancestry, downloads and the minimal entrance remain unchanged. Unit tests cover exact tree traversals, distinct complete orders, deterministic ties and catalogue growth. Full simulated playback through all five routes, score transitions, switching, pause/skip, final stops, rejected and delayed play requests, plus the production build passed. Ready for publication; no browser rendering or acoustic testing is claimed.
+
+- New commission, 7 September 2026: twenty pieces through Op. 150, with more chords, some entirely chordal pieces, and freedom to explore a new style. Preserve two hands, four pages, 256 sounded pitches, numeric stamps, and the warm dreamlike identity. This supersedes the earlier stop at Op. 130.
+- Op. 131, Alder Courtyard — complete locally: 14 bars of 4/4, 169 sounded pitches, 2 inspected score pages, 78.28 seconds. Every hand attack contains at least three pitches; ten or more distinct shapes in each hand and the final D-minor ninth were independently verified. The upper chord notes carry the tune; both hands remain within compact spans. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
+- Active batch progress: 1 of 20 completed locally. Next composition: Op. 132. Stop after Op. 150.
 
 ## Growth work to complete during this run
 

@@ -25533,5 +25533,178 @@
       "sounded_pitches_per_minute": 76.9,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Alder Courtyard",
+    "opus": 131,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 169,
+    "audio_seconds": 78.28,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 75,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced soft chord voicing and six-part legato",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Every sounded event in both hands contains at least three pitches. Voice the RH top notes as a continuous line and keep the lower chord tones soft. The first four chord tops recall the ancestor; later changes vary their spacing and length. Refresh the pedal at each harmony and prepare each hand shape together, without rolling unmarked chords."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.8
+      ],
+      [
+        2,
+        2.8
+      ],
+      [
+        3,
+        3.8
+      ],
+      [
+        4,
+        6.8
+      ],
+      [
+        7,
+        7.8
+      ],
+      [
+        8,
+        9.3
+      ],
+      [
+        9.5,
+        11.8
+      ],
+      [
+        12,
+        15.8
+      ],
+      [
+        16,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        22.8
+      ],
+      [
+        23,
+        23.8
+      ],
+      [
+        24,
+        25.8
+      ],
+      [
+        26,
+        27.8
+      ],
+      [
+        28,
+        31.8
+      ],
+      [
+        32,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        37.3
+      ],
+      [
+        37.5,
+        38.3
+      ],
+      [
+        38.5,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        44,
+        46.8
+      ],
+      [
+        47,
+        47.8
+      ],
+      [
+        48,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        55.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "7": "p",
+        "9": "mp",
+        "11": "p",
+        "13": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "7": "pp",
+        "9": "p",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 4,
+      "sounded_pitches_per_minute": 134.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

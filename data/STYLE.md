@@ -18,3 +18,5 @@ Confirmed by Craig on 6 September 2026.
 The renderer reads the corresponding settings from `data/library_style.json`. Score format version: 0.2.
 
 - On 7 September Craig requested a bounded batch of seven pieces, Op. 124–130, with rhythmically distinctive minimalist LH repetitions/arpeggios and dreamy jazz swing. This specifically permits deliberate ostinati, superseding the earlier avoidance of repeated accompaniment for these studies. Keep the shared warm aesthetic; the phrase “without our aesthetic” is provisionally read as “within our aesthetic.” Use written rhythmic values for the lilt, preserve score/audio timing, check account usage after Op. 126, and stop at Op. 130.
+
+- Craig then authorised twenty further works, Op. 131–150, asking for new styles and experiments, more chords and some pieces made entirely of chords. Develop distinct chordal textures and harmonic forms, with deliberate voice leading and contrasted spacing/rhythm. The stop at Op. 130 is superseded; stop after Op. 150. Preserve the four-page/256-onset limits, straight piano, warm identity and sequential score/audio review.

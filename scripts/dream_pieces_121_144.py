@@ -555,4 +555,44 @@ F3:1.5 C4:1.5 A3:1.5 G3:1.5
 F3+C4:6
 ''',sections={1:'p',3:'mp',5:'pp',9:'p',11:'mp',13:'p',15:'pp'},words={1:'dolce',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[(1,4),(5,8),(9,12),(13,16)],hairpins=[('crescendo',9,11),('diminuendo',13,15)],tempo_changes={},group=2,
  performance=dict(rubato=[69,69,70,66,69,69,70,66,69,70,68,66,67,64,54,38],phrase_arcs=[[0,24,3],[24,48,3],[48,72,3],[72,96,-2]],lower_entries=[],pedal_lift=.2,gate=.985,note='Allow the three-note accompaniment and four-pulse melody to coexist without emphasising their crossings. Bars 5–8 bring the lower melody forward and soften the higher repeated figure. The final two bars gradually find a common pulse and release into F major.'))
+,
+dict(op=131,title='Alder Courtyard',key='d',fifths=-1,meter='4/4',bpm=54,
+ description='Reed Halflight’s contour becomes a tune carried entirely by chord tops. Six quiet voices move through D minor, C-major light and a brief A-flat reflection; small inner changes let familiar shapes acquire different meanings. The final harmony rests on a close D-minor ninth, with no separate single-note melody.',
+ difficulty='Advanced soft chord voicing and six-part legato',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every sounded event in both hands contains at least three pitches. Voice the RH top notes as a continuous line and keep the lower chord tones soft. The first four chord tops recall the ancestor; later changes vary their spacing and length. Refresh the pedal at each harmony and prepare each hand shape together, without rolling unmarked chords.',
+ parent_opus=130,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['A','C','D','C']),ancestry=dict(source_opus=130,source_hand='rh',source_start_beat=0,source_end_beat=6,source_pitches=['D','F','G','F'],transposition_semitones=-5),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',7:'pp',9:'p',11:'pp'},
+ pedal_spans=[[(bar-1)*4+a,(bar-1)*4+b-.2] for bar,cuts in enumerate([[0,1,2,3,4],[0,3,4],[0,1.5,4],[0,4],[0,2,4],[0,3,4],[0,2,4],[0,4],[0,1,4],[0,1.5,2.5,4],[0,2,4],[0,3,4],[0,2,4],[0,4]],1) for a,b in zip(cuts,cuts[1:])],
+ rh='''
+D4+F4+A4:1 E4+G4+C5:1 F4+A4+D5:1 E4+G4+C5:1
+F4+A4+C5:3 E4+G4+B4:1
+D4+G4+B4:1.5 E4+A4+C5:2.5
+F4+A4+D5:4
+Ab4+C5+Eb5:2 G4+Bb4+D5:2
+F4+Bb4+D5:3 E4+A4+C#5:1
+F4+A4+C5:2 E4+G4+B4:2
+G4+Bb4+D5:4
+E4+A4+C#5:1 F4+Bb4+D5:3
+F4+A4+C5:1.5 E4+G4+B4:1 D4+F4+A4:1.5
+E4+G4+C5:2 F4+A4+D5:2
+Eb4+G4+C5:3 D4+F4+Bb4:1
+C#4+E4+A4:2 D4+F4+Bb4:2
+E4+F4+A4+C5:4
+''',lh='''
+D3+F3+A3:1 C3+E3+G3:1 Bb2+D3+F3:1 C3+E3+G3:1
+F3+A3+C4:3 C3+E3+G3:1
+E3+G3+B3:1.5 A2+C3+E3:2.5
+D3+F3+A3:4
+Ab2+C3+Eb3:2 G2+Bb2+D3:2
+Eb3+G3+Bb3:3 A2+C#3+E3:1
+D3+F3+A3:2 C3+E3+G3:2
+G2+Bb2+D3:4
+A2+C#3+E3:1 Bb2+D3+F3:3
+F3+A3+C4:1.5 C3+E3+G3:1 D3+F3+A3:1.5
+C3+E3+G3:2 Bb2+D3+F3:2
+Ab2+C3+Eb3:3 G2+Bb2+D3:1
+A2+C#3+E3:2 Bb2+D3+F3:2
+D3+F3+A3:4
+''',sections={1:'p',5:'mp',7:'p',9:'mp',11:'p',13:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,14)],lower_phrases=[(1,4),(5,8),(9,12),(13,14)],hairpins=[('crescendo',3,5),('diminuendo',11,13)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,52,53,47,54,52,50,47,53,51,49,46,40,29],phrase_arcs=[[0,16,2],[16,32,3],[32,48,2],[48,56,-2]],lower_entries=[],pedal_lift=.2,gate=.99,note='A chordal nocturne: give the upper line a gentle presence and let the inner voices blend. The broad phrase breaths and unequal harmonic durations should keep the chord changes from sounding like a harmonisation exercise.'))
 ]
