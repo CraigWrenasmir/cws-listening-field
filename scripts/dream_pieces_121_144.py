@@ -985,4 +985,48 @@ F3+Ab3+C4:2 Bb2+D3+Ab3:2
 Eb3+G3+Bb3:4
 ''',sections={1:'p',3:'p',5:'mp',7:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,2),(3,6),(7,10),(11,12)],lower_phrases=[(3,6)],hairpins=[('crescendo',3,5),('diminuendo',7,9)],tempo_changes={},group=2,
  performance=dict(rubato=[53,48,51,52,53,45,50,49,48,44,38,28],phrase_arcs=[[0,8,2],[8,24,4],[24,40,2],[40,48,-2]],lower_entries=[],pedal_lift=.2,gate=.99,note='Let the outside lines draw apart gently. The wide harmonic space is created by their direction, so the chords need neither force nor a faster pulse.'))
+,
+dict(op=142,title='Juniper Glissade',key='G',fifths=1,meter='6/8',bpm=63,
+ description='Chords loosen into small arpeggio cascades, then gather again. Wisteria Tideglass’s E-flat–G–F becomes D–F-sharp–E. Two ascending six-note figures open the middle phrase; their later reflections fall through warmer minor colours before the original melody returns as chords.',
+ difficulty='Intermediate to advanced flowing arpeggios and chord melody',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The arpeggios are all written pitches, not glissandi. Bars 5 and 7 rise through six eighth notes; bars 9 and 11 descend. The LH holds compact chords beneath them. Keep the running notes lighter than the returning chord tops.',
+ parent_opus=140,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['D','F#','E']),ancestry=dict(source_opus=140,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['Eb','G','F'],transposition_semitones=-1),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp',13:'pp'},
+ pedal_spans=[[i*3,i*3+2.8] for i in range(16)],
+ rh='''
+D5:.5 F#5:.5 E5:2
+B4:.5 D5:.5 G5:2
+G4+B4+D5:1.5 F#4+A4+C5:1.5
+E4+G4+B4:3
+G4:.5 B4:.5 D5:.5 F#5:.5 G5:.5 B5:.5
+A5:1.5 G5:1 F#5:.5
+A4:.5 C5:.5 E5:.5 G5:.5 A5:.5 C6:.5
+B5:1.5 A5:.5 G5:1
+Ab5:.5 F5:.5 Eb5:.5 C5:.5 Ab4:.5 F4:.5
+G4:1 Bb4:.5 D5:1.5
+F5:.5 D5:.5 C5:.5 A4:.5 F4:.5 D4:.5
+E4:.5 G4:.5 A4:1 F#4:1
+G4+B4+D5:.5 A4+C5+F#5:.5 G4+B4+E5:2
+F#4+A4+D5:1.5 E4+G4+C5:1.5
+D4+G4+B4:1 E4+G4+A4:1 F#4+A4+C5:1
+F#4+A4+B4+D5:3
+''',lh='''
+G2+B2+F#3:3
+E3+G3+D4:3
+C3+E3+G3:1.5 D3+F#3+C4:1.5
+E3+G3+B3:3
+G2+B2+F#3:3
+D3+F#3+C4:1.5 G2+B2+D3:1.5
+A2+C3+G3:3
+E3+G3+B3:1.5 C3+E3+G3:1.5
+F3+Ab3+C4:3
+Eb3+G3+Bb3:3
+D3+F3+A3:3
+C3+E3+G3:1.5 D3+F#3+C4:1.5
+G2+B2+F#3:3
+B2+D3+F#3:1.5 C3+E3+G3:1.5
+E3+G3+B3:1 A2+C3+G3:1 D3+F#3+C4:1
+G2+B2+D3:3
+''',sections={1:'p',5:'mp',9:'p',13:'p',15:'pp'},words={1:'leggiero',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',13,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[63,61,60,54,65,63,67,59,62,58,61,54,60,56,47,31],phrase_arcs=[[0,12,2],[12,24,3],[24,36,2],[36,48,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Let the six-note figures travel through the hand without pressing each note. The returning chords hold the same singing line in a wider sound.'))
 ]
