@@ -36,4 +36,40 @@ C3+E3+G3:3 D3+F#3+C4:3
 G2+B2+D3:6
 ''',sections={1:'p',5:'pp',7:'mp',9:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[62,59,62,54,57,56,61,52,57,53,43,29],phrase_arcs=[[0,24,2],[24,48,3],[48,72,-1]],lower_entries=[],pedal_lift=.2,gate=.995,note='The upper anticipations pass gently over the bar line. Keep their keys held as the pedal clears, so the bass can change the colour beneath them.'))
+,
+dict(op=146,title='Gorse Esplanade',key='F',fifths=-1,meter='9/8',bpm=84,
+ description='A soft jazz waltz in three lilting compound beats. Juniper Glissade’s D–F-sharp–E becomes C–E–D. The lower chords leave little pockets of silence and change their placement in the middle, while the melody alternates long-short inflections with quieter chord replies.',
+ difficulty='Advanced compound swing and syncopated chord placement',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The long-short swing is written explicitly as quarter plus eighth within the dotted-quarter pulse. Lower attacks fall at 0, 1.5 and 3 quarter beats in bars 1–4, then shift to .5, 2 and 3 in bars 5–8. Keep the released chords light; the middle should feel displaced without accelerating.',
+ parent_opus=142,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['C','E','D']),ancestry=dict(source_opus=142,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['D','F#','E'],transposition_semitones=-2),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp'},
+ pedal_spans=[[i*4.5+j,i*4.5+j+1.25] for i in range(12) for j in [0,1.5,3]],
+ rh='''
+C5:1 E5:.5 D5:3
+C5:1 A4:.5 G4:1 Bb4:.5 A4:1.5
+F4+A4+C5:1.5 G4+Bb4+D5:1 F4+A4+C5:.5 E4+G4+Bb4:1.5
+D4+F4+A4:3 R:1.5
+Bb4:1 D5:.5 F5:1 E5:.5 D5:1.5
+C#5:1 E5:.5 G5:1 F5:.5 E5:1.5
+D5:1 F5:.5 A5:1 G5:.5 F5:1.5
+Eb5:1 Db5:.5 C5:1 Bb4:.5 G4:1.5
+F4+A4+C5:1 A4+C5+E5:.5 G4+Bb4+D5:3
+F4+A4+C5:1.5 E4+G4+Bb4:1.5 D4+F4+A4:1.5
+D5:1 C5:.5 A4:1 G4:.5 E4+Bb4:1.5
+G4+A4+C5+D5:4.5
+''',lh='''
+G2+Bb2+F3:1 R:.5 C3+E3+Bb3:.5 R:1 F3+A3+C4:1 R:.5
+F3+A3+E4:1 R:.5 Bb2+D3+A3:.5 R:1 C3+E3+Bb3:1 R:.5
+A2+C3+G3:1 R:.5 D3+F#3+C4:.5 R:1 G2+Bb2+F3:1 R:.5
+D3+F3+A3:1 R:.5 G2+B2+F3:.5 R:1 C3+E3+Bb3:1 R:.5
+R:.5 Bb2+D3+A3:1 R:.5 G2+Bb2+F3:.5 R:.5 C3+E3+Bb3:1 R:.5
+R:.5 A2+C#3+G3:1 R:.5 E3+G3+B3:.5 R:.5 A2+C#3+G3:1 R:.5
+R:.5 D3+F3+C4:1 R:.5 Bb2+D3+A3:.5 R:.5 G2+Bb2+F3:1 R:.5
+R:.5 Eb3+G3+Bb3:1 R:.5 Db3+F3+Ab3:.5 R:.5 C3+E3+Bb3:1 R:.5
+F3+A3+E4:1.5 G2+Bb2+F3:1.5 C3+E3+Bb3:1.5
+A2+C3+G3:1.5 C3+E3+Bb3:1.5 D3+F3+A3:1.5
+Bb2+D3+A3:1.5 G2+Bb2+F3:1.5 C3+E3+Bb3:1.5
+F3+A3+C4:4.5
+''',sections={1:'p',5:'mp',9:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[84,83,84,76,85,86,88,77,82,77,63,43],phrase_arcs=[[0,18,2],[18,36,3],[36,54,-1]],lower_entries=[],pedal_lift=.2,gate=.91,note='A relaxed three-beat sway. The swing is already in the written durations; give the shorter notes a lighter touch and keep the lower offbeats quiet.'))
 ]
