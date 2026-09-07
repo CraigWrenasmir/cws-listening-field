@@ -28337,5 +28337,203 @@
       "sounded_pitches_per_minute": 77.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Willow Palimpsest",
+    "opus": 149,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 211,
+    "audio_seconds": 75.59,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 1,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced chord-melody reharmonisation and inner-voice balance",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Every sounded event is a chord. The top notes and durations of bars 1\u20134 recur exactly in bars 5\u20138 and 9\u201312, but their inner notes and lower harmonies change. Preserve the identity of the melody while allowing its emotional colour to shift. The last two bars are a new coda."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.3
+      ],
+      [
+        1.5,
+        1.8
+      ],
+      [
+        2,
+        3.8
+      ],
+      [
+        4,
+        6.8
+      ],
+      [
+        7,
+        7.8
+      ],
+      [
+        8,
+        8.8
+      ],
+      [
+        9,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        15.8
+      ],
+      [
+        16,
+        17.3
+      ],
+      [
+        17.5,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        22.8
+      ],
+      [
+        23,
+        23.8
+      ],
+      [
+        24,
+        24.8
+      ],
+      [
+        25,
+        25.8
+      ],
+      [
+        26,
+        27.8
+      ],
+      [
+        28,
+        30.8
+      ],
+      [
+        31,
+        31.8
+      ],
+      [
+        32,
+        33.3
+      ],
+      [
+        33.5,
+        33.8
+      ],
+      [
+        34,
+        35.8
+      ],
+      [
+        36,
+        38.8
+      ],
+      [
+        39,
+        39.8
+      ],
+      [
+        40,
+        40.8
+      ],
+      [
+        41,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        44,
+        46.8
+      ],
+      [
+        47,
+        47.8
+      ],
+      [
+        48,
+        48.8
+      ],
+      [
+        49,
+        49.8
+      ],
+      [
+        50,
+        50.8
+      ],
+      [
+        51,
+        51.8
+      ],
+      [
+        52,
+        55.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "9": "p",
+        "13": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "9": "p",
+        "13": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 173.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

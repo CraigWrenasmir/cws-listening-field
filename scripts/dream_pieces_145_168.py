@@ -140,4 +140,44 @@ D3+F#3+C4:4 G2+B2+D3:2
 G3+B3+D4:6
 ''',sections={1:'p',3:'mp',5:'pp',7:'p',9:'mp',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',7,9),('diminuendo',10,11)],tempo_changes={},group=2,
  performance=dict(rubato=[58,56,59,52,55,52,57,50,54,48,40,28],phrase_arcs=[[0,24,3],[24,48,2],[48,72,-1]],lower_entries=[],pedal_lift=.2,gate=.995,note='Neither hand should force its pulse onto the other. Hold each chord for its full written value and allow the two cycles to meet naturally every twelve quarter beats.'))
+,
+dict(op=149,title='Willow Palimpsest',key='a',fifths=0,meter='4/4',bpm=57,
+ description='One four-bar melody is heard three times through different chord interiors. Fern Lantern’s D–C–D becomes A–G–A. The first setting is close to A minor, the second admits brighter raised fourths and distant major chords, and the third changes the bass direction. A short descending coda returns to A minor with a ninth.',
+ difficulty='Advanced chord-melody reharmonisation and inner-voice balance',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every sounded event is a chord. The top notes and durations of bars 1–4 recur exactly in bars 5–8 and 9–12, but their inner notes and lower harmonies change. Preserve the identity of the melody while allowing its emotional colour to shift. The last two bars are a new coda.',
+ parent_opus=135,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['A','G','A']),ancestry=dict(source_opus=135,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=12,source_pitches=['D','C','D'],transposition_semitones=7),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'p',13:'pp'},
+ pedal_spans=[[i*4+a,i*4+b-.2] for i,cuts in enumerate([[0,1.5,2,4],[0,3,4],[0,1,2,4],[0,3,4],[0,1.5,2,4],[0,3,4],[0,1,2,4],[0,3,4],[0,1.5,2,4],[0,3,4],[0,1,2,4],[0,3,4],[0,1,2,3,4],[0,4]]) for a,b in zip(cuts,cuts[1:])],
+ rh='''
+C5+E5+A5:1.5 B4+D5+G5:.5 C5+E5+A5:2
+G4+B4+E5:3 F4+A4+D5:1
+E4+G4+C5:1 G4+C5+E5:1 B4+D5+G5:2
+A4+C5+F5:3 G4+B4+E5:1
+D5+F#5+A5:1.5 C5+E5+G5:.5 D5+F#5+A5:2
+G#4+B4+E5:3 F#4+A4+D5:1
+F4+Ab4+C5:1 A4+C5+E5:1 Bb4+Eb5+G5:2
+Ab4+Db5+F5:3 Ab4+B4+E5:1
+E5+F#5+A5:1.5 D5+E5+G5:.5 E5+F#5+A5:2
+A4+C#5+E5:3 G4+B4+D5:1
+G4+A4+C5:1 B4+D5+E5:1 C5+E5+G5:2
+Bb4+D5+F5:3 A4+C5+E5:1
+F4+A4+D5:1 E4+G4+C5:1 D4+G4+B4:1 C4+E4+A4:1
+G4+B4+C5+E5:4
+''',lh='''
+A2+C3+G3:1.5 C3+E3+G3:.5 F3+A3+C4:2
+C3+E3+G3:3 D3+F3+A3:1
+C3+E3+G3:1 A2+C3+G3:1 G2+B2+D3:2
+D3+F3+A3:3 E3+G#3+D4:1
+F3+A3+E4:1.5 C3+E3+B3:.5 D3+F#3+A3:2
+E3+G#3+B3:3 D3+F#3+A3:1
+F3+Ab3+C4:1 A2+C3+E3:1 Eb3+G3+Bb3:2
+Db3+F3+Ab3:3 E3+G#3+D4:1
+D3+F#3+A3:1.5 E3+G3+B3:.5 B2+D3+F#3:2
+A2+C#3+G3:3 E3+G3+B3:1
+D3+F3+A3:1 G2+B2+D3:1 C3+E3+G3:2
+Bb2+D3+F3:3 A2+C3+G3:1
+D3+F3+A3:1 C3+E3+G3:1 G2+B2+D3:1 E3+G#3+B3:1
+A2+C3+E3:4
+''',sections={1:'p',5:'mp',9:'p',13:'pp'},words={1:'cantabile',13:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,14)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',11,13)],tempo_changes={},group=2,
+ performance=dict(rubato=[57,53,58,49,59,55,61,50,56,52,57,47,39,27],phrase_arcs=[[0,16,3],[16,32,4],[32,48,2],[48,56,-2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep the returning melody recognisable through the changed interiors. The three versions should feel like a remembered place seen in different light, not three equally weighted chorales.'))
 ]

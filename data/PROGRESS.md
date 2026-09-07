@@ -199,7 +199,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 146, Gorse Esplanade — complete locally: 12 bars of 9/8, 173 sounded pitches, 2 inspected score pages, 49.52 seconds. Verified the lower attack displacement between the opening and middle, three-note lower voicings, and the written long-short compound swing. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 147, Myrrh Archipelago — complete locally: 10 bars of 7/4, 117 sounded pitches, 2 inspected score pages, 94.62 seconds. Verified four paired major-triad combinations, all-triad writing, and the simple C-major close. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 148, Hawthorn Interior — complete locally: 12 bars of 3/2, 124 sounded pitches, 2 inspected score pages, 98.41 seconds. Verified four complete twelve-beat cycles with upper chords every three beats and lower chords every four, including all lower ties. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
-- Active batch progress: 18 of 20 completed locally. Next composition: Op. 149. Stop after Op. 150.
+- Op. 149, Willow Palimpsest — complete locally: 14 bars of 4/4, 211 sounded pitches, 2 inspected score pages, 75.59 seconds. Verified three identical four-bar melodic phrases above different chord interiors and basses, and the A-minor ninth coda. Corrected one lower chord to maintain hand separation. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
+- Active batch progress: 19 of 20 completed locally. Next composition: Op. 150. Stop after Op. 150.
 
 ## Growth work to complete during this run
 
