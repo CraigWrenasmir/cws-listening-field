@@ -1061,4 +1061,44 @@ C3+Eb3+G3:2 G2+B2+F3:3
 C3+Eb3+G3:5
 ''',sections={1:'p',5:'mp',7:'p',9:'pp'},words={1:'delicato',9:'poco rit.'},slurs=[],lower_phrases=[],hairpins=[],tempo_changes={},group=2,
  performance=dict(rubato=[58,54,56,51,58,53,52,48,40,28],phrase_arcs=[[0,20,2],[20,40,3],[40,50,-2]],lower_entries=[],pedal_lift=.2,gate=.93,note='A few quiet points of sound, with the spaces carrying as much of the phrase as the notes. Avoid making every arrival equally prominent.'))
+,
+dict(op=144,title='Elder Horizon',key='F',fifths=-1,meter='3/2',bpm=61,
+ description='A broad chordal close to the sixth volume. Alder Courtyard’s later C–D–C becomes F–G–F, unfolding through increasingly full upper voicings. In the central passage, two upper chords move against three lower chords per bar. The last upper harmony remains held while the bass makes its final journey from B-flat to F.',
+ difficulty='Advanced chordal breadth and two-against-three phrasing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every attack is a chord of at least three pitches. Bars 5–8 place two dotted-half upper chords over three lower half-note chords. The upper voicings grow from three notes to four, then five at the close. Hold all five RH notes across bars 13–14 while the pedal clears with the LH change.',
+ parent_opus=131,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['F','G','F']),ancestry=dict(source_opus=131,source_hand='rh',source_start_beat=40,source_end_beat=47,source_pitches=['C','D','C'],transposition_semitones=5),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=460),lower_sections={1:'p',5:'p',9:'pp',13:'pp'},
+ pedal_spans=[[i*6+a,i*6+b-.2] for i,cuts in enumerate([[0,2,3,6],[0,3,6],[0,6],[0,3,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,2,3,4,6],[0,4,6],[0,3,6],[0,2,6],[0,3,6],[0,6],[0,6]]) for a,b in zip(cuts,cuts[1:])],
+ rh='''
+A4+C5+F5:2 Bb4+D5+G5:1 A4+C5+F5:3
+G4+Bb4+E5:3 F4+A4+D5:3
+E4+G4+C5:6
+F4+A4+D5:3 G4+Bb4+Eb5:3
+F4+A4+C5+E5:3 G4+Bb4+D5+F5:3
+E4+G4+B4+D5:3 F4+Ab4+C5+Eb5:3
+Eb4+G4+Bb4+D5:3 F4+A4+C5+E5:3
+D4+F4+A4+C5:3 E4+G4+Bb4+D5:3
+A4+C5+F5:4 G4+Bb4+E5:2
+F4+A4+D5:3 E4+G4+C5:3
+Eb4+G4+Bb4+D5:2 D4+F4+A4+C5:4
+E4+G4+Bb4+D5:3 F4+A4+C5+D5:3
+F4+G4+A4+C5+E5:6~
+F4+G4+A4+C5+E5:6
+''',lh='''
+F3+A3+C4:2 Eb3+G3+Bb3:1 D3+F3+A3:3
+C3+E3+G3:3 Bb2+D3+F3:3
+A2+C3+E3:6
+D3+F3+A3:3 Eb3+G3+Bb3:3
+F3+A3+C4:2 E3+G3+C4:2 D3+F3+Bb3:2
+C3+E3+G3:2 B2+D3+G3:2 Ab2+C3+Eb3:2
+Eb3+G3+Bb3:2 D3+F3+Bb3:2 C3+E3+A3:2
+Bb2+D3+F3:2 A2+C3+F3:2 G2+Bb2+E3:2
+F3+A3+C4:4 C3+E3+G3:2
+Bb2+D3+F3:3 A2+C3+E3:3
+Ab2+C3+Eb3:2 Bb2+D3+F3:4
+C3+E3+G3:3 D3+F3+A3:3
+Bb2+D3+F3:6
+F3+A3+C4:6
+''',sections={1:'p',5:'mp',7:'mf',9:'p',11:'p',13:'pp'},words={1:'cantabile',13:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',9,12)],tempo_changes={},group=2,
+ performance=dict(rubato=[61,58,54,59,61,62,64,55,59,55,51,47,39,27],phrase_arcs=[[0,24,3],[24,48,4],[48,72,2],[72,84,-2]],lower_entries=[],pedal_lift=.2,gate=.995,note='The sound grows by adding inner voices rather than striking harder. Let the two-against-three chord motion create a slow, breathing tide, then leave the final upper shape undisturbed.'))
 ]

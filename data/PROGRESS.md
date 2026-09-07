@@ -194,7 +194,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 141, Celandine Atrium — complete locally: 12 bars of 4/4, 121 sounded pitches, 2 inspected score pages, 70.95 seconds. Verified all-chord writing, the four-bar rising upper line against descending basses, and the final E-flat6/9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 142, Juniper Glissade — complete locally: 16 bars of 6/8, 149 sounded pitches, 2 inspected score pages, 57.31 seconds. Verified the two rising and two falling six-note arpeggio bars and the chordal return. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 143, Nettle Alcove — complete locally: 10 bars of 5/4, 103 sounded pitches, 2 inspected score pages, 71.57 seconds. Verified upper dyads through the first eight bars, only one shared early hand attack, and the final C minor sixth. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
-- Active batch progress: 13 of 20 completed locally. Next composition: Op. 144. Stop after Op. 150.
+- Op. 144, Elder Horizon — complete locally: 14 bars of 3/2, 179 sounded pitches, 2 inspected score pages, 108.92 seconds. Verified all-chord writing, two-against-three chord timing in four central bars, and the five-note upper chord sustained for twelve beats. Both score pages visually inspected. Volume 6 is now complete. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
+- Active batch progress: 14 of 20 completed locally. Next composition: Op. 145. Stop after Op. 150.
 
 ## Growth work to complete during this run
 
