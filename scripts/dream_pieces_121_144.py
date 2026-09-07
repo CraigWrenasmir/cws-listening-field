@@ -595,4 +595,40 @@ A2+C#3+E3:2 Bb2+D3+F3:2
 D3+F3+A3:4
 ''',sections={1:'p',5:'mp',7:'p',9:'mp',11:'p',13:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,14)],lower_phrases=[(1,4),(5,8),(9,12),(13,14)],hairpins=[('crescendo',3,5),('diminuendo',11,13)],tempo_changes={},group=2,
  performance=dict(rubato=[54,52,53,47,54,52,50,47,53,51,49,46,40,29],phrase_arcs=[[0,16,2],[16,32,3],[32,48,2],[48,56,-2]],lower_entries=[],pedal_lift=.2,gate=.99,note='A chordal nocturne: give the upper line a gentle presence and let the inner voices blend. The broad phrase breaths and unequal harmonic durations should keep the chord changes from sounding like a harmonisation exercise.'))
+,
+dict(op=132,title='Iris Causeway',key='c',fifths=-3,meter='5/4',bpm=62,
+ description='Two hands trade quiet chords across an uneven five-beat span. Alder Courtyard’s tune rises into C minor; the lower hand speaks first, then the order reverses in the central passage. The separated replies gather into shared chords only near the end, settling on C minor with an added sixth.',
+ difficulty='Advanced chordal antiphony and silent hand changes',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='All sounded events are chords of at least three pitches. Bars 1–4 and 9–10 alternate LH attacks at beats 0 and 2.5 with RH replies at 1.5 and 4. Bars 5–8 exchange those placements. Observe the written rests; the change of speaker should remain audible. Both hands finally attack together in bars 11–12.',
+ parent_opus=131,motif=dict(hand='rh',start_beat=0,end_beat=10,pitches=['C','Eb','F','Eb']),ancestry=dict(source_opus=131,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['A','C','D','C'],transposition_semitones=3),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'p',5:'pp',9:'p',11:'pp'},
+ pedal_spans=[[bar*5+a,bar*5+b-.2] for bar in range(10) for a,b in [(0,1.5),(1.5,2.5),(2.5,4),(4,5)]]+[[50,51.8],[52,54.8],[55,59.7]],
+ rh='''
+R:1.5 Eb4+G4+C5:1 R:1.5 G4+Bb4+Eb5:1
+R:1.5 Ab4+C5+F5:1 R:1.5 G4+Bb4+Eb5:1
+R:1.5 Bb4+D5+G5:1 R:1.5 Ab4+C5+F5:1
+R:1.5 F4+Ab4+D5:1 R:1.5 Eb4+G4+C5:1
+G4+Bb4+Eb5:1.5 R:1 F4+Ab4+D5:1.5 R:1
+Ab4+C5+F5:1.5 R:1 G4+Bb4+Eb5:1.5 R:1
+F4+A4+D5:1.5 R:1 E4+G4+C5:1.5 R:1
+F#4+A4+D5:1.5 R:1 F4+Ab4+Db5:1.5 R:1
+R:1.5 Eb4+G4+C5:1 R:1.5 G4+Bb4+Eb5:1
+R:1.5 F4+Ab4+D5:1 R:1.5 D4+F4+B4:1
+Eb4+G4+C5:2 D4+F4+Bb4:3
+Eb4+G4+A4+C5:5
+''',lh='''
+C3+Eb3+Bb3:1.5 R:1 Ab2+C3+G3:1.5 R:1
+F3+Ab3+Eb4:1.5 R:1 Bb2+D3+Ab3:1.5 R:1
+Eb3+G3+D4:1.5 R:1 Ab2+C3+G3:1.5 R:1
+G2+B2+F3:1.5 R:1 C3+Eb3+Bb3:1.5 R:1
+R:1.5 Eb3+G3+Bb3:1 R:1.5 Bb2+D3+F3:1
+R:1.5 Ab2+C3+Eb3:1 R:1.5 Eb3+G3+Bb3:1
+R:1.5 D3+F3+A3:1 R:1.5 C3+E3+G3:1
+R:1.5 D3+F#3+A3:1 R:1.5 Db3+F3+Ab3:1
+C3+Eb3+Bb3:1.5 R:1 Ab2+C3+G3:1.5 R:1
+F3+Ab3+Eb4:1.5 R:1 G2+B2+F3:1.5 R:1
+C3+Eb3+G3:2 Bb2+D3+F3:3
+C3+Eb3+G3:5
+''',sections={1:'p',3:'mp',5:'p',7:'mp',9:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[('crescendo',2,3),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[62,62,64,58,62,63,64,58,60,57,47,32],phrase_arcs=[[0,20,2],[20,40,3],[40,60,-1]],lower_entries=[],pedal_lift=.2,gate=.96,note='Let the two hands sound like soft, separate replies across a room. The shorter answers recede slightly. Shared attacks at the close should feel like agreement after the alternating phrases.'))
 ]
