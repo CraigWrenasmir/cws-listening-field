@@ -24813,5 +24813,221 @@
       "sounded_pitches_per_minute": 185.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Acacia Undertow",
+    "opus": 128,
+    "score_pages": 2,
+    "bars": 20,
+    "pitch_onsets": 181,
+    "audio_seconds": 58.77,
+    "hands": {
+      "rh": {
+        "low": 63,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 40,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced gentle stride and melodic independence",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 10
+      },
+      "note": "For eighteen bars the LH alternates quarter-note basses with eighth-note dyads. Keep the higher replies lighter than the bass so the register changes remain buoyant rather than emphatic. The pattern repeats exactly in bars 1\u20133, then moves through changing harmonic colours. The largest quick LH move stays within a major sixth. Pedal clears at each dotted-quarter pulse; the two-bar coda opens the pattern out."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.3
+      ],
+      [
+        1.5,
+        2.8
+      ],
+      [
+        3,
+        4.3
+      ],
+      [
+        4.5,
+        5.8
+      ],
+      [
+        6,
+        7.3
+      ],
+      [
+        7.5,
+        8.8
+      ],
+      [
+        9,
+        10.3
+      ],
+      [
+        10.5,
+        11.8
+      ],
+      [
+        12,
+        13.3
+      ],
+      [
+        13.5,
+        14.8
+      ],
+      [
+        15,
+        16.3
+      ],
+      [
+        16.5,
+        17.8
+      ],
+      [
+        18,
+        19.3
+      ],
+      [
+        19.5,
+        20.8
+      ],
+      [
+        21,
+        22.3
+      ],
+      [
+        22.5,
+        23.8
+      ],
+      [
+        24,
+        25.3
+      ],
+      [
+        25.5,
+        26.8
+      ],
+      [
+        27,
+        28.3
+      ],
+      [
+        28.5,
+        29.8
+      ],
+      [
+        30,
+        31.3
+      ],
+      [
+        31.5,
+        32.8
+      ],
+      [
+        33,
+        34.3
+      ],
+      [
+        34.5,
+        35.8
+      ],
+      [
+        36,
+        37.3
+      ],
+      [
+        37.5,
+        38.8
+      ],
+      [
+        39,
+        40.3
+      ],
+      [
+        40.5,
+        41.8
+      ],
+      [
+        42,
+        43.3
+      ],
+      [
+        43.5,
+        44.8
+      ],
+      [
+        45,
+        46.3
+      ],
+      [
+        46.5,
+        47.8
+      ],
+      [
+        48,
+        49.3
+      ],
+      [
+        49.5,
+        50.8
+      ],
+      [
+        51,
+        52.3
+      ],
+      [
+        52.5,
+        53.8
+      ],
+      [
+        54,
+        55.3
+      ],
+      [
+        55.5,
+        56.7
+      ],
+      [
+        57,
+        59.7
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "4": "p",
+        "7": "mp",
+        "11": "p",
+        "13": "p",
+        "17": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "7": "p",
+        "11": "pp",
+        "17": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 18,
+      "sounded_pitches_per_minute": 194.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

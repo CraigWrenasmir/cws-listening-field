@@ -402,4 +402,59 @@ E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5
 D3+A3:4.5
 ''',sections={1:'p',3:'p',5:'mp',7:'p',9:'p',11:'pp'},words={1:'dolce',12:'poco rit.'},slurs=[(1,4),(5,8),(9,13)],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[('crescendo',3,5),('diminuendo',9,12)],tempo_changes={},group=2,
  performance=dict(rubato=[75,75,76,73,76,75,75,73,75,74,72,64,42],phrase_arcs=[[0,18,2],[18,36,3],[36,58.5,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='A quiet, almost continuous ripple supports the longer written swing above. Keep the first twelve bars gently moving; the last chord releases the recurring four-note pattern into a D-minor sixth and ninth.'))
+,
+dict(op=128,title='Acacia Undertow',key='e',fifths=1,meter='6/8',bpm=72,
+ description='A quiet miniature stride alternates low single notes with higher two-note replies on the short part of each lilting pulse. A rising fragment from Willow Escapement moves through E minor, a warm G-major clearing and a borrowed F-major reflection. The returning melody grows simpler, and the last minor chord unexpectedly opens into an E-major sixth and ninth.',
+ difficulty='Advanced gentle stride and melodic independence',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=10),
+ technical_note='For eighteen bars the LH alternates quarter-note basses with eighth-note dyads. Keep the higher replies lighter than the bass so the register changes remain buoyant rather than emphatic. The pattern repeats exactly in bars 1–3, then moves through changing harmonic colours. The largest quick LH move stays within a major sixth. Pedal clears at each dotted-quarter pulse; the two-bar coda opens the pattern out.',
+ parent_opus=127,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['G','B','E','D']),
+ ancestry=dict(source_opus=127,source_hand='rh',source_start_beat=9,source_end_beat=12,source_pitches=['C','E','A','G'],transposition_semitones=-5),
+ system_starts=[1,4,7,11,14,17],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',7:'p',11:'pp',17:'pp'},
+ pedal_spans=[[bar*3+i,bar*3+i+1.3] for bar in range(18) for i in [0,1.5]]+[[54,55.3],[55.5,56.7],[57,59.7]],
+ rh='''
+G4:1 B4:.5 E5:1 D5:.5
+B4:1.5 A4:1 R:.5
+F#4:1 G4:.5 B4:1.5
+E5:1 D5:.5 B4:1.5
+C5:1 B4:.5 A4:1 G4:.5~
+G4:1 F#4:.5 E4:1 R:.5
+D5:1 F#5:.5 A5:1 G5:.5
+E5:1.5 C5:1 R:.5
+D5:1 B4:.5 G#4:1 E4:.5
+G#4:1 B4:.5 C#5:1 E5:.5
+E5:1.5 D5:1 C5:.5~
+C5:1 B4:.5 A4:1 F#4:.5
+G4:1 B4:.5 E5:1 D5:.5
+E5:1.5 G5:1 E5:.5
+D5:1 C5:.5 B4:1 A4:.5
+F#4:1 A4:.5 C5:1 B4:.5
+G4:1 B4:.5 F#5:1 E5:.5
+D5:1.5 B4:1 G4:.5
+A4:1 G4:.5 F#4:1 D#4:.5
+G#4+B4+C#5+F#5:3
+''',
+ lh='''
+E3:1 G3+D4:.5 B2:1 G3+D4:.5
+E3:1 G3+D4:.5 B2:1 G3+D4:.5
+E3:1 G3+D4:.5 B2:1 G3+D4:.5
+C3:1 E3+B3:.5 G2:1 E3+B3:.5
+A2:1 C3+G3:.5 E3:1 C3+G3:.5
+D3:1 F#3+C4:.5 A2:1 D3+F#3:.5
+G2:1 B2+F#3:.5 D3:1 B2+F#3:.5
+F2:1 A2+E3:.5 C3:1 A2+E3:.5
+E2:1 G#2+D3:.5 B2:1 G#2+D3:.5
+A2:1 C#3+G#3:.5 E3:1 C#3+G#3:.5
+A2:1 C3+G3:.5 E3:1 C3+G3:.5
+D3:1 F#3+C4:.5 A2:1 F#3+C4:.5
+E3:1 G3+D4:.5 B2:1 G3+D4:.5
+C3:1 E3+B3:.5 G2:1 E3+B3:.5
+A2:1 C3+G3:.5 E3:1 C3+G3:.5
+B2:1 D#3+A3:.5 F#3:1 D#3+A3:.5
+E3:1 G3+D4:.5 B2:1 G3+D4:.5
+C3:1 E3+B3:.5 G2:1 E3+B3:.5
+B2:1.5 D#3+A3:1.5
+E3+B3:3
+''',sections={1:'p',4:'p',7:'mp',11:'p',13:'p',17:'pp'},words={1:'dolce',19:'poco rit.'},slurs=[(1,3),(4,6),(7,10),(11,13),(14,16),(17,20)],lower_phrases=[(1,3),(4,6),(7,10),(11,13),(14,16),(17,20)],hairpins=[('crescendo',5,7),('diminuendo',17,19)],tempo_changes={},group=3,
+ performance=dict(rubato=[72,72,70,72,72,70,73,72,73,70,71,71,72,73,71,69,70,66,55,38],phrase_arcs=[[0,9,2],[9,18,2],[18,30,3],[30,39,2],[39,48,2],[48,60,-2]],lower_entries=[],pedal_lift=.2,gate=.98,note='An understated long-short stride supports the melody. The moving bass and chord replies should feel like a slow walk; let the phrase endings breathe and the final major colour remain quiet.'))
 ]
