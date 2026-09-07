@@ -6,8 +6,8 @@
 <meta name="color-scheme" content="light dark">
 <meta name="description" content="The Listening Field — piano studies from the CWS library. Explore each piece as a rotating sculpture, listen with the score, and download the notation.">
 <title>The Listening Field · CWS First Studies</title>
-<link rel="stylesheet" href="src/styles.css">
-<script type="module" src="src/app.js"></script>
+<link rel="stylesheet" href="src/styles.css?v=2">
+<script type="module" src="src/app.js?v=2"></script>
 </head>
 <body>
 <main id="cws-listening-field" class="is-entrance" aria-label="The Listening Field piano library">
@@ -30,8 +30,10 @@
 <div class="lf-controls"><div class="lf-actions"><button type="button" id="lf-play" class="lf-play" disabled>Loading…</button><button type="button" id="lf-score-toggle" aria-pressed="false">Open score</button><button type="button" id="lf-kinship" aria-pressed="false">Trace kinship</button></div><div class="lf-time"><span id="lf-time">0:00 / 1:00</span><input id="lf-progress" class="lf-progress" type="range" min="0" max="60.15" value="0" step="0.05" aria-label="Playback position"></div></div>
 <div id="lf-audio-error" class="lf-audio-error" role="alert" hidden>The recording could not play. Please try again.</div>
 <section class="lf-listening-path" aria-label="Collection playlist">
-<div class="lf-path-heading"><div><p class="lf-path-title">A walk towards light</p><p id="lf-path-status" class="lf-path-status" role="status">Listen to the collection as a continuous walk.</p></div><button type="button" id="lf-playlist-toggle" aria-pressed="false" disabled>Play collection</button></div>
-<details class="lf-path-details"><summary id="lf-path-summary">Explore the listening order</summary><p>Follow a family of phrases from Moss Atlas, through Velvet Estuary and its descendants, to the warmth of Willow Transit.</p><ol id="lf-path-order" class="lf-path-order"></ol></details>
+<div class="lf-path-heading"><div class="lf-path-choice"><label for="lf-path-route">Listening route</label><select id="lf-path-route" aria-describedby="lf-path-description lf-path-help" disabled></select></div><button type="button" id="lf-playlist-toggle" aria-pressed="false" disabled>Play route</button></div>
+<p id="lf-path-description" class="lf-path-description"></p>
+<p id="lf-path-status" class="lf-path-status" role="status">Loading listening routes…</p>
+<details class="lf-path-details"><summary id="lf-path-summary">Explore the listening order</summary><p id="lf-path-help">Changing route pauses playback. Play route begins at the first work; selecting a title begins there.</p><ol id="lf-path-order" class="lf-path-order"></ol></details>
 </section>
 <nav class="lf-downloads" aria-label="Download this piece"><a id="lf-download-pdf" download>Score PDF</a><a id="lf-download-audio" download>Recording</a><a id="lf-download-midi" download>MIDI</a><a id="lf-download-xml" download>MusicXML</a></nav>
 <section id="lf-score-shell" class="lf-score-shell" aria-label="Music notation" hidden><div class="lf-score-header"><span id="lf-score-title" class="lf-score-title"></span><span id="lf-score-opus" class="lf-score-opus"></span></div><div id="lf-score-body" class="lf-score-body"></div><div id="lf-score-stamp" class="lf-score-stamp"></div></section>

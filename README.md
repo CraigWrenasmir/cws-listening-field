@@ -10,7 +10,17 @@ Drag a sculpture to turn it through 360 degrees, play the complete recording, op
 
 The music explores sweet melancholy, flowing minimalism and independent voices. *Velvet Estuary* is the reference for the continuing collection. From Op. 7, the writing becomes more languid and spacious: phrases cross bar lines, jazz-inflected sevenths and ninths resolve gently, and the recordings follow deliberately shaped rubato. Op. 1–6 retain their original music and recordings. From Op. 21, the collection progressively explores more experimental and advanced writing, including irregular metre, richer jazz voicings and greater rhythmic independence. The ongoing target is 300 studies; see the [composition checkpoint](data/PROGRESS.md) for completed work.
 
-**A walk towards light** plays the complete collection once. It begins with Moss Atlas and Orchard Static, moves through Velvet Estuary and its growing family, and closes with Willow Transit. The order follows musical ancestry towards a warmer C-major ending. The player shows the current total duration. Use **Play collection**, pause with the main player, or skip with the previous/next controls; the sculptures, scores, downloads and note highlights follow each transition. Expand the listening order to begin at any point. Choosing a piece from the catalogue or kinship view returns to individual listening. The playlist stops after its final piece; if a browser prevents the next recording from starting, press Play to continue.
+Every **Listening route** includes the complete collection exactly once:
+
+| Route | Listening order |
+|---|---|
+| Follow the branches | The default: follow each family through its descendants, visiting newer sibling branches first. |
+| Generations | Hear all roots, then their children, then successive generations across the tree. |
+| Distant relations | Start at the deepest descendant, then choose the unheard work furthest away through the ancestry links. |
+| Gentle drift | Start with Velvet Estuary, then choose similar pitch registers, note densities and pitch-class distributions. These are musical proxies, not an assessment of mood. |
+| A walk towards light | Preserve the original sequence, opening with Moss Atlas and Orchard Static and closing with Willow Transit. |
+
+Choose a route beneath the player, then **Play route**. Changing route pauses playback and ends the previous queue; the new route starts from its beginning when played. Pause with the main player or skip with the previous/next controls; sculptures, scores, downloads and highlights follow each transition. Expand the listening order to begin at any title. Choosing a piece from the catalogue or kinship view returns to individual listening. Each route stops after its final piece; if a browser prevents a recording from starting, press Play to continue. Routes are deterministic, include future additions automatically and never modify the music or its documented ancestry.
 
 These are AI-assisted composition studies created with Maple under Craig Warren Smith's musical direction. Craig's existing electronic compositions have not yet been used as source material. Listening and keyboard feedback will guide revisions.
 

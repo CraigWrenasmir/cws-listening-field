@@ -17,8 +17,13 @@
 body{background:light-dark(#f1f2ed,#14242a);font-family:Arial,sans-serif}
 #cws-listening-field .lf-listening-path{margin:0 32px 25px;padding:19px 0;border-top:1px solid var(--lf-line);border-bottom:1px solid var(--lf-line)}
 #cws-listening-field .lf-path-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-#cws-listening-field .lf-path-title{font:italic 21px Georgia,serif;margin:0 0 8px}
-#cws-listening-field .lf-path-status{font-size:12px;color:var(--lf-muted);line-height:1.6;margin:0}
+#cws-listening-field .lf-path-choice{flex:1 1 260px;max-width:380px;min-width:0}
+#cws-listening-field .lf-path-choice label{display:block;font-size:14px;color:var(--lf-muted);margin-bottom:4px}
+#cws-listening-field #lf-path-route{display:block;width:100%;max-width:100%;min-height:44px;padding:8px 4px;font:italic 21px Georgia,serif;background:var(--lf-paper);color:var(--lf-ink);border:0;border-bottom:1px solid var(--lf-line);border-radius:0;cursor:pointer}
+#cws-listening-field #lf-path-route:focus-visible{outline:2px solid var(--lf-copper);outline-offset:4px}
+#cws-listening-field #lf-path-route option{font:16px Arial,sans-serif}
+#cws-listening-field .lf-path-description{font:16px/1.6 Georgia,serif;max-width:640px;margin:14px 0 7px}
+#cws-listening-field .lf-path-status{font-size:14px;color:var(--lf-muted);line-height:1.6;margin:0}
 #cws-listening-field #lf-playlist-toggle{padding:11px 17px;min-height:44px;border:1px solid var(--lf-line);font-size:14px}
 #cws-listening-field #lf-playlist-toggle[aria-pressed=true]{color:var(--lf-copper);border-color:var(--lf-copper)}
 #cws-listening-field .lf-path-details{margin-top:15px;font-size:12px;color:var(--lf-muted)}

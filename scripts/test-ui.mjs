@@ -2,11 +2,12 @@ import assert from 'node:assert/strict';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import {parseHTML,DOMParser} from 'linkedom';
+import {buildListeningPaths} from '../src/listening-paths.js';
 const root=new URL('../',import.meta.url);
 const html=await readFile(new URL('index.html',root),'utf8'),source=await readFile(new URL('src/app.js',root),'utf8');
 const data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
 const {window,document}=parseHTML(html),audio=document.querySelector('#lf-audio'),canvas=document.querySelector('#lf-canvas');
-const errors=[],frames=new Map();let nextFrame=0,width=1024,time=0,paused=true,src='',duration=0,ended=false,rejectPlay=false;
+const errors=[],frames=new Map();let nextFrame=0,width=1024,time=0,paused=true,src='',duration=0,ended=false,rejectPlay=false,playGate=null;
 let drawings=[],path='',styleStack=[];
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 const context={globalAlpha:1,strokeStyle:'#213b3c',fillStyle:'#213b3c',lineWidth:1,font:'12px Georgia',textAlign:'center',
@@ -20,14 +21,15 @@ canvas.getContext=()=>context;
 canvas.getBoundingClientRect=()=>({left:0,top:0,width,height:document.querySelector('#lf-field').classList.contains('is-family')?(width<620?590:660):(width<620?340:510)});
 canvas.setPointerCapture=()=>{};canvas.releasePointerCapture=()=>{};
 Object.defineProperties(audio,{currentTime:{get:()=>time,set:v=>{time=Number(v);ended=false;}},paused:{get:()=>paused},duration:{get:()=>duration},ended:{get:()=>ended},readyState:{get:()=>4},src:{get:()=>src,set:v=>{src=v;time=0;ended=false;duration=data.find(p=>p.audio===v).duration;queueMicrotask(()=>audio.dispatchEvent(new window.Event('loadedmetadata')));}}});
-audio.play=async()=>{if(rejectPlay)throw new Error('Playback denied');paused=false;audio.dispatchEvent(new window.Event('play'));};audio.pause=()=>{paused=true;audio.dispatchEvent(new window.Event('pause'));};
+audio.play=async()=>{if(playGate)await playGate;if(rejectPlay)throw new Error('Playback denied');paused=false;audio.dispatchEvent(new window.Event('play'));};audio.pause=()=>{paused=true;audio.dispatchEvent(new window.Event('pause'));};
 const location={hash:process.env.CWS_TEST_HASH||''},historyCalls=[],history={replaceState(a,b,url){location.hash=url;historyCalls.push(['replace',url]);},pushState(a,b,url){location.hash=url;historyCalls.push(['push',url]);}};
 window.scrollTo=()=>{};window.HTMLElement.prototype.scrollIntoView=()=>{};
 const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#965432','--lf-tenor':'#526e58','--lf-paper':'#f1f2ed'};
 let observer;
 class ResizeObserver{constructor(callback){this.callback=callback;observer=this;}observe(){queueMicrotask(()=>this.callback());}}
 const sandbox={document,window,DOMParser,location,history,ResizeObserver,devicePixelRatio:1,console:{error:e=>errors.push(e.message)},matchMedia:()=>({matches:true,addEventListener(){}}),getComputedStyle:el=>({color:el.style.color,getPropertyValue:key=>colours[key]}),requestAnimationFrame:fn=>{frames.set(++nextFrame,fn);return nextFrame;},fetch:async url=>{try{const body=await readFile(new URL(url,root),'utf8');return {ok:true,json:async()=>JSON.parse(body),text:async()=>body};}catch{return {ok:false};}}};
-vm.createContext(sandbox);vm.runInContext(source,sandbox);
+sandbox.buildListeningPaths=buildListeningPaths;
+vm.createContext(sandbox);vm.runInContext(source.replace("import {buildListeningPaths} from './listening-paths.js';",''),sandbox);
 const settle=async()=>{for(let i=0;i<8;i++)await new Promise(resolve=>setImmediate(resolve));};
 const until=async condition=>{for(let i=0;i<100;i++){if(condition())return;await new Promise(resolve=>setTimeout(resolve,10));}throw new Error('Timed out waiting for async UI');};
 const tick=()=>{const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn());};
@@ -76,7 +78,10 @@ const orientation=canvas.dataset.orientation.split(',').map(Number);for(const ax
 click('#lf-kinship');tick();assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'true');
 await mkdir(new URL('work/qa-ui/',root),{recursive:true});
 for(const size of [1024,360,320]){width=size;observer.callback();tick();const {height}=canvas.getBoundingClientRect();await writeFile(new URL(`work/qa-ui/kinship-${size}.svg`,root),`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${height}"><rect width="100%" height="100%" fill="#f1f2ed"/>${drawings.join('')}</svg>`);assert(drawings.some(x=>x.includes(data.at(-1).title.split(' ')[0])));}
-const queue=[1,3,2,4,5,...data.filter(p=>p.op>=7).map(p=>p.op),6].map(op=>data.find(p=>p.op===op));
+const routes=buildListeningPaths(data),queue=routes[0].order.map(i=>data[i]);
+assert.deepEqual([...document.querySelectorAll('#lf-path-route option')].map(el=>el.value),routes.map(route=>route.id));
+assert.equal(document.querySelector('#lf-path-route').value,routes[0].id);
+assert.equal(document.querySelector('#lf-path-description').textContent,routes[0].description);
 assert.equal(new Set(queue.map(p=>p.op)).size,data.length);
 assert.deepEqual([...document.querySelectorAll('[data-path]')].map(el=>el.textContent),queue.map(p=>p.title));
 const title=()=>document.querySelector('#lf-title').textContent;
@@ -95,10 +100,46 @@ for(let position=0;position<queue.length;position++){
  const event=p.events[0];audio.currentTime=event.s+.1;tick();assert(document.querySelector(`[id="${event.id}"].lf-now`),'Playlist score must follow the current piece');
  finish();await settle();tick();
 }
-assert.deepEqual(heard,queue.map(p=>p.op));assert(audio.paused);assert.equal(title(),queue.at(-1).title);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');assert(document.querySelector('#lf-path-status').textContent.startsWith('Walk complete'));
+assert.deepEqual(heard,queue.map(p=>p.op));assert(audio.paused);assert.equal(title(),queue.at(-1).title);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');assert(document.querySelector('#lf-path-status').textContent.startsWith(routes[0].title+' complete'));
 finish();await settle();assert.equal(title(),queue.at(-1).title,'End of playlist must not loop');
 click('#lf-playlist-toggle');await settle();rejectPlay=true;finish();await settle();assert.equal(title(),queue[1].title);assert(audio.paused);assert(!document.querySelector('#lf-audio-error').hidden);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'true');
 rejectPlay=false;click('#lf-play');await settle();assert(!audio.paused);assert(document.querySelector('#lf-audio-error').hidden);assert.equal(title(),queue[1].title);
 click('[data-work="4"]');await settle();assert.equal(title(),data[4].title);assert(audio.paused);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');finish();await settle();assert.equal(title(),data[4].title,'Individual listening must not auto-advance');
 click('[data-path="3"]');await settle();assert.equal(title(),queue[3].title);assert(!audio.paused);finish();await settle();assert.equal(title(),queue[4].title);click('#lf-playlist-toggle');
-assert.deepEqual(errors,[]);console.log('UI integration passed: all catalogue works, timelines, rotation, score highlights, family layout; playlist order and full completion, pause/resume, queue skips, notation on transitions, manual selection, no looping/autoplay, and recovery from rejected playback. Media playback is simulated; MP3 decoding is checked separately.');
+click('#lf-score-toggle');
+const selectRoute=id=>{
+ const select=document.querySelector('#lf-path-route');
+ // Linkedom clears the current selection even when setting another option
+ // false, so clear first and then perform the native select's single choice.
+ for(const option of select.querySelectorAll('option'))option.selected=false;
+ select.querySelector('[value="'+id+'"]').selected=true;
+ select.dispatchEvent(new window.Event('change'));
+};
+for(const route of routes.slice(1)){
+ selectRoute(route.id);assert(audio.paused,'Selecting a route must not autoplay');
+ assert.equal(document.querySelector('#lf-path-description').textContent,route.description);
+ assert.deepEqual([...document.querySelectorAll('[data-path]')].map(el=>Number(el.dataset.opus)),route.order.map(i=>data[i].op));
+ click('#lf-playlist-toggle');await settle();
+ for(const [position,index] of route.order.entries()){
+  assert.equal(title(),data[index].title);assert(!audio.paused);assert.equal(src,data[index].audio);
+  assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),data[index].pdf);
+  assert.equal(document.querySelector(`[data-path="${position}"]`).getAttribute('aria-current'),'true');
+  if(position<route.order.length-1)assert.equal(document.querySelector('#lf-next').textContent,data[route.order[position+1]].title+' →');
+  finish();await settle();
+ }
+ assert(audio.paused);assert(document.querySelector('#lf-path-status').textContent.startsWith(route.title+' complete'));
+ const last=title();finish();await settle();assert.equal(title(),last,'No route should loop after completion');
+}
+click('#lf-playlist-toggle');await settle();audio.currentTime=8;
+const beforeChange=title();selectRoute('distant');
+assert(audio.paused);assert.equal(audio.currentTime,8);assert.equal(title(),beforeChange);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');
+click('#lf-play');await settle();assert(!audio.paused);finish();await settle();assert.equal(title(),beforeChange,'Resuming the individual work must not continue the cancelled route');
+click('#lf-playlist-toggle');await settle();assert.equal(title(),data[routes.find(r=>r.id==='distant').order[0]].title,'Play route must begin at its first work');
+click('#lf-play');click('#lf-next');await settle();assert(audio.paused,'A paused skip must follow the new route and stay paused');
+assert.equal(title(),data[routes.find(r=>r.id==='distant').order[1]].title);
+selectRoute('branches');
+let releasePlay;playGate=new Promise(resolve=>releasePlay=resolve);
+click('#lf-playlist-toggle');selectRoute('generations');releasePlay();playGate=null;await settle();
+assert(audio.paused,'A delayed play request must not restart audio after changing routes');
+assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');
+assert.deepEqual(errors,[]);console.log('UI integration passed: all catalogue works, score highlights and five complete listening routes; route changes, pause/resume, skips, queue previews, final stop, manual selection, rejected and delayed playback. Media playback is simulated; MP3 decoding is checked separately.');

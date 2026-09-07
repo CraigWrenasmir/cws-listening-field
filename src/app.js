@@ -1,4 +1,4 @@
-
+import {buildListeningPaths} from './listening-paths.js';
 (async function(){
 const root=document.getElementById('cws-listening-field');
 const response=await fetch('library.json');
@@ -24,10 +24,9 @@ const voiceLayouts={upper:[70,12,19],bass:[51,-10,-19],inner:[70,1,0],tenor:[57,
 const voicePaletteKeys={upper:'ink',bass:'lower',inner:'copper',tenor:'tenor'};
 const range=data.map(p=>[p.title,p.motif.pitches.join(' · ')]);
 const byOp=new Map(data.map((p,i)=>[p.op,i]));
-// An editorial walk: root and sibling, then Velvet Estuary's branch, ending in C major.
-// Later descendants extend the walk before Willow Transit's warm close.
-const listeningPath=[...new Set([...([1,3,2,4,5,...data.filter(p=>p.op>=7).map(p=>p.op),6].filter(op=>byOp.has(op)).map(op=>byOp.get(op))),...data.map((_,i)=>i)])];
-let playbackRequest=0;
+const listeningRoutes=buildListeningPaths(data);
+let listeningRoute=listeningRoutes[0],listeningPath=listeningRoute.order;
+let playbackRequest=0,playbackWanted=false;
 const depth=(p,seen=new Set())=>{if(!p.parent||seen.has(p.op)||!byOp.has(p.parent))return 0;seen.add(p.op);return 1+depth(data[byOp.get(p.parent)],seen);};
 const levels=data.map(p=>depth(p));
 // The entrance is a collective drawing: one contour per work, using its
@@ -206,15 +205,15 @@ function updateNavigation(){
  q('#lf-prev').textContent=position>0?'← '+names[order[position-1]]:'Beginning';q('#lf-prev').disabled=position===0;
  q('#lf-next').textContent=position<order.length-1?names[order[position+1]]+' →':'End of collection';q('#lf-next').disabled=position===order.length-1;
  q('#lf-counter').textContent=String(position+1).padStart(2,'0')+' / '+String(order.length).padStart(2,'0');
- q('#lf-playlist-toggle').textContent=state.playlist?'End playlist':'Play collection';q('#lf-playlist-toggle').disabled=false;q('#lf-playlist-toggle').setAttribute('aria-pressed',String(state.playlist));
- q('#lf-path-status').textContent=state.playlist?`${audio.paused?'Paused':'Listening'} · ${position+1} of ${order.length} · ${names[state.selected]}`:`${listeningPath.length} pieces · ${formatTime(data.reduce((n,p)=>n+p.duration,0))} · Play once, from beginning to end.`;
+ q('#lf-playlist-toggle').textContent=state.playlist?'End playlist':'Play route';q('#lf-playlist-toggle').disabled=false;q('#lf-playlist-toggle').setAttribute('aria-pressed',String(state.playlist));
+ q('#lf-path-status').textContent=state.playlist?`${audio.paused?'Paused':'Listening'} · ${position+1} of ${order.length} · ${names[state.selected]}`:`${listeningPath.length} pieces · ${formatTime(data.reduce((n,p)=>n+p.duration,0))} · Every work, once.`;
  root.querySelectorAll('[data-path]').forEach(el=>el.setAttribute('aria-current',String(state.playlist&&Number(el.dataset.path)===position)));
 }
 async function playSelected(){
- const request=++playbackRequest;
+ const request=++playbackRequest;playbackWanted=true;
  if(audio.ended||audio.currentTime>=trackLength()-.05)audio.currentTime=0;
  q('#lf-audio-error').hidden=true;
- try{await audio.play();if(state.overview)audio.pause();}catch(error){if(request===playbackRequest){q('#lf-audio-error').textContent='Playback could not start. Press Play to try this piece again.';q('#lf-audio-error').hidden=false;updateNavigation();}}
+ try{await audio.play();if(state.overview||!playbackWanted)audio.pause();}catch(error){if(request===playbackRequest){playbackWanted=false;q('#lf-audio-error').textContent='Playback could not start. Press Play to try this piece again.';q('#lf-audio-error').hidden=false;updateNavigation();}}
 }
 function followPath(position){
  if(position<0||position>=listeningPath.length)return;
@@ -243,7 +242,7 @@ async function showScore(){
 }
 function closeIndex(){q('#lf-index').hidden=true;q('#lf-index-toggle').setAttribute('aria-expanded','false');}
 function showOverview(writeHistory=true){
- playbackRequest++;scoreRequest++;state.overview=true;state.playlist=false;state.score=false;state.kinship=false;
+ playbackRequest++;playbackWanted=false;scoreRequest++;state.overview=true;state.playlist=false;state.score=false;state.kinship=false;
  q('#lf-kinship').setAttribute('aria-pressed','false');q('#lf-kinship-label').hidden=true;q('#lf-drag-label').hidden=false;q('#lf-field').classList.remove('is-family');
  audio.pause();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
  q('#lf-overview').hidden=false;q('#lf-piece').hidden=true;q('#lf-header').hidden=true;q('#lf-colophon').hidden=true;root.classList.add('is-entrance');closeIndex();
@@ -258,7 +257,7 @@ function choose(index,keepPlaylist=false,writeHistory=true){
  if(index<0||index>=data.length)return;
  const fromOverview=state.overview;state.overview=false;
  q('#lf-overview').hidden=true;q('#lf-piece').hidden=false;q('#lf-header').hidden=false;q('#lf-colophon').hidden=false;root.classList.remove('is-entrance');q('#lf-overview-link').removeAttribute('aria-current');closeIndex();
- playbackRequest++;state.playlist=keepPlaylist;
+ playbackRequest++;playbackWanted=false;state.playlist=keepPlaylist;
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
  refreshFamily();
  q('#lf-title').textContent=names[index];q('#lf-opus').textContent='CWS Op. '+data[index].op;q('#lf-stamp').textContent=data[index].stamp;
@@ -276,29 +275,46 @@ function choose(index,keepPlaylist=false,writeHistory=true){
  kick();
 }
 q('#lf-play').addEventListener('click',()=>{
- if(audio.paused){playSelected();}else{playbackRequest++;audio.pause();}
+ if(audio.paused){playSelected();}else{playbackRequest++;playbackWanted=false;audio.pause();}
 });
-audio.addEventListener('play',()=>{if(state.overview){audio.pause();return;}q('#lf-play').textContent='Pause';q('#lf-play').setAttribute('aria-label','Pause '+names[state.selected]);updateNavigation();kick();});
+audio.addEventListener('play',()=>{if(state.overview||!playbackWanted){audio.pause();return;}q('#lf-play').textContent='Pause';q('#lf-play').setAttribute('aria-label','Pause '+names[state.selected]);updateNavigation();kick();});
 audio.addEventListener('pause',()=>{q('#lf-play').textContent='Play';q('#lf-play').setAttribute('aria-label','Play '+names[state.selected]);updateNavigation();});
 audio.addEventListener('loadedmetadata',updateClock);
 audio.addEventListener('error',()=>{if(state.overview)return;q('#lf-audio-error').textContent='The recording could not load. Select the piece again to retry, or skip to another piece.';q('#lf-audio-error').hidden=false;});
 audio.addEventListener('ended',()=>{
  if(state.overview||!audio.ended)return;
+ playbackWanted=false;
  updateClock();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
  if(state.playlist){
   const next=listeningPath.indexOf(state.selected)+1;
   if(next<listeningPath.length){followPath(next);return;}
-  state.playlist=false;updateNavigation();q('#lf-path-status').textContent='Walk complete · '+listeningPath.length+' pieces · Thank you for listening.';
+  state.playlist=false;updateNavigation();q('#lf-path-status').textContent=listeningRoute.title+' complete · '+listeningPath.length+' pieces · Thank you for listening.';
  }
  q('#lf-play').textContent='Play';q('#lf-play').setAttribute('aria-label','Play '+names[state.selected]);kick();
 });
 q('#lf-playlist-toggle').addEventListener('click',()=>{
- if(state.playlist){playbackRequest++;state.playlist=false;audio.pause();updateNavigation();}else{followPath(0);}
+ if(state.playlist){playbackRequest++;playbackWanted=false;state.playlist=false;audio.pause();updateNavigation();}else{followPath(0);}
 });
-q('#lf-path-summary').textContent='Explore the listening order · '+listeningPath.length+' works';
-listeningPath.forEach((index,position)=>{
- const item=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.path=position;button.textContent=names[index];button.setAttribute('aria-label','Play playlist from '+names[index]);button.addEventListener('click',()=>followPath(position));item.append(button);q('#lf-path-order').append(item);
+function renderListeningPath(){
+ q('#lf-path-description').textContent=listeningRoute.description;
+ q('#lf-path-summary').textContent='Explore the listening order · '+listeningPath.length+' works';
+ q('#lf-path-order').replaceChildren();
+ listeningPath.forEach((index,position)=>{
+  const item=document.createElement('li'),button=document.createElement('button');button.type='button';button.dataset.path=position;button.dataset.opus=data[index].op;button.textContent=names[index];button.setAttribute('aria-label','Play this route from '+names[index]+', CWS Op. '+data[index].op);button.addEventListener('click',()=>followPath(position));item.append(button);q('#lf-path-order').append(item);
+ });
+}
+listeningRoutes.forEach(route=>{
+ const option=document.createElement('option');option.value=route.id;option.textContent=route.title;option.selected=route===listeningRoute;q('#lf-path-route').append(option);
 });
+q('#lf-path-route').disabled=false;
+q('#lf-path-route').addEventListener('change',()=>{
+ const route=listeningRoutes.find(route=>route.id===q('#lf-path-route').value);
+ if(!route||route===listeningRoute)return;
+ playbackRequest++;playbackWanted=false;state.playlist=false;listeningRoute=route;listeningPath=route.order;
+ audio.pause();renderListeningPath();updateNavigation();
+ q('#lf-announcement').textContent=route.title+' selected. Playback paused. Play route begins with '+names[listeningPath[0]]+'.';
+});
+renderListeningPath();
 q('#lf-progress').addEventListener('input',()=>{if(audio.readyState>0){audio.currentTime=Number(q('#lf-progress').value);updateClock();syncScore();kick();}});
 q('#lf-score-toggle').addEventListener('click',()=>{state.score=!state.score;showScore();});
 q('#lf-kinship').addEventListener('click',()=>{state.kinship=!state.kinship;q('#lf-kinship').setAttribute('aria-pressed',String(state.kinship));q('#lf-kinship-label').hidden=!state.kinship;q('#lf-drag-label').hidden=state.kinship;q('#lf-field').classList.toggle('is-family',state.kinship);resize();});
