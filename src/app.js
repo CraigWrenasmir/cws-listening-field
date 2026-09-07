@@ -5,7 +5,7 @@ const response=await fetch('library.json');
 if(!response.ok)throw new Error('Catalogue unavailable');
 const data=await response.json();
 const q=(s)=>root.querySelector(s),canvas=q('#lf-canvas'),ctx=canvas.getContext('2d'),audio=q('#lf-audio');
-const state={selected:1,kinship:false,score:false,playlist:false,density:17,relief:1.0};
+const state={overview:true,selected:Math.min(1,data.length-1),kinship:false,score:false,playlist:false,density:17,relief:1.0};
 let w=0,h=0,frame=0,camera=1,zoom=0,drag=null,lastActive=[];
 const norm=q=>{const n=Math.hypot(...q);return q.map(x=>x/n);};
 function multiply(a,b){const [x,y,z,s]=a,[u,v,w,t]=b;return norm([s*u+x*t+y*w-z*v,s*v-x*w+y*t+z*u,s*w+x*v-y*u+z*t,s*t-x*u-y*v-z*w]);}
@@ -30,6 +30,33 @@ const listeningPath=[...new Set([...([1,3,2,4,5,...data.filter(p=>p.op>=7).map(p
 let playbackRequest=0;
 const depth=(p,seen=new Set())=>{if(!p.parent||seen.has(p.op)||!byOp.has(p.parent))return 0;seen.add(p.op);return 1+depth(data[byOp.get(p.parent)],seen);};
 const levels=data.map(p=>depth(p));
+// The entrance is a collective drawing: one contour per work, using its
+// actual upper-voice pitches and normalised musical time. No random scenery.
+function prepareOverview(){
+ const svgNS='http://www.w3.org/2000/svg';
+ data.forEach((p,index)=>{
+  const layer=index/Math.max(1,data.length-1),path=document.createElementNS(svgNS,'path');
+  const coordinates=[];
+  for(let sample=0;sample<=160;sample++){
+   const t=sample/160,theta=-2.6+t*5.2,pitch=traceValue(index,0,t);
+   const radius=160+layer*112+(pitch-72)*1.15;
+   const x=390+Math.cos(theta)*radius*1.09;
+   const y=230+Math.sin(theta)*radius*.57+layer*79-(pitch-72)*1.45;
+   coordinates.push((sample?'L':'M')+x.toFixed(2)+','+y.toFixed(2));
+  }
+  path.setAttribute('d',coordinates.join(' '));path.setAttribute('data-contour',p.op);
+  if(p.op===2||index===data.length-1)path.setAttribute('class','lf-atlas-accent');
+  q('#lf-atlas-lines').append(path);
+ });
+ const totalMinutes=Math.round(data.reduce((sum,p)=>sum+p.duration,0)/60);
+ const listeningTime=totalMinutes>=60?Math.floor(totalMinutes/60)+' hr '+totalMinutes%60+' min':totalMinutes+' min';
+ q('#lf-overview-stats').replaceChildren();
+ for(const text of [data.length+' piano studies',listeningTime+' of listening','Scores & recordings to keep']){const span=document.createElement('span');span.textContent=text;q('#lf-overview-stats').append(span);}
+ q('#lf-atlas-range').textContent=String(data[0].op).padStart(3,'0')+' — '+String(data.at(-1).op).padStart(3,'0');
+ q('#lf-overview-walk-length').textContent=data.length+' pieces · '+listeningTime;
+ q('#lf-latest-title').textContent=data.at(-1).title;q('#lf-latest-opus').textContent='CWS Op. '+data.at(-1).op+' · Latest addition';
+ for(const id of ['lf-begin','lf-overview-playlist','lf-overview-family','lf-overview-latest'])q('#'+id).disabled=false;
+}
 let family=[];
 function refreshFamily(){
  let visible=data.map((_,i)=>i);
@@ -167,6 +194,7 @@ function syncScore(){
 }
 function animate(){
  frame=0;
+ if(state.overview)return;
  const targetCamera=state.selected,targetZoom=state.kinship?1:0;
  if(reduced.matches){camera=targetCamera;zoom=targetZoom;}else{camera+=(targetCamera-camera)*.13;zoom+=(targetZoom-zoom)*.13;}
  if(Math.abs(camera-targetCamera)<.001)camera=targetCamera;if(Math.abs(zoom-targetZoom)<.001)zoom=targetZoom;
@@ -193,7 +221,7 @@ async function playSelected(){
  const request=++playbackRequest;
  if(audio.ended||audio.currentTime>=trackLength()-.05)audio.currentTime=0;
  q('#lf-audio-error').hidden=true;
- try{await audio.play();}catch(error){if(request===playbackRequest){q('#lf-audio-error').textContent='Playback could not start. Press Play to try this piece again.';q('#lf-audio-error').hidden=false;updateNavigation();}}
+ try{await audio.play();if(state.overview)audio.pause();}catch(error){if(request===playbackRequest){q('#lf-audio-error').textContent='Playback could not start. Press Play to try this piece again.';q('#lf-audio-error').hidden=false;updateNavigation();}}
 }
 function followPath(position){
  if(position<0||position>=listeningPath.length)return;
@@ -220,8 +248,23 @@ async function showScore(){
   }catch(error){if(request===scoreRequest)q('#lf-score-body').textContent='The score could not load. You can download its PDF below the player.';}
  }else{resize();}
 }
-function choose(index,keepPlaylist=false){
+function closeIndex(){q('#lf-index').hidden=true;q('#lf-index-toggle').setAttribute('aria-expanded','false');}
+function showOverview(writeHistory=true){
+ playbackRequest++;scoreRequest++;state.overview=true;state.playlist=false;state.score=false;state.kinship=false;
+ q('#lf-kinship').setAttribute('aria-pressed','false');q('#lf-kinship-label').hidden=true;q('#lf-drag-label').hidden=false;q('#lf-field').classList.remove('is-family');
+ audio.pause();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
+ q('#lf-overview').hidden=false;q('#lf-piece').hidden=true;closeIndex();
+ q('#lf-overview-link').setAttribute('aria-current','page');
+ root.querySelectorAll('[data-work]').forEach(el=>el.setAttribute('aria-current','false'));
+ document.title='The Listening Field · CWS First Studies';
+ if(writeHistory&&location.hash!=='#overview')history.pushState(null,'','#overview');
+ q('#lf-announcement').textContent='Collection overview · '+data.length+' piano studies';
+ if(writeHistory)q('#lf-overview-title').focus({preventScroll:true});
+}
+function choose(index,keepPlaylist=false,writeHistory=true){
  if(index<0||index>=data.length)return;
+ const fromOverview=state.overview;state.overview=false;
+ q('#lf-overview').hidden=true;q('#lf-piece').hidden=false;q('#lf-overview-link').removeAttribute('aria-current');closeIndex();
  playbackRequest++;state.playlist=keepPlaylist;
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
  refreshFamily();
@@ -230,22 +273,24 @@ function choose(index,keepPlaylist=false){
  q('#lf-tenor-legend').hidden=!trackKinds[index].includes('tenor');
  updateNavigation();q('#lf-time').textContent='0:00 / '+formatTime(data[index].duration);q('#lf-progress').value=0;q('#lf-progress').max=data[index].duration;q('#lf-progress').setAttribute('aria-valuetext','0:00 of '+formatTime(data[index].duration));
  [['pdf','pdf'],['audio','audio'],['midi','midi'],['xml','xml']].forEach(([id,field])=>{q('#lf-download-'+id).href=data[index][field];});
- if(location.hash.slice(1)!==data[index].slug)history.replaceState(null,'','#'+data[index].slug);
+ if(writeHistory&&location.hash.slice(1)!==data[index].slug)history[keepPlaylist&&!fromOverview?'replaceState':'pushState'](null,'','#'+data[index].slug);
  document.title=names[index]+' · CWS Op. '+data[index].op+' · The Listening Field';
  root.querySelectorAll('[data-work]').forEach(el=>el.setAttribute('aria-current',String(Number(el.dataset.work)===index)));
  q('#lf-announcement').textContent='Selected '+names[index]+', CWS Op. '+data[index].op;
  canvas.setAttribute('aria-label','Rotatable three-dimensional contours of the right-hand and left-hand notes of '+names[index]+'. Drag to rotate freely, or use the Turn, Tilt and Roll buttons.');
- if(state.score)showScore();kick();
+ if(state.score||fromOverview)showScore();
+ if(fromOverview){q('#lf-title').setAttribute('tabindex','-1');q('#lf-title').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});resize();}
+ kick();
 }
 q('#lf-play').addEventListener('click',()=>{
  if(audio.paused){playSelected();}else{playbackRequest++;audio.pause();}
 });
-audio.addEventListener('play',()=>{q('#lf-play').textContent='Pause';q('#lf-play').setAttribute('aria-label','Pause '+names[state.selected]);updateNavigation();kick();});
+audio.addEventListener('play',()=>{if(state.overview){audio.pause();return;}q('#lf-play').textContent='Pause';q('#lf-play').setAttribute('aria-label','Pause '+names[state.selected]);updateNavigation();kick();});
 audio.addEventListener('pause',()=>{q('#lf-play').textContent='Play';q('#lf-play').setAttribute('aria-label','Play '+names[state.selected]);updateNavigation();});
 audio.addEventListener('loadedmetadata',updateClock);
-audio.addEventListener('error',()=>{q('#lf-audio-error').textContent='The recording could not load. Select the piece again to retry, or skip to another piece.';q('#lf-audio-error').hidden=false;});
+audio.addEventListener('error',()=>{if(state.overview)return;q('#lf-audio-error').textContent='The recording could not load. Select the piece again to retry, or skip to another piece.';q('#lf-audio-error').hidden=false;});
 audio.addEventListener('ended',()=>{
- if(!audio.ended)return;
+ if(state.overview||!audio.ended)return;
  updateClock();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
  if(state.playlist){
   const next=listeningPath.indexOf(state.selected)+1;
@@ -266,6 +311,12 @@ q('#lf-score-toggle').addEventListener('click',()=>{state.score=!state.score;sho
 q('#lf-kinship').addEventListener('click',()=>{state.kinship=!state.kinship;q('#lf-kinship').setAttribute('aria-pressed',String(state.kinship));q('#lf-kinship-label').hidden=!state.kinship;q('#lf-drag-label').hidden=state.kinship;q('#lf-field').classList.toggle('is-family',state.kinship);resize();});
 q('#lf-prev').addEventListener('click',()=>move(-1));q('#lf-next').addEventListener('click',()=>move(1));
 q('#lf-index-toggle').addEventListener('click',()=>{const open=q('#lf-index').hidden;q('#lf-index').hidden=!open;q('#lf-index-toggle').setAttribute('aria-expanded',String(open));});
+for(const id of ['lf-home','lf-overview-link'])q('#'+id).addEventListener('click',event=>{event.preventDefault();showOverview();window.scrollTo({top:0,behavior:'instant'});});
+q('#lf-browse').addEventListener('click',()=>{q('#lf-index').hidden=false;q('#lf-index-toggle').setAttribute('aria-expanded','true');q('#lf-index-toggle').focus();q('#lf-index-toggle').scrollIntoView({block:'start'});});
+q('#lf-begin').addEventListener('click',()=>{choose(byOp.get(2)??0);playSelected();});
+q('#lf-overview-playlist').addEventListener('click',()=>followPath(0));
+q('#lf-overview-family').addEventListener('click',()=>{choose(byOp.get(2)??0);state.kinship=true;q('#lf-kinship').setAttribute('aria-pressed','true');q('#lf-kinship-label').hidden=false;q('#lf-drag-label').hidden=true;q('#lf-field').classList.add('is-family');resize();q('#lf-piece').scrollIntoView({block:'start'});});
+q('#lf-overview-latest').addEventListener('click',()=>{choose(data.length-1);q('#lf-piece').scrollIntoView({block:'start'});});
 data.forEach((p,i)=>{
  const button=document.createElement('button');button.type='button';button.dataset.work=i;
  const op=document.createElement('span');op.textContent=String(p.op).padStart(2,'0');const title=document.createElement('span');title.className='lf-index-title';title.textContent=p.title;const duration=document.createElement('span');duration.textContent=formatTime(p.duration);
@@ -299,7 +350,7 @@ root.querySelectorAll('[data-rotate]').forEach(button=>button.addEventListener('
  q('#lf-announcement').textContent=button.textContent+' rotated 30 degrees'+(e.shiftKey?' in reverse':'');
 }));
 new ResizeObserver(resize).observe(canvas);matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{updatePalette();kick();});
-window.addEventListener('hashchange',()=>{const i=data.findIndex(p=>p.slug===location.hash.slice(1));if(i>=0&&i!==state.selected)choose(i);});
+window.addEventListener('hashchange',()=>{const i=data.findIndex(p=>p.slug===location.hash.slice(1));if(i>=0){if(state.overview||i!==state.selected)choose(i,false,false);}else showOverview(false);});
 const initial=data.findIndex(p=>p.slug===location.hash.slice(1));
-updateRotation();rebuildGeometry();choose(initial>=0?initial:Math.min(1,data.length-1));resize();
+prepareOverview();updateRotation();rebuildGeometry();if(initial>=0)choose(initial,false,false);else showOverview(false);resize();
 })().catch(error=>{document.getElementById('lf-load-error').hidden=false;console.error(error);});

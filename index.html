@@ -11,10 +11,24 @@
 </head>
 <body>
 <main id="cws-listening-field" aria-label="The Listening Field piano library">
-<header class="lf-header"><span class="lf-brand">CWS / FIRST STUDIES</span><button type="button" id="lf-index-toggle" aria-expanded="false" aria-controls="lf-index">Index</button></header>
+<header class="lf-header"><a class="lf-brand" id="lf-home" href="#overview">CWS / FIRST STUDIES</a><nav class="lf-header-nav" aria-label="Library navigation"><a id="lf-overview-link" href="#overview" aria-current="page">Overview</a><button type="button" id="lf-index-toggle" aria-expanded="false" aria-controls="lf-index">Index</button></nav></header>
 <nav id="lf-index" class="lf-index" aria-label="Catalogue" hidden></nav>
 <p id="lf-load-error" role="alert" hidden>The library could not load. Please reload this page.</p>
 <noscript><p>This gallery needs JavaScript for playback and rotation. <a href="downloads/index.html">Download the score volumes</a>.</p></noscript>
+<section id="lf-overview" class="lf-overview" aria-labelledby="lf-overview-title">
+<div class="lf-entrance">
+<div class="lf-entrance-copy"><p class="lf-eyebrow">A growing library of piano music</p><h1 id="lf-overview-title" tabindex="-1">The Listening<br><em>Field</em></h1><p class="lf-introduction">Small pieces. Shared beginnings.<br>A landscape that changes as you listen.</p><p class="lf-entrance-note">Piano studies by Craig Warren Smith, made with Maple. From quiet, dreaming melodies to more adventurous harmonies, each piece carries a phrase from another.</p><button type="button" id="lf-begin" class="lf-primary" disabled>Begin with Velvet Estuary <span aria-hidden="true">↗</span></button><p class="lf-listen-note">Sound begins only when you choose to listen.</p></div>
+<figure class="lf-atlas"><svg id="lf-atlas-drawing" viewBox="0 0 760 540" role="img" aria-labelledby="lf-atlas-title lf-atlas-description"><title id="lf-atlas-title">Contours of the collection</title><desc id="lf-atlas-description">Each line follows the upper voice of a piano study, layered in opus order.</desc><g id="lf-atlas-lines" fill="none"></g></svg><figcaption><span>One contour for every piece</span><span id="lf-atlas-range">Loading the field…</span></figcaption></figure>
+</div>
+<div id="lf-overview-stats" class="lf-overview-stats" aria-label="Collection at a glance"><span>A growing collection</span><span>Solo piano · two hands</span><span>Scores &amp; recordings to keep</span></div>
+<section class="lf-ways" aria-labelledby="lf-ways-title"><div class="lf-section-intro"><p class="lf-eyebrow">Find your way in</p><h2 id="lf-ways-title">There is no single entrance.</h2><p>Stay with one piece, follow its relatives, or let the whole collection unfold.</p></div><div class="lf-entry-list">
+<button type="button" id="lf-overview-playlist" class="lf-entry" disabled><span class="lf-entry-number">01</span><span><strong>A walk towards light</strong><span class="lf-entry-description">Listen to every piece in a continuous sequence, following shared phrases towards a warm close.</span><span id="lf-overview-walk-length" class="lf-entry-meta">The complete listening walk</span></span><span aria-hidden="true">↗</span></button>
+<button type="button" id="lf-overview-family" class="lf-entry" disabled><span class="lf-entry-number">02</span><span><strong>Follow a shared phrase</strong><span class="lf-entry-description">Enter Velvet Estuary’s family. See how a small musical idea becomes something else.</span><span class="lf-entry-meta">Explore the musical kinship</span></span><span aria-hidden="true">↗</span></button>
+<button type="button" id="lf-overview-latest" class="lf-entry" disabled><span class="lf-entry-number">03</span><span><strong id="lf-latest-title">At the growing edge</strong><span class="lf-entry-description">Visit the newest study, where the collection is still finding its shape.</span><span id="lf-latest-opus" class="lf-entry-meta">The latest addition</span></span><span aria-hidden="true">↗</span></button>
+</div></section>
+<section class="lf-library-door" aria-labelledby="lf-library-door-title"><div><p class="lf-eyebrow">For listening. For playing.</p><h2 id="lf-library-door-title">Take a little of the field with you.</h2><p>Every study has a recording and a printable score of four pages or fewer. Open a piece to watch its voices turn in space, follow the notation, or download the music.</p></div><div class="lf-library-links"><button type="button" id="lf-browse">Browse the full index <span aria-hidden="true">↗</span></button><a href="downloads/index.html">Download collected volumes <span aria-hidden="true">↗</span></a></div></section>
+</section>
+<div id="lf-piece" hidden>
 <div id="lf-field" class="lf-field">
 <div class="lf-field-heading"><span>THE LISTENING FIELD</span><span id="lf-work-count">123 WORKS</span></div>
 <canvas id="lf-canvas" class="lf-canvas" role="img" aria-label="Rotatable contours of piano voices played with two hands. Drag to rotate, or use the Turn, Tilt and Roll buttons."></canvas>
@@ -30,6 +44,7 @@
 <nav class="lf-downloads" aria-label="Download this piece"><a id="lf-download-pdf" download>Score PDF</a><a id="lf-download-audio" download>Recording</a><a id="lf-download-midi" download>MIDI</a><a id="lf-download-xml" download>MusicXML</a></nav>
 <section id="lf-score-shell" class="lf-score-shell" aria-label="Music notation" hidden><div class="lf-score-header"><span id="lf-score-title" class="lf-score-title"></span><span id="lf-score-opus" class="lf-score-opus"></span></div><div id="lf-score-body" class="lf-score-body"></div><div id="lf-score-stamp" class="lf-score-stamp"></div></section>
 <nav class="lf-navigation" aria-label="Move between pieces"><button type="button" id="lf-prev">← Moss Atlas</button><span id="lf-counter" class="lf-counter">02 / 123</span><button type="button" id="lf-next">Orchard Static →</button></nav>
+</div>
 <footer class="lf-colophon"><a href="downloads/index.html">Collected volumes</a><a href="https://github.com/CraigWrenasmir/cws-listening-field">About &amp; source</a></footer>
 <audio id="lf-audio" preload="metadata"></audio>
 <div id="lf-announcement" aria-live="polite" class="lf-sr-only"></div>

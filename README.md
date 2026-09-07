@@ -4,6 +4,8 @@
 
 [Open the public gallery on GitHub Pages](https://craigwrenasmir.github.io/cws-listening-field/).
 
+The root address opens a collection overview. Its layered landscape draws one contour from each study's upper voice, in opus order. Begin listening with Velvet Estuary, start the complete walk, explore its musical family, visit the latest addition, or browse the full index. Collection totals and the newest work follow the catalogue automatically. **Overview** returns to the entrance and stops playback; direct opus links still open the individual piece without autoplay.
+
 Drag a sculpture to turn it through 360 degrees, play the complete recording, open the score with live note highlighting, or follow the shared musical phrases through **Trace kinship**. Each piece has PDF, MP3, MIDI and MusicXML downloads. The text index provides direct access, and the URL fragment preserves the selected opus.
 
 The music explores sweet melancholy, flowing minimalism and independent voices. *Velvet Estuary* is the reference for the continuing collection. From Op. 7, the writing becomes more languid and spacious: phrases cross bar lines, jazz-inflected sevenths and ninths resolve gently, and the recordings follow deliberately shaped rubato. Op. 1–6 retain their original music and recordings. From Op. 21, the collection progressively explores more experimental and advanced writing, including irregular metre, richer jazz voicings and greater rhythmic independence. The ongoing target is 300 studies; see the [composition checkpoint](data/PROGRESS.md) for completed work.

@@ -21,7 +21,8 @@ canvas.getBoundingClientRect=()=>({left:0,top:0,width,height:document.querySelec
 canvas.setPointerCapture=()=>{};canvas.releasePointerCapture=()=>{};
 Object.defineProperties(audio,{currentTime:{get:()=>time,set:v=>{time=Number(v);ended=false;}},paused:{get:()=>paused},duration:{get:()=>duration},ended:{get:()=>ended},readyState:{get:()=>4},src:{get:()=>src,set:v=>{src=v;time=0;ended=false;duration=data.find(p=>p.audio===v).duration;queueMicrotask(()=>audio.dispatchEvent(new window.Event('loadedmetadata')));}}});
 audio.play=async()=>{if(rejectPlay)throw new Error('Playback denied');paused=false;audio.dispatchEvent(new window.Event('play'));};audio.pause=()=>{paused=true;audio.dispatchEvent(new window.Event('pause'));};
-const location={hash:''},history={replaceState(a,b,url){location.hash=url;}};
+const location={hash:process.env.CWS_TEST_HASH||''},historyCalls=[],history={replaceState(a,b,url){location.hash=url;historyCalls.push(['replace',url]);},pushState(a,b,url){location.hash=url;historyCalls.push(['push',url]);}};
+window.scrollTo=()=>{};window.HTMLElement.prototype.scrollIntoView=()=>{};
 const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#965432','--lf-tenor':'#526e58','--lf-paper':'#f1f2ed'};
 let observer;
 class ResizeObserver{constructor(callback){this.callback=callback;observer=this;}observe(){queueMicrotask(()=>this.callback());}}
@@ -32,8 +33,29 @@ const until=async condition=>{for(let i=0;i<100;i++){if(condition())return;await
 const tick=()=>{const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn());};
 const click=(selector,extra={})=>{const el=document.querySelector(selector);assert(el,'Missing element '+selector);const event=new window.Event('click');Object.assign(event,extra);el.dispatchEvent(event);};
 await until(()=>document.querySelectorAll('[data-work]').length===data.length||errors.length);tick();assert.deepEqual(errors,[]);assert.equal(document.querySelectorAll('[data-work]').length,data.length);
-assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');
 assert(audio.paused,'Loading the site must not autoplay');
+const home=()=>!document.querySelector('#lf-overview').hidden;
+const route=hash=>{location.hash=hash;window.dispatchEvent(new window.Event('hashchange'));};
+const initialPiece=data.find(p=>'#'+p.slug===location.hash);
+assert.equal(home(),!initialPiece);
+if(initialPiece){assert.equal(document.querySelector('#lf-title').textContent,initialPiece.title);assert.equal(src,initialPiece.audio);}
+else assert.equal(src,'','Overview should not load a recording');
+assert.equal(historyCalls.length,0,'Initial load must preserve the incoming address');
+assert.equal(document.querySelectorAll('[data-contour]').length,data.length,'The collection drawing must include every work');
+assert(document.querySelector('#lf-overview-stats').textContent.includes(data.length+' piano studies'));
+assert.equal(document.querySelector('#lf-latest-title').textContent,data.at(-1).title);
+if(process.argv.includes('--routing-only')){assert.deepEqual(errors,[]);console.log('Initial route passed: '+(location.hash||'overview'));process.exit(0);}
+click('#lf-begin');await settle();tick();assert(!home());assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');assert(!audio.paused);
+click('#lf-home');tick();assert(home());assert(audio.paused);assert.equal(location.hash,'#overview');assert.equal(document.title,'The Listening Field · CWS First Studies');
+time=duration;ended=true;audio.dispatchEvent(new window.Event('ended'));assert(home(),'An old ended event must not leave the overview');
+click('#lf-overview-playlist');await settle();assert(!home());assert(!audio.paused);assert.equal(document.querySelector('#lf-title').textContent,data[0].title);assert.equal(historyCalls.at(-1)[0],'push','Starting the walk should retain the overview in browser history');
+click('#lf-overview-link');assert(home());assert(audio.paused);assert.equal(document.querySelector('#lf-playlist-toggle').getAttribute('aria-pressed'),'false');
+click('#lf-overview-family');tick();assert(!home());assert(audio.paused);assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'true');assert(document.querySelector('#lf-field').classList.contains('is-family'));
+click('#lf-home');click('#lf-overview-latest');await settle();tick();assert.equal(document.querySelector('#lf-title').textContent,data.at(-1).title);assert.equal(document.querySelector('#lf-kinship').getAttribute('aria-pressed'),'false');assert(audio.paused);
+click('#lf-score-toggle');await until(()=>document.querySelector('#lf-score-body .lf-score-page'));click('#lf-play');await settle();click('#lf-home');assert(home());assert(audio.paused);
+route('#'+data[1].slug);await settle();tick();assert(!home());assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');assert(document.querySelector('#lf-score-shell').hidden,'Returning from overview should reopen the sculpture');assert(!document.querySelector('#lf-field').hidden);assert(audio.paused);
+route('');assert(home());route('#'+data[1].slug);assert(!home(),'Back and forward must reopen even the same selected piece');route('#unrecognised');assert(home());assert(audio.paused);
+click('#lf-browse');assert(!document.querySelector('#lf-index').hidden);assert.equal(document.querySelector('#lf-index-toggle').getAttribute('aria-expanded'),'true');
 for(let i=0;i<data.length;i++){
  const p=data[i];click(`[data-work="${i}"]`);await settle();tick();
  assert.equal(document.querySelector('#lf-title').textContent,p.title);assert.equal(location.hash,'#'+p.slug);assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),p.pdf);assert.equal(duration,p.duration);

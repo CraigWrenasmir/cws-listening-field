@@ -20,7 +20,7 @@ const html=await readFile(new URL('index.html',root),'utf8'),js=await readFile(n
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
 for(const [,id] of js.matchAll(/q\('#([^']+)'\)/g))assert(ids.includes(id),'Missing DOM element '+id);
 assert(!/window\.openai|globalThis\.Tweak|Play excerpt|0:15/.test(js));
-for(const [,link] of html.matchAll(/(?:href|src)="([^"]+)"/g)){if(!link.startsWith('http'))assert((await stat(new URL(link,root))).size>=0);}
+for(const [,link] of html.matchAll(/(?:href|src)="([^"]+)"/g)){if(!link.startsWith('http')&&!link.startsWith('#'))assert((await stat(new URL(link,root))).size>=0);}
 const volumes=JSON.parse(await readFile(new URL('downloads/volumes.json',root),'utf8'));
 assert.deepEqual(volumes.flatMap(v=>v.ops),data.map(p=>p.op),'Download volumes must cover the catalogue exactly once');
 const downloadPage=await readFile(new URL('downloads/index.html',root),'utf8');
