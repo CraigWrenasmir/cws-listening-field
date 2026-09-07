@@ -905,4 +905,48 @@ A2+C3+E3:3
 C3+E3+G3:3
 ''',sections={1:'p',5:'mp',7:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',3,5),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[48,46,50,44,49,45,48,43,46,42,36,27],phrase_arcs=[[0,12,2],[12,24,3],[24,36,-1]],lower_entries=[],pedal_lift=.2,gate=.99,note='The ear follows the one altered chord tone through the changing harmony. Let the simple final major triad retain its warmth without adding a decorative flourish.'))
+,
+dict(op=140,title='Wisteria Tideglass',key='Ab',fifths=-4,meter='4/4',bpm=60,
+ description='A slow jazz ballad with an unhurried, ornamented melody and delayed lower chords. Marigold Station’s A–C-sharp–B becomes E-flat–G–F, opening a B-flat-minor space before the harmony finds A-flat. A middle passage briefly turns toward E major; the returning tune gains chordal weight, then lets it go.',
+ difficulty='Advanced lyrical chord melody and syncopated accompaniment',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Leave the written gaps in the lower accompaniment. The sixteenth-note turns are soft inflections, never accented. Bars 9–12 present the melody in three-note upper chords; the final phrase thins back to one voice before the closing A-flat major ninth.',
+ parent_opus=138,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['Eb','G','F']),ancestry=dict(source_opus=138,source_hand='rh',source_start_beat=0,source_end_beat=6,source_pitches=['A','C#','B'],transposition_semitones=6),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp',13:'pp'},
+ pedal_spans=[[i*4+a,i*4+b] for i in range(16) for a,b in [(0,1.8),(2,3.8)]],
+ rh='''
+Eb5:1.5 G5:.5 F5:2
+Eb5:.75 D5:.25 C5:1 Bb4:2
+Ab4:1 C5:.5 Eb5:.5 G5:2
+F5:1.5 Eb5:.5 C5:2
+B4:1 D#5:.5 F#5:.5 E5:2
+D#5:.75 C#5:.25 B4:1 G#4:2
+A4:1 C5:.5 E5:.5 D5:1 B4:1
+Bb4:1.5 Ab4:.5 G4:1 R:1
+G4+C5+Eb5:1.5 Bb4+Eb5+G5:.5 Ab4+C5+F5:2
+G4+Bb4+Eb5:2 F4+Ab4+D5:2
+Eb4+G4+C5:1 F4+Ab4+Db5:1 G4+Bb4+Eb5:2
+F4+Ab4+D5:1.5 Eb4+G4+C5:.5 D4+F4+Bb4:2
+C5:1.5 Eb5:.5 F5:.75 Eb5:.25 C5:1
+Bb4:1 Db5:.5 Eb5:.5 G5:2
+F5:1 Eb5:.5 C5:.5 Bb4:2
+G4+Bb4+C5+Eb5:4
+''',lh='''
+Bb2+Db3+Ab3:1.5 R:.5 F3+Ab3+C4:2
+Eb3+G3+Db4:2 Ab2+C3+G3:2
+F3+Ab3+Eb4:1.5 R:.5 C3+Eb3+Bb3:2
+Db3+F3+C4:2 Ab2+C3+G3:2
+E3+G#3+B3:1.5 R:.5 C#3+E3+B3:2
+F#2+A2+E3:2 B2+D#3+A3:2
+A2+C3+G3:1.5 R:.5 D3+F#3+C4:2
+Bb2+Db3+Ab3:2 Eb3+G3+Db4:2
+Ab2+C3+G3:1.5 R:.5 F3+Ab3+Eb4:2
+Eb3+G3+Db4:2 Bb2+D3+Ab3:2
+C3+Eb3+Bb3:1 F3+Ab3+Eb4:1 Ab2+C3+G3:2
+Bb2+D3+Ab3:2 Eb3+G3+Db4:2
+F3+Ab3+C4:1.5 R:.5 Db3+F3+C4:2
+Bb2+Db3+Ab3:2 Eb3+G3+Db4:2
+Db3+F3+C4:2 Eb3+G3+Db4:2
+Ab2+C3+Eb3:4
+''',sections={1:'p',5:'mp',7:'p',9:'mp',13:'p',15:'pp'},words={1:'cantabile',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',2,3),('crescendo',9,11),('diminuendo',13,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[60,58,62,54,59,57,60,52,61,58,63,53,58,54,44,29],phrase_arcs=[[0,16,3],[16,32,3],[32,48,4],[48,64,-1]],lower_entries=[],pedal_lift=.2,gate=.975,note='Let the melody lean and release over the quieter syncopated chords. The written ornaments are small turns of speech; the returning chord melody grows in breadth, not attack.'))
 ]
