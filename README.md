@@ -172,6 +172,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 142 | Juniper Glissade | 6/8 | 149 | [Score](pieces/CWS_Op_142_Juniper_Glissade/CWS_Op_142_Juniper_Glissade.pdf) | [MP3](pieces/CWS_Op_142_Juniper_Glissade/CWS_Op_142_Juniper_Glissade.mp3) |
 | CWS Op. 143 | Nettle Alcove | 5/4 | 103 | [Score](pieces/CWS_Op_143_Nettle_Alcove/CWS_Op_143_Nettle_Alcove.pdf) | [MP3](pieces/CWS_Op_143_Nettle_Alcove/CWS_Op_143_Nettle_Alcove.mp3) |
 | CWS Op. 144 | Elder Horizon | 3/2 | 179 | [Score](pieces/CWS_Op_144_Elder_Horizon/CWS_Op_144_Elder_Horizon.pdf) | [MP3](pieces/CWS_Op_144_Elder_Horizon/CWS_Op_144_Elder_Horizon.mp3) |
+| CWS Op. 145 | Linden Vestibule | 6/4 | 127 | [Score](pieces/CWS_Op_145_Linden_Vestibule/CWS_Op_145_Linden_Vestibule.pdf) | [MP3](pieces/CWS_Op_145_Linden_Vestibule/CWS_Op_145_Linden_Vestibule.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

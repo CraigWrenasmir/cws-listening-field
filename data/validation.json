@@ -27654,5 +27654,164 @@
       "sounded_pitches_per_minute": 101.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Linden Vestibule",
+    "opus": 145,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 127,
+    "audio_seconds": 93.35,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 76,
+        "maximum_melodic_leap_semitones": 1,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced anticipations and sustained chord changes",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "All events are chords of at least three pitches. The late RH chords in bars 2, 6 and 10 continue into the following bar without another attack; each new LH chord begins underneath those held notes. Keep the anticipations soft enough to feel like part of the next breath."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        12.8
+      ],
+      [
+        13,
+        15.3
+      ],
+      [
+        15.5,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        29.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        36.8
+      ],
+      [
+        37,
+        39.3
+      ],
+      [
+        39.5,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        53.8
+      ],
+      [
+        54,
+        56.8
+      ],
+      [
+        57,
+        59.8
+      ],
+      [
+        60,
+        60.8
+      ],
+      [
+        61,
+        62.8
+      ],
+      [
+        63,
+        65.8
+      ],
+      [
+        66,
+        71.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "pp",
+        "7": "mp",
+        "9": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "5": "pp",
+        "9": "p",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 84.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
