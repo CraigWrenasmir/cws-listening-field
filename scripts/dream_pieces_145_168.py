@@ -104,4 +104,40 @@ C3+E3+G3:3 G2+B2+F3:4
 C3+E3+G3:7
 ''',sections={1:'p',3:'mp',4:'pp',5:'p',7:'mp',9:'pp'},words={1:'dolce',9:'poco rit.'},slurs=[],lower_phrases=[],hairpins=[('diminuendo',7,9)],tempo_changes={},group=2,
  performance=dict(rubato=[60,59,57,51,59,54,56,50,43,30],phrase_arcs=[[0,21,3],[21,42,2],[42,70,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Each paired triad has a tonal centre beneath its unusual upper colour. Let the rests clear the distant harmonies, then give the final unextended C-major chord a simple, unforced sound.'))
+,
+dict(op=148,title='Hawthorn Interior',key='G',fifths=1,meter='3/2',bpm=58,
+ description='Two slow chordal clocks share the same room. Linden Vestibule’s C–D–C becomes G–A–G. For eight bars the upper chords last three quarter beats and the lower chords last four, meeting only every second bar. Their gentle misalignment passes through F and A-flat before both hands find a common pace.',
+ difficulty='Advanced sustained three-against-four chordal phrasing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every sounded event is a chord of at least three notes. Through bars 1–8 the RH attacks every three quarter beats and the LH every four. Follow the lower ties across alternate bar lines; do not reattack them. The final four bars release this pattern into unequal, shared cadential gestures.',
+ parent_opus=145,motif=dict(hand='rh',start_beat=0,end_beat=9,pitches=['G','A','G']),ancestry=dict(source_opus=145,source_hand='rh',source_start_beat=0,source_end_beat=6,source_pitches=['C','D','C'],transposition_semitones=7),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=460),lower_sections={1:'p',5:'pp',9:'p',11:'pp'},
+ pedal_spans=[[i*12+a,i*12+b-.2] for i in range(4) for a,b in zip([0,3,4,6,8,9,12],[3,4,6,8,9,12])]+[[48,50.8],[51,53.8],[54,56.8],[57,59.8],[60,63.8],[64,65.8],[66,71.7]],
+ rh='''
+B4+D5+G5:3 C5+E5+A5:3
+B4+D5+G5:3 A4+C5+F#5:3
+A4+C5+F5:3 G4+Bb4+Eb5:3
+F4+A4+D5:3 E4+G4+C5:3
+Ab4+C5+Eb5:3 F4+Ab4+Db5:3
+G4+Bb4+Eb5:3 F4+Ab4+C5:3
+G4+B4+D5:3 E4+G4+C5:3
+F#4+A4+C5:3 G4+B4+D5:3
+A4+C5+E5:3 G4+B4+D5:3
+F4+A4+C5:4 E4+G4+B4:2
+F#4+A4+C5:4 G4+B4+D5:2
+B4+D5+E5+G5:6
+''',lh='''
+G3+B3+D4:4 E3+G3+B3:2~
+E3+G3+B3:2 C3+E3+G3:4
+F3+A3+C4:4 Eb3+G3+Bb3:2~
+Eb3+G3+Bb3:2 D3+F3+A3:4
+Ab2+C3+Eb3:4 Db3+F3+Ab3:2~
+Db3+F3+Ab3:2 Eb3+G3+Bb3:4
+G2+B2+D3:4 C3+E3+G3:2~
+C3+E3+G3:2 D3+F#3+A3:4
+A2+C3+E3:6
+F3+A3+C4:3 E3+G3+B3:3
+D3+F#3+C4:4 G2+B2+D3:2
+G3+B3+D4:6
+''',sections={1:'p',3:'mp',5:'pp',7:'p',9:'mp',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',7,9),('diminuendo',10,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[58,56,59,52,55,52,57,50,54,48,40,28],phrase_arcs=[[0,24,3],[24,48,2],[48,72,-1]],lower_entries=[],pedal_lift=.2,gate=.995,note='Neither hand should force its pulse onto the other. Hold each chord for its full written value and allow the two cycles to meet naturally every twelve quarter beats.'))
 ]
