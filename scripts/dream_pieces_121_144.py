@@ -1029,4 +1029,36 @@ E3+G3+B3:1 A2+C3+G3:1 D3+F#3+C4:1
 G2+B2+D3:3
 ''',sections={1:'p',5:'mp',9:'p',13:'p',15:'pp'},words={1:'leggiero',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',13,15)],tempo_changes={},group=2,
  performance=dict(rubato=[63,61,60,54,65,63,67,59,62,58,61,54,60,56,47,31],phrase_arcs=[[0,12,2],[12,24,3],[24,36,2],[36,48,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Let the six-note figures travel through the hand without pressing each note. The returning chords hold the same singing line in a wider sound.'))
+,
+dict(op=143,title='Nettle Alcove',key='c',fifths=-3,meter='5/4',bpm=58,
+ description='Small pairs of notes glimmer between lower chords. Sorrel Colonnade’s A–G–A becomes C–B-flat–C, broken apart by rests and changing distances between attacks. The dyads briefly lean into D-flat and G-flat colours, then settle into a quiet C-minor sixth.',
+ difficulty='Advanced sparse timing and balanced dyads',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the upper dyads delicate and observe each unequal rest. The two hands usually begin their events at different times; let a lower chord remain present while an upper interval arrives or disappears. Only the final two bars gather both hands into a common pulse.',
+ parent_opus=136,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['C','Bb','C']),ancestry=dict(source_opus=136,source_hand='rh',source_start_beat=0,source_end_beat=18,source_pitches=['A','G','A'],transposition_semitones=3),
+ system_starts=[1,3,5,7,9],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'pp',5:'p',7:'pp'},
+ pedal_spans=[[i*5+a,i*5+b] for i in range(8) for a,b in [(0,2.8),(3,4.8)]]+[[40,41.8],[42,44.8],[45,49.7]],
+ rh='''
+R:.5 Eb4+C5:.5 R:.5 F4+Bb4:1 R:.5 Eb4+C5:2
+R:2 D4+Bb4:1 R:.5 C4+Ab4:1.5
+R:1 F4+Db5:1.5 R:.5 Eb4+C5:2
+R:.5 D4+Bb4:2 R:1 E4+B4:1.5
+R:1.5 F4+C5:.5 R:1 Ab4+Eb5:2
+R:.5 Gb4+Db5:1 R:.5 F4+C5:1 R:.5 Eb4+Bb4:1.5
+R:1 D4+G4:1 R:1 Eb4+Ab4:2
+R:.5 F4+Bb4:1.5 R:1 D4+Ab4:2
+Eb4+G4+C5:2 D4+F4+B4:3
+Eb4+G4+A4+C5:5
+''',lh='''
+C3+Eb3+G3:2 R:1.5 Ab2+C3+Eb3:1.5
+Bb2+D3+F3:3 R:1 F3+Ab3+C4:1
+Db3+F3+Ab3:2 R:1.5 Ab2+C3+Eb3:1.5
+G2+Bb2+D3:3 R:.5 E3+G3+B3:1.5
+F3+Ab3+C4:3 R:1 C3+Eb3+G3:1
+Gb2+Bb2+Db3:2 R:1 Ab2+C3+Eb3:2
+G2+B2+D3:2.5 R:1 Ab2+C3+Eb3:1.5
+Bb2+D3+Ab3:2 R:1.5 G2+B2+F3:1.5
+C3+Eb3+G3:2 G2+B2+F3:3
+C3+Eb3+G3:5
+''',sections={1:'p',5:'mp',7:'p',9:'pp'},words={1:'delicato',9:'poco rit.'},slurs=[],lower_phrases=[],hairpins=[],tempo_changes={},group=2,
+ performance=dict(rubato=[58,54,56,51,58,53,52,48,40,28],phrase_arcs=[[0,20,2],[20,40,3],[40,50,-2]],lower_entries=[],pedal_lift=.2,gate=.93,note='A few quiet points of sound, with the spaces carrying as much of the phrase as the notes. Avoid making every arrival equally prominent.'))
 ]

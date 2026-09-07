@@ -27325,5 +27325,138 @@
       "sounded_pitches_per_minute": 164.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Nettle Alcove",
+    "opus": 143,
+    "score_pages": 2,
+    "bars": 10,
+    "pitch_onsets": 103,
+    "audio_seconds": 71.57,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 75,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 42,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced sparse timing and balanced dyads",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Keep the upper dyads delicate and observe each unequal rest. The two hands usually begin their events at different times; let a lower chord remain present while an upper interval arrives or disappears. Only the final two bars gather both hands into a common pulse."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        4.8
+      ],
+      [
+        5,
+        7.8
+      ],
+      [
+        8,
+        9.8
+      ],
+      [
+        10,
+        12.8
+      ],
+      [
+        13,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        22.8
+      ],
+      [
+        23,
+        24.8
+      ],
+      [
+        25,
+        27.8
+      ],
+      [
+        28,
+        29.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        34.8
+      ],
+      [
+        35,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        49.7
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "7": "p",
+        "9": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "7": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 89.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
