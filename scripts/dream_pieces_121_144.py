@@ -833,4 +833,40 @@ B2+D#3+A3:1 E3+G3+B3:1.5
 E3+G3+B3:3
 ''',sections={1:'p',5:'mp',9:'p',13:'p',15:'pp'},words={1:'leggiero',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',13,15)],tempo_changes={},group=2,
  performance=dict(rubato=[78,78,79,73,79,81,82,74,76,73,75,70,76,71,59,40],phrase_arcs=[[0,11,2],[11,22,3],[22,33,2],[33,44,-1]],lower_entries=[],pedal_lift=.2,gate=.96,note='Keep a supple eighth-note motion through the alternating metres. The brief extra eighth belongs to the phrase, not to an accent.'))
+,
+dict(op=138,title='Marigold Station',key='D',fifths=2,meter='12/8',bpm=66,
+ description='A melody curves above lower chords built in fourths. Sedge Arcade’s E-flat–G–F rises to A–C-sharp–B; the spacious twelve-eighth motion moves from D-modal colour through a warmer C-major clearing. A central chordal answer doubles the breadth of the opening rhythm before the last phrase finds D major.',
+ difficulty='Advanced quartal voicing and compound-time phrasing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The lower three-note grips in bars 1–8 are stacked fourths, spanning a minor seventh. Their spacing stays open while the upper line supplies thirds and sixths. Bars 5–8 replace the single melody with upper chords. Keep the dotted-quarter motion spacious; the final two bars resolve the fourths into more familiar thirds.',
+ parent_opus=134,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['A','C#','B']),ancestry=dict(source_opus=134,source_hand='rh',source_start_beat=14,source_end_beat=17.5,source_pitches=['Eb','G','F'],transposition_semitones=6),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp'},
+ pedal_spans=[[i*6+j,i*6+j+2.8] for i in range(12) for j in [0,3]],
+ rh='''
+A4:1.5 C#5:1.5 B4:3
+A4:2 F#4:1 E4:1.5 F#4:1.5
+G4:1.5 B4:1.5 D5:2 C5:1
+A4:3 G4:1.5 E4:1.5
+F#4+B4+E5:3 E4+A4+D5:3
+E4+A4+D5:3 D4+G4+C5:3
+D4+G4+C5:3 C4+F4+Bb4:3
+C4+F4+Bb4:3 D4+G4+B4:3
+A4:1.5 C#5:1.5 E5:1 D5:2
+C5:1.5 B4:.5 A4:1 G4:3
+F#4+A4+D5:3 E4+G4+C#5:3
+E4+F#4+A4+B4:6
+''',lh='''
+D3+G3+C4:3 E3+A3+D4:3
+D3+G3+C4:3 C3+F3+Bb3:3
+C3+F3+Bb3:3 D3+G3+C4:3
+C3+F3+Bb3:3 B2+E3+A3:3
+E3+A3+D4:6
+D3+G3+C4:6
+C3+F3+Bb3:6
+Bb2+Eb3+Ab3:3 B2+E3+A3:3
+D3+G3+C4:3 E3+A3+D4:3
+C3+E3+G3:3 B2+D3+G3:3
+D3+F#3+A3:3 A2+C#3+G3:3
+D3+F#3+A3:6
+''',sections={1:'p',3:'mp',5:'p',9:'mp',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',2,3),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[66,63,67,58,64,62,59,55,65,59,48,33],phrase_arcs=[[0,24,3],[24,48,2],[48,72,-1]],lower_entries=[],pedal_lift=.2,gate=.99,note='The fourths should have a soft, open resonance. Give the melodic thirds enough presence to warm their ambiguity, and broaden naturally in the chordal middle.'))
 ]

@@ -188,7 +188,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 135, Fern Lantern — complete locally: 12 bars of 4/4, 98 sounded pitches, 2 inspected score pages, 72.38 seconds. Verified the three sustained opening melody notes against six inner chord changes, descending lower voices, and the final D-major add9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 136, Sorrel Colonnade — complete locally: 10 bars of 3/2, 85 sounded pitches, 2 inspected score pages, 82.72 seconds. Verified all-chord texture, nine written gaps without either hand sustaining across them, and the A-major to A-minor pair. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 137, Hazel Switchback — complete locally: 16 bars of 5/8, 153 sounded pitches, 2 inspected score pages, 42.33 seconds. Verified sixteen alternating five- and six-eighth bars, the eight-bar single-note middle, and the final E minor add9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
-- Active batch progress: 7 of 20 completed locally. Next composition: Op. 138. Stop after Op. 150.
+- Op. 138, Marigold Station — complete locally: 12 bars of 12/8, 116 sounded pitches, 2 inspected score pages, 85.43 seconds. Verified stacked fourths throughout the first eight lower bars, the central upper chord answer, and the final D6/9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
+- Active batch progress: 8 of 20 completed locally. Next composition: Op. 139. Stop after Op. 150.
 
 ## Growth work to complete during this run
 

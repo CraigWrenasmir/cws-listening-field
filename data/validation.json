@@ -26648,5 +26648,159 @@
       "sounded_pitches_per_minute": 232.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Marigold Station",
+    "opus": 138,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 116,
+    "audio_seconds": 85.43,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 76,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 45,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced quartal voicing and compound-time phrasing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The lower three-note grips in bars 1\u20138 are stacked fourths, spanning a minor seventh. Their spacing stays open while the upper line supplies thirds and sixths. Bars 5\u20138 replace the single melody with upper chords. Keep the dotted-quarter motion spacious; the final two bars resolve the fourths into more familiar thirds."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        26.8
+      ],
+      [
+        27,
+        29.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        38.8
+      ],
+      [
+        39,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        50.8
+      ],
+      [
+        51,
+        53.8
+      ],
+      [
+        54,
+        56.8
+      ],
+      [
+        57,
+        59.8
+      ],
+      [
+        60,
+        62.8
+      ],
+      [
+        63,
+        65.8
+      ],
+      [
+        66,
+        68.8
+      ],
+      [
+        69,
+        71.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "mp",
+        "5": "p",
+        "9": "mp",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "9": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 2,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 84.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
