@@ -147,6 +147,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 127 | Willow Escapement | 9/8 | 166 | [Score](pieces/CWS_Op_127_Willow_Escapement/CWS_Op_127_Willow_Escapement.pdf) | [MP3](pieces/CWS_Op_127_Willow_Escapement/CWS_Op_127_Willow_Escapement.mp3) |
 | CWS Op. 128 | Acacia Undertow | 6/8 | 181 | [Score](pieces/CWS_Op_128_Acacia_Undertow/CWS_Op_128_Acacia_Undertow.pdf) | [MP3](pieces/CWS_Op_128_Acacia_Undertow/CWS_Op_128_Acacia_Undertow.mp3) |
 | CWS Op. 129 | Lichen Tramline | 7/8 | 139 | [Score](pieces/CWS_Op_129_Lichen_Tramline/CWS_Op_129_Lichen_Tramline.pdf) | [MP3](pieces/CWS_Op_129_Lichen_Tramline/CWS_Op_129_Lichen_Tramline.mp3) |
+| CWS Op. 130 | Reed Halflight | 12/8 | 122 | [Score](pieces/CWS_Op_130_Reed_Halflight/CWS_Op_130_Reed_Halflight.pdf) | [MP3](pieces/CWS_Op_130_Reed_Halflight/CWS_Op_130_Reed_Halflight.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

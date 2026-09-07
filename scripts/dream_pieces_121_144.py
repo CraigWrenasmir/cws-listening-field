@@ -508,4 +508,51 @@ E3:1.5 G#3+D4:1.5 R:.5
 A3+E4:3.5
 ''',sections={1:'p',4:'p',7:'mp',10:'p',13:'p',15:'pp'},words={1:'dolce',17:'poco rit.'},slurs=[(1,4),(5,7),(8,9),(10,13),(14,18)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,16),(17,18)],hairpins=[('crescendo',5,7),('diminuendo',14,17)],tempo_changes={},group=3,
  performance=dict(rubato=[69,69,68,67,69,69,70,68,67,69,69,70,68,68,66,64,53,37],phrase_arcs=[[0,14,2],[14,24.5,2],[24.5,31.5,2],[31.5,45.5,2],[45.5,63,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='The two written long-short gestures keep their lilt, with a small silent extra eighth between turns. Do not rush that space. The final A-minor added ninth holds the unresolved warmth without a dominant flourish.'))
+,
+dict(op=130,title='Reed Halflight',key='Bb',fifths=-2,meter='12/8',bpm=69,
+ description='Three slow arpeggio notes pass beneath four dotted-quarter melody pulses. Clover Nightwalk’s opening rises into a B-flat-major landscape, then the hands exchange the first four bars exactly, two octaves apart. A later A-flat and D-flat reflection returns through C to F, where the competing pulses finally settle together into a quiet major ninth.',
+ difficulty='Advanced three-against-four coordination and exchange of melody between hands',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=10),
+ technical_note='The initial LH plays three half notes against the RH dotted-quarter pulse; occasional RH quarter–eighth turns retain the swing. In bars 5–8 the complete opening melody passes two octaves down to the LH, while the original accompaniment passes two octaves up to the RH. Change which hand is prominent. The LH joins the dotted-quarter pulse in bar 15 before the final shared chord.',
+ parent_opus=124,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['D','F','G','F']),
+ ancestry=dict(source_opus=124,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['A','C','D','C'],transposition_semitones=5),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'mp',9:'pp',15:'pp'},
+ pedal_spans=[[bar*6+i,bar*6+i+1.3] for bar in range(15) for i in [0,1.5,3,4.5]]+[[90,95.7]],
+ rh='''
+D5:1.5 F5:1.5 G5:1.5 F5:1.5
+E5:1 F5:.5 D5:1.5 C5:1.5 A4:1.5
+D5:1.5 E5:1 F5:.5 A5:1.5 G5:1.5
+G5:1.5 F5:1.5 D5:1.5 C5:1.5
+Bb4:2 F5:2 A5:2
+Bb4:2 F5:2 A5:2
+Bb4:2 F5:2 A5:2
+Eb5:2 Bb5:2 D6:2
+D5:1.5 F5:1.5 G5:1.5 F5:1.5
+E5:1 F5:.5 G5:1.5 E5:1.5 D5:1.5
+Db5:1.5 Eb5:1 F5:.5 Ab5:1.5 G5:1.5
+F5:1.5 Eb5:1.5 C5:1.5 Bb4:1.5
+D5:1 F5:.5 G5:1.5 F5:1.5 E5:1.5
+D5:1.5 C5:1 A4:.5 G4:1.5 E4:1.5
+G4:1 A4:.5 C5:1.5 D5:1 C5:.5 A4:1.5
+G4+A4+C5+E5:6
+''',
+ lh='''
+Bb2:2 F3:2 A3:2
+Bb2:2 F3:2 A3:2
+Bb2:2 F3:2 A3:2
+Eb3:2 Bb3:2 D4:2
+D3:1.5 F3:1.5 G3:1.5 F3:1.5
+E3:1 F3:.5 D3:1.5 C3:1.5 A2:1.5
+D3:1.5 E3:1 F3:.5 A3:1.5 G3:1.5
+G3:1.5 F3:1.5 D3:1.5 C3:1.5
+G2:2 D3:2 F3:2
+C3:2 G3:2 Bb3:2
+Ab2:2 Eb3:2 G3:2
+Db3:2 Ab3:2 C4:2
+C3:2 E3:2 Bb3:2
+F3:2 A3:2 C4:2
+F3:1.5 C4:1.5 A3:1.5 G3:1.5
+F3+C4:6
+''',sections={1:'p',3:'mp',5:'pp',9:'p',11:'mp',13:'p',15:'pp'},words={1:'dolce',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[(1,4),(5,8),(9,12),(13,16)],hairpins=[('crescendo',9,11),('diminuendo',13,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[69,69,70,66,69,69,70,66,69,70,68,66,67,64,54,38],phrase_arcs=[[0,24,3],[24,48,3],[48,72,3],[72,96,-2]],lower_entries=[],pedal_lift=.2,gate=.985,note='Allow the three-note accompaniment and four-pulse melody to coexist without emphasising their crossings. Bars 5–8 bring the lower melody forward and soften the higher repeated figure. The final two bars gradually find a common pulse and release into F major.'))
 ]

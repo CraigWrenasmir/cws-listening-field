@@ -1,6 +1,8 @@
-# CWS Op. 7–300: continuing composition run
+# CWS composition progress
 
-Craig authorised 294 further studies on 6 September 2026. Mac sleep is acceptable: save checkpoints and resume; do not prevent sleep.
+Current scope: the seven-piece batch Op. 124–130 is complete. Stop at 130 and wait for Craig’s listening feedback or another request. The older 300-work ambition is deferred.
+
+Craig previously authorised 294 further studies on 6 September 2026. Mac sleep remains acceptable: save checkpoints and resume; do not prevent sleep.
 
 ## Direction
 
@@ -173,7 +175,9 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 127, Willow Escapement — complete locally: thirteen bars of 9/8, 166 sounded pitches, two inspected pages, 56.52 seconds. Independently verified all 108 LH eighths as three continuous blocks of four-note cycles: each bar begins one pitch further round the cell, and the original 36-note block returns exactly after a B-flat-major-seventh window. Maximum rapid LH shift eight semitones, RH final span eleven. All 37 pedal spans, score/MIDI, dynamics, ancestry, originality and decoded MP3 passed.
 - Op. 128, Acacia Undertow — complete locally: twenty bars of 6/8, 181 sounded pitches, two inspected pages, 58.77 seconds. Independently verified all 72 LH stride gestures, alternating quarter-note basses and eighth-note dyads, with three identical opening bars and an E-major 6/9 close after the minor-key passage. RH span ten, LH seven; largest quick LH move nine semitones. All 39 pedal spans, score/MIDI, dynamics, ancestry, originality and decoded MP3 passed.
 - Op. 129, Lichen Tramline — complete locally: eighteen bars of 7/8, 139 sounded pitches, two inspected pages, 64.62 seconds. Independently verified sixteen 3+3+1 LH patterns: two long–short turns followed by a final-eighth rest, with pedal cleared before every gap. Three exact opening repetitions and two melody ties crossing those silences passed separately. RH span five, LH seven; rapid LH steps at most four semitones. All 35 pedal spans, score/MIDI, dynamics, ancestry, originality and decoded MP3 passed.
-- Current batch: six of seven complete locally (Op. 124–129), awaiting publication together. Next and final composition: Op. 130. Stop there; the earlier 300-work ambition remains deferred.
+- Op. 130, Reed Halflight — complete locally: sixteen bars of 12/8, 122 sounded pitches, two inspected pages, 97.99 seconds. Independently verified all thirty opening events exchanging hands exactly, two octaves apart, with identical durations and relative entries. Ten accompaniment bars use three half notes; bar 15 joins the four dotted-quarter pulses before the F-major ninth. RH span nine, LH seven; rapid moves at most four semitones. The fourteen-semitone bass shift follows a held half note. All 61 pedal spans, score/MIDI, dynamics, ancestry, originality and decoded MP3 passed.
+- Batch complete: seven new works, Op. 124–130. All fourteen final score pages were inspected. Full 130-work catalogue/playlist integration with simulated media, the 130-node/129-edge Kinship harness, production build and whitespace checks passed. Exactly 130 unique titles and contiguous opus numbers are present. All Op. 1–123 piece assets and the five closed download volumes remain unchanged. Volume 06 now contains Op. 121–130, 21 score pages, a 2,828,466-byte PDF and a 15,390,481-byte ZIP. Site footprint: 533.4 MiB.
+- Release prepared for GitHub Pages as one batch; verify the matching Pages workflow and public assets after pushing. Do not start Op. 131. Craig’s listening feedback remains outstanding.
 
 ## Growth work to complete during this run
 
