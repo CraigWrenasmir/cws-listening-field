@@ -7,13 +7,13 @@ export function mountKinship(root,data){
  const points=new Map(layout.nodes.map(p=>[p.op,portrait?{...p,x:p.y,y:p.x}:{...p}]));
  let baseWidth=portrait?780:1200,baseHeight=portrait?1200:780;
  const anchors=new Map(),edges=new Map(),svgNS='http://www.w3.org/2000/svg';
- const view={x:0,y:0,width:baseWidth,height:baseHeight};let selected=null,scale=1,suppressClick=false,drag=null,pinch=null;
+ const view={x:0,y:0,width:baseWidth,height:baseHeight};let selected=null,scale=1,suppressClick=false,drag=null,pinch=null,touchOpus=null;
  const pointers=new Map();
  function element(tag,attributes={},text){const node=document.createElementNS(svgNS,tag);for(const [key,value] of Object.entries(attributes))node.setAttribute(key,String(value));if(text!==undefined)node.textContent=text;return node;}
  function updateView(){
   view.x=Math.min(baseWidth-view.width,Math.max(0,view.x));view.y=Math.min(baseHeight-view.height,Math.max(0,view.y));
   svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.width} ${view.height}`);svg.dataset.zoom=scale.toFixed(3);
-  svg.classList.toggle('is-close',scale>=2);q('#kf-zoom-out').disabled=scale<=1;q('#kf-zoom-in').disabled=scale>=6;
+  q('#kf-zoom-out').disabled=scale<=1;q('#kf-zoom-in').disabled=scale>=6;
  }
  function screenPoint(x,y){
   const rect=svg.getBoundingClientRect(),ratio=Math.min(rect.width/view.width,rect.height/view.height)||1;
@@ -45,7 +45,7 @@ export function mountKinship(root,data){
  for(const point of points.values()){
   const piece=byOp.get(point.op),parent=byOp.get(piece.parent),label='CWS Op. '+piece.op+', '+piece.title;
   const anchor=element('a',{href:'index.html#'+piece.slug,class:'kf-node','data-opus':piece.op,transform:`translate(${point.x},${point.y})`,tabindex:'-1','aria-label':label+(parent?'; musical parent: '+parent.title:'; origin of the collection')});
-  anchor.append(element('title',{},label),element('circle',{class:'kf-hit',r:14}),element('circle',{class:'kf-point',r:piece.parent==null?5:3.6}),element('text',{class:'kf-number',x:8,y:-7},String(piece.op).padStart(3,'0')),element('text',{class:'kf-name',x:8,y:9},piece.title));
+  anchor.append(element('title',{},label),element('circle',{class:'kf-hit',r:14}),element('circle',{class:'kf-point',r:piece.parent==null?5:3.6}),element('text',{class:'kf-number',x:8,y:-7},String(piece.op).padStart(3,'0')));
   anchor.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch'&&!drag)select(piece.op);});anchor.addEventListener('focus',()=>select(piece.op));
   anchors.set(piece.op,anchor);q('#kf-works').append(anchor);
  }
@@ -64,6 +64,7 @@ export function mountKinship(root,data){
  function gesture(){const [a,b]=[...pointers.values()];return {distance:Math.max(1,Math.hypot(b.x-a.x,b.y-a.y)),x:(a.x+b.x)/2,y:(a.y+b.y)/2};}
  svg.addEventListener('pointerdown',event=>{
   if(event.button!==0)return;pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+  const node=event.target.closest?.('[data-opus]');touchOpus=event.pointerType==='touch'&&node?Number(node.dataset.opus):null;
   if(pointers.size===1){drag={id:event.pointerId,x:event.clientX,y:event.clientY,moved:false};suppressClick=false;}
   else if(pointers.size===2){pinch=gesture();drag.moved=true;suppressClick=true;for(const id of pointers.keys())svg.setPointerCapture(id);}
  });
@@ -76,13 +77,21 @@ export function mountKinship(root,data){
   const ratio=screenPoint(event.clientX,event.clientY).ratio;view.x-=dx/ratio;view.y-=dy/ratio;drag.x=event.clientX;drag.y=event.clientY;suppressClick=true;svg.classList.add('is-dragging');updateView();
  });
  function endPointer(event){
+  if(event.type==='pointercancel')touchOpus=null;
   if(!pointers.has(event.pointerId))return;pointers.delete(event.pointerId);
   if(svg.hasPointerCapture(event.pointerId))svg.releasePointerCapture(event.pointerId);
   if(pointers.size===1){const [id,p]=[...pointers.entries()][0];drag={id,x:p.x,y:p.y,moved:true};pinch=null;}
   else if(!pointers.size){drag=null;pinch=null;svg.classList.remove('is-dragging');}
  }
  svg.addEventListener('pointerup',endPointer);svg.addEventListener('pointercancel',endPointer);svg.addEventListener('lostpointercapture',endPointer);
- svg.addEventListener('click',event=>{if(suppressClick){event.preventDefault();event.stopPropagation();suppressClick=false;}},true);
+ svg.addEventListener('click',event=>{
+  if(suppressClick){event.preventDefault();event.stopPropagation();suppressClick=false;touchOpus=null;return;}
+  const node=event.target.closest?.('[data-opus]');
+  // Touch has no hover: reveal the title first, then open through its footer link.
+  // Ordinary mouse clicks and keyboard activation remain direct opus links.
+  if(node&&(event.pointerType==='touch'||touchOpus===Number(node.dataset.opus)&&event.detail!==0)){event.preventDefault();select(Number(node.dataset.opus));}
+  touchOpus=null;
+ },true);
  const Observer=document.defaultView.ResizeObserver;
  if(Observer)new Observer(()=>{
   const rect=svg.getBoundingClientRect(),next=rect.height>rect.width;if(next===portrait)return;

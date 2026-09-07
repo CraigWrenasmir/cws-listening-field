@@ -16,8 +16,7 @@
 .kf-node .kf-hit{fill:transparent}
 .kf-node .kf-point{fill:var(--kf-paper);stroke:var(--kf-ink);stroke-width:1.1}
 .kf-node .kf-number{font:10px monospace;fill:var(--kf-muted);paint-order:stroke;stroke:var(--kf-paper);stroke-width:3px;stroke-linejoin:round}
-.kf-node .kf-name{font:12px Georgia,serif;fill:var(--kf-ink);paint-order:stroke;stroke:var(--kf-paper);stroke-width:4px;stroke-linejoin:round;display:none}
-#kf-map.is-close .kf-name{display:block}
+.kf-node .kf-name{display:none}
 .kf-node.is-current .kf-point,.kf-node:focus-visible .kf-point{fill:var(--kf-copper);stroke:var(--kf-copper);stroke-width:2}
 .kf-node.is-current .kf-number,.kf-node:focus-visible .kf-number{fill:var(--kf-copper)}
 .kf-node:focus-visible .kf-hit{stroke:var(--kf-copper);stroke-width:1;stroke-dasharray:2 3}
