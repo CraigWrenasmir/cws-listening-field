@@ -26459,5 +26459,194 @@
       "sounded_pitches_per_minute": 63.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Hazel Switchback",
+    "opus": 137,
+    "score_pages": 2,
+    "bars": 16,
+    "pitch_onsets": 153,
+    "audio_seconds": 42.33,
+    "hands": {
+      "rh": {
+        "low": 66,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 42,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 11
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced changing metre and light chord syncopation",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Count alternating bars as 3+2 and 3+3 eighths. Keep the eighth note constant across the changes. The upper chord answers often enter after a rest; the lower hand carries the phrase through these gaps. The middle eight bars let the melody move independently before the opening chord texture returns."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        2.3
+      ],
+      [
+        2.5,
+        5.3
+      ],
+      [
+        5.5,
+        7.8
+      ],
+      [
+        8.0,
+        10.8
+      ],
+      [
+        11.0,
+        13.3
+      ],
+      [
+        13.5,
+        16.3
+      ],
+      [
+        16.5,
+        18.8
+      ],
+      [
+        19.0,
+        21.8
+      ],
+      [
+        22.0,
+        24.3
+      ],
+      [
+        24.5,
+        27.3
+      ],
+      [
+        27.5,
+        29.8
+      ],
+      [
+        30.0,
+        32.8
+      ],
+      [
+        33.0,
+        35.3
+      ],
+      [
+        35.5,
+        38.3
+      ],
+      [
+        38.5,
+        40.8
+      ],
+      [
+        41.0,
+        43.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "9": "p",
+        "13": "p",
+        "15": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "5": "pp",
+        "9": "p",
+        "13": "pp"
+      }
+    },
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "5/8"
+      },
+      {
+        "beat": 2.5,
+        "meter": "6/8"
+      },
+      {
+        "beat": 5.5,
+        "meter": "5/8"
+      },
+      {
+        "beat": 8.0,
+        "meter": "6/8"
+      },
+      {
+        "beat": 11.0,
+        "meter": "5/8"
+      },
+      {
+        "beat": 13.5,
+        "meter": "6/8"
+      },
+      {
+        "beat": 16.5,
+        "meter": "5/8"
+      },
+      {
+        "beat": 19.0,
+        "meter": "6/8"
+      },
+      {
+        "beat": 22.0,
+        "meter": "5/8"
+      },
+      {
+        "beat": 24.5,
+        "meter": "6/8"
+      },
+      {
+        "beat": 27.5,
+        "meter": "5/8"
+      },
+      {
+        "beat": 30.0,
+        "meter": "6/8"
+      },
+      {
+        "beat": 33.0,
+        "meter": "5/8"
+      },
+      {
+        "beat": 35.5,
+        "meter": "6/8"
+      },
+      {
+        "beat": 38.5,
+        "meter": "5/8"
+      },
+      {
+        "beat": 41.0,
+        "meter": "6/8"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 232.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

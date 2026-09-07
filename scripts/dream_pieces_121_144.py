@@ -789,4 +789,48 @@ B2+D3+F#3:3 E3+G#3+B3:3
 A2+C#3+E3:6
 ''',sections={1:'p',4:'mp',5:'p',7:'pp'},words={1:'dolce',9:'poco rit.'},slurs=[],lower_phrases=[],hairpins=[],tempo_changes={},group=2,
  performance=dict(rubato=[57,54,55,57,52,48,53,51,44,31],phrase_arcs=[[0,18,1],[18,36,2],[36,60,-1]],lower_entries=[],pedal_lift=.2,gate=.97,note='Allow the written silences to separate the harmonies. Their resonance should decay into the room, and the final uninterrupted chord should feel earned by the earlier gaps.'))
+,
+dict(op=137,title='Hazel Switchback',key='e',fifths=1,meter='5/8',meters=['5/8','6/8']*8,bpm=78,
+ description='Alternating five- and six-eighth bars make a small stair that never lands quite where expected. Sedge Arcade’s closing D–E-flat–D becomes E–F–E above E-minor chords. Short upper grips open into a running middle melody, while the left hand moves between three-note jazz shapes and bare fifths.',
+ difficulty='Advanced changing metre and light chord syncopation',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Count alternating bars as 3+2 and 3+3 eighths. Keep the eighth note constant across the changes. The upper chord answers often enter after a rest; the lower hand carries the phrase through these gaps. The middle eight bars let the melody move independently before the opening chord texture returns.',
+ parent_opus=134,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['E','F','E']),ancestry=dict(source_opus=134,source_hand='rh',source_start_beat=35,source_end_beat=42,source_pitches=['D','Eb','D'],transposition_semitones=2),
+ system_starts=[1,3,5,7,9,11,13,15],page_starts=[9],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'p',5:'pp',9:'p',13:'pp'},
+ pedal_spans=[[i*5.5+a,i*5.5+b] for i in range(8) for a,b in [(0,2.3),(2.5,5.3)]],
+ rh='''
+G4+B4+E5:1.5 A4+C5+F5:1
+G4+B4+E5:.5 D5:.5 B4:2
+R:.5 F#4+A4+D5:1 G4+B4+E5:1
+R:.5 A4+C5+F#5:1.5 G4+B4+E5:1
+B4:.5 D5:.5 E5:.5 G5:1
+F#5:1 E5:.5 D5:.5 B4:1
+C5:.5 E5:.5 G5:.5 A5:1
+G5:1 F#5:.5 E5:.5 D5:1
+Eb5:1 G5:.5 F5:1
+D5:.5 C5:.5 Bb4:1 G4:1
+A4:.5 C5:.5 E5:.5 D5:1
+C#5:1 B4:.5 A4:.5 F#4:1
+G4+B4+E5:1.5 A4+C5+F5:1
+G4+B4+E5:1 F#4+A4+D5:2
+F#4+A4+C5:1 G4+B4+D5:1.5
+F#4+G4+B4:3
+''',lh='''
+E3+G3+D4:1.5 F3+A3+C4:1
+C3+E3+B3:1.5 G2+D3:1.5
+D3+F#3+C4:1.5 E3+G3+B3:1
+A2+E3:1.5 B2+F#3:1.5
+E3+G3+D4:2.5
+D3+F#3+A3:1.5 G2+B2+D3:1.5
+C3+E3+B3:2.5
+A2+C3+G3:1.5 D3+F#3+C4:1.5
+Eb3+G3+Bb3:2.5
+Bb2+D3+A3:1.5 G2+Bb2+D3:1.5
+A2+C3+G3:2.5
+F#2+A2+C#3:1.5 B2+D3+F#3:1.5
+E3+G3+D4:1.5 F3+A3+C4:1
+C3+E3+B3:1.5 D3+F#3+C4:1.5
+B2+D#3+A3:1 E3+G3+B3:1.5
+E3+G3+B3:3
+''',sections={1:'p',5:'mp',9:'p',13:'p',15:'pp'},words={1:'leggiero',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',13,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[78,78,79,73,79,81,82,74,76,73,75,70,76,71,59,40],phrase_arcs=[[0,11,2],[11,22,3],[22,33,2],[33,44,-1]],lower_entries=[],pedal_lift=.2,gate=.96,note='Keep a supple eighth-note motion through the alternating metres. The brief extra eighth belongs to the phrase, not to an accent.'))
 ]
