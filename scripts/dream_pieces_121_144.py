@@ -361,4 +361,45 @@ D3+A3:1.5 F#3+C4:1.5
 G3+D4:3
 ''',sections={1:'p',3:'p',5:'mp',7:'p',9:'mp',11:'p',15:'pp'},words={1:'dolce',17:'poco rit.'},slurs=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16),(17,18)],lower_phrases=[(17,18)],hairpins=[('crescendo',3,5),('diminuendo',13,16)],tempo_changes={},group=3,
  performance=dict(rubato=[66,65,67,65,66,63,67,67,68,65,65,64,66,64,62,60,49,34],phrase_arcs=[[0,6,2],[6,12,2],[12,18,3],[18,24,2],[24,30,3],[30,36,1],[36,42,2],[42,54,-2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Soft short chord answers leave actual silence between the melody’s phrases. The written late-eighth attacks provide the swing; retain a steady underlying pulse until the last two bars.'))
+,
+dict(op=127,title='Willow Escapement',key='d',fifths=-1,meter='9/8',bpm=75,
+ description='A four-note left-hand arpeggio passes through nine-eighth bars, meeting each bar line at a different point in its cycle. Myrtle Sidestreet’s small melody rises a whole tone and loosens into a high, luminous middle passage over B-flat major seventh. The original D-minor ripple returns beneath a changed melody before both hands finally arrive together.',
+ difficulty='Advanced independence over a four-eighth ostinato in compound triple metre',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=10),
+ technical_note='Each four-note LH cell repeats continuously through four bars of nine eighths; the bar openings rotate through its four pitches before realigning. Preserve the smooth eighth-note ripple without accenting the bar or cell boundaries. The RH quarter–eighth pairs provide the longer lilting pulse. The four-bar B-flat section rises in register, then the original LH returns exactly.',
+ parent_opus=126,motif=dict(hand='rh',start_beat=0,end_beat=4.5,pitches=['A','C','D','C']),
+ ancestry=dict(source_opus=126,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['G','Bb','C','Bb'],transposition_semitones=2),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',5:'p',9:'pp'},
+ pedal_spans=[[bar*4.5+i,bar*4.5+i+1.3] for bar in range(12) for i in [0,1.5,3]]+[[54,58.2]],
+ rh='''
+A4:1 C5:.5 D5:1 C5:2
+R:.5 E5:1 F5:.5 E5:1.5 D5:1
+C5:1 E5:.5 A5:1 G5:.5 F5:1.5~
+F5:1 E5:.5 D5:1 C5:.5 A4:1.5
+F5:1 A5:.5 C6:1 Bb5:.5 A5:1.5
+G5:1 F5:.5 E5:1.5 D5:1.5
+C5:1 D5:.5 F5:1 A5:.5 G5:1.5
+E5:1 F5:.5 D5:1.5 C5:1.5
+A4:1 C5:.5 E5:1 D5:2
+R:.5 F5:1 E5:.5 D5:1.5 C5:1
+A4:1 C5:.5 D5:1 E5:.5 F5:1.5~
+F5:1 E5:.5 C5:1 A4:.5 E4:1.5
+F4+A4+B4+E5:4.5
+''',
+ lh='''
+D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5
+F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5
+A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5
+E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5
+Bb3:.5 D4:.5 F4:.5 A3:.5 Bb3:.5 D4:.5 F4:.5 A3:.5 Bb3:.5
+D4:.5 F4:.5 A3:.5 Bb3:.5 D4:.5 F4:.5 A3:.5 Bb3:.5 D4:.5
+F4:.5 A3:.5 Bb3:.5 D4:.5 F4:.5 A3:.5 Bb3:.5 D4:.5 F4:.5
+A3:.5 Bb3:.5 D4:.5 F4:.5 A3:.5 Bb3:.5 D4:.5 F4:.5 A3:.5
+D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5
+F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5
+A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5
+E3:.5 D3:.5 F3:.5 A3:.5 E3:.5 D3:.5 F3:.5 A3:.5 E3:.5
+D3+A3:4.5
+''',sections={1:'p',3:'p',5:'mp',7:'p',9:'p',11:'pp'},words={1:'dolce',12:'poco rit.'},slurs=[(1,4),(5,8),(9,13)],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[('crescendo',3,5),('diminuendo',9,12)],tempo_changes={},group=2,
+ performance=dict(rubato=[75,75,76,73,76,75,75,73,75,74,72,64,42],phrase_arcs=[[0,18,2],[18,36,3],[36,58.5,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='A quiet, almost continuous ripple supports the longer written swing above. Keep the first twelve bars gently moving; the last chord releases the recurring four-note pattern into a D-minor sixth and ninth.'))
 ]
