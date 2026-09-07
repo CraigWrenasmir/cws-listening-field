@@ -457,4 +457,55 @@ B2:1.5 D#3+A3:1.5
 E3+B3:3
 ''',sections={1:'p',4:'p',7:'mp',11:'p',13:'p',17:'pp'},words={1:'dolce',19:'poco rit.'},slurs=[(1,3),(4,6),(7,10),(11,13),(14,16),(17,20)],lower_phrases=[(1,3),(4,6),(7,10),(11,13),(14,16),(17,20)],hairpins=[('crescendo',5,7),('diminuendo',17,19)],tempo_changes={},group=3,
  performance=dict(rubato=[72,72,70,72,72,70,73,72,73,70,71,71,72,73,71,69,70,66,55,38],phrase_arcs=[[0,9,2],[9,18,2],[18,30,3],[30,39,2],[39,48,2],[48,60,-2]],lower_entries=[],pedal_lift=.2,gate=.98,note='An understated long-short stride supports the melody. The moving bass and chord replies should feel like a slow walk; let the phrase endings breathe and the final major colour remain quiet.'))
+,
+dict(op=129,title='Lichen Tramline',key='a',fifths=0,meter='7/8',bpm=69,
+ description='Two long–short left-hand turns leave one eighth of air at the end of each seven-eighth bar. Acacia Undertow’s rising line falls into A minor, then wanders through F major and a fleeting B-minor reflection. Some melody notes linger across the missing accompaniment beat, making the small asymmetry feel like a hesitation in a familiar walk.',
+ difficulty='Advanced asymmetrical swing with independent phrase endings',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=10),
+ technical_note='Hear each bar as three plus three plus one eighths: the LH plays quarter–eighth, quarter–eighth, then rests for the final eighth. Keep that final rest quiet rather than turning it into an accent. Bars 1–3 repeat an identical four-note figure. Pedal lifts before the final rest in every moving bar, while selected melody notes remain finger-held across it.',
+ parent_opus=128,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['C','E','A','G']),
+ ancestry=dict(source_opus=128,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['G','B','E','D'],transposition_semitones=-7),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',7:'p',10:'pp'},
+ pedal_spans=[[bar*3.5+i,bar*3.5+end] for bar in range(16) for i,end in [(0,1.3),(1.5,2.9)]]+[[56,57.3],[57.5,58.9],[59.5,62.7]],
+ rh='''
+C5:1 E5:.5 A5:1 G5:.5 R:.5
+E5:1.5 D5:.5 C5:1 B4:.5
+A4:1 B4:.5 C5:1 E5:1~
+E5:1 D5:.5 C5:1 A4:1
+F5:1 E5:.5 D5:1 C5:.5 R:.5
+B4:1 D5:.5 E5:1 F5:1
+G5:1 F5:.5 E5:1 D5:1
+F#5:1 E5:.5 D5:1 C#5:.5 R:.5
+B4:1 D5:.5 F#5:1 E5:.5 D5:.5
+C5:1 E5:.5 A5:1 G5:.5 R:.5
+E5:1.5 C5:.5 A4:1 G4:.5
+A4:1 C5:.5 F5:1 E5:1
+D5:1 B4:.5 A4:1 G4:.5 R:.5
+A4:1 C5:.5 E5:1 D5:1
+C5:1 B4:.5 A4:1 E5:1~
+E5:1 D5:.5 B4:1 G#4:1
+D5:1 C5:.5 B4:1 A4:1
+B4+C5+E5:3.5
+''',
+ lh='''
+A3:1 E3:.5 G3:1 B3:.5 R:.5
+A3:1 E3:.5 G3:1 B3:.5 R:.5
+A3:1 E3:.5 G3:1 B3:.5 R:.5
+F3:1 C3:.5 E3:1 G3:.5 R:.5
+D3:1 A2:.5 C3:1 E3:.5 R:.5
+G3:1 D3:.5 F3:1 A3:.5 R:.5
+C3:1 G2:.5 B2:1 D3:.5 R:.5
+B2:1 F#2:.5 A2:1 C#3:.5 R:.5
+E3:1 B2:.5 D3:1 F#3:.5 R:.5
+A3:1 E3:.5 G3:1 B3:.5 R:.5
+F3:1 C3:.5 E3:1 G3:.5 R:.5
+D3:1 A2:.5 C3:1 E3:.5 R:.5
+G3:1 D3:.5 F3:1 A3:.5 R:.5
+A3:1 E3:.5 G3:1 B3:.5 R:.5
+A3:1 E3:.5 G3:1 B3:.5 R:.5
+E3:1 B2:.5 D3:1 G#3:.5 R:.5
+E3:1.5 G#3+D4:1.5 R:.5
+A3+E4:3.5
+''',sections={1:'p',4:'p',7:'mp',10:'p',13:'p',15:'pp'},words={1:'dolce',17:'poco rit.'},slurs=[(1,4),(5,7),(8,9),(10,13),(14,18)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(13,16),(17,18)],hairpins=[('crescendo',5,7),('diminuendo',14,17)],tempo_changes={},group=3,
+ performance=dict(rubato=[69,69,68,67,69,69,70,68,67,69,69,70,68,68,66,64,53,37],phrase_arcs=[[0,14,2],[14,24.5,2],[24.5,31.5,2],[31.5,45.5,2],[45.5,63,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='The two written long-short gestures keep their lilt, with a small silent extra eighth between turns. Do not rush that space. The final A-minor added ninth holds the unresolved warmth without a dominant flourish.'))
 ]
