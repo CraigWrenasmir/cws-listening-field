@@ -311,4 +311,54 @@ F3+C4:7.5
 ''',sections={1:'p',3:'p',5:'mp',7:'p',9:'mp',10:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},
  slurs=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12)],lower_phrases=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12)],hairpins=[('crescendo',3,5),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[72,72,73,71,72,71,72,71,73,70,58,42],phrase_arcs=[[0,15,2],[15,30,2],[30,45,3],[45,60,1],[60,75,2],[75,90,-2]],lower_entries=[],pedal_lift=.2,gate=.985,note='Keep the left-hand cell even in character but not equal in duration: the short middle note gives a small sideways lilt. The melody should float independently over the cell boundaries.'))
+,
+dict(op=126,title='Myrtle Sidestreet',key='g',fifths=-2,meter='6/8',bpm=66,
+ description='Fen Turnstile’s opening falls a whole tone into a G-minor miniature. The left hand offers two quiet chord answers on the last eighth of each dotted-quarter pulse, then shifts those same gestures onto the pulse itself. The melody keeps its own lilt while the accompaniment alternately leans behind and steps forward.',
+ difficulty='Intermediate to advanced offbeat comping with independent rests',
+ technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=10),
+ technical_note='The LH chord attacks in bars 1–6 and 11–16 arrive at quarter-beat offsets 1 and 2.5, each lasting one eighth. In bars 7–10 the attacks move to 0 and 1.5. Keep the rests silent and the chords soft; the regular change of placement should be felt without becoming an accent. Pedal is reserved for the two-bar coda so the intervening silences remain clear.',
+ parent_opus=125,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['G','Bb','C','Bb']),
+ ancestry=dict(source_opus=125,source_hand='rh',source_start_beat=0,source_end_beat=4.5,source_pitches=['A','C','D','C'],transposition_semitones=-2),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',7:'p',11:'pp'},pedal_spans=[[48,50.7],[51,53.7]],
+ rh='''
+G4:1 Bb4:.5 C5:.5 Bb4:1
+A4:1.5 F4:1 R:.5
+D5:1 F5:.5 Eb5:1 D5:.5~
+D5:1 C5:.5 A4:1 R:.5
+Bb4:1 Db5:.5 F5:1 Eb5:.5
+D5:1 C5:.5 A4:1.5
+G4:1 Bb4:.5 D5:1 C5:.5
+A4:1.5 G4:.5 F4:1
+E4:1 G4:.5 Bb4:1 D5:.5
+C#5:1 E5:.5 D5:1 R:.5
+G4:1 Bb4:.5 C5:.5 Bb4:1
+A4:1.5 F4:1 R:.5
+Eb5:1 G5:.5 F5:1 D5:.5~
+D5:1 C5:.5 Bb4:1 A4:.5
+G4:1 Bb4:.5 A4:1 G4:.5
+F#4:1 A4:.5 C5:1 Bb4:.5
+A4:1.5 F#4:.5 G4:1
+A4+Bb4+D5+F5:3
+''',
+ lh='''
+R:1 F3+A3:.5 R:1 D3+G3:.5
+R:1 F3+A3:.5 R:1 D3+G3:.5
+R:1 G3+Bb3:.5 R:1 Eb3+A3:.5
+R:1 F3+A3:.5 R:1 C3+G3:.5
+R:1 Ab3+C4:.5 R:1 F3+Bb3:.5
+R:1 F#3+C4:.5 R:1 D3+A3:.5
+F3+A3:.5 R:1 D3+G3:.5 R:1
+F3+A3:.5 R:1 D3+G3:.5 R:1
+G3+Bb3:.5 R:1 E3+A3:.5 R:1
+G3+C#4:.5 R:1 E3+A3:.5 R:1
+R:1 F3+A3:.5 R:1 D3+G3:.5
+R:1 F3+A3:.5 R:1 D3+G3:.5
+R:1 G3+Bb3:.5 R:1 Eb3+A3:.5
+R:1 F3+Bb3:.5 R:1 D3+A3:.5
+R:1 Eb3+Bb3:.5 R:1 C3+G3:.5
+R:1 F#3+C4:.5 R:1 D3+A3:.5
+D3+A3:1.5 F#3+C4:1.5
+G3+D4:3
+''',sections={1:'p',3:'p',5:'mp',7:'p',9:'mp',11:'p',15:'pp'},words={1:'dolce',17:'poco rit.'},slurs=[(1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16),(17,18)],lower_phrases=[(17,18)],hairpins=[('crescendo',3,5),('diminuendo',13,16)],tempo_changes={},group=3,
+ performance=dict(rubato=[66,65,67,65,66,63,67,67,68,65,65,64,66,64,62,60,49,34],phrase_arcs=[[0,6,2],[6,12,2],[12,18,3],[18,24,2],[24,30,3],[30,36,1],[36,42,2],[42,54,-2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Soft short chord answers leave actual silence between the melody’s phrases. The written late-eighth attacks provide the swing; retain a steady underlying pulse until the last two bars.'))
 ]

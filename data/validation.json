@@ -24538,5 +24538,73 @@
       "sounded_pitches_per_minute": 103.1,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Myrtle Sidestreet",
+    "opus": 126,
+    "score_pages": 2,
+    "bars": 18,
+    "pitch_onsets": 131,
+    "audio_seconds": 58.76,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 8
+      },
+      "lh": {
+        "low": 48,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced offbeat comping with independent rests",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 10
+      },
+      "note": "The LH chord attacks in bars 1\u20136 and 11\u201316 arrive at quarter-beat offsets 1 and 2.5, each lasting one eighth. In bars 7\u201310 the attacks move to 0 and 1.5. Keep the rests silent and the chords soft; the regular change of placement should be felt without becoming an accent. Pedal is reserved for the two-bar coda so the intervening silences remain clear."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        48,
+        50.7
+      ],
+      [
+        51,
+        53.7
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "p",
+        "5": "mp",
+        "7": "p",
+        "9": "mp",
+        "11": "p",
+        "15": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "7": "p",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 12,
+      "sounded_pitches_per_minute": 140.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
