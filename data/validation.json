@@ -27095,5 +27095,112 @@
       "sounded_pitches_per_minute": 138.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Celandine Atrium",
+    "opus": 141,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 121,
+    "audio_seconds": 70.95,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 44,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 1,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced contrary-motion chord balance and harmonic shifts",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "All hand attacks contain three or four pitches. Bars 3\u20136 have upper notes D\u2013E\u2013F\u2013G against descending basses D\u2013C\u2013B-flat\u2013A-flat. Shape both outer lines independently, keeping the middle notes quieter. The final E-flat harmony is a new resting place."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        3.8
+      ],
+      [
+        4,
+        7.8
+      ],
+      [
+        8,
+        11.8
+      ],
+      [
+        12,
+        15.8
+      ],
+      [
+        16,
+        19.8
+      ],
+      [
+        20,
+        23.8
+      ],
+      [
+        24,
+        27.8
+      ],
+      [
+        28,
+        31.8
+      ],
+      [
+        32,
+        35.8
+      ],
+      [
+        36,
+        39.8
+      ],
+      [
+        40,
+        43.8
+      ],
+      [
+        44,
+        47.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "p",
+        "5": "mp",
+        "7": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "3": "p",
+        "7": "pp",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 106.5,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

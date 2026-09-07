@@ -949,4 +949,40 @@ Db3+F3+C4:2 Eb3+G3+Db4:2
 Ab2+C3+Eb3:4
 ''',sections={1:'p',5:'mp',7:'p',9:'mp',13:'p',15:'pp'},words={1:'cantabile',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',2,3),('crescendo',9,11),('diminuendo',13,15)],tempo_changes={},group=2,
  performance=dict(rubato=[60,58,62,54,59,57,60,52,61,58,63,53,58,54,44,29],phrase_arcs=[[0,16,3],[16,32,3],[32,48,4],[48,64,-1]],lower_entries=[],pedal_lift=.2,gate=.975,note='Let the melody lean and release over the quieter syncopated chords. The written ornaments are small turns of speech; the returning chord melody grows in breadth, not attack.'))
+,
+dict(op=141,title='Celandine Atrium',key='b',fifths=2,meter='4/4',bpm=53,
+ description='A wholly chordal study whose outside voices open away from each other. Moss Vestibule’s E–D–E becomes B–A–B; B minor then slips into D minor. Through the central ascent, the upper chord tops rise as the bass descends, widening the space until an A-flat Lydian colour hangs at its furthest point. The ending finds E-flat major instead of returning home.',
+ difficulty='Advanced contrary-motion chord balance and harmonic shifts',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='All hand attacks contain three or four pitches. Bars 3–6 have upper notes D–E–F–G against descending basses D–C–B-flat–A-flat. Shape both outer lines independently, keeping the middle notes quieter. The final E-flat harmony is a new resting place.',
+ parent_opus=139,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['B','A','B']),ancestry=dict(source_opus=139,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['E','D','E'],transposition_semitones=7),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'p',3:'p',7:'pp',11:'pp'},
+ pedal_spans=[[i*4,i*4+3.8] for i in range(12)],
+ rh='''
+D4+F#4+B4:1 C#4+E4+A4:1 D4+F#4+B4:2
+E4+G4+C5:3 F4+A4+C5:1
+F4+A4+D5:4
+G4+B4+E5:4
+A4+C5+F5:4
+Bb4+D5+G5:4
+A4+C5+F5:3 Ab4+C5+Eb5:1
+G4+B4+E5:2 F4+A4+D5:2
+F4+Ab4+D5:1.5 Eb4+G4+C5:2.5
+E4+G4+B4:2 F4+Ab4+C5:2
+Ab4+C5+Eb5:2 A4+C5+F5:2
+G4+Bb4+C5+F5:4
+''',lh='''
+B2+D3+F#3:1 C3+E3+G3:1 D3+F#3+A3:2
+C3+E3+G3:3 F3+A3+C4:1
+D3+F3+A3:4
+C3+E3+G3:4
+Bb2+D3+F3:4
+Ab2+C3+Eb3:4
+Bb2+D3+F3:3 C3+Eb3+G3:1
+C3+E3+G3:2 D3+F3+A3:2
+Bb2+D3+Ab3:1.5 C3+Eb3+Bb3:2.5
+E3+G3+B3:2 F3+Ab3+C4:2
+F3+Ab3+C4:2 Bb2+D3+Ab3:2
+Eb3+G3+Bb3:4
+''',sections={1:'p',3:'p',5:'mp',7:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,2),(3,6),(7,10),(11,12)],lower_phrases=[(3,6)],hairpins=[('crescendo',3,5),('diminuendo',7,9)],tempo_changes={},group=2,
+ performance=dict(rubato=[53,48,51,52,53,45,50,49,48,44,38,28],phrase_arcs=[[0,8,2],[8,24,4],[24,40,2],[40,48,-2]],lower_entries=[],pedal_lift=.2,gate=.99,note='Let the outside lines draw apart gently. The wide harmonic space is created by their direction, so the chords need neither force nor a faster pulse.'))
 ]

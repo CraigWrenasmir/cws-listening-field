@@ -191,7 +191,8 @@ More languid, dreamy, freely flowing and jazz-inflected. Use the atmosphere and 
 - Op. 138, Marigold Station — complete locally: 12 bars of 12/8, 116 sounded pitches, 2 inspected score pages, 85.43 seconds. Verified stacked fourths throughout the first eight lower bars, the central upper chord answer, and the final D6/9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 139, Moss Vestibule — complete locally: 12 bars of 3/4, 99 sounded pitches, 2 inspected score pages, 56.87 seconds. Verified every event is a triad, every successive upper chord changes exactly one pitch, and the closing C-major triad is held across the last two bars. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
 - Op. 140, Wisteria Tideglass — complete locally: 16 bars of 4/4, 176 sounded pitches, 2 inspected score pages, 79.08 seconds. Verified three sixteenth-note turns, the four-bar chord-melody return, and the final A-flat major ninth. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
-- Active batch progress: 10 of 20 completed locally. Next composition: Op. 141. Stop after Op. 150.
+- Op. 141, Celandine Atrium — complete locally: 12 bars of 4/4, 121 sounded pitches, 2 inspected score pages, 70.95 seconds. Verified all-chord writing, the four-bar rising upper line against descending basses, and the final E-flat6/9. Both score pages visually inspected. Score/MIDI equivalence, hand reach, dynamics/pedal, ancestry, originality and decoded audio passed.
+- Active batch progress: 11 of 20 completed locally. Next composition: Op. 142. Stop after Op. 150.
 
 ## Growth work to complete during this run
 
