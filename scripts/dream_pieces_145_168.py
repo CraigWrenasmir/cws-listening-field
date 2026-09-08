@@ -838,4 +838,44 @@ Ab2:1.5 Eb3:.5 G3:1 Bb2+F3:2
 C3+G3:5
 ''',sections={1:'p',5:'mp',8:'p',10:'pp'},words={1:'dolce',10:'poco rit.'},slurs=[(1,4),(5,8),(9,11)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',9,10)],tempo_changes={},group=2,
  performance=dict(rubato=[55,56,53,45,56,56,57,50,54,45,30],phrase_arcs=[[0,20,3],[20,40,4],[40,55,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep a sense of dancing through the extra beat. The reversal in the middle should feel like changing direction while still holding the same partner, and the final chord should settle without closing every colour.'))
+,
+dict(op=166,title='Violet Nightferry',key='g',fifths=-2,meter='4/4',bpm=52,
+ description='A chordal night dance above a chromatically descending bass. Larch Footbridge’s D–C–D becomes the top line of close, softly changing chords. G–F-sharp–F–E–E-flat–D in the bass draws the opening inward; a warmer second phrase briefly visits D-flat before recovering G minor.',
+ difficulty='Advanced chord melody, chromatic bass and controlled pedal gaps',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Every RH attack is a chord; bring out its highest note. In the recurring LH figure the bass note and middle dyad are separated by rests, and the final eighth-note pickup is unpedalled. The first six bass entries descend by semitone. Release both hands for the last two beats of bar 6.',
+ parent_opus=158,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['D','C','D']),ancestry=dict(source_opus=158,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['D','C','D'],transposition_semitones=0),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=480),lower_sections={1:'pp',7:'p',10:'pp'},
+ pedal_spans=[[i*4+a,i*4+b] for i in range(14) for a,b in ([(0,1.8)] if i==5 else [(0,3.8)] if i==13 else [(0,1.3),(2,2.8)])],
+ rh='''
+F4+Bb4+D5:1.5 Eb4+G4+C5:.5 F4+Bb4+D5:2
+F4+A4+D5:3 E4+G4+C5:1
+Eb4+G4+C5:2 D4+F4+Bb4:2
+D4+G4+B4:3 E4+G4+C5:1
+Eb4+G4+C5:3 D4+F4+Bb4:1
+C4+F#4+A4:2 R:2
+F4+Bb4+D5:1.5 G4+C5+Eb5:.5 F4+Bb4+D5:2
+Eb4+G4+C5:3 D4+F4+Bb4:1
+Db4+F4+Ab4:2 C4+Eb4+G4:2
+D4+G4+Bb4:1.5 E4+A4+C5:.5 F4+Bb4+D5:2
+Eb4+G4+C5:2 D4+F4+Bb4:2
+C4+E4+A4:3 D4+F#4+A4:1
+D4+G4+Bb4:2 D4+F4+A4:2
+D4+F4+G4+Bb4:4
+''',lh='''
+G2:1.5 R:.5 D3+Bb3:1 R:.5 G2:.5
+F#2:1.5 R:.5 D3+A3:1 R:.5 F#2:.5
+F2:1.5 R:.5 C3+A3:1 R:.5 F2:.5
+E2:1.5 R:.5 B2+G3:1 R:.5 E2:.5
+Eb2:1.5 R:.5 Bb2+G3:1 R:.5 Eb2:.5
+D2+A2:2 R:2
+Bb2:1.5 R:.5 F3+D4:1 R:.5 Bb2:.5
+Ab2:1.5 R:.5 Eb3+C4:1 R:.5 Ab2:.5
+Db3:1.5 R:.5 Ab3:1 R:.5 Db3:.5
+G2:1.5 R:.5 D3+Bb3:1 R:.5 G2:.5
+Eb3:1.5 R:.5 Bb3:1 R:.5 Eb3:.5
+A2:1.5 R:.5 E3+G3:1 R:.5 D3:.5
+G2:1.5 R:.5 D3+A3:1 R:.5 G2:.5
+G2+D3:4
+''',sections={1:'p',7:'mp',10:'p',13:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[(1,6),(7,9),(10,14)],lower_phrases=[],hairpins=[('crescendo',7,8),('diminuendo',11,13)],tempo_changes={},group=2,
+ performance=dict(rubato=[52,52,51,50,49,43,53,52,48,52,50,47,39,27],phrase_arcs=[[0,24,4],[24,36,3],[36,56,2]],lower_entries=[],pedal_lift=.2,gate=.965,note='Keep the chord melody connected in intention while the bass steps through its silences. The chromatic descent should suggest a slow change of light, with the short unpedalled pickups drawing the dance onward.'))
 ]
