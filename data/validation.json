@@ -28850,5 +28850,115 @@
       "sounded_pitches_per_minute": 63.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Rowan Hinterland",
+    "opus": 152,
+    "score_pages": 2,
+    "bars": 12,
+    "pitch_onsets": 72,
+    "audio_seconds": 84.21,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 89,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      },
+      "lh": {
+        "low": 43,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced melodic hand exchange",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The LH sings exact two-octave-lower answers in bars 3\u20134 and 7\u20138 while the RH holds quiet dyads. Bring the lower staff forward for those answers. The melody should keep its character as it moves between registers; the final phrase belongs to both hands."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        4.8
+      ],
+      [
+        5,
+        9.8
+      ],
+      [
+        10,
+        14.8
+      ],
+      [
+        15,
+        19.8
+      ],
+      [
+        20,
+        24.8
+      ],
+      [
+        25,
+        29.8
+      ],
+      [
+        30,
+        34.8
+      ],
+      [
+        35,
+        39.8
+      ],
+      [
+        40,
+        44.8
+      ],
+      [
+        45,
+        49.8
+      ],
+      [
+        50,
+        54.8
+      ],
+      [
+        55,
+        59.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "3": "pp",
+        "5": "mp",
+        "7": "pp",
+        "9": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "3": "mp",
+        "5": "pp",
+        "7": "mp",
+        "9": "p",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 53.1,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -179,6 +179,7 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 149 | Willow Palimpsest | 4/4 | 211 | [Score](pieces/CWS_Op_149_Willow_Palimpsest/CWS_Op_149_Willow_Palimpsest.pdf) | [MP3](pieces/CWS_Op_149_Willow_Palimpsest/CWS_Op_149_Willow_Palimpsest.mp3) |
 | CWS Op. 150 | Camellia Solstice | 4/4 | 194 | [Score](pieces/CWS_Op_150_Camellia_Solstice/CWS_Op_150_Camellia_Solstice.pdf) | [MP3](pieces/CWS_Op_150_Camellia_Solstice/CWS_Op_150_Camellia_Solstice.mp3) |
 | CWS Op. 151 | Heather Soundings | 3/4 | 77 | [Score](pieces/CWS_Op_151_Heather_Soundings/CWS_Op_151_Heather_Soundings.pdf) | [MP3](pieces/CWS_Op_151_Heather_Soundings/CWS_Op_151_Heather_Soundings.mp3) |
+| CWS Op. 152 | Rowan Hinterland | 5/4 | 72 | [Score](pieces/CWS_Op_152_Rowan_Hinterland/CWS_Op_152_Rowan_Hinterland.pdf) | [MP3](pieces/CWS_Op_152_Rowan_Hinterland/CWS_Op_152_Rowan_Hinterland.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

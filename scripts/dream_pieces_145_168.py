@@ -270,4 +270,40 @@ B2+F#3:3
 E3+B3:3
 ''',sections={1:'p',6:'mp',11:'p',16:'pp'},words={1:'cantabile',16:'poco rit.'},slurs=[(1,5),(6,10),(11,15),(16,17)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',14,16)],tempo_changes={},group=2,
  performance=dict(rubato=[49,48,50,47,42,49,51,46,47,39,47,45,48,49,44,36,26],phrase_arcs=[[0,15,3],[15,30,3],[30,51,2]],lower_entries=[],pedal_lift=.2,gate=.985,note='Sing the melody with the unforced pace of a remembered song. The open fifths remain quieter, and the raised sixth offers a little warmth without turning the piece into a major-key resolution.'))
+,
+dict(op=152,title='Rowan Hinterland',key='g',fifths=-2,meter='5/4',bpm=56,
+ description='A song passed between the hands across a broad five-beat span. Heather Soundings’s E–D–E becomes G–F–G; the lower hand repeats the opening two-bar phrase two octaves beneath its first appearance. A second, more searching phrase receives the same answer before the two voices share a quiet close.',
+ difficulty='Intermediate to advanced melodic hand exchange',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The LH sings exact two-octave-lower answers in bars 3–4 and 7–8 while the RH holds quiet dyads. Bring the lower staff forward for those answers. The melody should keep its character as it moves between registers; the final phrase belongs to both hands.',
+ parent_opus=151,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['G','F','G']),ancestry=dict(source_opus=151,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['E','D','E'],transposition_semitones=3),
+ system_starts=[1,3,5,7,9,11],page_starts=[7],engraving=dict(spacing_system=14,pedal_offset_y=460),lower_sections={1:'pp',3:'mp',5:'pp',7:'mp',9:'p',11:'pp'},
+ pedal_spans=[[i*5,i*5+4.8] for i in range(12)],
+ rh='''
+G5:2 F5:1 G5:2
+D5:3 Bb4:2
+Bb4+D5:5
+A4+C5:5
+A5:1 Bb5:.5 D6:.5 F6:2 Eb6:1
+D6:2 C6:1 Bb5:2
+D5+G5:5
+F4+A4:5
+G5:1 F5:.5 Eb5:.5 D5:3
+C5:2 Bb4:1 A4:2
+Bb4:1 D5:1 C5:1 A4:2
+G4+Bb4+D5:5
+''',lh='''
+G2+D3:5
+Bb2+F3:3 D3+A3:2
+G3:2 F3:1 G3:2
+D3:3 Bb2:2
+Eb3+Bb3:5
+C3+G3:5
+A3:1 Bb3:.5 D4:.5 F4:2 Eb4:1
+D4:2 C4:1 Bb3:2
+Eb3+Bb3:5
+F3+C4:2 Eb3+Bb3:1 D3+A3:2
+G3:1 F3:1 Eb3:1 D3:2
+G2+D3:5
+''',sections={1:'p',3:'pp',5:'mp',7:'pp',9:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,2),(5,6),(9,12)],lower_phrases=[(3,4),(7,8),(11,12)],hairpins=[('crescendo',5,6),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,50,54,48,58,53,55,49,52,48,40,28],phrase_arcs=[[0,10,3],[10,20,2],[20,30,4],[30,40,3],[40,60,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Let the lower answers sound like another person carrying the same song. The accompaniment recedes as the melody changes hands.'))
 ]
