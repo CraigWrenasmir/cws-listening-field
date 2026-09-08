@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import vm from 'node:vm';
 import {parseHTML,DOMParser} from 'linkedom';
+import {createFavourites,updateLeaf,mountFavourites} from '../src/favourites.js';
 import {buildListeningPaths} from '../src/listening-paths.js';
 const root=new URL('../',import.meta.url);
 const html=await readFile(new URL('index.html',root),'utf8'),source=await readFile(new URL('src/app.js',root),'utf8');
@@ -28,8 +29,9 @@ const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#96543
 let observer;
 class ResizeObserver{constructor(callback){this.callback=callback;observer=this;}observe(){queueMicrotask(()=>this.callback());}}
 const sandbox={document,window,DOMParser,location,history,ResizeObserver,devicePixelRatio:1,console:{error:e=>errors.push(e.message)},matchMedia:()=>({matches:true,addEventListener(){}}),getComputedStyle:el=>({color:el.style.color,getPropertyValue:key=>colours[key]}),requestAnimationFrame:fn=>{frames.set(++nextFrame,fn);return nextFrame;},fetch:async url=>{try{const body=await readFile(new URL(url,root),'utf8');return {ok:true,json:async()=>JSON.parse(body),text:async()=>body};}catch{return {ok:false};}}};
-sandbox.buildListeningPaths=buildListeningPaths;
-vm.createContext(sandbox);vm.runInContext(source.replace("import {buildListeningPaths} from './listening-paths.js';",''),sandbox);
+sandbox.buildListeningPaths=buildListeningPaths;Object.assign(sandbox,{createFavourites,updateLeaf,mountFavourites});
+const favouritesDisk=new Map();Object.defineProperty(window,'localStorage',{configurable:true,value:{getItem:key=>favouritesDisk.get(key)??null,setItem:(key,value)=>favouritesDisk.set(key,value)}});
+vm.createContext(sandbox);vm.runInContext(source.replace("import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';",'').replace("import {buildListeningPaths} from './listening-paths.js';",''),sandbox);
 const settle=async()=>{for(let i=0;i<8;i++)await new Promise(resolve=>setImmediate(resolve));};
 const until=async condition=>{for(let i=0;i<100;i++){if(condition())return;await new Promise(resolve=>setTimeout(resolve,10));}throw new Error('Timed out waiting for async UI');};
 const tick=()=>{const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn());};
@@ -51,6 +53,7 @@ assert.equal(document.querySelectorAll('#lf-overview a').length,1,'Entrance must
 assert.equal(document.querySelectorAll('#lf-overview p, #lf-overview button, #lf-overview figcaption').length,0,'Entrance must have no explanation or extra controls');
 if(process.argv.includes('--routing-only')){assert.deepEqual(errors,[]);console.log('Initial route passed: '+(location.hash||'overview'));process.exit(0);}
 click('[data-work="1"]');click('#lf-play');await settle();tick();assert(!home());assert(!audio.paused);assert(!document.querySelector('#lf-header').hidden);
+click('#lf-save');assert.equal(document.querySelector('#lf-save').getAttribute('aria-pressed'),'true');assert(!audio.paused,'Saving a favourite must not interrupt music');assert(document.querySelector('[data-work="1"]').classList.contains('is-saved'));assert(document.querySelector('#lf-favourites [data-saved-op="2"]'));assert.deepEqual(JSON.parse([...favouritesDisk.values()][0]),[2]);click('#lf-save');assert.equal(document.querySelector('#lf-save').getAttribute('aria-pressed'),'false');assert.equal(document.querySelectorAll('#lf-favourites li').length,0);
 click('#lf-home');tick();assert(home());assert(audio.paused);assert.equal(location.hash,'#overview');assert(document.querySelector('#lf-header').hidden);assert(document.querySelector('#lf-colophon').hidden);
 time=duration;ended=true;audio.dispatchEvent(new window.Event('ended'));assert(home(),'An old ended event must not leave the entrance');
 route('#'+data[1].slug);await settle();tick();assert(!home());assert.equal(document.querySelector('#lf-title').textContent,'Velvet Estuary');assert(audio.paused);

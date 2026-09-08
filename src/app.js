@@ -1,3 +1,4 @@
+import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';
 import {buildListeningPaths} from './listening-paths.js';
 (async function(){
 const root=document.getElementById('cws-listening-field');
@@ -6,6 +7,11 @@ if(!response.ok)throw new Error('Catalogue unavailable');
 const data=await response.json();
 const q=(s)=>root.querySelector(s),canvas=q('#lf-canvas'),ctx=canvas.getContext('2d'),audio=q('#lf-audio');
 const state={overview:true,selected:Math.min(1,data.length-1),kinship:false,score:false,playlist:false,density:17,relief:1.0};
+const favourites=createFavourites(window,data);
+mountFavourites(q('#lf-favourites'),data,favourites,p=>choose(data.indexOf(p)));
+function refreshFavourites(){updateLeaf(q('#lf-save'),data[state.selected],favourites);root.querySelectorAll('[data-work]').forEach(el=>el.classList.toggle('is-saved',favourites.has(data[Number(el.dataset.work)].op)));}
+favourites.subscribe(refreshFavourites);
+q('#lf-save').addEventListener('click',()=>{const p=data[state.selected];favourites.toggle(p.op);q('#lf-announcement').textContent=p.title+(favourites.has(p.op)?' saved to favourites.':' removed from favourites.');});
 let w=0,h=0,frame=0,camera=1,zoom=0,drag=null,lastActive=[];
 const norm=q=>{const n=Math.hypot(...q);return q.map(x=>x/n);};
 function multiply(a,b){const [x,y,z,s]=a,[u,v,w,t]=b;return norm([s*u+x*t+y*w-z*v,s*v-x*w+y*t+z*u,s*w+x*v-y*u+z*t,s*t-x*u-y*v-z*w]);}
@@ -259,7 +265,7 @@ function choose(index,keepPlaylist=false,writeHistory=true){
  q('#lf-overview').hidden=true;q('#lf-piece').hidden=false;q('#lf-header').hidden=false;q('#lf-colophon').hidden=false;root.classList.remove('is-entrance');q('#lf-overview-link').removeAttribute('aria-current');closeIndex();
  playbackRequest++;playbackWanted=false;state.playlist=keepPlaylist;
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
- refreshFamily();
+ refreshFamily();refreshFavourites();
  q('#lf-title').textContent=names[index];q('#lf-opus').textContent='CWS Op. '+data[index].op;q('#lf-stamp').textContent=data[index].stamp;
  q('#lf-inner-legend').hidden=!trackKinds[index].includes('inner');
  q('#lf-tenor-legend').hidden=!trackKinds[index].includes('tenor');
@@ -326,6 +332,7 @@ data.forEach((p,i)=>{
  const op=document.createElement('span');op.textContent=String(p.op).padStart(2,'0');const title=document.createElement('span');title.className='lf-index-title';title.textContent=p.title;const duration=document.createElement('span');duration.textContent=formatTime(p.duration);
  button.append(op,title,duration);q('#lf-index').append(button);
 });
+refreshFavourites();
 q('#lf-work-count').textContent=String(data.length).padStart(2,'0')+' WORKS';
 root.querySelectorAll('[data-work]').forEach(el=>el.addEventListener('click',()=>{choose(Number(el.dataset.work));q('#lf-index').hidden=true;q('#lf-index-toggle').setAttribute('aria-expanded','false');}));
 function trackball(e){

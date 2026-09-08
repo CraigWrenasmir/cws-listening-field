@@ -1,7 +1,10 @@
+import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';
 import {layoutKinship} from './kinship-layout.js?v=3';
 
 export function mountKinship(root,data){
  const document=root.ownerDocument,q=selector=>root.querySelector(selector),svg=q('#kf-map');
+ const favourites=createFavourites(document.defaultView,data);
+ mountFavourites(q('#kf-favourites'),data,favourites);
  const layout=layoutKinship(data),byOp=new Map(data.map(p=>[p.op,p]));
  let portrait=svg.getBoundingClientRect().height>svg.getBoundingClientRect().width;
  const points=new Map(layout.nodes.map(p=>[p.op,portrait?{...p,x:p.y,y:p.x}:{...p}]));
@@ -32,6 +35,7 @@ export function mountKinship(root,data){
   while(ancestor.parent!=null){lineage.add(ancestor.op);ancestor=byOp.get(ancestor.parent);}
   for(const [child,path] of edges)path.classList.toggle('is-lineage',lineage.has(child));
   const link=q('#kf-selected');link.replaceChildren();const number=document.createElement('span');number.textContent='CWS Op. '+piece.op;link.append(number,document.createTextNode(piece.title+' ↗'));link.setAttribute('href','index.html#'+piece.slug);link.hidden=false;
+  updateLeaf(q('#kf-save'),piece,favourites);q('#kf-save').hidden=false;
   if(focus){
    if(point.x<view.x+28||point.x>view.x+view.width-28||point.y<view.y+28||point.y>view.y+view.height-28){view.x=point.x-view.width/2;view.y=point.y-view.height/2;updateView();}
    anchor.focus({preventScroll:true});q('#kf-status').textContent='CWS Op. '+piece.op+', '+piece.title;
@@ -100,7 +104,10 @@ export function mountKinship(root,data){
   for(const {source,target} of layout.links){const a=points.get(source),b=points.get(target),dx=b.x-a.x,dy=b.y-a.y;edges.get(target).setAttribute('d',`M${a.x},${a.y} Q${(a.x+b.x)/2-dy*.07},${(a.y+b.y)/2+dx*.07} ${b.x},${b.y}`);}
   fit();
  }).observe(svg);
- fit();select(data[0].op);
+ function refreshFavourites(){for(const [op,anchor] of anchors){anchor.classList.toggle('is-saved',favourites.has(op));const piece=byOp.get(op),parent=byOp.get(piece.parent);anchor.setAttribute('aria-label','CWS Op. '+op+', '+piece.title+(favourites.has(op)?'; saved to favourites':'')+(parent?'; musical parent: '+parent.title:'; origin of the collection'));}if(selected!==null)updateLeaf(q('#kf-save'),byOp.get(selected),favourites);}
+ favourites.subscribe(refreshFavourites);
+ q('#kf-save').addEventListener('click',()=>{if(selected===null)return;favourites.toggle(selected);q('#kf-status').textContent=byOp.get(selected).title+(favourites.has(selected)?' saved to favourites.':' removed from favourites.');});
+ refreshFavourites();fit();select(data[0].op);
 }
 
 export async function startKinship(document,fetcher=fetch){
