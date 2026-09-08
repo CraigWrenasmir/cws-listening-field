@@ -29417,5 +29417,115 @@
       "sounded_pitches_per_minute": 66.2,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Heather Afterimage",
+    "opus": 157,
+    "score_pages": 1,
+    "bars": 13,
+    "pitch_onsets": 65,
+    "audio_seconds": 79.7,
+    "hands": {
+      "rh": {
+        "low": 67,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate melodic recall and measured phrase gaps",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The rising C\u2013D\u2013E begins bars 1, 6 and 10. In bar 10 a quarter rest separates C from D; bar 11 also interrupts the continuation. Keep these rests exact without making the returning tune sound fragmented in intention. The accompaniment remains soft and open."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        3.8
+      ],
+      [
+        4,
+        7.8
+      ],
+      [
+        8,
+        11.8
+      ],
+      [
+        12,
+        15.8
+      ],
+      [
+        16,
+        18.8
+      ],
+      [
+        20,
+        23.8
+      ],
+      [
+        24,
+        27.8
+      ],
+      [
+        28,
+        31.8
+      ],
+      [
+        32,
+        34.8
+      ],
+      [
+        36,
+        39.8
+      ],
+      [
+        40,
+        43.8
+      ],
+      [
+        44,
+        47.8
+      ],
+      [
+        48,
+        51.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "6": "mp",
+        "9": "pp",
+        "10": "p",
+        "12": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "6": "p",
+        "10": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 50.7,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

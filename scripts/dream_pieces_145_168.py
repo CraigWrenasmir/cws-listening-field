@@ -468,4 +468,42 @@ C3+G3:3
 F3+C4:3
 ''',sections={1:'p',5:'mp',8:'pp',12:'p',16:'pp'},words={1:'dolce',17:'poco rit.'},slurs=[(1,4),(5,11),(12,18)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',14,17)],tempo_changes={},group=2,
  performance=dict(rubato=[52,50,48,41,52,54,49,46,48,44,38,51,47,50,45,43,36,25],phrase_arcs=[[0,12,2],[12,33,3],[33,54,2]],lower_entries=[],pedal_lift=.2,gate=.985,note='The brightness should feel fragile and warm. Keep the melody simple, letting the changing modal colours arrive through the harmony rather than a stronger attack.'))
+,
+dict(op=157,title='Heather Afterimage',key='a',fifths=0,meter='4/4',bpm=50,
+ description='A remembered song returns with small gaps in it. Heather Soundings’s rising G–A–B becomes C–D–E above A minor. Its second appearance enters a distant flat-key region; the last return inserts silence between the familiar notes, leaving the listener to carry the phrase across the gaps.',
+ difficulty='Intermediate melodic recall and measured phrase gaps',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The rising C–D–E begins bars 1, 6 and 10. In bar 10 a quarter rest separates C from D; bar 11 also interrupts the continuation. Keep these rests exact without making the returning tune sound fragmented in intention. The accompaniment remains soft and open.',
+ parent_opus=151,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['C','D','E']),ancestry=dict(source_opus=151,source_hand='rh',source_start_beat=6,source_end_beat=9,source_pitches=['G','A','B'],transposition_semitones=5),
+ system_starts=[1,4,6,9,11],page_starts=[],engraving=dict(spacing_system=12,pedal_offset_y=400),lower_sections={1:'pp',6:'p',10:'pp'},
+ pedal_spans=[[i*4,i*4+(2.8 if i in [4,8] else 3.8)] for i in range(13)],
+ rh='''
+C5:1 D5:1 E5:2
+G5:3 E5:1
+D5:1 C5:1 A4:2
+B4:1 D5:.5 E5:.5 G5:2
+E5:3 R:1
+C5:1 D5:1 E5:2
+F5:2 Eb5:1 C5:1
+Bb4:1 C5:1 Db5:2
+C5:3 R:1
+C5:1 R:1 D5:1 E5:1
+G5:2 R:1 E5:1
+D5:1 C5:1 A4:2
+G4+B4+C5+E5:4
+''',lh='''
+A2:2 E3:2
+C3+G3:4
+F3+C4:2 E3+B3:2
+G2+D3:4
+A2+E3:3 R:1
+F3+C4:4
+Ab2+Eb3:4
+Db3+Ab3:4
+Ab2+Eb3:3 R:1
+A2+E3:4
+G2+D3:4
+F3+C4:2 E3+B3:2
+A2+E3:4
+''',sections={1:'p',6:'mp',9:'pp',10:'p',12:'pp'},words={1:'cantabile',12:'poco rit.'},slurs=[(1,5),(6,9),(10,13)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',10,12)],tempo_changes={},group=2,
+ performance=dict(rubato=[50,48,49,52,42,51,49,46,39,47,44,37,26],phrase_arcs=[[0,20,3],[20,36,3],[36,52,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep the shape of the remembered tune through its silences. The flat-key middle should feel more distant, and the final gaps should soften the phrase rather than break it.'))
 ]
