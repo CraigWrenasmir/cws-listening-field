@@ -30313,5 +30313,123 @@
       "sounded_pitches_per_minute": 86.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Saffron Promenade",
+    "opus": 164,
+    "score_pages": 1,
+    "bars": 15,
+    "pitch_onsets": 102,
+    "audio_seconds": 53.04,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 77,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 6
+      },
+      "lh": {
+        "low": 46,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 9,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate compound lilt and changing minor-major colour",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The LH often divides each dotted-quarter beat into a quarter and an eighth. Let that gentle lilt support the longer upper line. Both hands rest for the second half of bars 4 and 9. Distinguish D-flat in the returning phrase from D-natural in the middle and final chord."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        10.3
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        25.3
+      ],
+      [
+        27,
+        29.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        38.8
+      ],
+      [
+        39,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "9": "pp",
+        "10": "p",
+        "14": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "10": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 12,
+      "sounded_pitches_per_minute": 121.8,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

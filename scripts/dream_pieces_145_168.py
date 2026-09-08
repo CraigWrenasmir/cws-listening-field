@@ -762,4 +762,46 @@ C3:1.5 E3+G3:1.5 D3+G3:1
 E3+B3:4
 ''',sections={1:'p',5:'mp',8:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,9),(10,12)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',10,11)],tempo_changes={},group=2,
  performance=dict(rubato=[55,55,53,45,56,57,54,52,48,54,45,30],phrase_arcs=[[0,16,3],[16,36,4],[36,48,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='The unequal bass steps should feel like a quiet current under the song. Let the RH phrase breathe across them, with a little more space at the flat-key turn and the final return.'))
+,
+dict(op=164,title='Saffron Promenade',key='f',fifths=-4,meter='6/8',bpm=63,
+ description='A slow rocking dance in F minor, with long-short steps inside each compound beat. Willow Homeward’s F–A–C becomes A-flat–C–E-flat. The middle opens unexpectedly into major colour; the returning minor melody keeps a little of that light in its final added sixth.',
+ difficulty='Intermediate compound lilt and changing minor-major colour',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The LH often divides each dotted-quarter beat into a quarter and an eighth. Let that gentle lilt support the longer upper line. Both hands rest for the second half of bars 4 and 9. Distinguish D-flat in the returning phrase from D-natural in the middle and final chord.',
+ parent_opus=160,motif=dict(hand='rh',start_beat=0,end_beat=2,pitches=['Ab','C','Eb']),ancestry=dict(source_opus=160,source_hand='rh',source_start_beat=36,source_end_beat=39,source_pitches=['F','A','C'],transposition_semitones=3),
+ system_starts=[1,4,7,10,13],page_starts=[],engraving=dict(spacing_system=12,pedal_offset_y=470),lower_sections={1:'pp',5:'p',10:'pp'},
+ pedal_spans=[[i*3,i*3+(1.3 if i in [3,8] else 2.8)] for i in range(15)],
+ rh='''
+Ab4:.5 C5:.5 Eb5:1 C5:1
+Eb5:1.5 C5:1 Bb4:.5
+Ab4:1 G4:.5 F4:1 G4:.5
+Ab4:1.5 R:1.5
+A4:1 C5:.5 E5:1 D5:.5
+C5:1.5 A4:1 G4:.5
+B4:1 D5:.5 F5:1 E5:.5
+D5:1.5 C5:1 A4:.5
+G4:1.5 R:1.5
+Ab4:.5 C5:.5 Eb5:1 C5:1
+Eb5:1.5 F5:1 Eb5:.5
+Db5:1 C5:.5 Bb4:1 Ab4:.5
+G4:1 Bb4:.5 C5:1 Bb4:.5
+Ab4:1.5 G4:1 F4:.5
+Ab4+C5+D5:3
+''',lh='''
+F3:1 C4:.5 Ab3:1 Ab3:.5
+Db3:1 Ab3:.5 F3:1 F3:.5
+Bb2:1 F3:.5 Db3:1 F3:.5
+C3+G3:1.5 R:1.5
+F3:1 C4:.5 A3:1 A3:.5
+D3:1 A3:.5 F3:1 A3:.5
+G3:1 D4:.5 B3:1 D4:.5
+A3:1 E4:.5 C4:1 G3:.5
+C3+G3:1.5 R:1.5
+F3:1 C4:.5 Ab3:1 C4:.5
+Ab3:1 Eb4:.5 C4:1 Ab3:.5
+Db3:1 Ab3:.5 F3:1 Ab3:.5
+Eb3:1 Bb3:.5 G3:1 Bb3:.5
+Db3:1 Ab3:.5 F3:1 Ab3:.5
+F3+C4:3
+''',sections={1:'p',5:'mp',9:'pp',10:'p',14:'pp'},words={1:'dolce',14:'poco rit.'},slurs=[(1,4),(5,9),(10,15)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',12,14)],tempo_changes={},group=2,
+ performance=dict(rubato=[63,64,62,53,65,65,66,62,51,63,65,62,59,49,32],phrase_arcs=[[0,12,3],[12,27,4],[27,45,2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep the two rocking beats broad enough for the short notes to settle gently into them. The major passage is a passing clearing; retain its warmth when the minor tune returns.'))
 ]
