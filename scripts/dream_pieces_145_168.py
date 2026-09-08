@@ -420,4 +420,52 @@ C#3+G#3:2 B2+F#3:1 A2+E3:2
 F#2+C#3:5
 ''',sections={1:'p',6:'mp',9:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,5),(6,8),(9,12)],lower_phrases=[(1,3)],hairpins=[('crescendo',6,7),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[55,52,56,51,43,54,57,48,52,49,40,28],phrase_arcs=[[0,25,3],[25,40,4],[40,60,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='The opening is one song in two registers. Keep its low doubling gentle, and allow the later independence to arrive gradually rather than as a change of character.'))
+,
+dict(op=156,title='Alder Snowmelt',key='F',fifths=-1,meter='3/4',bpm=52,
+ description='A brighter elegy in F, with a raised fourth and a passing minor shadow. Camellia Solstice’s A–C–D–C becomes E–G–A–G, carried by a single singing line. The middle briefly folds into F minor and D-flat before the opening returns with a warmer lower third. The final major seventh remains gently unresolved.',
+ difficulty='Intermediate modal colour and long lyrical arcs',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Shape phrases of four, seven and seven bars. The two full-hand rests at bars 4 and 11 separate them. Distinguish the B-natural colour from the later B-flat lower harmony, and allow the borrowed A-flat passage to darken briefly without slowing every note.',
+ parent_opus=150,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['E','G','A','G']),ancestry=dict(source_opus=150,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['A','C','D','C'],transposition_semitones=-5),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'pp',5:'p',8:'pp',12:'p',16:'pp'},
+ pedal_spans=[[i*3,i*3+(1.8 if i in [3,10] else 2.8)] for i in range(18)],
+ rh='''
+E5:1 G5:.5 A5:1 G5:.5
+E5:2 D5:1
+C5:1 A4:1 G4:1
+E4:2 R:1
+G4:1 B4:1 D5:1
+E5:2 D5:1
+C5:1 B4:.5 A4:.5 G4:1
+Ab4:2 C5:1
+Eb5:1 Db5:.5 C5:.5 Ab4:1
+G4:2 F4:1
+E4:2 R:1
+E5:1 G5:.5 A5:1 G5:.5
+D5:2 C5:1
+B4:1 D5:.5 E5:1 D5:.5
+C5:2 A4:1
+G4:1 A4:1 C5:1
+B4:1 A4:1 G4:1
+F4+A4+E5:3
+''',lh='''
+F3+C4:3
+G3+B3:3
+A3+E4:3
+F3+C4:2 R:1
+G3+B3:3
+A3+E4:3
+F3+C4:3
+F3+C4:3
+Db3+Ab3:3
+C3+G3:3
+C3+G3:2 R:1
+F3+A3:3
+Bb2+F3:3
+G3+B3:3
+F3+C4:3
+A2+E3:3
+C3+G3:3
+F3+C4:3
+''',sections={1:'p',5:'mp',8:'pp',12:'p',16:'pp'},words={1:'dolce',17:'poco rit.'},slurs=[(1,4),(5,11),(12,18)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',14,17)],tempo_changes={},group=2,
+ performance=dict(rubato=[52,50,48,41,52,54,49,46,48,44,38,51,47,50,45,43,36,25],phrase_arcs=[[0,12,2],[12,33,3],[33,54,2]],lower_entries=[],pedal_lift=.2,gate=.985,note='The brightness should feel fragile and warm. Keep the melody simple, letting the changing modal colours arrive through the harmony rather than a stronger attack.'))
 ]
