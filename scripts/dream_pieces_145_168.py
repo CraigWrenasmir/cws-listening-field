@@ -684,4 +684,46 @@ D3+A3:2~
 D3+A3:2
 ''',sections={1:'p',7:'mp',12:'pp',13:'p',19:'pp'},words={1:'dolce',20:'poco rit.'},slurs=[(1,6),(7,12),(13,18),(19,22)],lower_phrases=[],hairpins=[('crescendo',7,9),('diminuendo',17,20)],tempo_changes={},group=2,
  performance=dict(rubato=[54,54,55,53,51,46,54,54,52,50,49,43,54,55,53,51,50,49,45,39,31,26],phrase_arcs=[[0,12,3],[12,24,4],[24,36,3],[36,44,-2]],lower_entries=[],pedal_lift=.2,gate=.975,note='The bass has a small spring in its dotted rhythm. Keep its weight low enough for the long upper notes to seem suspended, and let the last four bars gradually lose their urge to dance.'))
+,
+dict(op=162,title='Juniper Arcade',key='a',fifths=0,meter='3/4',bpm=56,
+ description='A hesitant night waltz: a bass note, a small chord, a gap, and a late response. Cypress Afterhours’s D–C–D becomes A–G–A, now surrounded by warm sevenths and a little Dorian light. Phrases of four, five and six bars let the melody stretch beyond the accompaniment’s regular steps.',
+ difficulty='Intermediate to advanced delayed waltz responses and sustained melody',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The eighth rest in the recurring LH figure delays its second chord response. Keep that gap distinct within the quiet pedal resonance. The first E in bar 3 continues into bar 4; do not repeat it. F-sharp in bar 7 briefly brightens the A-minor setting.',
+ parent_opus=161,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['A','G','A']),ancestry=dict(source_opus=161,source_hand='rh',source_start_beat=0,source_end_beat=2,source_pitches=['D','C','D'],transposition_semitones=7),
+ system_starts=[1,4,7,10,13],page_starts=[],engraving=dict(spacing_system=12,pedal_offset_y=450),lower_sections={1:'pp',5:'p',10:'pp'},
+ pedal_spans=[[i*3,i*3+(1.8 if i in [3,8] else 2.8)] for i in range(15)],
+ rh='''
+A4:.5 G4:.5 A4:2
+C5:1 B4:.5 A4:1.5
+E5:3~
+E5:1 D5:1 R:1
+C5:.5 B4:.5 D5:2
+E5:2 G5:1
+F#5:1 E5:1 D5:1
+C5:1 A4:1 G4:1
+B4:2 R:1
+A4:.5 G4:.5 A4:2
+C5:1 D5:.5 E5:1.5
+G5:2 E5:1
+D5:1 C5:1 B4:1
+A4:1 G4:1 E4:1
+G4+B4+C5+E5:3
+''',lh='''
+A2:1 E3+G3:.5 R:.5 C4+E4:1
+G2:1 D3+F3:.5 R:.5 B3+D4:1
+F3:1 A3+C4:.5 R:.5 A3+C4:1
+E3+B3:2 R:1
+F3:1 A3+C4:.5 R:.5 A3+C4:1
+C3:1 G3+B3:.5 R:.5 G3+B3:1
+D3:1 A3+C4:.5 R:.5 A3+C4:1
+F3:1 A3+C4:2
+E3+B3:2 R:1
+A2:1 E3+G3:.5 R:.5 C4+E4:1
+F3:1 A3+C4:.5 R:.5 A3+C4:1
+C3:1 G3+B3:.5 R:.5 G3+B3:1
+G2:1 D3+F3:.5 R:.5 G3+B3:1
+F3:1 A3+C4:2
+A2+E3:3
+''',sections={1:'p',5:'mp',9:'pp',10:'p',14:'pp'},words={1:'dolce',14:'poco rit.'},slurs=[(1,4),(5,9),(10,15)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',12,14)],tempo_changes={},group=2,
+ performance=dict(rubato=[56,56,57,48,56,58,57,54,46,56,57,55,51,43,28],phrase_arcs=[[0,12,3],[12,27,4],[27,45,2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Give the little late chords a feeling of leaning towards the next step. The tune stays unhurried above them, gathering warmth through the middle phrase and relaxing into the final ninth.'))
 ]
