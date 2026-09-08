@@ -348,4 +348,40 @@ A2+E3:3
 D3+A3:3
 ''',sections={1:'p',6:'mp',9:'pp',11:'p',14:'pp'},words={1:'dolce',14:'poco rit.'},slurs=[(1,5),(6,9),(10,15)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',12,14)],tempo_changes={},group=2,
  performance=dict(rubato=[61,58,62,57,51,61,64,58,49,56,59,54,56,45,30],phrase_arcs=[[0,15,3],[15,27,3],[27,45,2]],lower_entries=[],pedal_lift=.2,gate=.98,note='A soft rocking motion supports the song without making it hurry. The unaccompanied entry should feel like a new breath, and the borrowed sixth should pass naturally.'))
+,
+dict(op=154,title='Sorrel Barrow',key='c',fifths=-3,meter='4/4',bpm=48,
+ description='A low song beneath distant bell notes. Rowan Hinterland’s G–F–G becomes C–B-flat–C in the left hand. The upper hand uses only the three notes of C minor, leaving the lower melody to change their meaning. A shared silence divides the opening phrase from the higher, more searching continuation.',
+ difficulty='Intermediate lower melody and quiet bell-note balance',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The LH is the singing voice. Keep the RH very soft; all its pitches belong to C, E-flat and G. Both hands release for the last beat of bar 4. Do not let the bell notes obscure the stepwise lower phrase or its longer held notes.',
+ parent_opus=152,motif=dict(hand='lh',start_beat=0,end_beat=4,pitches=['C','Bb','C']),ancestry=dict(source_opus=152,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['G','F','G'],transposition_semitones=5),
+ system_starts=[1,4,7,10],page_starts=[],engraving=dict(spacing_system=14,pedal_offset_y=460),lower_sections={1:'p',5:'mp',9:'p',11:'pp'},
+ pedal_spans=[[i*4,i*4+(2.8 if i==3 else 3.8)] for i in range(12)],
+ rh='''
+G5:2 Eb5:2
+C5:4
+Eb5:2 G5:2
+C5:3 R:1
+G5:2 Eb5:2
+C5:4
+G5:1 R:1 Eb5:2
+C5:4
+Eb5:2 G5:2
+G5:2 Eb5:2
+C5:4
+G4+C5+Eb5:4
+''',lh='''
+C4:1.5 Bb3:.5 C4:2
+Ab3:2 G3:1 Eb3:1
+F3:1 G3:1 Bb3:2
+C4:3 R:1
+D4:1 Eb4:1 F4:2
+Eb4:1 D4:.5 C4:.5 Bb3:2
+Ab3:2 G3:2
+F3:1 G3:.5 Ab3:.5 Bb3:2
+C4:3 Bb3:1
+Ab3:2 G3:1 F3:1
+Eb3:1 G3:.5 Bb3:.5 C4:2
+C3+G3:4
+''',sections={1:'pp',5:'pp',9:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[],tempo_changes={},group=2,
+ performance=dict(rubato=[48,46,49,40,49,48,44,47,44,42,35,25],phrase_arcs=[[0,16,3],[16,32,3],[32,48,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='The lower melody carries the human voice; the upper triad tones remain distant. Let the shared rest clear the first phrase before the melody climbs.'))
 ]

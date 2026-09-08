@@ -29074,5 +29074,110 @@
       "sounded_pitches_per_minute": 82.3,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Sorrel Barrow",
+    "opus": 154,
+    "score_pages": 1,
+    "bars": 12,
+    "pitch_onsets": 54,
+    "audio_seconds": 76.87,
+    "hands": {
+      "rh": {
+        "low": 67,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 8
+      },
+      "lh": {
+        "low": 48,
+        "high": 65,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate lower melody and quiet bell-note balance",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The LH is the singing voice. Keep the RH very soft; all its pitches belong to C, E-flat and G. Both hands release for the last beat of bar 4. Do not let the bell notes obscure the stepwise lower phrase or its longer held notes."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        3.8
+      ],
+      [
+        4,
+        7.8
+      ],
+      [
+        8,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        16,
+        19.8
+      ],
+      [
+        20,
+        23.8
+      ],
+      [
+        24,
+        27.8
+      ],
+      [
+        28,
+        31.8
+      ],
+      [
+        32,
+        35.8
+      ],
+      [
+        36,
+        39.8
+      ],
+      [
+        40,
+        43.8
+      ],
+      [
+        44,
+        47.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "pp",
+        "5": "pp",
+        "9": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "5": "mp",
+        "9": "p",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 3,
+      "sounded_pitches_per_minute": 43.7,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
