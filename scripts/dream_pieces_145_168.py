@@ -546,4 +546,40 @@ G4:2 F#4:1 E4:1
 A3+E4:4
 ''',sections={1:'p',5:'mp',8:'p',12:'mp',14:'pp'},words={1:'cantabile',13:'poco rit.'},slurs=[(1,4),(5,7),(8,11),(12,14)],lower_phrases=[(2,5),(6,8),(9,12),(13,14)],hairpins=[],tempo_changes={},group=2,
  performance=dict(rubato=[51,51,52,48,54,52,46,50,51,52,47,52,40,28],phrase_arcs=[[0,16,3],[16,28,3],[28,44,3],[44,56,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='Neither line becomes accompaniment when the other is singing. Keep each phrase connected through the other hand’s arrivals, letting the shared closing harmony emerge from the two paths.'))
+,
+dict(op=159,title='Bracken Lowlight',key='b',fifths=2,meter='4/4',bpm=50,
+ description='A song in soft sixths moves above a descending bass. Heather Soundings’s E–D–E becomes B–A–B. The paired melody opens into an unexpected flat-key middle before finding B minor again, like familiar ground briefly seen in unfamiliar light.',
+ difficulty='Intermediate legato sixths and changing harmonic colour',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The RH dyads remain sixths through bar 11; their upper notes carry the tune. Let the descending B–A–G–F-sharp bass in the first four bars remain audible. Both hands breathe at the end of bar 5. The final triad gathers the paired line into one chord.',
+ parent_opus=151,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['B','A','B']),ancestry=dict(source_opus=151,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['E','D','E'],transposition_semitones=-5),
+ system_starts=[1,4,7,10],page_starts=[],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'pp',6:'p',9:'pp'},
+ pedal_spans=[[i*4+a,i*4+b] for i in range(12) for a,b in ([(0,2.8)] if i==4 else [(0,1.8),(2,3.8)] if i in [6,8,9] else [(0,2.8),(3,3.8)] if i==10 else [(0,3.8)])],
+ rh='''
+D4+B4:1.5 C#4+A4:.5 D4+B4:2
+E4+C#5:2 F#4+D5:2
+G4+E5:3 F#4+D5:1
+E4+C#5:2 D4+B4:2
+C#4+A4:3 R:1
+F#4+D5:1 G4+E5:1 A4+F#5:2
+G4+E5:2 F4+Db5:2
+Eb4+C5:3 Db4+Bb4:1
+C4+A4:2 D4+B4:2
+E4+C#5:1.5 F#4+D5:.5 E4+C#5:2
+D4+B4:3 C#4+A4:1
+D4+F#4+B4:4
+''',lh='''
+B2+F#3:4
+A2+E3:4
+G2+D3:4
+F#2+C#3:4
+E3+B3:3 R:1
+D3+A3:4
+C3+G3:4
+Ab2+Eb3:4
+F3+A3:2 E3+B3:2
+A2+E3:2 F#2+C#3:2
+G2+D3:3 F#2+C#3:1
+B2+F#3:4
+''',sections={1:'p',6:'mp',9:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,5),(6,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[50,51,49,48,40,51,48,45,49,47,39,27],phrase_arcs=[[0,20,3],[20,32,4],[32,48,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='The lower member of each sixth is a shadow of the tune. Shape the flat-key turn as a single long breath, with the bass quietly guiding the return.'))
 ]

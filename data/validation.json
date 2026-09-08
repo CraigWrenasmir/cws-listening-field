@@ -29699,5 +29699,126 @@
       "sounded_pitches_per_minute": 51.4,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Bracken Lowlight",
+    "opus": 159,
+    "score_pages": 1,
+    "bars": 12,
+    "pitch_onsets": 81,
+    "audio_seconds": 72.67,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 78,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 1,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 42,
+        "high": 59,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate legato sixths and changing harmonic colour",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The RH dyads remain sixths through bar 11; their upper notes carry the tune. Let the descending B\u2013A\u2013G\u2013F-sharp bass in the first four bars remain audible. Both hands breathe at the end of bar 5. The final triad gathers the paired line into one chord."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        3.8
+      ],
+      [
+        4,
+        7.8
+      ],
+      [
+        8,
+        11.8
+      ],
+      [
+        12,
+        15.8
+      ],
+      [
+        16,
+        18.8
+      ],
+      [
+        20,
+        23.8
+      ],
+      [
+        24,
+        25.8
+      ],
+      [
+        26,
+        27.8
+      ],
+      [
+        28,
+        31.8
+      ],
+      [
+        32,
+        33.8
+      ],
+      [
+        34,
+        35.8
+      ],
+      [
+        36,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        42.8
+      ],
+      [
+        43,
+        43.8
+      ],
+      [
+        44,
+        47.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "6": "mp",
+        "9": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "6": "p",
+        "9": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 69.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
