@@ -180,6 +180,22 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 150 | Camellia Solstice | 4/4 | 194 | [Score](pieces/CWS_Op_150_Camellia_Solstice/CWS_Op_150_Camellia_Solstice.pdf) | [MP3](pieces/CWS_Op_150_Camellia_Solstice/CWS_Op_150_Camellia_Solstice.mp3) |
 | CWS Op. 151 | Heather Soundings | 3/4 | 77 | [Score](pieces/CWS_Op_151_Heather_Soundings/CWS_Op_151_Heather_Soundings.pdf) | [MP3](pieces/CWS_Op_151_Heather_Soundings/CWS_Op_151_Heather_Soundings.mp3) |
 | CWS Op. 152 | Rowan Hinterland | 5/4 | 72 | [Score](pieces/CWS_Op_152_Rowan_Hinterland/CWS_Op_152_Rowan_Hinterland.pdf) | [MP3](pieces/CWS_Op_152_Rowan_Hinterland/CWS_Op_152_Rowan_Hinterland.mp3) |
+| CWS Op. 153 | Bilberry Harbour | 6/8 | 74 | [Score](pieces/CWS_Op_153_Bilberry_Harbour/CWS_Op_153_Bilberry_Harbour.pdf) | [MP3](pieces/CWS_Op_153_Bilberry_Harbour/CWS_Op_153_Bilberry_Harbour.mp3) |
+| CWS Op. 154 | Sorrel Barrow | 4/4 | 54 | [Score](pieces/CWS_Op_154_Sorrel_Barrow/CWS_Op_154_Sorrel_Barrow.pdf) | [MP3](pieces/CWS_Op_154_Sorrel_Barrow/CWS_Op_154_Sorrel_Barrow.mp3) |
+| CWS Op. 155 | Yarrow Peninsula | 5/4 | 66 | [Score](pieces/CWS_Op_155_Yarrow_Peninsula/CWS_Op_155_Yarrow_Peninsula.pdf) | [MP3](pieces/CWS_Op_155_Yarrow_Peninsula/CWS_Op_155_Yarrow_Peninsula.mp3) |
+| CWS Op. 156 | Alder Snowmelt | 3/4 | 85 | [Score](pieces/CWS_Op_156_Alder_Snowmelt/CWS_Op_156_Alder_Snowmelt.pdf) | [MP3](pieces/CWS_Op_156_Alder_Snowmelt/CWS_Op_156_Alder_Snowmelt.mp3) |
+| CWS Op. 157 | Heather Afterimage | 4/4 | 65 | [Score](pieces/CWS_Op_157_Heather_Afterimage/CWS_Op_157_Heather_Afterimage.pdf) | [MP3](pieces/CWS_Op_157_Heather_Afterimage/CWS_Op_157_Heather_Afterimage.mp3) |
+| CWS Op. 158 | Larch Footbridge | 4/4 | 65 | [Score](pieces/CWS_Op_158_Larch_Footbridge/CWS_Op_158_Larch_Footbridge.pdf) | [MP3](pieces/CWS_Op_158_Larch_Footbridge/CWS_Op_158_Larch_Footbridge.mp3) |
+| CWS Op. 159 | Bracken Lowlight | 4/4 | 81 | [Score](pieces/CWS_Op_159_Bracken_Lowlight/CWS_Op_159_Bracken_Lowlight.pdf) | [MP3](pieces/CWS_Op_159_Bracken_Lowlight/CWS_Op_159_Bracken_Lowlight.mp3) |
+| CWS Op. 160 | Willow Homeward | 3/4 | 75 | [Score](pieces/CWS_Op_160_Willow_Homeward/CWS_Op_160_Willow_Homeward.pdf) | [MP3](pieces/CWS_Op_160_Willow_Homeward/CWS_Op_160_Willow_Homeward.mp3) |
+| CWS Op. 161 | Cypress Afterhours | 2/4 | 126 | [Score](pieces/CWS_Op_161_Cypress_Afterhours/CWS_Op_161_Cypress_Afterhours.pdf) | [MP3](pieces/CWS_Op_161_Cypress_Afterhours/CWS_Op_161_Cypress_Afterhours.mp3) |
+| CWS Op. 162 | Juniper Arcade | 3/4 | 100 | [Score](pieces/CWS_Op_162_Juniper_Arcade/CWS_Op_162_Juniper_Arcade.pdf) | [MP3](pieces/CWS_Op_162_Juniper_Arcade/CWS_Op_162_Juniper_Arcade.mp3) |
+| CWS Op. 163 | Laurel Underpass | 4/4 | 90 | [Score](pieces/CWS_Op_163_Laurel_Underpass/CWS_Op_163_Laurel_Underpass.pdf) | [MP3](pieces/CWS_Op_163_Laurel_Underpass/CWS_Op_163_Laurel_Underpass.mp3) |
+| CWS Op. 164 | Saffron Promenade | 6/8 | 102 | [Score](pieces/CWS_Op_164_Saffron_Promenade/CWS_Op_164_Saffron_Promenade.pdf) | [MP3](pieces/CWS_Op_164_Saffron_Promenade/CWS_Op_164_Saffron_Promenade.mp3) |
+| CWS Op. 165 | Elm Interchange | 5/4 | 81 | [Score](pieces/CWS_Op_165_Elm_Interchange/CWS_Op_165_Elm_Interchange.pdf) | [MP3](pieces/CWS_Op_165_Elm_Interchange/CWS_Op_165_Elm_Interchange.mp3) |
+| CWS Op. 166 | Violet Nightferry | 4/4 | 138 | [Score](pieces/CWS_Op_166_Violet_Nightferry/CWS_Op_166_Violet_Nightferry.pdf) | [MP3](pieces/CWS_Op_166_Violet_Nightferry/CWS_Op_166_Violet_Nightferry.mp3) |
+| CWS Op. 167 | Clover Lamplight | 2/4 | 104 | [Score](pieces/CWS_Op_167_Clover_Lamplight/CWS_Op_167_Clover_Lamplight.pdf) | [MP3](pieces/CWS_Op_167_Clover_Lamplight/CWS_Op_167_Clover_Lamplight.mp3) |
+| CWS Op. 168 | Hawthorn Crosswalk | 2/4, 3/4 (changing) | 85 | [Score](pieces/CWS_Op_168_Hawthorn_Crosswalk/CWS_Op_168_Hawthorn_Crosswalk.pdf) | [MP3](pieces/CWS_Op_168_Hawthorn_Crosswalk/CWS_Op_168_Hawthorn_Crosswalk.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

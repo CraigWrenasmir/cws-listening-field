@@ -926,4 +926,49 @@ Bb2+F3:2
 Bb2+F3:2
 ''',sections={1:'p',5:'mp',8:'pp',9:'p',13:'p',17:'pp'},words={1:'dolce',16:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,18)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',15,17)],tempo_changes={},group=2,
  performance=dict(rubato=[54,55,52,46,55,56,51,44,54,53,50,43,54,55,52,46,38,28],phrase_arcs=[[0,8,3],[8,16,4],[16,24,3],[24,36,2]],lower_entries=[],pedal_lift=.2,gate=.975,note='Let the tune enter as if it has quietly joined a dance already underway. The borrowed minor colours should pass with tenderness, leaving a little shadow in the simple major ending.'))
+,
+dict(op=168,title='Hawthorn Crosswalk',key='c',fifths=-3,meter='2/4',bpm=55,
+ meters=['2/4','2/4','3/4','2/4','2/4','3/4','2/4','3/4','2/4','2/4','3/4','2/4','2/4','3/4','2/4','3/4'],
+ description='A small dance that occasionally takes an extra step. Willow Homeward’s A–C–D–C becomes G–B-flat–C–B-flat in C minor. Two-beat movement opens into three-beat hesitations: sometimes a breath, sometimes a longer continuation. The final added beat lets the music settle without hurrying its goodbye.',
+ difficulty='Intermediate to advanced changing metre and flexible phrase length',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the quarter-note pulse steady as 2/4 changes to 3/4. The extra beat is silent in bars 3, 6 and 11, but carries the phrase onward in bars 8 and 14. The shorter LH bars end with an eighth rest; keep those releases distinct from the longer shared breaths.',
+ parent_opus=160,motif=dict(hand='rh',start_beat=0,end_beat=2,pitches=['G','Bb','C','Bb']),ancestry=dict(source_opus=160,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['A','C','D','C'],transposition_semitones=-2),
+ system_starts=[1,4,7,10,13,15],page_starts=[10],engraving=dict(spacing_system=14,pedal_offset_y=470),lower_sections={1:'pp',7:'p',12:'pp'},
+ pedal_spans=[[s,s+(1.8 if i in [2,5,10] else 2.8 if i in [7,13,15] else 1.3)] for i,s in enumerate([0,2,4,7,9,11,14,16,19,21,23,26,28,30,33,35])],
+ rh='''
+G4:.5 Bb4:.5 C5:.5 Bb4:.5
+Eb5:1 D5:.5 C5:.5
+Bb4:2 R:1
+G4:.5 F4:.5 Eb4:1
+F4:1 G4:1
+C5:2 R:1
+D5:.5 F5:.5 Eb5:1
+D5:1 C5:2
+Bb4:1 G4:1
+Ab4:.5 C5:.5 Db5:1
+C5:2 R:1
+G4:.5 Bb4:.5 C5:.5 Bb4:.5
+Eb5:1 D5:.5 C5:.5
+Bb4:1 Ab4:1 G4:1
+F4:.5 Eb4:.5 D4:1
+Eb4+G4+C5:3
+''',lh='''
+C3:1 G3+Bb3:.5 R:.5
+Ab2:1 Eb3+G3:.5 R:.5
+Bb2+F3:2 R:1
+Eb3:1 G3+Bb3:.5 R:.5
+F3:1 Ab3+C4:.5 R:.5
+C3+G3:2 R:1
+Bb2:1 F3+A3:.5 R:.5
+Ab2:1 Eb3+G3:2
+G2:1 D3+Bb3:.5 R:.5
+Db3:1 Ab3+C4:.5 R:.5
+Ab2+Eb3:2 R:1
+C3:1 G3+Bb3:.5 R:.5
+Ab2:1 Eb3+G3:.5 R:.5
+F3:1 Ab3+C4:2
+G2:1 D3+B3:.5 R:.5
+C3+G3:3
+''',sections={1:'p',7:'mp',11:'pp',12:'p',15:'pp'},words={1:'dolce',15:'poco rit.'},slurs=[(1,3),(4,6),(7,11),(12,16)],lower_phrases=[],hairpins=[('crescendo',7,8),('diminuendo',13,15)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,56,48,55,55,47,57,56,54,51,45,55,54,50,42,28],phrase_arcs=[[0,7,3],[7,14,3],[14,26,4],[26,38,2]],lower_entries=[],pedal_lift=.2,gate=.975,note='Feel the changing bar lengths as extensions of a phrase. The quiet extra beats need room without becoming stops, and the last three-beat bar should finally let the step come to rest.'))
 ]
