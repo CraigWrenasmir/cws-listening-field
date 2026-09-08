@@ -506,4 +506,44 @@ F3+C4:2 E3+B3:2
 A2+E3:4
 ''',sections={1:'p',6:'mp',9:'pp',10:'p',12:'pp'},words={1:'cantabile',12:'poco rit.'},slurs=[(1,5),(6,9),(10,13)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',10,12)],tempo_changes={},group=2,
  performance=dict(rubato=[50,48,49,52,42,51,49,46,39,47,44,37,26],phrase_arcs=[[0,20,3],[20,36,3],[36,52,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep the shape of the remembered tune through its silences. The flat-key middle should feel more distant, and the final gaps should soften the phrase rather than break it.'))
+,
+dict(op=158,title='Larch Footbridge',key='d',fifths=-1,meter='4/4',bpm=51,
+ description='Two singing lines walk a bar apart. Bilberry Harbour’s A–G–A becomes D–C–D, beginning a quiet canon whose lower voice follows one octave below. A second subject rises a whole tone into E minor. The last chord lets the two lines rest together in A minor with a ninth.',
+ difficulty='Intermediate to advanced two-voice canon and independent phrasing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The LH follows the first seven RH bars exactly, one bar later and one octave lower. A new upper subject begins in bar 8; its five-bar answer starts in bar 9. Preserve the rests and phrase endings in each hand independently. The last bar leaves the canon for a shared chord.',
+ parent_opus=153,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['D','C','D']),ancestry=dict(source_opus=153,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['A','G','A'],transposition_semitones=5),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=13,pedal_offset_y=500),lower_sections={1:'pp',2:'p',6:'mp',9:'p',14:'pp'},
+ pedal_spans=[[i*4+a,i*4+a+1.8] for i in range(14) for a in [0,2]],
+ rh='''
+D5:1 C5:1 D5:2
+A4:2 F4:1 G4:1
+A4:3 C5:1
+D5:4
+F5:2 E5:1 D5:1
+C5:2 Bb4:1 A4:1
+G4:3 R:1
+E5:1 D5:1 E5:2
+B4:2 G4:1 A4:1
+B4:3 D5:1
+E5:4
+G5:2 F#5:1 E5:1
+D5:2 C5:1 B4:1
+G4+B4+C5+E5:4
+''',lh='''
+R:4
+D4:1 C4:1 D4:2
+A3:2 F3:1 G3:1
+A3:3 C4:1
+D4:4
+F4:2 E4:1 D4:1
+C4:2 Bb3:1 A3:1
+G3:3 R:1
+E4:1 D4:1 E4:2
+B3:2 G3:1 A3:1
+B3:3 D4:1
+E4:4
+G4:2 F#4:1 E4:1
+A3+E4:4
+''',sections={1:'p',5:'mp',8:'p',12:'mp',14:'pp'},words={1:'cantabile',13:'poco rit.'},slurs=[(1,4),(5,7),(8,11),(12,14)],lower_phrases=[(2,5),(6,8),(9,12),(13,14)],hairpins=[],tempo_changes={},group=2,
+ performance=dict(rubato=[51,51,52,48,54,52,46,50,51,52,47,52,40,28],phrase_arcs=[[0,16,3],[16,28,3],[28,44,3],[44,56,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='Neither line becomes accompaniment when the other is singing. Keep each phrase connected through the other hand’s arrivals, letting the shared closing harmony emerge from the two paths.'))
 ]
