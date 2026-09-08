@@ -30431,5 +30431,110 @@
       "sounded_pitches_per_minute": 121.8,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Elm Interchange",
+    "opus": 165,
+    "score_pages": 1,
+    "bars": 11,
+    "pitch_onsets": 81,
+    "audio_seconds": 75.08,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 76,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 11
+      },
+      "lh": {
+        "low": 43,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced shifting five-beat balance and chord voicing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The opening bass moves for three beats, then settles into a two-beat chord. Bars 5\u20136 reverse that balance: chord first, moving notes afterwards. Leave the two beats of shared silence in bar 4 intact. Voice the highest note of the final four-note RH chord without forcing its ninth."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        4.8
+      ],
+      [
+        5,
+        9.8
+      ],
+      [
+        10,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        20,
+        24.8
+      ],
+      [
+        25,
+        29.8
+      ],
+      [
+        30,
+        34.8
+      ],
+      [
+        35,
+        39.8
+      ],
+      [
+        40,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        49.8
+      ],
+      [
+        50,
+        54.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "5": "mp",
+        "8": "p",
+        "10": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "5": "p",
+        "9": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 67.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

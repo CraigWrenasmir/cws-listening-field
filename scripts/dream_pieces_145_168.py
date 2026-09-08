@@ -804,4 +804,38 @@ Db3:1 Ab3:.5 F3:1 Ab3:.5
 F3+C4:3
 ''',sections={1:'p',5:'mp',9:'pp',10:'p',14:'pp'},words={1:'dolce',14:'poco rit.'},slurs=[(1,4),(5,9),(10,15)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',12,14)],tempo_changes={},group=2,
  performance=dict(rubato=[63,64,62,53,65,65,66,62,51,63,65,62,59,49,32],phrase_arcs=[[0,12,3],[12,27,4],[27,45,2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep the two rocking beats broad enough for the short notes to settle gently into them. The major passage is a passing clearing; retain its warmth when the minor tune returns.'))
+,
+dict(op=165,title='Elm Interchange',key='c',fifths=-3,meter='5/4',bpm=55,
+ description='A spacious five-beat dance whose weight shifts from three-plus-two to two-plus-three. Willow Homeward’s A–C–D becomes G–B-flat–C over C minor. A full two-beat breath opens the central phrase, where a brief F-major light leads back through G into a quiet minor ninth.',
+ difficulty='Intermediate to advanced shifting five-beat balance and chord voicing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The opening bass moves for three beats, then settles into a two-beat chord. Bars 5–6 reverse that balance: chord first, moving notes afterwards. Leave the two beats of shared silence in bar 4 intact. Voice the highest note of the final four-note RH chord without forcing its ninth.',
+ parent_opus=160,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['G','Bb','C']),ancestry=dict(source_opus=160,source_hand='rh',source_start_beat=0,source_end_beat=2,source_pitches=['A','C','D'],transposition_semitones=-2),
+ system_starts=[1,4,6,9],page_starts=[],engraving=dict(spacing_system=14,pedal_offset_y=490),lower_sections={1:'pp',5:'p',9:'pp'},
+ pedal_spans=[[i*5+a,i*5+b] for i in range(11) for a,b in ([(0,2.8)] if i==3 else [(0,2.8),(3,4.8)] if i==9 else [(0,4.8)])],
+ rh='''
+G4:1 Bb4:1 C5:3
+Eb5:2 D5:1 C5:2
+Bb4:1.5 G4:.5 F4:3
+D4+G4:3 R:2
+Ab4:1 C5:1 Eb5:3
+D5:2 C5:1 Bb4:2
+A4:1.5 C5:.5 E5:3
+D5:2 B4:1 G4:2
+G4:1 Bb4:1 C5:3
+Eb5:2 D5:1 Bb4:2
+Eb4+G4+Bb4+D5:5
+''',lh='''
+C3:1.5 G3:.5 Bb3:1 Eb3+G3:2
+Ab2:1.5 Eb3:.5 G3:1 C3+Eb3:2
+F3:1.5 C4:.5 Ab3:1 C3+G3:2
+G2+D3:3 R:2
+Ab2+Eb3:2 C3:1.5 G3:.5 C4:1
+Bb2+F3:2 D3:1.5 A3:.5 D4:1
+F3:1.5 C4:.5 A3:1 E3+A3:2
+G3+B3:3 D3+G3:2
+C3:1.5 G3:.5 Bb3:1 Eb3+G3:2
+Ab2:1.5 Eb3:.5 G3:1 Bb2+F3:2
+C3+G3:5
+''',sections={1:'p',5:'mp',8:'p',10:'pp'},words={1:'dolce',10:'poco rit.'},slurs=[(1,4),(5,8),(9,11)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',9,10)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,56,53,45,56,56,57,50,54,45,30],phrase_arcs=[[0,20,3],[20,40,4],[40,55,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Keep a sense of dancing through the extra beat. The reversal in the middle should feel like changing direction while still holding the same partner, and the final chord should settle without closing every colour.'))
 ]
