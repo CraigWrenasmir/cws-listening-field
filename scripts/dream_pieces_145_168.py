@@ -878,4 +878,52 @@ G2:1.5 R:.5 D3+A3:1 R:.5 G2:.5
 G2+D3:4
 ''',sections={1:'p',7:'mp',10:'p',13:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[(1,6),(7,9),(10,14)],lower_phrases=[],hairpins=[('crescendo',7,8),('diminuendo',11,13)],tempo_changes={},group=2,
  performance=dict(rubato=[52,52,51,50,49,43,53,52,48,52,50,47,39,27],phrase_arcs=[[0,24,4],[24,36,3],[36,56,2]],lower_entries=[],pedal_lift=.2,gate=.965,note='Keep the chord melody connected in intention while the bass steps through its silences. The chromatic descent should suggest a slow change of light, with the short unpedalled pickups drawing the dance onward.'))
+,
+dict(op=167,title='Clover Lamplight',key='Bb',fifths=-2,meter='2/4',bpm=54,
+ description='A small major-key dance with a late-entering melody and borrowed minor shadows. Heather Afterimage’s C–D–E becomes F–G–A, rising towards B-flat above a dotted bass. E-flat minor and D-flat pass through the middle, but the final steps recover a plain, quiet B-flat major.',
+ difficulty='Intermediate late melody entries and dotted bass transitions',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The melody waits an eighth before its first three notes, and again in bar 13. Keep the bass moving gently through those entrances. The shorter shared rests in bars 4, 8 and 12 separate the phrases. The last two bars leave the dotted figure for held harmony.',
+ parent_opus=157,motif=dict(hand='rh',start_beat=.5,end_beat=2,pitches=['F','G','A']),ancestry=dict(source_opus=157,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['C','D','E'],transposition_semitones=5),
+ system_starts=[1,5,9,13,16],page_starts=[],engraving=dict(spacing_system=12,pedal_offset_y=460),lower_sections={1:'pp',5:'p',13:'pp'},
+ pedal_spans=[[i*2,i*2+(1.3 if i in [3,7,11] else 1.8)] for i in range(18)],
+ rh='''
+R:.5 F4:.5 G4:.5 A4:.5
+Bb4:1.5 A4:.5
+F4:.5 D4:.5 C4:1
+D4:1.5 R:.5
+F4:.5 A4:.5 C5:1
+D5:1 C5:.5 Bb4:.5
+Ab4:1 Gb4:1
+F4:1.5 R:.5
+G4:.5 Bb4:.5 D5:1
+C5:1 A4:1
+Ab4:1 F4:1
+E4:1.5 R:.5
+R:.5 F4:.5 G4:.5 A4:.5
+Bb4:1 D5:1
+C5:1 Bb4:.5 A4:.5
+F4:1 D4:1
+C4+F4+A4:2
+D4+F4+Bb4:2
+''',lh='''
+Bb2:.75 F3:.25 D3:.5 F3:.5
+A2:.75 E3:.25 C3:.5 E3:.5
+G2:.75 D3:.25 Bb2:.5 D3:.5
+Bb2+F3:1.5 R:.5
+Eb3:.75 Bb3:.25 G3:.5 Bb3:.5
+D3:.75 A3:.25 F3:.5 A3:.5
+Eb3:.75 Bb3:.25 Gb3:.5 Bb3:.5
+F3+C4:1.5 R:.5
+G3:.75 D4:.25 Bb3:.5 D4:.5
+F3:.75 C4:.25 A3:.5 A3:.5
+Db3:.75 Ab3:.25 F3:.5 Ab3:.5
+C3+G3:1.5 R:.5
+Bb2:.75 F3:.25 D3:.5 D3:.5
+G2:.75 D3:.25 Bb2:.5 D3:.5
+Eb3:.75 Bb3:.25 G3:.5 Bb3:.5
+F3:.75 C4:.25 A3:.5 F3:.5
+Bb2+F3:2
+Bb2+F3:2
+''',sections={1:'p',5:'mp',8:'pp',9:'p',13:'p',17:'pp'},words={1:'dolce',16:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,18)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',15,17)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,55,52,46,55,56,51,44,54,53,50,43,54,55,52,46,38,28],phrase_arcs=[[0,8,3],[8,16,4],[16,24,3],[24,36,2]],lower_entries=[],pedal_lift=.2,gate=.975,note='Let the tune enter as if it has quietly joined a dance already underway. The borrowed minor colours should pass with tenderness, leaving a little shadow in the simple major ending.'))
 ]
