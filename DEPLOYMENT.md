@@ -1,6 +1,6 @@
 # Hosting the Listening Field
 
-The primary public gallery is [GitHub Pages](https://craigwrenasmir.github.io/cws-listening-field/), published directly from this repository.
+The primary public gallery is [GitHub Pages](https://listeningfield.wrenasmir.com/), published directly from this repository.
 
 Repository Settings → Pages uses **Deploy from a branch**, **main**, **/ (root)**. The gallery is already static at the repository root; `.nojekyll` tells Pages to serve it without Jekyll processing. No custom workflow, API key or hosting account is required.
 
@@ -12,7 +12,7 @@ The host should serve `.json` as JSON, `.svg` as SVG, `.pdf` as PDF and `.mp3` a
 
 An earlier copy remains on Sites at https://cws-listening-field.wrenasmir.chatgpt.site. `.openai/hosting.json` preserves that copy's project binding. It is separate from the primary GitHub Pages deployment and does not update when GitHub changes. Future publishing should target GitHub Pages unless Craig requests otherwise.
 
-No custom domain or DNS changes are configured. The eventual `wrenasmir.com` subdomain can be connected to GitHub Pages later.
+The custom domain is `listeningfield.wrenasmir.com`, configured in GitHub Pages and the root `CNAME` file. Squarespace DNS has a CNAME record with host `listeningfield` and target `craigwrenasmir.github.io`. Preserve this record and the CNAME file during future releases. Enable and retain Enforce HTTPS once GitHub has issued the custom-domain certificate. The portable build also includes CNAME.
 
 ## Collection size
 

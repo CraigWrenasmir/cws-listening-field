@@ -2,7 +2,7 @@
 
 **CWS / FIRST STUDIES** — a growing collection of piano miniatures presented as freely rotating sculptures of their musical voices, played with two hands.
 
-[Open the public gallery on GitHub Pages](https://craigwrenasmir.github.io/cws-listening-field/).
+[Open the public gallery on GitHub Pages](https://listeningfield.wrenasmir.com/).
 
 The root address is a minimal entrance: **The Listening Field**, a layered drawing of the studies' upper voices, and one **Kinship** link. The separate [Kinship page](kinship.html) presents every work and every documented parent connection together. The map keeps opus numbers at every zoom level; hover or keyboard focus reveals one title in the lower margin. Mouse clicks open a work directly; on touchscreens, tap a point to preview its title, then tap that title to open it. Zoom, drag or pinch for a closer view, and use **All** to restore the full map. Keyboard arrows move between works; Enter opens the focused piece. The map and drawing grow with the catalogue. **Entrance** returns to the title page and stops playback; direct opus links still open the individual piece without autoplay.
 
@@ -224,7 +224,7 @@ npm test
 npm run build
 ```
 
-`dist/` contains the static website, complete recordings and downloads. This repository has not yet been connected to a subdomain of `wrenasmir.com`; see [deployment notes](DEPLOYMENT.md).
+`dist/` contains the static website, complete recordings and downloads. The public address is `listeningfield.wrenasmir.com`, hosted on GitHub Pages; see [deployment notes](DEPLOYMENT.md).
 
 ## Compose and render
 
