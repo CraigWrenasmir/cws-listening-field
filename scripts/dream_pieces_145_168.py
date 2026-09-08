@@ -224,4 +224,50 @@ F3+A3+C4:4~
 F3+A3+C4:4
 ''',sections={1:'p',3:'pp',5:'p',7:'mp',9:'p',11:'pp',13:'p',15:'pp'},words={1:'cantabile',15:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',13,15)],tempo_changes={},group=2,
  performance=dict(rubato=[54,51,47,52,50,46,54,47,52,49,46,42,46,41,34,24],phrase_arcs=[[0,16,3],[16,32,3],[32,48,2],[48,64,-2]],lower_entries=[],pedal_lift=.2,gate=.995,note='The high chord melody should sing gently, without brilliance. Let its lower recollection feel familiar but altered, and allow the final eight-note harmony to decay naturally without another attack.'))
+,
+dict(op=151,title='Heather Soundings',key='e',fifths=1,meter='3/4',bpm=49,
+ description='A small E-Dorian song above open fifths. Fern Lantern’s D–C–D becomes E–D–E, sung simply before a five-bar phrase opens toward the raised sixth. A quieter C-natural shadow crosses the return, but the last phrase restores C-sharp and leaves the song resting on an open E fifth.',
+ difficulty='Intermediate lyrical phrasing and sustained open fifths',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the single upper melody present over the soft open fifths. The first lower E–B lasts across two bars without reattack. The three phrases have five, five and seven bars; let the written rest in bar 10 mark the deepest breath. Distinguish C-natural in the return from the later C-sharp.',
+ parent_opus=135,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['E','D','E']),ancestry=dict(source_opus=135,source_hand='rh',source_voice='upper',source_start_beat=0,source_end_beat=12,source_pitches=['D','C','D'],transposition_semitones=2),
+ system_starts=[1,4,6,9,11,14,16],page_starts=[11],engraving=dict(spacing_system=13,pedal_offset_y=440),lower_sections={1:'pp',6:'p',11:'pp'},
+ pedal_spans=[[i*3,i*3+(1.8 if i==9 else 2.8)] for i in range(17)],
+ rh='''
+E5:1.5 D5:.5 E5:1
+B4:2 A4:1
+G4:1.5 A4:.5 B4:1
+C#5:2 B4:1
+A4:1 G4:.5 F#4:.5 E4:1
+R:1 E5:.5 G5:.5 A5:1
+G5:1.5 F#5:.5 E5:1
+D5:2 B4:1
+A4:1 C#5:1 B4:1
+G4:2 R:1
+E5:2 D5:1
+B4:1.5 A4:.5 G4:1
+F#4:1 A4:.5 C5:.5 B4:1
+A4:1 B4:1 C#5:1
+B4:2 G4:1
+F#4:1.5 G4:.5 E4:1
+E4+B4:3
+''',lh='''
+E3+B3:3~
+E3+B3:3
+D3+A3:3
+A2+E3:3
+E3+B3:3
+A2+E3:3
+D3+A3:3
+G2+D3:3
+A2+E3:3
+E3+B3:2 R:1
+C3+G3:3
+G2+D3:3
+D3+A3:3
+A2+E3:3
+E3+B3:3
+B2+F#3:3
+E3+B3:3
+''',sections={1:'p',6:'mp',11:'p',16:'pp'},words={1:'cantabile',16:'poco rit.'},slurs=[(1,5),(6,10),(11,15),(16,17)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',14,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[49,48,50,47,42,49,51,46,47,39,47,45,48,49,44,36,26],phrase_arcs=[[0,15,3],[15,30,3],[30,51,2]],lower_entries=[],pedal_lift=.2,gate=.985,note='Sing the melody with the unforced pace of a remembered song. The open fifths remain quieter, and the raised sixth offers a little warmth without turning the piece into a major-key resolution.'))
 ]

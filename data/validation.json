@@ -28725,5 +28725,130 @@
       "sounded_pitches_per_minute": 126.0,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Heather Soundings",
+    "opus": 151,
+    "score_pages": 2,
+    "bars": 17,
+    "pitch_onsets": 77,
+    "audio_seconds": 76.13,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 12,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 7
+      },
+      "lh": {
+        "low": 43,
+        "high": 59,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate lyrical phrasing and sustained open fifths",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Keep the single upper melody present over the soft open fifths. The first lower E\u2013B lasts across two bars without reattack. The three phrases have five, five and seven bars; let the written rest in bar 10 mark the deepest breath. Distinguish C-natural in the return from the later C-sharp."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        26.8
+      ],
+      [
+        27,
+        28.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        38.8
+      ],
+      [
+        39,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        50.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "6": "mp",
+        "11": "p",
+        "16": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "6": "p",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 14,
+      "sounded_pitches_per_minute": 63.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
