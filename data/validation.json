@@ -29179,5 +29179,111 @@
       "sounded_pitches_per_minute": 43.7,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Yarrow Peninsula",
+    "opus": 155,
+    "score_pages": 1,
+    "bars": 12,
+    "pitch_onsets": 66,
+    "audio_seconds": 84.92,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 75,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 40,
+        "high": 59,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate octave-separated unison and modal phrasing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The first three bars have identical melodic rhythm in both hands, separated by two octaves. Match their phrasing without giving the low notes extra weight. After bar 3 the hands become independent. The D-sharp in bar 7 and at the close is the warm Dorian sixth."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        4.8
+      ],
+      [
+        5,
+        9.8
+      ],
+      [
+        10,
+        14.8
+      ],
+      [
+        15,
+        19.8
+      ],
+      [
+        20,
+        23.8
+      ],
+      [
+        25,
+        29.8
+      ],
+      [
+        30,
+        34.8
+      ],
+      [
+        35,
+        39.8
+      ],
+      [
+        40,
+        44.8
+      ],
+      [
+        45,
+        49.8
+      ],
+      [
+        50,
+        54.8
+      ],
+      [
+        55,
+        59.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "6": "mp",
+        "9": "p",
+        "11": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "4": "pp",
+        "6": "p",
+        "11": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 48.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

@@ -384,4 +384,40 @@ Eb3:1 G3:.5 Bb3:.5 C4:2
 C3+G3:4
 ''',sections={1:'pp',5:'pp',9:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[],lower_phrases=[(1,4),(5,8),(9,12)],hairpins=[],tempo_changes={},group=2,
  performance=dict(rubato=[48,46,49,40,49,48,44,47,44,42,35,25],phrase_arcs=[[0,16,3],[16,32,3],[32,48,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='The lower melody carries the human voice; the upper triad tones remain distant. Let the shared rest clear the first phrase before the melody climbs.'))
+,
+dict(op=155,title='Yarrow Peninsula',key='f#',fifths=3,meter='5/4',bpm=55,
+ description='The two hands begin by singing one tune two octaves apart. Heather Soundings’s E–D–E becomes F-sharp–E–F-sharp, carried through three unison bars before the lower hand opens into fifths. A raised sixth brightens the long second phrase, and the closing melody rests over a quiet minor-sixth chord.',
+ difficulty='Intermediate octave-separated unison and modal phrasing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The first three bars have identical melodic rhythm in both hands, separated by two octaves. Match their phrasing without giving the low notes extra weight. After bar 3 the hands become independent. The D-sharp in bar 7 and at the close is the warm Dorian sixth.',
+ parent_opus=151,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['F#','E','F#']),ancestry=dict(source_opus=151,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['E','D','E'],transposition_semitones=2),
+ system_starts=[1,4,7,10],page_starts=[],engraving=dict(spacing_system=14,pedal_offset_y=440),lower_sections={1:'p',4:'pp',6:'p',11:'pp'},
+ pedal_spans=[[i*5,i*5+(3.8 if i==4 else 4.8)] for i in range(12)],
+ rh='''
+F#4:2 E4:1 F#4:2
+A4:3 G#4:2
+C#5:2 B4:1 A4:2
+G#4:1 B4:1 A4:3
+F#4:4 R:1
+F#4:1 A4:1 B4:1 C#5:2
+D#5:3 C#5:2
+B4:2 A4:1 G#4:2
+F#4:2 E4:1 F#4:2
+G#4:1 A4:1 B4:3
+C#5:2 B4:1 G#4:2
+F#4+A4+C#5+D#5:5
+''',lh='''
+F#2:2 E2:1 F#2:2
+A2:3 G#2:2
+C#3:2 B2:1 A2:2
+B2+F#3:5
+F#2+C#3:4 R:1
+F#2+C#3:5
+B2+F#3:5
+E3+B3:5
+B2:2 F#3:1 A3:2
+E3:1 G#3:1 B3:3
+C#3+G#3:2 B2+F#3:1 A2+E3:2
+F#2+C#3:5
+''',sections={1:'p',6:'mp',9:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,5),(6,8),(9,12)],lower_phrases=[(1,3)],hairpins=[('crescendo',6,7),('diminuendo',9,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,52,56,51,43,54,57,48,52,49,40,28],phrase_arcs=[[0,25,3],[25,40,4],[40,60,-1]],lower_entries=[],pedal_lift=.2,gate=.985,note='The opening is one song in two registers. Keep its low doubling gentle, and allow the later independence to arrive gradually rather than as a change of character.'))
 ]
