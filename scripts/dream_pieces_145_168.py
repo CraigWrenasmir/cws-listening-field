@@ -582,4 +582,50 @@ G2+D3:3 F#2+C#3:1
 B2+F#3:4
 ''',sections={1:'p',6:'mp',9:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,5),(6,8),(9,12)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[50,51,49,48,40,51,48,45,49,47,39,27],phrase_arcs=[[0,20,3],[20,32,4],[32,48,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='The lower member of each sixth is a shadow of the tune. Shape the flat-key turn as a single long breath, with the bass quietly guiding the return.'))
+,
+dict(op=160,title='Willow Homeward',key='F',fifths=-1,meter='3/4',bpm=53,
+ description='A homecoming song that begins over D minor and closes in F major. Alder Snowmelt’s E–G–A–G becomes A–C–D–C. After a brief minor-coloured detour the upper voice falls silent, leaving the lower hand to remember the opening alone before both hands find a gentle major ending.',
+ difficulty='Intermediate singing line and exposed lower-hand answer',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The first two bars return exactly one octave lower in bars 11–12, with the RH silent. Give that answer its own vocal shape. The rests in bars 5 and 10 divide the first two phrases; the final seven bars continue through the lower-hand recollection into F major.',
+ parent_opus=156,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['A','C','D','C']),ancestry=dict(source_opus=156,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['E','G','A','G'],transposition_semitones=5),
+ system_starts=[1,4,7,10,13,16],page_starts=[10],engraving=dict(spacing_system=14,pedal_offset_y=460),lower_sections={1:'pp',6:'p',11:'mp',13:'pp'},
+ pedal_spans=[[i*3,i*3+(1.8 if i in [4,9] else 2.8)] for i in range(17)],
+ rh='''
+A4:.5 C5:.5 D5:1 C5:1
+A4:2 G4:1
+F4:1 G4:.5 A4:.5 C5:1
+D5:2 E5:1
+F5:2 R:1
+E5:1 D5:1 C5:1
+A4:2 C5:1
+Eb5:1 Db5:1 C5:1
+Bb4:2 Ab4:1
+G4:2 R:1
+R:3
+R:3
+F4:1 A4:1 C5:1
+D5:1 C5:2
+A4:1 G4:1 F4:1
+E4+G4:2 C4+E4:1
+F4+A4+C5:3
+''',lh='''
+D3+A3:3
+Bb2+F3:3
+F3+C4:3
+G3+D4:3
+D3+A3:2 R:1
+C3+G3:3
+F3+C4:3
+Ab2+Eb3:3
+Db3+Ab3:3
+C3+G3:2 R:1
+A3:.5 C4:.5 D4:1 C4:1
+A3:2 G3:1
+F3+C4:3
+Bb2+F3:3
+C3+G3:3
+Bb2+F3:3
+F3+C4:3
+''',sections={1:'p',4:'mp',6:'p',11:'pp',13:'p',16:'pp'},words={1:'cantabile',16:'poco rit.'},slurs=[(1,5),(6,10),(13,17)],lower_phrases=[(11,12)],hairpins=[('crescendo',13,14),('diminuendo',15,16)],tempo_changes={},group=2,
+ performance=dict(rubato=[53,51,54,52,44,53,52,48,46,40,50,47,52,50,46,38,26],phrase_arcs=[[0,15,4],[15,30,2],[30,51,3]],lower_entries=[[30,36]],pedal_lift=.2,gate=.985,note='Let the solo lower answer feel remembered rather than newly announced. The change to major should arrive gradually, carrying some of the opening minor colour into the last phrase.'))
 ]

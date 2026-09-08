@@ -29820,5 +29820,133 @@
       "sounded_pitches_per_minute": 69.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Willow Homeward",
+    "opus": 160,
+    "score_pages": 2,
+    "bars": 17,
+    "pitch_onsets": 75,
+    "audio_seconds": 73.11,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 77,
+        "maximum_melodic_leap_semitones": 4,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 7
+      },
+      "lh": {
+        "low": 44,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 3,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate singing line and exposed lower-hand answer",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "The first two bars return exactly one octave lower in bars 11\u201312, with the RH silent. Give that answer its own vocal shape. The rests in bars 5 and 10 divide the first two phrases; the final seven bars continue through the lower-hand recollection into F major."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        26.8
+      ],
+      [
+        27,
+        28.8
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        38.8
+      ],
+      [
+        39,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        50.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "4": "mp",
+        "6": "p",
+        "11": "pp",
+        "13": "p",
+        "16": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "6": "p",
+        "11": "mp",
+        "13": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 13,
+      "sounded_pitches_per_minute": 64.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]
