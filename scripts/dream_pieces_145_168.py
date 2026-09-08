@@ -628,4 +628,60 @@ Bb2+F3:3
 F3+C4:3
 ''',sections={1:'p',4:'mp',6:'p',11:'pp',13:'p',16:'pp'},words={1:'cantabile',16:'poco rit.'},slurs=[(1,5),(6,10),(13,17)],lower_phrases=[(11,12)],hairpins=[('crescendo',13,14),('diminuendo',15,16)],tempo_changes={},group=2,
  performance=dict(rubato=[53,51,54,52,44,53,52,48,46,40,50,47,52,50,46,38,26],phrase_arcs=[[0,15,4],[15,30,2],[30,51,3]],lower_entries=[[30,36]],pedal_lift=.2,gate=.985,note='Let the solo lower answer feel remembered rather than newly announced. The change to major should arrive gradually, carrying some of the opening minor colour into the last phrase.'))
+,
+dict(op=161,title='Cypress Afterhours',key='d',fifths=-1,meter='2/4',bpm=54,
+ description='A slow dance with a dotted, habanera-like bass and a melody that sometimes floats across the bar line. Larch Footbridge’s D–C–D returns in a new rhythmic setting. The central flat-key passage darkens the room briefly; the returning tune gradually releases the dance into a held D-minor chord.',
+ difficulty='Intermediate to advanced dotted bass rhythm under sustained melody',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Most bass bars divide into three sixteenths, one sixteenth and two eighths. Keep that written pulse supple under the upper ties in bars 3–4 and 15–16. Both hands breathe in bars 6 and 12. The final two bars sustain one chord without repeating it.',
+ parent_opus=158,motif=dict(hand='rh',start_beat=0,end_beat=2,pitches=['D','C','D']),ancestry=dict(source_opus=158,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['D','C','D'],transposition_semitones=0),
+ system_starts=[1,5,9,13,17,20],page_starts=[13],engraving=dict(spacing_system=14,pedal_offset_y=480),lower_sections={1:'pp',7:'p',13:'pp'},
+ pedal_spans=[[i*2,i*2+(1.3 if i in [5,11] else 1.8)] for i in range(20)]+[[40,43.8]],
+ rh='''
+D5:.75 C5:.25 D5:1
+A4:1.5 C5:.5
+F5:2~
+F5:.5 E5:.5 D5:1
+C5:1 A4:.5 G4:.5
+A4:1.5 R:.5
+Bb4:.5 D5:1 C5:.5
+A4:1 G4:1
+Ab4:.75 C5:.25 Eb5:1
+Db5:1 C5:1
+Bb4:.5 Ab4:.5 G4:1
+A4:1.5 R:.5
+D5:.75 C5:.25 D5:1
+F5:1 E5:.5 D5:.5
+C5:2~
+C5:.5 Bb4:.5 A4:1
+G4:1 E4:.5 F4:.5
+A4:1.5 C5:.5
+Bb4:1 A4:.5 G4:.5
+E4+G4:1 C#4+E4:1
+D4+F4+A4:2~
+D4+F4+A4:2
+''',lh='''
+D3:.75 A3:.25 F3:.5 A3:.5
+C3:.75 G3:.25 E3:.5 G3:.5
+Bb2:.75 F3:.25 D3:.5 D3:.5
+G2:.75 D3:.25 Bb2:.5 D3:.5
+A2:.75 E3:.25 C3:.5 E3:.5
+D3+A3:1.5 R:.5
+Bb2:.75 F3:.25 D3:.5 F3:.5
+C3:.75 G3:.25 E3:.5 E3:.5
+Ab2:.75 Eb3:.25 C3:.5 Eb3:.5
+Db3:.75 Ab3:.25 F3:.5 Ab3:.5
+C3:.75 G3:.25 Eb3:.5 G3:.5
+A2+E3:1.5 R:.5
+D3:.75 A3:.25 F3:.5 A3:.5
+C3:.75 G3:.25 E3:.5 G3:.5
+Bb2:.75 F3:.25 D3:.5 F3:.5
+F3:.75 C4:.25 A3:.5 C4:.5
+E3:.75 B3:.25 G3:.5 B3:.5
+F3:.75 C4:.25 A3:.5 C4:.5
+G3+Bb3:1 F3+A3:1
+A2+E3:2
+D3+A3:2~
+D3+A3:2
+''',sections={1:'p',7:'mp',12:'pp',13:'p',19:'pp'},words={1:'dolce',20:'poco rit.'},slurs=[(1,6),(7,12),(13,18),(19,22)],lower_phrases=[],hairpins=[('crescendo',7,9),('diminuendo',17,20)],tempo_changes={},group=2,
+ performance=dict(rubato=[54,54,55,53,51,46,54,54,52,50,49,43,54,55,53,51,50,49,45,39,31,26],phrase_arcs=[[0,12,3],[12,24,4],[24,36,3],[36,44,-2]],lower_entries=[],pedal_lift=.2,gate=.975,note='The bass has a small spring in its dotted rhythm. Keep its weight low enough for the long upper notes to seem suspended, and let the last four bars gradually lose their urge to dance.'))
 ]
