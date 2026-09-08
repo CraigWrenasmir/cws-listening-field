@@ -31125,5 +31125,184 @@
       "sounded_pitches_per_minute": 96.6,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Camellia Threshold",
+    "opus": 170,
+    "score_pages": 2,
+    "bars": 14,
+    "pitch_onsets": 128,
+    "audio_seconds": 93.86,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 7
+      },
+      "lh": {
+        "low": 44,
+        "high": 71,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced compound phrasing, changing registers and voiced jazz harmony",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 9
+      },
+      "note": "Feel four dotted-quarter pulses in each 12/8 bar. Keep the long melody connected above the changing lower dyads. The LH uses treble clef in bars 5\u20136, returning to bass in bar 7. Shared dotted-quarter rests close bars 5 and 10; the final bar settles from a ninth-coloured C harmony into F major."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        20.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        26.8
+      ],
+      [
+        27,
+        28.3
+      ],
+      [
+        30,
+        32.8
+      ],
+      [
+        33,
+        35.8
+      ],
+      [
+        36,
+        38.8
+      ],
+      [
+        39,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        47.8
+      ],
+      [
+        48,
+        50.8
+      ],
+      [
+        51,
+        53.8
+      ],
+      [
+        54,
+        56.8
+      ],
+      [
+        57,
+        58.3
+      ],
+      [
+        60,
+        62.8
+      ],
+      [
+        63,
+        65.8
+      ],
+      [
+        66,
+        68.8
+      ],
+      [
+        69,
+        71.8
+      ],
+      [
+        72,
+        74.8
+      ],
+      [
+        75,
+        77.8
+      ],
+      [
+        78,
+        80.8
+      ],
+      [
+        81,
+        83.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "4": "mp",
+        "5": "pp",
+        "6": "mp",
+        "10": "pp",
+        "11": "p",
+        "13": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "6": "p",
+        "11": "pp"
+      }
+    },
+    "verified_clef_changes": {
+      "lh": {
+        "1": "bass",
+        "5": "treble",
+        "7": "bass"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 3,
+      "left_hand_most_frequent_pattern_bars": 11,
+      "sounded_pitches_per_minute": 84.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

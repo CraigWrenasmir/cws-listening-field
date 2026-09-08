@@ -196,6 +196,8 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 166 | Violet Nightferry | 4/4 | 138 | [Score](pieces/CWS_Op_166_Violet_Nightferry/CWS_Op_166_Violet_Nightferry.pdf) | [MP3](pieces/CWS_Op_166_Violet_Nightferry/CWS_Op_166_Violet_Nightferry.mp3) |
 | CWS Op. 167 | Clover Lamplight | 2/4 | 104 | [Score](pieces/CWS_Op_167_Clover_Lamplight/CWS_Op_167_Clover_Lamplight.pdf) | [MP3](pieces/CWS_Op_167_Clover_Lamplight/CWS_Op_167_Clover_Lamplight.mp3) |
 | CWS Op. 168 | Hawthorn Crosswalk | 2/4, 3/4 (changing) | 85 | [Score](pieces/CWS_Op_168_Hawthorn_Crosswalk/CWS_Op_168_Hawthorn_Crosswalk.pdf) | [MP3](pieces/CWS_Op_168_Hawthorn_Crosswalk/CWS_Op_168_Hawthorn_Crosswalk.mp3) |
+| CWS Op. 169 | Willow Belvedere | 3/4 | 95 | [Score](pieces/CWS_Op_169_Willow_Belvedere/CWS_Op_169_Willow_Belvedere.pdf) | [MP3](pieces/CWS_Op_169_Willow_Belvedere/CWS_Op_169_Willow_Belvedere.mp3) |
+| CWS Op. 170 | Camellia Threshold | 12/8 | 128 | [Score](pieces/CWS_Op_170_Camellia_Threshold/CWS_Op_170_Camellia_Threshold.pdf) | [MP3](pieces/CWS_Op_170_Camellia_Threshold/CWS_Op_170_Camellia_Threshold.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
