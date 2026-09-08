@@ -726,4 +726,40 @@ F3:1 A3+C4:2
 A2+E3:3
 ''',sections={1:'p',5:'mp',9:'pp',10:'p',14:'pp'},words={1:'dolce',14:'poco rit.'},slurs=[(1,4),(5,9),(10,15)],lower_phrases=[],hairpins=[('crescendo',5,7),('diminuendo',12,14)],tempo_changes={},group=2,
  performance=dict(rubato=[56,56,57,48,56,58,57,54,46,56,57,55,51,43,28],phrase_arcs=[[0,12,3],[12,27,4],[27,45,2]],lower_entries=[],pedal_lift=.2,gate=.98,note='Give the little late chords a feeling of leaning towards the next step. The tune stays unhurried above them, gathering warmth through the middle phrase and relaxing into the final ninth.'))
+,
+dict(op=163,title='Laurel Underpass',key='e',fifths=1,meter='4/4',bpm=55,
+ description='A nocturnal walk in uneven steps: three eighths, three eighths, then two. Heather Afterimage’s C–D–E becomes G–A–B over E minor. The melody crosses the bass accents, rises into a Dorian phrase and turns briefly towards G minor before recovering its opening warmth.',
+ difficulty='Intermediate to advanced 3+3+2 accompaniment against lyrical phrasing',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='The recurring LH attacks fall on quarter-beat offsets 0, 1.5 and 3. Avoid shifting the RH to match them. Its long E begins midway through bar 5 and continues into bar 6. Bars 4 and 12 release the recurring pattern into longer harmonies.',
+ parent_opus=157,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['G','A','B']),ancestry=dict(source_opus=157,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['C','D','E'],transposition_semitones=7),
+ system_starts=[1,4,7,10],page_starts=[],engraving=dict(spacing_system=14,pedal_offset_y=470),lower_sections={1:'pp',5:'p',10:'pp'},
+ pedal_spans=[[i*4,i*4+(2.8 if i==3 else 3.8)] for i in range(12)],
+ rh='''
+G4:1 A4:1 B4:2
+D5:3 B4:1
+A4:.5 R:.5 G4:1 E4:2
+F#4:3 R:1
+B4:1 D5:.5 E5:2.5~
+E5:1 D5:1 C#5:1 B4:1
+A4:1 F#4:1 E4:2
+G4:1 Bb4:1 D5:2
+C5:1 Bb4:1 A4:1 F4:1
+G4:1 A4:1 B4:2
+D5:1 B4:1 A4:1 G4:1
+F#4:1 E4+G4+B4:3
+''',lh='''
+E3:1.5 G3+B3:1.5 F#3+B3:1
+D3:1.5 F#3+A3:1.5 E3+A3:1
+C3:1.5 E3+G3:1.5 E3+B3:1
+B2+F#3:3 R:1
+G3:1.5 B3+D4:1.5 A3+D4:1
+A3:1.5 C#4+E4:1.5 B3+E4:1
+D3:1.5 F#3+A3:1.5 E3+A3:1
+G3:1.5 Bb3+D4:1.5 A3+D4:1
+F3:1.5 A3+C4:1.5 G3+C4:1
+E3:1.5 G3+B3:1.5 F#3+B3:1
+C3:1.5 E3+G3:1.5 D3+G3:1
+E3+B3:4
+''',sections={1:'p',5:'mp',8:'p',11:'pp'},words={1:'dolce',11:'poco rit.'},slurs=[(1,4),(5,9),(10,12)],lower_phrases=[],hairpins=[('crescendo',5,6),('diminuendo',10,11)],tempo_changes={},group=2,
+ performance=dict(rubato=[55,55,53,45,56,57,54,52,48,54,45,30],phrase_arcs=[[0,16,3],[16,36,4],[36,48,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='The unequal bass steps should feel like a quiet current under the song. Let the RH phrase breathe across them, with a little more space at the flat-key turn and the final return.'))
 ]
