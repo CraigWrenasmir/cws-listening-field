@@ -306,4 +306,46 @@ G3:1 F3:1 Eb3:1 D3:2
 G2+D3:5
 ''',sections={1:'p',3:'pp',5:'mp',7:'pp',9:'p',11:'pp'},words={1:'cantabile',11:'poco rit.'},slurs=[(1,2),(5,6),(9,12)],lower_phrases=[(3,4),(7,8),(11,12)],hairpins=[('crescendo',5,6),('diminuendo',9,11)],tempo_changes={},group=2,
  performance=dict(rubato=[56,50,54,48,58,53,55,49,52,48,40,28],phrase_arcs=[[0,10,3],[10,20,2],[20,30,4],[30,40,3],[40,60,-1]],lower_entries=[],pedal_lift=.2,gate=.98,note='Let the lower answers sound like another person carrying the same song. The accompaniment recedes as the melody changes hands.'))
+,
+dict(op=153,title='Bilberry Harbour',key='d',fifths=-1,meter='6/8',bpm=61,
+ description='A gently rocking song built largely from five notes. Heather Soundings’s E–D–E becomes A–G–A over broken lower fifths. The melody rises once into a brighter register, then returns alone for a breath before a B-natural lends the closing phrase a small Dorian warmth.',
+ difficulty='Intermediate compound-time song and exposed melodic entry',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=9),
+ technical_note='Keep the lower broken fifths light and unequal in weight. The LH is silent throughout bar 10, leaving the new upper entry alone. The B-natural in bar 11 briefly colours the otherwise pentatonic melody. The first phrase lasts five bars; do not force an earlier cadence.',
+ parent_opus=151,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['A','G','A']),ancestry=dict(source_opus=151,source_hand='rh',source_start_beat=0,source_end_beat=3,source_pitches=['E','D','E'],transposition_semitones=5),
+ system_starts=[1,4,7,10,13],page_starts=[],engraving=dict(spacing_system=12,pedal_offset_y=400),lower_sections={1:'pp',6:'p',11:'pp'},
+ pedal_spans=[[i*3,i*3+2.8] for i in range(15) if i!=9],
+ rh='''
+A4:1 G4:.5 A4:1.5
+F4:2 D4:1
+G4:1 A4:.5 C5:1.5
+A4:2 G4:1
+F4:1 E4:.5 D4:1.5
+A4:1.5 C5:.5 D5:1
+F5:1 E5:.5 D5:1.5
+C5:1 A4:1 G4:1
+F4:3
+R:.5 D5:.5 C5:1 A4:1
+G4:1 A4:.5 B4:1.5
+A4:2 F4:1
+E4:1 G4:.5 A4:1.5
+F4:1 E4:.5 D4:1.5
+D4+F4+A4:3
+''',lh='''
+D3:1 A3:.5 C4:1.5
+Bb2+F3:3
+C3:1 G3:.5 Bb3:1.5
+F3:1.5 C4:1.5
+D3+A3:3
+F3:1 C4:.5 E4:1.5
+Bb2+F3:3
+C3:1 G3:1 E3:1
+D3+A3:3
+R:3
+G2:1 D3:.5 F3:1.5
+D3+A3:3
+C3:1 G3:.5 Bb3:1.5
+A2+E3:3
+D3+A3:3
+''',sections={1:'p',6:'mp',9:'pp',11:'p',14:'pp'},words={1:'dolce',14:'poco rit.'},slurs=[(1,5),(6,9),(10,15)],lower_phrases=[],hairpins=[('crescendo',6,7),('diminuendo',12,14)],tempo_changes={},group=2,
+ performance=dict(rubato=[61,58,62,57,51,61,64,58,49,56,59,54,56,45,30],phrase_arcs=[[0,15,3],[15,27,3],[27,45,2]],lower_entries=[],pedal_lift=.2,gate=.98,note='A soft rocking motion supports the song without making it hurry. The unaccompanied entry should feel like a new breath, and the borrowed sixth should pass naturally.'))
 ]
