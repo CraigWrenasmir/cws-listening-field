@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="The Listening Field — piano studies from the CWS library. Explore each piece as a rotating sculpture, listen with the score, and download the notation.">
+<title>The Listening Field</title>
+<link rel="stylesheet" href="src/styles.css?v=3">
+<link rel="stylesheet" href="src/favourites.css?v=1">
+<script type="module" src="src/app.js?v=4"></script>
+</head>
+<body>
+<main id="cws-listening-field" class="is-entrance" aria-label="The Listening Field piano library">
+<header id="lf-header" class="lf-header" hidden><a class="lf-brand" id="lf-home" href="#overview">CWS / FIRST STUDIES</a><nav class="lf-header-nav" aria-label="Library navigation"><a id="lf-overview-link" href="#overview">Entrance</a><a href="kinship.html">Kinship</a><button type="button" id="lf-index-toggle" aria-expanded="false" aria-controls="lf-index">Index</button></nav></header>
+<nav id="lf-index" class="lf-index" aria-label="Catalogue" hidden></nav>
+<p id="lf-load-error" role="alert" hidden>The library could not load. Please reload this page.</p>
+
+<section id="lf-overview" class="lf-overview" aria-labelledby="lf-overview-title">
+<h1 id="lf-overview-title" tabindex="-1">The Listening <em>Field</em></h1>
+<svg id="lf-atlas-drawing" viewBox="0 0 760 540" role="img" aria-labelledby="lf-atlas-title lf-atlas-description"><title id="lf-atlas-title">Contours of the collection</title><desc id="lf-atlas-description">Each line follows the upper voice of a piano study.</desc><g id="lf-atlas-lines" fill="none"></g></svg>
+<a id="lf-enter-kinship" href="kinship.html">Kinship <span aria-hidden="true">↗</span></a>
+</section>
+<div id="lf-piece" hidden>
+<div id="lf-favourites"></div>
+<div id="lf-field" class="lf-field">
+<div class="lf-field-heading"><span>THE LISTENING FIELD</span><span id="lf-work-count">230 WORKS</span></div>
+<canvas id="lf-canvas" class="lf-canvas" role="img" aria-label="Rotatable contours of piano voices played with two hands. Drag to rotate, or use the Turn, Tilt and Roll buttons."></canvas>
+<div class="lf-field-footer"><div class="lf-legend"><span><i></i>Right hand</span><span><i class="lf-left"></i>Left hand</span><span id="lf-inner-legend" hidden><i class="lf-inner"></i>Inner voice</span><span id="lf-tenor-legend" hidden><i class="lf-tenor"></i>Tenor voice</span></div><span id="lf-kinship-label" class="lf-kinship-label" hidden>Shared phrases</span><span id="lf-drag-label">Drag to rotate · 360°</span><div class="lf-orbit-controls" role="group" aria-label="Rotate sculpture"><button type="button" data-rotate="1" aria-label="Turn sculpture 30 degrees">Turn</button><button type="button" data-rotate="0" aria-label="Tilt sculpture 30 degrees">Tilt</button><button type="button" data-rotate="2" aria-label="Roll sculpture 30 degrees">Roll</button></div></div>
+</div>
+<div id="lf-title-section" class="lf-title-section"><div><div id="lf-opus" class="lf-opus">CWS Op. 2</div><h1 id="lf-title" class="lf-title">Velvet Estuary</h1></div><span id="lf-stamp" class="lf-stamp">20260906182116</span></div>
+<div class="lf-controls"><div class="lf-actions"><button type="button" id="lf-play" class="lf-play" disabled>Loading…</button><button type="button" id="lf-save" class="cws-leaf-button" aria-pressed="false">Save</button><button type="button" id="lf-score-toggle" aria-pressed="false">Open score</button><button type="button" id="lf-kinship" aria-pressed="false">Trace kinship</button></div><div class="lf-time"><span id="lf-time">0:00 / 1:00</span><input id="lf-progress" class="lf-progress" type="range" min="0" max="60.15" value="0" step="0.05" aria-label="Playback position"></div></div>
+<div id="lf-audio-error" class="lf-audio-error" role="alert" hidden>The recording could not play. Please try again.</div>
+<section class="lf-listening-path" aria-label="Collection playlist">
+<div class="lf-path-heading"><div class="lf-path-choice"><label for="lf-path-route">Listening route</label><select id="lf-path-route" aria-describedby="lf-path-description lf-path-help" disabled></select></div><button type="button" id="lf-playlist-toggle" aria-pressed="false" disabled>Play route</button></div>
+<p id="lf-path-description" class="lf-path-description"></p>
+<p id="lf-path-status" class="lf-path-status" role="status">Loading listening routes…</p>
+<details class="lf-path-details"><summary id="lf-path-summary">Explore the listening order</summary><p id="lf-path-help">Changing route pauses playback. Play route begins at the first work; selecting a title begins there.</p><ol id="lf-path-order" class="lf-path-order"></ol></details>
+</section>
+<nav class="lf-downloads" aria-label="Download this piece"><a id="lf-download-pdf" download>Score PDF</a><a id="lf-download-audio" download>Recording</a><a id="lf-download-midi" download>MIDI</a><a id="lf-download-xml" download>MusicXML</a></nav>
+<section id="lf-score-shell" class="lf-score-shell" aria-label="Music notation" hidden><div class="lf-score-header"><span id="lf-score-title" class="lf-score-title"></span><span id="lf-score-opus" class="lf-score-opus"></span></div><div id="lf-score-body" class="lf-score-body"></div><div id="lf-score-stamp" class="lf-score-stamp"></div></section>
+<nav class="lf-navigation" aria-label="Move between pieces"><button type="button" id="lf-prev">← Moss Atlas</button><span id="lf-counter" class="lf-counter">02 / 230</span><button type="button" id="lf-next">Orchard Static →</button></nav>
+</div>
+<footer id="lf-colophon" class="lf-colophon" hidden><a href="downloads/index.html">Collected volumes</a><a href="https://github.com/CraigWrenasmir/cws-listening-field">About &amp; source</a></footer>
+<audio id="lf-audio" preload="metadata"></audio>
+<div id="lf-announcement" aria-live="polite" class="lf-sr-only"></div>
+</main>
+</body>
+</html>

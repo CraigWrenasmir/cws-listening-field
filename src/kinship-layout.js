@@ -1,0 +1,84 @@
+// Stable, deterministic tree layout. Links come only from catalogue ancestry.
+// A relaxed radial tree keeps the long chains apart without hiding short branches.
+function layoutSingle(data){
+ const nodes=data.map(p=>({op:p.op,parent:p.parent,x:0,y:0,vx:0,vy:0,children:[]}));
+ const byOp=new Map(nodes.map(p=>[p.op,p]));
+ if(byOp.size!==nodes.length)throw new Error('Duplicate opus');
+ const links=[];
+ for(const node of nodes){if(node.parent!=null){const parent=byOp.get(node.parent);if(!parent)throw new Error('Missing musical parent');parent.children.push(node);links.push({source:parent,target:node});}}
+ const roots=nodes.filter(p=>p.parent==null),seen=new Set();let leaf=0;
+ function plant(node,depth){
+  if(seen.has(node.op))throw new Error('Cyclic musical ancestry');seen.add(node.op);node.depth=depth;
+  node.children.sort((a,b)=>a.op-b.op).forEach(child=>plant(child,depth+1));
+  node.slot=node.children.length?node.children.reduce((sum,p)=>sum+p.slot,0)/node.children.length:leaf++;
+ }
+ roots.forEach(root=>plant(root,0));if(seen.size!==nodes.length)throw new Error('Cyclic musical ancestry');
+ for(const node of nodes){const angle=(node.slot+.5)/Math.max(1,leaf)*Math.PI*2;const radius=35+node.depth*36;node.x=Math.cos(angle)*radius;node.y=Math.sin(angle)*radius;}
+ // Bounded relaxation, independent of viewport and animation timing.
+ for(let step=0;step<480;step++){
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+   const a=nodes[i],b=nodes[j];let dx=a.x-b.x,dy=a.y-b.y;
+   if(Math.abs(dx)+Math.abs(dy)<.001){dx=.1;dy=.1;}
+   const distance=Math.hypot(dx,dy),force=Math.min(8,1100/(distance*distance));
+   const fx=dx/distance*force,fy=dy/distance*force;a.vx+=fx;a.vy+=fy;b.vx-=fx;b.vy-=fy;
+  }
+  for(const {source:a,target:b} of links){const dx=b.x-a.x,dy=b.y-a.y,distance=Math.hypot(dx,dy)||1;const force=(distance-43)*.035;const fx=dx/distance*force,fy=dy/distance*force;a.vx+=fx;a.vy+=fy;b.vx-=fx;b.vy-=fy;}
+  for(const node of nodes){node.vx=(node.vx-node.x*.0006)*.72;node.vy=(node.vy-node.y*.0006)*.72;node.x+=node.vx;node.y+=node.vy;}
+ }
+ const xs=nodes.map(p=>p.x),ys=nodes.map(p=>p.y),minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
+ const scale=Math.min(1070/Math.max(1,maxX-minX),640/Math.max(1,maxY-minY));
+ for(const node of nodes){node.x=600+(node.x-(minX+maxX)/2)*scale;node.y=390+(node.y-(minY+maxY)/2)*scale;}
+ // Fitting a growing tree can compress nearby points. Separate them in the
+ // final map coordinates so every opus retains a clear position at rest.
+ for(let pass=0;pass<120;pass++){
+  let moved=false;
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+   const a=nodes[i],b=nodes[j];let dx=b.x-a.x,dy=b.y-a.y;
+   let distance=Math.hypot(dx,dy);
+   if(distance>=24)continue;
+   if(distance<.0001){dx=1;dy=0;distance=1;}
+   const shift=(24-distance)/2+.001,ox=dx/distance*shift,oy=dy/distance*shift;
+   a.x=Math.max(65,Math.min(1135,a.x-ox));a.y=Math.max(70,Math.min(710,a.y-oy));
+   b.x=Math.max(65,Math.min(1135,b.x+ox));b.y=Math.max(70,Math.min(710,b.y+oy));
+   moved=true;
+  }
+  if(!moved)break;
+ }
+ return {nodes:nodes.map(({op,parent,x,y})=>({op,parent,x,y})),links:links.map(({source,target})=>({source:source.op,target:target.op}))};
+}
+
+
+// Each series keeps its own constellation; only documented ancestry crosses the gap.
+export function layoutKinship(data){
+ const whole=layoutSingle(data);
+ const groups=[...new Set(data.map(p=>p.series||'first'))].map(id=>({id,pieces:data.filter(p=>(p.series||'first')===id)}));
+ if(groups.length<2)return {...whole,regions:[]};
+ if(groups.length!==2)throw new Error('Review the map layout for additional series');
+ const totalWidth=950,share=Math.max(.42,Math.min(.72,Math.sqrt(groups[0].pieces.length)/(Math.sqrt(groups[0].pieces.length)+Math.sqrt(groups[1].pieces.length))));
+ const firstWidth=totalWidth*share,largest=Math.max(...groups.map(g=>g.pieces.length));
+ const nodes=[],regions=[];
+ for(const [index,group] of groups.entries()){
+  const ids=new Set(group.pieces.map(p=>p.op));
+  const local=layoutSingle(group.pieces.map(p=>({...p,parent:ids.has(p.parent)?p.parent:null}))).nodes;
+  const left=index===0?65:65+firstWidth+120,width=index===0?firstWidth:totalWidth-firstWidth;
+  const height=Math.max(220,600*Math.sqrt(group.pieces.length/largest)),top=400-height/2;
+  const xs=local.map(p=>p.x),ys=local.map(p=>p.y),cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2;
+  const scale=Math.min((width-36)/Math.max(1,Math.max(...xs)-Math.min(...xs)),(height-36)/Math.max(1,Math.max(...ys)-Math.min(...ys)));
+  for(const node of local){node.x=left+width/2+(node.x-cx)*scale;node.y=top+height/2+(node.y-cy)*scale;node.parent=group.pieces.find(p=>p.op===node.op).parent;node.series=group.id;}
+  for(let pass=0;pass<300;pass++){
+   let moved=false;
+   for(let i=0;i<local.length;i++)for(let j=i+1;j<local.length;j++){
+    const a=local[i],b=local[j];let dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);
+    if(d>=22)continue;if(d<.0001){dx=1;dy=0;d=1;}
+    const shift=(22-d)/2+.001,ox=dx/d*shift,oy=dy/d*shift;
+    a.x=Math.max(left,Math.min(left+width,a.x-ox));b.x=Math.max(left,Math.min(left+width,b.x+ox));
+    a.y=Math.max(top,Math.min(top+height,a.y-oy));b.y=Math.max(top,Math.min(top+height,b.y+oy));moved=true;
+   }
+   if(!moved)break;
+  }
+  nodes.push(...local);
+  regions.push({id:group.id,label:group.pieces[0].series_label||(group.id==='first'?'First Studies':'Second Studies'),first:Math.min(...ids),last:Math.max(...ids),count:ids.size,x:left+width/2,y:top-55,portraitX:400,portraitY:Math.max(24,left-55),left,right:left+width,top,bottom:top+height});
+ }
+ const byOp=new Map(nodes.map(p=>[p.op,p]));
+ return {nodes:data.map(p=>byOp.get(p.op)),links:whole.links,regions};
+}
