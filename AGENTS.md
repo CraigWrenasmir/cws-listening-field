@@ -35,3 +35,5 @@ This is Craig Warren Smith's piano library, developed with Maple. Preserve the a
 For the continuing Op. 7–300 commission, read and update `data/PROGRESS.md` after every completed piece. Preserve sleep/resume checkpoints, and distinguish completed checks, public deployment and Craig's listening approval.
 
 - Visitor favourites use src/favourites.js and the versioned cws-listening-field:favourites:v1 localStorage key, storing validated opus numbers only. Preserve shared player/Kinship state, cross-tab updates, the in-memory fallback when storage is denied, accessible leaf buttons and complete unfiltered Kinship/playlist coverage. Favourites remain browser-local; no accounts, server collection or cross-device sync are implied. Run scripts/test-favourites.mjs plus the player and Kinship integration tests when changing this feature.
+
+- Optional `engraving.spacing_staff` increases the space between staves for opposing inner-voice phrase slurs; the default remains 10 for earlier scores. Op. 177 uses 22, with both PDF pages inspected. Preserve existing recordings and score defaults when extending engraving options.

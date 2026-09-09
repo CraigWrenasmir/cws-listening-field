@@ -198,6 +198,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 168 | Hawthorn Crosswalk | 2/4, 3/4 (changing) | 85 | [Score](pieces/CWS_Op_168_Hawthorn_Crosswalk/CWS_Op_168_Hawthorn_Crosswalk.pdf) | [MP3](pieces/CWS_Op_168_Hawthorn_Crosswalk/CWS_Op_168_Hawthorn_Crosswalk.mp3) |
 | CWS Op. 169 | Willow Belvedere | 3/4 | 95 | [Score](pieces/CWS_Op_169_Willow_Belvedere/CWS_Op_169_Willow_Belvedere.pdf) | [MP3](pieces/CWS_Op_169_Willow_Belvedere/CWS_Op_169_Willow_Belvedere.mp3) |
 | CWS Op. 170 | Camellia Threshold | 12/8 | 128 | [Score](pieces/CWS_Op_170_Camellia_Threshold/CWS_Op_170_Camellia_Threshold.pdf) | [MP3](pieces/CWS_Op_170_Camellia_Threshold/CWS_Op_170_Camellia_Threshold.mp3) |
+| CWS Op. 171 | Salt Aperture | 4/4 | 86 | [Score](pieces/CWS_Op_171_Salt_Aperture/CWS_Op_171_Salt_Aperture.pdf) | [MP3](pieces/CWS_Op_171_Salt_Aperture/CWS_Op_171_Salt_Aperture.mp3) |
+| CWS Op. 172 | Reed Undertow | 4/4 | 75 | [Score](pieces/CWS_Op_172_Reed_Undertow/CWS_Op_172_Reed_Undertow.pdf) | [MP3](pieces/CWS_Op_172_Reed_Undertow/CWS_Op_172_Reed_Undertow.mp3) |
+| CWS Op. 173 | Glass Inlet | 5/4 | 84 | [Score](pieces/CWS_Op_173_Glass_Inlet/CWS_Op_173_Glass_Inlet.pdf) | [MP3](pieces/CWS_Op_173_Glass_Inlet/CWS_Op_173_Glass_Inlet.mp3) |
+| CWS Op. 174 | Sedge Soundings | 3/4, 4/4, 2/4 (changing) | 74 | [Score](pieces/CWS_Op_174_Sedge_Soundings/CWS_Op_174_Sedge_Soundings.pdf) | [MP3](pieces/CWS_Op_174_Sedge_Soundings/CWS_Op_174_Sedge_Soundings.mp3) |
+| CWS Op. 175 | Pearl Backwater | 6/4 | 136 | [Score](pieces/CWS_Op_175_Pearl_Backwater/CWS_Op_175_Pearl_Backwater.pdf) | [MP3](pieces/CWS_Op_175_Pearl_Backwater/CWS_Op_175_Pearl_Backwater.mp3) |
+| CWS Op. 176 | Willow Littoral | 6/8 | 121 | [Score](pieces/CWS_Op_176_Willow_Littoral/CWS_Op_176_Willow_Littoral.pdf) | [MP3](pieces/CWS_Op_176_Willow_Littoral/CWS_Op_176_Willow_Littoral.mp3) |
+| CWS Op. 177 | Lichen Floodplain | 4/4 | 106 | [Score](pieces/CWS_Op_177_Lichen_Floodplain/CWS_Op_177_Lichen_Floodplain.pdf) | [MP3](pieces/CWS_Op_177_Lichen_Floodplain/CWS_Op_177_Lichen_Floodplain.mp3) |
+| CWS Op. 178 | Mallow Slackwater | 7/4 | 54 | [Score](pieces/CWS_Op_178_Mallow_Slackwater/CWS_Op_178_Mallow_Slackwater.pdf) | [MP3](pieces/CWS_Op_178_Mallow_Slackwater/CWS_Op_178_Mallow_Slackwater.mp3) |
+| CWS Op. 179 | Iris Countertide | 5/4 | 87 | [Score](pieces/CWS_Op_179_Iris_Countertide/CWS_Op_179_Iris_Countertide.pdf) | [MP3](pieces/CWS_Op_179_Iris_Countertide/CWS_Op_179_Iris_Countertide.mp3) |
+| CWS Op. 180 | Fern Tideline | 4/4 | 136 | [Score](pieces/CWS_Op_180_Fern_Tideline/CWS_Op_180_Fern_Tideline.pdf) | [MP3](pieces/CWS_Op_180_Fern_Tideline/CWS_Op_180_Fern_Tideline.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

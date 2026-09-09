@@ -15,7 +15,7 @@ for p in cat:
     engraving=p.get('engraving',{})
     tk.setOptions(dict(pageWidth=2100,pageHeight=3100,adjustPageHeight=True,pageMarginTop=15,pageMarginBottom=70,pageMarginLeft=120,pageMarginRight=90,
                        scale=40,breaks='encoded',header='none',footer='none',font='Leipzig',
-                       spacingSystem=engraving.get('spacing_system',9),spacingStaff=10,systemMaxPerPage=6,svgViewBox=True,
+                       spacingSystem=engraving.get('spacing_system',9),spacingStaff=engraving.get('spacing_staff',10),systemMaxPerPage=6,svgViewBox=True,
                        mnumInterval=0,justifyVertically=False,minLastJustification=0))
     if not tk.loadFile(str(d/(stem+'.musicxml'))): raise RuntimeError('Load failed')
     print(stem,tk.getPageCount(),'pages')
