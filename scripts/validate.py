@@ -1,3 +1,4 @@
+from series_rules import series_for
 from pathlib import Path
 import json, xml.etree.ElementTree as ET, collections, subprocess, argparse, re
 import mido
@@ -15,7 +16,10 @@ for p in cat:
  if args.opus is not None and p['op'] not in args.opus:continue
  d=OUT/p['folder'];stem=p['stem'];r=ET.parse(d/(stem+'.musicxml')).getroot()
  pages=len(PdfReader(d/(stem+'.pdf')).pages)
- assert 1<=pages<=4
+ rules=series_for(p['op'])
+ assert 1<=pages<=rules['page_limit']
+ assert p['note_limit']==rules['note_limit'] and p['page_limit']==rules['page_limit']
+ assert ''.join(c for c in rules['header'] if c.isalpha()) in ''.join(c for c in PdfReader(d/(stem+'.pdf')).pages[0].extract_text() if c.isalpha()),('Wrong score series',p['op'])
  assert {f.name for f in d.glob(stem+'_page_*.svg')}=={f'{stem}_page_{i}.svg' for i in range(1,pages+1)},('SVG page set differs from PDF',p['op'])
  metres,bar_lengths,bar_starts,total_beats=bar_plan(p)
  if p.get('meters'):
@@ -36,7 +40,7 @@ for p in cat:
      score_count+=1;actual.append((onset_tick(n.offset),cn.pitch.midi))
  expected=[(onset_tick(e['offset']),pi) for e in p['events'] for pi in e['pitches']]
  assert collections.Counter(actual)==collections.Counter(expected),('MusicXML pitch/onset mismatch',stem)
- assert score_count==p['note_onsets']<=256
+ assert score_count==p['note_onsets']<=rules['note_limit']
  mid=mido.MidiFile(d/(stem+'.mid'));midi_notes=[];midi_metres=[]
  for tr in mid.tracks:
   tick=0;active={}

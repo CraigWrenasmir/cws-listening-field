@@ -1,6 +1,6 @@
 // Stable, deterministic tree layout. Links come only from catalogue ancestry.
 // A relaxed radial tree keeps the long chains apart without hiding short branches.
-export function layoutKinship(data){
+function layoutSingle(data){
  const nodes=data.map(p=>({op:p.op,parent:p.parent,x:0,y:0,vx:0,vy:0,children:[]}));
  const byOp=new Map(nodes.map(p=>[p.op,p]));
  if(byOp.size!==nodes.length)throw new Error('Duplicate opus');
@@ -45,4 +45,40 @@ export function layoutKinship(data){
   if(!moved)break;
  }
  return {nodes:nodes.map(({op,parent,x,y})=>({op,parent,x,y})),links:links.map(({source,target})=>({source:source.op,target:target.op}))};
+}
+
+
+// Each series keeps its own constellation; only documented ancestry crosses the gap.
+export function layoutKinship(data){
+ const whole=layoutSingle(data);
+ const groups=[...new Set(data.map(p=>p.series||'first'))].map(id=>({id,pieces:data.filter(p=>(p.series||'first')===id)}));
+ if(groups.length<2)return {...whole,regions:[]};
+ if(groups.length!==2)throw new Error('Review the map layout for additional series');
+ const totalWidth=950,share=Math.max(.42,Math.min(.72,Math.sqrt(groups[0].pieces.length)/(Math.sqrt(groups[0].pieces.length)+Math.sqrt(groups[1].pieces.length))));
+ const firstWidth=totalWidth*share,largest=Math.max(...groups.map(g=>g.pieces.length));
+ const nodes=[],regions=[];
+ for(const [index,group] of groups.entries()){
+  const ids=new Set(group.pieces.map(p=>p.op));
+  const local=layoutSingle(group.pieces.map(p=>({...p,parent:ids.has(p.parent)?p.parent:null}))).nodes;
+  const left=index===0?65:65+firstWidth+120,width=index===0?firstWidth:totalWidth-firstWidth;
+  const height=Math.max(220,600*Math.sqrt(group.pieces.length/largest)),top=400-height/2;
+  const xs=local.map(p=>p.x),ys=local.map(p=>p.y),cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2;
+  const scale=Math.min((width-36)/Math.max(1,Math.max(...xs)-Math.min(...xs)),(height-36)/Math.max(1,Math.max(...ys)-Math.min(...ys)));
+  for(const node of local){node.x=left+width/2+(node.x-cx)*scale;node.y=top+height/2+(node.y-cy)*scale;node.parent=group.pieces.find(p=>p.op===node.op).parent;node.series=group.id;}
+  for(let pass=0;pass<300;pass++){
+   let moved=false;
+   for(let i=0;i<local.length;i++)for(let j=i+1;j<local.length;j++){
+    const a=local[i],b=local[j];let dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy);
+    if(d>=22)continue;if(d<.0001){dx=1;dy=0;d=1;}
+    const shift=(22-d)/2+.001,ox=dx/d*shift,oy=dy/d*shift;
+    a.x=Math.max(left,Math.min(left+width,a.x-ox));b.x=Math.max(left,Math.min(left+width,b.x+ox));
+    a.y=Math.max(top,Math.min(top+height,a.y-oy));b.y=Math.max(top,Math.min(top+height,b.y+oy));moved=true;
+   }
+   if(!moved)break;
+  }
+  nodes.push(...local);
+  regions.push({id:group.id,label:group.pieces[0].series_label||(group.id==='first'?'First Studies':'Second Studies'),first:Math.min(...ids),last:Math.max(...ids),count:ids.size,x:left+width/2,y:top-55,portraitX:400,portraitY:Math.max(24,left-55),left,right:left+width,top,bottom:top+height});
+ }
+ const byOp=new Map(nodes.map(p=>[p.op,p]));
+ return {nodes:data.map(p=>byOp.get(p.op)),links:whole.links,regions};
 }

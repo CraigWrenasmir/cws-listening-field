@@ -62,6 +62,7 @@ route('#'+data[1].slug);await settle();tick();assert(document.querySelector('#lf
 route('');assert(home());route('#'+data[1].slug);assert(!home(),'Back and forward must reopen even the same selected piece');route('#unrecognised');assert(home());assert(audio.paused);
 for(let i=0;i<data.length;i++){
  const p=data[i];click(`[data-work="${i}"]`);await settle();tick();
+ assert.equal(document.querySelector('#lf-home').textContent,'CWS / '+p.series_label.toUpperCase(),'Player must follow the selected study series');
  assert.equal(document.querySelector('#lf-title').textContent,p.title);assert.equal(location.hash,'#'+p.slug);assert.equal(document.querySelector('#lf-download-pdf').getAttribute('href'),p.pdf);assert.equal(duration,p.duration);
  const extraVoices=['inner','tenor'].map(kind=>{const event=p.events.find(e=>e.v===kind);assert.equal(document.querySelector('#lf-'+kind+'-legend').hidden,!event);return event;}).filter(Boolean);
  const voiceProbes=extraVoices.map(e=>e.s+Math.min(.1,(e.e-e.s)/2));

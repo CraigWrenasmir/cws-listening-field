@@ -254,7 +254,7 @@ function showOverview(writeHistory=true){
  q('#lf-overview').hidden=false;q('#lf-piece').hidden=true;q('#lf-header').hidden=true;q('#lf-colophon').hidden=true;root.classList.add('is-entrance');closeIndex();
  q('#lf-overview-link').setAttribute('aria-current','page');
  root.querySelectorAll('[data-work]').forEach(el=>el.setAttribute('aria-current','false'));
- document.title='The Listening Field · CWS First Studies';
+ document.title='The Listening Field';
  if(writeHistory&&location.hash!=='#overview')history.pushState(null,'','#overview');
  q('#lf-announcement').textContent='Collection overview · '+data.length+' piano studies';
  if(writeHistory)q('#lf-overview-title').focus({preventScroll:true});
@@ -266,6 +266,7 @@ function choose(index,keepPlaylist=false,writeHistory=true){
  playbackRequest++;playbackWanted=false;state.playlist=keepPlaylist;
  audio.pause();state.selected=index;audio.src=data[index].audio;q('#lf-play').textContent='Play';q('#lf-play').disabled=false;q('#lf-play').setAttribute('aria-label','Play '+names[index]);q('#lf-audio-error').hidden=true;
  refreshFamily();refreshFavourites();
+ q('#lf-home').textContent='CWS / '+(data[index].series_label||'First Studies').toUpperCase();
  q('#lf-title').textContent=names[index];q('#lf-opus').textContent='CWS Op. '+data[index].op;q('#lf-stamp').textContent=data[index].stamp;
  q('#lf-inner-legend').hidden=!trackKinds[index].includes('inner');
  q('#lf-tenor-legend').hidden=!trackKinds[index].includes('tenor');

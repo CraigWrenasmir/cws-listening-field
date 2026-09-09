@@ -25,6 +25,11 @@ for(const portrait of [false,true]){
  assert.equal(all().length,data.length);assert.equal(edges().length,layout.links.length);
  assert.equal(document.querySelectorAll('audio').length,0,'Kinship must not autoplay or preload a recording');
  assert.equal(svg.getAttribute('viewBox'),portrait?'0 0 780 1200':'0 0 1200 780');
+ for(const region of layout.regions){
+  const label=document.querySelector(`[data-series-region="${region.id}"]`);
+  assert.equal(label.getAttribute('transform'),`translate(${portrait?region.portraitX:region.x},${portrait?region.portraitY:region.y})`);
+  assert(label.textContent.includes(region.label));
+ }
  for(const p of data){const link=document.querySelector(`[data-opus="${p.op}"]`);assert.equal(link.getAttribute('href'),'index.html#'+p.slug);assert(link.getAttribute('aria-label').includes(p.title));send(link,'focus');assert(document.getElementById('kf-selected').textContent.includes(p.title));
   const expected=[];let ancestor=p;while(ancestor.parent!=null){expected.push(ancestor.op);ancestor=data.find(n=>n.op===ancestor.parent);}
   assert.deepEqual(edges().filter(el=>el.classList.contains('is-lineage')).map(el=>Number(el.dataset.child)).sort((a,b)=>a-b),expected.sort((a,b)=>a-b));
@@ -40,6 +45,27 @@ for(const portrait of [false,true]){
  const beforeKey=document.querySelector('.is-current').dataset.opus;send(svg,'keydown',{key:'ArrowLeft'});if(document.querySelector('.is-current').dataset.opus===beforeKey)send(svg,'keydown',{key:'ArrowRight'});assert.notEqual(document.querySelector('.is-current').dataset.opus,beforeKey,'Keyboard arrows must reach another work');
  send(svg,'keydown',{key:'+'});assert(Number(svg.dataset.zoom)>1);send(svg,'keydown',{key:'0'});assert.equal(svg.dataset.zoom,'1.000');
  rect={left:0,top:0,width:portrait?1200:360,height:portrait?780:600};resize();assert.equal(svg.getAttribute('viewBox'),portrait?'0 0 1200 780':'0 0 780 1200');assert.equal(all().length,data.length);assert.equal(edges().length,layout.links.length);
+ for(const region of layout.regions)assert.equal(document.querySelector(`[data-series-region="${region.id}"]`).getAttribute('transform'),`translate(${portrait?region.x:region.portraitX},${portrait?region.y:region.portraitY})`,'Series labels must follow orientation changes');
 }
 const failure=parseHTML(html).document;await startKinship(failure,async()=>({ok:false}));assert(!failure.getElementById('kf-error').hidden);
 console.log(`Kinship passed: ${data.length} works, ${layout.links.length} exact ancestry links, all points within initial view, distinct positions, stable layout, direct links, lineage selection, landscape/portrait, zoom/pan/pinch/keyboard/reset, and loading failure. DOM harness; no browser rendering test.`);
+
+// The completed first series and a growing second series stay visible together.
+for(const count of [1,5,200]){
+ const first=data.filter(p=>p.op<=200).map(p=>({...p,series:'first',series_label:'First Studies'}));
+ const second=Array.from({length:count},(_,i)=>({op:201+i,parent:i<5?200-i:200+i,series:'second',series_label:'Second Studies'}));
+ const fixture=[...first,...second],map=layoutKinship(fixture);
+ assert.equal(map.regions.length,2);assert(map.regions[0].right<map.regions[1].left,'Series regions must be spatially distinct');
+ assert.deepEqual(map.links,fixture.filter(p=>p.parent!=null).map(p=>({source:p.parent,target:p.op})),'Bridges must retain exact ancestry');
+ for(const n of map.nodes){const region=map.regions.find(r=>r.id===n.series);assert(n.x>=region.left-.001&&n.x<=region.right+.001&&n.y>=region.top-.001&&n.y<=region.bottom+.001);}
+ for(let i=0;i<map.nodes.length;i++)for(let j=i+1;j<map.nodes.length;j++)assert(Math.hypot(map.nodes[i].x-map.nodes[j].x,map.nodes[i].y-map.nodes[j].y)>20,'Both series retain distinct points as the pilots grow');
+}
+if(data.some(p=>p.series==='second')){
+ const {document}=parseHTML(html),svg=document.getElementById('kf-map');svg.getBoundingClientRect=()=>({width:1200,height:780});
+ mountKinship(document.getElementById('cws-kinship'),data);
+ assert.equal(document.querySelectorAll('[data-series-region]').length,2);
+ assert(document.querySelector('#kf-regions').textContent.includes('Second Studies'));
+ const expected=data.filter(p=>p.parent!=null&&data.find(a=>a.op===p.parent).series!==p.series);
+ assert.deepEqual([...document.querySelectorAll('.is-bridge')].map(e=>Number(e.dataset.child)),expected.map(p=>p.op));
+}
+console.log('Series regions passed: pilot growth, complete 400-work fixture, separated regions, exact bridges and series labels.');

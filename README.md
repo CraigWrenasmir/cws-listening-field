@@ -1,6 +1,6 @@
 # The Listening Field
 
-**CWS / FIRST STUDIES** — a growing collection of piano miniatures presented as freely rotating sculptures of their musical voices, played with two hands.
+**CWS / STUDIES** — First Studies (Op. 1–200) and Second Studies (from Op. 201), a collection of piano works presented as freely rotating sculptures of their musical voices, played with two hands.
 
 [Open the public gallery on GitHub Pages](https://listeningfield.wrenasmir.com/).
 
@@ -228,6 +228,11 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 198 | Clover Halfmoon | 5/8, 7/8 (changing) | 109 | [Score](pieces/CWS_Op_198_Clover_Halfmoon/CWS_Op_198_Clover_Halfmoon.pdf) | [MP3](pieces/CWS_Op_198_Clover_Halfmoon/CWS_Op_198_Clover_Halfmoon.mp3) |
 | CWS Op. 199 | Pearl Nightmargin | 4/4 | 66 | [Score](pieces/CWS_Op_199_Pearl_Nightmargin/CWS_Op_199_Pearl_Nightmargin.pdf) | [MP3](pieces/CWS_Op_199_Pearl_Nightmargin/CWS_Op_199_Pearl_Nightmargin.mp3) |
 | CWS Op. 200 | Velvet Confluence | 6/8, 4/4 (changing) | 150 | [Score](pieces/CWS_Op_200_Velvet_Confluence/CWS_Op_200_Velvet_Confluence.pdf) | [MP3](pieces/CWS_Op_200_Velvet_Confluence/CWS_Op_200_Velvet_Confluence.mp3) |
+| CWS Op. 201 | Fennel Daybreak | 4/4 | 298 | [Score](pieces/CWS_Op_201_Fennel_Daybreak/CWS_Op_201_Fennel_Daybreak.pdf) | [MP3](pieces/CWS_Op_201_Fennel_Daybreak/CWS_Op_201_Fennel_Daybreak.mp3) |
+| CWS Op. 202 | Clover Sunshower | 3/4, 5/4, 4/4 (changing) | 317 | [Score](pieces/CWS_Op_202_Clover_Sunshower/CWS_Op_202_Clover_Sunshower.pdf) | [MP3](pieces/CWS_Op_202_Clover_Sunshower/CWS_Op_202_Clover_Sunshower.mp3) |
+| CWS Op. 203 | Camellia Refractions | 5/4 | 441 | [Score](pieces/CWS_Op_203_Camellia_Refractions/CWS_Op_203_Camellia_Refractions.pdf) | [MP3](pieces/CWS_Op_203_Camellia_Refractions/CWS_Op_203_Camellia_Refractions.mp3) |
+| CWS Op. 204 | Fennel Parallax | 3/2 | 154 | [Score](pieces/CWS_Op_204_Fennel_Parallax/CWS_Op_204_Fennel_Parallax.pdf) | [MP3](pieces/CWS_Op_204_Fennel_Parallax/CWS_Op_204_Fennel_Parallax.mp3) |
+| CWS Op. 205 | Willow Iridescence | 6/4 | 320 | [Score](pieces/CWS_Op_205_Willow_Iridescence/CWS_Op_205_Willow_Iridescence.pdf) | [MP3](pieces/CWS_Op_205_Willow_Iridescence/CWS_Op_205_Willow_Iridescence.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
@@ -276,7 +281,7 @@ npm run build
 
 On Apple Silicon macOS with Homebrew Cairo, use `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib .venv/bin/python scripts/engrave.py --opus 4 5 6` if Cairo cannot be located. Inspect the rendered score pages in `work/qa/` before publishing. Do not rerender approved audio as part of an unrelated website change.
 
-Composition stamps use `YYYYMMDDHHMMSS` in Sydney local time and remain stable across revisions. The first three retain their documented first-save timestamp; new stamps record the first saved score. The provisional ceiling is four printed pages and 256 sounded pitch onsets per piece. Each chord pitch and repeated attack counts separately; tied continuations do not add onsets. Op. 1–20 began as late-beginner to intermediate studies. From Op. 21, the repertoire becomes progressively more experimental and advanced; individual technical demands are documented in the source catalogue, pending keyboard feedback.
+Composition stamps use `YYYYMMDDHHMMSS` in Sydney local time and remain stable across revisions. The first three retain their documented first-save timestamp; new stamps record the first saved score. First Studies retain the four-page and 256-onset ceilings. Second Studies allow six pages and 768 sounded pitch onsets, usually over two to five minutes. The first five pilots explore an extended song, an asymmetric dance, chord variations, spacious counterpoint and continuous transformation. Each chord pitch and repeated attack counts separately; tied continuations do not add onsets. Op. 1–20 began as late-beginner to intermediate studies. From Op. 21, the repertoire becomes progressively more experimental and advanced; individual technical demands are documented in the source catalogue, pending keyboard feedback.
 
 ## How the sculptures work
 

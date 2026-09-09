@@ -3,9 +3,11 @@ import {readFile,stat,readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 const root=new URL('../',import.meta.url),data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
 assert(data.length>=6);assert.equal(new Set(data.map(p=>p.op)).size,data.length);assert.equal(new Set(data.map(p=>p.slug)).size,data.length);
+const series=JSON.parse(await readFile(new URL('data/series.json',root),'utf8'));
 for(const p of data){
+ const rules=series.find(s=>s.first_opus<=p.op&&p.op<=s.last_opus);assert(rules);assert.equal(p.series,rules.id);assert.equal(p.series_label,rules.label);assert.equal(p.note_limit,rules.note_limit);assert.equal(p.page_limit,rules.page_limit);
  assert(p.beats>0);
- assert(p.duration>15&&p.performance<p.duration);assert(p.pages>=1&&p.pages<=4);assert(p.note_onsets<=256);assert(/^\d{14}$/.test(p.stamp));
+ assert(p.duration>15&&p.performance<p.duration);assert(p.pages>=1&&p.pages<=rules.page_limit);assert(p.note_onsets<=rules.note_limit);assert(/^\d{14}$/.test(p.stamp));
  assert.equal(p.events.reduce((n,e)=>n+e.ps.length,0),p.note_onsets);
  if(p.parent)assert(data.some(a=>a.op===p.parent));
  const visited=new Set();let parent=p;while(parent?.parent){assert(!visited.has(parent.op),'Cyclic musical ancestry');visited.add(parent.op);parent=data.find(a=>a.op===parent.parent);}
@@ -28,6 +30,9 @@ assert.deepEqual(volumes.flatMap(v=>v.ops),data.map(p=>p.op),'Download volumes m
 const downloadPage=await readFile(new URL('downloads/index.html',root),'utf8');
 for(const v of volumes){
  assert(v.count>0&&v.count<=24&&v.count===v.ops.length);
+ const members=data.filter(p=>v.ops.includes(p.op)),rules=series.find(s=>s.id===v.series);assert(rules);
+ assert(members.every(p=>p.series===v.series),'Download volumes must not mix study series');
+ assert.equal(v.series_label,rules.label);assert.equal(v.complete,v.count===24||v.last===rules.last_opus);
  assert.equal(v.pages,data.filter(p=>v.ops.includes(p.op)).reduce((n,p)=>n+p.pages,0));
  for(const kind of ['pdf','zip']){
   const bytes=(await stat(new URL(v[kind],root))).size;

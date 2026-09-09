@@ -1,3 +1,4 @@
+from series_rules import series_for
 from pathlib import Path
 from fractions import Fraction
 from bisect import bisect_right
@@ -306,7 +307,8 @@ def make_score(p):
                 m.append(n)
                 offset+=dur
             if mi==len(rows):
-                refs[(hand,mi)][-1].expressions.append(expressions.Fermata())
+                if refs[(hand,mi)]:
+                    refs[(hand,mi)][-1].expressions.append(expressions.Fermata())
                 m.rightBarline=bar.Barline('final')
             part.append(m)
         assert held is None,('Unclosed tie',p['op'],hand)
@@ -477,7 +479,7 @@ def main():
         ident=root.find('identification')
         enc=ident.find('encoding') if ident is not None else None
         if enc is not None:
-            sw=ET.SubElement(enc,'software');sw.text='CWS Library - first studies with Maple (AI)'
+            sw=ET.SubElement(enc,'software');sw.text='CWS Library - '+series_for(p['op'])['label'].lower()+' with Maple (AI)'
         # Split tied fragments need distinct notation IDs, but remain one sounded onset.
         seen={}
         for n in root.findall('.//part/measure/note'):
@@ -511,7 +513,8 @@ def main():
         if p.get('voice_phrases'):normalise_slur_numbers(root,events)
         tree.write(xmlpath,encoding='utf-8',xml_declaration=True)
         onset_count=sum(len(e['pitches']) for e in events)
-        assert onset_count<=256
+        rules=series_for(p['op'])
+        assert onset_count<=rules['note_limit']
         metres,bar_lengths,bar_starts,total_beats=bar_plan(p,len(parse_rows(p['rh'])))
         bpb=None if p.get('meters') else bar_lengths[0]
         entry=dict(prior.get(p['op'],{}))
@@ -532,7 +535,7 @@ def main():
             times[p['op']]=dict(opus=p['op'],composition_time=now.isoformat(timespec='seconds'),composition_stamp=now.strftime(STYLE['composition_stamp_format']),source='Recorded when the first score was saved.')
         record=times[p['op']]
         entry.update(folder=folder.name,stem=stem,bars=len(parse_rows(p['rh'])),beats_per_bar=bpb,note_onsets=onset_count,events=events,
-                     version=STYLE['format_version'],note_limit=256,page_limit=4,
+                     version=STYLE['format_version'],series=rules['id'],note_limit=rules['note_limit'],page_limit=rules['page_limit'],
                      composition_time=record['composition_time'],composition_stamp=record['composition_stamp'],composition_time_source=record['source'])
         if p.get('meters'):
             entry.update(bar_beats=bar_lengths,bar_offsets=bar_starts,total_beats=total_beats)

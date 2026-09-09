@@ -1,3 +1,4 @@
+from series_rules import series_for
 from pathlib import Path
 import json, io, argparse, xml.etree.ElementTree as ET
 import verovio, cairosvg
@@ -59,7 +60,7 @@ for p in cat:
         buff=io.BytesIO();c=canvas.Canvas(buff,pagesize=A4)
         c.setTitle(p['title']+f' | CWS Op. {p["op"]}');c.setAuthor('CWS Library - studies with Maple (AI)')
         c.setFillColor(HexColor('#2f3b38'));c.setFont('Helvetica',9)
-        c.drawString(35,807,'C W S   /   F I R S T   S T U D I E S')
+        c.drawString(35,807,' '.join(series_for(p['op'])['header']))
         c.setFillColor(HexColor('#151e1b'));c.setFont('Times-Roman',27)
         c.drawString(35,772,p['title'])
         c.setFont('Helvetica',10);c.drawRightString(A4[0]-35,775,f'CWS Op. {p["op"]}')

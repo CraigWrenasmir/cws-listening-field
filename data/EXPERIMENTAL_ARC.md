@@ -16,3 +16,7 @@ This instruction supersedes the playing-level clause in the original Op. 7–300
 Op. 1–20 keep their existing music and limits. New pieces declare a difficulty description, specific technical features and gesture limits appropriate to their writing. These limits are review thresholds, not proof of human playability. Inspect complete scores, review hand shapes and transitions, preserve accurate MIDI/score timing, and retain the four-page/onset constraints. Do not silently roll a chord or redistribute it between hands without matching notation. Keyboard/listening feedback remains outstanding.
 
 The names and musical ancestry remain part of the same library. Continue the sequential completion/checkpoint workflow in `data/PROGRESS.md`; revise this direction in response to Craig's feedback.
+
+## Second Studies pilot
+
+Craig approved Op. 201–205 as five pilots, with longer developing forms, more daylight and dynamic contrast, and more varied endings. Second Studies permit six printed pages and 768 sounded pitch onsets, usually 2–5 minutes. First Studies (Op. 1–200) remain complete and unchanged. Kinship retains exact ancestry while showing two connected series regions. Stop at 205 and seek listening feedback before extending the series.

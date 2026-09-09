@@ -1,5 +1,5 @@
 import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';
-import {layoutKinship} from './kinship-layout.js?v=3';
+import {layoutKinship} from './kinship-layout.js?v=4';
 
 export function mountKinship(root,data){
  const document=root.ownerDocument,q=selector=>root.querySelector(selector),svg=q('#kf-map');
@@ -13,6 +13,15 @@ export function mountKinship(root,data){
  const view={x:0,y:0,width:baseWidth,height:baseHeight};let selected=null,scale=1,suppressClick=false,drag=null,pinch=null,touchOpus=null;
  const pointers=new Map();
  function element(tag,attributes={},text){const node=document.createElementNS(svgNS,tag);for(const [key,value] of Object.entries(attributes))node.setAttribute(key,String(value));if(text!==undefined)node.textContent=text;return node;}
+ const regionLabels=[];
+ for(const region of layout.regions){
+  const group=element('g',{'class':'kf-region','data-series-region':region.id});
+  group.append(element('text',{'class':'kf-series-title','text-anchor':'middle'},region.label),element('text',{'class':'kf-series-range',y:22,'text-anchor':'middle'},String(region.first).padStart(3,'0')+' — '+String(region.last).padStart(3,'0')));
+  regionLabels.push({region,group});q('#kf-regions').append(group);
+ }
+ function positionRegions(){for(const {region,group} of regionLabels)group.setAttribute('transform',`translate(${portrait?region.portraitX:region.x},${portrait?region.portraitY:region.y})`);}
+ positionRegions();
+ if(layout.regions.length)q('#kf-description').textContent='First Studies and Second Studies form distinct connected regions. All '+data.length+' works are visible. Hover or focus a point for its title; on touchscreens tap a point, then its title below. Lines show musical ancestry, with copper bridges between series. Zoom or drag to explore; All restores the whole collection.';
  function updateView(){
   view.x=Math.min(baseWidth-view.width,Math.max(0,view.x));view.y=Math.min(baseHeight-view.height,Math.max(0,view.y));
   svg.setAttribute('viewBox',`${view.x} ${view.y} ${view.width} ${view.height}`);svg.dataset.zoom=scale.toFixed(3);
@@ -44,11 +53,12 @@ export function mountKinship(root,data){
  for(const link of layout.links){
   const a=points.get(link.source),b=points.get(link.target),dx=b.x-a.x,dy=b.y-a.y;
   const path=element('path',{'data-parent':link.source,'data-child':link.target,d:`M${a.x},${a.y} Q${(a.x+b.x)/2-dy*.07},${(a.y+b.y)/2+dx*.07} ${b.x},${b.y}`});
+  if((byOp.get(link.source).series||'first')!==(byOp.get(link.target).series||'first'))path.classList.add('is-bridge');
   edges.set(link.target,path);q('#kf-connections').append(path);
  }
  for(const point of points.values()){
   const piece=byOp.get(point.op),parent=byOp.get(piece.parent),label='CWS Op. '+piece.op+', '+piece.title;
-  const anchor=element('a',{href:'index.html#'+piece.slug,class:'kf-node','data-opus':piece.op,transform:`translate(${point.x},${point.y})`,tabindex:'-1','aria-label':label+(parent?'; musical parent: '+parent.title:'; origin of the collection')});
+  const anchor=element('a',{href:'index.html#'+piece.slug,class:'kf-node','data-opus':piece.op,'data-series':piece.series||'first',transform:`translate(${point.x},${point.y})`,tabindex:'-1','aria-label':label+(parent?'; musical parent: '+parent.title:'; origin of the collection')});
   anchor.append(element('title',{},label),element('circle',{class:'kf-hit',r:14}),element('circle',{class:'kf-point',r:piece.parent==null?5:3.6}),element('text',{class:'kf-number',x:8,y:-7},String(piece.op).padStart(3,'0')));
   anchor.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch'&&!drag)select(piece.op);});anchor.addEventListener('focus',()=>select(piece.op));
   anchors.set(piece.op,anchor);q('#kf-works').append(anchor);
@@ -102,7 +112,7 @@ export function mountKinship(root,data){
   portrait=next;baseWidth=portrait?780:1200;baseHeight=portrait?1200:780;
   for(const original of layout.nodes){const point=points.get(original.op);point.x=portrait?original.y:original.x;point.y=portrait?original.x:original.y;anchors.get(point.op).setAttribute('transform',`translate(${point.x},${point.y})`);}
   for(const {source,target} of layout.links){const a=points.get(source),b=points.get(target),dx=b.x-a.x,dy=b.y-a.y;edges.get(target).setAttribute('d',`M${a.x},${a.y} Q${(a.x+b.x)/2-dy*.07},${(a.y+b.y)/2+dx*.07} ${b.x},${b.y}`);}
-  fit();
+  positionRegions();fit();
  }).observe(svg);
  function refreshFavourites(){for(const [op,anchor] of anchors){anchor.classList.toggle('is-saved',favourites.has(op));const piece=byOp.get(op),parent=byOp.get(piece.parent);anchor.setAttribute('aria-label','CWS Op. '+op+', '+piece.title+(favourites.has(op)?'; saved to favourites':'')+(parent?'; musical parent: '+parent.title:'; origin of the collection'));}if(selected!==null)updateLeaf(q('#kf-save'),byOp.get(selected),favourites);}
  favourites.subscribe(refreshFavourites);
