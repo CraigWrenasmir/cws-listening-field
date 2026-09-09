@@ -208,6 +208,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 178 | Mallow Slackwater | 7/4 | 54 | [Score](pieces/CWS_Op_178_Mallow_Slackwater/CWS_Op_178_Mallow_Slackwater.pdf) | [MP3](pieces/CWS_Op_178_Mallow_Slackwater/CWS_Op_178_Mallow_Slackwater.mp3) |
 | CWS Op. 179 | Iris Countertide | 5/4 | 87 | [Score](pieces/CWS_Op_179_Iris_Countertide/CWS_Op_179_Iris_Countertide.pdf) | [MP3](pieces/CWS_Op_179_Iris_Countertide/CWS_Op_179_Iris_Countertide.mp3) |
 | CWS Op. 180 | Fern Tideline | 4/4 | 136 | [Score](pieces/CWS_Op_180_Fern_Tideline/CWS_Op_180_Fern_Tideline.pdf) | [MP3](pieces/CWS_Op_180_Fern_Tideline/CWS_Op_180_Fern_Tideline.mp3) |
+| CWS Op. 181 | Alder Afterlight | 4/4 | 79 | [Score](pieces/CWS_Op_181_Alder_Afterlight/CWS_Op_181_Alder_Afterlight.pdf) | [MP3](pieces/CWS_Op_181_Alder_Afterlight/CWS_Op_181_Alder_Afterlight.mp3) |
+| CWS Op. 182 | Hawthorn Dialtone | 3/4 | 86 | [Score](pieces/CWS_Op_182_Hawthorn_Dialtone/CWS_Op_182_Hawthorn_Dialtone.pdf) | [MP3](pieces/CWS_Op_182_Hawthorn_Dialtone/CWS_Op_182_Hawthorn_Dialtone.mp3) |
+| CWS Op. 183 | Briar Refrain | 3/4 | 92 | [Score](pieces/CWS_Op_183_Briar_Refrain/CWS_Op_183_Briar_Refrain.pdf) | [MP3](pieces/CWS_Op_183_Briar_Refrain/CWS_Op_183_Briar_Refrain.mp3) |
+| CWS Op. 184 | Fern Longshadow | 4/4 | 66 | [Score](pieces/CWS_Op_184_Fern_Longshadow/CWS_Op_184_Fern_Longshadow.pdf) | [MP3](pieces/CWS_Op_184_Fern_Longshadow/CWS_Op_184_Fern_Longshadow.mp3) |
+| CWS Op. 185 | Juniper Vestige | 6/4 | 133 | [Score](pieces/CWS_Op_185_Juniper_Vestige/CWS_Op_185_Juniper_Vestige.pdf) | [MP3](pieces/CWS_Op_185_Juniper_Vestige/CWS_Op_185_Juniper_Vestige.mp3) |
+| CWS Op. 186 | Willow Secondlight | 5/4, 4/4, 3/4 (changing) | 84 | [Score](pieces/CWS_Op_186_Willow_Secondlight/CWS_Op_186_Willow_Secondlight.pdf) | [MP3](pieces/CWS_Op_186_Willow_Secondlight/CWS_Op_186_Willow_Secondlight.mp3) |
+| CWS Op. 187 | Elm Palinode | 5/4 | 86 | [Score](pieces/CWS_Op_187_Elm_Palinode/CWS_Op_187_Elm_Palinode.pdf) | [MP3](pieces/CWS_Op_187_Elm_Palinode/CWS_Op_187_Elm_Palinode.mp3) |
+| CWS Op. 188 | Moss Palimpsest | 7/4 | 45 | [Score](pieces/CWS_Op_188_Moss_Palimpsest/CWS_Op_188_Moss_Palimpsest.pdf) | [MP3](pieces/CWS_Op_188_Moss_Palimpsest/CWS_Op_188_Moss_Palimpsest.mp3) |
+| CWS Op. 189 | Rowan Refraction | 4/4 | 83 | [Score](pieces/CWS_Op_189_Rowan_Refraction/CWS_Op_189_Rowan_Refraction.pdf) | [MP3](pieces/CWS_Op_189_Rowan_Refraction/CWS_Op_189_Rowan_Refraction.mp3) |
+| CWS Op. 190 | Willow Remanence | 4/4 | 94 | [Score](pieces/CWS_Op_190_Willow_Remanence/CWS_Op_190_Willow_Remanence.pdf) | [MP3](pieces/CWS_Op_190_Willow_Remanence/CWS_Op_190_Willow_Remanence.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
