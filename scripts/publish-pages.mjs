@@ -12,11 +12,11 @@ assert.equal(git(['status','--porcelain']),'','Commit the reviewed source before
 const source=git(['rev-parse','HEAD']),files=await publicationFiles(root);
 assert(files.reduce((s,f)=>s+f.bytes,0)<SITE_LIMIT);
 const tracked=new Map(git(['ls-tree','-r',source]).split('\n').map(line=>{const [meta,name]=line.split('\t');return [name,meta.split(' ')[2]];}));
-const entries=[];
+const entries=[],objectFormat=git(['rev-parse','--show-object-format']);
 for(const f of files){
  const built=await readFile(path.join(root,'dist',f.path));
  assert(built.equals(await readFile(path.join(root,f.path))),'Stale build: '+f.path);
- const oid=git(['hash-object','--stdin'],{input:built});assert.equal(oid,tracked.get(f.path),'Uncommitted publication file: '+f.path);
+ const oid=createHash(objectFormat).update(`blob ${built.length}\0`).update(built).digest('hex');assert.equal(oid,tracked.get(f.path),'Uncommitted publication file: '+f.path);
  entries.push(`100644 ${oid}\t${f.path}`);
 }
 const remote=git(['ls-remote','--heads','origin','refs/heads/gh-pages']).split(/\s/)[0];
