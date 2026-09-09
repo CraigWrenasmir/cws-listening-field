@@ -252,7 +252,7 @@ for p in cat:
   assert tuplets[key]==group['count'],('Notated tuplet count mismatch',p['op'],group,tuplets[key])
  tuplet_bar_numbers={}
  for number,spec in enumerate(p.get('tuplet_spans',[]),1):
-  group=sorted([e for e in p['events'] if e['hand']==spec['hand'] and (not spec.get('voice') or e.get('voice')==spec['voice']) and spec['start_beat']<=e['offset']<spec['end_beat']-1e-8],key=lambda e:e['offset'])
+  group=sorted([e for e in p['events'] if e['hand']==spec['hand'] and (not spec.get('voice') or e.get('voice')==spec['voice']) and spec['start_beat']-1e-8<=e['offset']<spec['end_beat']-1e-8],key=lambda e:e['offset'])
   assert len(group)==spec['actual']
   xml_notes={n.get('id'):n for n in r.findall('.//part/measure/note') if n.get('id')}
   if len(p.get('tuplet_spans',[]))>6:

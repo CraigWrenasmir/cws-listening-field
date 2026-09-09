@@ -248,6 +248,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 218 | Reed Inversion | 7/4 | 262 | [Score](pieces/CWS_Op_218_Reed_Inversion/CWS_Op_218_Reed_Inversion.pdf) | [MP3](pieces/CWS_Op_218_Reed_Inversion/CWS_Op_218_Reed_Inversion.mp3) |
 | CWS Op. 219 | Pearl Migration | 5/4 | 304 | [Score](pieces/CWS_Op_219_Pearl_Migration/CWS_Op_219_Pearl_Migration.pdf) | [MP3](pieces/CWS_Op_219_Pearl_Migration/CWS_Op_219_Pearl_Migration.mp3) |
 | CWS Op. 220 | Velvet Arrival | 6/4 | 284 | [Score](pieces/CWS_Op_220_Velvet_Arrival/CWS_Op_220_Velvet_Arrival.pdf) | [MP3](pieces/CWS_Op_220_Velvet_Arrival/CWS_Op_220_Velvet_Arrival.mp3) |
+| CWS Op. 221 | Clover Filigree | 4/4 | 551 | [Score](pieces/CWS_Op_221_Clover_Filigree/CWS_Op_221_Clover_Filigree.pdf) | [MP3](pieces/CWS_Op_221_Clover_Filigree/CWS_Op_221_Clover_Filigree.mp3) |
+| CWS Op. 222 | Camellia Loom | 4/4 | 459 | [Score](pieces/CWS_Op_222_Camellia_Loom/CWS_Op_222_Camellia_Loom.pdf) | [MP3](pieces/CWS_Op_222_Camellia_Loom/CWS_Op_222_Camellia_Loom.mp3) |
+| CWS Op. 223 | Willow Tessellation | 3/4 | 438 | [Score](pieces/CWS_Op_223_Willow_Tessellation/CWS_Op_223_Willow_Tessellation.pdf) | [MP3](pieces/CWS_Op_223_Willow_Tessellation/CWS_Op_223_Willow_Tessellation.mp3) |
+| CWS Op. 224 | Pearl Orbit | 4/4 | 432 | [Score](pieces/CWS_Op_224_Pearl_Orbit/CWS_Op_224_Pearl_Orbit.pdf) | [MP3](pieces/CWS_Op_224_Pearl_Orbit/CWS_Op_224_Pearl_Orbit.mp3) |
+| CWS Op. 225 | Fennel Polyphony | 5/4 | 302 | [Score](pieces/CWS_Op_225_Fennel_Polyphony/CWS_Op_225_Fennel_Polyphony.pdf) | [MP3](pieces/CWS_Op_225_Fennel_Polyphony/CWS_Op_225_Fennel_Polyphony.mp3) |
+| CWS Op. 226 | Alder Cascade | 7/8 | 517 | [Score](pieces/CWS_Op_226_Alder_Cascade/CWS_Op_226_Alder_Cascade.pdf) | [MP3](pieces/CWS_Op_226_Alder_Cascade/CWS_Op_226_Alder_Cascade.mp3) |
+| CWS Op. 227 | Reed Cantilever | 4/4 | 440 | [Score](pieces/CWS_Op_227_Reed_Cantilever/CWS_Op_227_Reed_Cantilever.pdf) | [MP3](pieces/CWS_Op_227_Reed_Cantilever/CWS_Op_227_Reed_Cantilever.mp3) |
+| CWS Op. 228 | Juniper Parallax | 6/8 | 389 | [Score](pieces/CWS_Op_228_Juniper_Parallax/CWS_Op_228_Juniper_Parallax.pdf) | [MP3](pieces/CWS_Op_228_Juniper_Parallax/CWS_Op_228_Juniper_Parallax.mp3) |
+| CWS Op. 229 | Camellia Altitude | 4/4, 5/4, 3/4 (changing) | 585 | [Score](pieces/CWS_Op_229_Camellia_Altitude/CWS_Op_229_Camellia_Altitude.pdf) | [MP3](pieces/CWS_Op_229_Camellia_Altitude/CWS_Op_229_Camellia_Altitude.mp3) |
+| CWS Op. 230 | Velvet Lattice | 4/4 | 620 | [Score](pieces/CWS_Op_230_Velvet_Lattice/CWS_Op_230_Velvet_Lattice.pdf) | [MP3](pieces/CWS_Op_230_Velvet_Lattice/CWS_Op_230_Velvet_Lattice.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

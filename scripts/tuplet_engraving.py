@@ -12,7 +12,7 @@ def apply_tuplet_spans(root, events, piece):
         count, normal = spec['actual'], spec['normal']
         group = sorted((e for e in events if e['hand'] == spec['hand']
                         and (not spec.get('voice') or e.get('voice') == spec['voice'])
-                        and start <= e['offset'] < end - 1e-8), key=lambda e: e['offset'])
+                        and start - 1e-8 <= e['offset'] < end - 1e-8), key=lambda e: e['offset'])
         assert len(group) == count and len({e['bar'] for e in group}) == 1
         if len(spans) > 6:
             # The score importer accepts bracket numbers 1–6. These groups

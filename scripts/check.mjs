@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile,stat,readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
+import {publicationFiles,SITE_LIMIT,releaseURL} from './site-distribution.mjs';
 const root=new URL('../',import.meta.url),data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
 assert(data.length>=6);assert.equal(new Set(data.map(p=>p.op)).size,data.length);assert.equal(new Set(data.map(p=>p.slug)).size,data.length);
 const series=JSON.parse(await readFile(new URL('data/series.json',root),'utf8'));
@@ -34,14 +35,17 @@ for(const v of volumes){
  assert(members.every(p=>p.series===v.series),'Download volumes must not mix study series');
  assert.equal(v.series_label,rules.label);assert.equal(v.complete,v.count===24||v.last===rules.last_opus);
  assert.equal(v.pages,data.filter(p=>v.ops.includes(p.op)).reduce((n,p)=>n+p.pages,0));
+ if(v.zip_url){assert(v.number>=11);assert.equal(v.zip_url,releaseURL(v));assert(downloadPage.includes(v.zip_url));}
  for(const kind of ['pdf','zip']){
   const bytes=(await stat(new URL(v[kind],root))).size;
   assert.equal(bytes,v[kind+'_bytes']);assert(bytes<90*1024*1024,'Split this download before it reaches the repository file limit');
   assert(downloadPage.includes(v[kind].split('/').at(-1)),'Volume is missing from the download page');
  }
 }
-for(const [,link] of downloadPage.matchAll(/(?:href|src)="([^"]+)"/g))assert((await stat(new URL(link,new URL('downloads/',root)))).size>=0);
+for(const [,link] of downloadPage.matchAll(/(?:href|src)="([^"]+)"/g)){if(link.startsWith('https://'))assert(volumes.some(v=>v.zip_url===link),'Unrecognised external volume');else assert((await stat(new URL(link,new URL('downloads/',root)))).size>=0);}
 const excluded=new Set(['.git','node_modules','work','dist','.venv','__pycache__','.DS_Store']);
 async function siteBytes(directory){let total=0;for(const item of await readdir(directory,{withFileTypes:true})){if(excluded.has(item.name))continue;const url=new URL(item.name+(item.isDirectory()?'/':''),directory);if(item.isDirectory())total+=await siteBytes(url);else if(item.isFile()){const bytes=(await stat(url)).size;assert(bytes<90*1024*1024,'Review oversized repository file: '+item.name);total+=bytes;}}return total;}
-const bytes=await siteBytes(root);assert(bytes<950_000_000,'Review distribution before approaching the 1 GB GitHub Pages site limit');
+await siteBytes(root);
+const published=await publicationFiles(fileURLToPath(root));
+const bytes=published.reduce((sum,f)=>sum+f.bytes,0);assert(bytes<SITE_LIMIT,'Review distribution before approaching the 1 GB GitHub Pages site limit');
 console.log(`Checked ${data.length} pieces: score IDs, complete playback timelines, note ceilings, family motifs, downloads and page controls. ${volumes.length} bounded download volume(s); site footprint ${(bytes/1024/1024).toFixed(1)} MiB.`);

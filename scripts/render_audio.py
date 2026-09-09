@@ -3,6 +3,7 @@ import json, math, subprocess, wave, argparse, os
 import mido
 from bisect import bisect_right
 from meter_plan import bar_plan
+from series_rules import series_for
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text())
@@ -147,7 +148,7 @@ for p in cat:
     duration=seconds_at(beats)+2.8
     fade=max(0,duration-2.3)
     filters=f'volume={gain_db:.3f}dB,lowpass=f=8500,afade=t=out:st={fade:.3f}:d=2.3'
-    subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(raw),'-af',filters,'-t',f'{duration:.4f}','-codec:a','libmp3lame','-q:a','2','-metadata',f'title={p["title"]}','-metadata',f'artist=CWS Library | Studies with Maple','-metadata',f'album=CWS First Studies','-metadata',f'track={p["op"]}',str(mp3)],check=True)
+    subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-i',str(raw),'-af',filters,'-t',f'{duration:.4f}','-codec:a','libmp3lame','-q:a','2','-metadata',f'title={p["title"]}','-metadata',f'artist=CWS Library | Studies with Maple','-metadata',f'album=CWS {series_for(p["op"])["label"]}','-metadata',f'track={p["op"]}',str(mp3)],check=True)
     p['duration_seconds']=round(duration,2);p['performance_seconds']=round(seconds_at(beats),2)
     p['bar_tempos']=bar_bpms
     if performance:p['tempo_map']=tempo_map

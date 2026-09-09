@@ -8,7 +8,7 @@
     "dev": "python3 -m http.server 4188 --bind 127.0.0.1",
     "start": "python3 -m http.server 4188 --bind 127.0.0.1",
     "check": "node --check src/favourites.js && node --check src/app.js && node --check src/listening-paths.js && node --check src/kinship.js && node --check src/kinship-layout.js && node scripts/check.mjs",
-    "test": "node scripts/test-favourites.mjs && node scripts/test-listening-paths.mjs && node scripts/test-kinship.mjs && node scripts/test-ui.mjs",
+    "test": "node scripts/test-favourites.mjs && node scripts/test-listening-paths.mjs && node scripts/test-kinship.mjs && node scripts/test-ui.mjs && node scripts/test-site-distribution.mjs",
     "build": "npm run check && node scripts/build.mjs"
   },
   "engines": {

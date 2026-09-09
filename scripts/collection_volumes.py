@@ -54,6 +54,10 @@ def build_volumes(root, catalog, selected=None):
                     pdf='downloads/'+pdf_name,zip='downloads/'+zip_name,
                     pdf_bytes=pdf_path.stat().st_size,zip_bytes=zip_path.stat().st_size)
         assert max(volume['pdf_bytes'],volume['zip_bytes'])<MAX_FILE_BYTES,('Reduce volume size before publishing',number)
+        # New archive volumes live in this repository's Releases. Keep every
+        # original Volume 1-10 URL and every individual score/audio URL intact.
+        if number>=11:
+            volume['zip_url']=f'https://github.com/CraigWrenasmir/cws-listening-field/releases/download/volume-{number}/{zip_name}'
         volumes.append(volume)
     assert [op for v in volumes for op in v['ops']]==[p['op'] for p in catalog]
     manifest_path.write_text(json.dumps(volumes,indent=2)+'\n')
@@ -70,7 +74,7 @@ def build_volumes(root, catalog, selected=None):
 <p class="volume-range">{v['series_label']} · CWS Op. {opus} · {count}{status}</p>
 <p class="volume-journey">{journey}</p>
 <div class="volume-links"><a href="{Path(v['pdf']).name}" download>Scores <span>PDF · {v['pages']} pages · {mb(v['pdf_bytes'])}</span></a>
-<a href="{Path(v['zip']).name}" download>Complete volume <span>ZIP · {mb(v['zip_bytes'])}</span></a></div>
+<a href="{escape(v.get('zip_url',Path(v['zip']).name),quote=True)}" download>Complete volume <span>ZIP · {mb(v['zip_bytes'])}</span></a></div>
 </div></section>''')
     page=f'''<!doctype html>
 <html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">

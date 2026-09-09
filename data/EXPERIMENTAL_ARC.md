@@ -24,3 +24,7 @@ Craig approved Op. 201–205 as five pilots, with longer developing forms, more 
 ## Wandering refrains, Op. 206–220
 
 Craig praised the Second Studies pilots and authorised fifteen further pieces, inviting a new direction. This supersedes the pilot stop at 205. Recurring bass phrases support developing songs in Op. 206–210; hand-to-hand and inner-voice conversations shape 211–215; 216–220 turn familiar phrases into flowing figures and chords. Exact melodic inversion, changed register, rhythmic diminution and augmentation extend the vocabulary while keeping a clear singing line. The same six-page/768-onset ceilings and connected Kinship regions apply. Complete the batch and stop at 220.
+
+## Technical lyricism, Op. 221–230
+
+Craig explicitly asked for ten more advanced, technical compositions. This supersedes the stop at 220. Use the expanded Second Studies limits for sustained rhythmic independence, layered voicing, double-note work and longer flowing passages. Each study needs a coherent musical reason for its technical demand; document the gestures and review whole-hand reach and transitions. Keep a singing line, harmonic warmth and purposeful returns. Stop at 230.
