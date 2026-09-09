@@ -37387,5 +37387,4659 @@
       "sounded_pitches_per_minute": 112.9,
       "note": "These structural checks do not establish artistic quality or replace listening feedback."
     }
+  },
+  {
+    "piece": "Clover Causeway",
+    "opus": 206,
+    "score_pages": 3,
+    "bars": 24,
+    "pitch_onsets": 184,
+    "audio_seconds": 162.15,
+    "hands": {
+      "rh": {
+        "low": 63,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 8,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 14,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced six-bar ground and melodic voicing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Keep the six-bar bass phrase continuous and give the melody its own longer breath. Bars 13\u201314 recall bars 1\u20132 exactly; the continuation should sound newly found. The last hearing changes the bass at its close."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        3.8
+      ],
+      [
+        4,
+        5.8
+      ],
+      [
+        6,
+        7.8
+      ],
+      [
+        8,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        14,
+        15.8
+      ],
+      [
+        16,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        23.8
+      ],
+      [
+        24,
+        25.8
+      ],
+      [
+        26,
+        27.8
+      ],
+      [
+        28,
+        29.8
+      ],
+      [
+        30,
+        31.8
+      ],
+      [
+        32,
+        33.8
+      ],
+      [
+        34,
+        34.8
+      ],
+      [
+        36,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        44,
+        45.8
+      ],
+      [
+        46,
+        47.8
+      ],
+      [
+        48,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        53.8
+      ],
+      [
+        54,
+        55.8
+      ],
+      [
+        56,
+        57.8
+      ],
+      [
+        58,
+        59.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        63.8
+      ],
+      [
+        64,
+        65.8
+      ],
+      [
+        66,
+        67.8
+      ],
+      [
+        68,
+        69.8
+      ],
+      [
+        70,
+        70.8
+      ],
+      [
+        72,
+        73.8
+      ],
+      [
+        74,
+        75.8
+      ],
+      [
+        76,
+        77.8
+      ],
+      [
+        78,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        83.8
+      ],
+      [
+        84,
+        85.8
+      ],
+      [
+        86,
+        87.8
+      ],
+      [
+        88,
+        89.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        93.8
+      ],
+      [
+        94,
+        95.8
+      ],
+      [
+        96,
+        97.8
+      ],
+      [
+        98,
+        99.8
+      ],
+      [
+        100,
+        101.8
+      ],
+      [
+        102,
+        103.8
+      ],
+      [
+        104,
+        105.8
+      ],
+      [
+        106,
+        106.8
+      ],
+      [
+        108,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        113.8
+      ],
+      [
+        114,
+        115.8
+      ],
+      [
+        116,
+        117.8
+      ],
+      [
+        118,
+        119.8
+      ],
+      [
+        120,
+        121.8
+      ],
+      [
+        122,
+        123.8
+      ],
+      [
+        124,
+        125.8
+      ],
+      [
+        126,
+        127.8
+      ],
+      [
+        128,
+        129.8
+      ],
+      [
+        130,
+        131.8
+      ],
+      [
+        132,
+        133.8
+      ],
+      [
+        134,
+        135.8
+      ],
+      [
+        136,
+        136.8
+      ],
+      [
+        138,
+        143.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "7": "mp",
+        "13": "p",
+        "19": "mf",
+        "23": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "19": "p",
+        "23": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 4,
+      "left_hand_most_frequent_pattern_bars": 15,
+      "sounded_pitches_per_minute": 69.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Willow Arcade",
+    "opus": 207,
+    "score_pages": 3,
+    "bars": 24,
+    "pitch_onsets": 225,
+    "audio_seconds": 145.8,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 81,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 45,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced five-beat syncopation and overlapping phrase cycles",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Keep the short LH eighths light and hear its four-bar journey under the six-bar melodic phrases. The same melody in bars 13\u201314 receives different bass notes. Do not resolve the final suspended A harmony."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        4.8
+      ],
+      [
+        5,
+        6.8
+      ],
+      [
+        7,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        14.8
+      ],
+      [
+        15,
+        16.8
+      ],
+      [
+        17,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        24.8
+      ],
+      [
+        25,
+        26.8
+      ],
+      [
+        27,
+        28.8
+      ],
+      [
+        30,
+        31.8
+      ],
+      [
+        32,
+        34.8
+      ],
+      [
+        35,
+        36.8
+      ],
+      [
+        37,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        46.8
+      ],
+      [
+        47,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        54.8
+      ],
+      [
+        55,
+        56.8
+      ],
+      [
+        57,
+        58.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        64.8
+      ],
+      [
+        65,
+        66.8
+      ],
+      [
+        67,
+        69.8
+      ],
+      [
+        70,
+        71.8
+      ],
+      [
+        72,
+        74.8
+      ],
+      [
+        75,
+        76.8
+      ],
+      [
+        77,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        84.8
+      ],
+      [
+        85,
+        86.8
+      ],
+      [
+        87,
+        88.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        94.8
+      ],
+      [
+        95,
+        96.8
+      ],
+      [
+        97,
+        99.8
+      ],
+      [
+        100,
+        101.8
+      ],
+      [
+        102,
+        104.8
+      ],
+      [
+        105,
+        106.8
+      ],
+      [
+        107,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        113.8
+      ],
+      [
+        115,
+        119.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "7": "mp",
+        "13": "p",
+        "19": "mf",
+        "23": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "7": "p",
+        "19": "mp",
+        "23": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 15,
+      "sounded_pitches_per_minute": 94.4,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Camellia Viaduct",
+    "opus": 208,
+    "score_pages": 4,
+    "bars": 28,
+    "pitch_onsets": 245,
+    "audio_seconds": 163.3,
+    "hands": {
+      "rh": {
+        "low": 58,
+        "high": 78,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 43,
+        "high": 58,
+        "maximum_melodic_leap_semitones": 2,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced chordal passacaglia and chromatic voice leading",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "The long bass fifths frame a melody in the tops of the RH chords. Give the seven-bar ground an unbroken direction. The opening chord melody returns in bar 15, while later chords change its path. Play all chord attacks together; the final bass departure is deliberate."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        0.8
+      ],
+      [
+        1,
+        1.8
+      ],
+      [
+        2,
+        2.8
+      ],
+      [
+        3,
+        4.8
+      ],
+      [
+        5,
+        6.8
+      ],
+      [
+        7,
+        7.8
+      ],
+      [
+        8,
+        9.8
+      ],
+      [
+        10,
+        12.8
+      ],
+      [
+        13,
+        14.8
+      ],
+      [
+        15,
+        16.8
+      ],
+      [
+        17,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        22.8
+      ],
+      [
+        23,
+        24.8
+      ],
+      [
+        25,
+        27.8
+      ],
+      [
+        28,
+        29.8
+      ],
+      [
+        30,
+        33.8
+      ],
+      [
+        35,
+        36.8
+      ],
+      [
+        37,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        42.8
+      ],
+      [
+        43,
+        44.8
+      ],
+      [
+        45,
+        46.8
+      ],
+      [
+        47,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        52.8
+      ],
+      [
+        53,
+        54.8
+      ],
+      [
+        55,
+        57.8
+      ],
+      [
+        58,
+        59.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        64.8
+      ],
+      [
+        65,
+        68.8
+      ],
+      [
+        70,
+        70.8
+      ],
+      [
+        71,
+        71.8
+      ],
+      [
+        72,
+        72.8
+      ],
+      [
+        73,
+        74.8
+      ],
+      [
+        75,
+        76.8
+      ],
+      [
+        77,
+        77.8
+      ],
+      [
+        78,
+        79.8
+      ],
+      [
+        80,
+        82.8
+      ],
+      [
+        83,
+        84.8
+      ],
+      [
+        85,
+        86.8
+      ],
+      [
+        87,
+        89.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        92.8
+      ],
+      [
+        93,
+        94.8
+      ],
+      [
+        95,
+        97.8
+      ],
+      [
+        98,
+        99.8
+      ],
+      [
+        100,
+        103.8
+      ],
+      [
+        105,
+        106.8
+      ],
+      [
+        107,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        114.8
+      ],
+      [
+        115,
+        116.8
+      ],
+      [
+        117,
+        117.8
+      ],
+      [
+        118,
+        119.8
+      ],
+      [
+        120,
+        122.8
+      ],
+      [
+        123,
+        124.8
+      ],
+      [
+        125,
+        126.8
+      ],
+      [
+        127,
+        129.8
+      ],
+      [
+        130,
+        131.8
+      ],
+      [
+        132,
+        133.8
+      ],
+      [
+        135,
+        139.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "8": "mp",
+        "15": "mf",
+        "22": "p",
+        "26": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "15": "p",
+        "22": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 2,
+      "left_hand_most_frequent_pattern_bars": 24,
+      "sounded_pitches_per_minute": 91.6,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Fennel Courtyard",
+    "opus": 209,
+    "score_pages": 3,
+    "bars": 21,
+    "pitch_onsets": 160,
+    "audio_seconds": 168.32,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 45,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced seven-beat counterpoint and independent phrase lengths",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Let the LH refrain sing, especially in bars 1, 4, 7 and 10. Its repeated three-bar span should not dictate the RH seven-bar phrases. The final refrain in bar 19 loses its last long note, making room for the closing two bars."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.75
+      ],
+      [
+        2,
+        3.75
+      ],
+      [
+        4,
+        6.75
+      ],
+      [
+        7,
+        8.75
+      ],
+      [
+        9,
+        10.75
+      ],
+      [
+        11,
+        13.75
+      ],
+      [
+        14,
+        15.75
+      ],
+      [
+        16,
+        17.75
+      ],
+      [
+        18,
+        20.75
+      ],
+      [
+        21,
+        22.75
+      ],
+      [
+        23,
+        24.75
+      ],
+      [
+        25,
+        27.75
+      ],
+      [
+        28,
+        29.75
+      ],
+      [
+        30,
+        31.75
+      ],
+      [
+        32,
+        34.75
+      ],
+      [
+        35,
+        36.75
+      ],
+      [
+        37,
+        38.75
+      ],
+      [
+        39,
+        41.75
+      ],
+      [
+        42,
+        43.75
+      ],
+      [
+        44,
+        45.75
+      ],
+      [
+        46,
+        47.75
+      ],
+      [
+        49,
+        50.75
+      ],
+      [
+        51,
+        52.75
+      ],
+      [
+        53,
+        55.75
+      ],
+      [
+        56,
+        57.75
+      ],
+      [
+        58,
+        59.75
+      ],
+      [
+        60,
+        62.75
+      ],
+      [
+        63,
+        64.75
+      ],
+      [
+        65,
+        66.75
+      ],
+      [
+        67,
+        69.75
+      ],
+      [
+        70,
+        71.75
+      ],
+      [
+        72,
+        73.75
+      ],
+      [
+        74,
+        76.75
+      ],
+      [
+        77,
+        78.75
+      ],
+      [
+        79,
+        80.75
+      ],
+      [
+        81,
+        83.75
+      ],
+      [
+        84,
+        85.75
+      ],
+      [
+        86,
+        87.75
+      ],
+      [
+        88,
+        90.75
+      ],
+      [
+        91,
+        92.75
+      ],
+      [
+        93,
+        94.75
+      ],
+      [
+        95,
+        96.75
+      ],
+      [
+        98,
+        99.75
+      ],
+      [
+        100,
+        101.75
+      ],
+      [
+        102,
+        104.75
+      ],
+      [
+        105,
+        106.75
+      ],
+      [
+        107,
+        108.75
+      ],
+      [
+        109,
+        111.75
+      ],
+      [
+        112,
+        113.75
+      ],
+      [
+        114,
+        115.75
+      ],
+      [
+        116,
+        118.75
+      ],
+      [
+        119,
+        120.75
+      ],
+      [
+        121,
+        122.75
+      ],
+      [
+        123,
+        125.75
+      ],
+      [
+        126,
+        127.75
+      ],
+      [
+        128,
+        129.75
+      ],
+      [
+        130,
+        131.75
+      ],
+      [
+        133,
+        134.75
+      ],
+      [
+        135,
+        136.75
+      ],
+      [
+        137,
+        138.75
+      ],
+      [
+        140,
+        146.75
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "8": "mp",
+        "11": "mf",
+        "14": "pp",
+        "15": "p",
+        "19": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "8": "pp",
+        "10": "mp",
+        "14": "pp",
+        "15": "p",
+        "19": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 6,
+      "left_hand_most_frequent_pattern_bars": 10,
+      "sounded_pitches_per_minute": 58.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Clover Undertow",
+    "opus": 210,
+    "score_pages": 4,
+    "bars": 30,
+    "pitch_onsets": 231,
+    "audio_seconds": 141.55,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 12,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 45,
+        "high": 62,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced displaced ostinato and long melodic arcs",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "The LH figure lasts five quarter beats, returning every five bars after four cycles. Its dotted opening sometimes crosses a bar line. Keep the RH song free from the shifting bass accents. Broaden the final five bars without losing the full sound."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        3.8
+      ],
+      [
+        4,
+        5.8
+      ],
+      [
+        6,
+        7.8
+      ],
+      [
+        8,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        14,
+        15.8
+      ],
+      [
+        16,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        23.8
+      ],
+      [
+        24,
+        25.8
+      ],
+      [
+        26,
+        27.8
+      ],
+      [
+        28,
+        29.8
+      ],
+      [
+        30,
+        31.8
+      ],
+      [
+        32,
+        33.8
+      ],
+      [
+        34,
+        35.8
+      ],
+      [
+        36,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        44,
+        45.8
+      ],
+      [
+        46,
+        47.8
+      ],
+      [
+        48,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        53.8
+      ],
+      [
+        54,
+        55.8
+      ],
+      [
+        56,
+        57.8
+      ],
+      [
+        58,
+        59.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        63.8
+      ],
+      [
+        64,
+        65.8
+      ],
+      [
+        66,
+        67.8
+      ],
+      [
+        68,
+        69.8
+      ],
+      [
+        70,
+        71.8
+      ],
+      [
+        72,
+        73.8
+      ],
+      [
+        74,
+        75.8
+      ],
+      [
+        76,
+        77.8
+      ],
+      [
+        78,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        83.8
+      ],
+      [
+        84,
+        85.8
+      ],
+      [
+        86,
+        87.8
+      ],
+      [
+        88,
+        89.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        93.8
+      ],
+      [
+        94,
+        95.8
+      ],
+      [
+        96,
+        97.8
+      ],
+      [
+        98,
+        99.8
+      ],
+      [
+        100,
+        101.8
+      ],
+      [
+        102,
+        103.8
+      ],
+      [
+        104,
+        105.8
+      ],
+      [
+        106,
+        107.8
+      ],
+      [
+        108,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        114.8
+      ],
+      [
+        116,
+        119.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "6": "mp",
+        "11": "mf",
+        "16": "p",
+        "21": "mp",
+        "26": "mf"
+      },
+      "lh": {
+        "1": "pp",
+        "11": "p",
+        "16": "pp",
+        "21": "p",
+        "26": "mp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 5,
+      "sounded_pitches_per_minute": 99.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Fennel Correspondence",
+    "opus": 211,
+    "score_pages": 3,
+    "bars": 24,
+    "pitch_onsets": 146,
+    "audio_seconds": 148.86,
+    "hands": {
+      "rh": {
+        "low": 65,
+        "high": 88,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 45,
+        "high": 70,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced melody exchange and changing LH clefs",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 17,
+        "rapid_leap": 7
+      },
+      "note": "Bring forward the hand carrying the moving phrase and keep the held chords softer. The first answer in bars 4\u20136 is exactly one octave below bars 1\u20133. Follow the written LH clef changes; the last bar belongs to the LH alone."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        4.8
+      ],
+      [
+        5,
+        6.8
+      ],
+      [
+        7,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        15,
+        16.8
+      ],
+      [
+        17,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        24.8
+      ],
+      [
+        25,
+        26.8
+      ],
+      [
+        27,
+        28.8
+      ],
+      [
+        30,
+        31.8
+      ],
+      [
+        32,
+        34.8
+      ],
+      [
+        35,
+        36.8
+      ],
+      [
+        37,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        45,
+        46.8
+      ],
+      [
+        47,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        54.8
+      ],
+      [
+        55,
+        56.8
+      ],
+      [
+        57,
+        58.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        64.8
+      ],
+      [
+        65,
+        66.8
+      ],
+      [
+        67,
+        69.8
+      ],
+      [
+        70,
+        71.8
+      ],
+      [
+        72,
+        73.8
+      ],
+      [
+        75,
+        76.8
+      ],
+      [
+        77,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        84.8
+      ],
+      [
+        85,
+        86.8
+      ],
+      [
+        87,
+        88.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        94.8
+      ],
+      [
+        95,
+        96.8
+      ],
+      [
+        97,
+        99.8
+      ],
+      [
+        100,
+        101.8
+      ],
+      [
+        102,
+        104.8
+      ],
+      [
+        105,
+        106.8
+      ],
+      [
+        107,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        113.8
+      ],
+      [
+        115,
+        119.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "4": "pp",
+        "7": "mp",
+        "10": "pp",
+        "13": "mf",
+        "16": "pp",
+        "19": "p",
+        "22": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "4": "p",
+        "7": "pp",
+        "10": "mp",
+        "13": "pp",
+        "16": "p",
+        "19": "pp",
+        "22": "p",
+        "24": "pp"
+      }
+    },
+    "verified_clef_changes": {
+      "lh": {
+        "4": "treble",
+        "7": "bass",
+        "10": "treble",
+        "13": "bass",
+        "16": "treble",
+        "19": "bass",
+        "22": "treble"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 9,
+      "sounded_pitches_per_minute": 60.0,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Willow Interchange",
+    "opus": 212,
+    "score_pages": 4,
+    "bars": 32,
+    "pitch_onsets": 199,
+    "audio_seconds": 160.1,
+    "hands": {
+      "rh": {
+        "low": 62,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 5
+      },
+      "lh": {
+        "low": 46,
+        "high": 63,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Intermediate to advanced delayed imitation and independent line shaping",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Hear the opening LH as an answer delayed by two quarter beats, rather than an accompaniment. Later replies become freer. Let the two lines release together only at the written shared rests."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        3.8
+      ],
+      [
+        4,
+        5.8
+      ],
+      [
+        6,
+        7.8
+      ],
+      [
+        8,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        14,
+        15.8
+      ],
+      [
+        16,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        23.8
+      ],
+      [
+        24,
+        25.8
+      ],
+      [
+        26,
+        27.8
+      ],
+      [
+        28,
+        29.8
+      ],
+      [
+        30,
+        30.8
+      ],
+      [
+        32,
+        33.8
+      ],
+      [
+        34,
+        35.8
+      ],
+      [
+        36,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        44,
+        45.8
+      ],
+      [
+        46,
+        47.8
+      ],
+      [
+        48,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        53.8
+      ],
+      [
+        54,
+        55.8
+      ],
+      [
+        56,
+        57.8
+      ],
+      [
+        58,
+        59.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        62.8
+      ],
+      [
+        64,
+        65.8
+      ],
+      [
+        66,
+        67.8
+      ],
+      [
+        68,
+        69.8
+      ],
+      [
+        70,
+        71.8
+      ],
+      [
+        72,
+        73.8
+      ],
+      [
+        74,
+        75.8
+      ],
+      [
+        76,
+        77.8
+      ],
+      [
+        78,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        83.8
+      ],
+      [
+        84,
+        85.8
+      ],
+      [
+        86,
+        87.8
+      ],
+      [
+        88,
+        89.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        93.8
+      ],
+      [
+        94,
+        94.8
+      ],
+      [
+        96,
+        97.8
+      ],
+      [
+        98,
+        99.8
+      ],
+      [
+        100,
+        101.8
+      ],
+      [
+        102,
+        103.8
+      ],
+      [
+        104,
+        105.8
+      ],
+      [
+        106,
+        107.8
+      ],
+      [
+        108,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        113.8
+      ],
+      [
+        114,
+        115.8
+      ],
+      [
+        116,
+        117.8
+      ],
+      [
+        118,
+        119.8
+      ],
+      [
+        120,
+        121.8
+      ],
+      [
+        122,
+        122.8
+      ],
+      [
+        124,
+        127.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "9": "mp",
+        "17": "mf",
+        "23": "p",
+        "25": "p",
+        "29": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "9": "mp",
+        "17": "mp",
+        "25": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 5,
+      "left_hand_most_frequent_pattern_bars": 16,
+      "sounded_pitches_per_minute": 75.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Camellia Answer",
+    "opus": 213,
+    "score_pages": 4,
+    "bars": 24,
+    "pitch_onsets": 133,
+    "audio_seconds": 154.2,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 74,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 12
+      },
+      "lh": {
+        "low": 43,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 6,
+        "maximum_eighth_note_leap_semitones": 1,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced three-voice phrasing and hand-to-hand melody exchange",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Keep the RH upper notes softer than its moving inner voice. The first LH answer is exactly an octave below the first inner phrase. Hidden full-bar inner rests occur only while the upper voice sounds; the melody changes hands every three bars."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.8
+      ],
+      [
+        2,
+        4.8
+      ],
+      [
+        5,
+        6.8
+      ],
+      [
+        7,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        15,
+        16.8
+      ],
+      [
+        17,
+        19.8
+      ],
+      [
+        20,
+        21.8
+      ],
+      [
+        22,
+        24.8
+      ],
+      [
+        25,
+        26.8
+      ],
+      [
+        27,
+        28.8
+      ],
+      [
+        30,
+        31.8
+      ],
+      [
+        32,
+        34.8
+      ],
+      [
+        35,
+        36.8
+      ],
+      [
+        37,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        43.8
+      ],
+      [
+        45,
+        46.8
+      ],
+      [
+        47,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        54.8
+      ],
+      [
+        55,
+        56.8
+      ],
+      [
+        57,
+        58.8
+      ],
+      [
+        60,
+        61.8
+      ],
+      [
+        62,
+        64.8
+      ],
+      [
+        65,
+        66.8
+      ],
+      [
+        67,
+        69.8
+      ],
+      [
+        70,
+        71.8
+      ],
+      [
+        72,
+        73.8
+      ],
+      [
+        75,
+        76.8
+      ],
+      [
+        77,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        84.8
+      ],
+      [
+        85,
+        86.8
+      ],
+      [
+        87,
+        88.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        94.8
+      ],
+      [
+        95,
+        96.8
+      ],
+      [
+        97,
+        99.8
+      ],
+      [
+        100,
+        101.8
+      ],
+      [
+        102,
+        103.8
+      ],
+      [
+        105,
+        106.8
+      ],
+      [
+        107,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        113.8
+      ],
+      [
+        115,
+        119.8
+      ]
+    ],
+    "verified_independent_voices": {
+      "rh": [
+        "upper",
+        "inner"
+      ],
+      "lh": [
+        "bass"
+      ]
+    },
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "pp",
+        "7": "p",
+        "13": "p",
+        "19": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "4": "p",
+        "7": "pp",
+        "10": "mp",
+        "13": "pp",
+        "16": "p",
+        "19": "pp",
+        "22": "p",
+        "24": "pp"
+      }
+    },
+    "verified_voice_phrases": [
+      {
+        "voice": "inner",
+        "start_beat": 0,
+        "end_beat": 14,
+        "swell": 4
+      },
+      {
+        "voice": "inner",
+        "start_beat": 30,
+        "end_beat": 44,
+        "swell": 4
+      },
+      {
+        "voice": "inner",
+        "start_beat": 60,
+        "end_beat": 74,
+        "swell": 4
+      },
+      {
+        "voice": "inner",
+        "start_beat": 90,
+        "end_beat": 104,
+        "swell": 4
+      }
+    ],
+    "verified_nonprinting_voice_rests": {
+      "inner": [
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        16,
+        17,
+        18,
+        22,
+        23,
+        24
+      ]
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 9,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 52.7,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Moss Overpass",
+    "opus": 214,
+    "score_pages": 3,
+    "bars": 24,
+    "pitch_onsets": 213,
+    "audio_seconds": 158.32,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 79,
+        "maximum_melodic_leap_semitones": 6,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 42,
+        "high": 59,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced independent four-against-three phrasing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "The first seven bars set four dotted quarters against three half notes. At bar nine the hands exchange these patterns. Keep both pulses even and the melodic hand slightly forward; no acceleration is implied by the shorter note values."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.78
+      ],
+      [
+        2,
+        3.78
+      ],
+      [
+        4,
+        5.78
+      ],
+      [
+        6,
+        7.78
+      ],
+      [
+        8,
+        9.78
+      ],
+      [
+        10,
+        11.78
+      ],
+      [
+        12,
+        13.78
+      ],
+      [
+        14,
+        15.78
+      ],
+      [
+        16,
+        17.78
+      ],
+      [
+        18,
+        19.78
+      ],
+      [
+        20,
+        21.78
+      ],
+      [
+        22,
+        23.78
+      ],
+      [
+        24,
+        25.78
+      ],
+      [
+        26,
+        27.78
+      ],
+      [
+        28,
+        29.78
+      ],
+      [
+        30,
+        31.78
+      ],
+      [
+        32,
+        33.78
+      ],
+      [
+        34,
+        35.78
+      ],
+      [
+        36,
+        37.78
+      ],
+      [
+        38,
+        39.78
+      ],
+      [
+        40,
+        41.78
+      ],
+      [
+        42,
+        43.78
+      ],
+      [
+        44,
+        45.78
+      ],
+      [
+        46,
+        46.28
+      ],
+      [
+        48,
+        49.28
+      ],
+      [
+        49.5,
+        50.78
+      ],
+      [
+        51,
+        52.28
+      ],
+      [
+        52.5,
+        53.78
+      ],
+      [
+        54,
+        55.28
+      ],
+      [
+        55.5,
+        56.78
+      ],
+      [
+        57,
+        58.28
+      ],
+      [
+        58.5,
+        59.78
+      ],
+      [
+        60,
+        61.28
+      ],
+      [
+        61.5,
+        62.78
+      ],
+      [
+        63,
+        64.28
+      ],
+      [
+        64.5,
+        65.78
+      ],
+      [
+        66,
+        67.28
+      ],
+      [
+        67.5,
+        68.78
+      ],
+      [
+        69,
+        70.28
+      ],
+      [
+        70.5,
+        71.78
+      ],
+      [
+        72,
+        73.28
+      ],
+      [
+        73.5,
+        74.78
+      ],
+      [
+        75,
+        76.28
+      ],
+      [
+        76.5,
+        77.78
+      ],
+      [
+        78,
+        79.28
+      ],
+      [
+        79.5,
+        80.78
+      ],
+      [
+        81,
+        82.28
+      ],
+      [
+        82.5,
+        83.78
+      ],
+      [
+        84,
+        85.28
+      ],
+      [
+        85.5,
+        86.78
+      ],
+      [
+        87,
+        88.28
+      ],
+      [
+        88.5,
+        89.78
+      ],
+      [
+        90,
+        91.78
+      ],
+      [
+        92,
+        93.78
+      ],
+      [
+        94,
+        94.28
+      ],
+      [
+        96,
+        97.78
+      ],
+      [
+        98,
+        99.78
+      ],
+      [
+        100,
+        101.78
+      ],
+      [
+        102,
+        103.78
+      ],
+      [
+        104,
+        105.78
+      ],
+      [
+        106,
+        107.78
+      ],
+      [
+        108,
+        110.78
+      ],
+      [
+        111,
+        113.78
+      ],
+      [
+        114,
+        115.78
+      ],
+      [
+        116,
+        117.78
+      ],
+      [
+        118,
+        119.78
+      ],
+      [
+        120,
+        122.78
+      ],
+      [
+        123,
+        125.78
+      ],
+      [
+        126,
+        127.78
+      ],
+      [
+        128,
+        129.78
+      ],
+      [
+        130,
+        131.78
+      ],
+      [
+        132,
+        134.78
+      ],
+      [
+        135,
+        136.28
+      ],
+      [
+        138,
+        143.78
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "9": "pp",
+        "17": "mp",
+        "21": "p",
+        "24": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "9": "p",
+        "17": "pp",
+        "21": "p",
+        "24": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 9,
+      "sounded_pitches_per_minute": 82.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Clover Elsewhere",
+    "opus": 215,
+    "score_pages": 4,
+    "bars": 32,
+    "pitch_onsets": 223,
+    "audio_seconds": 159.62,
+    "hands": {
+      "rh": {
+        "low": 61,
+        "high": 80,
+        "maximum_melodic_leap_semitones": 9,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 39,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 2,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced flexible metre and contrary-motion duet",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Four bars in three give way to four bars in five. Keep the quarter-note pulse continuous at those changes. In the middle return the first four bars pass to the LH two octaves lower; the RH supplies an independent rising line."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        5.8
+      ],
+      [
+        6,
+        8.8
+      ],
+      [
+        9,
+        10.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        14,
+        16.8
+      ],
+      [
+        17,
+        18.8
+      ],
+      [
+        19,
+        21.8
+      ],
+      [
+        22,
+        23.8
+      ],
+      [
+        24,
+        26.8
+      ],
+      [
+        27,
+        28.8
+      ],
+      [
+        29,
+        30.8
+      ],
+      [
+        32,
+        34.8
+      ],
+      [
+        35,
+        37.8
+      ],
+      [
+        38,
+        40.8
+      ],
+      [
+        41,
+        42.8
+      ],
+      [
+        44,
+        45.8
+      ],
+      [
+        46,
+        48.8
+      ],
+      [
+        49,
+        50.8
+      ],
+      [
+        51,
+        53.8
+      ],
+      [
+        54,
+        55.8
+      ],
+      [
+        56,
+        58.8
+      ],
+      [
+        59,
+        60.8
+      ],
+      [
+        61,
+        62.8
+      ],
+      [
+        64,
+        66.8
+      ],
+      [
+        67,
+        69.8
+      ],
+      [
+        70,
+        72.8
+      ],
+      [
+        73,
+        74.8
+      ],
+      [
+        76,
+        77.8
+      ],
+      [
+        78,
+        80.8
+      ],
+      [
+        81,
+        82.8
+      ],
+      [
+        83,
+        85.8
+      ],
+      [
+        86,
+        87.8
+      ],
+      [
+        88,
+        90.8
+      ],
+      [
+        91,
+        92.8
+      ],
+      [
+        93,
+        94.8
+      ],
+      [
+        96,
+        98.8
+      ],
+      [
+        99,
+        101.8
+      ],
+      [
+        102,
+        104.8
+      ],
+      [
+        105,
+        106.8
+      ],
+      [
+        108,
+        109.8
+      ],
+      [
+        110,
+        112.8
+      ],
+      [
+        113,
+        114.8
+      ],
+      [
+        115,
+        117.8
+      ],
+      [
+        118,
+        119.8
+      ],
+      [
+        120,
+        121.8
+      ],
+      [
+        123,
+        127.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "9": "mp",
+        "17": "pp",
+        "21": "mp",
+        "25": "p",
+        "29": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "5": "pp",
+        "9": "p",
+        "13": "pp",
+        "17": "mp",
+        "21": "pp",
+        "25": "p",
+        "29": "pp"
+      }
+    },
+    "verified_meter_changes": [
+      {
+        "beat": 0.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 12.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 32.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 44.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 64.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 76.0,
+        "meter": "5/4"
+      },
+      {
+        "beat": 96.0,
+        "meter": "3/4"
+      },
+      {
+        "beat": 108.0,
+        "meter": "5/4"
+      }
+    ],
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 12,
+      "left_hand_most_frequent_pattern_bars": 9,
+      "sounded_pitches_per_minute": 85.3,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Alder Unfolding",
+    "opus": 216,
+    "score_pages": 4,
+    "bars": 32,
+    "pitch_onsets": 296,
+    "audio_seconds": 143.5,
+    "hands": {
+      "rh": {
+        "low": 64,
+        "high": 86,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 43,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 4,
+        "maximum_simultaneous_span_semitones": 10
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced cantabile within flowing eighth-note figures",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "The quarter-beat notes in bars 9\u201312 retain the melody of bars 1\u20134; the intervening eighths soften its outline. The LH takes the opening four-bar phrase at bar 17, two octaves below the original. The final high D is alone after both hands have rested."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.82
+      ],
+      [
+        2,
+        3.82
+      ],
+      [
+        4,
+        5.82
+      ],
+      [
+        6,
+        7.82
+      ],
+      [
+        8,
+        9.82
+      ],
+      [
+        10,
+        11.82
+      ],
+      [
+        12,
+        13.82
+      ],
+      [
+        14,
+        14.82
+      ],
+      [
+        16,
+        17.82
+      ],
+      [
+        18,
+        19.82
+      ],
+      [
+        20,
+        21.82
+      ],
+      [
+        22,
+        23.82
+      ],
+      [
+        24,
+        25.82
+      ],
+      [
+        26,
+        27.82
+      ],
+      [
+        28,
+        29.82
+      ],
+      [
+        30,
+        30.82
+      ],
+      [
+        32,
+        33.82
+      ],
+      [
+        34,
+        35.82
+      ],
+      [
+        36,
+        37.82
+      ],
+      [
+        38,
+        39.82
+      ],
+      [
+        40,
+        41.82
+      ],
+      [
+        42,
+        43.82
+      ],
+      [
+        44,
+        45.82
+      ],
+      [
+        46,
+        46.82
+      ],
+      [
+        48,
+        49.82
+      ],
+      [
+        50,
+        51.82
+      ],
+      [
+        52,
+        53.82
+      ],
+      [
+        54,
+        55.82
+      ],
+      [
+        56,
+        57.82
+      ],
+      [
+        58,
+        59.82
+      ],
+      [
+        60,
+        61.82
+      ],
+      [
+        62,
+        62.82
+      ],
+      [
+        64,
+        65.82
+      ],
+      [
+        66,
+        67.82
+      ],
+      [
+        68,
+        69.82
+      ],
+      [
+        70,
+        71.82
+      ],
+      [
+        72,
+        73.82
+      ],
+      [
+        74,
+        75.82
+      ],
+      [
+        76,
+        77.82
+      ],
+      [
+        78,
+        78.82
+      ],
+      [
+        80,
+        81.82
+      ],
+      [
+        82,
+        83.82
+      ],
+      [
+        84,
+        85.82
+      ],
+      [
+        86,
+        87.82
+      ],
+      [
+        88,
+        89.82
+      ],
+      [
+        90,
+        91.82
+      ],
+      [
+        92,
+        93.82
+      ],
+      [
+        94,
+        94.82
+      ],
+      [
+        96,
+        97.82
+      ],
+      [
+        98,
+        99.82
+      ],
+      [
+        100,
+        101.82
+      ],
+      [
+        102,
+        103.82
+      ],
+      [
+        104,
+        105.82
+      ],
+      [
+        106,
+        107.82
+      ],
+      [
+        108,
+        109.82
+      ],
+      [
+        110,
+        110.82
+      ],
+      [
+        112,
+        113.82
+      ],
+      [
+        114,
+        115.82
+      ],
+      [
+        116,
+        117.82
+      ],
+      [
+        118,
+        119.82
+      ],
+      [
+        120,
+        121.82
+      ],
+      [
+        122,
+        122.82
+      ],
+      [
+        124,
+        127.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "9": "p",
+        "13": "mp",
+        "17": "pp",
+        "25": "p",
+        "29": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "17": "mp",
+        "24": "pp",
+        "25": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 7,
+      "left_hand_most_frequent_pattern_bars": 11,
+      "sounded_pitches_per_minute": 126.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Juniper Passage",
+    "opus": 217,
+    "score_pages": 4,
+    "bars": 32,
+    "pitch_onsets": 378,
+    "audio_seconds": 156.16,
+    "hands": {
+      "rh": {
+        "low": 57,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 10
+      },
+      "lh": {
+        "low": 43,
+        "high": 64,
+        "maximum_melodic_leap_semitones": 12,
+        "maximum_eighth_note_leap_semitones": 7,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced compound-metre lilt and chord voicing",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "The written quarter and eighth form a two-to-one lilt within each dotted-quarter beat. Bars 9\u201316 use continuous LH eighths, while the last eight bars turn the tune into chordal phrases. Keep the top notes audible through the changed textures."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0.0,
+        1.32
+      ],
+      [
+        1.5,
+        2.82
+      ],
+      [
+        3.0,
+        4.32
+      ],
+      [
+        4.5,
+        5.82
+      ],
+      [
+        6.0,
+        7.32
+      ],
+      [
+        7.5,
+        8.82
+      ],
+      [
+        9.0,
+        10.32
+      ],
+      [
+        10.5,
+        11.82
+      ],
+      [
+        12.0,
+        13.32
+      ],
+      [
+        13.5,
+        14.82
+      ],
+      [
+        15.0,
+        16.32
+      ],
+      [
+        16.5,
+        17.82
+      ],
+      [
+        18.0,
+        19.32
+      ],
+      [
+        19.5,
+        20.82
+      ],
+      [
+        21.0,
+        22.32
+      ],
+      [
+        22.5,
+        23.82
+      ],
+      [
+        24.0,
+        25.32
+      ],
+      [
+        25.5,
+        26.82
+      ],
+      [
+        27.0,
+        28.32
+      ],
+      [
+        28.5,
+        29.82
+      ],
+      [
+        30.0,
+        31.32
+      ],
+      [
+        31.5,
+        32.82
+      ],
+      [
+        33.0,
+        34.32
+      ],
+      [
+        36.0,
+        37.32
+      ],
+      [
+        37.5,
+        38.82
+      ],
+      [
+        39.0,
+        40.32
+      ],
+      [
+        40.5,
+        41.82
+      ],
+      [
+        42.0,
+        43.32
+      ],
+      [
+        43.5,
+        44.82
+      ],
+      [
+        45.0,
+        46.32
+      ],
+      [
+        46.5,
+        47.82
+      ],
+      [
+        48.0,
+        49.32
+      ],
+      [
+        49.5,
+        50.82
+      ],
+      [
+        51.0,
+        52.32
+      ],
+      [
+        52.5,
+        53.82
+      ],
+      [
+        54.0,
+        55.32
+      ],
+      [
+        55.5,
+        56.82
+      ],
+      [
+        57.0,
+        58.32
+      ],
+      [
+        58.5,
+        59.82
+      ],
+      [
+        60.0,
+        61.32
+      ],
+      [
+        61.5,
+        62.82
+      ],
+      [
+        63.0,
+        64.32
+      ],
+      [
+        64.5,
+        65.82
+      ],
+      [
+        66.0,
+        67.32
+      ],
+      [
+        67.5,
+        68.82
+      ],
+      [
+        69.0,
+        70.32
+      ],
+      [
+        72.0,
+        73.32
+      ],
+      [
+        73.5,
+        74.82
+      ],
+      [
+        75.0,
+        76.32
+      ],
+      [
+        76.5,
+        77.82
+      ],
+      [
+        78.0,
+        79.32
+      ],
+      [
+        79.5,
+        80.82
+      ],
+      [
+        81.0,
+        82.32
+      ],
+      [
+        82.5,
+        83.82
+      ],
+      [
+        84.0,
+        85.32
+      ],
+      [
+        85.5,
+        86.82
+      ],
+      [
+        87.0,
+        88.32
+      ],
+      [
+        88.5,
+        89.82
+      ],
+      [
+        90.0,
+        91.32
+      ],
+      [
+        91.5,
+        92.82
+      ],
+      [
+        93.0,
+        94.32
+      ],
+      [
+        94.5,
+        95.82
+      ],
+      [
+        96.0,
+        97.32
+      ],
+      [
+        97.5,
+        98.82
+      ],
+      [
+        99.0,
+        100.32
+      ],
+      [
+        100.5,
+        101.82
+      ],
+      [
+        102.0,
+        103.32
+      ],
+      [
+        103.5,
+        104.82
+      ],
+      [
+        105.0,
+        106.32
+      ],
+      [
+        108.0,
+        109.32
+      ],
+      [
+        109.5,
+        110.82
+      ],
+      [
+        111.0,
+        112.32
+      ],
+      [
+        112.5,
+        113.82
+      ],
+      [
+        114.0,
+        115.32
+      ],
+      [
+        115.5,
+        116.82
+      ],
+      [
+        117.0,
+        118.32
+      ],
+      [
+        118.5,
+        119.82
+      ],
+      [
+        120.0,
+        121.32
+      ],
+      [
+        121.5,
+        122.82
+      ],
+      [
+        123.0,
+        124.32
+      ],
+      [
+        124.5,
+        125.82
+      ],
+      [
+        126.0,
+        127.32
+      ],
+      [
+        127.5,
+        128.82
+      ],
+      [
+        129.0,
+        130.32
+      ],
+      [
+        130.5,
+        131.82
+      ],
+      [
+        132.0,
+        133.32
+      ],
+      [
+        133.5,
+        134.82
+      ],
+      [
+        135.0,
+        136.32
+      ],
+      [
+        136.5,
+        137.82
+      ],
+      [
+        139.5,
+        143.82
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "9": "p",
+        "13": "mp",
+        "17": "p",
+        "21": "mp",
+        "25": "p",
+        "29": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "9": "pp",
+        "17": "pp",
+        "21": "p",
+        "25": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 11,
+      "sounded_pitches_per_minute": 147.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Reed Inversion",
+    "opus": 218,
+    "score_pages": 4,
+    "bars": 21,
+    "pitch_onsets": 262,
+    "audio_seconds": 175.91,
+    "hands": {
+      "rh": {
+        "low": 63,
+        "high": 84,
+        "maximum_melodic_leap_semitones": 5,
+        "maximum_eighth_note_leap_semitones": 3,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 41,
+        "high": 67,
+        "maximum_melodic_leap_semitones": 12,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 8
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced long-line phrasing and melodic inversion",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "Bars 10\u201312 are the exact interval inversion of the opening three-bar upper melody around F5, with its rhythm unchanged. Give the reflected phrase its own direction rather than emphasising the device. Later flowing notes should remain lighter than the long phrase notes."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        4.8
+      ],
+      [
+        5,
+        6.8
+      ],
+      [
+        7,
+        9.8
+      ],
+      [
+        10,
+        11.8
+      ],
+      [
+        12,
+        13.8
+      ],
+      [
+        14,
+        16.8
+      ],
+      [
+        17,
+        18.8
+      ],
+      [
+        19,
+        19.8
+      ],
+      [
+        21,
+        23.8
+      ],
+      [
+        24,
+        25.8
+      ],
+      [
+        26,
+        27.8
+      ],
+      [
+        28,
+        30.8
+      ],
+      [
+        31,
+        32.8
+      ],
+      [
+        33,
+        34.8
+      ],
+      [
+        35,
+        37.8
+      ],
+      [
+        38,
+        39.8
+      ],
+      [
+        40,
+        40.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        46.8
+      ],
+      [
+        47,
+        48.8
+      ],
+      [
+        49,
+        51.8
+      ],
+      [
+        52,
+        53.8
+      ],
+      [
+        54,
+        55.8
+      ],
+      [
+        56,
+        58.8
+      ],
+      [
+        59,
+        60.8
+      ],
+      [
+        61,
+        61.8
+      ],
+      [
+        63,
+        65.8
+      ],
+      [
+        66,
+        67.8
+      ],
+      [
+        68,
+        69.8
+      ],
+      [
+        70,
+        72.8
+      ],
+      [
+        73,
+        74.8
+      ],
+      [
+        75,
+        76.8
+      ],
+      [
+        77,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        82.8
+      ],
+      [
+        84,
+        86.8
+      ],
+      [
+        87,
+        88.8
+      ],
+      [
+        89,
+        90.8
+      ],
+      [
+        91,
+        93.8
+      ],
+      [
+        94,
+        95.8
+      ],
+      [
+        96,
+        97.8
+      ],
+      [
+        98,
+        100.8
+      ],
+      [
+        101,
+        102.8
+      ],
+      [
+        103,
+        103.8
+      ],
+      [
+        105,
+        107.8
+      ],
+      [
+        108,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        114.8
+      ],
+      [
+        115,
+        116.8
+      ],
+      [
+        117,
+        118.8
+      ],
+      [
+        119,
+        121.8
+      ],
+      [
+        122,
+        123.8
+      ],
+      [
+        124,
+        124.8
+      ],
+      [
+        126,
+        128.8
+      ],
+      [
+        129,
+        130.8
+      ],
+      [
+        131,
+        132.8
+      ],
+      [
+        133,
+        135.8
+      ],
+      [
+        136,
+        137.8
+      ],
+      [
+        138,
+        138.8
+      ],
+      [
+        140,
+        146.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "4": "p",
+        "7": "pp",
+        "10": "mp",
+        "13": "p",
+        "16": "mp",
+        "19": "p",
+        "21": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "4": "pp",
+        "10": "pp",
+        "13": "p",
+        "16": "pp",
+        "19": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 8,
+      "left_hand_most_frequent_pattern_bars": 6,
+      "sounded_pitches_per_minute": 90.8,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Pearl Migration",
+    "opus": 219,
+    "score_pages": 5,
+    "bars": 30,
+    "pitch_onsets": 304,
+    "audio_seconds": 171.41,
+    "hands": {
+      "rh": {
+        "low": 59,
+        "high": 88,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 40,
+        "high": 71,
+        "maximum_melodic_leap_semitones": 11,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced melodic projection across registers and rhythmic diminution",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "The entire first six-bar bass phrase returns in RH bars 7\u201312 two octaves higher, is compressed by half in bars 13\u201315, and returns three octaves above its original register at 19\u201324. Keep the running version connected to the same phrase shape, without forcing the high register."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        2.8
+      ],
+      [
+        3,
+        4.8
+      ],
+      [
+        5,
+        7.8
+      ],
+      [
+        8,
+        9.8
+      ],
+      [
+        10,
+        12.8
+      ],
+      [
+        13,
+        14.8
+      ],
+      [
+        15,
+        17.8
+      ],
+      [
+        18,
+        19.8
+      ],
+      [
+        20,
+        22.8
+      ],
+      [
+        23,
+        24.8
+      ],
+      [
+        25,
+        27.8
+      ],
+      [
+        28,
+        28.8
+      ],
+      [
+        30,
+        31.8
+      ],
+      [
+        32,
+        34.8
+      ],
+      [
+        35,
+        36.8
+      ],
+      [
+        37,
+        39.8
+      ],
+      [
+        40,
+        41.8
+      ],
+      [
+        42,
+        44.8
+      ],
+      [
+        45,
+        46.8
+      ],
+      [
+        47,
+        49.8
+      ],
+      [
+        50,
+        51.8
+      ],
+      [
+        52,
+        54.8
+      ],
+      [
+        55,
+        56.8
+      ],
+      [
+        57,
+        58.8
+      ],
+      [
+        60,
+        62.3
+      ],
+      [
+        62.5,
+        64.8
+      ],
+      [
+        65,
+        67.3
+      ],
+      [
+        67.5,
+        69.8
+      ],
+      [
+        70,
+        72.3
+      ],
+      [
+        72.5,
+        74.3
+      ],
+      [
+        75,
+        76.8
+      ],
+      [
+        77,
+        79.8
+      ],
+      [
+        80,
+        81.8
+      ],
+      [
+        82,
+        84.8
+      ],
+      [
+        85,
+        86.8
+      ],
+      [
+        87,
+        89.8
+      ],
+      [
+        90,
+        91.8
+      ],
+      [
+        92,
+        94.8
+      ],
+      [
+        95,
+        96.8
+      ],
+      [
+        97,
+        99.8
+      ],
+      [
+        100,
+        101.8
+      ],
+      [
+        102,
+        104.8
+      ],
+      [
+        105,
+        106.8
+      ],
+      [
+        107,
+        109.8
+      ],
+      [
+        110,
+        111.8
+      ],
+      [
+        112,
+        114.8
+      ],
+      [
+        115,
+        116.8
+      ],
+      [
+        117,
+        118.8
+      ],
+      [
+        120,
+        122.8
+      ],
+      [
+        123,
+        124.8
+      ],
+      [
+        125,
+        127.8
+      ],
+      [
+        128,
+        129.8
+      ],
+      [
+        130,
+        132.8
+      ],
+      [
+        133,
+        134.8
+      ],
+      [
+        135,
+        136.8
+      ],
+      [
+        137,
+        139.8
+      ],
+      [
+        140,
+        141.8
+      ],
+      [
+        142,
+        143.8
+      ],
+      [
+        145,
+        149.8
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "pp",
+        "7": "p",
+        "13": "p",
+        "16": "mp",
+        "19": "p",
+        "25": "pp"
+      },
+      "lh": {
+        "1": "p",
+        "7": "pp",
+        "13": "pp",
+        "19": "pp",
+        "25": "pp"
+      }
+    },
+    "verified_clef_changes": {
+      "lh": {
+        "21": "treble",
+        "24": "bass"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 10,
+      "sounded_pitches_per_minute": 108.2,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
+  },
+  {
+    "piece": "Velvet Arrival",
+    "opus": 220,
+    "score_pages": 4,
+    "bars": 24,
+    "pitch_onsets": 284,
+    "audio_seconds": 186.26,
+    "hands": {
+      "rh": {
+        "low": 60,
+        "high": 87,
+        "maximum_melodic_leap_semitones": 7,
+        "maximum_eighth_note_leap_semitones": 5,
+        "maximum_simultaneous_span_semitones": 9
+      },
+      "lh": {
+        "low": 41,
+        "high": 60,
+        "maximum_melodic_leap_semitones": 10,
+        "maximum_eighth_note_leap_semitones": 0,
+        "maximum_simultaneous_span_semitones": 7
+      }
+    },
+    "checks": "PASS: score/MIDI pitches and onset times, bar lengths, unique note IDs, slur endpoints, MIDI releases, hand separation, chord spans, PDF page count, audio duration",
+    "midi_highlight_timing_error_seconds": 5e-07,
+    "technical_review": {
+      "difficulty": "Advanced chordal cantabile, augmentation and register changes",
+      "limits": {
+        "chord_span": 12,
+        "melodic_leap": 14,
+        "rapid_leap": 7
+      },
+      "note": "The opening three RH bars return an octave higher at 7\u201312 with every duration doubled. The falling single line at 13 connects the high chordal register to the central figuration. Project the top voice in the chordal sections and give the shared rests their full space."
+    },
+    "verified_notated_and_midi_pedal_spans": [
+      [
+        0,
+        1.28
+      ],
+      [
+        1.5,
+        2.78
+      ],
+      [
+        3,
+        4.28
+      ],
+      [
+        4.5,
+        5.78
+      ],
+      [
+        6,
+        8.78
+      ],
+      [
+        9,
+        11.78
+      ],
+      [
+        12,
+        13.78
+      ],
+      [
+        14,
+        15.78
+      ],
+      [
+        16,
+        17.78
+      ],
+      [
+        18,
+        20.78
+      ],
+      [
+        21,
+        23.78
+      ],
+      [
+        24,
+        25.78
+      ],
+      [
+        26,
+        27.28
+      ],
+      [
+        27.5,
+        29.78
+      ],
+      [
+        30,
+        31.78
+      ],
+      [
+        32,
+        33.78
+      ],
+      [
+        34,
+        34.78
+      ],
+      [
+        36,
+        38.78
+      ],
+      [
+        39,
+        41.78
+      ],
+      [
+        42,
+        44.78
+      ],
+      [
+        45,
+        47.78
+      ],
+      [
+        48,
+        50.78
+      ],
+      [
+        51,
+        53.78
+      ],
+      [
+        54,
+        56.78
+      ],
+      [
+        57,
+        59.78
+      ],
+      [
+        60,
+        61.78
+      ],
+      [
+        62,
+        63.78
+      ],
+      [
+        64,
+        65.78
+      ],
+      [
+        66,
+        67.78
+      ],
+      [
+        68,
+        69.78
+      ],
+      [
+        70,
+        71.78
+      ],
+      [
+        72,
+        74.78
+      ],
+      [
+        75,
+        77.78
+      ],
+      [
+        78,
+        80.78
+      ],
+      [
+        81,
+        83.78
+      ],
+      [
+        84,
+        86.78
+      ],
+      [
+        87,
+        89.78
+      ],
+      [
+        90,
+        92.78
+      ],
+      [
+        93,
+        95.78
+      ],
+      [
+        96,
+        98.78
+      ],
+      [
+        99,
+        101.78
+      ],
+      [
+        102,
+        104.78
+      ],
+      [
+        105,
+        106.78
+      ],
+      [
+        108,
+        109.28
+      ],
+      [
+        109.5,
+        110.78
+      ],
+      [
+        111,
+        112.28
+      ],
+      [
+        112.5,
+        113.78
+      ],
+      [
+        114,
+        116.78
+      ],
+      [
+        117,
+        119.78
+      ],
+      [
+        120,
+        121.78
+      ],
+      [
+        122,
+        123.78
+      ],
+      [
+        124,
+        125.78
+      ],
+      [
+        126,
+        128.78
+      ],
+      [
+        129,
+        131.78
+      ],
+      [
+        132,
+        133.78
+      ],
+      [
+        134,
+        135.78
+      ],
+      [
+        136,
+        136.78
+      ],
+      [
+        138,
+        143.78
+      ]
+    ],
+    "verified_staff_dynamics": {
+      "rh": {
+        "1": "p",
+        "7": "pp",
+        "13": "pp",
+        "14": "p",
+        "17": "mp",
+        "19": "p",
+        "22": "pp"
+      },
+      "lh": {
+        "1": "pp",
+        "7": "pp",
+        "14": "pp",
+        "19": "pp"
+      }
+    },
+    "musical_review_support": {
+      "whole_piece_duplicate_or_transposition": false,
+      "left_hand_rhythm_patterns": 10,
+      "left_hand_most_frequent_pattern_bars": 8,
+      "sounded_pitches_per_minute": 92.9,
+      "note": "These structural checks do not establish artistic quality or replace listening feedback."
+    }
   }
 ]

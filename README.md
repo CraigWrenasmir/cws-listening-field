@@ -233,6 +233,21 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 203 | Camellia Refractions | 5/4 | 441 | [Score](pieces/CWS_Op_203_Camellia_Refractions/CWS_Op_203_Camellia_Refractions.pdf) | [MP3](pieces/CWS_Op_203_Camellia_Refractions/CWS_Op_203_Camellia_Refractions.mp3) |
 | CWS Op. 204 | Fennel Parallax | 3/2 | 154 | [Score](pieces/CWS_Op_204_Fennel_Parallax/CWS_Op_204_Fennel_Parallax.pdf) | [MP3](pieces/CWS_Op_204_Fennel_Parallax/CWS_Op_204_Fennel_Parallax.mp3) |
 | CWS Op. 205 | Willow Iridescence | 6/4 | 320 | [Score](pieces/CWS_Op_205_Willow_Iridescence/CWS_Op_205_Willow_Iridescence.pdf) | [MP3](pieces/CWS_Op_205_Willow_Iridescence/CWS_Op_205_Willow_Iridescence.mp3) |
+| CWS Op. 206 | Clover Causeway | 6/4 | 184 | [Score](pieces/CWS_Op_206_Clover_Causeway/CWS_Op_206_Clover_Causeway.pdf) | [MP3](pieces/CWS_Op_206_Clover_Causeway/CWS_Op_206_Clover_Causeway.mp3) |
+| CWS Op. 207 | Willow Arcade | 5/4 | 225 | [Score](pieces/CWS_Op_207_Willow_Arcade/CWS_Op_207_Willow_Arcade.pdf) | [MP3](pieces/CWS_Op_207_Willow_Arcade/CWS_Op_207_Willow_Arcade.mp3) |
+| CWS Op. 208 | Camellia Viaduct | 5/4 | 245 | [Score](pieces/CWS_Op_208_Camellia_Viaduct/CWS_Op_208_Camellia_Viaduct.pdf) | [MP3](pieces/CWS_Op_208_Camellia_Viaduct/CWS_Op_208_Camellia_Viaduct.mp3) |
+| CWS Op. 209 | Fennel Courtyard | 7/4 | 160 | [Score](pieces/CWS_Op_209_Fennel_Courtyard/CWS_Op_209_Fennel_Courtyard.pdf) | [MP3](pieces/CWS_Op_209_Fennel_Courtyard/CWS_Op_209_Fennel_Courtyard.mp3) |
+| CWS Op. 210 | Clover Undertow | 4/4 | 231 | [Score](pieces/CWS_Op_210_Clover_Undertow/CWS_Op_210_Clover_Undertow.pdf) | [MP3](pieces/CWS_Op_210_Clover_Undertow/CWS_Op_210_Clover_Undertow.mp3) |
+| CWS Op. 211 | Fennel Correspondence | 5/4 | 146 | [Score](pieces/CWS_Op_211_Fennel_Correspondence/CWS_Op_211_Fennel_Correspondence.pdf) | [MP3](pieces/CWS_Op_211_Fennel_Correspondence/CWS_Op_211_Fennel_Correspondence.mp3) |
+| CWS Op. 212 | Willow Interchange | 4/4 | 199 | [Score](pieces/CWS_Op_212_Willow_Interchange/CWS_Op_212_Willow_Interchange.pdf) | [MP3](pieces/CWS_Op_212_Willow_Interchange/CWS_Op_212_Willow_Interchange.mp3) |
+| CWS Op. 213 | Camellia Answer | 5/4 | 133 | [Score](pieces/CWS_Op_213_Camellia_Answer/CWS_Op_213_Camellia_Answer.pdf) | [MP3](pieces/CWS_Op_213_Camellia_Answer/CWS_Op_213_Camellia_Answer.mp3) |
+| CWS Op. 214 | Moss Overpass | 3/2 | 213 | [Score](pieces/CWS_Op_214_Moss_Overpass/CWS_Op_214_Moss_Overpass.pdf) | [MP3](pieces/CWS_Op_214_Moss_Overpass/CWS_Op_214_Moss_Overpass.mp3) |
+| CWS Op. 215 | Clover Elsewhere | 3/4, 5/4 (changing) | 223 | [Score](pieces/CWS_Op_215_Clover_Elsewhere/CWS_Op_215_Clover_Elsewhere.pdf) | [MP3](pieces/CWS_Op_215_Clover_Elsewhere/CWS_Op_215_Clover_Elsewhere.mp3) |
+| CWS Op. 216 | Alder Unfolding | 4/4 | 296 | [Score](pieces/CWS_Op_216_Alder_Unfolding/CWS_Op_216_Alder_Unfolding.pdf) | [MP3](pieces/CWS_Op_216_Alder_Unfolding/CWS_Op_216_Alder_Unfolding.mp3) |
+| CWS Op. 217 | Juniper Passage | 9/8 | 378 | [Score](pieces/CWS_Op_217_Juniper_Passage/CWS_Op_217_Juniper_Passage.pdf) | [MP3](pieces/CWS_Op_217_Juniper_Passage/CWS_Op_217_Juniper_Passage.mp3) |
+| CWS Op. 218 | Reed Inversion | 7/4 | 262 | [Score](pieces/CWS_Op_218_Reed_Inversion/CWS_Op_218_Reed_Inversion.pdf) | [MP3](pieces/CWS_Op_218_Reed_Inversion/CWS_Op_218_Reed_Inversion.mp3) |
+| CWS Op. 219 | Pearl Migration | 5/4 | 304 | [Score](pieces/CWS_Op_219_Pearl_Migration/CWS_Op_219_Pearl_Migration.pdf) | [MP3](pieces/CWS_Op_219_Pearl_Migration/CWS_Op_219_Pearl_Migration.mp3) |
+| CWS Op. 220 | Velvet Arrival | 6/4 | 284 | [Score](pieces/CWS_Op_220_Velvet_Arrival/CWS_Op_220_Velvet_Arrival.pdf) | [MP3](pieces/CWS_Op_220_Velvet_Arrival/CWS_Op_220_Velvet_Arrival.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

@@ -38,4 +38,4 @@ For the continuing Op. 7–300 commission, read and update `data/PROGRESS.md` af
 
 - Optional `engraving.spacing_staff` increases the space between staves for opposing inner-voice phrase slurs; the default remains 10 for earlier scores. Op. 177 uses 22, with both PDF pages inspected. Preserve existing recordings and score defaults when extending engraving options.
 
-- Current authorised scope is the five Second Studies pilots, Op. 201–205. Stop at 205. Preserve every First Studies asset and its closed download volumes. Kinship shows the series as distinct connected regions with every work and exact ancestry link retained.
+- Current authorised scope is fifteen further Second Studies, Op. 206–220, developing wandering refrains. Stop at 220. Preserve every First Studies asset and its closed download volumes. Kinship shows the series as distinct connected regions with every work and exact ancestry link retained.

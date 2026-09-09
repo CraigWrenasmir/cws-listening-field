@@ -20,3 +20,7 @@ The names and musical ancestry remain part of the same library. Continue the seq
 ## Second Studies pilot
 
 Craig approved Op. 201–205 as five pilots, with longer developing forms, more daylight and dynamic contrast, and more varied endings. Second Studies permit six printed pages and 768 sounded pitch onsets, usually 2–5 minutes. First Studies (Op. 1–200) remain complete and unchanged. Kinship retains exact ancestry while showing two connected series regions. Stop at 205 and seek listening feedback before extending the series.
+
+## Wandering refrains, Op. 206–220
+
+Craig praised the Second Studies pilots and authorised fifteen further pieces, inviting a new direction. This supersedes the pilot stop at 205. Recurring bass phrases support developing songs in Op. 206–210; hand-to-hand and inner-voice conversations shape 211–215; 216–220 turn familiar phrases into flowing figures and chords. Exact melodic inversion, changed register, rhythmic diminution and augmentation extend the vocabulary while keeping a clear singing line. The same six-page/768-onset ceilings and connected Kinship regions apply. Complete the batch and stop at 220.

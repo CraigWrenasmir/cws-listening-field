@@ -747,5 +747,704 @@ A2+E3:2 D3+A3:2 E3+B3:1 R:1
 A2+E3+A3:6
 ''',sections={1:'pp',5:'p',7:'p',11:'mp',13:'mp',16:'mf',19:'mf',23:'mp',25:'mf'},lower_sections={1:'pp',7:'p',11:'mp',13:'p',19:'mp',25:'mf'},words={1:'dolce',25:'poco rit.'},slurs=[(1,6),(7,12),(13,18),(19,24),(25,28)],lower_phrases=[(7,12)],hairpins=[('crescendo',13,17)],tempo_changes={},group=3,
  pedal_spans=[[i*6+a,i*6+b-.2] for i,c in enumerate([[0,4,6],[0,3,6],[0,4,6],[0,3,6],[0,2,4,6],[0,2,5]]+[[0,2,4,6]]*5+[[0,2,4,5]]+[[0,3,6]]*5+[[0,3,5]]+[[0,2,4,6],[0,3,6],[0,2,4,6],[0,2,4,6],[0,2,4,6],[0,3,5]]+[[0,2,4,6]]*2+[[0,2,4,5],[0,6]]) for a,b in zip(c,c[1:])],
- performance=dict(rubato=[60,59,61,60,62,54,64,66,65,67,68,57,70,72,74,75,76,61,66,64,65,63,61,54,56,53,48,38],phrase_arcs=[[0,35,4],[36,71,5],[72,107,6],[108,143,5],[144,168,2]],lower_entries=[[36,71]],pedal_lift=.2,gate=.99,note='Allow the half-note pulse to gather momentum as the figuration moves between the hands. A broader sound replaces the moving notes; the final four bars keep their brightness and forward intention even as the pulse expands.'))
+ performance=dict(rubato=[60,59,61,60,62,54,64,66,65,67,68,57,70,72,74,75,76,61,66,64,65,63,61,54,56,53,48,38],phrase_arcs=[[0,35,4],[36,71,5],[72,107,6],[108,143,5],[144,168,2]],lower_entries=[[36,71]],pedal_lift=.2,gate=.99,note='Allow the half-note pulse to gather momentum as the figuration moves between the hands. A broader sound replaces the moving notes; the final four bars keep their brightness and forward intention even as the pulse expands.')),
+dict(op=206,title='Clover Causeway',key='g',fifths=-2,meter='6/4',bpm=58,
+ description='A six-bar ground carries four different hearings of a song. Clover Sunshower’s G–B-flat–A–D becomes a longer melody above the returning bass. The second hearing reaches towards E-flat, the third restores the first two melodic bars with a new continuation, and the fourth gathers chords before a quiet G-minor arrival.',
+ difficulty='Intermediate to advanced six-bar ground and melodic voicing',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='Keep the six-bar bass phrase continuous and give the melody its own longer breath. Bars 13–14 recall bars 1–2 exactly; the continuation should sound newly found. The last hearing changes the bass at its close.',
+ parent_opus=202,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['G','Bb','A','D']),ancestry=dict(source_opus=202,source_hand='rh',source_start_beat=.5,source_end_beat=3,source_pitches=['G','Bb','A','D'],transposition_semitones=0),
+ system_starts=list(range(1,25,2)),page_starts=[9,17],engraving=dict(spacing_system=16,pedal_offset_y=520),
+ rh='''
+G4:2 Bb4:1 A4:1 D5:1 C5:1
+Bb4:3 A4:1 G4:2
+Eb5:2 D5:1 C5:1 Bb4:2
+A4:1 C5:1 F#5:2 E5:1 D5:1
+C5:2 Bb4:1 G4:1 F4:2
+A4:2 G4:2 F#4:1 R:1
+Bb4:2 D5:1 C5:1 F5:2
+G5:3 F5:1 Eb5:2
+D5:2 F5:1 Eb5:1 C5:2
+D5:1 E5:1 F#5:2 A5:1 G5:1
+F5:2 D5:1 Bb4:1 A4:2
+C5:2 Bb4:2 A4:1 R:1
+G4:2 Bb4:1 A4:1 D5:1 C5:1
+Bb4:3 A4:1 G4:2
+Eb4:2 G4:1 C5:1 D5:2
+F#4:1 A4:1 C5:2 E5:1 D5:1
+Bb4:2 D5:1 F5:1 A5:2
+G5:2 E5:2 F#5:1 R:1
+Bb4+D5+G5:2 F5:1 D5:1 A4+C5+F5:2
+G4+Bb4+Eb5:3 D5:1 F4+A4+D5:2
+Eb4+G4+C5:2 D5:1 Eb5:1 G4+Bb4+D5:2
+F#4+A4+C5:2 D5:1 E5:1 A4+C5+F#5:2
+D5:2 C5:1 Bb4:1 A4:1 R:1
+G4+Bb4+D5:6
+''',lh='''
+G2:2 D3:1 F3:1 D3:2
+Eb3:2 Bb2:2 D3:2
+C3:2 G3:2 Eb3:2
+D3:2 A3:2 C4:2
+Bb2:2 F3:2 D3:2
+A2:2 E3:2 D3:1 R:1
+G2:2 D3:1 F3:1 D3:2
+Eb3:2 Bb2:2 D3:2
+C3:2 G3:2 Eb3:2
+D3:2 A3:2 C4:2
+Bb2:2 F3:2 D3:2
+A2:2 E3:2 D3:1 R:1
+G2:2 D3:1 F3:1 D3:2
+Eb3:2 Bb2:2 D3:2
+C3:2 G3:2 Eb3:2
+D3:2 A3:2 C4:2
+Bb2:2 F3:2 D3:2
+A2:2 E3:2 D3:1 R:1
+G2:2 D3:1 F3:1 D3:2
+Eb3:2 Bb2:2 D3:2
+C3:2 G3:2 Eb3:2
+D3:2 A3:2 C4:2
+Eb3:2 Bb2:2 D3:1 R:1
+G2+D3:6
+''',sections={1:'p',7:'mp',13:'p',19:'mf',23:'pp'},lower_sections={1:'pp',19:'p',23:'pp'},words={23:'poco rit.'},slurs=[(1,6),(7,12),(13,18),(19,24)],lower_phrases=[(1,6),(13,18)],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*6+a,i*6+b-.2] for i in range(24) for a,b in zip(([0] if i==23 else [0,2,4]),([6] if i==23 else [2,4,5 if i in [5,11,17,22] else 6]))],
+ performance=dict(rubato=[58,59,60,60,57,51,60,62,61,63,59,52,57,58,60,61,62,53,60,59,58,56,47,34],phrase_arcs=[[0,35,4],[36,71,5],[72,107,4],[108,144,3]],lower_entries=[[0,35],[72,107]],pedal_lift=.2,gate=.99,note='Four hearings of the same ground gain different melodic destinations. The final cadence releases its repeated bass and becomes still.')),
+dict(op=207,title='Willow Arcade',key='D',fifths=2,meter='5/4',bpm=54,
+ description='A D–C–A–G fragment from Willow Iridescence becomes a bright, unhurried five-beat song. A four-bar bass path returns beneath six-bar melodic breaths, so their beginnings move in relation to one another. Borrowed B-flat and C colours soften the D-major light. A later return keeps its tune but changes the ground, and the ending rests on a suspended dominant.',
+ difficulty='Intermediate to advanced five-beat syncopation and overlapping phrase cycles',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='Keep the short LH eighths light and hear its four-bar journey under the six-bar melodic phrases. The same melody in bars 13–14 receives different bass notes. Do not resolve the final suspended A harmony.',
+ parent_opus=205,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['D','C','A','G']),ancestry=dict(source_opus=205,source_hand='rh',source_start_beat=6,source_end_beat=14,source_pitches=['D','C','A','G'],transposition_semitones=0),
+ system_starts=list(range(1,25,2)),page_starts=[9,17],engraving=dict(spacing_system=16,pedal_offset_y=520),
+ rh='''
+D5:1 C5:1 A4:1 G4:2
+F#4:1 A4:.5 B4:.5 D5:2 E5:1
+F5:2 D5:1 C5:1 A4:1
+B4:1 D5:1 C#5:2 A4:1
+F#4:2 G4:1 A4:1 C5:1
+B4:2 A4:1 G4:1 R:1
+Bb4:1 D5:.5 F5:.5 A5:2 G5:1
+F#5:2 E5:1 C#5:1 B4:1
+A4:1 C5:1 E5:1 D5:2
+B4:2 D5:.5 E5:.5 F#5:1 A5:1
+G5:1 F5:1 D5:2 C5:1
+B4:2 C#5:1 E5:1 R:1
+D5:1 C5:1 A4:1 G4:2
+F#4:1 A4:.5 B4:.5 D5:2 E5:1
+F4:2 A4:1 C5:1 E5:1
+D5:1 C5:1 Bb4:2 G4:1
+A4:1 C#5:1 E5:1 G5:2
+F#5:2 E5:1 D5:1 R:1
+F#4+A4+D5:2 E5:1 F#5:1 A5:1
+G5:2 F#5:1 D5:1 B4:1
+F4+Bb4+D5:1 E5:1 F5:1 A5:2
+G5:1 E5:1 D5:2 B4:1
+C#5:2 B4:1 G4:1 R:1
+G4+B4+D5:5
+''',lh='''
+D3:1 A3:.5 C4:.5 F#3:1 A3:1 E3:1
+G3:1 D4:.5 B3:.5 F#3:1 A3:1 D3:1
+Bb2:1 F3:.5 A3:.5 D3:1 F3:1 C3:1
+A2:1 E3:.5 G3:.5 C#3:1 E3:1 G3:1
+D3:1 A3:.5 C4:.5 F#3:1 A3:1 E3:1
+G3:1 D4:.5 B3:.5 F#3:1 A3:1 R:1
+Bb2:1 F3:.5 A3:.5 D3:1 F3:1 C3:1
+A2:1 E3:.5 G3:.5 C#3:1 E3:1 G3:1
+D3:1 A3:.5 C4:.5 F#3:1 A3:1 E3:1
+G3:1 D4:.5 B3:.5 F#3:1 A3:1 D3:1
+Bb2:1 F3:.5 A3:.5 D3:1 F3:1 C3:1
+A2:1 E3:.5 G3:.5 C#3:1 E3:1 R:1
+Bb2:1 F3:.5 A3:.5 D3:1 F3:1 C3:1
+B2:1 F#3:.5 A3:.5 D3:1 F#3:1 A3:1
+C3:1 G3:.5 Bb3:.5 E3:1 G3:1 D3:1
+Eb3:1 Bb3:.5 D4:.5 G3:1 Bb3:1 F3:1
+A2:1 E3:.5 G3:.5 C#3:1 E3:1 G3:1
+D3:1 A3:.5 C#4:.5 F#3:1 A3:1 R:1
+D3+A3:2 F#3+C#4:3
+G3+D4:2 B2+F#3:3
+Bb2+F3:2 D3+A3:3
+C3+G3:2 E3+B3:3
+A2+E3:2 G3:2 R:1
+A2+E3:5
+''',sections={1:'p',7:'mp',13:'p',19:'mf',23:'pp'},lower_sections={1:'pp',7:'p',19:'mp',23:'pp'},words={23:'poco rit.'},slurs=[(1,6),(7,12),(13,18),(19,24)],lower_phrases=[],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*5+a,i*5+b-.2] for i in range(24) for a,b in zip(([0] if i==23 else [0,2]),([5] if i==23 else [2,4 if i in [5,11,17,22] else 5]))],
+ performance=dict(rubato=[54,56,55,53,55,48,57,56,55,58,55,48,54,55,54,53,55,48,56,54,55,52,44,33],phrase_arcs=[[0,29,4],[30,59,5],[60,89,4],[90,120,3]],lower_entries=[],pedal_lift=.2,gate=.98,note='The changing relation of four-bar bass cycles and six-bar melody gives gentle asymmetry. The short notes lean towards the long ones; keep the last suspended harmony open.')),
+dict(op=208,title='Camellia Viaduct',key='c',fifths=-3,meter='5/4',bpm=58,
+ description='An entirely chordal song unfolds above a seven-bar descent: C, B, B-flat, A, A-flat, G, G. Each return hears that descent in a different harmonic light. The C–E-flat–D–G refrain comes from Camellia Refractions; its last appearance leaves the ground and arrives in E-flat major.',
+ difficulty='Advanced chordal passacaglia and chromatic voice leading',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='The long bass fifths frame a melody in the tops of the RH chords. Give the seven-bar ground an unbroken direction. The opening chord melody returns in bar 15, while later chords change its path. Play all chord attacks together; the final bass departure is deliberate.',
+ parent_opus=203,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['C','Eb','D','G']),ancestry=dict(source_opus=203,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['D','F','E','A'],transposition_semitones=-2),
+ system_starts=[1,3,5,8,10,12,15,17,19,22,24,26],page_starts=[8,15,22],engraving=dict(spacing_system=16,pedal_offset_y=520),
+ rh='''
+Eb4+G4+C5:1 G4+Bb4+Eb5:1 F4+A4+D5:1 C4+Eb4+G4:2
+D4+F#4+A4:2 E4+G4+B4:1 F#4+A4+D5:2
+D4+G4+C5:3 C4+F4+A4:2
+B3+D4+G4:2 C#4+E4+A4:3
+C4+Eb4+G4:2 Bb3+Db4+F4:1 C4+Eb4+Ab4:2
+B3+D4+F4:3 C4+Eb4+G4:2
+B3+D4+Ab4:4 R:1
+G4+C5+Eb5:2 A4+C5+F5:1 G4+Bb4+Eb5:2
+F#4+A4+D5:3 E4+G4+C5:2
+F4+A4+D5:2 G4+Bb4+Eb5:3
+E4+G4+C5:2 F#4+A4+D5:1 E4+G4+B4:2
+Eb4+G4+C5:3 Db4+F4+Bb4:2
+D4+F4+A4:2 Eb4+G4+C5:3
+D4+F4+B4:4 R:1
+Eb4+G4+C5:1 G4+Bb4+Eb5:1 F4+A4+D5:1 C4+Eb4+G4:2
+F#4+A4+D5:2 G4+B4+E5:1 A4+C5+F#5:2
+G4+Bb4+Eb5:3 F4+A4+D5:2
+E4+G4+C5:2 F#4+A4+D5:3
+Eb4+G4+C5:2 F4+Ab4+Db5:1 Eb4+G4+C5:2
+D4+F4+B4:3 Eb4+G4+C5:2
+F4+Ab4+D5:4 R:1
+G4+C5+Eb5:2 F4+Bb4+D5:3
+F#4+A4+D5:2 E4+G4+C5:3
+F4+A4+D5:2 Eb4+G4+C5:1 D4+F4+Bb4:2
+E4+G4+B4:3 D4+F#4+A4:2
+Eb4+G4+C5:2 F4+Ab4+Db5:3
+D4+F4+Bb4:2 C4+Eb4+Ab4:2 R:1
+Eb4+G4+Bb4:5
+''',lh='''C3+G3:5
+B2+F#3:5
+Bb2+F3:5
+A2+E3:5
+Ab2+Eb3:5
+G2+D3:5
+G2+D3:4 R:1
+'''*3+'''C3+G3:5
+B2+F#3:5
+Bb2+F3:5
+A2+E3:5
+Ab2+Eb3:5
+Bb2+F3:4 R:1
+Eb3+Bb3:5
+''',sections={1:'p',8:'mp',15:'mf',22:'p',26:'pp'},lower_sections={1:'pp',15:'p',22:'pp'},words={26:'poco rit.'},slurs=[(1,7),(8,14),(15,21),(22,28)],lower_phrases=[],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*5+a,i*5+b-.2] for i,c in enumerate([[0,1,2,3,5],[0,2,3,5],[0,3,5],[0,2,5],[0,2,3,5],[0,3,5],[0,4],[0,2,3,5],[0,3,5],[0,2,5],[0,2,3,5],[0,3,5],[0,2,5],[0,4],[0,1,2,3,5],[0,2,3,5],[0,3,5],[0,2,5],[0,2,3,5],[0,3,5],[0,4],[0,2,5],[0,2,5],[0,2,3,5],[0,3,5],[0,2,5],[0,2,4],[0,5]]) for a,b in zip(c,c[1:])],
+ performance=dict(rubato=[58,59,57,58,56,54,47,60,61,59,60,57,55,48,61,62,60,61,58,55,47,57,56,55,53,49,43,32],phrase_arcs=[[0,34,4],[35,69,5],[70,104,5],[105,140,2]],lower_entries=[],pedal_lift=.2,gate=.99,note='Keep each chromatic descent connected while releasing pedal at the changing upper harmonies. The last seven bars gradually stop following the old ground.')),
+dict(op=209,title='Fennel Courtyard',key='a',fifths=0,meter='7/4',bpm=60,
+ description='A–C–B–G, borrowed from the second phrase of Fennel Parallax, returns as a singing lower refrain. Its three-bar cycle meets seven-bar upper phrases, changing the meeting points between the hands. The middle opens towards F and D major; the final lower refrain is shortened and leaves a quiet A-minor ninth.',
+ difficulty='Advanced seven-beat counterpoint and independent phrase lengths',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='Let the LH refrain sing, especially in bars 1, 4, 7 and 10. Its repeated three-bar span should not dictate the RH seven-bar phrases. The final refrain in bar 19 loses its last long note, making room for the closing two bars.',
+ parent_opus=204,motif=dict(hand='lh',start_beat=0,end_beat=7,pitches=['A','C','B','G']),ancestry=dict(source_opus=204,source_hand='rh',source_start_beat=6,source_end_beat=14,source_pitches=['A','C','B','G'],transposition_semitones=-12),
+ system_starts=[1,3,5,8,10,12,15,17,19],page_starts=[8,15],engraving=dict(spacing_system=18,pedal_offset_y=540),
+ rh='''
+E5:3 D5:1 C5:2 B4:1
+A4:2 C5:1 E5:1 G5:3
+F5:2 E5:1 C5:1 D5:2 E5:1
+G5:3 E5:1 D5:1 C5:2
+B4:2 D5:1 F5:1 E5:3
+C5:3 A4:1 G4:2 B4:1
+C5:2 D5:2 E5:2 R:1
+F5:3 A5:1 G5:2 E5:1
+D5:2 F5:1 A5:1 C6:3
+B5:2 A5:1 F#5:1 E5:2 D5:1
+C#5:3 E5:1 F#5:1 A5:2
+G5:2 F5:1 D5:1 C5:3
+E5:3 D5:1 B4:2 G4:1
+A4:2 C5:2 B4:2 R:1
+E5:3 D5:1 C5:2 B4:1
+A4:2 C5:1 E5:1 G5:3
+F5:2 A5:1 G5:1 E5:2 D5:1
+C5:3 B4:1 A4:1 G4:2
+E4+A4+C5:3 D5:1 B4:2 R:1
+G4:2 F4:2 E4:2 R:1
+G4+B4+C5+E5:7
+''',lh='''
+A3:2 C4:1 B3:1 G3:3
+F3:3 C4:2 A3:2
+E3:2 B3:1 D4:1 G3:3
+A3:2 C4:1 B3:1 G3:3
+F3:3 C4:2 A3:2
+E3:2 B3:1 D4:1 G3:3
+A3:2 C4:1 B3:1 G3:2 R:1
+F3:3 C4:2 A3:2
+E3:2 B3:1 D4:1 G3:3
+A3:2 C4:1 B3:1 G3:3
+F#3:3 C#4:2 A3:2
+F3:2 C4:1 Eb4:1 A3:3
+G3:2 Bb3:1 A3:1 F3:3
+E3:3 B3:2 G#3:1 R:1
+A3:2 C4:1 B3:1 G3:3
+F3:3 C4:2 A3:2
+D3:2 A3:1 C4:1 F3:3
+E3:3 B3:2 G#3:2
+A3:2 C4:1 B3:1 G3:2 R:1
+F3+C4:2 E3+B3:4 R:1
+A2+E3:7
+''',sections={1:'p',8:'mp',11:'mf',14:'pp',15:'p',19:'pp'},lower_sections={1:'p',8:'pp',10:'mp',14:'pp',15:'p',19:'pp'},words={19:'poco rit.'},slurs=[(1,7),(8,14),(15,21)],lower_phrases=[(1,3),(4,6),(7,9),(10,12),(15,18)],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*7+a,i*7+b-.25] for i in range(21) for a,b in zip(([0] if i==20 else [0,2,4]),([7] if i==20 else [2,4,6 if i in [6,13,18,19] else 7]))],
+ performance=dict(rubato=[60,61,62,60,59,58,50,62,64,65,63,60,57,49,59,61,60,57,51,43,33],phrase_arcs=[[0,48,4],[49,97,5],[98,147,3]],lower_entries=[[0,21],[21,42],[63,84],[98,126]],pedal_lift=.25,gate=.99,note='The melody below and the song above should breathe independently. Preserve the upper phrase across lower returns, then let the final two bars expand into stillness.')),
+dict(op=210,title='Clover Undertow',key='d',fifths=-1,meter='4/4',bpm=54,
+ description='A five-quarter bass figure repeatedly crosses the four-beat bar line. Above it, the F–E–D–C refrain from Clover Causeway opens into a long D-minor song. The ground darkens into C minor, returns, then gives way to broad chords and a bright D-major ending.',
+ difficulty='Advanced displaced ostinato and long melodic arcs',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='The LH figure lasts five quarter beats, returning every five bars after four cycles. Its dotted opening sometimes crosses a bar line. Keep the RH song free from the shifting bass accents. Broaden the final five bars without losing the full sound.',
+ parent_opus=206,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['F','E','D','C']),ancestry=dict(source_opus=206,source_hand='rh',source_start_beat=12,source_end_beat=18,source_pitches=['Eb','D','C','Bb'],transposition_semitones=2),
+ system_starts=list(range(1,31,2)),page_starts=[9,17,25],engraving=dict(spacing_system=16,pedal_offset_y=520),
+ rh='''
+F5:1.5 E5:.5 D5:1 C5:1
+A4:2 C5:1 D5:1
+E5:1 F5:.5 A5:.5 G5:2
+F5:1 E5:1 C5:1 A4:1
+D5:2 C5:1 B4:1
+A4:1 C5:.5 D5:.5 F5:2
+E5:2 D5:.5 C5:.5 A4:1
+G4:1 Bb4:1 D5:1 E5:1
+F5:2 A5:1 G5:1
+E5:1 D5:1 C5:1 R:1
+A4+C5+F5:1 G5:.5 A5:.5 C6:2
+Bb5:1 A5:1 F5:2
+G5:1 F5:1 E5:1 D5:1
+C5:1 E5:.5 G5:.5 F5:2
+E5:2 D5:1 R:1
+C5:1 Eb5:.5 D5:.5 Bb4:2
+G5:1 F5:1 Eb5:1 D5:1
+C5:2 Bb4:1 Ab4:1
+G4:1 Ab4:.5 C5:.5 Eb5:2
+D5:1 Bb4:1 G4:1 F4:1
+F5:1.5 E5:.5 D5:1 C5:1
+A4:2 C5:1 D5:1
+E5:1 F5:.5 A5:.5 G5:2
+F5:1 D5:1 C5:1 A4:1
+G4:2 A4:1 R:1
+F#4+A4+D5:2 G4+B4+E5:2
+A4+C#5+F#5:2 B4+D5+G5:2
+G4+C5+E5:2 A4+C#5+F#5:2
+G4+A4+C#5:3 R:1
+F#4+A4+D5:4
+''',lh='''D3:1.5 A3:.5 F3:1 C4:1
+A3:1 D3:1.5 A3:.5 F3:1
+C4:1 A3:1 D3:1.5 A3:.5
+F3:1 C4:1 A3:1 D3:1~
+D3:.5 A3:.5 F3:1 C4:1 A3:1
+'''*3+'''C3:1.5 G3:.5 Eb3:1 Bb3:1
+G3:1 C3:1.5 G3:.5 Eb3:1
+Bb3:1 G3:1 C3:1.5 G3:.5
+Eb3:1 Bb3:1 G3:1 C3:1~
+C3:.5 G3:.5 Eb3:1 Bb3:1 G3:1
+D3:1.5 A3:.5 F3:1 C4:1
+A3:1 D3:1.5 A3:.5 F3:1
+C4:1 A3:1 D3:1.5 A3:.5
+F3:1 C4:1 A3:1 D3:1~
+D3:.5 A3:.5 F3:1 C4:1 A3:1
+D3+A3:2 G3+D4:2
+F#3+C#4:2 B2+F#3:2
+C3+G3:2 D3+A3:2
+A2+E3:3 R:1
+D3+A3:4
+''',sections={1:'p',6:'mp',11:'mf',16:'p',21:'mp',26:'mf'},lower_sections={1:'pp',11:'p',16:'pp',21:'p',26:'mp'},words={26:'poco rit.'},slurs=[(1,5),(6,10),(11,15),(16,20),(21,25),(26,30)],lower_phrases=[],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*4+a,i*4+b-.2] for i in range(30) for a,b in zip(([0] if i>=28 else [0,2]),([3 if i==28 else 4] if i>=28 else [2,4]))],
+ performance=dict(rubato=[54,56,57,55,53,56,55,57,59,53,59,60,58,57,51,54,55,53,52,50,55,57,58,55,50,53,52,49,43,35],phrase_arcs=[[0,20,4],[20,39,5],[40,59,6],[60,80,4],[80,99,4],[100,120,3]],lower_entries=[],pedal_lift=.2,gate=.99,note='The five-beat ground creates its own gentle displacement. Let the melody keep a broad direction across it; the final D-major chords retain warmth and definition.')),
+dict(op=211,title='Fennel Correspondence',key='F',fifths=-1,meter='5/4',bpm=54,
+ description='The opening three-bar song is answered an octave lower, while the upper hand becomes a quiet harmonic frame. Later exchanges change the melody and its surroundings. The D–F–E–A thought comes from Fennel Daybreak; its final lower return ends alone on F.',
+ difficulty='Intermediate to advanced melody exchange and changing LH clefs',technique_limits=dict(chord_span=12,melodic_leap=17,rapid_leap=7),technical_note='Bring forward the hand carrying the moving phrase and keep the held chords softer. The first answer in bars 4–6 is exactly one octave below bars 1–3. Follow the written LH clef changes; the last bar belongs to the LH alone.',
+ parent_opus=201,motif=dict(hand='rh',start_beat=0,end_beat=5,pitches=['D','F','E','A']),ancestry=dict(source_opus=201,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['D','F','E','A'],transposition_semitones=0),
+ system_starts=list(range(1,25,2)),page_starts=[9,17],clef_changes=dict(lh={4:'treble',7:'bass',10:'treble',13:'bass',16:'treble',19:'bass',22:'treble'}),engraving=dict(spacing_system=17,pedal_offset_y=520),
+ rh='''
+D5:1 F5:1 E5:1 A4:2
+C5:2 D5:1 G5:1 F5:1
+E5:2 C5:1 A4:1 R:1
+A4+C5+F5:5
+G5+Bb5+E6:5
+G4+Bb4+E5:4 R:1
+F5:1 A5:1 G5:1 C5:2
+D5:2 F5:1 Bb5:1 A5:1
+G5:2 E5:1 C5:1 R:1
+C5+F5+A5:5
+D5+G5+Bb5:5
+C5+F5+A5:4 R:1
+D5:1 F5:.5 E5:.5 A5:2 G5:1
+F5:2 E5:1 D5:1 Bb4:1
+C5:2 A4:1 G4:1 R:1
+C5+F5+A5:5
+Bb4+Db5+Gb5:5
+G4+B4+E5:4 R:1
+F5:2 E5:1 D5:1 C5:1
+Bb4:1 D5:1 F5:2 E5:1
+C5:2 A4:1 G4:1 F4:1
+A4+C5+F5:5
+G4+Bb4+E5:4 R:1
+R:5
+''',lh='''
+Bb2+F3:5
+A2+E3:5
+F3+C4:4 R:1
+D4:1 F4:1 E4:1 A3:2
+C4:2 D4:1 G4:1 F4:1
+E4:2 C4:1 A3:1 R:1
+Bb2+F3:5
+G3+D4:5
+C3+G3:4 R:1
+F4:1 A4:1 G4:1 C4:2
+D4:2 F4:1 Bb4:1 A4:1
+G4:2 E4:1 C4:1 R:1
+Bb2+F3:5
+Db3+Ab3:5
+C3+G3:4 R:1
+D4:1 F4:.5 E4:.5 A4:2 G4:1
+F4:2 Eb4:1 Db4:1 Bb3:1
+C4:2 B3:1 G3:1 R:1
+Bb2+F3:5
+G3+D4:5
+C3+G3:5
+D4:1 F4:1 E4:1 A3:2
+G3:1.5 Bb3:.5 D4:1 C4:2
+F4:5
+''',sections={1:'p',4:'pp',7:'mp',10:'pp',13:'mf',16:'pp',19:'p',22:'pp'},lower_sections={1:'pp',4:'p',7:'pp',10:'mp',13:'pp',16:'p',19:'pp',22:'p',24:'pp'},words={22:'poco rit.'},slurs=[(1,3),(7,9),(13,15),(19,21)],lower_phrases=[(4,6),(10,12),(16,18),(22,24)],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*5+a,i*5+b-.2] for i in range(24) for a,b in zip(([0] if i==23 else [0,2]),([5] if i==23 else [2,4 if i in [2,5,8,11,14,17,22] else 5]))],
+ performance=dict(rubato=[54,56,49,53,55,48,57,59,51,56,58,50,58,56,49,55,54,47,53,52,50,47,42,32],phrase_arcs=[[0,14,4],[30,44,5],[60,74,5],[90,105,3]],lower_entries=[[15,29],[45,59],[75,89],[105,120]],pedal_lift=.2,gate=.99,note='Hear each lower phrase as a reply, with a different harmonic background. Keep the chordal hand quiet and allow the final lower F to be heard by itself.')),
+dict(op=212,title='Willow Interchange',key='Bb',fifths=-2,meter='4/4',bpm=52,
+ description='A lower answer enters two beats after the upper melody, retaining its first two bars an octave below. The B-flat–A-flat–F–E-flat thought comes from Willow Arcade. Independent lines travel through G minor and E-flat before the tune returns above a new bass and the piece settles into open fifths.',
+ difficulty='Intermediate to advanced delayed imitation and independent line shaping',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='Hear the opening LH as an answer delayed by two quarter beats, rather than an accompaniment. Later replies become freer. Let the two lines release together only at the written shared rests.',
+ parent_opus=207,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['Bb','Ab','F','Eb']),ancestry=dict(source_opus=207,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['D','C','A','G'],transposition_semitones=-4),
+ system_starts=list(range(1,33,2)),page_starts=[9,17,25],engraving=dict(spacing_system=16,pedal_offset_y=520),
+ rh='''
+Bb4:1 Ab4:.5 F4:.5 Eb4:2
+D4:1 F4:1 Bb4:2
+A4:1 C5:.5 D5:.5 F5:2
+Eb5:2 D5:1 C5:1
+Bb4:1 D5:1 F5:1 A5:1
+G5:2 F5:.5 Eb5:.5 D5:1
+C5:1 Bb4:1 A4:1 F4:1
+G4:2 F4:1 R:1
+G4:1 Bb4:.5 A4:.5 D5:2
+C5:1 Eb5:1 G5:2
+F5:1 D5:.5 C5:.5 Bb4:2
+A4:2 C5:1 F#5:1
+G5:1 F5:1 D5:1 Bb4:1
+C5:2 Eb5:.5 D5:.5 G4:1
+A4:1 Bb4:1 C5:1 D5:1
+Bb4:2 A4:1 R:1
+G4:1 Bb4:1 Eb5:2
+F5:1 G5:.5 Ab5:.5 C6:2
+Bb5:2 Ab5:1 G5:1
+F5:1 Eb5:1 D5:2
+C5:1 Eb5:.5 G5:.5 F5:2
+D5:2 C5:1 Bb4:1
+Ab4:1 C5:1 Eb5:1 D5:1
+C5:2 A4:1 R:1
+Bb4:1 Ab4:.5 F4:.5 Eb4:2
+D4:1 F4:1 Bb4:2
+A4:1 C5:1 D5:1 F5:1
+Eb5:2 D5:1 C5:1
+Bb4:1 A4:1 G4:1 F4:1
+Eb4:2 G4:1 Bb4:1
+A4:1 G4:1 F4:1 R:1
+F4+Bb4:4
+''',lh='''
+R:2 Bb3:1 Ab3:.5 F3:.5
+Eb3:2 D3:1 F3:1
+Bb3:2 A3:1 F3:1
+G3:1 Bb3:1 A3:2
+F3:2 A3:1 C4:1
+Eb3:1 G3:1 Bb3:2
+A3:2 G3:1 D3:1
+C3:2 F3:1 R:1
+R:2 G3:1 Bb3:.5 A3:.5
+D3:2 C3:1 Eb3:1
+G3:2 F3:1 D3:1
+Eb3:1 G3:1 A3:2
+Bb3:2 A3:1 G3:1
+Eb3:1 G3:1 Bb3:2
+F3:2 A3:1 C4:1
+D3:2 F#3:1 R:1
+Eb3:2 G3:1 Bb3:1
+Ab3:2 C4:1 Eb4:1
+D4:1 C4:1 Bb3:2
+A3:2 G3:1 F3:1
+Ab3:2 G3:1 Eb3:1
+F3:1 A3:1 C4:2
+Eb3:2 G3:1 Bb3:1
+F3:2 A3:1 R:1
+G3:2 D3:1 F3:1
+Bb2:1 F3:1 A3:2
+C3:1 G3:1 Bb3:2
+Eb3:2 G3:1 Bb3:1
+D3:1 F3:1 A3:2
+C3:2 G3:1 Eb3:1
+F3:2 C3:1 R:1
+Bb2+F3:4
+''',sections={1:'p',9:'mp',17:'mf',23:'p',25:'p',29:'pp'},lower_sections={1:'p',9:'mp',17:'mp',25:'pp'},words={29:'poco rit.'},slurs=[(1,8),(9,16),(17,24),(25,32)],lower_phrases=[(1,8),(9,16),(17,24),(25,32)],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*4+a,i*4+b-.2] for i in range(32) for a,b in zip(([0] if i==31 else [0,2]),([4] if i==31 else [2,3 if i in [7,15,23,30] else 4]))],
+ performance=dict(rubato=[52,53,54,55,54,52,50,44,53,55,54,52,55,53,51,44,57,59,57,55,54,52,49,43,51,53,54,52,48,45,39,30],phrase_arcs=[[0,31,4],[32,63,5],[64,95,6],[96,128,3]],lower_entries=[[2,31],[34,63],[64,95]],pedal_lift=.2,gate=.99,note='The initial two-beat echo gradually becomes a conversation. Shape both lines through their high points and retain the final bare fifths.')),
+dict(op=213,title='Camellia Answer',key='c',fifths=-3,meter='5/4',bpm=53,
+ description='A melody appears inside the right hand beneath a sustained upper light, then is answered by the left hand. The C–E-flat–D–G thought descends from Camellia Viaduct. Four exchanges change the answering harmony; the final phrase leaves C minor for a quiet E-flat added-sixth chord.',
+ difficulty='Advanced three-voice phrasing and hand-to-hand melody exchange',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='Keep the RH upper notes softer than its moving inner voice. The first LH answer is exactly an octave below the first inner phrase. Hidden full-bar inner rests occur only while the upper voice sounds; the melody changes hands every three bars.',
+ parent_opus=208,motif=dict(hand='rh',voice='inner',start_beat=0,end_beat=5,pitches=['C','Eb','D','G']),ancestry=dict(source_opus=208,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['C','Eb','D','G'],transposition_semitones=-12),
+ system_starts=list(range(1,25,2)),page_starts=[7,13,19],engraving=dict(spacing_system=18,spacing_staff=20,pedal_offset_y=560),
+ rh='''
+Bb4:5
+C5:5
+Bb4:4 R:1
+G4:5
+A4:5
+G4:4 R:1
+D5:5
+C5:5
+C5:4 R:1
+Bb4:5
+Ab4:5
+B4:4 R:1
+Bb4:5
+C5:5
+A4:4 R:1
+G4:5
+Ab4:5
+G4:4 R:1
+Bb4:5
+C5:5
+Bb4:4 R:1
+G4:5
+F4:4 R:1
+C5:5
+''',rh_inner='''
+C4:1 Eb4:1 D4:1 G4:2
+F4:2 Eb4:1 D4:1 C4:1
+D4:2 F4:1 Eb4:1 R:1
+R:5
+R:5
+R:5
+Eb4:1 G4:1 F4:1 Bb4:2
+G4:2 F4:1 Eb4:1 C4:1
+D4:2 F4:1 A4:.5 G4:.5 R:1
+R:5
+R:5
+R:5
+C4:1.5 Eb4:.5 D4:1 G4:2
+F4:2 Ab4:1 G4:1 Eb4:1
+D4:2 F4:1 E4:1 R:1
+R:5
+R:5
+R:5
+C4:2 Eb4:1 G4:2
+F4:2 Eb4:1 D4:1 C4:1
+Eb4:2 G4:1 F4:1 R:1
+R:5
+R:5
+R:5
+''',lh='''
+C3+G3:5
+Ab2+Eb3:5
+Bb2+F3:4 R:1
+C3:1 Eb3:1 D3:1 G3:2
+F3:2 Eb3:1 D3:1 C3:1
+D3:2 F3:1 Eb3:1 R:1
+Eb3+Bb3:5
+Ab2+Eb3:5
+D3+A3:4 R:1
+Eb3:1 G3:1 F3:1 Bb3:2
+Ab3:2 G3:1 F3:1 Eb3:1
+D3:2 F3:1 B3:1 R:1
+C3+G3:5
+F3+C4:5
+D3+A3:4 R:1
+C3:1.5 Eb3:.5 D3:1 G3:2
+F3:2 Ab3:1 G3:1 Eb3:1
+D3:2 B2:1 G2:1 R:1
+Ab2+Eb3:5
+F3+A3:5
+Bb2+F3:4 R:1
+C3:2 Eb3:1 G3:2
+Ab3:2 Bb3:2 R:1
+Eb3+G3+Bb3:5
+''',hidden_voice_rests=dict(inner=[4,5,6,10,11,12,16,17,18,22,23,24]),sections={1:'pp',7:'p',13:'p',19:'pp'},lower_sections={1:'pp',4:'p',7:'pp',10:'mp',13:'pp',16:'p',19:'pp',22:'p',24:'pp'},words={22:'poco rit.'},slurs=[],lower_phrases=[(4,6),(10,12),(16,18),(22,24)],voice_phrases=[dict(voice='inner',start_beat=a,end_beat=b,swell=4) for a,b in [(0,14),(30,44),(60,74),(90,104)]],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[i*5+a,i*5+b-.2] for i in range(24) for a,b in zip(([0] if i==23 else [0,2]),([5] if i==23 else [2,4 if i in [2,5,8,11,14,17,20,22] else 5]))],
+ performance=dict(rubato=[53,54,47,52,53,46,55,57,49,55,54,47,54,56,48,53,52,45,52,51,46,46,41,31],phrase_arcs=[],inner_entries=[[0,14],[30,44],[60,74],[90,104]],lower_entries=[[15,29],[45,59],[75,89],[105,120]],pedal_lift=.2,gate=.99,note='The inner melody should be clearly heard beneath the held upper notes. Each answer inherits its phrase shape, while the harmonic background changes gently.')),
+dict(op=214,title='Moss Overpass',key='e',fifths=1,meter='3/2',bpm=62,
+ description='Four softly spaced notes cross three slower steps. After eight bars the hands exchange those rhythms and the opening melody moves into the bass; a wider return finally settles on B minor, leaving the home key of E minor behind.',
+ difficulty='Advanced independent four-against-three phrasing',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='The first seven bars set four dotted quarters against three half notes. At bar nine the hands exchange these patterns. Keep both pulses even and the melodic hand slightly forward; no acceleration is implied by the shorter note values.',
+ parent_opus=209,motif=dict(hand='rh',start_beat=0,end_beat=6,pitches=['E','G','F#','D']),ancestry=dict(source_opus=209,source_hand='lh',source_start_beat=0,source_end_beat=7,source_pitches=['A','C','B','G'],transposition_semitones=19),
+ system_starts=list(range(1,25,2)),page_starts=[9,17],engraving=dict(spacing_system=18,spacing_staff=15,pedal_offset_y=560),
+ rh='''
+E5:1.5 G5:1.5 F#5:1.5 D5:1.5
+C5:1.5 E5:1.5 B4:1.5 D5:1.5
+A4:1.5 C5:1.5 B4:1.5 G4:1.5
+F#4:1.5 A4:1.5 D5:1.5 C5:1.5
+B4:1.5 D5:1.5 F#5:1.5 E5:1.5
+D5:1.5 B4:1.5 A4:1.5 C5:1.5
+B4:1.5 D5:1.5 C5:1.5 F#4:1.5
+G4:1.5 B4:1.5 E5:1.5 R:1.5
+G4+B4:2 F#4+A4:2 E4+G4:2
+E4+G4:2 D4+F#4:2 E4+G4:2
+C4+E4:2 D4+F#4:2 E4+G4:2
+F#4+A4:2 E4+G4:2 D4+F#4:2
+D4+F#4:2 E4+G4:2 F#4+A4:2
+G4+B4:2 F#4+A4:2 E4+G4:2
+F#4+A4:2 A4+C5:2 F#4+B4:2
+G4+B4:2 E4+A4:2 G4+B4:.5 R:1.5
+E5:1.5 G5:1.5 F#5:1.5 D5:1.5
+C5:1.5 E5:1.5 D5:1.5 B4:1.5
+A4+C5+E5:3 G4+B4+D5:3
+F#4+A4+C5:2 E4+G4+B4:2 F#4+A4+D5:2
+G4+B4+E5:3 F#4+A4+D5:3
+E4+G4+B4:2 D4+F#4+A4:2 E4+G4+B4:2
+F#4+A4+C#5:3 E4+G4+B4:1.5 R:1.5
+F#4+B4+D5:6
+''',lh='''
+E3:2 B3:2 G3:2
+C3:2 G3:2 E3:2
+A2:2 E3:2 C3:2
+D3:2 A3:2 F#3:2
+B2:2 F#3:2 D3:2
+G2:2 D3:2 B2:2
+B2:2 F#3:2 A3:2
+E3:2 B3:2 G3:.5 R:1.5
+E3:1.5 G3:1.5 F#3:1.5 D3:1.5
+C3:1.5 E3:1.5 B2:1.5 D3:1.5
+A2:1.5 C3:1.5 B2:1.5 G2:1.5
+F#2:1.5 A2:1.5 D3:1.5 C3:1.5
+B2:1.5 D3:1.5 F#3:1.5 E3:1.5
+D3:1.5 B2:1.5 A2:1.5 C3:1.5
+B2:1.5 D3:1.5 C3:1.5 F#2:1.5
+G2:1.5 B2:1.5 E3:1.5 R:1.5
+C3:2 G3:2 E3:2
+F#2:2 C#3:2 A2:2
+A2+E3:3 G2+D3:3
+D3+A3:2 E3+B3:2 D3+A3:2
+C3+G3:3 D3+A3:3
+E3+B3:2 D3+A3:2 C3+G3:2
+F#2+C#3:3 E3+B3:1.5 R:1.5
+B2+F#3:6
+''',sections={1:'p',9:'pp',17:'mp',21:'p',24:'pp'},lower_sections={1:'pp',9:'p',17:'pp',21:'p',24:'pp'},words={21:'poco rit.'},slurs=[(1,4),(5,8),(17,18)],lower_phrases=[(9,12),(13,16)],hairpins=[],tempo_changes={},group=4,
+ pedal_spans=[[i*6+a,i*6+b-.22] for i in range(24) for a,b in zip(([0,1.5,3,4.5] if 8<=i<15 else [0,3] if i in [18,20,22] else [0] if i==23 else [0,2,4]),([1.5,3,4.5,6] if 8<=i<15 else [3,4.5 if i==22 else 6] if i in [18,20,22] else [6] if i==23 else [2,4,4.5 if i in [7,15] else 6]))],
+ performance=dict(rubato=[62,63,63,60,62,60,59,52,61,62,62,60,63,61,59,51,64,63,60,59,56,53,48,36],phrase_arcs=[],lower_entries=[[48,94.5]],pedal_lift=.22,gate=.98,note='The two pulses remain supple but distinct. Lean into the answering left-hand phrase, then let the chordal return broaden towards a B-minor close.')),
+dict(op=215,title='Clover Elsewhere',key='f',fifths=-4,meter='3/4',meters=(['3/4']*4+['5/4']*4)*4,bpm=54,
+ description='Short descending questions open into longer, rising answers. A four-note memory of Clover Undertow becomes a song in F minor, touched by the bright sixth of Dorian. The hands exchange the opening phrase halfway through; at the end their separate lines gather into a warm D-flat major ninth.',
+ difficulty='Advanced flexible metre and contrary-motion duet',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='Four bars in three give way to four bars in five. Keep the quarter-note pulse continuous at those changes. In the middle return the first four bars pass to the LH two octaves lower; the RH supplies an independent rising line.',
+ parent_opus=210,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['Ab','G','F','Eb']),ancestry=dict(source_opus=210,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['F','E','D','C'],transposition_semitones=3),
+ system_starts=list(range(1,33,2)),page_starts=[9,17,25],engraving=dict(spacing_system=18,spacing_staff=15,pedal_offset_y=560),
+ rh='''
+Ab4:.5 G4:.5 F4:1 Eb4:1
+F4:1 Ab4:1 C5:1
+Bb4:1 Ab4:.5 G4:.5 F4:1
+G4:1 Eb4:1 R:1
+F4:1 G4:1 Ab4:1 C5:2
+D5:1 C5:1 Bb4:2 Ab4:1
+G4:1 Bb4:1 C5:1 Eb5:2
+D5:2 C5:2 R:1
+Ab4:.5 C5:.5 Bb4:1 G4:1
+F4:1 G4:1 Ab4:1
+Bb4:1 Db5:1 C5:1
+Bb4:1 G4:1 R:1
+Ab4:1 Bb4:1 C5:1 Eb5:2
+F5:1 Eb5:1 Db5:2 C5:1
+Bb4:1 G4:1 Ab4:1 C5:2
+Bb4:2 G4:2 R:1
+F4:.5 G4:.5 Ab4:1 Bb4:1
+C5:1 Bb4:1 Ab4:1
+G4:1 F4:.5 Eb4:.5 Db4:1
+Eb4:1 C5:1 R:1
+C5:1 Eb5:1 F5:1 Ab5:2
+G5:1 F5:1 Eb5:2 C5:1
+D5:1 F5:1 Eb5:1 C5:2
+Bb4:2 Ab4:2 R:1
+Ab4:.5 G4:.5 F4:1 Eb4:1
+F4+Ab4:1 G4+Bb4:1 Ab4+C5:1
+G4+Bb4+Db5:1 F4+Ab4+C5:2
+Eb4+G4+Bb4:2 R:1
+F4+Ab4+C5:2 Eb4+G4+Bb4:1 F4+Ab4+C5:2
+G4+Bb4+D5:2 Ab4+C5+Eb5:3
+G4+Bb4+Eb5:2 F4+Ab4+Db5:2 R:1
+F4+Ab4+C5+Eb5:5
+''',lh='''
+F3:.5 G3:.5 Ab3:1 Bb3:1
+C4:1 Bb3:1 Ab3:1
+G3:1 F3:.5 Eb3:.5 Db3:1
+Eb3:1 C3:1 R:1
+F2:2 C3:1 Ab3:2
+Bb2:2 F3:1 D3:2
+Eb3:2 Bb3:1 G3:2
+Bb2:2 F3:2 R:1
+Ab3:.5 G3:.5 F3:1 Eb3:1
+Db3:1 Eb3:1 F3:1
+G3:1 Bb3:1 Ab3:1
+G3:1 Eb3:1 R:1
+Ab2:2 Eb3:1 C4:2
+Db3:2 Ab3:1 F3:2
+Eb3:2 Bb3:1 G3:2
+C3:2 G3:2 R:1
+Ab2:.5 G2:.5 F2:1 Eb2:1
+F2:1 Ab2:1 C3:1
+Bb2:1 Ab2:.5 G2:.5 F2:1
+G2:1 Eb2:1 R:1
+Ab2:2 Eb3:1 C4:2
+Eb3:2 Bb3:1 G3:2
+Bb2:2 F3:1 D3:2
+Db3:2 Ab3:2 R:1
+Db3:1 Ab3:1 F3:1
+F3:1 Eb3:1 Db3:1
+Eb3+Bb3:1 F3+C4:2
+C3+G3:2 R:1
+F3+C4:2 Eb3+Bb3:1 Db3+Ab3:2
+Bb2+F3:2 Ab2+Eb3:3
+Eb3+Bb3:2 Db3+Ab3:2 R:1
+Db3+Ab3:5
+''',sections={1:'p',9:'mp',17:'pp',21:'mp',25:'p',29:'pp'},lower_sections={1:'p',5:'pp',9:'p',13:'pp',17:'mp',21:'pp',25:'p',29:'pp'},words={29:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16),(21,24)],lower_phrases=[(1,4),(9,12),(17,20)],hairpins=[],tempo_changes={},group=3,
+ pedal_spans=[[sum((([3]*4+[5]*4)*4)[:i])+a,sum((([3]*4+[5]*4)*4)[:i])+b-.2] for i,length in enumerate(([3]*4+[5]*4)*4) for a,b in zip(([0,2] if length==5 and i!=31 else [0]),([2,4 if i%4==3 or i==30 else 5] if length==5 and i!=31 else [length-1 if i%4==3 and i!=31 else length]))],
+ performance=dict(rubato=[54,55,53,47,54,56,55,47,57,58,55,48,57,59,56,47,53,54,52,45,59,61,57,48,53,52,49,43,48,46,41,31],phrase_arcs=[],lower_entries=[[0,11],[32,43],[64,75]],pedal_lift=.2,gate=.98,note='Allow each short question its own shape, then expand the response without changing the underlying pulse. The middle bass statement remains audible beneath the upper countermelody.')),
+dict(op=216,title='Alder Unfolding',key='d',fifths=-1,meter='4/4',bpm=60,
+ description='A plain four-bar melody acquires small flowing notes between its steps. Those figures rise into the upper register as the tune moves down to the left hand, then the original song returns over a new bass. The final chords release into a single high D.',
+ difficulty='Advanced cantabile within flowing eighth-note figures',technique_limits=dict(chord_span=12,melodic_leap=14,rapid_leap=7),technical_note='The quarter-beat notes in bars 9–12 retain the melody of bars 1–4; the intervening eighths soften its outline. The LH takes the opening four-bar phrase at bar 17, two octaves below the original. The final high D is alone after both hands have rested.',
+ parent_opus=211,motif=dict(hand='rh',start_beat=0,end_beat=4,pitches=['D','F','E','A']),ancestry=dict(source_opus=211,source_hand='rh',source_start_beat=0,source_end_beat=5,source_pitches=['D','F','E','A'],transposition_semitones=0),
+ system_starts=list(range(1,33,2)),page_starts=[9,17,25],engraving=dict(spacing_system=18,spacing_staff=15,pedal_offset_y=560),
+ rh='''
+D5:1 F5:1 E5:1 A5:1
+G5:1 E5:1 D5:1 C5:1
+Bb4:1 D5:1 F5:1 E5:1
+D5:1 C5:1 A4:1 R:1
+Bb4:1.5 C5:.5 D5:2
+E5:1 G5:1 F5:1 E5:1
+D5:2 C5:1 Bb4:1
+A4:2 G4:1 R:1
+D5:.5 C5:.5 F5:.5 E5:.5 E5:.5 D5:.5 A5:.5 G5:.5
+G5:.5 F5:.5 E5:.5 D5:.5 D5:.5 C5:.5 C5:.5 Bb4:.5
+Bb4:.5 A4:.5 D5:.5 C5:.5 F5:.5 E5:.5 E5:.5 D5:.5
+D5:.5 C5:.5 C5:.5 Bb4:.5 A4:.5 G4:.5 R:1
+Bb4:.5 D5:.5 F5:.5 A5:.5 G5:1 F5:1
+E5:.5 G5:.5 Bb5:.5 A5:.5 G5:1 E5:1
+F5:.5 A5:.5 C6:.5 Bb5:.5 A5:.5 G5:.5 F5:.5 E5:.5
+D5:1 F5:1 E5:1 R:1
+A4:.5 D5:.5 F5:.5 A5:.5 F5:.5 D5:.5 A4:1
+G4:.5 C5:.5 E5:.5 G5:.5 E5:.5 C5:.5 G4:1
+F4:.5 Bb4:.5 D5:.5 F5:.5 D5:.5 Bb4:.5 F4:1
+E4:.5 A4:.5 C5:.5 E5:.5 C5:.5 A4:.5 R:1
+G4:.5 C5:.5 Eb5:.5 G5:.5 Eb5:.5 C5:.5 G4:1
+F4:.5 Bb4:.5 D5:.5 F5:.5 D5:.5 Bb4:.5 F4:1
+E4:.5 A4:.5 C5:.5 E5:.5 G5:.5 E5:.5 C5:.5 A4:.5
+F4+A4+D5:2 E4+G4+C5:1 R:1
+D5:1 F5:1 E5:1 A5:1
+G5:1 E5:1 D5:1 C5:1
+Bb4:1 D5:1 F5:1 E5:1
+D5:1 C5:1 A4:1 R:1
+F4+A4+D5:2 G4+Bb4+E5:2
+A4+C5+F5:2 Bb4+D5+G5:2
+A4+D5+F5:2 D5+F5+A5:1 R:1
+D6:4
+''',lh='''
+D3:1 A3:.5 F3:.5 A3:1 F3:1
+C3:1 G3:.5 E3:.5 G3:1 E3:1
+Bb2:1 F3:.5 D3:.5 F3:1 D3:1
+A2:1 E3:.5 C3:.5 E3:1 R:1
+G2:1 D3:.5 Bb2:.5 D3:1 Bb2:1
+C3:1 G3:.5 E3:.5 G3:1 E3:1
+F3:1 C4:.5 A3:.5 Bb3:1 G3:1
+A2:1 E3:1 G3:1 R:1
+D3+A3:2 C3+G3:2
+Bb2+F3:2 A2+E3:2
+G2+D3:2 Bb2+F3:2
+A2+E3:2 C3+G3:1 R:1
+Bb2+F3:2 D3+A3:2
+C3+G3:2 E3+Bb3:2
+F3+C4:2 Bb2+F3:2
+A2+E3:2 A2+G3:1 R:1
+D3:1 F3:1 E3:1 A3:1
+G3:1 E3:1 D3:1 C3:1
+Bb2:1 D3:1 F3:1 E3:1
+D3:1 C3:1 A2:1 R:1
+C3:1 Eb3:1 D3:1 G3:1
+F3:1 D3:1 C3:1 Bb2:1
+A2:1 C3:1 E3:1 G3:1
+F3:1 C4:1 Bb3:1 R:1
+Bb2+F3:2 D3+A3:2
+E3+Bb3:2 C3+G3:2
+G2+D3:2 Bb2+F3:2
+A2+E3:2 C3+G3:1 R:1
+D3+A3:2 C3+G3:2
+Bb2+F3:2 G2+D3:2
+D3+A3:2 F3+A3:1 R:1
+R:4
+''',sections={1:'p',9:'p',13:'mp',17:'pp',25:'p',29:'pp'},lower_sections={1:'pp',17:'mp',24:'pp',25:'pp'},words={29:'poco rit.'},slurs=[(1,4),(5,8),(9,12),(13,16),(25,28)],lower_phrases=[(17,20),(21,23)],hairpins=[],tempo_changes={},group=4,
+ pedal_spans=[[i*4+a,i*4+b-.18] for i in range(31) for a,b in zip([0,2],[2,3 if i in [3,7,11,15,19,23,27,30] else 4])]+[[124,127.8]],
+ performance=dict(rubato=[60,61,60,53,61,63,60,52,62,63,61,53,65,67,66,54,60,61,60,52,62,64,62,52,59,58,56,48,51,48,42,33],phrase_arcs=[],lower_entries=[[64,79],[80,92]],pedal_lift=.18,gate=.98,note='Shape the moving eighths towards the quarter-beat melody. The accompaniment yields when the melody enters below; the last isolated note can linger in the room.'))
 ]
