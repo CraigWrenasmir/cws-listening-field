@@ -1,0 +1,1437 @@
+<?xml version='1.0' encoding='utf-8'?>
+<score-partwise version="4.0">
+  <work>
+    <work-title>Pearl Nightmargin</work-title>
+  </work>
+  <movement-number>CWS Op. 199</movement-number>
+  <movement-title>Pearl Nightmargin</movement-title>
+  <identification>
+    <encoding>
+      <encoding-date>2026-09-09</encoding-date>
+      <software>music21 v.10.5.0</software>
+      <supports element="beam" type="yes" />
+      <supports element="stem" type="yes" />
+      <supports element="accidental" type="yes" />
+    <software>CWS Library - first studies with Maple (AI)</software></encoding>
+  </identification>
+  <defaults>
+    <scaling>
+      <millimeters>7</millimeters>
+      <tenths>40</tenths>
+    </scaling>
+  </defaults>
+  <part-list>
+    <score-part id="P8334669e2dea24b9c673a9352956ee2f">
+      <part-name>Piano</part-name>
+      <part-abbreviation />
+      <score-instrument id="I3c89760d7839474093bb327897d2a95a">
+        <instrument-name>Piano</instrument-name>
+        <instrument-abbreviation>Pno</instrument-abbreviation>
+      </score-instrument>
+      <midi-instrument id="I3c89760d7839474093bb327897d2a95a">
+        <midi-channel>1</midi-channel>
+        <midi-program>1</midi-program>
+      </midi-instrument>
+    </score-part>
+  </part-list>
+
+  <part id="P8334669e2dea24b9c673a9352956ee2f">
+
+    <measure implicit="no" number="1">
+      <print new-system="yes" />
+      <attributes>
+        <divisions>10080</divisions>
+        <key>
+          <fifths>-3</fifths>
+        </key>
+        <time>
+          <beats>4</beats>
+          <beat-type>4</beat-type>
+        </time>
+        <staves>2</staves>
+        <clef number="1">
+          <sign>G</sign>
+          <line>2</line>
+        </clef>
+        <clef number="2">
+          <sign>F</sign>
+          <line>4</line>
+        </clef>
+      </attributes>
+      <direction placement="above">
+        <direction-type>
+          <metronome parentheses="no">
+            <beat-unit>quarter</beat-unit>
+            <per-minute>51</per-minute>
+          </metronome>
+        </direction-type>
+        <staff>1</staff>
+        <sound tempo="51" />
+      </direction>
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="-36" default-y="-80">
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="44" />
+      </direction>
+      <note id="cws199-rh-m1-n1">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+        <notations>
+          <slur number="1" placement="above" type="start" />
+        </notations>
+      </note>
+      <note id="cws199-rh-m1-n2">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note id="cws199-rh-m1-n3">
+        <pitch>
+          <step>A</step>
+          <alter>0</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>natural</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note id="cws199-rh-m1-n4">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>20160</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>half</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="-36" default-y="-80">
+            <pp />
+          </dynamics>
+        </direction-type>
+        <staff>2</staff>
+        <sound dynamics="31" />
+      </direction>
+      <note id="cws199-lh-m1-n1-pitch-1">
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m1-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="1" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="1" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="2">
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="-36" default-y="-80">
+            <pp />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="31" />
+      </direction>
+      <note id="cws199-rh-m2-n1">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>40320</duration>
+        <tie type="start" />
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <tied type="start" />
+        </notations>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m2-n1-pitch-1">
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m2-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m2-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="2" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="2" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="3">
+      <print new-system="yes" />
+      <note id="cws199-rh-m2-n1-tie-3-1">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>40320</duration>
+        <tie type="stop" />
+        <tie type="start" />
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <tied type="stop" />
+          <tied type="start" />
+        </notations>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m3-n1-pitch-1">
+        <pitch>
+          <step>E</step>
+          <alter>0</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <accidental>natural</accidental>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m3-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m3-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="3" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="3" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="4">
+      <note id="cws199-rh-m2-n1-tie-4-1">
+        <pitch>
+          <step>G</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>40320</duration>
+        <tie type="stop" />
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <tied type="stop" />
+        </notations>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m4-n1-pitch-1">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m4-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m4-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="4" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="4" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="5">
+      <print new-system="yes" />
+      <note id="cws199-rh-m5-n1">
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>20160</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>half</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m5-n2">
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+        <notations>
+          <slur number="1" type="stop" />
+        </notations>
+      </note>
+      <note id="cws199-rh-m5-n3">
+        <rest />
+        <duration>10080</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m5-n1-pitch-1">
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m5-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m5-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m5-n2">
+        <rest />
+        <duration>10080</duration>
+        <voice>2</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="5" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>28224</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="5" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>12096</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="6">
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="-36" default-y="-80">
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="44" />
+      </direction>
+      <note id="cws199-rh-m6-n1">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+        <notations>
+          <slur number="2" placement="above" type="start" />
+        </notations>
+      </note>
+      <note id="cws199-rh-m6-n2">
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note id="cws199-rh-m6-n3">
+        <pitch>
+          <step>E</step>
+          <alter>0</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>natural</accidental>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note id="cws199-rh-m6-n4">
+        <pitch>
+          <step>A</step>
+          <alter>0</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>20160</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>half</type>
+        <accidental>natural</accidental>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m6-n1-pitch-1">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m6-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <alter>0</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <accidental>natural</accidental>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m6-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="6" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="6" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="7">
+      <print new-page="yes" new-system="yes" />
+      <note id="cws199-rh-m7-n1">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m7-n2">
+        <pitch>
+          <step>E</step>
+          <alter>0</alter>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>natural</accidental>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note id="cws199-rh-m7-n3">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note id="cws199-rh-m7-n4">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>20160</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>half</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m7-n1-pitch-1">
+        <pitch>
+          <step>E</step>
+          <alter>0</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <accidental>natural</accidental>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m7-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m7-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>0</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <accidental>natural</accidental>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="1" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="1" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="8">
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="-36" default-y="-80">
+            <pp />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="31" />
+      </direction>
+      <note id="cws199-rh-m8-n1">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m8-n2">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note id="cws199-rh-m8-n3">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note id="cws199-rh-m8-n4">
+        <pitch>
+          <step>F</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+        <notations>
+          <slur number="2" type="stop" />
+        </notations>
+      </note>
+      <note id="cws199-rh-m8-n5">
+        <rest />
+        <duration>10080</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m8-n1-pitch-1">
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <accidental>flat</accidental>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m8-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>G</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m8-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <accidental>flat</accidental>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m8-n2">
+        <rest />
+        <duration>10080</duration>
+        <voice>2</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="2" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>28224</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="2" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>12096</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="9">
+      <print new-system="yes" />
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="-36" default-y="-80">
+            <p />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="44" />
+      </direction>
+      <note id="cws199-rh-m9-n1">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+        <notations>
+          <slur number="3" placement="above" type="start" />
+        </notations>
+      </note>
+      <note id="cws199-rh-m9-n2">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">begin</beam>
+      </note>
+      <note id="cws199-rh-m9-n3">
+        <pitch>
+          <step>A</step>
+          <alter>0</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>5040</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>eighth</type>
+        <accidental>natural</accidental>
+        <stem>up</stem>
+        <staff>1</staff>
+        <beam number="1">end</beam>
+      </note>
+      <note id="cws199-rh-m9-n4">
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>20160</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>half</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m9-n1-pitch-1">
+        <pitch>
+          <step>A</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m9-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m9-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="3" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="3" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="10">
+      <direction placement="below">
+        <direction-type>
+          <dynamics default-x="-36" default-y="-80">
+            <pp />
+          </dynamics>
+        </direction-type>
+        <staff>1</staff>
+        <sound dynamics="31" />
+      </direction>
+      <note id="cws199-rh-m10-n1">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>20160</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>half</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m10-n2">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m10-n3">
+        <rest />
+        <duration>10080</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m10-n1-pitch-1">
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m10-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m10-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>C</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m10-n2">
+        <rest />
+        <duration>10080</duration>
+        <voice>2</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="4" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>28224</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="4" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>12096</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="11">
+      <print new-system="yes" />
+      <direction placement="above">
+        <direction-type>
+          <words font-size="10" font-style="italic">poco rit.</words>
+        </direction-type>
+        <staff>1</staff>
+      </direction>
+      <note id="cws199-rh-m11-n1">
+        <pitch>
+          <step>A</step>
+          <alter>0</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <accidental>natural</accidental>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m11-n2">
+        <pitch>
+          <step>C</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m11-n3">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>10080</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m11-n4">
+        <rest />
+        <duration>10080</duration>
+        <voice>1</voice>
+        <type>quarter</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m11-n1-pitch-1">
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>2</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m11-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m11-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>A</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>30240</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>half</type>
+        <dot />
+        <staff>2</staff>
+      </note>
+      <note id="cws199-lh-m11-n2">
+        <rest />
+        <duration>10080</duration>
+        <voice>2</voice>
+        <type>quarter</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="5" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>28224</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="5" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>12096</duration>
+        <staff>2</staff>
+      </forward>
+    </measure>
+
+    <measure implicit="no" number="12">
+      <note id="cws199-rh-m12-n1-pitch-1">
+        <pitch>
+          <step>G</step>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+        <notations>
+          <fermata type="upright" />
+          <slur number="3" type="stop" />
+        </notations>
+      </note>
+      <note id="cws199-rh-m12-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>4</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m12-n1-pitch-3">
+        <chord />
+        <pitch>
+          <step>D</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <note id="cws199-rh-m12-n1-pitch-4">
+        <chord />
+        <pitch>
+          <step>F</step>
+          <octave>5</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>1</voice>
+        <type>whole</type>
+        <staff>1</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <note id="cws199-lh-m12-n1-pitch-1">
+        <pitch>
+          <step>E</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+        <notations>
+          <fermata type="upright" />
+        </notations>
+      </note>
+      <note id="cws199-lh-m12-n1-pitch-2">
+        <chord />
+        <pitch>
+          <step>B</step>
+          <alter>-1</alter>
+          <octave>3</octave>
+        </pitch>
+        <duration>40320</duration>
+        <instrument id="I3c89760d7839474093bb327897d2a95a" />
+        <voice>2</voice>
+        <type>whole</type>
+        <staff>2</staff>
+      </note>
+      <backup>
+        <duration>40320</duration>
+      </backup>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="6" type="start" sign="yes" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>38304</duration>
+        <staff>2</staff>
+      </forward>
+      <direction placement="below">
+        <direction-type>
+          <pedal line="yes" number="6" type="stop" />
+        </direction-type>
+        <staff>2</staff>
+      </direction>
+      <forward>
+        <duration>2016</duration>
+        <staff>2</staff>
+      </forward>
+      <barline location="right">
+        <bar-style>light-heavy</bar-style>
+      </barline>
+    </measure>
+  </part>
+</score-partwise>

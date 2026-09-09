@@ -218,6 +218,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 188 | Moss Palimpsest | 7/4 | 45 | [Score](pieces/CWS_Op_188_Moss_Palimpsest/CWS_Op_188_Moss_Palimpsest.pdf) | [MP3](pieces/CWS_Op_188_Moss_Palimpsest/CWS_Op_188_Moss_Palimpsest.mp3) |
 | CWS Op. 189 | Rowan Refraction | 4/4 | 83 | [Score](pieces/CWS_Op_189_Rowan_Refraction/CWS_Op_189_Rowan_Refraction.pdf) | [MP3](pieces/CWS_Op_189_Rowan_Refraction/CWS_Op_189_Rowan_Refraction.mp3) |
 | CWS Op. 190 | Willow Remanence | 4/4 | 94 | [Score](pieces/CWS_Op_190_Willow_Remanence/CWS_Op_190_Willow_Remanence.pdf) | [MP3](pieces/CWS_Op_190_Willow_Remanence/CWS_Op_190_Willow_Remanence.mp3) |
+| CWS Op. 191 | Linden Nightglass | 4/4 | 83 | [Score](pieces/CWS_Op_191_Linden_Nightglass/CWS_Op_191_Linden_Nightglass.pdf) | [MP3](pieces/CWS_Op_191_Linden_Nightglass/CWS_Op_191_Linden_Nightglass.mp3) |
+| CWS Op. 192 | Bracken Cradlesong | 6/8, 8/8 (changing) | 97 | [Score](pieces/CWS_Op_192_Bracken_Cradlesong/CWS_Op_192_Bracken_Cradlesong.pdf) | [MP3](pieces/CWS_Op_192_Bracken_Cradlesong/CWS_Op_192_Bracken_Cradlesong.mp3) |
+| CWS Op. 193 | Hazel Undertone | 3/4 | 110 | [Score](pieces/CWS_Op_193_Hazel_Undertone/CWS_Op_193_Hazel_Undertone.pdf) | [MP3](pieces/CWS_Op_193_Hazel_Undertone/CWS_Op_193_Hazel_Undertone.mp3) |
+| CWS Op. 194 | Willow Hearthline | 5/4 | 79 | [Score](pieces/CWS_Op_194_Willow_Hearthline/CWS_Op_194_Willow_Hearthline.pdf) | [MP3](pieces/CWS_Op_194_Willow_Hearthline/CWS_Op_194_Willow_Hearthline.mp3) |
+| CWS Op. 195 | Camellia Nightfold | 7/4 | 127 | [Score](pieces/CWS_Op_195_Camellia_Nightfold/CWS_Op_195_Camellia_Nightfold.pdf) | [MP3](pieces/CWS_Op_195_Camellia_Nightfold/CWS_Op_195_Camellia_Nightfold.mp3) |
+| CWS Op. 196 | Sedge Lanternfall | 12/8 | 95 | [Score](pieces/CWS_Op_196_Sedge_Lanternfall/CWS_Op_196_Sedge_Lanternfall.pdf) | [MP3](pieces/CWS_Op_196_Sedge_Lanternfall/CWS_Op_196_Sedge_Lanternfall.mp3) |
+| CWS Op. 197 | Alder Vesper | 4/4 | 91 | [Score](pieces/CWS_Op_197_Alder_Vesper/CWS_Op_197_Alder_Vesper.pdf) | [MP3](pieces/CWS_Op_197_Alder_Vesper/CWS_Op_197_Alder_Vesper.mp3) |
+| CWS Op. 198 | Clover Halfmoon | 5/8, 7/8 (changing) | 109 | [Score](pieces/CWS_Op_198_Clover_Halfmoon/CWS_Op_198_Clover_Halfmoon.pdf) | [MP3](pieces/CWS_Op_198_Clover_Halfmoon/CWS_Op_198_Clover_Halfmoon.mp3) |
+| CWS Op. 199 | Pearl Nightmargin | 4/4 | 66 | [Score](pieces/CWS_Op_199_Pearl_Nightmargin/CWS_Op_199_Pearl_Nightmargin.pdf) | [MP3](pieces/CWS_Op_199_Pearl_Nightmargin/CWS_Op_199_Pearl_Nightmargin.mp3) |
+| CWS Op. 200 | Velvet Confluence | 6/8, 4/4 (changing) | 150 | [Score](pieces/CWS_Op_200_Velvet_Confluence/CWS_Op_200_Velvet_Confluence.pdf) | [MP3](pieces/CWS_Op_200_Velvet_Confluence/CWS_Op_200_Velvet_Confluence.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

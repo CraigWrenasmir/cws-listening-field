@@ -943,4 +943,97 @@ Bb2+F3:4
 ''',sections={1:'p',5:'mp',8:'pp',9:'p',11:'pp'},lower_sections={1:'pp',2:'p',3:'pp',6:'p',7:'pp',10:'p',11:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[],lower_phrases=[(2,2),(6,6),(10,10)],voice_phrases=[dict(voice='inner',start_beat=a,end_beat=b,swell=s) for a,b,s in [(0,15,4),(16,31,5),(32,46,3),(48,56,1)]],hairpins=[],tempo_changes={},group=2,
  pedal_spans=[[i*4+a,i*4+b-.2] for i,cuts in enumerate([[0,4],[0,4],[0,2,4],[0,3],[0,4],[0,4],[0,4],[0,3],[0,4],[0,2],[0,2,4],[0,2],[0,2,4],[0,4]]) for a,b in zip(cuts,cuts[1:])],
  performance=dict(rubato=[52,50,51,42,54,52,55,43,51,47,45,37,35,25],phrase_arcs=[[0,15,0],[16,31,1],[32,46,0],[48,56,-1]],lower_entries=[[4,8],[20,24],[36,38]],inner_entries=[[0,56]],pedal_lift=.2,gate=.995,note='The final echo is allowed to remain incomplete. The last upper bell and the inner descent leave space for a chord that feels warm, open and unhurried.'))
+,
+dict(op=191,title='Linden Nightglass',key='d',fifths=-1,meter='4/4',bpm=54,
+ description='A middle-voice D–F–E–A melody settles into a held D-minor harmony. Its upper note descends C–B–B-flat while every other chord tone remains still; the same small change returns later with the bass moving beneath it. A brief G-minor song opens the texture before a D-minor sixth-and-ninth close.',
+ difficulty='Advanced inner cantabile and quiet chromatic voicing',technique_limits=dict(chord_span=12,melodic_leap=12,rapid_leap=7),technical_note='Voice the RH inner melody above its soft upper line. Bars 2–4 keep the inner dyad and LH fifth identical while only the upper note falls by semitone. Shared rests clear the pedal before the next phrase.',
+ parent_opus=181,motif=dict(hand='rh',voice='inner',start_beat=0,end_beat=4,pitches=['D','F','E','A']),ancestry=dict(source_opus=181,source_hand='rh',source_start_beat=0,source_end_beat=4,source_pitches=['A','C','B','E'],transposition_semitones=5),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=16,spacing_staff=18,pedal_offset_y=510),
+ rh='''
+C5:4
+C5:4
+B4:4
+Bb4:4
+B4:3 R:1
+D5:4
+Db5:4
+C5:3 R:1
+C5:4
+B4:4
+Bb4:4
+A4:3 R:1
+D5:4
+E5:4
+''',rh_inner='''
+D4:1 F4:.5 E4:.5 A4:2
+F4+A4:4
+F4+A4:4
+F4+A4:4
+E4:1 G4:1 F4:1 R:1
+G4:1 Bb4:1 A4:2
+G4:1 F4:.5 E4:.5 G4:2
+E4+G4:3 R:1
+D4:1 F4:.5 E4:.5 A4:2
+G4:2 F4:2
+F4:1 G4:1 A4:2
+E4+G4:3 R:1
+F4:1 E4:1 D4:2
+F4+A4+B4:4
+''',lh='''
+D3+A3:4
+D3+A3:4
+D3+A3:4
+D3+A3:4
+G3+B3:3 R:1
+G3+D4:4
+Bb2+F3:4
+C3+G3:3 R:1
+D3+A3:4
+C3+G3:4
+Bb2+F3:4
+A2+E3:3 R:1
+G2+D3:2 A2+E3:2
+D3+A3:4
+''',sections={1:'p',2:'pp',6:'p',8:'pp',9:'p',12:'pp'},lower_sections={1:'pp'},words={1:'cantabile',13:'poco rit.'},slurs=[],lower_phrases=[],voice_phrases=[dict(voice='inner',start_beat=a,end_beat=b,swell=s) for a,b,s in [(0,19,3),(20,31,4),(32,47,3),(48,56,1)]],hairpins=[],tempo_changes={},group=2,
+ pedal_spans=sorted([[i*4,i*4+(2.8 if i in [4,7,11] else 3.8)] for i in range(14) if i!=12]+[[48,49.8],[50,51.8]]),
+ performance=dict(rubato=[54,53,51,49,43,56,53,43,53,51,49,42,39,28],phrase_arcs=[[0,19,0],[20,31,1],[32,47,0],[48,56,-1]],inner_entries=[[0,56]],lower_entries=[],pedal_lift=.2,gate=.995,note='The inner song is close and unhurried; the upper chromatic notes shade it rather than interrupting it.'))
+,
+dict(op=192,title='Bracken Cradlesong',key='e',fifths=1,meter='6/8',meters=['6/8','6/8','8/8','6/8','6/8','8/8','6/8','6/8','8/8','6/8','6/8','8/8','6/8','8/8'],bpm=65,
+ description='A rocking E-minor song lengthens selected bars by a quarter note. Beneath E–G–F-sharp–B, the bass falls E–D-sharp–D–C-sharp–C–B while the left hand keeps returning to neighbouring tones. A G-major opening in the middle loosens the descent; the returning song finishes with E minor warmed by its sixth and ninth.',
+ difficulty='Intermediate to advanced unequal compound bars and legato cantabile',technique_limits=dict(chord_span=12,melodic_leap=12,rapid_leap=7),technical_note='The 8/8 bars add one quarter-note breath to the 6/8 sway. The LH rocking figure changes its final duration and sometimes leaves the last beat silent. Let the chromatic bass descent support one melodic phrase rather than six separate gestures.',
+ parent_opus=191,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['E','G','F#','B']),ancestry=dict(source_opus=191,source_hand='rh',source_voice='inner',source_start_beat=0,source_end_beat=4,source_pitches=['D','F','E','A'],transposition_semitones=2),
+ system_starts=[1,3,5,7,9,11,13],page_starts=[7],engraving=dict(spacing_system=15,pedal_offset_y=520),
+ rh='''
+E4:1 G4:.5 F#4:.5 B4:1
+A4:1.5 G4:.5 F#4:1
+E4:1 G4:.5 B4:.5 A4:1 G4:1
+F#4:1.5 A4:.5 G4:1
+E4:1 G4:.5 B4:1 C5:.5
+A4:1 F#4:1 E4:1 R:1
+B4:1 D5:.5 E5:1 D5:.5
+C5:1.5 B4:.5 G4:1
+A4:1 C5:.5 B4:.5 F#4:1 R:1
+E4:1 G4:.5 F#4:.5 B4:1
+C5:1 B4:.5 A4:.5 G4:1
+F#4:1 A4:.5 G4:.5 E4:1 R:1
+G4:1 F#4:.5 E4:1.5
+G4+B4+C#5+F#5:4
+''',lh='''
+E3:1 B3:.5 G3:1 R:.5
+D#3:1 B3:.5 G3:1 R:.5
+D3:1 B3:.5 G3:1 R:.5 A3:1
+C#3:1 A3:.5 E3:1 R:.5
+C3:1 G3:.5 E3:1 R:.5
+B2:1 F#3:.5 A3:.5 B3:1 R:1
+G3:1 D4:.5 B3:1 R:.5
+E3:1 B3:.5 G3:1 R:.5
+C3:1 G3:.5 A3:.5 B3:1 R:1
+E3:1 B3:.5 G3:1 R:.5
+C3:1 G3:.5 E3:1 R:.5
+B2:1 F#3:.5 A3:.5 D#4:1 R:1
+A3:1 C4:.5 B3:1.5
+E3+B3:4
+''',sections={1:'p',4:'pp',7:'mp',9:'pp',10:'p',12:'pp'},lower_sections={1:'pp'},words={1:'dolce',13:'poco rit.'},slurs=[(1,6),(7,9),(10,12),(13,14)],lower_phrases=[],hairpins=[],tempo_changes={},group=2,
+ pedal_spans=[[sum([3,3,4,3,3,4,3,3,4,3,3,4,3,4][:i]),sum([3,3,4,3,3,4,3,3,4,3,3,4,3,4][:i])+n-(1.2 if i in [5,8,11] else .2)] for i,n in enumerate([3,3,4,3,3,4,3,3,4,3,3,4,3,4])],
+ performance=dict(rubato=[65,64,61,63,62,51,67,64,52,63,61,50,46,32],phrase_arcs=[[0,19,4],[20,29,4],[30,39,3],[40,47,0]],lower_entries=[],pedal_lift=.2,gate=.99,note='The extra quarter beat is a breath inside the rocking motion. The return is softer and the ending opens into the sixth and ninth.'))
 ]

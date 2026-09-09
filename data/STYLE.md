@@ -26,3 +26,5 @@ The renderer reads the corresponding settings from `data/library_style.json`. Sc
 - On 9 September Craig authorised ten tidal preludes, Op. 171–180: melodies emerging inside harmony, gentle cross-rhythms, warm ambiguity, varying density and breathing space. Complete and inspect each piece sequentially, publish the batch and stop at 180. This supersedes the stop at 170.
 
 - Craig authorised Op. 181–190 as afterimage studies: soft echoes and overlapping answers, changed-note recollections, jazz reharmonisation, occasional bell-like repeated notes and fragmentary returns. Keep the languid pacing and warm melancholy of the tidal set. Complete and inspect each piece sequentially, publish all ten and stop at 190.
+
+- Craig authorised ten chromatic lullabies, Op. 191–200: memorable middle-voice melodies, uneven cradling rhythms, slowly changing chord tones and returning bass phrases with developing harmony. Op. 200 grows from a phrase in Velvet Estuary. Complete and inspect each piece sequentially, publish the batch and stop at 200.
