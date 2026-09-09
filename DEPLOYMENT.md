@@ -12,7 +12,7 @@ For updates:
 4. Run `node scripts/publish-pages.mjs --publish`. It verifies the build against committed blobs, verifies each external archive byte for byte, then advances `main` and `gh-pages` together with a non-forced atomic push. Without `--publish`, it prepares the snapshot without changing remote refs.
 5. Wait for the Pages build for the returned **pagesCommit**, then compare deployed gallery data, all new scores/audio and download assets against the tested files. Record both source and Pages commits. Keep HTTPS enforced.
 
-On the initial migration to this flow, set Pages to `gh-pages` after that branch exists. There is no custom Actions workflow or additional hosting service. The publication branch reuses the source blobs and has its own append-only commit history; the source branch history is preserved.
+On the initial migration to this flow, set Pages to `gh-pages` after that branch exists, then request one Pages build (`gh api -X POST repos/CraigWrenasmir/cws-listening-field/pages/builds`). There is no custom Actions workflow or additional hosting service. The publication branch reuses the source blobs and has its own append-only commit history; the source branch history is preserved.
 
 Gallery asset URLs are relative, so the same build can run at a domain root, a GitHub Pages project path or the selected `wrenasmir.com` subdomain. Each work has a fragment address such as `#cws-op-004-tidal-orchard`; no server rewrite rule is needed for those links.
 

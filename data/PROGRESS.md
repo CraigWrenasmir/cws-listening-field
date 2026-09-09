@@ -2,7 +2,7 @@
 
 Current scope: Ten advanced Second Studies, Op. 221–230, exploring technical lyricism. Begin from release 3dd18b6ac9c7768f8646f9b7199d3fa2f2af93cf; preserve all previous music and the two connected Kinship regions. Compose and inspect sequentially, publish and stop at 230.
 
-Composition and local music checks are complete through Op. 220: 200 First Studies and 20 Second Studies. The regions retain all 219 documented links, including the original 200→201, 198→202 and 195→203 bridges. Op. 206–220 adds 39.924 minutes of recordings and 56 visually reviewed pages. Preserve this checkpoint and stop at 220; public-release evidence is recorded separately after deployment.
+Composition, score review and public deployment are complete through Op. 230: 200 First Studies and 30 Second Studies, with all 229 documented links and the original three bridges. Op. 221–230 adds 22.785 minutes of recordings and 60 visually inspected pages. The authorised batch is complete; stop at 230. Public source 2ec2271d45d3900e059cbc109b57c4b0c9d6b821, Pages snapshot abeee05bbdfcf0e0b55194a8fed9cdaaa5f72f54, successful workflow https://github.com/CraigWrenasmir/cws-listening-field/actions/runs/34319559016. Exact HTTPS asset verification is recorded in work/qa/release230-proof.json. Craig's listening and keyboard feedback remains pending.
 
 Craig previously authorised 294 further studies on 6 September 2026. Mac sleep remains acceptable: save checkpoints and resume; do not prevent sleep.
 
@@ -401,3 +401,7 @@ Read this file, `data/STYLE.md`, and `AGENTS.md`. Inspect Git status before cont
 All ten technical studies are complete locally: 22.785 minutes of new recordings and 60 visually inspected score pages. Specific technical developments, complete held-note reach, shared rests, notation/MIDI/pedal timing, decoded recordings and format checks passed. Earlier 220 catalogue entries, 1525 piece assets and all eighteen closed Volume 1–9 files are unchanged. All 230 works and 229 ancestry links pass the Kinship and five-route DOM tests; playback is simulated there. `npm test` and `npm run build` passed.
 
 The validated static publication is 897.0 MiB. Individual downloads and Volume 1–10 URLs remain on Pages; Volume 11 ZIP uses the owned GitHub Release URL. Build-only metadata remains in the repository and ZIPs. Source stays on main; the checked build publishes from gh-pages. Publication and exact public-asset verification are the remaining release steps; proof will be recorded in ignored work/qa/release230-proof.json. Stop at Op. 230. Craig's listening and keyboard feedback remains pending.
+
+## Op. 221–230 public release verified
+
+Verified at 2026-09-09T06:36:31.622Z: all 230 works, 229 ancestry links, both connected series regions and the same three bridges are live. All 100 new score/audio/MIDI/MusicXML/SVG assets, the gallery data and scripts, Volume 10 archive/PDF, Volume 11 PDF and external GitHub Release ZIP match local bytes. HTTPS enforcement and the listeningfield.wrenasmir.com CNAME remain intact. Source remains on main; Pages serves the validated gh-pages snapshot. Publication checks and all required local checks are complete. No work beyond Op. 230 was composed.
