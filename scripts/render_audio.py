@@ -30,14 +30,14 @@ for p in cat:
         if performance:
             assert len(performance['rubato'])==p['bars']
             bpm=performance['rubato'][mi-1]
-            if mi==p['bars']:bpm*=.8
+            if mi==p['bars'] and p.get('final_fermata',True):bpm*=.8
             bar_bpms.append(bpm)
             continue
         bpm=p['bpm']
         # Small phrase-end relaxation, with no random timing or hidden repeated sections.
         if mi%4==0 and mi<p['bars']-1:bpm*=.96
         if str(mi) in p['tempo_changes']:bpm=p['tempo_changes'][str(mi)]
-        if mi==p['bars']:bpm*=.75 # the notated final fermata
+        if mi==p['bars'] and p.get('final_fermata',True):bpm*=.75 # the notated final fermata
         bar_bpms.append(bpm)
     tempo_map=[]
     positions=sorted(set(np.arange(0,beats,.5))|set(bar_starts)) if performance else bar_starts

@@ -258,6 +258,26 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 228 | Juniper Parallax | 6/8 | 389 | [Score](pieces/CWS_Op_228_Juniper_Parallax/CWS_Op_228_Juniper_Parallax.pdf) | [MP3](pieces/CWS_Op_228_Juniper_Parallax/CWS_Op_228_Juniper_Parallax.mp3) |
 | CWS Op. 229 | Camellia Altitude | 4/4, 5/4, 3/4 (changing) | 585 | [Score](pieces/CWS_Op_229_Camellia_Altitude/CWS_Op_229_Camellia_Altitude.pdf) | [MP3](pieces/CWS_Op_229_Camellia_Altitude/CWS_Op_229_Camellia_Altitude.mp3) |
 | CWS Op. 230 | Velvet Lattice | 4/4 | 620 | [Score](pieces/CWS_Op_230_Velvet_Lattice/CWS_Op_230_Velvet_Lattice.pdf) | [MP3](pieces/CWS_Op_230_Velvet_Lattice/CWS_Op_230_Velvet_Lattice.mp3) |
+| CWS Op. 231 | Sedge Pendulum | 4/4 | 293 | [Score](pieces/CWS_Op_231_Sedge_Pendulum/CWS_Op_231_Sedge_Pendulum.pdf) | [MP3](pieces/CWS_Op_231_Sedge_Pendulum/CWS_Op_231_Sedge_Pendulum.mp3) |
+| CWS Op. 232 | Myrtle Escalier | 7/8 | 299 | [Score](pieces/CWS_Op_232_Myrtle_Escalier/CWS_Op_232_Myrtle_Escalier.pdf) | [MP3](pieces/CWS_Op_232_Myrtle_Escalier/CWS_Op_232_Myrtle_Escalier.mp3) |
+| CWS Op. 233 | Pearl Switchyard | 5/4 | 254 | [Score](pieces/CWS_Op_233_Pearl_Switchyard/CWS_Op_233_Pearl_Switchyard.pdf) | [MP3](pieces/CWS_Op_233_Pearl_Switchyard/CWS_Op_233_Pearl_Switchyard.mp3) |
+| CWS Op. 234 | Juniper Viaduct | 11/8 | 283 | [Score](pieces/CWS_Op_234_Juniper_Viaduct/CWS_Op_234_Juniper_Viaduct.pdf) | [MP3](pieces/CWS_Op_234_Juniper_Viaduct/CWS_Op_234_Juniper_Viaduct.mp3) |
+| CWS Op. 235 | Alder Flywheel | 4/4, 3/4, 5/4 (changing) | 371 | [Score](pieces/CWS_Op_235_Alder_Flywheel/CWS_Op_235_Alder_Flywheel.pdf) | [MP3](pieces/CWS_Op_235_Alder_Flywheel/CWS_Op_235_Alder_Flywheel.mp3) |
+| CWS Op. 236 | Velvet Clerestory | 4/4 | 230 | [Score](pieces/CWS_Op_236_Velvet_Clerestory/CWS_Op_236_Velvet_Clerestory.pdf) | [MP3](pieces/CWS_Op_236_Velvet_Clerestory/CWS_Op_236_Velvet_Clerestory.mp3) |
+| CWS Op. 237 | Camellia Pane | 6/4 | 276 | [Score](pieces/CWS_Op_237_Camellia_Pane/CWS_Op_237_Camellia_Pane.pdf) | [MP3](pieces/CWS_Op_237_Camellia_Pane/CWS_Op_237_Camellia_Pane.mp3) |
+| CWS Op. 238 | Reed Glazing | 5/4 | 219 | [Score](pieces/CWS_Op_238_Reed_Glazing/CWS_Op_238_Reed_Glazing.pdf) | [MP3](pieces/CWS_Op_238_Reed_Glazing/CWS_Op_238_Reed_Glazing.mp3) |
+| CWS Op. 239 | Moss Atrium | 7/4 | 223 | [Score](pieces/CWS_Op_239_Moss_Atrium/CWS_Op_239_Moss_Atrium.pdf) | [MP3](pieces/CWS_Op_239_Moss_Atrium/CWS_Op_239_Moss_Atrium.mp3) |
+| CWS Op. 240 | Fennel Lantern | 12/8 | 252 | [Score](pieces/CWS_Op_240_Fennel_Lantern/CWS_Op_240_Fennel_Lantern.pdf) | [MP3](pieces/CWS_Op_240_Fennel_Lantern/CWS_Op_240_Fennel_Lantern.mp3) |
+| CWS Op. 241 | Salt Interruption | 4/4, 3/4, 5/4 (changing) | 183 | [Score](pieces/CWS_Op_241_Salt_Interruption/CWS_Op_241_Salt_Interruption.pdf) | [MP3](pieces/CWS_Op_241_Salt_Interruption/CWS_Op_241_Salt_Interruption.mp3) |
+| CWS Op. 242 | Lichen Lacuna | 4/4 | 143 | [Score](pieces/CWS_Op_242_Lichen_Lacuna/CWS_Op_242_Lichen_Lacuna.pdf) | [MP3](pieces/CWS_Op_242_Lichen_Lacuna/CWS_Op_242_Lichen_Lacuna.mp3) |
+| CWS Op. 243 | Willow Erratum | 5/4 | 193 | [Score](pieces/CWS_Op_243_Willow_Erratum/CWS_Op_243_Willow_Erratum.pdf) | [MP3](pieces/CWS_Op_243_Willow_Erratum/CWS_Op_243_Willow_Erratum.mp3) |
+| CWS Op. 244 | Orchid Switchback | 4/4 | 230 | [Score](pieces/CWS_Op_244_Orchid_Switchback/CWS_Op_244_Orchid_Switchback.pdf) | [MP3](pieces/CWS_Op_244_Orchid_Switchback/CWS_Op_244_Orchid_Switchback.mp3) |
+| CWS Op. 245 | Bracken Ellipsis | 4/4, 5/4 (changing) | 173 | [Score](pieces/CWS_Op_245_Bracken_Ellipsis/CWS_Op_245_Bracken_Ellipsis.pdf) | [MP3](pieces/CWS_Op_245_Bracken_Ellipsis/CWS_Op_245_Bracken_Ellipsis.mp3) |
+| CWS Op. 246 | Sedge Meridian | 5/4 | 467 | [Score](pieces/CWS_Op_246_Sedge_Meridian/CWS_Op_246_Sedge_Meridian.pdf) | [MP3](pieces/CWS_Op_246_Sedge_Meridian/CWS_Op_246_Sedge_Meridian.mp3) |
+| CWS Op. 247 | Camellia Reach | 7/4 | 418 | [Score](pieces/CWS_Op_247_Camellia_Reach/CWS_Op_247_Camellia_Reach.pdf) | [MP3](pieces/CWS_Op_247_Camellia_Reach/CWS_Op_247_Camellia_Reach.mp3) |
+| CWS Op. 248 | Lichen Outlook | 4/4 | 339 | [Score](pieces/CWS_Op_248_Lichen_Outlook/CWS_Op_248_Lichen_Outlook.pdf) | [MP3](pieces/CWS_Op_248_Lichen_Outlook/CWS_Op_248_Lichen_Outlook.mp3) |
+| CWS Op. 249 | Orchid Headland | 8/4, 6/4 (changing) | 434 | [Score](pieces/CWS_Op_249_Orchid_Headland/CWS_Op_249_Orchid_Headland.pdf) | [MP3](pieces/CWS_Op_249_Orchid_Headland/CWS_Op_249_Orchid_Headland.mp3) |
+| CWS Op. 250 | Bracken Horizon | 6/4 | 399 | [Score](pieces/CWS_Op_250_Bracken_Horizon/CWS_Op_250_Bracken_Horizon.pdf) | [MP3](pieces/CWS_Op_250_Bracken_Horizon/CWS_Op_250_Bracken_Horizon.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

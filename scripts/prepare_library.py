@@ -7,6 +7,8 @@ from collection_volumes import build_volumes
 from meter_plan import bar_plan
 ROOT=Path(__file__).resolve().parents[1]
 cat=json.loads((ROOT/'data/catalog.json').read_text())
+asset_policy=json.loads((ROOT/'data/asset_distribution.json').read_text())
+asset_origin=f"https://raw.githubusercontent.com/{asset_policy['repository']}/{asset_policy['tag']}/"
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
 legacy={1:dict(parent_opus=None,motif=dict(hand='rh',start_beat=0,end_beat=3,pitches=['D','F','E','A'])),2:dict(parent_opus=1,motif=dict(hand='lh',start_beat=0,end_beat=3,pitches=['D','F','E','A'])),3:dict(parent_opus=1,motif=dict(hand='rh',start_beat=48,end_beat=52,pitches=['A','C','B','E']))}
 manifest=[]
@@ -49,6 +51,10 @@ for p in cat:
    (ROOT/s).write_text(text)
  entry=dict(op=p['op'],series=series_for(p['op'])['id'],series_label=series_for(p['op'])['label'],note_limit=series_for(p['op'])['note_limit'],page_limit=series_for(p['op'])['page_limit'],title=p['title'],slug=f'cws-op-{p["op"]:03d}-'+p['title'].lower().replace(' ','-'),stamp=p['composition_stamp'],beats=bar_plan(p)[3],duration=p['duration_seconds'],performance=p['performance_seconds'],audio=prefix+'.mp3',pdf=prefix+'.pdf',midi=prefix+'.mid',xml=prefix+'.musicxml',scores=scores,parent=parent,motif=motif,note_onsets=p['note_onsets'],pages=pages,
   events=[dict(id=e['id'],h=e['hand'],b=e['offset'],d=e['duration'],p=max(e['pitches']),ps=e['pitches'],s=e['seconds'],e=e['end_seconds'],**({'v':e['voice']} if e.get('voice') else {})) for e in p['events']])
+ if p['op']>=asset_policy['first_external_opus']:
+  assert p['op']<=asset_policy['last_external_opus'],'Add a new immutable asset range before extending the catalogue; preserve existing URLs'
+  for field in ['audio','pdf','midi','xml']:entry[field]=asset_origin+entry[field]
+  entry['scores']=[asset_origin+s for s in entry['scores']]
  manifest.append(entry)
 (ROOT/'library.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
 index=ROOT/'index.html';html=index.read_text()

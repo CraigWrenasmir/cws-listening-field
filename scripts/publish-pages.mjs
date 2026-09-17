@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {verifyExternalAssets} from './verify-external-assets.mjs';
 import {readFile,mkdtemp,rm} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -30,6 +31,7 @@ try{
  commit=git(['commit-tree',tree,...(remote?['-p',remote]:[]),'-m',`Publish Listening Field from ${source}`]);
 }finally{await rm(temporary,{recursive:true,force:true});}
 if(process.argv.includes('--publish')){
+ await verifyExternalAssets(root);
  const volumes=JSON.parse(await readFile(path.join(root,'downloads/volumes.json'),'utf8'));
  for(const v of volumes.filter(v=>v.zip_url)){
   const response=await fetch(v.zip_url,{signal:AbortSignal.timeout(60000)});assert.equal(response.status,200,'Release archive must be available before publication');

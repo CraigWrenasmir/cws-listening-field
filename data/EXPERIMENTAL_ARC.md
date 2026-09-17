@@ -28,3 +28,6 @@ Craig praised the Second Studies pilots and authorised fifteen further pieces, i
 ## Technical lyricism, Op. 221–230
 
 Craig explicitly asked for ten more advanced, technical compositions. This supersedes the stop at 220. Use the expanded Second Studies limits for sustained rhythmic independence, layered voicing, double-note work and longer flowing passages. Each study needs a coherent musical reason for its technical demand; document the gestures and review whole-hand reach and transitions. Keep a singing line, harmonic warmth and purposeful returns. Stop at 230.
+
+
+Craig approved twenty Second Studies as Nocturnal Architecture, Op. 231–250: shifting grounds (unequal repeating patterns, evolving bass/harmony), glass chorales (moving voices within quiet chordal textures), broken nocturnes (interrupted songs, silence and late revelations), and open horizons (expansive development and varied conclusions). Retain warm melancholy, six pages and 768 onsets, exact ancestry and the two connected Kinship regions. Vary metre, bar counts, proportions and endings; optional final_fermata=False allows endings in tempo. Complete and inspect each score before composing the next; publish the batch and stop at 250. This supersedes the stop at 230.

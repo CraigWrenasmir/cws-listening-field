@@ -293,6 +293,8 @@ for p in cat:
    notes=sorted([e for e in p['events'] if e['hand']==hand and start<=e['offset']<end-1e-8],key=lambda e:e['offset'])
    assert len(notes)==count,('Polyrhythm note count',p['op'],crossing,hand)
    for i,e in enumerate(notes):assert abs(e['offset']-(start+i*step))<1/960 and abs(e['duration']-step)<1/960,('Polyrhythm alignment',p['op'],hand,e['id'])
+ if p.get('final_fermata') is False:
+  assert not r.findall('.//fermata'),('Unexpected fermata',p['op'])
  stats={}
  limits=p.get('technique_limits',dict(chord_span=7,melodic_leap=12,rapid_leap=7))
  crossings=p.get('hand_crossings',[])

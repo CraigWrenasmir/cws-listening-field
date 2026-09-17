@@ -307,7 +307,7 @@ def make_score(p):
                 m.append(n)
                 offset+=dur
             if mi==len(rows):
-                if refs[(hand,mi)]:
+                if refs[(hand,mi)] and p.get('final_fermata',True):
                     refs[(hand,mi)][-1].expressions.append(expressions.Fermata())
                 m.rightBarline=bar.Barline('final')
             part.append(m)
