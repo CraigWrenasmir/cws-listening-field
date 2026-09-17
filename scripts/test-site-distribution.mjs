@@ -1,4 +1,4 @@
-import {localAssetPath,publicAssetPath,assetPrefix,firstExternalOpus} from './asset-paths.mjs';
+import {localAssetPath,publicAssetPath,firstExternalOpus} from './asset-paths.mjs';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
@@ -8,8 +8,9 @@ const pieces=JSON.parse(await readFile(new URL('../library.json',import.meta.url
 const volumes=JSON.parse(await readFile(new URL('../downloads/volumes.json',import.meta.url),'utf8'));
 for(const p of pieces)for(const f of [p.audio,p.pdf,p.midi,p.xml,...p.scores]){const local=localAssetPath(f);assert.equal(paths.has(local),p.op<firstExternalOpus,f);if(p.op>=firstExternalOpus)assert.equal(f,publicAssetPath(local));}
 for(const f of ['CNAME','.nojekyll','index.html','kinship.html','library.json','data/series.json','downloads/index.html','downloads/volumes.json'])assert(paths.has(f));
+assert(paths.has('downloads/CWS_Volume_12_Scores.pdf'),'Preserve the earlier two-work Volume 12 score URL');
 assert(!paths.has('data/catalog.json'));assert(!files.some(f=>f.path.startsWith('pieces/')&&f.path.endsWith('.json')));
-for(const v of volumes){assert(paths.has(v.pdf));if(v.number<=10){assert(paths.has(v.zip));assert(!v.zip_url);}else{assert.equal(v.zip_url,releaseURL(v));assert(!paths.has(v.zip));}}
+for(const v of volumes){assert.equal(paths.has(v.pdf),!v.pdf_url);if(v.pdf_url)assert.equal(v.pdf_url,publicAssetPath(v.pdf));if(v.number<=10){assert(paths.has(v.zip));assert(!v.zip_url);}else{assert.equal(v.zip_url,releaseURL(v));assert(!paths.has(v.zip));}}
 assert(files.reduce((s,f)=>s+f.bytes,0)<SITE_LIMIT);
-for(const bad of ['https://example.com/score.svg','../pieces/a.svg','pieces/../../secret','/pieces/a.svg'])assert.throws(()=>localAssetPath(bad));
+for(const bad of ['https://raw.githubusercontent.com/CraigWrenasmir/cws-listening-field/nocturnal-architecture/pieces/CWS_Op_251_Fake/a.svg','https://example.com/score.svg','../pieces/a.svg','pieces/../../secret','/pieces/a.svg'])assert.throws(()=>localAssetPath(bad));
 console.log(`Publication distribution passed: all ${pieces.length} works and original download URLs retained; new volume archives use exact owned-repository Release URLs.`);

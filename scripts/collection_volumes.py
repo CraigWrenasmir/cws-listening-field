@@ -11,6 +11,7 @@ MAX_FILE_BYTES=90*1024*1024
 def build_volumes(root, catalog, selected=None):
     downloads=root/'downloads';downloads.mkdir(exist_ok=True)
     manifest_path=downloads/'volumes.json'
+    policy=json.loads((root/'data/asset_distribution.json').read_text())
     old={v['number']:v for v in json.loads(manifest_path.read_text())} if manifest_path.exists() else {}
     groups={}
     for p in catalog:groups.setdefault((p['op']-1)//VOLUME_SIZE+1 if p['op']<=200 else 10+(p['op']-201)//VOLUME_SIZE,[]).append(p)
@@ -21,6 +22,9 @@ def build_volumes(root, catalog, selected=None):
         # Keep the original public URLs as the first volume grows and then closes.
         pdf_name='CWS_First_Studies_Scores.pdf' if number==1 else f'CWS_Volume_{number:02d}_Scores.pdf'
         zip_name='CWS_First_Studies.zip' if number==1 else f'CWS_Volume_{number:02d}.zip'
+        edition=next((e for e in policy.get('volume_score_editions',[]) if e['number']==number and e['last_opus']==ops[-1]),None)
+        if number>=12:assert edition,'Configure the next immutable combined-score edition before preparing a growing volume'
+        if edition:pdf_name=Path(edition['path']).name
         pdf_path=downloads/pdf_name;zip_path=downloads/zip_name
         unchanged=(selected is not None and not set(ops).intersection(selected)
                    and old.get(number,{}).get('ops')==ops and pdf_path.exists() and zip_path.exists())
@@ -56,6 +60,7 @@ def build_volumes(root, catalog, selected=None):
         assert max(volume['pdf_bytes'],volume['zip_bytes'])<MAX_FILE_BYTES,('Reduce volume size before publishing',number)
         # New archive volumes live in this repository's Releases. Keep every
         # original Volume 1-10 URL and every individual score/audio URL intact.
+        if edition:volume['pdf_url']=f"https://raw.githubusercontent.com/{policy['repository']}/{edition['tag']}/{edition['path']}"
         if number>=11:
             volume['zip_url']=f'https://github.com/CraigWrenasmir/cws-listening-field/releases/download/volume-{number}/{zip_name}'
         volumes.append(volume)
@@ -73,7 +78,7 @@ def build_volumes(root, catalog, selected=None):
 <h2 id="volume-{v['number']}">Volume {v['number']:02d}</h2>
 <p class="volume-range">{v['series_label']} · CWS Op. {opus} · {count}{status}</p>
 <p class="volume-journey">{journey}</p>
-<div class="volume-links"><a href="{Path(v['pdf']).name}" download>Scores <span>PDF · {v['pages']} pages · {mb(v['pdf_bytes'])}</span></a>
+<div class="volume-links"><a href="{escape(v.get('pdf_url',Path(v['pdf']).name),quote=True)}" download>Scores <span>PDF · {v['pages']} pages · {mb(v['pdf_bytes'])}</span></a>
 <a href="{escape(v.get('zip_url',Path(v['zip']).name),quote=True)}" download>Complete volume <span>ZIP · {mb(v['zip_bytes'])}</span></a></div>
 </div></section>''')
     page=f'''<!doctype html>

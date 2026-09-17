@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {localAssetPath} from './asset-paths.mjs';
+import {localAssetPath,publicAssetPath} from './asset-paths.mjs';
 import {readFile,stat,readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {publicationFiles,SITE_LIMIT,releaseURL} from './site-distribution.mjs';
@@ -36,6 +36,7 @@ for(const v of volumes){
  assert(members.every(p=>p.series===v.series),'Download volumes must not mix study series');
  assert.equal(v.series_label,rules.label);assert.equal(v.complete,v.count===24||v.last===rules.last_opus);
  assert.equal(v.pages,data.filter(p=>v.ops.includes(p.op)).reduce((n,p)=>n+p.pages,0));
+ if(v.pdf_url){assert.equal(v.pdf_url,publicAssetPath(v.pdf));assert(downloadPage.includes(v.pdf_url));}
  if(v.zip_url){assert(v.number>=11);assert.equal(v.zip_url,releaseURL(v));assert(downloadPage.includes(v.zip_url));}
  for(const kind of ['pdf','zip']){
   const bytes=(await stat(new URL(v[kind],root))).size;
@@ -43,7 +44,7 @@ for(const v of volumes){
   assert(downloadPage.includes(v[kind].split('/').at(-1)),'Volume is missing from the download page');
  }
 }
-for(const [,link] of downloadPage.matchAll(/(?:href|src)="([^"]+)"/g)){if(link.startsWith('https://'))assert(volumes.some(v=>v.zip_url===link),'Unrecognised external volume');else assert((await stat(new URL(link,new URL('downloads/',root)))).size>=0);}
+for(const [,link] of downloadPage.matchAll(/(?:href|src)="([^"]+)"/g)){if(link.startsWith('https://'))assert(volumes.some(v=>v.zip_url===link||v.pdf_url===link),'Unrecognised external volume');else assert((await stat(new URL(link,new URL('downloads/',root)))).size>=0);}
 const excluded=new Set(['.git','node_modules','work','dist','.venv','__pycache__','.DS_Store']);
 async function siteBytes(directory){let total=0;for(const item of await readdir(directory,{withFileTypes:true})){if(excluded.has(item.name))continue;const url=new URL(item.name+(item.isDirectory()?'/':''),directory);if(item.isDirectory())total+=await siteBytes(url);else if(item.isFile()){const bytes=(await stat(url)).size;assert(bytes<90*1024*1024,'Review oversized repository file: '+item.name);total+=bytes;}}return total;}
 await siteBytes(root);

@@ -278,6 +278,26 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 248 | Lichen Outlook | 4/4 | 339 | [Score](pieces/CWS_Op_248_Lichen_Outlook/CWS_Op_248_Lichen_Outlook.pdf) | [MP3](pieces/CWS_Op_248_Lichen_Outlook/CWS_Op_248_Lichen_Outlook.mp3) |
 | CWS Op. 249 | Orchid Headland | 8/4, 6/4 (changing) | 434 | [Score](pieces/CWS_Op_249_Orchid_Headland/CWS_Op_249_Orchid_Headland.pdf) | [MP3](pieces/CWS_Op_249_Orchid_Headland/CWS_Op_249_Orchid_Headland.mp3) |
 | CWS Op. 250 | Bracken Horizon | 6/4 | 399 | [Score](pieces/CWS_Op_250_Bracken_Horizon/CWS_Op_250_Bracken_Horizon.pdf) | [MP3](pieces/CWS_Op_250_Bracken_Horizon/CWS_Op_250_Bracken_Horizon.mp3) |
+| CWS Op. 251 | Alder Rill | 4/4 | 253 | [Score](pieces/CWS_Op_251_Alder_Rill/CWS_Op_251_Alder_Rill.pdf) | [MP3](pieces/CWS_Op_251_Alder_Rill/CWS_Op_251_Alder_Rill.mp3) |
+| CWS Op. 252 | Fennel Slipstream | 9/8 | 237 | [Score](pieces/CWS_Op_252_Fennel_Slipstream/CWS_Op_252_Fennel_Slipstream.pdf) | [MP3](pieces/CWS_Op_252_Fennel_Slipstream/CWS_Op_252_Fennel_Slipstream.mp3) |
+| CWS Op. 253 | Myrtle Backwater | 6/4 | 224 | [Score](pieces/CWS_Op_253_Myrtle_Backwater/CWS_Op_253_Myrtle_Backwater.pdf) | [MP3](pieces/CWS_Op_253_Myrtle_Backwater/CWS_Op_253_Myrtle_Backwater.mp3) |
+| CWS Op. 254 | Reed Meander | 5/4 | 253 | [Score](pieces/CWS_Op_254_Reed_Meander/CWS_Op_254_Reed_Meander.pdf) | [MP3](pieces/CWS_Op_254_Reed_Meander/CWS_Op_254_Reed_Meander.mp3) |
+| CWS Op. 255 | Clover Driftway | 3/4 | 206 | [Score](pieces/CWS_Op_255_Clover_Driftway/CWS_Op_255_Clover_Driftway.pdf) | [MP3](pieces/CWS_Op_255_Clover_Driftway/CWS_Op_255_Clover_Driftway.mp3) |
+| CWS Op. 256 | Camellia Fenlight | 4/4 | 244 | [Score](pieces/CWS_Op_256_Camellia_Fenlight/CWS_Op_256_Camellia_Fenlight.pdf) | [MP3](pieces/CWS_Op_256_Camellia_Fenlight/CWS_Op_256_Camellia_Fenlight.mp3) |
+| CWS Op. 257 | Hazel Spillway | 5/4 | 300 | [Score](pieces/CWS_Op_257_Hazel_Spillway/CWS_Op_257_Hazel_Spillway.pdf) | [MP3](pieces/CWS_Op_257_Hazel_Spillway/CWS_Op_257_Hazel_Spillway.mp3) |
+| CWS Op. 258 | Moss Rainroom | 6/4 | 268 | [Score](pieces/CWS_Op_258_Moss_Rainroom/CWS_Op_258_Moss_Rainroom.pdf) | [MP3](pieces/CWS_Op_258_Moss_Rainroom/CWS_Op_258_Moss_Rainroom.mp3) |
+| CWS Op. 259 | Willow Mooring | 3/4 | 355 | [Score](pieces/CWS_Op_259_Willow_Mooring/CWS_Op_259_Willow_Mooring.pdf) | [MP3](pieces/CWS_Op_259_Willow_Mooring/CWS_Op_259_Willow_Mooring.mp3) |
+| CWS Op. 260 | Pearl Stillwater | 7/4 | 260 | [Score](pieces/CWS_Op_260_Pearl_Stillwater/CWS_Op_260_Pearl_Stillwater.pdf) | [MP3](pieces/CWS_Op_260_Pearl_Stillwater/CWS_Op_260_Pearl_Stillwater.mp3) |
+| CWS Op. 261 | Linden Waterwheel | 4/4 | 345 | [Score](pieces/CWS_Op_261_Linden_Waterwheel/CWS_Op_261_Linden_Waterwheel.pdf) | [MP3](pieces/CWS_Op_261_Linden_Waterwheel/CWS_Op_261_Linden_Waterwheel.mp3) |
+| CWS Op. 262 | Sedge Undertide | 12/8 | 244 | [Score](pieces/CWS_Op_262_Sedge_Undertide/CWS_Op_262_Sedge_Undertide.pdf) | [MP3](pieces/CWS_Op_262_Sedge_Undertide/CWS_Op_262_Sedge_Undertide.mp3) |
+| CWS Op. 263 | Alder Sluice | 4/4 | 264 | [Score](pieces/CWS_Op_263_Alder_Sluice/CWS_Op_263_Alder_Sluice.pdf) | [MP3](pieces/CWS_Op_263_Alder_Sluice/CWS_Op_263_Alder_Sluice.mp3) |
+| CWS Op. 264 | Orchid Floodplain | 5/4 | 246 | [Score](pieces/CWS_Op_264_Orchid_Floodplain/CWS_Op_264_Orchid_Floodplain.pdf) | [MP3](pieces/CWS_Op_264_Orchid_Floodplain/CWS_Op_264_Orchid_Floodplain.mp3) |
+| CWS Op. 265 | Bracken Overflow | 4/4 | 320 | [Score](pieces/CWS_Op_265_Bracken_Overflow/CWS_Op_265_Bracken_Overflow.pdf) | [MP3](pieces/CWS_Op_265_Bracken_Overflow/CWS_Op_265_Bracken_Overflow.mp3) |
+| CWS Op. 266 | Juniper Offing | 6/4 | 176 | [Score](pieces/CWS_Op_266_Juniper_Offing/CWS_Op_266_Juniper_Offing.pdf) | [MP3](pieces/CWS_Op_266_Juniper_Offing/CWS_Op_266_Juniper_Offing.mp3) |
+| CWS Op. 267 | Camellia Soundings | 4/4 | 235 | [Score](pieces/CWS_Op_267_Camellia_Soundings/CWS_Op_267_Camellia_Soundings.pdf) | [MP3](pieces/CWS_Op_267_Camellia_Soundings/CWS_Op_267_Camellia_Soundings.mp3) |
+| CWS Op. 268 | Reed Tributary | 5/4 | 227 | [Score](pieces/CWS_Op_268_Reed_Tributary/CWS_Op_268_Reed_Tributary.pdf) | [MP3](pieces/CWS_Op_268_Reed_Tributary/CWS_Op_268_Reed_Tributary.mp3) |
+| CWS Op. 269 | Velvet Rainpath | 3/4, 5/4 (changing) | 228 | [Score](pieces/CWS_Op_269_Velvet_Rainpath/CWS_Op_269_Velvet_Rainpath.pdf) | [MP3](pieces/CWS_Op_269_Velvet_Rainpath/CWS_Op_269_Velvet_Rainpath.mp3) |
+| CWS Op. 270 | Myrtle Homewater | 4/4 | 292 | [Score](pieces/CWS_Op_270_Myrtle_Homewater/CWS_Op_270_Myrtle_Homewater.pdf) | [MP3](pieces/CWS_Op_270_Myrtle_Homewater/CWS_Op_270_Myrtle_Homewater.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

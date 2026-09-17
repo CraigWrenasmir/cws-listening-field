@@ -1,15 +1,17 @@
 import {readdir,stat,readFile} from 'node:fs/promises';
 import path from 'node:path';
-import {localAssetPath,assetPrefix,firstExternalOpus} from './asset-paths.mjs';
+import {localAssetPath,isExternalAsset,publicAssetPath,firstExternalOpus,scoreEditions} from './asset-paths.mjs';
 import assert from 'node:assert/strict';
 export const SITE_LIMIT=950_000_000;
 export function releaseURL(v){return `https://github.com/CraigWrenasmir/cws-listening-field/releases/download/volume-${v.number}/CWS_Volume_${String(v.number).padStart(2,'0')}.zip`;}
 export async function publicationFiles(root){
  const volumes=JSON.parse(await readFile(path.join(root,'downloads/volumes.json'),'utf8'));
  const external=new Set(volumes.filter(v=>v.zip_url).map(v=>{assert.equal(v.zip_url,releaseURL(v));return v.zip;}));
+ for(const v of volumes.filter(v=>v.pdf_url)){assert.equal(v.pdf_url,publicAssetPath(v.pdf));external.add(v.pdf);}
+ for(const edition of scoreEditions)external.add(edition.path);
  const catalogue=JSON.parse(await readFile(path.join(root,'library.json'),'utf8'));
  for(const p of catalogue)for(const url of [p.audio,p.pdf,p.midi,p.xml,...p.scores]){
-  const externalAsset=url.startsWith(assetPrefix);assert.equal(externalAsset,p.op>=firstExternalOpus,'Unexpected distribution for opus '+p.op);
+  const externalAsset=isExternalAsset(url);assert.equal(externalAsset,p.op>=firstExternalOpus,'Unexpected distribution for opus '+p.op);
   if(externalAsset)external.add(localAssetPath(url));
  }
  const files=[];

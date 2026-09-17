@@ -1,4 +1,4 @@
-import {assetPrefix,localAssetPath} from './asset-paths.mjs';
+import {isExternalAsset,localAssetPath} from './asset-paths.mjs';
 import assert from 'node:assert/strict';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import vm from 'node:vm';
@@ -29,7 +29,7 @@ window.scrollTo=()=>{};window.HTMLElement.prototype.scrollIntoView=()=>{};
 const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#965432','--lf-tenor':'#526e58','--lf-paper':'#f1f2ed'};
 let observer;
 class ResizeObserver{constructor(callback){this.callback=callback;observer=this;}observe(){queueMicrotask(()=>this.callback());}}
-const sandbox={document,window,DOMParser,location,history,ResizeObserver,devicePixelRatio:1,console:{error:e=>errors.push(e.message)},matchMedia:()=>({matches:true,addEventListener(){}}),getComputedStyle:el=>({color:el.style.color,getPropertyValue:key=>colours[key]}),requestAnimationFrame:fn=>{frames.set(++nextFrame,fn);return nextFrame;},fetch:async url=>{try{const body=await readFile(new URL(url.startsWith(assetPrefix)?localAssetPath(url):url,root),'utf8');return {ok:true,json:async()=>JSON.parse(body),text:async()=>body};}catch{return {ok:false};}}};
+const sandbox={document,window,DOMParser,location,history,ResizeObserver,devicePixelRatio:1,console:{error:e=>errors.push(e.message)},matchMedia:()=>({matches:true,addEventListener(){}}),getComputedStyle:el=>({color:el.style.color,getPropertyValue:key=>colours[key]}),requestAnimationFrame:fn=>{frames.set(++nextFrame,fn);return nextFrame;},fetch:async url=>{try{const body=await readFile(new URL(isExternalAsset(url)?localAssetPath(url):url,root),'utf8');return {ok:true,json:async()=>JSON.parse(body),text:async()=>body};}catch{return {ok:false};}}};
 sandbox.buildListeningPaths=buildListeningPaths;Object.assign(sandbox,{createFavourites,updateLeaf,mountFavourites});
 const favouritesDisk=new Map();Object.defineProperty(window,'localStorage',{configurable:true,value:{getItem:key=>favouritesDisk.get(key)??null,setItem:(key,value)=>favouritesDisk.set(key,value)}});
 vm.createContext(sandbox);vm.runInContext(source.replace("import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';",'').replace("import {buildListeningPaths} from './listening-paths.js';",''),sandbox);
