@@ -43,3 +43,6 @@ For the continuing Op. 7–300 commission, read and update `data/PROGRESS.md` af
 - Optional `final_fermata=False` omits the automatic closing fermata and its associated final-bar playback relaxation. The default remains True, preserving every existing score and recording. Written/performed tempo plans still apply.
 
 - Latest authorised scope: Returning Waters, Op. 251–270, following Craig's private piano-reference study. The former stop at 250 is superseded. Complete and inspect each piece sequentially; publish all twenty and stop at 270. Keep all private recordings, analysis, source paths and diagnostic MIDI outside the public repository.
+
+
+On 18 September 2026 Craig authorised Vernal Dances, twenty Second Studies, Op. 271–290: a deliberate departure into spring-like dance and waltz rhythms, vivid dynamic contrasts, brighter harmony, playful rests and changing accents. Use distinct complete forms rather than generic accompaniment permutations. Retain two hands, six pages, 768 sounded pitches, exact ancestry and the established presentation. Complete and visually inspect each score sequentially, publish the twenty and stop at 290; the former stop at 270 is superseded. Preserve all earlier works and public download URLs.

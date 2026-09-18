@@ -298,6 +298,26 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 268 | Reed Tributary | 5/4 | 227 | [Score](pieces/CWS_Op_268_Reed_Tributary/CWS_Op_268_Reed_Tributary.pdf) | [MP3](pieces/CWS_Op_268_Reed_Tributary/CWS_Op_268_Reed_Tributary.mp3) |
 | CWS Op. 269 | Velvet Rainpath | 3/4, 5/4 (changing) | 228 | [Score](pieces/CWS_Op_269_Velvet_Rainpath/CWS_Op_269_Velvet_Rainpath.pdf) | [MP3](pieces/CWS_Op_269_Velvet_Rainpath/CWS_Op_269_Velvet_Rainpath.mp3) |
 | CWS Op. 270 | Myrtle Homewater | 4/4 | 292 | [Score](pieces/CWS_Op_270_Myrtle_Homewater/CWS_Op_270_Myrtle_Homewater.pdf) | [MP3](pieces/CWS_Op_270_Myrtle_Homewater/CWS_Op_270_Myrtle_Homewater.mp3) |
+| CWS Op. 271 | Apricot Promenade | 3/4 | 203 | [Score](pieces/CWS_Op_271_Apricot_Promenade/CWS_Op_271_Apricot_Promenade.pdf) | [MP3](pieces/CWS_Op_271_Apricot_Promenade/CWS_Op_271_Apricot_Promenade.mp3) |
+| CWS Op. 272 | Clover Skipping | 6/8 | 252 | [Score](pieces/CWS_Op_272_Clover_Skipping/CWS_Op_272_Clover_Skipping.pdf) | [MP3](pieces/CWS_Op_272_Clover_Skipping/CWS_Op_272_Clover_Skipping.mp3) |
+| CWS Op. 273 | Birch Turnstile | 2/4 | 194 | [Score](pieces/CWS_Op_273_Birch_Turnstile/CWS_Op_273_Birch_Turnstile.pdf) | [MP3](pieces/CWS_Op_273_Birch_Turnstile/CWS_Op_273_Birch_Turnstile.mp3) |
+| CWS Op. 274 | Magnolia Esplanade | 3/4 | 197 | [Score](pieces/CWS_Op_274_Magnolia_Esplanade/CWS_Op_274_Magnolia_Esplanade.pdf) | [MP3](pieces/CWS_Op_274_Magnolia_Esplanade/CWS_Op_274_Magnolia_Esplanade.mp3) |
+| CWS Op. 275 | Sorrel Detour | 5/8 | 191 | [Score](pieces/CWS_Op_275_Sorrel_Detour/CWS_Op_275_Sorrel_Detour.pdf) | [MP3](pieces/CWS_Op_275_Sorrel_Detour/CWS_Op_275_Sorrel_Detour.mp3) |
+| CWS Op. 276 | Wisteria Carousel | 3/4 | 165 | [Score](pieces/CWS_Op_276_Wisteria_Carousel/CWS_Op_276_Wisteria_Carousel.pdf) | [MP3](pieces/CWS_Op_276_Wisteria_Carousel/CWS_Op_276_Wisteria_Carousel.mp3) |
+| CWS Op. 277 | Fennel Footbridge | 6/8 | 186 | [Score](pieces/CWS_Op_277_Fennel_Footbridge/CWS_Op_277_Fennel_Footbridge.pdf) | [MP3](pieces/CWS_Op_277_Fennel_Footbridge/CWS_Op_277_Fennel_Footbridge.mp3) |
+| CWS Op. 278 | Lilac Belvedere | 6/4 | 236 | [Score](pieces/CWS_Op_278_Lilac_Belvedere/CWS_Op_278_Lilac_Belvedere.pdf) | [MP3](pieces/CWS_Op_278_Lilac_Belvedere/CWS_Op_278_Lilac_Belvedere.mp3) |
+| CWS Op. 279 | Acacia Switchback | 7/8 | 177 | [Score](pieces/CWS_Op_279_Acacia_Switchback/CWS_Op_279_Acacia_Switchback.pdf) | [MP3](pieces/CWS_Op_279_Acacia_Switchback/CWS_Op_279_Acacia_Switchback.mp3) |
+| CWS Op. 280 | Daisy Crosswalk | 2/4 | 203 | [Score](pieces/CWS_Op_280_Daisy_Crosswalk/CWS_Op_280_Daisy_Crosswalk.pdf) | [MP3](pieces/CWS_Op_280_Daisy_Crosswalk/CWS_Op_280_Daisy_Crosswalk.mp3) |
+| CWS Op. 281 | Primrose Threshold | 9/8 | 170 | [Score](pieces/CWS_Op_281_Primrose_Threshold/CWS_Op_281_Primrose_Threshold.pdf) | [MP3](pieces/CWS_Op_281_Primrose_Threshold/CWS_Op_281_Primrose_Threshold.mp3) |
+| CWS Op. 282 | Peach Vestibule | 3/4 | 200 | [Score](pieces/CWS_Op_282_Peach_Vestibule/CWS_Op_282_Peach_Vestibule.pdf) | [MP3](pieces/CWS_Op_282_Peach_Vestibule/CWS_Op_282_Peach_Vestibule.mp3) |
+| CWS Op. 283 | Iris Tramline | 3/8 | 176 | [Score](pieces/CWS_Op_283_Iris_Tramline/CWS_Op_283_Iris_Tramline.pdf) | [MP3](pieces/CWS_Op_283_Iris_Tramline/CWS_Op_283_Iris_Tramline.mp3) |
+| CWS Op. 284 | Marigold Courtyard | 4/4 | 191 | [Score](pieces/CWS_Op_284_Marigold_Courtyard/CWS_Op_284_Marigold_Courtyard.pdf) | [MP3](pieces/CWS_Op_284_Marigold_Courtyard/CWS_Op_284_Marigold_Courtyard.mp3) |
+| CWS Op. 285 | Apple Roundabout | 3/4, 2/4 (changing) | 164 | [Score](pieces/CWS_Op_285_Apple_Roundabout/CWS_Op_285_Apple_Roundabout.pdf) | [MP3](pieces/CWS_Op_285_Apple_Roundabout/CWS_Op_285_Apple_Roundabout.mp3) |
+| CWS Op. 286 | Willow Kiteway | 6/8 | 188 | [Score](pieces/CWS_Op_286_Willow_Kiteway/CWS_Op_286_Willow_Kiteway.pdf) | [MP3](pieces/CWS_Op_286_Willow_Kiteway/CWS_Op_286_Willow_Kiteway.mp3) |
+| CWS Op. 287 | Dogwood Pavilion | 5/4 | 290 | [Score](pieces/CWS_Op_287_Dogwood_Pavilion/CWS_Op_287_Dogwood_Pavilion.pdf) | [MP3](pieces/CWS_Op_287_Dogwood_Pavilion/CWS_Op_287_Dogwood_Pavilion.mp3) |
+| CWS Op. 288 | Linden Maywalk | 3/4 | 164 | [Score](pieces/CWS_Op_288_Linden_Maywalk/CWS_Op_288_Linden_Maywalk.pdf) | [MP3](pieces/CWS_Op_288_Linden_Maywalk/CWS_Op_288_Linden_Maywalk.mp3) |
+| CWS Op. 289 | Quince Semaphore | 2/4 | 197 | [Score](pieces/CWS_Op_289_Quince_Semaphore/CWS_Op_289_Quince_Semaphore.pdf) | [MP3](pieces/CWS_Op_289_Quince_Semaphore/CWS_Op_289_Quince_Semaphore.mp3) |
+| CWS Op. 290 | Apricot Commons | 6/4 | 385 | [Score](pieces/CWS_Op_290_Apricot_Commons/CWS_Op_290_Apricot_Commons.pdf) | [MP3](pieces/CWS_Op_290_Apricot_Commons/CWS_Op_290_Apricot_Commons.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
