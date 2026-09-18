@@ -348,6 +348,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 318 | Birch Observatory | 6/4 | 162 | [Score](pieces/CWS_Op_318_Birch_Observatory/CWS_Op_318_Birch_Observatory.pdf) | [MP3](pieces/CWS_Op_318_Birch_Observatory/CWS_Op_318_Birch_Observatory.mp3) |
 | CWS Op. 319 | Myrtle Belvedere | 5/4 | 243 | [Score](pieces/CWS_Op_319_Myrtle_Belvedere/CWS_Op_319_Myrtle_Belvedere.pdf) | [MP3](pieces/CWS_Op_319_Myrtle_Belvedere/CWS_Op_319_Myrtle_Belvedere.mp3) |
 | CWS Op. 320 | Orchid Confluence | 6/4 | 448 | [Score](pieces/CWS_Op_320_Orchid_Confluence/CWS_Op_320_Orchid_Confluence.pdf) | [MP3](pieces/CWS_Op_320_Orchid_Confluence/CWS_Op_320_Orchid_Confluence.mp3) |
+| CWS Op. 321 | Willow Cantilena | 12/8 | 438 | [Score](pieces/CWS_Op_321_Willow_Cantilena/CWS_Op_321_Willow_Cantilena.pdf) | [MP3](pieces/CWS_Op_321_Willow_Cantilena/CWS_Op_321_Willow_Cantilena.mp3) |
+| CWS Op. 322 | Myrtle Reverie | 6/8 | 292 | [Score](pieces/CWS_Op_322_Myrtle_Reverie/CWS_Op_322_Myrtle_Reverie.pdf) | [MP3](pieces/CWS_Op_322_Myrtle_Reverie/CWS_Op_322_Myrtle_Reverie.mp3) |
+| CWS Op. 323 | Amber Promenade | 4/4 | 271 | [Score](pieces/CWS_Op_323_Amber_Promenade/CWS_Op_323_Amber_Promenade.pdf) | [MP3](pieces/CWS_Op_323_Amber_Promenade/CWS_Op_323_Amber_Promenade.mp3) |
+| CWS Op. 324 | Birch Aubade | 3/4 | 274 | [Score](pieces/CWS_Op_324_Birch_Aubade/CWS_Op_324_Birch_Aubade.pdf) | [MP3](pieces/CWS_Op_324_Birch_Aubade/CWS_Op_324_Birch_Aubade.mp3) |
+| CWS Op. 325 | Sedge Lantern | 9/8 | 336 | [Score](pieces/CWS_Op_325_Sedge_Lantern/CWS_Op_325_Sedge_Lantern.pdf) | [MP3](pieces/CWS_Op_325_Sedge_Lantern/CWS_Op_325_Sedge_Lantern.mp3) |
+| CWS Op. 326 | Iris Portico | 4/4 | 283 | [Score](pieces/CWS_Op_326_Iris_Portico/CWS_Op_326_Iris_Portico.pdf) | [MP3](pieces/CWS_Op_326_Iris_Portico/CWS_Op_326_Iris_Portico.mp3) |
+| CWS Op. 327 | Clover Reverie | 6/8 | 222 | [Score](pieces/CWS_Op_327_Clover_Reverie/CWS_Op_327_Clover_Reverie.pdf) | [MP3](pieces/CWS_Op_327_Clover_Reverie/CWS_Op_327_Clover_Reverie.mp3) |
+| CWS Op. 328 | Reed Noctilucence | 5/4 | 239 | [Score](pieces/CWS_Op_328_Reed_Noctilucence/CWS_Op_328_Reed_Noctilucence.pdf) | [MP3](pieces/CWS_Op_328_Reed_Noctilucence/CWS_Op_328_Reed_Noctilucence.mp3) |
+| CWS Op. 329 | Alder Remanence | 12/8 | 248 | [Score](pieces/CWS_Op_329_Alder_Remanence/CWS_Op_329_Alder_Remanence.pdf) | [MP3](pieces/CWS_Op_329_Alder_Remanence/CWS_Op_329_Alder_Remanence.mp3) |
+| CWS Op. 330 | Orchid Reverie | 4/4, 6/4 (changing) | 340 | [Score](pieces/CWS_Op_330_Orchid_Reverie/CWS_Op_330_Orchid_Reverie.pdf) | [MP3](pieces/CWS_Op_330_Orchid_Reverie/CWS_Op_330_Orchid_Reverie.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
