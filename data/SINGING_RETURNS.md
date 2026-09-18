@@ -22,3 +22,5 @@ The recordings retain the existing light room reverb and shared phrase tempo map
 Every work has a documented pitch relationship with an earlier catalogue piece. Op. 329 is a child of Op. 321, allowing the set to develop its own small branch in Kinship. All works also enter the five complete listening routes and Volume 15 downloads.
 
 Score/MIDI agreement, timing, bar lengths, engraving, pedal releases, complete held-hand spans, separate key occupation and decoded recording checks passed individually. These checks and browser playback verification do not substitute for Craig's listening and keyboard feedback. Publication verification is recorded in PROGRESS.md and DEPLOYMENT.md. Stop at Op. 330; Second Studies continues through Op. 400.
+
+Published on 18 September 2026 at [The Listening Field](https://listeningfield.wrenasmir.com/index.html#cws-op-321-willow-cantilena), with [Volume 15 downloads](https://listeningfield.wrenasmir.com/downloads/index.html#volume-15). The complete collection is verified at 330 works.
