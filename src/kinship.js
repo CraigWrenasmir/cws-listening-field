@@ -1,5 +1,6 @@
 import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';
 import {layoutKinship} from './kinship-layout.js?v=4';
+import {decodeLibrary} from './library-format.js';
 
 export function mountKinship(root,data){
  const document=root.ownerDocument,q=selector=>root.querySelector(selector),svg=q('#kf-map');
@@ -122,7 +123,7 @@ export function mountKinship(root,data){
 
 export async function startKinship(document,fetcher=fetch){
  const root=document.getElementById('cws-kinship');
- try{const response=await fetcher('library.json');if(!response.ok)throw new Error('Catalogue unavailable');const data=await response.json();if(!data.length)throw new Error('Empty catalogue');mountKinship(root,data);}
+ try{const response=await fetcher('library.json');if(!response.ok)throw new Error('Catalogue unavailable');const data=decodeLibrary(await response.json());if(!data.length)throw new Error('Empty catalogue');mountKinship(root,data);}
  catch(error){root.querySelector('#kf-error').hidden=false;}
 }
 if(typeof document!=='undefined')startKinship(document);

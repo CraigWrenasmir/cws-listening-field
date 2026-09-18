@@ -1,10 +1,11 @@
 import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';
 import {buildListeningPaths} from './listening-paths.js';
+import {decodeLibrary} from './library-format.js';
 (async function(){
 const root=document.getElementById('cws-listening-field');
 const response=await fetch('library.json');
 if(!response.ok)throw new Error('Catalogue unavailable');
-const data=await response.json();
+const data=decodeLibrary(await response.json());
 const q=(s)=>root.querySelector(s),canvas=q('#lf-canvas'),ctx=canvas.getContext('2d'),audio=q('#lf-audio');
 const state={overview:true,selected:Math.min(1,data.length-1),kinship:false,score:false,playlist:false,density:17,relief:1.0};
 const favourites=createFavourites(window,data);
