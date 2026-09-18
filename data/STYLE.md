@@ -43,3 +43,6 @@ On 17 September 2026 Craig authorised twenty further compositions, Op. 251–270
 
 
 On 18 September 2026 Craig authorised Vernal Dances, twenty Second Studies, Op. 271–290: a deliberate departure into spring-like dance and waltz rhythms, vivid dynamic contrasts, brighter harmony, playful rests and changing accents. Use distinct complete forms rather than generic accompaniment permutations. Retain two hands, six pages, 768 sounded pitches, exact ancestry and the established presentation. Complete and visually inspect each score sequentially, publish the twenty and stop at 290; the former stop at 270 is superseded. Preserve all earlier works and public download URLs.
+
+
+Craig authorised Imaginary Ensembles, thirty Second Studies, Op. 291–320: intimate conversations (291–300), written improvisations (301–310), and miniature concertos (311–320). Distinct voices must shape the whole form through exchanges, interruptions and developing agreement. Retain warm melancholy, varied proportions, two hands, six pages, 768 sounded pitches, exact ancestry and existing presentation. Complete and inspect each work sequentially, publish the thirty and stop at 320; the former stop at 290 and original 300-work boundary are superseded. Preserve all earlier music and download URLs. Second Studies ends at Op. 400; Third Studies begins at Op. 401.
