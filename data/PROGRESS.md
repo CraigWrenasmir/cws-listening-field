@@ -2,7 +2,11 @@
 
 ## Current commission: Imaginary Ensembles, Op. 291–320
 
-All thirty compositions are complete locally and individually checked. The full site test suite and build pass for 320 works. All 102 new PDF pages have been inspected; both updated download volumes passed byte and page-content checks. The local browser shows all 320 works in the two connected Kinship regions. Public publication and playback verification are in progress. Stop composing at Op. 320. Second Studies continues through Op. 400; Third Studies begins at Op. 401. Earlier release records below are historical.
+Imaginary Ensembles is complete and publicly verified: **320 works**, comprising 200 First Studies and 120 Second Studies, with 319 exact ancestry links and the original three bridges. Op. 291–320 adds 6,697 sounded pitch onsets, 102 visually inspected score pages and 3,471.24 seconds of recordings (including room tails). All thirty works passed score/MIDI timing, engraving, ancestry, pedal, decoded-audio and whole-hand checks. All five playlist routes include every work exactly once, and the full site test suite, build and forte/staff-dynamics regressions pass. The original 290 catalogue entries, decoded runtime entries and all 2,190 baseline asset/download files are unchanged.
+
+Reviewed music source and immutable `imaginary-ensembles`/`volume-14` tags: `2913f129b1c91695a4091fee770feb390f40dfef`. Pages snapshot: `54ad28beee2243c986a4cc6eea8a14349613ae72`. Successful Pages workflow: `35313087181`. The checked publication contains 1,447 files totalling 948,694,107 bytes, within the unchanged 950,000,000-byte guard. All 227 new and preserved external score/audio assets, 16 deployed site/legacy download files and four Release archives were fetched over HTTPS and matched byte for byte. Existing music tags and the Volume 13 tag were not moved; Volume 13 closes at Op. 296 and Volume 14 at Op. 320. Proof: `work/qa/release320-proof.json`.
+
+Real browser checks confirmed all 320 works in both connected Kinship regions, local Op. 316 recording playback and three-page four-voice notation, seeking/highlighting, reset, rotation, and favourite save/reload/remove with the initial state restored. Public Op. 320 loaded all five score pages and played with an active notation highlight, then paused successfully. HTTPS remains enforced. These are technical playback and visual checks, separate from acoustic listening and keyboard approval. Stop at Op. 320; Second Studies continues to Op. 400 and Third Studies starts at Op. 401.
 
 ## Historical commission: Returning Waters
 

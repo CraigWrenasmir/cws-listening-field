@@ -39,4 +39,4 @@ The score presentation and numeric composition stamps remain unchanged. Exact ca
 - Op. 319: Myrtle Belvedere
 - Op. 320: Orchid Confluence
 
-Completion and validation are recorded individually in PROGRESS.md. All thirty works are composed and individually validated, with 102 visually inspected PDF pages. Publication verification is recorded separately.
+Completion and validation are recorded individually in PROGRESS.md. All thirty works are composed and individually validated, with 102 visually inspected PDF pages. All thirty are now publicly verified at listeningfield.wrenasmir.com; the release evidence is recorded in PROGRESS.md and DEPLOYMENT.md.
