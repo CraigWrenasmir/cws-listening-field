@@ -57,6 +57,11 @@ for p in cat:
   asset_origin=f"https://raw.githubusercontent.com/{asset_policy['repository']}/{asset_range['tag']}/"
   for field in ['audio','pdf','midi','xml']:entry[field]=asset_origin+entry[field]
   entry['scores']=[asset_origin+s for s in entry['scores']]
+ # Lossless tuple transport keeps every pitch, voice, ID and timing value while
+ # recovering Pages headroom without changing any existing music asset URL.
+ entry['event_format']='tuple-v1'
+ fields=['id','h','b','d','p','ps','s','e','v']
+ entry['events']=[[e[k] for k in fields if k in e] for e in entry['events']]
  manifest.append(entry)
 (ROOT/'library.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
 index=ROOT/'index.html';html=index.read_text()

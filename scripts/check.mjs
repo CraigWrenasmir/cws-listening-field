@@ -1,9 +1,10 @@
+import {decodeLibrary} from '../src/library-format.js';
 import assert from 'node:assert/strict';
 import {localAssetPath,publicAssetPath} from './asset-paths.mjs';
 import {readFile,stat,readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {publicationFiles,SITE_LIMIT,releaseURL} from './site-distribution.mjs';
-const root=new URL('../',import.meta.url),data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
+const root=new URL('../',import.meta.url),data=decodeLibrary(JSON.parse(await readFile(new URL('library.json',root),'utf8')));
 assert(data.length>=6);assert.equal(new Set(data.map(p=>p.op)).size,data.length);assert.equal(new Set(data.map(p=>p.slug)).size,data.length);
 const series=JSON.parse(await readFile(new URL('data/series.json',root),'utf8'));
 for(const p of data){

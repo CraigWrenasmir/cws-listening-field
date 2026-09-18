@@ -318,6 +318,36 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 288 | Linden Maywalk | 3/4 | 164 | [Score](pieces/CWS_Op_288_Linden_Maywalk/CWS_Op_288_Linden_Maywalk.pdf) | [MP3](pieces/CWS_Op_288_Linden_Maywalk/CWS_Op_288_Linden_Maywalk.mp3) |
 | CWS Op. 289 | Quince Semaphore | 2/4 | 197 | [Score](pieces/CWS_Op_289_Quince_Semaphore/CWS_Op_289_Quince_Semaphore.pdf) | [MP3](pieces/CWS_Op_289_Quince_Semaphore/CWS_Op_289_Quince_Semaphore.mp3) |
 | CWS Op. 290 | Apricot Commons | 6/4 | 385 | [Score](pieces/CWS_Op_290_Apricot_Commons/CWS_Op_290_Apricot_Commons.pdf) | [MP3](pieces/CWS_Op_290_Apricot_Commons/CWS_Op_290_Apricot_Commons.mp3) |
+| CWS Op. 291 | Alder Parlour | 4/4 | 170 | [Score](pieces/CWS_Op_291_Alder_Parlour/CWS_Op_291_Alder_Parlour.pdf) | [MP3](pieces/CWS_Op_291_Alder_Parlour/CWS_Op_291_Alder_Parlour.mp3) |
+| CWS Op. 292 | Lilac Embassy | 6/4 | 186 | [Score](pieces/CWS_Op_292_Lilac_Embassy/CWS_Op_292_Lilac_Embassy.pdf) | [MP3](pieces/CWS_Op_292_Lilac_Embassy/CWS_Op_292_Lilac_Embassy.mp3) |
+| CWS Op. 293 | Reed Colonnade | 3/4 | 162 | [Score](pieces/CWS_Op_293_Reed_Colonnade/CWS_Op_293_Reed_Colonnade.pdf) | [MP3](pieces/CWS_Op_293_Reed_Colonnade/CWS_Op_293_Reed_Colonnade.mp3) |
+| CWS Op. 294 | Willow Consulate | 6/8 | 215 | [Score](pieces/CWS_Op_294_Willow_Consulate/CWS_Op_294_Willow_Consulate.pdf) | [MP3](pieces/CWS_Op_294_Willow_Consulate/CWS_Op_294_Willow_Consulate.mp3) |
+| CWS Op. 295 | Myrtle Rotunda | 5/4 | 163 | [Score](pieces/CWS_Op_295_Myrtle_Rotunda/CWS_Op_295_Myrtle_Rotunda.pdf) | [MP3](pieces/CWS_Op_295_Myrtle_Rotunda/CWS_Op_295_Myrtle_Rotunda.mp3) |
+| CWS Op. 296 | Fern Balcony | 4/4 | 148 | [Score](pieces/CWS_Op_296_Fern_Balcony/CWS_Op_296_Fern_Balcony.pdf) | [MP3](pieces/CWS_Op_296_Fern_Balcony/CWS_Op_296_Fern_Balcony.mp3) |
+| CWS Op. 297 | Birch Salon | 3/2 | 117 | [Score](pieces/CWS_Op_297_Birch_Salon/CWS_Op_297_Birch_Salon.pdf) | [MP3](pieces/CWS_Op_297_Birch_Salon/CWS_Op_297_Birch_Salon.mp3) |
+| CWS Op. 298 | Sedge Cloister | 4/4, 3/4 (changing) | 141 | [Score](pieces/CWS_Op_298_Sedge_Cloister/CWS_Op_298_Sedge_Cloister.pdf) | [MP3](pieces/CWS_Op_298_Sedge_Cloister/CWS_Op_298_Sedge_Cloister.mp3) |
+| CWS Op. 299 | Clover Antechamber | 5/8 | 200 | [Score](pieces/CWS_Op_299_Clover_Antechamber/CWS_Op_299_Clover_Antechamber.pdf) | [MP3](pieces/CWS_Op_299_Clover_Antechamber/CWS_Op_299_Clover_Antechamber.mp3) |
+| CWS Op. 300 | Orchid Assembly | 6/4 | 281 | [Score](pieces/CWS_Op_300_Orchid_Assembly/CWS_Op_300_Orchid_Assembly.pdf) | [MP3](pieces/CWS_Op_300_Orchid_Assembly/CWS_Op_300_Orchid_Assembly.mp3) |
+| CWS Op. 301 | Amber Sidewalk | 4/4 | 242 | [Score](pieces/CWS_Op_301_Amber_Sidewalk/CWS_Op_301_Amber_Sidewalk.pdf) | [MP3](pieces/CWS_Op_301_Amber_Sidewalk/CWS_Op_301_Amber_Sidewalk.mp3) |
+| CWS Op. 302 | Juniper Wharf | 3/4 | 191 | [Score](pieces/CWS_Op_302_Juniper_Wharf/CWS_Op_302_Juniper_Wharf.pdf) | [MP3](pieces/CWS_Op_302_Juniper_Wharf/CWS_Op_302_Juniper_Wharf.mp3) |
+| CWS Op. 303 | Copper Fen | 5/4 | 233 | [Score](pieces/CWS_Op_303_Copper_Fen/CWS_Op_303_Copper_Fen.pdf) | [MP3](pieces/CWS_Op_303_Copper_Fen/CWS_Op_303_Copper_Fen.mp3) |
+| CWS Op. 304 | Moss Slipway | 4/4 | 166 | [Score](pieces/CWS_Op_304_Moss_Slipway/CWS_Op_304_Moss_Slipway.pdf) | [MP3](pieces/CWS_Op_304_Moss_Slipway/CWS_Op_304_Moss_Slipway.mp3) |
+| CWS Op. 305 | Hazel Switchyard | 3/4 | 199 | [Score](pieces/CWS_Op_305_Hazel_Switchyard/CWS_Op_305_Hazel_Switchyard.pdf) | [MP3](pieces/CWS_Op_305_Hazel_Switchyard/CWS_Op_305_Hazel_Switchyard.mp3) |
+| CWS Op. 306 | Iris Backwater | 6/4 | 186 | [Score](pieces/CWS_Op_306_Iris_Backwater/CWS_Op_306_Iris_Backwater.pdf) | [MP3](pieces/CWS_Op_306_Iris_Backwater/CWS_Op_306_Iris_Backwater.mp3) |
+| CWS Op. 307 | Linden Signal | 4/4 | 213 | [Score](pieces/CWS_Op_307_Linden_Signal/CWS_Op_307_Linden_Signal.pdf) | [MP3](pieces/CWS_Op_307_Linden_Signal/CWS_Op_307_Linden_Signal.mp3) |
+| CWS Op. 308 | Reed Atrium | 4/4, 3/4, 5/4 (changing) | 184 | [Score](pieces/CWS_Op_308_Reed_Atrium/CWS_Op_308_Reed_Atrium.pdf) | [MP3](pieces/CWS_Op_308_Reed_Atrium/CWS_Op_308_Reed_Atrium.mp3) |
+| CWS Op. 309 | Saffron Overpass | 7/8 | 232 | [Score](pieces/CWS_Op_309_Saffron_Overpass/CWS_Op_309_Saffron_Overpass.pdf) | [MP3](pieces/CWS_Op_309_Saffron_Overpass/CWS_Op_309_Saffron_Overpass.mp3) |
+| CWS Op. 310 | Velvet Passage | 4/4 | 257 | [Score](pieces/CWS_Op_310_Velvet_Passage/CWS_Op_310_Velvet_Passage.pdf) | [MP3](pieces/CWS_Op_310_Velvet_Passage/CWS_Op_310_Velvet_Passage.mp3) |
+| CWS Op. 311 | Elm Proscenium | 6/4 | 330 | [Score](pieces/CWS_Op_311_Elm_Proscenium/CWS_Op_311_Elm_Proscenium.pdf) | [MP3](pieces/CWS_Op_311_Elm_Proscenium/CWS_Op_311_Elm_Proscenium.mp3) |
+| CWS Op. 312 | Willow Amphitheatre | 3/4 | 257 | [Score](pieces/CWS_Op_312_Willow_Amphitheatre/CWS_Op_312_Willow_Amphitheatre.pdf) | [MP3](pieces/CWS_Op_312_Willow_Amphitheatre/CWS_Op_312_Willow_Amphitheatre.mp3) |
+| CWS Op. 313 | Alder Pavilion | 6/4 | 311 | [Score](pieces/CWS_Op_313_Alder_Pavilion/CWS_Op_313_Alder_Pavilion.pdf) | [MP3](pieces/CWS_Op_313_Alder_Pavilion/CWS_Op_313_Alder_Pavilion.mp3) |
+| CWS Op. 314 | Bracken Terrace | 9/8 | 280 | [Score](pieces/CWS_Op_314_Bracken_Terrace/CWS_Op_314_Bracken_Terrace.pdf) | [MP3](pieces/CWS_Op_314_Bracken_Terrace/CWS_Op_314_Bracken_Terrace.mp3) |
+| CWS Op. 315 | Lilac Causeway | 3/2, 5/4 (changing) | 213 | [Score](pieces/CWS_Op_315_Lilac_Causeway/CWS_Op_315_Lilac_Causeway.pdf) | [MP3](pieces/CWS_Op_315_Lilac_Causeway/CWS_Op_315_Lilac_Causeway.mp3) |
+| CWS Op. 316 | Cedar Forum | 4/4 | 256 | [Score](pieces/CWS_Op_316_Cedar_Forum/CWS_Op_316_Cedar_Forum.pdf) | [MP3](pieces/CWS_Op_316_Cedar_Forum/CWS_Op_316_Cedar_Forum.mp3) |
+| CWS Op. 317 | Sorrel Theatre | 4/4 | 311 | [Score](pieces/CWS_Op_317_Sorrel_Theatre/CWS_Op_317_Sorrel_Theatre.pdf) | [MP3](pieces/CWS_Op_317_Sorrel_Theatre/CWS_Op_317_Sorrel_Theatre.mp3) |
+| CWS Op. 318 | Birch Observatory | 6/4 | 162 | [Score](pieces/CWS_Op_318_Birch_Observatory/CWS_Op_318_Birch_Observatory.pdf) | [MP3](pieces/CWS_Op_318_Birch_Observatory/CWS_Op_318_Birch_Observatory.mp3) |
+| CWS Op. 319 | Myrtle Belvedere | 5/4 | 243 | [Score](pieces/CWS_Op_319_Myrtle_Belvedere/CWS_Op_319_Myrtle_Belvedere.pdf) | [MP3](pieces/CWS_Op_319_Myrtle_Belvedere/CWS_Op_319_Myrtle_Belvedere.mp3) |
+| CWS Op. 320 | Orchid Confluence | 6/4 | 448 | [Score](pieces/CWS_Op_320_Orchid_Confluence/CWS_Op_320_Orchid_Confluence.pdf) | [MP3](pieces/CWS_Op_320_Orchid_Confluence/CWS_Op_320_Orchid_Confluence.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

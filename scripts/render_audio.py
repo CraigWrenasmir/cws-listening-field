@@ -62,7 +62,7 @@ for p in cat:
             portion=max(0,min(beat,stop)-mark['beat'])
             total+=portion*mark['microseconds']/1_000_000
         return total
-    velocities={'pp':43,'p':54,'mp':62,'mf':70}
+    velocities={'pp':43,'p':54,'mp':62,'mf':70,'f':78}
     sections={int(k):v for k,v in p['sections'].items()}
     for hi,hand in enumerate(['rh','lh']):
         hand_sections={int(k):v for k,v in p['lower_sections'].items()} if hand=='lh' and p.get('lower_sections') else sections

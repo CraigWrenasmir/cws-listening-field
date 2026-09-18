@@ -1,9 +1,10 @@
+import {decodeLibrary} from '../src/library-format.js';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {parseHTML} from 'linkedom';
 import {layoutKinship} from '../src/kinship-layout.js';
 import {mountKinship,startKinship} from '../src/kinship.js';
-const root=new URL('../',import.meta.url),data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
+const root=new URL('../',import.meta.url),data=decodeLibrary(JSON.parse(await readFile(new URL('library.json',root),'utf8')));
 const html=await readFile(new URL('kinship.html',root),'utf8'),layout=layoutKinship(data);
 assert.deepEqual(layout.nodes.map(p=>p.op),data.map(p=>p.op));
 assert.deepEqual(layout.links,data.filter(p=>p.parent!=null).map(p=>({source:p.parent,target:p.op})), 'Only documented parent relationships may be drawn');

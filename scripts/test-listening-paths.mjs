@@ -1,3 +1,4 @@
+import {decodeLibrary} from '../src/library-format.js';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {buildListeningPaths} from '../src/listening-paths.js';
@@ -18,7 +19,7 @@ assert.throws(()=>buildListeningPaths([piece(1,null),piece(1,null)]),/Duplicate/
 assert.throws(()=>buildListeningPaths([piece(1,2)]),/Missing/);
 assert.throws(()=>buildListeningPaths([piece(1,2),piece(2,1)]),/Cyclic/);
 
-const data=JSON.parse(await readFile(new URL('../library.json',import.meta.url),'utf8'));
+const data=decodeLibrary(JSON.parse(await readFile(new URL('../library.json',import.meta.url),'utf8')));
 const routes=buildListeningPaths(data),expected=data.map(p=>p.op).sort((a,b)=>a-b);
 for(const route of routes){
  assert.deepEqual(route.order.map(i=>data[i].op).sort((a,b)=>a-b),expected,route.title+' must include every work once');

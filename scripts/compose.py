@@ -224,7 +224,7 @@ def make_score(p):
     lower_sections=p.get('lower_sections',{})
     if lower_sections:
         assert 1 in lower_sections,('Lower staff dynamics must begin at bar 1',p['op'])
-        assert all(isinstance(k,int) and 1<=k<=len(bar_lengths) and v in ('pp','p','mp','mf') for k,v in lower_sections.items()),('Invalid lower staff dynamics',p['op'])
+        assert all(isinstance(k,int) and 1<=k<=len(bar_lengths) and v in ('pp','p','mp','mf','f') for k,v in lower_sections.items()),('Invalid lower staff dynamics',p['op'])
     for voice,bars in p.get('hidden_voice_rests',{}).items():
         assert voice in ('inner','tenor') and len(bars)==len(set(bars))
         source,hand=('rh_inner','rh') if voice=='inner' else ('lh_upper','lh')

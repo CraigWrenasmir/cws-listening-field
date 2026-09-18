@@ -1,3 +1,4 @@
+import {decodeLibrary} from '../src/library-format.js';
 import {isExternalAsset,localAssetPath} from './asset-paths.mjs';
 import assert from 'node:assert/strict';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
@@ -7,7 +8,7 @@ import {createFavourites,updateLeaf,mountFavourites} from '../src/favourites.js'
 import {buildListeningPaths} from '../src/listening-paths.js';
 const root=new URL('../',import.meta.url);
 const html=await readFile(new URL('index.html',root),'utf8'),source=await readFile(new URL('src/app.js',root),'utf8');
-const data=JSON.parse(await readFile(new URL('library.json',root),'utf8'));
+const data=decodeLibrary(JSON.parse(await readFile(new URL('library.json',root),'utf8')));
 const {window,document}=parseHTML(html),audio=document.querySelector('#lf-audio'),canvas=document.querySelector('#lf-canvas');
 const errors=[],frames=new Map();let nextFrame=0,width=1024,time=0,paused=true,src='',duration=0,ended=false,rejectPlay=false,playGate=null;
 let drawings=[],path='',styleStack=[];
@@ -29,10 +30,10 @@ window.scrollTo=()=>{};window.HTMLElement.prototype.scrollIntoView=()=>{};
 const colours={'--lf-ink':'#213b3c','--lf-lower':'#75898b','--lf-copper':'#965432','--lf-tenor':'#526e58','--lf-paper':'#f1f2ed'};
 let observer;
 class ResizeObserver{constructor(callback){this.callback=callback;observer=this;}observe(){queueMicrotask(()=>this.callback());}}
-const sandbox={document,window,DOMParser,location,history,ResizeObserver,devicePixelRatio:1,console:{error:e=>errors.push(e.message)},matchMedia:()=>({matches:true,addEventListener(){}}),getComputedStyle:el=>({color:el.style.color,getPropertyValue:key=>colours[key]}),requestAnimationFrame:fn=>{frames.set(++nextFrame,fn);return nextFrame;},fetch:async url=>{try{const body=await readFile(new URL(isExternalAsset(url)?localAssetPath(url):url,root),'utf8');return {ok:true,json:async()=>JSON.parse(body),text:async()=>body};}catch{return {ok:false};}}};
+const sandbox={decodeLibrary,document,window,DOMParser,location,history,ResizeObserver,devicePixelRatio:1,console:{error:e=>errors.push(e.message)},matchMedia:()=>({matches:true,addEventListener(){}}),getComputedStyle:el=>({color:el.style.color,getPropertyValue:key=>colours[key]}),requestAnimationFrame:fn=>{frames.set(++nextFrame,fn);return nextFrame;},fetch:async url=>{try{const body=await readFile(new URL(isExternalAsset(url)?localAssetPath(url):url,root),'utf8');return {ok:true,json:async()=>JSON.parse(body),text:async()=>body};}catch{return {ok:false};}}};
 sandbox.buildListeningPaths=buildListeningPaths;Object.assign(sandbox,{createFavourites,updateLeaf,mountFavourites});
 const favouritesDisk=new Map();Object.defineProperty(window,'localStorage',{configurable:true,value:{getItem:key=>favouritesDisk.get(key)??null,setItem:(key,value)=>favouritesDisk.set(key,value)}});
-vm.createContext(sandbox);vm.runInContext(source.replace("import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';",'').replace("import {buildListeningPaths} from './listening-paths.js';",''),sandbox);
+vm.createContext(sandbox);vm.runInContext(source.replace("import {decodeLibrary} from './library-format.js';",'').replace("import {createFavourites,updateLeaf,mountFavourites} from './favourites.js?v=1';",'').replace("import {buildListeningPaths} from './listening-paths.js';",''),sandbox);
 const settle=async()=>{for(let i=0;i<8;i++)await new Promise(resolve=>setImmediate(resolve));};
 const until=async condition=>{for(let i=0;i<100;i++){if(condition())return;await new Promise(resolve=>setTimeout(resolve,10));}throw new Error('Timed out waiting for async UI');};
 const tick=()=>{const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn());};
