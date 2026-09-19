@@ -131,3 +131,9 @@ Linden Lucency, Pear Parterre, Aster Camber, Quince Skylane, Hazel Palisade, Dog
 Velvet Clearing closes with an upper song finishing before a bass-only answer and a plain F–A third. The actual ancestry is 2 → 200 → 201 → 400, preserving all three interseries bridges. All score/MIDI, ancestry, pedal, held-hand, shared-key/rest and decoded-audio checks pass; all final score pages have been visually inspected. Independent explicit assertions also verify the closing chapter's transformation claims. These checks remain separate from acoustic listening and keyboard approval.
 
 Further Weather is complete locally: seventy individually authored and sequentially checked works, Op. 331–400, with 300 score pages, 15,381 sounded pitch onsets and 9,205.07 seconds of recordings. First Studies remains Op. 1–200; Second Studies is now complete at Op. 201–400. This authorised batch stops at 400. No Op. 401 has been composed. Final chapter publication and closed-volume verification follow.
+
+## Further Weather complete
+
+All seventy works are publicly verified, Op. 331–400. Returning Light was published from `f74144ec97d3400536fd12c09f5e34f12ce39f08`; workflow `35459664231` succeeded. The final HTTPS check matched 96 external assets, 16 site/legacy files and all 8 Release archives. Kinship and all five listening routes cover 400 works, split into two complete 200-work regions. All eighteen download volumes are closed, with prior editions preserved. Real browser playback and notation checks passed for the final chapter, including the bass-only ending of Velvet Clearing. Detailed evidence is in data/PROGRESS.md and DEPLOYMENT.md.
+
+Composition, validation, packaging and publication of this authorised batch are finished. Listening and keyboard feedback remain Craig’s separate artistic assessment. Stop at Op. 400; do not begin Third Studies without later authorisation.
