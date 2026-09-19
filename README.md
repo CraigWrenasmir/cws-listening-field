@@ -358,6 +358,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 328 | Reed Noctilucence | 5/4 | 239 | [Score](pieces/CWS_Op_328_Reed_Noctilucence/CWS_Op_328_Reed_Noctilucence.pdf) | [MP3](pieces/CWS_Op_328_Reed_Noctilucence/CWS_Op_328_Reed_Noctilucence.mp3) |
 | CWS Op. 329 | Alder Remanence | 12/8 | 248 | [Score](pieces/CWS_Op_329_Alder_Remanence/CWS_Op_329_Alder_Remanence.pdf) | [MP3](pieces/CWS_Op_329_Alder_Remanence/CWS_Op_329_Alder_Remanence.mp3) |
 | CWS Op. 330 | Orchid Reverie | 4/4, 6/4 (changing) | 340 | [Score](pieces/CWS_Op_330_Orchid_Reverie/CWS_Op_330_Orchid_Reverie.pdf) | [MP3](pieces/CWS_Op_330_Orchid_Reverie/CWS_Op_330_Orchid_Reverie.mp3) |
+| CWS Op. 331 | Willow Hesitation | 4/4 | 219 | [Score](pieces/CWS_Op_331_Willow_Hesitation/CWS_Op_331_Willow_Hesitation.pdf) | [MP3](pieces/CWS_Op_331_Willow_Hesitation/CWS_Op_331_Willow_Hesitation.mp3) |
+| CWS Op. 332 | Clover Pendulum | 6/4 | 173 | [Score](pieces/CWS_Op_332_Clover_Pendulum/CWS_Op_332_Clover_Pendulum.pdf) | [MP3](pieces/CWS_Op_332_Clover_Pendulum/CWS_Op_332_Clover_Pendulum.mp3) |
+| CWS Op. 333 | Sedge Undercurrent | 5/4 | 174 | [Score](pieces/CWS_Op_333_Sedge_Undercurrent/CWS_Op_333_Sedge_Undercurrent.pdf) | [MP3](pieces/CWS_Op_333_Sedge_Undercurrent/CWS_Op_333_Sedge_Undercurrent.mp3) |
+| CWS Op. 334 | Iris Driftway | 9/8 | 187 | [Score](pieces/CWS_Op_334_Iris_Driftway/CWS_Op_334_Iris_Driftway.pdf) | [MP3](pieces/CWS_Op_334_Iris_Driftway/CWS_Op_334_Iris_Driftway.mp3) |
+| CWS Op. 335 | Alder Sway | 3/4, 2/4, 4/4 (changing) | 173 | [Score](pieces/CWS_Op_335_Alder_Sway/CWS_Op_335_Alder_Sway.pdf) | [MP3](pieces/CWS_Op_335_Alder_Sway/CWS_Op_335_Alder_Sway.mp3) |
+| CWS Op. 336 | Myrtle Interval | 4/4 | 174 | [Score](pieces/CWS_Op_336_Myrtle_Interval/CWS_Op_336_Myrtle_Interval.pdf) | [MP3](pieces/CWS_Op_336_Myrtle_Interval/CWS_Op_336_Myrtle_Interval.mp3) |
+| CWS Op. 337 | Reed Tidelock | 7/8, 6/8 (changing) | 232 | [Score](pieces/CWS_Op_337_Reed_Tidelock/CWS_Op_337_Reed_Tidelock.pdf) | [MP3](pieces/CWS_Op_337_Reed_Tidelock/CWS_Op_337_Reed_Tidelock.mp3) |
+| CWS Op. 338 | Orchid Suspension | 6/4 | 188 | [Score](pieces/CWS_Op_338_Orchid_Suspension/CWS_Op_338_Orchid_Suspension.pdf) | [MP3](pieces/CWS_Op_338_Orchid_Suspension/CWS_Op_338_Orchid_Suspension.mp3) |
+| CWS Op. 339 | Birch Crosscurrent | 4/4 | 234 | [Score](pieces/CWS_Op_339_Birch_Crosscurrent/CWS_Op_339_Birch_Crosscurrent.pdf) | [MP3](pieces/CWS_Op_339_Birch_Crosscurrent/CWS_Op_339_Birch_Crosscurrent.mp3) |
+| CWS Op. 340 | Velvet Isobar | 4/4 | 280 | [Score](pieces/CWS_Op_340_Velvet_Isobar/CWS_Op_340_Velvet_Isobar.pdf) | [MP3](pieces/CWS_Op_340_Velvet_Isobar/CWS_Op_340_Velvet_Isobar.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
