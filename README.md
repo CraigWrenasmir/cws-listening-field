@@ -378,6 +378,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 348 | Iris Convergence | 5/4 | 209 | [Score](pieces/CWS_Op_348_Iris_Convergence/CWS_Op_348_Iris_Convergence.pdf) | [MP3](pieces/CWS_Op_348_Iris_Convergence/CWS_Op_348_Iris_Convergence.mp3) |
 | CWS Op. 349 | Sedge Reconciliation | 7/4 | 168 | [Score](pieces/CWS_Op_349_Sedge_Reconciliation/CWS_Op_349_Sedge_Reconciliation.pdf) | [MP3](pieces/CWS_Op_349_Sedge_Reconciliation/CWS_Op_349_Sedge_Reconciliation.mp3) |
 | CWS Op. 350 | Velvet Distance | 3/4 | 214 | [Score](pieces/CWS_Op_350_Velvet_Distance/CWS_Op_350_Velvet_Distance.pdf) | [MP3](pieces/CWS_Op_350_Velvet_Distance/CWS_Op_350_Velvet_Distance.mp3) |
+| CWS Op. 351 | Quince Tandem | 3/4 | 170 | [Score](pieces/CWS_Op_351_Quince_Tandem/CWS_Op_351_Quince_Tandem.pdf) | [MP3](pieces/CWS_Op_351_Quince_Tandem/CWS_Op_351_Quince_Tandem.mp3) |
+| CWS Op. 352 | Larch Crossroads | 6/4 | 109 | [Score](pieces/CWS_Op_352_Larch_Crossroads/CWS_Op_352_Larch_Crossroads.pdf) | [MP3](pieces/CWS_Op_352_Larch_Crossroads/CWS_Op_352_Larch_Crossroads.mp3) |
+| CWS Op. 353 | Briar Braid | 3/4, 6/8 (changing) | 165 | [Score](pieces/CWS_Op_353_Briar_Braid/CWS_Op_353_Briar_Braid.pdf) | [MP3](pieces/CWS_Op_353_Briar_Braid/CWS_Op_353_Briar_Braid.mp3) |
+| CWS Op. 354 | Celandine Interleaf | 5/4 | 180 | [Score](pieces/CWS_Op_354_Celandine_Interleaf/CWS_Op_354_Celandine_Interleaf.pdf) | [MP3](pieces/CWS_Op_354_Celandine_Interleaf/CWS_Op_354_Celandine_Interleaf.mp3) |
+| CWS Op. 355 | Bluebell Commonage | 9/8 | 178 | [Score](pieces/CWS_Op_355_Bluebell_Commonage/CWS_Op_355_Bluebell_Commonage.pdf) | [MP3](pieces/CWS_Op_355_Bluebell_Commonage/CWS_Op_355_Bluebell_Commonage.mp3) |
+| CWS Op. 356 | Ash Colloquy | 2/2 | 195 | [Score](pieces/CWS_Op_356_Ash_Colloquy/CWS_Op_356_Ash_Colloquy.pdf) | [MP3](pieces/CWS_Op_356_Ash_Colloquy/CWS_Op_356_Ash_Colloquy.mp3) |
+| CWS Op. 357 | Dogwood Accord | 3/2 | 110 | [Score](pieces/CWS_Op_357_Dogwood_Accord/CWS_Op_357_Dogwood_Accord.pdf) | [MP3](pieces/CWS_Op_357_Dogwood_Accord/CWS_Op_357_Dogwood_Accord.mp3) |
+| CWS Op. 358 | Teasel Exchange | 7/8 | 162 | [Score](pieces/CWS_Op_358_Teasel_Exchange/CWS_Op_358_Teasel_Exchange.pdf) | [MP3](pieces/CWS_Op_358_Teasel_Exchange/CWS_Op_358_Teasel_Exchange.mp3) |
+| CWS Op. 359 | Lupin Rendezvous | 4/4 | 188 | [Score](pieces/CWS_Op_359_Lupin_Rendezvous/CWS_Op_359_Lupin_Rendezvous.pdf) | [MP3](pieces/CWS_Op_359_Lupin_Rendezvous/CWS_Op_359_Lupin_Rendezvous.mp3) |
+| CWS Op. 360 | Bilberry Chorus | 4/4, 6/4 (changing) | 253 | [Score](pieces/CWS_Op_360_Bilberry_Chorus/CWS_Op_360_Bilberry_Chorus.pdf) | [MP3](pieces/CWS_Op_360_Bilberry_Chorus/CWS_Op_360_Bilberry_Chorus.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

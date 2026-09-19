@@ -66,3 +66,10 @@ Before expanding each score, identify the exact subject statements and test the 
 ## Distant Rooms local completion
 
 Op. 341–350 is composed and checked, with 46 visually inspected pages, 2,361 sounded pitch onsets and 1,524.63 seconds of recordings. The chapter is packaged into the completed Volume 15 (Op. 321–344) and opening Volume 16 (Op. 345–350). Local Kinship contains all 350 works and 349 ancestry links; publication is verified at 350 works, including all 95 new and preserved external assets and six Release archives. See the release record in data/PROGRESS.md. Interwoven Songs remains the next authorised chapter.
+
+
+## Interwoven Songs local completion: Op. 351–360
+
+The ten works are composed and individually checked: Quince Tandem, Larch Crossroads, Briar Braid, Celandine Interleaf, Bluebell Commonage, Ash Colloquy, Dogwood Accord, Teasel Exchange, Lupin Rendezvous and Bilberry Chorus. They contain 42 visually inspected score pages, 1,710 sounded pitch onsets and 1,301.73 seconds of recordings. Exact subject-window checks substantiate the octave exchanges, augmentation, metrical combinations, inversion, three-subject assembly, complete stretto entries, suspensions, hocket, retrograde and closing fugato. Score/MIDI, ancestry, pedal, decoded MP3, held-hand reach and shared-key/rest checks pass.
+
+The authored forms refine the earlier proposals: Dogwood Accord puts the suspensions in the upper subject against a mobile bass; Teasel Exchange preserves pitch order while extending selected durations; Lupin Rendezvous gives the exact retrograde a newly written bass and brings its original companion back beneath the final original theme. Bilberry Chorus documents one 17-semitone right-hand relocation following a half note; the rapid-leap limit stays at nine semitones. These are structural and visual checks, separate from acoustic listening and keyboard approval. Publication checks follow; continue through the authorised Op. 400.
