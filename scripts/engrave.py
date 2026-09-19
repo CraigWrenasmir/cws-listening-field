@@ -6,6 +6,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import A4
 from pypdf import PdfReader, PdfWriter
+from tempo_engraving import tempo_mark_plan, imported_tempo_ids, render_pivot_tempo_glyphs
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work';QA=WORK/'qa';QA.mkdir(exist_ok=True,parents=True)
 cat=json.loads((ROOT/'data/catalog.json').read_text())
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
@@ -21,6 +22,9 @@ for p in cat:
     if not tk.loadFile(str(d/(stem+'.musicxml'))): raise RuntimeError('Load failed')
     print(stem,tk.getPageCount(),'pages')
     writer=PdfWriter()
+    pivot_marks=tempo_mark_plan(p)
+    pivot_ids=imported_tempo_ids(tk.getMEI(),p) if pivot_marks else None
+    rendered_pivot_marks=[]
     for i in range(1,tk.getPageCount()+1):
         svg=tk.renderToSVG(i)
         # Flatten the nested SVG viewport for Cairo's vector PDF conversion.
@@ -38,20 +42,23 @@ for p in cat:
             for group in root.findall('.//'+ns+'g[@class="pedal"]'):
                 if len(group):group.set('transform',f'translate(0,{pedal_shift})')
         # Cairo does not use embedded webfonts: make the metronome glyph a path.
-        for tg in root.findall('.//'+ns+'g[@class="tempo"]'):
-            txt=tg.find(ns+'text')
-            x,y=txt.get('x'),txt.get('y')
-            for child in list(tg):tg.remove(child)
-            mg=ET.SubElement(tg,ns+'g',transform=f'translate({x},{y})')
-            glyph=ET.parse(Path(verovio.__file__).parent/'data/Leipzig/ECA5.xml').getroot()
-            glyph.tag=ns+'g';glyph.set('transform','scale(0.72)')
-            for el in glyph:el.tag=ns+'path'
-            mg.append(glyph)
-            compound=p['meter'] in ('6/8','9/8','12/8')
-            if compound:ET.SubElement(mg,ns+'circle',cx='305',cy='-100',r='34',fill='black')
-            bpm=int(p['bpm']/1.5) if compound else p['bpm']
-            tt=ET.SubElement(mg,ns+'text',x='410' if compound else '300',y='0',attrib={'font-size':'405px','font-family':'Times, serif'})
-            tt.text=f'= {bpm}'
+        if pivot_marks:
+            rendered_pivot_marks.extend(render_pivot_tempo_glyphs(root,p,Path(verovio.__file__).parent/'data/Leipzig/ECA5.xml',pivot_ids))
+        else:
+            for tg in root.findall('.//'+ns+'g[@class="tempo"]'):
+                txt=tg.find(ns+'text')
+                x,y=txt.get('x'),txt.get('y')
+                for child in list(tg):tg.remove(child)
+                mg=ET.SubElement(tg,ns+'g',transform=f'translate({x},{y})')
+                glyph=ET.parse(Path(verovio.__file__).parent/'data/Leipzig/ECA5.xml').getroot()
+                glyph.tag=ns+'g';glyph.set('transform','scale(0.72)')
+                for el in glyph:el.tag=ns+'path'
+                mg.append(glyph)
+                compound=p['meter'] in ('6/8','9/8','12/8')
+                if compound:ET.SubElement(mg,ns+'circle',cx='305',cy='-100',r='34',fill='black')
+                bpm=int(p['bpm']/1.5) if compound else p['bpm']
+                tt=ET.SubElement(mg,ns+'text',x='410' if compound else '300',y='0',attrib={'font-size':'405px','font-family':'Times, serif'})
+                tt.text=f'= {bpm}'
         svg=ET.tostring(root,encoding='unicode')
         (d/f'{stem}_page_{i}.svg').write_text(svg)
         # The engraved body is vector-based and placed below a separate typographic header.
@@ -73,6 +80,8 @@ for p in cat:
         # 708-point notation area at y=28; its top is 736, immediately under rule.
         page.merge_translated_page(musicpage,0,28)
         writer.add_page(page)
+    if pivot_marks:
+        assert sorted(rendered_pivot_marks)==sorted(mark['id'] for mark in pivot_marks.values()),('Rendered tempo mark coverage',p['op'],rendered_pivot_marks)
     with (d/(stem+'.pdf')).open('wb') as f:writer.write(f)
     # A reflow can reduce the page count. Remove only obsolete generated
     # numbered SVG pages, after the replacement score has been written.

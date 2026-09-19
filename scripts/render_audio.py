@@ -4,6 +4,7 @@ import mido
 from bisect import bisect_right
 from meter_plan import bar_plan
 from series_rules import series_for
+from tempo_pivots import normalise_tempo_pivots, performance_tempo_at
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text())
@@ -17,6 +18,7 @@ for p in cat:
     d=OUT/p['folder'];stem=p['stem']
     metres,bar_lengths,bar_starts,beats=bar_plan(p);bpb=bar_lengths[0]
     performance=p.get('performance',{})
+    pivots=normalise_tempo_pivots(p)
     mid=mido.MidiFile(type=1,ticks_per_beat=TPB)
     conductor=mido.MidiTrack();mid.tracks.append(conductor)
     conductor.append(mido.MetaMessage('track_name',name=f'CWS Op. {p["op"]}: {p["title"]}',time=0))
@@ -47,7 +49,7 @@ for p in cat:
             numerator,denominator=map(int,signature.split('/'))
             conductor_events.append((round(bar_starts[i]*TPB),0,mido.MetaMessage('time_signature',numerator=numerator,denominator=denominator)))
     for beat in positions:
-        bpm=float(np.interp(beat,bar_starts,bar_bpms)) if performance else bar_bpms[bisect_right(bar_starts,beat)-1]
+        bpm=performance_tempo_at(beat,bar_starts,bar_bpms,pivots) if performance else bar_bpms[bisect_right(bar_starts,beat)-1]
         microseconds=mido.bpm2tempo(bpm);tick=round(float(beat)*TPB)
         conductor_events.append((tick,1,mido.MetaMessage('set_tempo',tempo=microseconds)))
         tempo_map.append(dict(beat=float(beat),microseconds=microseconds))

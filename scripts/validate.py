@@ -6,6 +6,7 @@ from music21 import converter, note, chord
 from music21.pitch import Pitch
 from pypdf import PdfReader
 from meter_plan import bar_plan
+from tempo_pivots import validate_tempo_pivots
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text());report=[]
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
@@ -42,6 +43,7 @@ for p in cat:
  assert collections.Counter(actual)==collections.Counter(expected),('MusicXML pitch/onset mismatch',stem)
  assert score_count==p['note_onsets']<=rules['note_limit']
  mid=mido.MidiFile(d/(stem+'.mid'));midi_notes=[];midi_metres=[]
+ validate_tempo_pivots(p,mid,r)
  for tr in mid.tracks:
   tick=0;active={}
   for msg in tr:

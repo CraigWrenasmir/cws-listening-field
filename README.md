@@ -398,6 +398,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 368 | Juniper Undulation | 4/4 | 295 | [Score](pieces/CWS_Op_368_Juniper_Undulation/CWS_Op_368_Juniper_Undulation.pdf) | [MP3](pieces/CWS_Op_368_Juniper_Undulation/CWS_Op_368_Juniper_Undulation.mp3) |
 | CWS Op. 369 | Wisteria Touchstone | 5/4 | 202 | [Score](pieces/CWS_Op_369_Wisteria_Touchstone/CWS_Op_369_Wisteria_Touchstone.pdf) | [MP3](pieces/CWS_Op_369_Wisteria_Touchstone/CWS_Op_369_Wisteria_Touchstone.mp3) |
 | CWS Op. 370 | Acacia Soliloquy | 4/4 | 151 | [Score](pieces/CWS_Op_370_Acacia_Soliloquy/CWS_Op_370_Acacia_Soliloquy.pdf) | [MP3](pieces/CWS_Op_370_Acacia_Soliloquy/CWS_Op_370_Acacia_Soliloquy.mp3) |
+| CWS Op. 371 | Hawthorn Vacancy | 3/4 | 222 | [Score](pieces/CWS_Op_371_Hawthorn_Vacancy/CWS_Op_371_Hawthorn_Vacancy.pdf) | [MP3](pieces/CWS_Op_371_Hawthorn_Vacancy/CWS_Op_371_Hawthorn_Vacancy.mp3) |
+| CWS Op. 372 | Poppy Reversal | 3/4 | 235 | [Score](pieces/CWS_Op_372_Poppy_Reversal/CWS_Op_372_Poppy_Reversal.pdf) | [MP3](pieces/CWS_Op_372_Poppy_Reversal/CWS_Op_372_Poppy_Reversal.mp3) |
+| CWS Op. 373 | Foxglove Concourse | 3/4 | 212 | [Score](pieces/CWS_Op_373_Foxglove_Concourse/CWS_Op_373_Foxglove_Concourse.pdf) | [MP3](pieces/CWS_Op_373_Foxglove_Concourse/CWS_Op_373_Foxglove_Concourse.mp3) |
+| CWS Op. 374 | Rowan Underpass | 3/4 | 214 | [Score](pieces/CWS_Op_374_Rowan_Underpass/CWS_Op_374_Rowan_Underpass.pdf) | [MP3](pieces/CWS_Op_374_Rowan_Underpass/CWS_Op_374_Rowan_Underpass.mp3) |
+| CWS Op. 375 | Gorse Pavement | 6/8, 4/4 (changing) | 248 | [Score](pieces/CWS_Op_375_Gorse_Pavement/CWS_Op_375_Gorse_Pavement.pdf) | [MP3](pieces/CWS_Op_375_Gorse_Pavement/CWS_Op_375_Gorse_Pavement.mp3) |
+| CWS Op. 376 | Hazel Transfer | 6/8, 3/4 (changing) | 316 | [Score](pieces/CWS_Op_376_Hazel_Transfer/CWS_Op_376_Hazel_Transfer.pdf) | [MP3](pieces/CWS_Op_376_Hazel_Transfer/CWS_Op_376_Hazel_Transfer.mp3) |
+| CWS Op. 377 | Celandine Forecourt | 3/4 | 201 | [Score](pieces/CWS_Op_377_Celandine_Forecourt/CWS_Op_377_Celandine_Forecourt.pdf) | [MP3](pieces/CWS_Op_377_Celandine_Forecourt/CWS_Op_377_Celandine_Forecourt.mp3) |
+| CWS Op. 378 | Bracken Cutaway | 3/4 | 189 | [Score](pieces/CWS_Op_378_Bracken_Cutaway/CWS_Op_378_Bracken_Cutaway.pdf) | [MP3](pieces/CWS_Op_378_Bracken_Cutaway/CWS_Op_378_Bracken_Cutaway.mp3) |
+| CWS Op. 379 | Dogrose Margins | 4/4, 5/4, 7/4, 3/2, 3/4 (changing) | 472 | [Score](pieces/CWS_Op_379_Dogrose_Margins/CWS_Op_379_Dogrose_Margins.pdf) | [MP3](pieces/CWS_Op_379_Dogrose_Margins/CWS_Op_379_Dogrose_Margins.mp3) |
+| CWS Op. 380 | Thistle Junction | 3/4, 5/8, 4/4, 11/8 (changing) | 266 | [Score](pieces/CWS_Op_380_Thistle_Junction/CWS_Op_380_Thistle_Junction.pdf) | [MP3](pieces/CWS_Op_380_Thistle_Junction/CWS_Op_380_Thistle_Junction.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

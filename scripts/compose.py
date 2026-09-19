@@ -6,6 +6,7 @@ from meter_plan import bar_plan
 from tuplet_engraving import apply_tuplet_spans
 from beam_engraving import apply_beam_spans
 from slur_engraving import normalise_slur_numbers
+from tempo_engraving import tempo_mark_plan, assign_tempo_direction_ids
 import json, math, argparse, xml.etree.ElementTree as ET
 from new_pieces import NEW_PIECES
 from dream_pieces import DREAM_PIECES
@@ -221,6 +222,7 @@ def make_score(p):
     parts=[]
     refs={}
     metres,bar_lengths,bar_starts,total_beats=bar_plan(p,len(parse_rows(p['rh'])))
+    printed_tempos=tempo_mark_plan(p,count=len(bar_lengths))
     lower_sections=p.get('lower_sections',{})
     if lower_sections:
         assert 1 in lower_sections,('Lower staff dynamics must begin at bar 1',p['op'])
@@ -265,7 +267,13 @@ def make_score(p):
                     compound=p['meter'] in ('6/8','9/8','12/8')
                     beat=duration.Duration(1.5 if compound else 1)
                     mm=tempo.MetronomeMark(number=p['bpm']/(1.5 if compound else 1),referent=beat)
+                    if printed_tempos:mm.id=printed_tempos[mi]['metronome_id']
                     mm.placement='above'
+                    m.insert(0,mm)
+                elif mi in printed_tempos:
+                    mark=printed_tempos[mi]
+                    mm=tempo.MetronomeMark(number=mark['number'],referent=duration.Duration(mark['beat']))
+                    mm.id=mark['metronome_id'];mm.placement='above'
                     m.insert(0,mm)
                 if mi in p['sections']:
                     dyn=dynamics.Dynamic(p['sections'][mi]); dyn.placement='below';m.insert(0,dyn)
@@ -453,6 +461,7 @@ def write_musicxml(score, piece, path):
     try:
         defaults.divisionsPerQuarter = math.lcm(previous, *denominators)
         score.write('musicxml', fp=path)
+        assign_tempo_direction_ids(path,piece,count=len(parse_rows(piece['rh'])))
     finally:
         defaults.divisionsPerQuarter = previous
 

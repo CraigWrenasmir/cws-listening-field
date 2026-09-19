@@ -86,3 +86,17 @@ Exact event-window checks substantiate the returning subjects and their selected
 
 
 Quiet Virtuosity publication is verified at 370 works. All 93 new and preserved external assets, seven Release archives and real browser playback checks passed; exact release evidence is recorded in data/PROGRESS.md. Broken Dances is the next authorised chapter, followed by Resonant Absences and Returning Light through Op. 400.
+
+## Optional shared metric pivot
+
+Broken Dances introduces an opt-in `tempo_pivots` map for an abrupt shared tempo change at a bar boundary. The old bar holds its effective tempo until the boundary; the destination then uses the new rate, with ordinary phrase rubato resuming afterwards. A declared old dotted quarter at quarter BPM 90 equals a new quarter at BPM 60. Both hands retain one conductor timeline and unchanged written beat offsets.
+
+The score prints the appropriate numerical metronome mark at each declared boundary, with separately checked quarter/dotted-quarter glyphs; it does not print a beat-equation symbol. Keep `final_fermata=False` and two equal effective destination anchors when the first complete new pulse must retain the exact relation. A later final-fermata adjustment can change an effective anchor even when two declared values are equal. Absent or empty pivot metadata preserves the existing rendering path.
+
+The implementation was reviewed in an isolated sandbox before adoption after Op. 375. Thirteen fixture tests checked actual MIDI, tied notes, cumulative mixed-metre boundaries, notation glyphs and 370 unchanged historical tempo maps. Review corrected a repeated SVG glyph ID and qualified the effective-anchor requirement. The portable regression command is `python scripts/test-tempo-pivots.py` with the music pipeline's Python environment: six tests exercise actual temporary MusicXML/MIDI/SVG exports, unique IDs, invalid metadata, unchanged defaults and detection of an incorrect approach ramp. These are timing and notation checks, separate from listening.
+
+## Broken Dances local completion: Op. 371–380
+
+The ten works are composed and individually checked: Hawthorn Vacancy, Poppy Reversal, Foxglove Concourse, Rowan Underpass, Gorse Pavement, Hazel Transfer, Celandine Forecourt, Bracken Cutaway, Dogrose Margins and Thistle Junction. They contain 52 visually inspected pages, 2,575 sounded pitch onsets and 1,234.85 seconds of recordings. Their distinct mechanisms are missing downbeats, a whole-phrase rhythmic reversal, shared phrase-boundary attacks, displaced bass cycles, changed written inequality, a shared metric pivot, exchanged rhythmic roles, contracting fragments, expanding chord phrases and a closing combination of two gaits.
+
+Exact event-window proofs substantiate the claimed returns and transformations. Hazel Transfer carries the old dotted-quarter pulse into the new quarter at bar 21 in the actual MIDI, while preserving one tied G across the boundary and correctly printing both beat glyphs. Dogrose Margins consists entirely of dyads; Thistle Junction combines its triple opening gesture with the five-eighth answer in an eleven-eighth coda. All score/MIDI, ancestry, held-hand, shared-key/rest, pedal and decoded-audio checks pass. The six portable metric-pivot regression tests also pass. These are structural and visual checks, separate from acoustic listening and keyboard approval. Publish this chapter, then continue through Resonant Absences and Returning Light to the authorised Op. 400.
