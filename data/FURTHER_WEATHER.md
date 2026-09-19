@@ -65,4 +65,4 @@ Before expanding each score, identify the exact subject statements and test the 
 
 ## Distant Rooms local completion
 
-Op. 341–350 is composed and checked, with 46 visually inspected pages, 2,361 sounded pitch onsets and 1,524.63 seconds of recordings. The chapter is packaged into the completed Volume 15 (Op. 321–344) and opening Volume 16 (Op. 345–350). Local Kinship contains all 350 works and 349 ancestry links; publication verification is pending. Interwoven Songs remains the next authorised chapter.
+Op. 341–350 is composed and checked, with 46 visually inspected pages, 2,361 sounded pitch onsets and 1,524.63 seconds of recordings. The chapter is packaged into the completed Volume 15 (Op. 321–344) and opening Volume 16 (Op. 345–350). Local Kinship contains all 350 works and 349 ancestry links; publication is verified at 350 works, including all 95 new and preserved external assets and six Release archives. See the release record in data/PROGRESS.md. Interwoven Songs remains the next authorised chapter.
