@@ -359,3 +359,6 @@ DREAM_PIECES.extend(FURTHER_BROKEN)
 
 from further_absences import PIECES as FURTHER_ABSENCES
 DREAM_PIECES.extend(FURTHER_ABSENCES)
+
+from further_light import PIECES as FURTHER_LIGHT
+DREAM_PIECES.extend(FURTHER_LIGHT)

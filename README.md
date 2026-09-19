@@ -418,6 +418,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 388 | Mallow Afterrain | 5/4 | 260 | [Score](pieces/CWS_Op_388_Mallow_Afterrain/CWS_Op_388_Mallow_Afterrain.pdf) | [MP3](pieces/CWS_Op_388_Mallow_Afterrain/CWS_Op_388_Mallow_Afterrain.mp3) |
 | CWS Op. 389 | Lichen Causeway | 3/4 | 105 | [Score](pieces/CWS_Op_389_Lichen_Causeway/CWS_Op_389_Lichen_Causeway.pdf) | [MP3](pieces/CWS_Op_389_Lichen_Causeway/CWS_Op_389_Lichen_Causeway.mp3) |
 | CWS Op. 390 | Acacia Margin | 4/4 | 194 | [Score](pieces/CWS_Op_390_Acacia_Margin/CWS_Op_390_Acacia_Margin.pdf) | [MP3](pieces/CWS_Op_390_Acacia_Margin/CWS_Op_390_Acacia_Margin.mp3) |
+| CWS Op. 391 | Linden Lucency | 4/4 | 221 | [Score](pieces/CWS_Op_391_Linden_Lucency/CWS_Op_391_Linden_Lucency.pdf) | [MP3](pieces/CWS_Op_391_Linden_Lucency/CWS_Op_391_Linden_Lucency.mp3) |
+| CWS Op. 392 | Pear Parterre | 6/4 | 340 | [Score](pieces/CWS_Op_392_Pear_Parterre/CWS_Op_392_Pear_Parterre.pdf) | [MP3](pieces/CWS_Op_392_Pear_Parterre/CWS_Op_392_Pear_Parterre.mp3) |
+| CWS Op. 393 | Aster Camber | 3/4 | 193 | [Score](pieces/CWS_Op_393_Aster_Camber/CWS_Op_393_Aster_Camber.pdf) | [MP3](pieces/CWS_Op_393_Aster_Camber/CWS_Op_393_Aster_Camber.mp3) |
+| CWS Op. 394 | Quince Skylane | 4/4 | 287 | [Score](pieces/CWS_Op_394_Quince_Skylane/CWS_Op_394_Quince_Skylane.pdf) | [MP3](pieces/CWS_Op_394_Quince_Skylane/CWS_Op_394_Quince_Skylane.mp3) |
+| CWS Op. 395 | Hazel Palisade | 5/4 | 233 | [Score](pieces/CWS_Op_395_Hazel_Palisade/CWS_Op_395_Hazel_Palisade.pdf) | [MP3](pieces/CWS_Op_395_Hazel_Palisade/CWS_Op_395_Hazel_Palisade.mp3) |
+| CWS Op. 396 | Dogwood Glimmer | 6/4 | 203 | [Score](pieces/CWS_Op_396_Dogwood_Glimmer/CWS_Op_396_Dogwood_Glimmer.pdf) | [MP3](pieces/CWS_Op_396_Dogwood_Glimmer/CWS_Op_396_Dogwood_Glimmer.mp3) |
+| CWS Op. 397 | Osier Promenade | 4/4 | 282 | [Score](pieces/CWS_Op_397_Osier_Promenade/CWS_Op_397_Osier_Promenade.pdf) | [MP3](pieces/CWS_Op_397_Osier_Promenade/CWS_Op_397_Osier_Promenade.mp3) |
+| CWS Op. 398 | Camellia Hearthwater | 7/4 | 190 | [Score](pieces/CWS_Op_398_Camellia_Hearthwater/CWS_Op_398_Camellia_Hearthwater.pdf) | [MP3](pieces/CWS_Op_398_Camellia_Hearthwater/CWS_Op_398_Camellia_Hearthwater.mp3) |
+| CWS Op. 399 | Willow Daymark | 4/4 | 328 | [Score](pieces/CWS_Op_399_Willow_Daymark/CWS_Op_399_Willow_Daymark.pdf) | [MP3](pieces/CWS_Op_399_Willow_Daymark/CWS_Op_399_Willow_Daymark.mp3) |
+| CWS Op. 400 | Velvet Clearing | 4/4 | 224 | [Score](pieces/CWS_Op_400_Velvet_Clearing/CWS_Op_400_Velvet_Clearing.pdf) | [MP3](pieces/CWS_Op_400_Velvet_Clearing/CWS_Op_400_Velvet_Clearing.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 
