@@ -408,6 +408,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 378 | Bracken Cutaway | 3/4 | 189 | [Score](pieces/CWS_Op_378_Bracken_Cutaway/CWS_Op_378_Bracken_Cutaway.pdf) | [MP3](pieces/CWS_Op_378_Bracken_Cutaway/CWS_Op_378_Bracken_Cutaway.mp3) |
 | CWS Op. 379 | Dogrose Margins | 4/4, 5/4, 7/4, 3/2, 3/4 (changing) | 472 | [Score](pieces/CWS_Op_379_Dogrose_Margins/CWS_Op_379_Dogrose_Margins.pdf) | [MP3](pieces/CWS_Op_379_Dogrose_Margins/CWS_Op_379_Dogrose_Margins.mp3) |
 | CWS Op. 380 | Thistle Junction | 3/4, 5/8, 4/4, 11/8 (changing) | 266 | [Score](pieces/CWS_Op_380_Thistle_Junction/CWS_Op_380_Thistle_Junction.pdf) | [MP3](pieces/CWS_Op_380_Thistle_Junction/CWS_Op_380_Thistle_Junction.mp3) |
+| CWS Op. 381 | Ash Stillroom | 4/4 | 177 | [Score](pieces/CWS_Op_381_Ash_Stillroom/CWS_Op_381_Ash_Stillroom.pdf) | [MP3](pieces/CWS_Op_381_Ash_Stillroom/CWS_Op_381_Ash_Stillroom.mp3) |
+| CWS Op. 382 | Laurel Airwell | 3/2 | 98 | [Score](pieces/CWS_Op_382_Laurel_Airwell/CWS_Op_382_Laurel_Airwell.pdf) | [MP3](pieces/CWS_Op_382_Laurel_Airwell/CWS_Op_382_Laurel_Airwell.mp3) |
+| CWS Op. 383 | Tamarisk Aperture | 5/4 | 238 | [Score](pieces/CWS_Op_383_Tamarisk_Aperture/CWS_Op_383_Tamarisk_Aperture.pdf) | [MP3](pieces/CWS_Op_383_Tamarisk_Aperture/CWS_Op_383_Tamarisk_Aperture.mp3) |
+| CWS Op. 384 | Bilberry Echo | 6/8 | 149 | [Score](pieces/CWS_Op_384_Bilberry_Echo/CWS_Op_384_Bilberry_Echo.pdf) | [MP3](pieces/CWS_Op_384_Bilberry_Echo/CWS_Op_384_Bilberry_Echo.mp3) |
+| CWS Op. 385 | Rowan Hollow | 4/4 | 165 | [Score](pieces/CWS_Op_385_Rowan_Hollow/CWS_Op_385_Rowan_Hollow.pdf) | [MP3](pieces/CWS_Op_385_Rowan_Hollow/CWS_Op_385_Rowan_Hollow.mp3) |
+| CWS Op. 386 | Larch Dormer | 12/8 | 174 | [Score](pieces/CWS_Op_386_Larch_Dormer/CWS_Op_386_Larch_Dormer.pdf) | [MP3](pieces/CWS_Op_386_Larch_Dormer/CWS_Op_386_Larch_Dormer.mp3) |
+| CWS Op. 387 | Osier Courtyard | 7/4 | 201 | [Score](pieces/CWS_Op_387_Osier_Courtyard/CWS_Op_387_Osier_Courtyard.pdf) | [MP3](pieces/CWS_Op_387_Osier_Courtyard/CWS_Op_387_Osier_Courtyard.mp3) |
+| CWS Op. 388 | Mallow Afterrain | 5/4 | 260 | [Score](pieces/CWS_Op_388_Mallow_Afterrain/CWS_Op_388_Mallow_Afterrain.pdf) | [MP3](pieces/CWS_Op_388_Mallow_Afterrain/CWS_Op_388_Mallow_Afterrain.mp3) |
+| CWS Op. 389 | Lichen Causeway | 3/4 | 105 | [Score](pieces/CWS_Op_389_Lichen_Causeway/CWS_Op_389_Lichen_Causeway.pdf) | [MP3](pieces/CWS_Op_389_Lichen_Causeway/CWS_Op_389_Lichen_Causeway.mp3) |
+| CWS Op. 390 | Acacia Margin | 4/4 | 194 | [Score](pieces/CWS_Op_390_Acacia_Margin/CWS_Op_390_Acacia_Margin.pdf) | [MP3](pieces/CWS_Op_390_Acacia_Margin/CWS_Op_390_Acacia_Margin.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

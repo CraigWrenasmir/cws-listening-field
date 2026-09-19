@@ -7,6 +7,7 @@ from music21.pitch import Pitch
 from pypdf import PdfReader
 from meter_plan import bar_plan
 from tempo_pivots import validate_tempo_pivots
+from pedal_resonance import validate_pedal_resonance
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'pieces';WORK=ROOT/'work'
 cat=json.loads((ROOT/'data/catalog.json').read_text());report=[]
 parser=argparse.ArgumentParser();parser.add_argument('--opus',type=int,nargs='+');args=parser.parse_args()
@@ -72,6 +73,7 @@ for p in cat:
       if message.value>=64 and down is None:down=onset_tick(tick/mid.ticks_per_beat)
       elif message.value<64 and down is not None:actual_pedal.append((down,onset_tick(tick/mid.ticks_per_beat)));down=None
    assert down is None and actual_pedal==expected_pedal,('MIDI pedal span mismatch',p['op'],channel,actual_pedal)
+ validate_pedal_resonance(p,mid)
  # Check audible clock time independently by integrating the actual MIDI tempo
  # messages. The score player must follow rubato and tied onsets exactly.
  seconds=0;heard=collections.defaultdict(list);planned=collections.defaultdict(list)

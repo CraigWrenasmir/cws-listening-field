@@ -103,3 +103,15 @@ Exact event-window proofs substantiate the claimed returns and transformations. 
 
 
 Broken Dances publication is verified at 380 works. All 105 new and preserved external assets, seven Release archives and real browser playback checks passed. The 376 pivot and 380 coda advance correctly with visible notation highlights; exact release evidence is in data/PROGRESS.md. Continue with Resonant Absences, Op. 381–390, then Returning Light through Op. 400.
+
+## Explicit pedal resonance during written rests
+
+After Op. 381, an opt-in validation field `pedal_resonance_windows` was adopted for passages where released keys are intentionally carried by ordinary sustain pedal. Its intervals must exactly equal the shared written-rest/pedal intersections across every voice and complete tie. Actual MIDI must show both hand pedals down, every key released, and a previously sounded note captured with pedal down at an earlier tick than its release. All other shared rests retain full key/pedal release. The score and renderer already support this behaviour; their output paths and the website are unchanged.
+
+The core helper, validator integration and separate chapter-audit integration were reviewed in isolation, including ten portable real-export tests, four audit-integration tests and five independent extra MIDI probes. The original `.97` gate makes a late or same-tick pedal pickup insufficient; such claims are rejected. Missing/empty metadata preserves existing behaviour. Root applied the reviewed patches after Op. 381 and reran all ten portable tests successfully. Run `python scripts/test-pedal-resonance.py` with the music environment. These tests establish notation and MIDI capture semantics, not perceptible decay or acoustic listening. Any opted-in composition still requires its full score/audio pipeline and all-page review.
+
+## Resonant Absences local completion: Op. 381–390
+
+Ash Stillroom, Laurel Airwell, Tamarisk Aperture, Bilberry Echo, Rowan Hollow, Larch Dormer, Osier Courtyard, Mallow Afterrain, Lichen Causeway and Acacia Margin are composed and individually checked. They total 43 visually inspected score pages, 1,761 sounded pitch onsets and 1,285.42 seconds of recordings.
+
+Exact event and actual MIDI checks distinguish held inner notes, reordered releases, omitted bass members, nine explicitly declared pedal-resonance windows, a silent phrase head, a reserved middle register, independent whole-line cutoffs, dissonance withdrawn from a surviving chord, twenty-six bars of monody, and contracting phrase/register architecture at an unchanged pulse. Bilberry Echo intentionally sustains released keys under ordinary pedal; its declared windows pass the new opt-in capture validator, while all other shared rests fully release keys and pedal. All score/MIDI, ancestry, held-hand, shared-key, pedal and decoded-audio checks pass. Ten portable resonance tests, six metric-pivot tests and the seven-boundary release regressions pass. These establish structural, visual and implementation facts, separate from acoustic listening and keyboard approval. Publish the chapter, then continue sequentially through Returning Light, Op. 391–400.
