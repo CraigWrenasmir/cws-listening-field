@@ -6,6 +6,33 @@ from pypdf import PdfReader
 from collection_volumes import build_volumes
 from meter_plan import bar_plan
 ROOT=Path(__file__).resolve().parents[1]
+
+def compact_events(opus,events):
+ """Lossless tuple-v2 rows; noncanonical event IDs retain their full strings."""
+ def number(value):
+  # 12.0 and 12 decode to the same JS Number. Keep fractional values and -0.0.
+  if (isinstance(value,float) and value.is_integer() and
+      abs(value)<=9007199254740991 and str(value)!='-0.0'):
+   return int(value)
+  return value
+ rows=[]
+ for event in events:
+  if event['h'] not in ('rh','lh') or not event['ps'] or event['p']!=max(event['ps']):
+   raise ValueError('Cannot compact an event with an invalid hand or upper pitch')
+  event_id=event['id']
+  match=re.fullmatch(r'cws(\d+)-(rh|lh)-m(\d+)-n(\d+)',event_id)
+  if match:
+   measure,index=int(match[3]),int(match[4])
+   # The spelling check preserves leading zeroes and any unexpected prefix.
+   if (isinstance(opus,int) and 1<=opus<=9007199254740991 and
+       1<=measure<=9007199254740991 and 0<=index<=9007199254740991 and
+       event_id==f'cws{opus}-{event["h"]}-m{measure}-n{index}'):
+    event_id=[measure,index]
+  row=[event_id,0 if event['h']=='rh' else 1,number(event['b']),number(event['d']),event['ps'],number(event['s']),number(event['e'])]
+  if 'v' in event:row.append(event['v'])
+  rows.append(row)
+ return rows
+
 cat=json.loads((ROOT/'data/catalog.json').read_text())
 asset_policy=json.loads((ROOT/'data/asset_distribution.json').read_text())
 
@@ -59,9 +86,8 @@ for p in cat:
   entry['scores']=[asset_origin+s for s in entry['scores']]
  # Lossless tuple transport keeps every pitch, voice, ID and timing value while
  # recovering Pages headroom without changing any existing music asset URL.
- entry['event_format']='tuple-v1'
- fields=['id','h','b','d','p','ps','s','e','v']
- entry['events']=[[e[k] for k in fields if k in e] for e in entry['events']]
+ entry['event_format']='tuple-v2'
+ entry['events']=compact_events(p['op'],entry['events'])
  manifest.append(entry)
 (ROOT/'library.json').write_text(json.dumps(manifest,separators=(',',':'))+'\n')
 index=ROOT/'index.html';html=index.read_text()
