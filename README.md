@@ -388,6 +388,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 358 | Teasel Exchange | 7/8 | 162 | [Score](pieces/CWS_Op_358_Teasel_Exchange/CWS_Op_358_Teasel_Exchange.pdf) | [MP3](pieces/CWS_Op_358_Teasel_Exchange/CWS_Op_358_Teasel_Exchange.mp3) |
 | CWS Op. 359 | Lupin Rendezvous | 4/4 | 188 | [Score](pieces/CWS_Op_359_Lupin_Rendezvous/CWS_Op_359_Lupin_Rendezvous.pdf) | [MP3](pieces/CWS_Op_359_Lupin_Rendezvous/CWS_Op_359_Lupin_Rendezvous.mp3) |
 | CWS Op. 360 | Bilberry Chorus | 4/4, 6/4 (changing) | 253 | [Score](pieces/CWS_Op_360_Bilberry_Chorus/CWS_Op_360_Bilberry_Chorus.pdf) | [MP3](pieces/CWS_Op_360_Bilberry_Chorus/CWS_Op_360_Bilberry_Chorus.mp3) |
+| CWS Op. 361 | Camellia Filigree | 5/4 | 273 | [Score](pieces/CWS_Op_361_Camellia_Filigree/CWS_Op_361_Camellia_Filigree.pdf) | [MP3](pieces/CWS_Op_361_Camellia_Filigree/CWS_Op_361_Camellia_Filigree.mp3) |
+| CWS Op. 362 | Yarrow Continuum | 9/8 | 406 | [Score](pieces/CWS_Op_362_Yarrow_Continuum/CWS_Op_362_Yarrow_Continuum.pdf) | [MP3](pieces/CWS_Op_362_Yarrow_Continuum/CWS_Op_362_Yarrow_Continuum.mp3) |
+| CWS Op. 363 | Laurel Inlay | 4/4 | 311 | [Score](pieces/CWS_Op_363_Laurel_Inlay/CWS_Op_363_Laurel_Inlay.pdf) | [MP3](pieces/CWS_Op_363_Laurel_Inlay/CWS_Op_363_Laurel_Inlay.mp3) |
+| CWS Op. 364 | Heather Murmur | 4/4 | 212 | [Score](pieces/CWS_Op_364_Heather_Murmur/CWS_Op_364_Heather_Murmur.pdf) | [MP3](pieces/CWS_Op_364_Heather_Murmur/CWS_Op_364_Heather_Murmur.mp3) |
+| CWS Op. 365 | Magnolia Equilibrium | 3/2 | 248 | [Score](pieces/CWS_Op_365_Magnolia_Equilibrium/CWS_Op_365_Magnolia_Equilibrium.pdf) | [MP3](pieces/CWS_Op_365_Magnolia_Equilibrium/CWS_Op_365_Magnolia_Equilibrium.mp3) |
+| CWS Op. 366 | Bramble Traverse | 5/4 | 151 | [Score](pieces/CWS_Op_366_Bramble_Traverse/CWS_Op_366_Bramble_Traverse.pdf) | [MP3](pieces/CWS_Op_366_Bramble_Traverse/CWS_Op_366_Bramble_Traverse.mp3) |
+| CWS Op. 367 | Marigold Undersong | 6/4 | 190 | [Score](pieces/CWS_Op_367_Marigold_Undersong/CWS_Op_367_Marigold_Undersong.pdf) | [MP3](pieces/CWS_Op_367_Marigold_Undersong/CWS_Op_367_Marigold_Undersong.mp3) |
+| CWS Op. 368 | Juniper Undulation | 4/4 | 295 | [Score](pieces/CWS_Op_368_Juniper_Undulation/CWS_Op_368_Juniper_Undulation.pdf) | [MP3](pieces/CWS_Op_368_Juniper_Undulation/CWS_Op_368_Juniper_Undulation.mp3) |
+| CWS Op. 369 | Wisteria Touchstone | 5/4 | 202 | [Score](pieces/CWS_Op_369_Wisteria_Touchstone/CWS_Op_369_Wisteria_Touchstone.pdf) | [MP3](pieces/CWS_Op_369_Wisteria_Touchstone/CWS_Op_369_Wisteria_Touchstone.mp3) |
+| CWS Op. 370 | Acacia Soliloquy | 4/4 | 151 | [Score](pieces/CWS_Op_370_Acacia_Soliloquy/CWS_Op_370_Acacia_Soliloquy.pdf) | [MP3](pieces/CWS_Op_370_Acacia_Soliloquy/CWS_Op_370_Acacia_Soliloquy.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

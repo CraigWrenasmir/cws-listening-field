@@ -76,3 +76,10 @@ The authored forms refine the earlier proposals: Dogwood Accord puts the suspens
 
 
 Interwoven Songs publication is verified at 360 works. All 92 external assets and six Release archives match checked sources over HTTPS; see data/PROGRESS.md for the exact release and browser evidence. Quiet Virtuosity is the next authorised chapter.
+
+
+## Quiet Virtuosity local completion: Op. 361–370
+
+The ten works are composed and individually checked: Camellia Filigree, Yarrow Continuum, Laurel Inlay, Heather Murmur, Magnolia Equilibrium, Bramble Traverse, Marigold Undersong, Juniper Undulation, Wisteria Touchstone and Acacia Soliloquy. They contain 41 visually inspected pages, 2,439 sounded pitch onsets and 1,306.70 seconds of recordings. The chapter explores double-note balance, continuous hand relays, inner melody, repeated-note releases, chord voicing, prepared register relocations, a lower-edge song, unequal rotational waves, opposed articulation and an exposed written cadenza.
+
+Exact event-window checks substantiate the returning subjects and their selected voice transfers; separate checks cover complete handovers, prepared relocations, lower-voice playback balance, independent short releases and the cadenza interruption. All score pages have been inspected; structural, ancestry, score/MIDI, held-hand, shared-key/rest, pedal and decoded-audio checks pass. This is separate from acoustic listening and keyboard approval. Publication checks follow, then the authorised sequence continues through Op. 400.

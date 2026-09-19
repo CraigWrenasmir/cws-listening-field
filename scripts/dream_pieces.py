@@ -350,3 +350,6 @@ DREAM_PIECES.extend(FURTHER_DISTANT)
 
 from further_interwoven import PIECES as FURTHER_INTERWOVEN
 DREAM_PIECES.extend(FURTHER_INTERWOVEN)
+
+from further_quiet import PIECES as FURTHER_QUIET
+DREAM_PIECES.extend(FURTHER_QUIET)
