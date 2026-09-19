@@ -368,6 +368,16 @@ These are AI-assisted composition studies created with Maple under Craig Warren 
 | CWS Op. 338 | Orchid Suspension | 6/4 | 188 | [Score](pieces/CWS_Op_338_Orchid_Suspension/CWS_Op_338_Orchid_Suspension.pdf) | [MP3](pieces/CWS_Op_338_Orchid_Suspension/CWS_Op_338_Orchid_Suspension.mp3) |
 | CWS Op. 339 | Birch Crosscurrent | 4/4 | 234 | [Score](pieces/CWS_Op_339_Birch_Crosscurrent/CWS_Op_339_Birch_Crosscurrent.pdf) | [MP3](pieces/CWS_Op_339_Birch_Crosscurrent/CWS_Op_339_Birch_Crosscurrent.mp3) |
 | CWS Op. 340 | Velvet Isobar | 4/4 | 280 | [Score](pieces/CWS_Op_340_Velvet_Isobar/CWS_Op_340_Velvet_Isobar.pdf) | [MP3](pieces/CWS_Op_340_Velvet_Isobar/CWS_Op_340_Velvet_Isobar.mp3) |
+| CWS Op. 341 | Linden Meridian | 4/4 | 246 | [Score](pieces/CWS_Op_341_Linden_Meridian/CWS_Op_341_Linden_Meridian.pdf) | [MP3](pieces/CWS_Op_341_Linden_Meridian/CWS_Op_341_Linden_Meridian.mp3) |
+| CWS Op. 342 | Aster Vestibule | 4/4 | 243 | [Score](pieces/CWS_Op_342_Aster_Vestibule/CWS_Op_342_Aster_Vestibule.pdf) | [MP3](pieces/CWS_Op_342_Aster_Vestibule/CWS_Op_342_Aster_Vestibule.mp3) |
+| CWS Op. 343 | Cedar Threshold | 4/4 | 370 | [Score](pieces/CWS_Op_343_Cedar_Threshold/CWS_Op_343_Cedar_Threshold.pdf) | [MP3](pieces/CWS_Op_343_Cedar_Threshold/CWS_Op_343_Cedar_Threshold.mp3) |
+| CWS Op. 344 | Moss Parallax | 4/4 | 267 | [Score](pieces/CWS_Op_344_Moss_Parallax/CWS_Op_344_Moss_Parallax.pdf) | [MP3](pieces/CWS_Op_344_Moss_Parallax/CWS_Op_344_Moss_Parallax.mp3) |
+| CWS Op. 345 | Fennel Hinterland | 6/4 | 210 | [Score](pieces/CWS_Op_345_Fennel_Hinterland/CWS_Op_345_Fennel_Hinterland.pdf) | [MP3](pieces/CWS_Op_345_Fennel_Hinterland/CWS_Op_345_Fennel_Hinterland.mp3) |
+| CWS Op. 346 | Willow Refraction | 4/4 | 228 | [Score](pieces/CWS_Op_346_Willow_Refraction/CWS_Op_346_Willow_Refraction.pdf) | [MP3](pieces/CWS_Op_346_Willow_Refraction/CWS_Op_346_Willow_Refraction.mp3) |
+| CWS Op. 347 | Hazel Doorway | 3/2 | 206 | [Score](pieces/CWS_Op_347_Hazel_Doorway/CWS_Op_347_Hazel_Doorway.pdf) | [MP3](pieces/CWS_Op_347_Hazel_Doorway/CWS_Op_347_Hazel_Doorway.mp3) |
+| CWS Op. 348 | Iris Convergence | 5/4 | 209 | [Score](pieces/CWS_Op_348_Iris_Convergence/CWS_Op_348_Iris_Convergence.pdf) | [MP3](pieces/CWS_Op_348_Iris_Convergence/CWS_Op_348_Iris_Convergence.mp3) |
+| CWS Op. 349 | Sedge Reconciliation | 7/4 | 168 | [Score](pieces/CWS_Op_349_Sedge_Reconciliation/CWS_Op_349_Sedge_Reconciliation.pdf) | [MP3](pieces/CWS_Op_349_Sedge_Reconciliation/CWS_Op_349_Sedge_Reconciliation.mp3) |
+| CWS Op. 350 | Velvet Distance | 3/4 | 214 | [Score](pieces/CWS_Op_350_Velvet_Distance/CWS_Op_350_Velvet_Distance.pdf) | [MP3](pieces/CWS_Op_350_Velvet_Distance/CWS_Op_350_Velvet_Distance.mp3) |
 
 [Download the collected volumes](downloads/index.html): up to 24 works per volume, with a score PDF and a complete archive of recordings, MIDI, MusicXML and notation.
 

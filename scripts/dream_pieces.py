@@ -344,3 +344,6 @@ DREAM_PIECES.extend(SINGING_RETURNS)
 
 from further_elastic import PIECES as FURTHER_ELASTIC
 DREAM_PIECES.extend(FURTHER_ELASTIC)
+
+from further_distant import PIECES as FURTHER_DISTANT
+DREAM_PIECES.extend(FURTHER_DISTANT)
