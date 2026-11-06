@@ -82,7 +82,7 @@ function markMotif(){
 // ---------- scene
 const cv=q('#hf-stage');
 THREE.ColorManagement.enabled=false;
-const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:false});
+const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:false,preserveDrawingBuffer:true}); // so a still can be read back after a draw
 renderer.outputColorSpace=THREE.LinearSRGBColorSpace;
 const scene=new THREE.Scene();
 const ASPECT=14/5;
@@ -299,7 +299,7 @@ window.addEventListener('hashchange',()=>{const p=library.find(x=>x.slug===locat
   rigs.R=new Rig(gltf.scene,'R');rigs.L=new Rig(gltf.scene,'L');
   makeTargets();
   const params=new URLSearchParams(location.search);
-  if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);return;}
+  if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);const shared=location.hash.match(/^#r=([A-Za-z0-9_-]+)$/);if(shared){try{showPerformance(unb64u(shared[1]),'shared.mid','Shared recording','A shared recording');}catch{status('That shared link could not be read.');}}return;}
   const fromHash=library.find(p=>p.slug===location.hash.slice(1));
   const op=fromHash?fromHash.op:+(params.get('op')||library[0].op);
   await load(op,false);
@@ -471,12 +471,14 @@ const rec={
  },
 };
 let downloadURL=null;
+const b64u=bytes=>btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const unb64u=str=>Uint8Array.from(atob(str.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0));
 function refreshRecording(){
  const n=rec.events.filter(e=>e.type==='on').length;
  q('#hf-record').textContent=rec.active?`Stop (${n} notes)`:'Record';q('#hf-record').setAttribute('aria-pressed',String(rec.active));
  const have=!rec.active&&n>0;
  q('#hf-replay').disabled=!have;q('#hf-clear').disabled=!have&&!rec.active;
- const a=q('#hf-download');a.hidden=!have;
+ const a=q('#hf-download');a.hidden=!have;q('#hf-share').hidden=!have;
  if(have){if(downloadURL)URL.revokeObjectURL(downloadURL);downloadURL=URL.createObjectURL(new Blob([rec.bytes()],{type:'audio/midi'}));a.href=downloadURL;}
 }
 q('#hf-record').addEventListener('click',()=>{piano.init();rec.active?rec.stop():rec.start();});
@@ -503,6 +505,12 @@ async function showPerformance(bytes,name,opus,title){
  }catch(err){if(token!==loadToken)return;status('');q('#hf-error').textContent='This could not be planned: '+err.message;q('#hf-error').hidden=false;}
 }
 q('#hf-replay').addEventListener('click',()=>showPerformance(rec.bytes(),'free-play.mid','Free play','Your recording'));
+q('#hf-share').addEventListener('click',async()=>{
+ const url=location.origin+location.pathname.replace(/[^/]*$/,'')+'freeplay.html#r='+b64u(rec.bytes());
+ if(url.length>60000){status('This recording is too long to share as a link; download the MIDI instead.');return;}
+ try{await navigator.clipboard.writeText(url);status('Link copied: anyone who opens it will see the hands play your recording.');}
+ catch{history.replaceState(null,'','#r='+b64u(rec.bytes()));status('The address of this page now holds your recording: copy it from the address bar.');}
+});
 
 // ---------- opening a MIDI file: the button, or a file dropped on the stage
 async function openFile(file){
@@ -565,6 +573,12 @@ async function exportVideo(){
  finally{t=wasT;exporting=false;makeTargets();btn.textContent='Export MP4';btn.removeEventListener('click',cancel);btn.addEventListener('click',exportVideo);draw();}
 }
 q('#hf-export').addEventListener('click',exportVideo);
+function saveStill(){
+ if(!rigs.R||!keysBuilt)return;
+ const Wv=2800,Hv=1000;makeTargets(Wv,Hv);draw();
+ cv.toBlob(blob=>{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(study?study.slug:q('#hf-name').textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-'))+(free.on?'':'-'+fmt(t).replace(':','m')+'s')+'-plate.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),60000);makeTargets();draw();status(`Saved the plate at ${Wv}×${Hv}.`);},'image/png');
+}
+for(const id of ['#hf-still','#hf-still2'])q(id).addEventListener('click',saveStill);
 
 // ---------- the on-screen keyboard and the computer keyboard
 let base=48;const pointers=new Map();
