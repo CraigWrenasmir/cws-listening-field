@@ -44,3 +44,8 @@
 #cws-hands .hf-keys .hf-b.is-down{background:var(--hf-copper)}
 #cws-hands .hf-hint{font-family:Georgia,serif;font-style:italic;color:var(--hf-muted);font-size:13px;padding:10px 0 0;margin:0}
 #cws-hands.is-free .hf-stamp label,#cws-hands.is-free #hf-progress,#cws-hands.is-free #hf-time,#cws-hands.is-free #hf-speed,#cws-hands.is-free .hf-bar label:last-of-type{display:none}
+
+#cws-hands[data-page=free] .hf-stamp label,#cws-hands[data-page=free] #hf-stamp{display:none}
+#cws-hands[data-page=free]:not(.is-replay) .hf-bar{display:none}
+#cws-hands[data-page=free].is-free .hf-bar{display:none}
+#cws-hands[data-page=free].is-replay:not(.is-free) .hf-bar{display:grid}

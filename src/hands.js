@@ -9,6 +9,7 @@ import {decodeLibrary} from './library-format.js';
 import * as LIVE from './hands/live.js?v=1';
 
 const q=s=>document.querySelector(s);
+const PAGE=document.querySelector('#cws-hands').dataset.page||'hands';
 const PITCH=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
 const WHITE_PITCH=0.0235,WHITE_GAP=0.0011,WHITE_LENGTH=0.15,WHITE_FRONT_HEIGHT=0.0215,BLACK_WIDTH=0.0128,BLACK_LENGTH=0.095,BLACK_HEIGHT=0.0122,KEY_DIP=0.010,PIVOT_Z=-0.255;
 const probe=document.createElement('span');probe.style.display='none';q('#cws-hands').appendChild(probe); // inside the section that defines the palette
@@ -287,17 +288,18 @@ window.addEventListener('hashchange',()=>{const p=library.find(x=>x.slug===locat
 (async()=>{
  try{
   const [catalogue,handSpec,gltf]=await Promise.all([
-   fetch('library.json').then(r=>r.json()).then(decodeLibrary),
+   PAGE==='free'?Promise.resolve(null):fetch('library.json').then(r=>r.json()).then(decodeLibrary),
    fetch('src/hands/hand_spec.json').then(r=>r.json()),
    (()=>{const loader=new GLTFLoader();const draco=new DRACOLoader();draco.setDecoderPath('https://unpkg.com/three@0.186.1/examples/jsm/libs/draco/');loader.setDRACOLoader(draco);return loader.loadAsync('src/hands/wooden_hand.glb?v=1');})(),
   ]);
-  library=catalogue;spec=handSpec;
+  library=catalogue||[];spec=handSpec;
   const sel=q('#hf-pick');
   for(const p of library){const o=document.createElement('option');o.value=p.op;o.textContent=`Op. ${p.op} · ${p.title}`;sel.appendChild(o);}
   gltf.scene.traverse(o=>{if(o.isMesh)o.material.side=THREE.FrontSide;});
   rigs.R=new Rig(gltf.scene,'R');rigs.L=new Rig(gltf.scene,'L');
   makeTargets();
   const params=new URLSearchParams(location.search);
+  if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);return;}
   const fromHash=library.find(p=>p.slug===location.hash.slice(1));
   const op=fromHash?fromHash.op:+(params.get('op')||library[0].op);
   await load(op,false);
@@ -452,7 +454,7 @@ q('#hf-clear').addEventListener('click',()=>{rec.active=false;rec.events=[];refr
 q('#hf-replay').addEventListener('click',async()=>{
  const bytes=rec.bytes();
  setFree(false);
- const token=++loadToken;study=null;data=null;replaying=true;
+ const token=++loadToken;study=null;data=null;replaying=true;root.classList.add('is-replay');
  q('#hf-opus').textContent='Free play';q('#hf-name').textContent='Your recording';q('#hf-stamp').textContent=new Date().toISOString().slice(0,19).replace(/[-:T]/g,'');
  q('#hf-kin').textContent='';q('#hf-player').href='index.html';document.title='Your recording · Hands · The Listening Field';
  q('#hf-play').disabled=true;q('#hf-play').textContent='Planning…';status('Choosing hands and fingers for your recording…');
@@ -512,10 +514,10 @@ async function openMIDI(){
 // ---------- the mode
 function setFree(on){
  if(on===free.on)return;
- if(on){stop();free.on=true;root.classList.add('is-free');q('#hf-playpanel').hidden=false;q('#hf-free').setAttribute('aria-pressed','true');
+ if(on){stop();free.on=true;root.classList.add('is-free');q('#hf-playpanel').hidden=false;q('#hf-free').setAttribute('aria-pressed','true');if(PAGE==='free'){q('#hf-free').hidden=true;q('#hf-opus').textContent='The hands follow';q('#hf-name').textContent='Free play';document.title='Free play · The Listening Field';}
   q('#hf-play').disabled=true;q('#hf-play').textContent='Live';status('Free play: the hands follow whatever you play.');
   buildKeys(LIVE.KEYS);buildScreenKeys();refreshRecording();openMIDI();piano.init();live.last=0;}
- else{live.allOff();if(rec.active)rec.stop();free.on=false;root.classList.remove('is-free');q('#hf-playpanel').hidden=true;q('#hf-free').setAttribute('aria-pressed','false');
+ else{live.allOff();if(rec.active)rec.stop();free.on=false;root.classList.remove('is-free');q('#hf-playpanel').hidden=true;q('#hf-free').setAttribute('aria-pressed','false');if(PAGE==='free')q('#hf-free').hidden=false;
   if(data){buildKeys();q('#hf-play').disabled=false;q('#hf-play').textContent='Play';status('');}else{q('#hf-play').textContent='Play';}}
 }
 q('#hf-free').addEventListener('click',()=>setFree(!free.on));
