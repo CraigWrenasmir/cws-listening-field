@@ -273,6 +273,7 @@ function choose(index,keepPlaylist=false,writeHistory=true){
  q('#lf-tenor-legend').hidden=!trackKinds[index].includes('tenor');
  updateNavigation();q('#lf-time').textContent='0:00 / '+formatTime(data[index].duration);q('#lf-progress').value=0;q('#lf-progress').max=data[index].duration;q('#lf-progress').setAttribute('aria-valuetext','0:00 of '+formatTime(data[index].duration));
  [['pdf','pdf'],['audio','audio'],['midi','midi'],['xml','xml']].forEach(([id,field])=>{q('#lf-download-'+id).href=data[index][field];});
+ q('#lf-hands').href='hands.html#'+data[index].slug;
  if(writeHistory&&location.hash.slice(1)!==data[index].slug)history[keepPlaylist&&!fromOverview?'replaceState':'pushState'](null,'','#'+data[index].slug);
  document.title=names[index]+' · CWS Op. '+data[index].op+' · The Listening Field';
  root.querySelectorAll('[data-work]').forEach(el=>el.setAttribute('aria-current',String(Number(el.dataset.work)===index)));

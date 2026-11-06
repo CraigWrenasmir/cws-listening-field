@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Hands — wooden hands play the piano studies of The Listening Field, drawn as an engraved plate.">
+<title>Hands · The Listening Field</title>
+<link rel="stylesheet" href="src/styles.css">
+<link rel="stylesheet" href="src/hands.css?v=1">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.186.1/build/three.module.js","three/addons/":"https://unpkg.com/three@0.186.1/examples/jsm/"}}</script>
+<script type="module" src="src/hands.js?v=1"></script>
+</head>
+<body>
+<main id="cws-hands">
+<header class="hf-header"><a href="index.html">The Listening <em>Field</em></a><h1>Hands</h1><nav aria-label="Library navigation"><a href="kinship.html">Kinship</a></nav></header>
+<section class="hf-title">
+<div><p class="hf-opus" id="hf-opus">CWS Op. —</p><h2 class="hf-name" id="hf-name">Loading…</h2></div>
+<div class="hf-stamp"><label>Study <select id="hf-pick" aria-label="Choose a study"></select></label><div id="hf-stamp" style="margin-top:8px"></div></div>
+</section>
+<section class="hf-shell" aria-label="The hands at the piano">
+<canvas id="hf-stage" aria-label="Two wooden hands playing the study on an old piano, drawn as an engraving"></canvas>
+<p class="hf-status" id="hf-status" aria-live="polite"></p>
+<div class="hf-bar">
+<button type="button" id="hf-play" class="hf-play" disabled>Loading…</button>
+<button type="button" id="hf-restart" aria-label="Start again">⏮</button>
+<input type="range" id="hf-progress" min="0" max="1000" value="0" aria-label="Playback position">
+<span class="hf-time" id="hf-time">0:00 / 0:00</span>
+<label>Look <select id="hf-look"><option value="plate" selected>Ink plate</option><option value="wash">Ink and wash</option><option value="timber">Timber</option></select></label>
+<label>Speed <select id="hf-speed"><option>0.5</option><option selected>1</option><option>1.5</option></select></label>
+</div>
+<footer class="hf-footer"><div><a id="hf-player" href="index.html">Open in the player</a> · <a href="kinship.html">Kinship</a></div><div class="hf-kin" id="hf-kin"></div></footer>
+<p class="hf-note">Two wooden hands, carved ash on brass pins, play each study from its own MIDI. Which hand and finger takes each note, where the wrist travels and when it starts to move are worked out in your browser by the Mechanical Pianist's planner. The drawing is made fresh each frame: ink where surfaces meet, hatching where the light falls away. Copper marks the phrase this study inherits from its parent, wherever it recurs.</p>
+<p id="hf-error" role="alert" hidden>The hands could not load. Please reload.</p>
+</section>
+</main>
+</body>
+</html>
