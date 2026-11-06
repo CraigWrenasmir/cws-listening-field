@@ -69,3 +69,5 @@
 
 #cws-hands .hf-bar{grid-template-columns:auto auto 1fr auto auto auto auto auto auto auto}
 #cws-hands #hf-roll[aria-pressed=true],#cws-hands #hf-roll2[aria-pressed=true]{border-color:var(--hf-copper);color:var(--hf-copper)}
+
+#cws-hands.is-roll #hf-stage{aspect-ratio:16/10}

@@ -88,7 +88,8 @@ THREE.ColorManagement.enabled=false;
 const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:false,preserveDrawingBuffer:true}); // so a still can be read back after a draw
 renderer.outputColorSpace=THREE.LinearSRGBColorSpace;
 const scene=new THREE.Scene();
-const ASPECT=14/5;
+const ASPECT=14/5,ROLL_ASPECT=16/10;
+const aspectNow=()=>roll.on?ROLL_ASPECT:ASPECT;
 const camera=new THREE.PerspectiveCamera(19,ASPECT,0.05,5);
 scene.add(new THREE.HemisphereLight(0xffffff,0x777766,1.2));
 const keyLight=new THREE.DirectionalLight(0xffffff,2.2);keyLight.position.set(-0.6,1.0,0.5);scene.add(keyLight);
@@ -182,7 +183,7 @@ const normalMat=new THREE.MeshNormalMaterial();
 let W=2,H=2,colorRT,normalRT;
 function makeTargets(width,height){
  const dpr=Math.min(2,window.devicePixelRatio||1);
- W=width||Math.max(2,Math.round(cv.clientWidth*dpr));H=height||Math.max(2,Math.round(cv.clientWidth/ASPECT*dpr));
+ W=width||Math.max(2,Math.round(cv.clientWidth*dpr));H=height||Math.max(2,Math.round(cv.clientWidth/aspectNow()*dpr));
  renderer.setSize(W,H,false);
  colorRT?.dispose();normalRT?.dispose();
  colorRT=new THREE.WebGLRenderTarget(W,H,{depthTexture:new THREE.DepthTexture(W,H,THREE.UnsignedIntType)});
@@ -258,10 +259,11 @@ function draw(){
  for(const [midi,m] of keyMeshes){const d=Math.max(dip.get(midi)||0,m.geometry.userData.restDip);m.rotation.x=-d*KEY_DIP/(-PIVOT_Z);const n=sounding.get(midi);m.material=n?(n.motif?KEY_MOTIF:KEY_PRESS):(m.geometry.userData.black?KEY_BLACK:KEY_WHITE);}
  const cx=(f.L.wrist[0]+f.R.wrist[0])/2,spread=Math.abs(f.L.wrist[0]-f.R.wrist[0]);
  // the frame: the keyboard along the top edge, the wrists in the middle, the forearms leaving the bottom
- const want=roll.on?new THREE.Vector3(cx,0.56+spread*0.3,0.50+spread*0.25):new THREE.Vector3(cx,0.46+spread*0.3,0.40+spread*0.25),wantAt=roll.on?new THREE.Vector3(cx,0.09,-0.10):new THREE.Vector3(cx,0.0,0.01);
- camera.fov=roll.on?23:19;
+ // with the roll: a taller frame, the camera higher and further back, looking up the paper
+ const want=roll.on?new THREE.Vector3(cx,0.70+spread*0.3,0.58+spread*0.25):new THREE.Vector3(cx,0.46+spread*0.3,0.40+spread*0.25),wantAt=roll.on?new THREE.Vector3(cx,0.17,-0.22):new THREE.Vector3(cx,0.0,0.01);
+ camera.fov=roll.on?30:19;
  const ease=reducedMotion?1:0.03;camPos.lerp(want,ease);camTarget.lerp(wantAt,ease);
- camera.position.copy(camPos);camera.lookAt(camTarget);camera.aspect=ASPECT;camera.updateProjectionMatrix();
+ camera.position.copy(camPos);camera.lookAt(camTarget);camera.aspect=aspectNow();camera.updateProjectionMatrix();
  scene.overrideMaterial=null;renderer.setRenderTarget(colorRT);renderer.setClearColor(0xffffff,1);renderer.render(scene,camera);
  scene.overrideMaterial=normalMat;renderer.setRenderTarget(normalRT);renderer.render(scene,camera);scene.overrideMaterial=null;
  const u=plateMat.uniforms;u.tColor.value=colorRT.texture;u.tNormal.value=normalRT.texture;u.tDepth.value=colorRT.depthTexture;
@@ -278,7 +280,7 @@ function draw(){
 // ---------- the pianola roll: paper standing behind the keys, its holes sliding down to the tracker
 // bar as the notes arrive; in free play the roll is being punched and the holes rise away
 const ROLL_KEY='cws-listening-field:hands-roll:v1';
-const roll={on:false,lead:3.2,len:0.5,speed:0,group:null,slots:null,history:[],max:600};
+const roll={on:false,lead:5.0,len:0.9,speed:0,group:null,slots:null,history:[],max:800};
 roll.speed=roll.len/roll.lead;
 function buildRoll(){
  const g=new THREE.Group();g.position.set(0,0.042,-0.172);g.rotation.x=-0.95;
@@ -315,7 +317,7 @@ function updateRoll(){
  roll.slots.count=i;roll.slots.instanceMatrix.needsUpdate=true;if(roll.slots.instanceColor)roll.slots.instanceColor.needsUpdate=true;
 }
 function setRoll(on){
- roll.on=on;for(const id of ['#hf-roll','#hf-roll2'])q(id).setAttribute('aria-pressed',String(on));
+ roll.on=on;for(const id of ['#hf-roll','#hf-roll2'])q(id).setAttribute('aria-pressed',String(on));root.classList.toggle('is-roll',on);if(!exporting)makeTargets();
  try{localStorage.setItem(ROLL_KEY,on?'1':'0');}catch{}
 }
 for(const id of ['#hf-roll','#hf-roll2'])q(id).addEventListener('click',()=>setRoll(!roll.on));
@@ -644,7 +646,7 @@ async function exportVideo(){
  if(!('VideoEncoder' in window)||!('AudioEncoder' in window)){status('Exporting video needs a browser with WebCodecs (Chrome or Edge).');return;}
  exporting=true;stop();const btn=q('#hf-export');btn.textContent='Cancel export';let wasT=t;
  let cancelled=false;const cancel=()=>{cancelled=true;};btn.removeEventListener('click',exportVideo);btn.addEventListener('click',cancel);
- const fps=30,Wv=1960,Hv=700,sr=48000;
+ const fps=30,Wv=1920,Hv=roll.on?1200:686,sr=48000;
  try{
   status('Preparing the soundtrack…');
   const {Muxer,ArrayBufferTarget}=await import('https://unpkg.com/mp4-muxer@5.2.1/build/mp4-muxer.mjs');
@@ -686,7 +688,7 @@ async function exportVideo(){
 q('#hf-export').addEventListener('click',exportVideo);
 function saveStill(){
  if(!rigs.R||!keysBuilt)return;
- const Wv=2800,Hv=1000;makeTargets(Wv,Hv);draw();
+ const Wv=2800,Hv=roll.on?1750:1000;makeTargets(Wv,Hv);draw();
  cv.toBlob(blob=>{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(study?study.slug:q('#hf-name').textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-'))+(free.on?'':'-'+fmt(t).replace(':','m')+'s')+'-plate.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),60000);makeTargets();draw();status(`Saved the plate at ${Wv}×${Hv}.`);},'image/png');
 }
 for(const id of ['#hf-still','#hf-still2'])q(id).addEventListener('click',saveStill);
