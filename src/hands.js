@@ -10,6 +10,9 @@ import * as LIVE from './hands/live.js?v=1';
 
 const q=s=>document.querySelector(s);
 const PAGE=document.querySelector('#cws-hands').dataset.page||'hands';
+const EMBED=new URLSearchParams(location.search).has('embed');
+if(EMBED)document.querySelector('#cws-hands').classList.add('is-embed');
+let follow=null; // the player's clock, when embedded
 const PITCH=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
 const WHITE_PITCH=0.0235,WHITE_GAP=0.0011,WHITE_LENGTH=0.15,WHITE_FRONT_HEIGHT=0.0215,BLACK_WIDTH=0.0128,BLACK_LENGTH=0.095,BLACK_HEIGHT=0.0122,KEY_DIP=0.010,PIVOT_Z=-0.255;
 const probe=document.createElement('span');probe.style.display='none';q('#cws-hands').appendChild(probe); // inside the section that defines the palette
@@ -57,7 +60,7 @@ async function load(op,writeHistory=true){
  if(writeHistory&&location.hash.slice(1)!==piece.slug)history.pushState(null,'','#'+piece.slug);
  q('#hf-play').disabled=true;q('#hf-play').textContent='Planning…';q('#hf-time').textContent='0:00 / '+fmt(piece.duration);
  status('Reading the score and choosing hands and fingers…');
- if(audio)audio.pause();audio=new Audio(piece.audio);audio.preload='auto';
+ if(audio)audio.pause();audio=EMBED?null:new Audio(piece.audio);if(audio)audio.preload='auto';
  try{
   const result=await planStudy(piece);
   if(token!==loadToken)return;
@@ -82,7 +85,7 @@ function markMotif(){
 // ---------- scene
 const cv=q('#hf-stage');
 THREE.ColorManagement.enabled=false;
-const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:false});
+const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:false,preserveDrawingBuffer:true}); // so a still can be read back after a draw
 renderer.outputColorSpace=THREE.LinearSRGBColorSpace;
 const scene=new THREE.Scene();
 const ASPECT=14/5;
@@ -271,18 +274,23 @@ function draw(){
 
 // ---------- transport
 function loop(now){
- if(playing&&data&&!free.on){const prev=t;if(audio&&!audio.paused&&isFinite(audio.currentTime))t=audio.currentTime;else t+=((now-lastWall)/1000)*speed;if(replaying||soundIsSynth())piano.schedule(prev,t);if(t>=data.duration){t=data.duration;stop();}}
+ if(EMBED&&follow&&data){t=Math.max(0,Math.min(data.duration,follow.t+(follow.playing?(now-follow.at)/1000:0)));}
+ else if(playing&&data&&!free.on){const prev=t;if(audio&&!audio.paused&&isFinite(audio.currentTime))t=audio.currentTime;else t+=((now-lastWall)/1000)*speed;if(replaying||soundIsSynth())piano.schedule(prev,t);if(t>=data.duration){t=data.duration;stop();}}
  lastWall=now;draw();requestAnimationFrame(loop);
 }
-function start(){if(!data||free.on)return;playing=true;lastWall=performance.now();q('#hf-play').textContent='Pause';if(replaying||soundIsSynth())piano.init();if(audio){audio.muted=soundIsSynth();audio.currentTime=t;audio.playbackRate=speed;audio.play().catch(()=>{});}}
+let readying=false;
+async function start(){if(!data||free.on||readying)return;
+ if((replaying||soundIsSynth())&&SAMPLED[piano.inst]){piano.init();readying=true;q('#hf-play').textContent='Loading…';try{await piano.ready(piano.ctx,u=>status(`Loading the instrument… ${Math.round(u*100)}%`));}finally{readying=false;}status('');}
+ playing=true;lastWall=performance.now();q('#hf-play').textContent='Pause';if(replaying||soundIsSynth())piano.init();if(audio){audio.muted=soundIsSynth();audio.currentTime=t;audio.playbackRate=speed;audio.play().catch(()=>{});}}
 function stop(){playing=false;if(data)q('#hf-play').textContent='Play';if(audio)audio.pause();piano.allOff();}
 q('#hf-play').addEventListener('click',()=>playing?stop():start());
 q('#hf-restart').addEventListener('click',()=>{t=0;if(audio)audio.currentTime=0;});
 q('#hf-progress').addEventListener('input',e=>{if(!data)return;t=(e.target.value/1000)*data.duration;if(audio)audio.currentTime=t;});
 q('#hf-speed').addEventListener('change',e=>{speed=+e.target.value;if(audio)audio.playbackRate=speed;});
 q('#hf-pick').addEventListener('change',e=>load(+e.target.value));
-window.addEventListener('resize',()=>{if(!exporting)makeTargets();});
+window.addEventListener('resize',()=>{if(!exporting)makeTargets();if(free.on&&(innerWidth<620?24:36)!==span)buildScreenKeys();});
 document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT'||e.target.tagName==='BUTTON'&&e.code!=='Space')return;if(free.on){freeKey(e,true);return;}if(!data)return;if(e.code==='Space'){e.preventDefault();playing?stop():start();}if(e.key==='ArrowRight')t=Math.min(data.duration,t+(e.shiftKey?1:1/30));if(e.key==='ArrowLeft')t=Math.max(0,t-(e.shiftKey?1:1/30));});
+window.addEventListener('message',e=>{if(!EMBED||e.origin!==location.origin||e.data?.type!=='lf-hands')return;follow={t:e.data.t,playing:e.data.playing,at:performance.now()};});
 window.addEventListener('hashchange',()=>{const p=library.find(x=>x.slug===location.hash.slice(1));if(p&&p!==study)load(p.op,false);});
 
 (async()=>{
@@ -299,7 +307,7 @@ window.addEventListener('hashchange',()=>{const p=library.find(x=>x.slug===locat
   rigs.R=new Rig(gltf.scene,'R');rigs.L=new Rig(gltf.scene,'L');
   makeTargets();
   const params=new URLSearchParams(location.search);
-  if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);return;}
+  if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);const shared=location.hash.match(/^#r=([A-Za-z0-9_-]+)$/);if(shared){try{showPerformance(unb64u(shared[1]),'shared.mid','Shared recording','A shared recording');}catch{status('That shared link could not be read.');}}return;}
   const fromHash=library.find(p=>p.slug===location.hash.slice(1));
   const op=fromHash?fromHash.op:+(params.get('op')||library[0].op);
   await load(op,false);
@@ -397,7 +405,33 @@ const live={
 
 // ---------- the sound: several instruments, each a voice that can start and stop at any time on
 // any audio context (live now, or offline for an export). The piano is the Mechanical Pianist's.
-const INSTRUMENTS={piano:'Piano',epiano:'Electric piano',harpsichord:'Harpsichord',celesta:'Celesta',organ:'Organ',vibes:'Vibraphone'};
+const INSTRUMENTS={piano:'Piano',epiano:'Electric piano',harpsichord:'Harpsichord',celesta:'Celesta',organ:'Organ',vibes:'Vibraphone',synthpiano:'Piano (synthesised)'};
+// sampled instruments: one small MP3 per note from the FluidR3 General MIDI set (MIT), fetched as needed
+const SAMPLED={piano:'acoustic_grand_piano',epiano:'electric_piano_1',harpsichord:'harpsichord',celesta:'celesta',organ:'church_organ',vibes:'vibraphone'};
+const SAMPLE_BASE='https://gleitz.github.io/midi-js-soundfonts/FluidR3_GM/';
+const FLATS=['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
+const sampleFile=midi=>FLATS[midi%12]+(Math.floor(midi/12)-1);
+const sampleBytes=new Map(),sampleDecoded=new WeakMap();
+function fetchSample(inst,midi){
+ const key=inst+':'+midi;
+ if(!sampleBytes.has(key))sampleBytes.set(key,fetch(`${SAMPLE_BASE}${SAMPLED[inst]}-mp3/${sampleFile(midi)}.mp3`).then(r=>{if(!r.ok)throw new Error('sample '+r.status);return r.arrayBuffer();}).catch(e=>{sampleBytes.delete(key);throw e;}));
+ return sampleBytes.get(key);
+}
+async function ensureSample(ctx,inst,midi){
+ let m=sampleDecoded.get(ctx);if(!m){m=new Map();sampleDecoded.set(ctx,m);}
+ const key=inst+':'+midi;if(m.has(key))return m.get(key);
+ const bytes=await fetchSample(inst,midi);
+ const buf=await ctx.decodeAudioData(bytes.slice(0));m.set(key,buf);return buf;
+}
+const sampleReady=(ctx,inst,midi)=>sampleDecoded.get(ctx)?.get(inst+':'+midi)||null;
+// fetch and decode a set of notes, nearest the middle first, a few at a time
+async function preloadSamples(ctx,inst,midis,onProgress=()=>{},timeoutMs=20000){
+ if(!SAMPLED[inst])return;
+ const list=[...new Set(midis)].filter(m=>m>=21&&m<=108).sort((a,b)=>Math.abs(a-60)-Math.abs(b-60));
+ let done=0,i=0;const t0=Date.now();
+ const next=async()=>{while(i<list.length&&Date.now()-t0<timeoutMs){const m=list[i++];try{await ensureSample(ctx,inst,m);}catch{}done++;onProgress(done/list.length);}};
+ await Promise.all([next(),next(),next(),next(),next(),next()]);
+}
 const pianoBuffers=new WeakMap(); // per audio context
 function pianoBuffer(ctx,midi){let m=pianoBuffers.get(ctx);if(!m){m=new Map();pianoBuffers.set(ctx,m);}if(!m.has(midi))for(const [k,b] of LIVE.synthesizePiano(ctx,[midi]))m.set(k,b);return m.get(midi);}
 function voice(ctx,dest,name,midi,vel,at){
@@ -406,7 +440,9 @@ function voice(ctx,dest,name,midi,vel,at){
  const amp=0.15+0.85*vel*vel;
  let release=0.25,sustained=false;
  const decay=(peak,tau,floor=0.0005)=>{g.gain.setValueAtTime(0.0001,at);g.gain.linearRampToValueAtTime(peak,at+0.004);g.gain.setTargetAtTime(floor,at+0.004,tau);};
- switch(name){
+ const sample=SAMPLED[name]?sampleReady(ctx,name,midi):null;
+ if(sample){const src=ctx.createBufferSource();src.buffer=sample;src.connect(g);g.gain.value=amp*(name==='harpsichord'?0.8:1);src.start(at);nodes.push(src);release=name==='vibes'?0.5:name==='organ'?0.1:0.3;sustained=name==='organ';}
+ else switch(name==='synthpiano'?'piano':name){
   case 'piano':{const src=ctx.createBufferSource();src.buffer=pianoBuffer(ctx,midi);src.connect(g);g.gain.value=amp;src.start(at);nodes.push(src);release=0.28;break;}
   case 'epiano':{osc('sine',f,0.7);osc('sine',f*2,0.25*(1-vel*0.4));osc('sine',f*3.01,0.06);osc('triangle',f,0.12,6);decay(amp*0.9,0.55+1.8*Math.max(0,(90-midi)/60));release=0.18;break;}
   case 'harpsichord':{const lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=Math.min(12000,f*9);lp.Q.value=0.7;const o=ctx.createOscillator();o.type='sawtooth';o.frequency.value=f;const o2=ctx.createOscillator();o2.type='square';o2.frequency.value=f;o2.detune.value=3;const og=ctx.createGain();og.gain.value=0.35;const og2=ctx.createGain();og2.gain.value=0.12;o.connect(og);o2.connect(og2);og.connect(lp);og2.connect(lp);lp.connect(g);o.start(at);o2.start(at);nodes.push(o,o2);lp.frequency.setValueAtTime(Math.min(14000,f*12),at);lp.frequency.exponentialRampToValueAtTime(Math.max(300,f*2.5),at+0.6);decay(0.5+0.3*vel,0.45+0.9*Math.max(0,(80-midi)/60));release=0.08;break;}
@@ -427,16 +463,20 @@ const piano={
   const order=[];for(let d=0;d<48;d++){if(60+d<=108)order.push(60+d);if(d&&60-d>=21)order.push(60-d);}
   this.queue=order;const step=()=>{if(!this.queue.length)return;for(const m of this.queue.splice(0,3))pianoBuffer(this.ctx,m);setTimeout(step,8);};step();
  },
- noteOn(midi,vel){this.init();if(!this.ctx)return;const old=this.voices.get(midi);if(old)old.quick(this.ctx.currentTime);this.voices.set(midi,voice(this.ctx,this.master,this.inst,midi,vel,this.ctx.currentTime));this.pending.delete(midi);},
+ noteOn(midi,vel){this.init();if(!this.ctx)return;if(SAMPLED[this.inst]&&!sampleReady(this.ctx,this.inst,midi))ensureSample(this.ctx,this.inst,midi).catch(()=>{});const old=this.voices.get(midi);if(old)old.quick(this.ctx.currentTime);this.voices.set(midi,voice(this.ctx,this.master,this.inst,midi,vel,this.ctx.currentTime));this.pending.delete(midi);},
  noteOff(midi){if(this.sustain){this.pending.add(midi);return;}this.kill(midi);},
  kill(midi){const v=this.voices.get(midi);if(!v)return;v.stop(this.ctx.currentTime);this.voices.delete(midi);},
  pedal(down){this.sustain=down;rec.push('pedal',64,down?1:0);if(!down){for(const m of this.pending)this.kill(m);this.pending.clear();}},
  allOff(){for(const m of [...this.voices.keys()])this.kill(m);this.pending.clear();},
+ warm(){this.init();if(!this.ctx)return;const range=[];for(let m=36;m<=96;m++)range.push(m);preloadSamples(this.ctx,this.inst,range).catch(()=>{});},
+ // every note of the planned performance, before it plays or is exported
+ async ready(ctx,onProgress){if(!data||!SAMPLED[this.inst])return;await preloadSamples(ctx,this.inst,data.notes.map(n=>n.midi),onProgress);},
  // the planned notes as the clock passes them (replays, opened files, and studies heard on another instrument)
  schedule(prev,now){if(!data)return;for(const n of data.notes){if(n.start>prev&&n.start<=now)this.noteOn(n.midi,n.velocity);if(n.end>prev&&n.end<=now)this.kill(n.midi);}},
  // the whole performance rendered offline, for an export
- async render(sampleRate=48000){
+ async render(sampleRate=48000,onProgress){
   const dur=data.duration+1.5,octx=new OfflineAudioContext(2,Math.ceil(dur*sampleRate),sampleRate);
+  await this.ready(octx,onProgress);
   const master=octx.createGain();master.gain.value=0.8;master.connect(octx.destination);
   for(const n of data.notes)voice(octx,master,this.inst,n.midi,n.velocity,n.start).stop(n.end);
   return octx.startRendering();
@@ -450,33 +490,56 @@ function applySound(){
  if(playing&&!free.on){piano.allOff();}
 }
 q('#hf-sound').addEventListener('change',applySound);
-q('#hf-inst').addEventListener('change',e=>{piano.inst=e.target.value;q('#hf-sound').value=e.target.value;piano.allOff();live.allOff();});
+q('#hf-inst').addEventListener('change',e=>{piano.inst=e.target.value;q('#hf-sound').value=e.target.value;piano.allOff();live.allOff();piano.warm();});
 
 // ---------- recording, as a Standard MIDI File
 const rec={
- active:false,t0:0,events:[],
- push(type,midi,v){if(!this.active)return;if(!this.events.length)this.t0=performance.now();this.events.push({t:(performance.now()-this.t0)/1000,type,midi,v});refreshRecording();},
- start(){this.active=true;this.events=[];this.t0=0;refreshRecording();},
- stop(){this.active=false;live.allOff();refreshRecording();},
+ active:false,armed:false,t0:0,events:[],bpm:90,timer:null,nextBeat:0,beat:0,
+ push(type,midi,v){if(!this.active)return;const t=(performance.now()-this.t0)/1000;if(t<-0.05)return;this.events.push({t:Math.max(0,t),type,midi,v});refreshRecording();},
+ start(){
+  piano.init();this.events=[];this.bpm=Math.max(40,Math.min(208,+q('#hf-tempo').value||90));const beat=60/this.bpm;
+  const countIn=q('#hf-countin').checked,click=q('#hf-click').checked;
+  if(!countIn&&!click){this.active=true;this.t0=performance.now();refreshRecording();return;}
+  // beats scheduled on the audio clock a little ahead; the recording starts on the downbeat after the count-in
+  const ctx=piano.ctx,startAt=ctx.currentTime+0.15,beatsIn=countIn?4:0;
+  this.active=true;this.armed=true;this.t0=performance.now()+(startAt-ctx.currentTime+beatsIn*beat)*1000;
+  this.beat=0;this.nextBeat=startAt;refreshRecording();
+  const tick=()=>{
+   while(this.nextBeat<ctx.currentTime+0.25){
+    const n=this.beat,inCount=n<beatsIn;
+    if(inCount||click)this.clickAt(this.nextBeat,n%4===0||inCount&&n===0);
+    if(inCount)setTimeout(()=>{if(this.active)status(`Count-in… ${beatsIn-n}`);},Math.max(0,(this.nextBeat-ctx.currentTime)*1000));
+    else if(n===beatsIn)setTimeout(()=>{if(this.active)status('Recording.');},Math.max(0,(this.nextBeat-ctx.currentTime)*1000));
+    this.nextBeat+=beat;this.beat++;
+    if(!click&&n>=beatsIn){clearInterval(this.timer);this.timer=null;return;}
+   }
+  };
+  tick();this.timer=setInterval(tick,100);
+ },
+ clickAt(at,accent){const ctx=piano.ctx,o=ctx.createOscillator(),g=ctx.createGain();o.type='square';o.frequency.value=accent?1800:1200;g.gain.setValueAtTime(0.0001,at);g.gain.linearRampToValueAtTime(accent?0.28:0.18,at+0.002);g.gain.exponentialRampToValueAtTime(0.0001,at+0.045);o.connect(g);g.connect(piano.master);o.start(at);o.stop(at+0.06);},
+ stop(){this.active=false;this.armed=false;if(this.timer){clearInterval(this.timer);this.timer=null;}live.allOff();refreshRecording();},
  bytes(){
   const out=[],vlq=n=>{const b=[n&0x7f];while(n>>=7)b.unshift((n&0x7f)|0x80);return b;},str=s=>[...s].map(c=>c.charCodeAt(0));
-  const track=[0,0xff,0x51,3,0x07,0xa1,0x20,0,0xc0,0]; // 120 bpm, piano
+  const usq=Math.round(60e6/this.bpm),tps=480*this.bpm/60; // ticks per second at the recording's tempo
+  const track=[0,0xff,0x51,3,(usq>>16)&255,(usq>>8)&255,usq&255,0,0xc0,0];
   let last=0;
-  for(const e of this.events){const tick=Math.round(e.t*960);track.push(...vlq(Math.max(0,tick-last)));last=tick;
+  for(const e of this.events){const tick=Math.round(e.t*tps);track.push(...vlq(Math.max(0,tick-last)));last=tick;
    if(e.type==='on')track.push(0x90,e.midi,Math.max(1,Math.round(e.v*127)));else if(e.type==='off')track.push(0x80,e.midi,64);else track.push(0xb0,64,e.v?127:0);}
-  const end=(this.events.length?Math.round(this.events[this.events.length-1].t*960):0)+960;track.push(...vlq(end-last),0xff,0x2f,0);
+  const end=(this.events.length?Math.round(this.events[this.events.length-1].t*tps):0)+960;track.push(...vlq(end-last),0xff,0x2f,0);
   const be32=n=>[(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255];
   out.push(...str('MThd'),...be32(6),0,0,0,1,(480>>8)&255,480&255,...str('MTrk'),...be32(track.length),...track);
   return new Uint8Array(out);
  },
 };
 let downloadURL=null;
+const b64u=bytes=>btoa(String.fromCharCode(...bytes)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const unb64u=str=>Uint8Array.from(atob(str.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0));
 function refreshRecording(){
  const n=rec.events.filter(e=>e.type==='on').length;
  q('#hf-record').textContent=rec.active?`Stop (${n} notes)`:'Record';q('#hf-record').setAttribute('aria-pressed',String(rec.active));
  const have=!rec.active&&n>0;
  q('#hf-replay').disabled=!have;q('#hf-clear').disabled=!have&&!rec.active;
- const a=q('#hf-download');a.hidden=!have;
+ const a=q('#hf-download');a.hidden=!have;q('#hf-share').hidden=!have;
  if(have){if(downloadURL)URL.revokeObjectURL(downloadURL);downloadURL=URL.createObjectURL(new Blob([rec.bytes()],{type:'audio/midi'}));a.href=downloadURL;}
 }
 q('#hf-record').addEventListener('click',()=>{piano.init();rec.active?rec.stop():rec.start();});
@@ -503,6 +566,12 @@ async function showPerformance(bytes,name,opus,title){
  }catch(err){if(token!==loadToken)return;status('');q('#hf-error').textContent='This could not be planned: '+err.message;q('#hf-error').hidden=false;}
 }
 q('#hf-replay').addEventListener('click',()=>showPerformance(rec.bytes(),'free-play.mid','Free play','Your recording'));
+q('#hf-share').addEventListener('click',async()=>{
+ const url=location.origin+location.pathname.replace(/[^/]*$/,'')+'freeplay.html#r='+b64u(rec.bytes());
+ if(url.length>60000){status('This recording is too long to share as a link; download the MIDI instead.');return;}
+ try{await navigator.clipboard.writeText(url);status('Link copied: anyone who opens it will see the hands play your recording.');}
+ catch{history.replaceState(null,'','#r='+b64u(rec.bytes()));status('The address of this page now holds your recording: copy it from the address bar.');}
+});
 
 // ---------- opening a MIDI file: the button, or a file dropped on the stage
 async function openFile(file){
@@ -534,7 +603,7 @@ async function exportVideo(){
   if(study&&!soundIsSynth()){
    const ab=await (await fetch(study.audio)).arrayBuffer();const dctx=new (window.AudioContext||window.webkitAudioContext)();const decoded=await dctx.decodeAudioData(ab);dctx.close();
    const octx=new OfflineAudioContext(2,Math.ceil((data.duration+1.5)*sr),sr);const src=octx.createBufferSource();src.buffer=decoded;src.connect(octx.destination);src.start(0);track=await octx.startRendering();
-  }else track=await piano.render(sr);
+  }else track=await piano.render(sr,u=>status(`Loading the instrument… ${Math.round(u*100)}%`));
   const totalFrames=Math.ceil(data.duration*fps),frameUs=1e6/fps;
   const audioCodec=(await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:sr,numberOfChannels:2,bitrate:160000})).supported?'mp4a.40.2':'opus';
   const muxer=new Muxer({target:new ArrayBufferTarget(),video:{codec:'avc',width:Wv,height:Hv},audio:{codec:audioCodec==='opus'?'opus':'aac',sampleRate:sr,numberOfChannels:2},fastStart:'in-memory',firstTimestampBehavior:'offset'});
@@ -565,15 +634,22 @@ async function exportVideo(){
  finally{t=wasT;exporting=false;makeTargets();btn.textContent='Export MP4';btn.removeEventListener('click',cancel);btn.addEventListener('click',exportVideo);draw();}
 }
 q('#hf-export').addEventListener('click',exportVideo);
+function saveStill(){
+ if(!rigs.R||!keysBuilt)return;
+ const Wv=2800,Hv=1000;makeTargets(Wv,Hv);draw();
+ cv.toBlob(blob=>{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(study?study.slug:q('#hf-name').textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-'))+(free.on?'':'-'+fmt(t).replace(':','m')+'s')+'-plate.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),60000);makeTargets();draw();status(`Saved the plate at ${Wv}×${Hv}.`);},'image/png');
+}
+for(const id of ['#hf-still','#hf-still2'])q(id).addEventListener('click',saveStill);
 
 // ---------- the on-screen keyboard and the computer keyboard
 let base=48;const pointers=new Map();
+let span=36;
 function buildScreenKeys(){
- const el=q('#hf-keys');el.textContent='';
- const whites=[];for(let m=base;m<=base+36;m++)if(!KEY_BY_MIDI.get(m)?.black)whites.push(m);
+ const el=q('#hf-keys');el.textContent='';span=innerWidth<620?24:36;
+ const whites=[];for(let m=base;m<=base+span;m++)if(!KEY_BY_MIDI.get(m)?.black)whites.push(m);
  for(const m of whites){const d=document.createElement('div');d.className='hf-w';d.dataset.midi=m;if(m%12===0){const s=document.createElement('span');s.textContent=LIVE.noteName(m);d.appendChild(s);}el.appendChild(d);}
- for(let m=base;m<=base+36;m++){if(!KEY_BY_MIDI.get(m)?.black)continue;const idx=whites.filter(w=>w<m).length;const d=document.createElement('div');d.className='hf-b';d.dataset.midi=m;d.style.left=(idx/whites.length*100)+'%';el.appendChild(d);}
- q('#hf-oct').textContent=`${LIVE.noteName(base)} to ${LIVE.noteName(base+36)}`;
+ for(let m=base;m<=base+span;m++){if(!KEY_BY_MIDI.get(m)?.black)continue;const idx=whites.filter(w=>w<m).length;const d=document.createElement('div');d.className='hf-b';d.dataset.midi=m;d.style.left=(idx/whites.length*100)+'%';el.appendChild(d);}
+ q('#hf-oct').textContent=`${LIVE.noteName(base)} to ${LIVE.noteName(base+span)}`;
 }
 function screenDown(e,el){const m=+el.dataset.midi;if(pointers.get(e.pointerId)===m)return;screenUp(e);pointers.set(e.pointerId,m);el.classList.add('is-down');live.noteOn(m,0.72);}
 function screenUp(e){const m=pointers.get(e.pointerId);if(m===undefined)return;pointers.delete(e.pointerId);q('#hf-keys').querySelector(`[data-midi="${m}"]`)?.classList.remove('is-down');live.noteOff(m);}
@@ -613,7 +689,7 @@ function setFree(on){
  if(on===free.on)return;
  if(on){stop();free.on=true;root.classList.add('is-free');q('#hf-playpanel').hidden=false;q('#hf-free').setAttribute('aria-pressed','true');if(PAGE==='free'){q('#hf-free').hidden=true;q('#hf-opus').textContent='The hands follow';q('#hf-name').textContent='Free play';document.title='Free play · The Listening Field';}
   q('#hf-play').disabled=true;q('#hf-play').textContent='Live';status('Free play: the hands follow whatever you play.');
-  buildKeys(LIVE.KEYS);buildScreenKeys();refreshRecording();openMIDI();piano.inst=q('#hf-inst').value;piano.init();live.last=0;}
+  buildKeys(LIVE.KEYS);buildScreenKeys();refreshRecording();openMIDI();piano.inst=q('#hf-inst').value;piano.init();piano.warm();live.last=0;}
  else{live.allOff();if(rec.active)rec.stop();free.on=false;root.classList.remove('is-free');q('#hf-playpanel').hidden=true;q('#hf-free').setAttribute('aria-pressed','false');if(PAGE==='free')q('#hf-free').hidden=false;
   if(data){buildKeys();q('#hf-play').disabled=false;q('#hf-play').textContent='Play';status('');}else{q('#hf-play').textContent='Play';}}
 }

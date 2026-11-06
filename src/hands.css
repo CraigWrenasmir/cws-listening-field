@@ -54,3 +54,15 @@
 #cws-hands[data-page=free] #hf-sound option[value=recording]{display:none}
 #cws-hands.is-dropping #hf-stage{outline:2px dashed var(--hf-copper);outline-offset:-6px}
 @media(max-width:900px){#cws-hands .hf-bar{grid-template-columns:auto auto 1fr auto;grid-auto-flow:row dense}}
+
+#cws-hands .hf-bar label,#cws-hands .hf-playbar label{display:inline-flex;align-items:center;gap:8px;font-size:13px}
+#cws-hands .hf-bar label select,#cws-hands .hf-playbar label select{font:inherit;font-size:14px;color:var(--hf-ink);background:var(--hf-paper);border:1px solid var(--hf-line);padding:9px 12px;min-height:40px;border-radius:2px;cursor:pointer}
+#cws-hands .hf-bar label select:hover,#cws-hands .hf-playbar label select:hover{border-color:var(--hf-ink)}
+
+#cws-hands .hf-tempo input{font:inherit;font-size:14px;width:5ch;color:var(--hf-ink);background:var(--hf-paper);border:1px solid var(--hf-line);padding:9px 8px;min-height:40px;box-sizing:border-box;border-radius:2px}
+#cws-hands .hf-check{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--hf-muted);min-height:40px}
+#cws-hands .hf-check input{accent-color:var(--hf-copper);width:16px;height:16px}
+@media(max-width:620px){#cws-hands .hf-keys{height:180px}#cws-hands .hf-keys .hf-b{width:5%;margin-left:-2.5%}#cws-hands .hf-playbar{gap:8px}#cws-hands .hf-midi{margin-left:0;width:100%}}
+
+#cws-hands.is-embed .hf-header,#cws-hands.is-embed .hf-title,#cws-hands.is-embed .hf-status,#cws-hands.is-embed .hf-bar,#cws-hands.is-embed .hf-footer,#cws-hands.is-embed #hf-playpanel,#cws-hands.is-embed #hf-error{display:none}
+#cws-hands.is-embed .hf-shell{padding:0}

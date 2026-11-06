@@ -7,9 +7,9 @@
 <meta name="description" content="Free play — play a keyboard and the wooden hands of The Listening Field follow.">
 <title>Free play · The Listening Field</title>
 <link rel="stylesheet" href="src/styles.css">
-<link rel="stylesheet" href="src/hands.css?v=5">
+<link rel="stylesheet" href="src/hands.css?v=7">
 <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.186.1/build/three.module.js","three/addons/":"https://unpkg.com/three@0.186.1/examples/jsm/"}}</script>
-<script type="module" src="src/hands.js?v=5"></script>
+<script type="module" src="src/hands.js?v=7"></script>
 </head>
 <body>
 <main id="cws-hands" data-page="free">
@@ -28,14 +28,15 @@
 <span class="hf-time" id="hf-time">0:00 / 0:00</span>
 <label>Look <select id="hf-look"><option value="plate" selected>Ink plate</option><option value="wash">Ink and wash</option><option value="timber">Timber</option></select></label>
 <label>Speed <select id="hf-speed"><option>0.5</option><option selected>1</option><option>1.5</option></select></label>
-<label>Sound <select id="hf-sound"><option value="recording">Recording</option><option value="piano">Piano</option><option value="epiano">Electric piano</option><option value="harpsichord">Harpsichord</option><option value="celesta">Celesta</option><option value="organ">Organ</option><option value="vibes">Vibraphone</option></select></label>
+<label>Sound <select id="hf-sound"><option value="recording">Recording</option><option value="piano">Piano</option><option value="epiano">Electric piano</option><option value="harpsichord">Harpsichord</option><option value="celesta">Celesta</option><option value="organ">Organ</option><option value="vibes">Vibraphone</option><option value="synthpiano">Piano (synthesised)</option></select></label>
 <button type="button" id="hf-open">Open MIDI</button>
 <button type="button" id="hf-export">Export MP4</button>
+<button type="button" id="hf-still">Save image</button>
 <input type="file" id="hf-file" accept=".mid,.midi,audio/midi" hidden>
 <button type="button" id="hf-free" aria-pressed="false">Back to playing</button>
 </div>
 <section id="hf-playpanel" class="hf-playpanel" hidden aria-label="Free play">
-<div class="hf-playbar"><button type="button" id="hf-record" aria-pressed="false">Record</button><button type="button" id="hf-replay" disabled>Replay with planned fingering</button><a id="hf-download" class="hf-button" hidden download="free-play.mid">Download MIDI</a><button type="button" id="hf-clear" disabled>Clear</button><label>Sound <select id="hf-inst"><option value="piano">Piano</option><option value="epiano">Electric piano</option><option value="harpsichord">Harpsichord</option><option value="celesta">Celesta</option><option value="organ">Organ</option><option value="vibes">Vibraphone</option></select></label><button type="button" id="hf-open2">Open MIDI</button><span class="hf-midi" id="hf-midi">Looking for MIDI keyboards…</span><span class="hf-octave"><button type="button" id="hf-oct-down" aria-label="Octave down">−</button><span id="hf-oct">C3 to C6</span><button type="button" id="hf-oct-up" aria-label="Octave up">+</button></span></div>
+<div class="hf-playbar"><button type="button" id="hf-record" aria-pressed="false">Record</button><label class="hf-tempo">Tempo <input id="hf-tempo" type="number" min="40" max="208" step="1" value="90" aria-label="Tempo in beats per minute"></label><label class="hf-check"><input type="checkbox" id="hf-countin" checked> Count-in</label><label class="hf-check"><input type="checkbox" id="hf-click"> Click</label><button type="button" id="hf-replay" disabled>Replay with planned fingering</button><a id="hf-download" class="hf-button" hidden download="free-play.mid">Download MIDI</a><button type="button" id="hf-share" hidden>Share link</button><button type="button" id="hf-clear" disabled>Clear</button><label>Sound <select id="hf-inst"><option value="piano">Piano</option><option value="epiano">Electric piano</option><option value="harpsichord">Harpsichord</option><option value="celesta">Celesta</option><option value="organ">Organ</option><option value="vibes">Vibraphone</option><option value="synthpiano">Piano (synthesised)</option></select></label><button type="button" id="hf-open2">Open MIDI</button><button type="button" id="hf-still2">Save image</button><span class="hf-midi" id="hf-midi">Looking for MIDI keyboards…</span><span class="hf-octave"><button type="button" id="hf-oct-down" aria-label="Octave down">−</button><span id="hf-oct">C3 to C6</span><button type="button" id="hf-oct-up" aria-label="Octave up">+</button></span></div>
 <div id="hf-keys" class="hf-keys" role="group" aria-label="On-screen piano keyboard"></div>
 <p class="hf-hint">Play the keys above, your computer keyboard (A S D F G H J K for the white keys, W E T Y U for the black, Z and X to change octave), or a connected MIDI keyboard. Hold space for the sustain pedal.</p>
 </section>
