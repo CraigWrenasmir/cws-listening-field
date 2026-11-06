@@ -198,7 +198,7 @@ function animate(){
  if(reduced.matches){camera=targetCamera;zoom=targetZoom;}else{camera+=(targetCamera-camera)*.13;zoom+=(targetZoom-zoom)*.13;}
  if(Math.abs(camera-targetCamera)<.001)camera=targetCamera;if(Math.abs(zoom-targetZoom)<.001)zoom=targetZoom;
  renderField();
- if(!audio.paused){updateClock();syncScore();}
+ if(!audio.paused){updateClock();syncScore();syncHands();}
  if(camera!==targetCamera || zoom!==targetZoom || !audio.paused)frame=requestAnimationFrame(animate);
 }
 function kick(){if(!frame)frame=requestAnimationFrame(animate);}
@@ -249,6 +249,7 @@ async function showScore(){
 }
 function closeIndex(){q('#lf-index').hidden=true;q('#lf-index-toggle').setAttribute('aria-expanded','false');}
 function showOverview(writeHistory=true){
+ if(state.hands)showHands(false);
  playbackRequest++;playbackWanted=false;scoreRequest++;state.overview=true;state.playlist=false;state.score=false;state.kinship=false;
  q('#lf-kinship').setAttribute('aria-pressed','false');q('#lf-kinship-label').hidden=true;q('#lf-drag-label').hidden=false;q('#lf-field').classList.remove('is-family');
  audio.pause();lastActive.forEach(el=>el.classList.remove('lf-now'));lastActive=[];
@@ -273,7 +274,7 @@ function choose(index,keepPlaylist=false,writeHistory=true){
  q('#lf-tenor-legend').hidden=!trackKinds[index].includes('tenor');
  updateNavigation();q('#lf-time').textContent='0:00 / '+formatTime(data[index].duration);q('#lf-progress').value=0;q('#lf-progress').max=data[index].duration;q('#lf-progress').setAttribute('aria-valuetext','0:00 of '+formatTime(data[index].duration));
  [['pdf','pdf'],['audio','audio'],['midi','midi'],['xml','xml']].forEach(([id,field])=>{q('#lf-download-'+id).href=data[index][field];});
- q('#lf-hands').href='hands.html#'+data[index].slug;
+ q('#lf-hands-open').href='hands.html#'+data[index].slug;if(state.hands)loadHands();
  if(writeHistory&&location.hash.slice(1)!==data[index].slug)history[keepPlaylist&&!fromOverview?'replaceState':'pushState'](null,'','#'+data[index].slug);
  document.title=names[index]+' · CWS Op. '+data[index].op+' · The Listening Field';
  root.querySelectorAll('[data-work]').forEach(el=>el.setAttribute('aria-current',String(Number(el.dataset.work)===index)));
@@ -325,6 +326,14 @@ q('#lf-path-route').addEventListener('change',()=>{
 });
 renderListeningPath();
 q('#lf-progress').addEventListener('input',()=>{if(audio.readyState>0){audio.currentTime=Number(q('#lf-progress').value);updateClock();syncScore();kick();}});
+// the hands: the plate page embedded under the field, following this player's clock
+const handsFrame=q('#lf-hands-frame');
+function loadHands(){const slug=data[state.selected].slug;if(handsFrame.dataset.slug===slug)return;handsFrame.dataset.slug=slug;handsFrame.src='hands.html?embed=1#'+slug;}
+function syncHands(){if(!state.hands||!handsFrame.contentWindow)return;try{handsFrame.contentWindow.postMessage({type:'lf-hands',t:audio.currentTime,playing:!audio.paused},location.origin);}catch{}}
+function showHands(on){state.hands=on;q('#lf-hands').setAttribute('aria-pressed',String(on));q('#lf-hands-shell').hidden=!on;if(on){loadHands();syncHands();}else{handsFrame.removeAttribute('src');handsFrame.dataset.slug='';}}
+q('#lf-hands').addEventListener('click',()=>showHands(!state.hands));
+for(const ev of ['play','pause','seeked'])audio.addEventListener(ev,syncHands);
+handsFrame.addEventListener('load',syncHands);
 q('#lf-score-toggle').addEventListener('click',()=>{state.score=!state.score;showScore();});
 q('#lf-kinship').addEventListener('click',()=>{state.kinship=!state.kinship;q('#lf-kinship').setAttribute('aria-pressed',String(state.kinship));q('#lf-kinship-label').hidden=!state.kinship;q('#lf-drag-label').hidden=state.kinship;q('#lf-field').classList.toggle('is-family',state.kinship);resize();});
 q('#lf-prev').addEventListener('click',()=>move(-1));q('#lf-next').addEventListener('click',()=>move(1));
