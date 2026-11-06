@@ -22,6 +22,6 @@ export async function publicationFiles(root){
   assert(info.size<90*1024*1024,'Oversized publication file: '+relative);
   files.push({path:relative,bytes:info.size});
  }
- for(const name of ['.nojekyll','CNAME','index.html','kinship.html','hands.html','src','library.json','data/series.json','pieces','downloads','licenses'])await walk(name);
+ for(const name of ['.nojekyll','CNAME','index.html','kinship.html','hands.html','freeplay.html','src','library.json','data/series.json','pieces','downloads','licenses'])await walk(name);
  return files;
 }

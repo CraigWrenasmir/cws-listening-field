@@ -21,7 +21,7 @@ for(const p of data){
  assert.deepEqual(motif.map(e=>e.p%12),p.motif.pitches.map(n=>pitchClass[n]),'Motif mismatch in '+p.title);
  for(const file of [p.audio,p.pdf,p.midi,p.xml,...p.scores]){assert(!file.includes('..'));assert((await stat(new URL(localAssetPath(file),root))).size>0);}
 }
-for(const [page,script] of [['index.html','src/app.js'],['kinship.html','src/kinship.js'],['hands.html','src/hands.js']]){
+for(const [page,script] of [['index.html','src/app.js'],['kinship.html','src/kinship.js'],['hands.html','src/hands.js'],['freeplay.html','src/hands.js']]){
 const html=await readFile(new URL(page,root),'utf8'),js=await readFile(new URL(script,root),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
 for(const [,id] of js.matchAll(/q\('#([^']+)'\)/g))assert(ids.includes(id),'Missing DOM element '+id);
