@@ -7,9 +7,9 @@
 <meta name="description" content="Hands — wooden hands play the piano studies of The Listening Field, drawn as an engraved plate.">
 <title>Hands · The Listening Field</title>
 <link rel="stylesheet" href="src/styles.css">
-<link rel="stylesheet" href="src/hands.css?v=2">
+<link rel="stylesheet" href="src/hands.css?v=3">
 <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.186.1/build/three.module.js","three/addons/":"https://unpkg.com/three@0.186.1/examples/jsm/"}}</script>
-<script type="module" src="src/hands.js?v=2"></script>
+<script type="module" src="src/hands.js?v=3"></script>
 </head>
 <body>
 <main id="cws-hands">
@@ -28,9 +28,14 @@
 <span class="hf-time" id="hf-time">0:00 / 0:00</span>
 <label>Look <select id="hf-look"><option value="plate" selected>Ink plate</option><option value="wash">Ink and wash</option><option value="timber">Timber</option></select></label>
 <label>Speed <select id="hf-speed"><option>0.5</option><option selected>1</option><option>1.5</option></select></label>
+<button type="button" id="hf-free" aria-pressed="false">Free play</button>
 </div>
+<section id="hf-playpanel" class="hf-playpanel" hidden aria-label="Free play">
+<div class="hf-playbar"><button type="button" id="hf-record" aria-pressed="false">Record</button><button type="button" id="hf-replay" disabled>Replay with planned fingering</button><a id="hf-download" class="hf-button" hidden download="free-play.mid">Download MIDI</a><button type="button" id="hf-clear" disabled>Clear</button><span class="hf-midi" id="hf-midi">Looking for MIDI keyboards…</span><span class="hf-octave"><button type="button" id="hf-oct-down" aria-label="Octave down">−</button><span id="hf-oct">C3 to C6</span><button type="button" id="hf-oct-up" aria-label="Octave up">+</button></span></div>
+<div id="hf-keys" class="hf-keys" role="group" aria-label="On-screen piano keyboard"></div>
+<p class="hf-hint">Play the keys above, your computer keyboard (A S D F G H J K for the white keys, W E T Y U for the black, Z and X to change octave), or a connected MIDI keyboard. Hold space for the sustain pedal.</p>
+</section>
 <footer class="hf-footer"><div><a id="hf-player" href="index.html">Open in the player</a> · <a href="kinship.html">Kinship</a></div><div class="hf-kin" id="hf-kin"></div></footer>
-<p class="hf-note">Two wooden hands, carved ash on brass pins, play each study from its own MIDI. Which hand and finger takes each note, where the wrist travels and when it starts to move are worked out in your browser by the Mechanical Pianist's planner. The drawing is made fresh each frame: ink where surfaces meet, hatching where the light falls away. Copper marks the phrase this study inherits from its parent, wherever it recurs.</p>
 <p id="hf-error" role="alert" hidden>The hands could not load. Please reload.</p>
 </section>
 </main>
