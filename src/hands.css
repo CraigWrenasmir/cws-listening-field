@@ -27,3 +27,20 @@
 #cws-hands [hidden]{display:none}
 @media(max-width:620px){#cws-hands .hf-header,#cws-hands .hf-title{padding-left:20px;padding-right:20px}#cws-hands .hf-shell{padding:0 20px}#cws-hands .hf-title{flex-direction:column;align-items:flex-start}#cws-hands .hf-stamp{text-align:left}#cws-hands .hf-bar{grid-template-columns:auto auto 1fr;grid-auto-rows:auto}}
 @media(prefers-reduced-motion:reduce){#cws-hands .hf-play{transition:none}}
+
+#cws-hands .hf-playpanel{padding:12px 0 6px;border-top:1px solid var(--hf-line)}
+#cws-hands .hf-playbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-bottom:12px}
+#cws-hands .hf-playbar button[aria-pressed=true]{border-color:var(--hf-copper);color:var(--hf-copper)}
+#cws-hands .hf-button{display:inline-flex;align-items:center;font:inherit;color:var(--hf-ink);border:1px solid var(--hf-line);padding:9px 16px;border-radius:2px;text-decoration:none;min-height:40px;box-sizing:border-box}
+#cws-hands .hf-midi{font-family:monospace;font-size:12px;letter-spacing:.06em;color:var(--hf-muted);margin-left:auto}
+#cws-hands .hf-octave{display:inline-flex;align-items:center;gap:8px;font-family:monospace;font-size:12px;color:var(--hf-muted)}
+#cws-hands .hf-octave button{padding:4px 10px;min-height:0}
+#cws-hands .hf-keys{position:relative;height:120px;display:flex;user-select:none;touch-action:none}
+#cws-hands .hf-keys .hf-w{flex:1;border:1px solid var(--hf-line);border-right:none;background:var(--hf-paper);position:relative;box-sizing:border-box;cursor:pointer}
+#cws-hands .hf-keys .hf-w:last-child{border-right:1px solid var(--hf-line)}
+#cws-hands .hf-keys .hf-w span{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-family:monospace;font-size:10px;color:var(--hf-muted)}
+#cws-hands .hf-keys .hf-b{position:absolute;top:0;width:3.2%;height:62%;margin-left:-1.6%;background:var(--hf-ink);border:1px solid var(--hf-paper);box-sizing:border-box;cursor:pointer;z-index:1}
+#cws-hands .hf-keys .hf-w.is-down{background:var(--hf-line)}
+#cws-hands .hf-keys .hf-b.is-down{background:var(--hf-copper)}
+#cws-hands .hf-hint{font-family:Georgia,serif;font-style:italic;color:var(--hf-muted);font-size:13px;padding:10px 0 0;margin:0}
+#cws-hands.is-free .hf-stamp label,#cws-hands.is-free #hf-progress,#cws-hands.is-free #hf-time,#cws-hands.is-free #hf-speed,#cws-hands.is-free .hf-bar label:last-of-type{display:none}
