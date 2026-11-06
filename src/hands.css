@@ -49,3 +49,8 @@
 #cws-hands[data-page=free]:not(.is-replay) .hf-bar{display:none}
 #cws-hands[data-page=free].is-free .hf-bar{display:none}
 #cws-hands[data-page=free].is-replay:not(.is-free) .hf-bar{display:grid}
+
+#cws-hands .hf-bar{grid-template-columns:auto auto 1fr auto auto auto auto auto auto}
+#cws-hands[data-page=free] #hf-sound option[value=recording]{display:none}
+#cws-hands.is-dropping #hf-stage{outline:2px dashed var(--hf-copper);outline-offset:-6px}
+@media(max-width:900px){#cws-hands .hf-bar{grid-template-columns:auto auto 1fr auto;grid-auto-flow:row dense}}
