@@ -83,7 +83,8 @@ THREE.ColorManagement.enabled=false;
 const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:false,alpha:false});
 renderer.outputColorSpace=THREE.LinearSRGBColorSpace;
 const scene=new THREE.Scene();
-const camera=new THREE.PerspectiveCamera(30,16/9,0.05,5);
+const ASPECT=14/5;
+const camera=new THREE.PerspectiveCamera(19,ASPECT,0.05,5);
 scene.add(new THREE.HemisphereLight(0xffffff,0x777766,1.2));
 const keyLight=new THREE.DirectionalLight(0xffffff,2.2);keyLight.position.set(-0.6,1.0,0.5);scene.add(keyLight);
 const fillLight=new THREE.DirectionalLight(0xffffff,0.5);fillLight.position.set(0.5,0.4,-0.3);scene.add(fillLight);
@@ -175,7 +176,7 @@ const normalMat=new THREE.MeshNormalMaterial();
 let W=2,H=2,colorRT,normalRT;
 function makeTargets(){
  const dpr=Math.min(2,window.devicePixelRatio||1);
- W=Math.max(2,Math.round(cv.clientWidth*dpr));H=Math.max(2,Math.round(cv.clientWidth*9/16*dpr));
+ W=Math.max(2,Math.round(cv.clientWidth*dpr));H=Math.max(2,Math.round(cv.clientWidth/ASPECT*dpr));
  renderer.setSize(W,H,false);
  colorRT?.dispose();normalRT?.dispose();
  colorRT=new THREE.WebGLRenderTarget(W,H,{depthTexture:new THREE.DepthTexture(W,H,THREE.UnsignedIntType)});
@@ -247,9 +248,10 @@ function draw(){
  const sounding=new Map();for(const n of data.notes)if(n.start<=t&&t<n.keyEnd)sounding.set(n.midi,n);
  for(const [midi,m] of keyMeshes){const d=Math.max(dip.get(midi)||0,m.geometry.userData.restDip);m.rotation.x=-d*KEY_DIP/(-PIVOT_Z);const n=sounding.get(midi);m.material=n?(n.motif?KEY_MOTIF:KEY_PRESS):(m.geometry.userData.black?KEY_BLACK:KEY_WHITE);}
  const cx=(f.L.wrist[0]+f.R.wrist[0])/2,spread=Math.abs(f.L.wrist[0]-f.R.wrist[0]);
- const want=new THREE.Vector3(cx,0.50+spread*0.35,0.40+spread*0.3),wantAt=new THREE.Vector3(cx,0,0);
+ // the frame: the keyboard along the top edge, the wrists in the middle, the forearms leaving the bottom
+ const want=new THREE.Vector3(cx,0.46+spread*0.3,0.40+spread*0.25),wantAt=new THREE.Vector3(cx,0.0,0.01);
  const ease=reducedMotion?1:0.03;camPos.lerp(want,ease);camTarget.lerp(wantAt,ease);
- camera.position.copy(camPos);camera.lookAt(camTarget);camera.aspect=16/9;camera.updateProjectionMatrix();
+ camera.position.copy(camPos);camera.lookAt(camTarget);camera.aspect=ASPECT;camera.updateProjectionMatrix();
  scene.overrideMaterial=null;renderer.setRenderTarget(colorRT);renderer.setClearColor(0xffffff,1);renderer.render(scene,camera);
  scene.overrideMaterial=normalMat;renderer.setRenderTarget(normalRT);renderer.render(scene,camera);scene.overrideMaterial=null;
  const u=plateMat.uniforms;u.tColor.value=colorRT.texture;u.tNormal.value=normalRT.texture;u.tDepth.value=colorRT.depthTexture;
