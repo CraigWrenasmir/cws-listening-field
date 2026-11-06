@@ -190,12 +190,12 @@ function makeTargets(width,height){
 }
 const quadScene=new THREE.Scene(),quadCam=new THREE.OrthographicCamera(-1,1,1,-1,0,1);
 const plateMat=new THREE.ShaderMaterial({
- uniforms:{tColor:{value:null},tNormal:{value:null},tDepth:{value:null},res:{value:new THREE.Vector2()},paper:{value:new THREE.Color()},ink:{value:new THREE.Color()},copper:{value:new THREE.Color()},near:{value:0.05},far:{value:5},mode:{value:0}},
+ uniforms:{tColor:{value:null},tNormal:{value:null},tDepth:{value:null},res:{value:new THREE.Vector2()},paper:{value:new THREE.Color()},ink:{value:new THREE.Color()},copper:{value:new THREE.Color()},lower:{value:new THREE.Color()},near:{value:0.05},far:{value:5},mode:{value:0}},
  vertexShader:`varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }`,
  fragmentShader:`
   precision highp float;
   varying vec2 vUv;
-  uniform sampler2D tColor, tNormal, tDepth; uniform vec2 res; uniform vec3 paper, ink, copper; uniform float near, far; uniform int mode;
+  uniform sampler2D tColor, tNormal, tDepth; uniform vec2 res; uniform vec3 paper, ink, copper, lower; uniform float near, far; uniform int mode;
   float lin(float z){ float zn = 2.0 * z - 1.0; return 2.0 * near * far / (far + near - zn * (far - near)); }
   float depthAt(vec2 uv){ return lin(texture2D(tDepth, uv).x); }
   float lum(vec3 c){ return dot(c, vec3(0.299, 0.587, 0.114)); }
@@ -227,7 +227,8 @@ const plateMat=new THREE.ShaderMaterial({
    if (background) hatch = 0.0;
    bool pressed = col.b > 0.6 && col.r < 0.25 && col.g < 0.25;
    bool motif = col.r > 0.6 && col.g < 0.25 && col.b < 0.25;
-   vec3 tint = motif ? copper : ink;
+   bool left = col.g > 0.6 && col.r < 0.25 && col.b < 0.25;
+   vec3 tint = motif ? copper : left ? lower : ink;
    vec3 c = paper;
    if (mode == 2) { c = background ? paper : col.rgb; c = mix(c, ink, edge * 0.85); }
    else {
@@ -252,17 +253,19 @@ function draw(){
  if(free.on){f=live.frame();sounding=live.sounding;}
  else{if(!data)return;f=frameAt(t);sounding=new Map();for(const n of data.notes)if(n.start<=t&&t<n.keyEnd)sounding.set(n.midi,n);}
  rigs.R.apply(f.R);rigs.L.apply(f.L);
+ updateRoll();
  const dip=new Map();for(let i=0;i<f.dips.length;i+=2)dip.set(f.dips[i]+21,f.dips[i+1]);
  for(const [midi,m] of keyMeshes){const d=Math.max(dip.get(midi)||0,m.geometry.userData.restDip);m.rotation.x=-d*KEY_DIP/(-PIVOT_Z);const n=sounding.get(midi);m.material=n?(n.motif?KEY_MOTIF:KEY_PRESS):(m.geometry.userData.black?KEY_BLACK:KEY_WHITE);}
  const cx=(f.L.wrist[0]+f.R.wrist[0])/2,spread=Math.abs(f.L.wrist[0]-f.R.wrist[0]);
  // the frame: the keyboard along the top edge, the wrists in the middle, the forearms leaving the bottom
- const want=new THREE.Vector3(cx,0.46+spread*0.3,0.40+spread*0.25),wantAt=new THREE.Vector3(cx,0.0,0.01);
+ const want=roll.on?new THREE.Vector3(cx,0.56+spread*0.3,0.50+spread*0.25):new THREE.Vector3(cx,0.46+spread*0.3,0.40+spread*0.25),wantAt=roll.on?new THREE.Vector3(cx,0.09,-0.10):new THREE.Vector3(cx,0.0,0.01);
+ camera.fov=roll.on?23:19;
  const ease=reducedMotion?1:0.03;camPos.lerp(want,ease);camTarget.lerp(wantAt,ease);
  camera.position.copy(camPos);camera.lookAt(camTarget);camera.aspect=ASPECT;camera.updateProjectionMatrix();
  scene.overrideMaterial=null;renderer.setRenderTarget(colorRT);renderer.setClearColor(0xffffff,1);renderer.render(scene,camera);
  scene.overrideMaterial=normalMat;renderer.setRenderTarget(normalRT);renderer.render(scene,camera);scene.overrideMaterial=null;
  const u=plateMat.uniforms;u.tColor.value=colorRT.texture;u.tNormal.value=normalRT.texture;u.tDepth.value=colorRT.depthTexture;
- u.res.value.set(W,H);u.paper.value=cssColor('--hf-paper');u.ink.value=cssColor('--hf-ink');u.copper.value=cssColor('--hf-copper');
+ u.res.value.set(W,H);u.paper.value=cssColor('--hf-paper');u.ink.value=cssColor('--hf-ink');u.copper.value=cssColor('--hf-copper');u.lower.value=cssColor('--hf-lower');
  u.mode.value={plate:0,wash:1,timber:2}[q('#hf-look').value];
  renderer.setRenderTarget(null);renderer.render(quadScene,quadCam);
  if(!free.on&&data){
@@ -271,6 +274,52 @@ function draw(){
   q('#hf-progress').setAttribute('aria-valuetext',fmt(t)+' of '+fmt(data.duration));
  }
 }
+
+// ---------- the pianola roll: paper standing behind the keys, its holes sliding down to the tracker
+// bar as the notes arrive; in free play the roll is being punched and the holes rise away
+const ROLL_KEY='cws-listening-field:hands-roll:v1';
+const roll={on:false,lead:3.2,len:0.5,speed:0,group:null,slots:null,history:[],max:600};
+roll.speed=roll.len/roll.lead;
+function buildRoll(){
+ const g=new THREE.Group();g.position.set(0,0.042,-0.172);g.rotation.x=-0.95;
+ // the paper, a shade below the page so its ruling and edges draw; wooden rails either side; the tracker bar; the spool
+ const PAPER=new THREE.MeshStandardMaterial({color:0xd8d3c3,roughness:0.95}),WOOD=new THREE.MeshStandardMaterial({color:0x6a5a48,roughness:0.8}),DARK=new THREE.MeshStandardMaterial({color:0x2a3434,roughness:0.6});
+ const paper=new THREE.Mesh(new THREE.PlaneGeometry(1.26,roll.len),PAPER);paper.position.set(0,roll.len/2,0);g.add(paper);
+ for(const sx of [-1,1]){const rail=new THREE.Mesh(new THREE.BoxGeometry(0.018,roll.len+0.03,0.02),WOOD);rail.position.set(sx*0.60,roll.len/2,0.0);g.add(rail);}
+ // ruling across the paper at every beat of travel, faint lines the plate picks up as creases
+ for(let y=0.08;y<roll.len;y+=0.08){const rule=new THREE.Mesh(new THREE.BoxGeometry(1.26,0.0012,0.0015),new THREE.MeshStandardMaterial({color:0xb8b2a2,roughness:0.95}));rule.position.set(0,y,0.0008);g.add(rule);}
+ const bar=new THREE.Mesh(new THREE.BoxGeometry(1.30,0.008,0.016),DARK);bar.position.set(0,0.0,0.004);g.add(bar);
+ const spool=new THREE.Mesh(new THREE.CylinderGeometry(0.026,0.026,1.32,24),WOOD);spool.rotation.z=Math.PI/2;spool.position.set(0,roll.len+0.012,-0.012);g.add(spool);
+ const slots=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshStandardMaterial({roughness:0.7}),roll.max);
+ slots.count=0;slots.frustumCulled=false;g.add(slots);
+ roll.group=g;roll.slots=slots;g.visible=roll.on;scene.add(g);
+}
+const slotM=new THREE.Matrix4(),slotC=new THREE.Color();
+const SLOT_RIGHT=new THREE.Color(0x1c2626),SLOT_LEFT=new THREE.Color(0x00ff00),SLOT_MOTIF=new THREE.Color(0xff0000);
+function placeSlot(i,midi,y0,y1,color){
+ const k=KEY_BY_MIDI.get(midi);if(!k)return false;
+ const w=(k.black?BLACK_WIDTH:WHITE_PITCH-WHITE_GAP)*0.78;
+ slotM.makeScale(w,y1-y0,0.006);slotM.setPosition(k.x,(y0+y1)/2,0.004);
+ roll.slots.setMatrixAt(i,slotM);roll.slots.setColorAt(i,color);return true;
+}
+function updateRoll(){
+ if(!roll.group)return;roll.group.visible=roll.on;if(!roll.on)return;
+ let i=0;const L=roll.len,v=roll.speed;
+ if(free.on){
+  const now=performance.now()/1000;
+  roll.history=roll.history.filter(e=>(e.off??now)>now-roll.lead-1);
+  for(const e of roll.history){if(i>=roll.max)break;const y0=Math.max(0,(now-(e.off??now))*v),y1=Math.min(L,(now-e.on)*v);if(y1-y0<0.003)continue;if(placeSlot(i,e.midi,y0,y1,e.hand==='L'?SLOT_LEFT:SLOT_RIGHT))i++;}
+ }else if(data){
+  for(const n of data.notes){if(i>=roll.max)break;if(n.start>t+roll.lead||n.end<t)continue;const y0=Math.max(0,(n.start-t)*v),y1=Math.min(L,(n.end-t)*v);if(y1-y0<0.003)continue;if(placeSlot(i,n.midi,y0,y1,n.motif?SLOT_MOTIF:n.hand==='L'?SLOT_LEFT:SLOT_RIGHT))i++;}
+ }
+ roll.slots.count=i;roll.slots.instanceMatrix.needsUpdate=true;if(roll.slots.instanceColor)roll.slots.instanceColor.needsUpdate=true;
+}
+function setRoll(on){
+ roll.on=on;for(const id of ['#hf-roll','#hf-roll2'])q(id).setAttribute('aria-pressed',String(on));
+ try{localStorage.setItem(ROLL_KEY,on?'1':'0');}catch{}
+}
+for(const id of ['#hf-roll','#hf-roll2'])q(id).addEventListener('click',()=>setRoll(!roll.on));
+try{if(localStorage.getItem(ROLL_KEY)==='1')setRoll(true);}catch{}
 
 // ---------- transport
 function loop(now){
@@ -305,6 +354,7 @@ window.addEventListener('hashchange',()=>{const p=library.find(x=>x.slug===locat
   for(const p of library){const o=document.createElement('option');o.value=p.op;o.textContent=`Op. ${p.op} · ${p.title}`;sel.appendChild(o);}
   gltf.scene.traverse(o=>{if(o.isMesh)o.material.side=THREE.FrontSide;});
   rigs.R=new Rig(gltf.scene,'R');rigs.L=new Rig(gltf.scene,'L');
+  buildRoll();
   makeTargets();
   const params=new URLSearchParams(location.search);
   if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);const shared=location.hash.match(/^#r=([A-Za-z0-9_-]+)$/);if(shared){try{showPerformance(unb64u(shared[1]),'shared.mid','Shared recording','A shared recording');}catch{status('That shared link could not be read.');}}return;}
@@ -363,13 +413,13 @@ const live={
   let cl=bl.cost+(midi>=60?0.03:0)+(kx>R.x+0.02?0.25:0),cr=br.cost+(midi<60?0.03:0)+(kx<L.x-0.02?0.25:0);
   const hand=cl<=cr?L:R,b=cl<=cr?bl:br;
   if(hand.fingers[b.f]){this.noteOff(hand.fingers[b.f]);}
-  hand.fingers[b.f]=midi;hand.since[b.f]=++this.counter;this.held.set(midi,{hand,f:b.f});
+  hand.fingers[b.f]=midi;hand.since[b.f]=++this.counter;const entry={midi,hand:hand.h,on:performance.now()/1000,off:null};roll.history.push(entry);this.held.set(midi,{hand,f:b.f,entry});
   this.sounding.set(midi,{motif:false});this.retarget(hand);
   piano.noteOn(midi,vel);rec.push('on',midi,vel);
  },
  noteOff(midi){
   const h=this.held.get(midi);if(!h)return;
-  h.hand.fingers[h.f]=null;this.held.delete(midi);this.sounding.delete(midi);this.retarget(h.hand);
+  h.hand.fingers[h.f]=null;if(h.entry)h.entry.off=performance.now()/1000;this.held.delete(midi);this.sounding.delete(midi);this.retarget(h.hand);
   piano.noteOff(midi);rec.push('off',midi,0);
  },
  allOff(){for(const midi of [...this.held.keys()])this.noteOff(midi);},
