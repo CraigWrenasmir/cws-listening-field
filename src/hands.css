@@ -71,3 +71,7 @@
 #cws-hands #hf-roll[aria-pressed=true],#cws-hands #hf-roll2[aria-pressed=true]{border-color:var(--hf-copper);color:var(--hf-copper)}
 
 #cws-hands.is-roll #hf-stage{aspect-ratio:16/10}
+
+#cws-hands{touch-action:manipulation}
+#cws-hands #hf-stage,#cws-hands .hf-keys{touch-action:none}
+#cws-hands button,#cws-hands select,#cws-hands input,#cws-hands a{touch-action:manipulation}
