@@ -359,7 +359,10 @@ window.addEventListener('hashchange',()=>{const p=library.find(x=>x.slug===locat
   buildRoll();
   makeTargets();
   const params=new URLSearchParams(location.search);
-  if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);const shared=location.hash.match(/^#r=([A-Za-z0-9_-]+)$/);if(shared){try{showPerformance(unb64u(shared[1]),'shared.mid','Shared recording','A shared recording');}catch{status('That shared link could not be read.');}}return;}
+  if(PAGE==='free'){setFree(true);requestAnimationFrame(loop);
+   // a MIDI file by address: ?midi=<same-origin path>, for auditions
+   const fileParam=params.get('midi');if(fileParam&&!/^(https?:)?\/\//.test(fileParam)){fetch(fileParam).then(r=>{if(!r.ok)throw new Error('file '+r.status);return r.arrayBuffer();}).then(buf=>showPerformance(new Uint8Array(buf),fileParam.split('/').pop(),'Audition',fileParam.split('/').pop().replace(/\.midi?$/i,'').replace(/[_-]+/g,' '))).catch(e=>status('The file could not be opened: '+e.message));return;}
+   const shared=location.hash.match(/^#r=([A-Za-z0-9_-]+)$/);if(shared){try{showPerformance(unb64u(shared[1]),'shared.mid','Shared recording','A shared recording');}catch{status('That shared link could not be read.');}}return;}
   const fromHash=library.find(p=>p.slug===location.hash.slice(1));
   const op=fromHash?fromHash.op:+(params.get('op')||library[0].op);
   await load(op,false);
@@ -643,45 +646,41 @@ document.addEventListener('drop',e=>{root.classList.remove('is-dropping');const 
 let exporting=false;
 async function exportVideo(){
  if(!data||exporting)return;
- if(!('VideoEncoder' in window)||!('AudioEncoder' in window)){status('Exporting video needs a browser with WebCodecs (Chrome or Edge).');return;}
+ if(!('VideoEncoder' in window)){status('Exporting video needs a browser with WebCodecs (Chrome, Edge, or a recent Safari).');return;}
  exporting=true;stop();const btn=q('#hf-export');btn.textContent='Cancel export';let wasT=t;
  let cancelled=false;const cancel=()=>{cancelled=true;};btn.removeEventListener('click',exportVideo);btn.addEventListener('click',cancel);
  const fps=30,Wv=1920,Hv=roll.on?1200:686,sr=48000;
  try{
   status('Preparing the soundtrack…');
-  const {Muxer,ArrayBufferTarget}=await import('https://unpkg.com/mp4-muxer@5.2.1/build/mp4-muxer.mjs');
-  // the soundtrack: the recording when there is one and it is chosen, otherwise the instrument
+  // Mediabunny muxes and drives the encoders; audio is AAC where the browser can make it, otherwise plain PCM, which every player understands
+  const MB=await import('https://cdn.jsdelivr.net/npm/mediabunny@1.65.2/+esm');
+  const {Output,Mp4OutputFormat,BufferTarget,CanvasSource,AudioBufferSource,Quality,canEncodeAudio}=MB;
   let track;
   if(study&&!soundIsSynth()){
    const ab=await (await fetch(study.audio)).arrayBuffer();const dctx=new (window.AudioContext||window.webkitAudioContext)();const decoded=await dctx.decodeAudioData(ab);dctx.close();
    const octx=new OfflineAudioContext(2,Math.ceil((data.duration+1.5)*sr),sr);const src=octx.createBufferSource();src.buffer=decoded;src.connect(octx.destination);src.start(0);track=await octx.startRendering();
   }else track=await piano.render(sr,u=>status(`Loading the instrument… ${Math.round(u*100)}%`));
-  const totalFrames=Math.ceil(data.duration*fps),frameUs=1e6/fps;
-  const audioCodec=(await AudioEncoder.isConfigSupported({codec:'mp4a.40.2',sampleRate:sr,numberOfChannels:2,bitrate:160000})).supported?'mp4a.40.2':'opus';
-  const muxer=new Muxer({target:new ArrayBufferTarget(),video:{codec:'avc',width:Wv,height:Hv},audio:{codec:audioCodec==='opus'?'opus':'aac',sampleRate:sr,numberOfChannels:2},fastStart:'in-memory',firstTimestampBehavior:'offset'});
-  const venc=new VideoEncoder({output:(c,m)=>muxer.addVideoChunk(c,m),error:e=>{throw e;}});
-  const vcfg={codec:'avc1.640028',width:Wv,height:Hv,bitrate:9e6,framerate:fps};
-  if(!(await VideoEncoder.isConfigSupported(vcfg)).supported)vcfg.codec='avc1.4d0028';
-  venc.configure(vcfg);
-  const aenc=new AudioEncoder({output:(c,m)=>muxer.addAudioChunk(c,m),error:e=>{throw e;}});
-  aenc.configure({codec:audioCodec,sampleRate:sr,numberOfChannels:2,bitrate:160000});
-  // audio in 1024-frame pieces, planar
-  const L=track.getChannelData(0),R=track.getChannelData(1),N=Math.min(track.length,Math.ceil((data.duration+1)*sr));
-  for(let i=0;i<N;i+=1024){const n=Math.min(1024,N-i);const buf=new Float32Array(n*2);buf.set(L.subarray(i,i+n),0);buf.set(R.subarray(i,i+n),n);aenc.encode(new AudioData({format:'f32-planar',sampleRate:sr,numberOfFrames:n,numberOfChannels:2,timestamp:Math.round(i/sr*1e6),data:buf}));}
-  // video: the stage at export size, every frame at its exact time
+  const audioCodec=(await canEncodeAudio('aac',{numberOfChannels:2,sampleRate:sr,quality:new Quality({bitrate:160e3})}))?'aac':'pcm-s16';
+  const output=new Output({format:new Mp4OutputFormat({fastStart:'in-memory'}),target:new BufferTarget()});
+  const videoSource=new CanvasSource(cv,{codec:'avc',quality:new Quality({bitrate:9e6}),keyFrameInterval:5});
+  output.addVideoTrack(videoSource,{frameRate:fps});
+  const audioSource=new AudioBufferSource({codec:audioCodec,quality:new Quality({bitrate:160e3})});
+  output.addAudioTrack(audioSource);
+  await output.start();
+  await audioSource.add(track);audioSource.close();
+  const totalFrames=Math.ceil(data.duration*fps);
   makeTargets(Wv,Hv);
-  wasT=t;
   for(let i=0;i<totalFrames;i++){
    if(cancelled)throw new Error('cancelled');
    t=i/fps;draw();
-   const frame=new VideoFrame(cv,{timestamp:Math.round(i*frameUs),duration:Math.round(frameUs)});
-   venc.encode(frame,{keyFrame:i%(fps*5)===0});frame.close();
-   if(i%10===0){status(`Exporting video… ${Math.round(100*i/totalFrames)}%`);while(venc.encodeQueueSize>8)await new Promise(r=>setTimeout(r,5));await new Promise(r=>setTimeout(r,0));}
+   await videoSource.add(i/fps,1/fps);
+   if(i%10===0){status(`Exporting video… ${Math.round(100*i/totalFrames)}%`);await new Promise(r=>setTimeout(r,0));}
   }
-  status('Finishing the file…');await venc.flush();await aenc.flush();muxer.finalize();
-  const blob=new Blob([muxer.target.buffer],{type:'video/mp4'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(study?study.slug:q('#hf-name').textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-'))+'-hands.mp4';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),60000);
-  status(`Exported ${totalFrames} frames at ${fps} fps, ${Wv}×${Hv}, ${(blob.size/1e6).toFixed(1)} MB`);
+  videoSource.close();
+  status('Finishing the file…');await output.finalize();
+  const blob=new Blob([output.target.buffer],{type:'video/mp4'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(study?study.slug:q('#hf-name').textContent.toLowerCase().replace(/[^a-z0-9]+/g,'-'))+'-hands.mp4';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),60000);
+  status(`Exported ${totalFrames} frames at ${fps} fps, ${Wv}×${Hv}, ${audioCodec==='aac'?'AAC':'PCM'} sound, ${(blob.size/1e6).toFixed(1)} MB`);
  }catch(err){status(err.message==='cancelled'?'Export cancelled.':'The export failed: '+err.message);}
  finally{t=wasT;exporting=false;makeTargets();btn.textContent='Export MP4';btn.removeEventListener('click',cancel);btn.addEventListener('click',exportVideo);draw();}
 }
@@ -703,13 +702,15 @@ function buildScreenKeys(){
  for(let m=base;m<=base+span;m++){if(!KEY_BY_MIDI.get(m)?.black)continue;const idx=whites.filter(w=>w<m).length;const d=document.createElement('div');d.className='hf-b';d.dataset.midi=m;d.style.left=(idx/whites.length*100)+'%';el.appendChild(d);}
  q('#hf-oct').textContent=`${LIVE.noteName(base)} to ${LIVE.noteName(base+span)}`;
 }
-function screenDown(e,el){const m=+el.dataset.midi;if(pointers.get(e.pointerId)===m)return;screenUp(e);pointers.set(e.pointerId,m);el.classList.add('is-down');live.noteOn(m,0.72);}
+function screenDown(e,el){const m=+el.dataset.midi;if(pointers.get(e.pointerId)===m)return;const sliding=pointers.has(e.pointerId);screenUp(e);pointers.set(e.pointerId,m);el.classList.add('is-down');live.noteOn(m,sliding?0.6:0.72);}
 function screenUp(e){const m=pointers.get(e.pointerId);if(m===undefined)return;pointers.delete(e.pointerId);q('#hf-keys').querySelector(`[data-midi="${m}"]`)?.classList.remove('is-down');live.noteOff(m);}
 const keysEl=q('#hf-keys');
-keysEl.addEventListener('pointerdown',e=>{const el=e.target.closest('[data-midi]');if(!el)return;e.preventDefault();piano.init();screenDown(e,el);});
-keysEl.addEventListener('pointerover',e=>{if(!e.buttons)return;const el=e.target.closest('[data-midi]');if(el)screenDown(e,el);});
+// a finger or mouse pressed on the keys, then slid along them: each key it crosses plays, a glissando.
+// Touch screens hand all later events to the first key touched, so the key under the finger is found by position.
+function keyUnder(e){const el=document.elementFromPoint(e.clientX,e.clientY);return el&&el.closest?el.closest('#hf-keys [data-midi]'):null;}
+keysEl.addEventListener('pointerdown',e=>{const el=e.target.closest('[data-midi]');if(!el)return;e.preventDefault();piano.init();try{keysEl.setPointerCapture(e.pointerId);}catch{}screenDown(e,el);});
+keysEl.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;const el=keyUnder(e);if(el&&+el.dataset.midi!==pointers.get(e.pointerId))screenDown(e,el);});
 for(const ev of ['pointerup','pointercancel'])document.addEventListener(ev,screenUp);
-keysEl.addEventListener('pointerleave',screenUp);
 q('#hf-oct-down').addEventListener('click',()=>{base=Math.max(24,base-12);buildScreenKeys();});
 q('#hf-oct-up').addEventListener('click',()=>{base=Math.min(72,base+12);buildScreenKeys();});
 const KEYMAP={KeyA:0,KeyW:1,KeyS:2,KeyE:3,KeyD:4,KeyF:5,KeyT:6,KeyG:7,KeyY:8,KeyH:9,KeyU:10,KeyJ:11,KeyK:12,KeyO:13,KeyL:14,KeyP:15,Semicolon:16,Quote:17};
